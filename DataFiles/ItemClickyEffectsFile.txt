@@ -1,0 +1,13 @@
+//************************* NAMED ITEM STATIC EFFECTS *************************//
+
+EFFECTNAME: +1 Enhancement Bonus;
+EFFECTDESCRIPTION: This item has been magically enhanced. Armor with this quality gains a +1 enhancement bonus to AC.;
+EFFECTTYPE: Bonus;
+APPLIEDTO: Leather Armor, Full Plate, Buckler, Small Shield, Large Shield, Tower Shield;
+ENDOFEFFECT
+
+EFFECTNAME: +2 Enhancement Bonus;
+EFFECTDESCRIPTION: This item has been magically enhanced. Weapons with this quality gain a +1 enhancement bonus to attack and damage.;
+EFFECTTYPE: Bonus;
+APPLIEDTO: Club, Dagger, Light Hammer;
+ENDOFEFFECT

@@ -1,0 +1,125 @@
+﻿Build started 10/14/2016 10:50:33 AM.
+     1>Project "E:\Planner\DDOCharGen\DDOCharGen.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp DDOCharGen.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiClassWindowClass.cpp MultiAbilityWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
+         AboutWindowClass.cpp
+         CharacterClass.cpp
+     1>CharacterClass.cpp(2370): warning C4018: '<' : signed/unsigned mismatch
+         Character_Destinies_Class.cpp
+         Character_Enhancements_Class.cpp
+         ControlWindowClass.cpp
+         DataClass.cpp
+         Data_Destiny_Class.cpp
+         Data_Destiny_MultiSelector_Class.cpp
+         Data_Destiny_Tree_Class.cpp
+         Data_Enhancement_Class.cpp
+         Data_Enhancement_MultiSelector_Class.cpp
+         Data_Enhancement_Tree_Class.cpp
+         DDOCharGen.cpp
+         EnhancementWindowBaseClass.cpp
+         EnhancementWindowClass.cpp
+         ExportTemplateDesignWindowClass.cpp
+         FeatDataClass.cpp
+         ForumExportClass.cpp
+         IconClass.cpp
+         InterfaceManagerClass.cpp
+         Generating Code...
+         Compiling...
+         ItemBuilderClass.cpp
+         ItemClass.cpp
+         ItemClickyEffectClass.cpp
+         ItemEffectClass.cpp
+         LoadWindowClass.cpp
+         MainScreenClass.cpp
+     1>MainScreenClass.cpp(1006): warning C4995: 'swprintf': name was marked as #pragma deprecated
+     1>MainScreenClass.cpp(1006): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+         MultiClassWindowClass.cpp
+         MultiAbilityWindowClass.cpp
+         MultiEnhancementWindowClass.cpp
+         MultiFeatWindowClass.cpp
+     1>MultiFeatWindowClass.cpp(569): warning C4101: 'Position' : unreferenced local variable
+         MultiSkillsWindowClass.cpp
+     1>MultiSkillsWindowClass.cpp(643): warning C4101: 'Width' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(643): warning C4101: 'Height' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(825): warning C4101: 'point' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(941): warning C4101: 'Rect' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1058): warning C4101: 'Index' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1062): warning C4101: 'Position' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1269): warning C4018: '<' : signed/unsigned mismatch
+     1>MultiSkillsWindowClass.cpp(1311): warning C4018: '<' : signed/unsigned mismatch
+     1>MultiSkillsWindowClass.cpp(1234): warning C4101: 'TempSkills' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1368): warning C4101: 'Index' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1372): warning C4101: 'Position' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1443): warning C4101: 'PointsSpent' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1446): warning C4101: 'PointsRemain' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1444): warning C4101: 'PointLimit' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1442): warning C4101: 'Position' : unreferenced local variable
+     1>MultiSkillsWindowClass.cpp(1445): warning C4101: 'PointRaise' : unreferenced local variable
+         MultiSpellsWindowClass.cpp
+         PrintClass.cpp
+         PrintWindowClass.cpp
+         RichEditBitmapClass.cpp
+         Screen_Destiny_Base_Class.cpp
+         Screen_Destiny_Class.cpp
+     1>Screen_Destiny_Class.cpp(226): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>Screen_Destiny_Class.cpp(231): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>Screen_Destiny_Class.cpp(1180): warning C4101: 'ParentDC' : unreferenced local variable
+     1>Screen_Destiny_Class.cpp(1176): warning C4101: 'Rect' : unreferenced local variable
+     1>Screen_Destiny_Class.cpp(1178): warning C4101: 'IconDrag' : unreferenced local variable
+     1>Screen_Destiny_Class.cpp(1177): warning C4101: 'Selection' : unreferenced local variable
+     1>Screen_Destiny_Class.cpp(1345): warning C4101: 'hdc' : unreferenced local variable
+         ToolTipWindowClass.cpp
+         UIComponentManager.cpp
+     1>UIComponentManager.cpp(740): warning C4101: 'BaseX' : unreferenced local variable
+     1>UIComponentManager.cpp(740): warning C4101: 'BaseY' : unreferenced local variable
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _USING_V110_SDK71_ /l"0x0409" /nologo /fo"Release\DDOCharGen.res" DDOCharGen.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Planner\DDOCharGen\\DDOCharGen.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"E:\Planner\DDOCharGen\\DDOCharGen.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Planner\DDOCharGen\\DDOCharGen.lib" /MACHINE:X86 /SAFESEH Release\DDOCharGen.res
+         Release\AboutWindowClass.obj
+         Release\CharacterClass.obj
+         Release\Character_Destinies_Class.obj
+         Release\Character_Enhancements_Class.obj
+         Release\ControlWindowClass.obj
+         Release\DataClass.obj
+         Release\Data_Destiny_Class.obj
+         Release\Data_Destiny_MultiSelector_Class.obj
+         Release\Data_Destiny_Tree_Class.obj
+         Release\Data_Enhancement_Class.obj
+         Release\Data_Enhancement_MultiSelector_Class.obj
+         Release\Data_Enhancement_Tree_Class.obj
+         Release\DDOCharGen.obj
+         Release\EnhancementWindowBaseClass.obj
+         Release\EnhancementWindowClass.obj
+         Release\ExportTemplateDesignWindowClass.obj
+         Release\FeatDataClass.obj
+         Release\ForumExportClass.obj
+         Release\IconClass.obj
+         Release\InterfaceManagerClass.obj
+         Release\ItemBuilderClass.obj
+         Release\ItemClass.obj
+         Release\ItemClickyEffectClass.obj
+         Release\ItemEffectClass.obj
+         Release\LoadWindowClass.obj
+         Release\MainScreenClass.obj
+         Release\MultiClassWindowClass.obj
+         Release\MultiAbilityWindowClass.obj
+         Release\MultiEnhancementWindowClass.obj
+         Release\MultiFeatWindowClass.obj
+         Release\MultiSkillsWindowClass.obj
+         Release\MultiSpellsWindowClass.obj
+         Release\PrintClass.obj
+         Release\PrintWindowClass.obj
+         Release\RichEditBitmapClass.obj
+         Release\Screen_Destiny_Base_Class.obj
+         Release\Screen_Destiny_Class.obj
+         Release\ToolTipWindowClass.obj
+         Release\UIComponentManager.obj
+         DDOCharGen.vcxproj -> E:\Planner\DDOCharGen\\DDOCharGen.exe
+     1>Done Building Project "E:\Planner\DDOCharGen\DDOCharGen.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:53.47
