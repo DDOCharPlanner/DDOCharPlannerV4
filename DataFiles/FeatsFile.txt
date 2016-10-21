@@ -87,7 +87,7 @@ VERIFIED: 2013-08-10, in-game;
 
 PARENTHEADING: Adept of Forms;
 FEATNAME: Adept of Rain;
-FEATDESCRIPTION: Ocean Stance now grants +2 Wisdom, +2% dodge, and +3 to all Saving Throws at a cost of -2 Strength.;
+FEATDESCRIPTION: Ocean Stance now grants +2 Wisdom, +6% dodge, +4 dodge cap, and +3 to all Saving Throws at a cost of -2 Strength.;
 LEVEL: 6;
 ACQUIRE: Automatic;
 ICON: AdeptofRainIcon;
@@ -104,7 +104,7 @@ VERIFIED: 2013-08-10, in-game;
 
 PARENTHEADING: Adept of Forms;
 FEATNAME: Adept of Wind;
-FEATDESCRIPTION: Wind Stance now grants +2 Dexterity, a 10% Enhancement bonus to melee and thrown attack speed, and grants a 5% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
+FEATDESCRIPTION: Wind Stance now grants +2 Dexterity, a 10% Enhancement bonus to melee and thrown attack speed, and grants a 6% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
 CLASSLIST: Monk;
 LEVEL: 6;
 ACQUIRE: Automatic;
@@ -245,8 +245,16 @@ ACQUIRE: Automatic;
 ICON: AuraOfGoodIcon;
 VERIFIED: 2012-06-26, in-game;
 
+**FEATNAME: Aureon's Instruction;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Follower of Aureon;
+ICON: AureonsInstructionIcon;
+
 FEATNAME: Beloved of Amaunator;
-FEATDESCRIPTION: You follow Amaunator. You have +1 to attack and damage rolls with heavy maces.;
+FEATDESCRIPTION: You follow Amaunator. You have +3 to attack and damage rolls with heavy maces.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -254,8 +262,56 @@ NEEDSALL: Feat Child of Amaunator;
 ICON: AmaunatorsBrilliance;
 VERIFIED: unknown;
 
+**FEATNAME: Beloved of Aureon;
+FEATDESCRIPTION: You follow Aureon. You have +3 to attack and damage rolls with Quarterstaves.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of Aureon;
+ICON: AureonsInstructionIcon;
+
+**FEATNAME: Beloved of Helm;
+FEATDESCRIPTION: You follow Helm. You have +1 to attack and damage rolls with Bastard swords.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of Helm;
+ICON: EverWatchful;
+
+**FEATNAME: Beloved of Olladra;
+FEATDESCRIPTION: You follow Olladra. You have +3 to attack and damage rolls with Sickles.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of Olladra;
+ICON: LuckofOlladraIcon;
+
+**FEATNAME: Beloved of Onatar;
+FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Warhammers .;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of Onatar;
+ICON: OntarsForgeIcon;
+
+**FEATNAME: Beloved of Silvanus;
+FEATDESCRIPTION: You follow Silvanus. You have +3 to attack and damage rolls with mauls.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of Silvanus;
+ICON: BlessingofSilvanus;
+
+**FEATNAME: Beloved of the Blood of Vol;
+FEATDESCRIPTION: You follow Onatar. You have +3 to attack and damage rolls with Daggers .;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 12, 12, 12;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Child of the Blood of Vol;
+ICON: BloodistheLifeIcon;
+
 FEATNAME: Beloved of the Lord of Blades;
-FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You deal 2 extra damage with greatswords.;
+FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You deal +2 extra damage with greatswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -264,7 +320,7 @@ ICON: LordofbladesIcon;
 VERIFIED: unknown;
 
 FEATNAME: Beloved of the Silver Flame;
-FEATDESCRIPTION: You are a favored soul of the Silver Flame. You deal 2 extra damage with longbows.;
+FEATDESCRIPTION: You are a favored soul of the Silver Flame. You deal +2 extra damage with longbows.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -273,7 +329,7 @@ ICON: SilverflameIcon;
 VERIFIED: unknown;
 
 FEATNAME: Beloved of the Sovereign Host;
-FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You deal 2 extra damage with longswords.;
+FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You deal +2 extra damage with longswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -282,7 +338,7 @@ ICON: SovereignhostIcon;
 VERIFIED: unknown;
 
 FEATNAME: Beloved of the Undying Court;
-FEATDESCRIPTION: You are a favored soul of the Undying Court. You deal 2 extra damage with scimitars.;
+FEATDESCRIPTION: You are a favored soul of the Undying Court. You deal +2 extra damage with scimitars.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -291,7 +347,7 @@ ICON: UndyingIcon;
 VERIFIED: unknown;
 
 FEATNAME: Beloved of Vulkoor;
-FEATDESCRIPTION: You are a favored soul of Vulkoor. You deal 2 extra damage with shortswords.;
+FEATDESCRIPTION: You are a favored soul of Vulkoor. You deal +2 extra damage with shortswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
 ACQUIRE: Train, Train, Automatic;
@@ -308,12 +364,20 @@ ICON: NoImage;
 VERIFIED: 2013-08-01, in-game;
 
 FEATNAME: Bladesworn Transformation;
-FEATDESCRIPTION: You are a devoted follower of the Lord of Blades, and your faith has been rewarded. Activate this ability to attempt to become a juggernaut of destruction for 24 seconds plus 6 seconds per cleric level.\par \par While transformed, you have a +4 Profane bonus to Strength, +4 natural armor bonus to AC, a +4 profane bonus on damage rolls, +10 enhancement bonus to Will saves against mind affecting magic, and proficiency in all simple and martial weapons. Your base attack bonus equals your level. You lose your spellcasting ability. You have immunity to critical hits and sneak attacks, but cannot be healed by healing spells.;
+FEATDESCRIPTION: You are a devoted follower of the Lord of Blades, and your faith has been rewarded. Activate this ability to attempt to become a juggernaut of destruction for 24 seconds plus 6 seconds per Religious lore feat.\par \par While transformed, you have a +4 Profane bonus to Strength, +4 natural armor bonus to AC, a +4 profane bonus on damage rolls, +10 enhancement bonus to Will saves against mind affecting magic, and proficiency in all simple and martial weapons. Your base attack bonus equals your level. You lose your spellcasting ability. You have immunity to critical hits and sneak attacks, but cannot be healed by healing spells.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
 NEEDSALL: Feat Follower of the Lord of Blades;
 ICON: LordofbladesIcon;
+
+**FEATNAME: Blessing of Silvanus;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Favored by Silvanus;
+ICON: BlessingofSilvanusIcon;
 
 FEATNAME: Bow Strength;
 FEATDESCRIPTION: You apply your Strength bonus to bow damage.;
@@ -353,7 +417,7 @@ ICON: CallWolfIcon;
 VERIFIED: unknown;
 
 FEATNAME: Child of Amaunator;
-FEATDESCRIPTION: You follow Amaunator. You have +1 to attack and damage rolls with heavy maces.;
+FEATDESCRIPTION: You follow Amaunator. You have +2 to attack and damage rolls with heavy maces.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -361,8 +425,56 @@ NEEDSALL: Feat Favored by Amaunator;
 ICON: AmaunatorsBrilliance;
 VERIFIED: 2012-06-26, in-game;
 
+**FEATNAME: Child of Aureon;
+FEATDESCRIPTION: You follow Aureon. You have +2 to attack and damage rolls with Quarterstaves.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Follower of Aureon;
+ICON: AureonsInstructionIcon;
+
+**FEATNAME: Child of Helm;
+FEATDESCRIPTION: You follow Helm. You have +1 to attack and damage rolls with Bastard swords.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Favored by Helm;
+ICON: EverWatchfulIcon;
+
+**FEATNAME: Child of Olladra;
+FEATDESCRIPTION: You follow Olladra. You have +2 to attack and damage rolls with Sickles.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Follower of Olladra;
+ICON: LuckofOlladraIcon;
+
+**FEATNAME: Child of Onatar;
+FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Warhammers .;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Follower of Onatar;
+ICON: OntarsForgeIcon;
+
+**FEATNAME: Child of Silvanus;
+FEATDESCRIPTION: You follow Silvanus. You have +2 to attack and damage rolls with mauls.;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Favored by Silvanus;
+ICON: BlessingofSilvanusIcon;
+
+**FEATNAME: Child of the Blood of Vol;
+FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Daggers .;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 3, 3, 3;
+ACQUIRE: Train, Train, Automatic;
+NEEDSALL: Feat Follower the Blood of Vol;
+ICON: BloodistheLifeIcon;
+
 FEATNAME: Child of the Lord of Blades;
-FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You have +1 to attack rolls with greatswords.;
+FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You have +2 to attack rolls with greatswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -371,7 +483,7 @@ ICON: LordofbladesIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Child of the Silver Flame;
-FEATDESCRIPTION: You are a favored soul of the Silver Flame. You have +1 to attack rolls with longbows.;
+FEATDESCRIPTION: You are a favored soul of the Silver Flame. You have +2 to attack rolls with longbows.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -380,7 +492,7 @@ ICON: SilverflameIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Child of the Sovereign Host;
-FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You have +1 to attack rolls with longswords.;
+FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You have +2 to attack rolls with longswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -389,7 +501,7 @@ ICON: SovereignhostIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Child of the Undying Court;
-FEATDESCRIPTION: You are a favored soul of the Undying Court. You have +1 to attack rolls with scimitars.;
+FEATDESCRIPTION: You are a favored soul of the Undying Court. You have +2 to attack rolls with scimitars.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -398,7 +510,7 @@ ICON: UndyingIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Child of Vulkoor;
-FEATDESCRIPTION: You are a favored soul of Vulkoor. You have +1 to attack rolls with shortswords.;
+FEATDESCRIPTION: You are a favored soul of Vulkoor. You have +2 to attack rolls with shortswords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
@@ -2001,6 +2113,16 @@ ICON: ExoticWeaponProfIcon;
 VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Exotic Weapon Proficiency;
+FEATNAME: Handwrap;
+FEATDESCRIPTION: You do not suffer a -4 penalty on attack rolls when using a Handwrap.;
+FEATTAG: Fighter Bonus;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, AutoNoPrereq, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+NEEDSALL: BAB 1;
+ICON: ExoticWeaponProfIcon;
+
+PARENTHEADING: Exotic Weapon Proficiency;
 FEATNAME: Kama;
 FEATDESCRIPTION: You do not suffer a -4 penalty on attack rolls when using a kama.;
 FEATTAG: Fighter Bonus;
@@ -2056,6 +2178,14 @@ NEEDSALL: BAB 1;
 ICON: ExoticWeaponProfIcon;
 VERIFIED: 2012-06-26, in-game;
 
+**FEATNAME: Ever Watchful;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Favored by Helm;
+ICON: EverWatchfulIcon;
+
 FEATNAME: Extend Spell;
 FEATDESCRIPTION: While this metamagic feat is active, spells with durations last twice as long, but they consume 10 additional spell points.;
 FEATTAG: Metamagic, Artificer Bonus;
@@ -2096,19 +2226,28 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Morninglord, Race Purple Dragon Knight, Race Shadar-Kai;
-LOCK: Follower of the Lord of Blades, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor;
+LOCK: Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: AmaunatorsBrilliance;
 
-FEATNAME: Follower of Vulkoor;
-FEATDESCRIPTION: You are a favored soul of Vulkoor. You are considered proficient with shortswords.;
+**FEATNAME: Favored by Helm;
+FEATDESCRIPTION: You follow Helm. You are proficient with Bastard swords and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSALL: Race Drow;
-LOCK: Favored by Amaunator, Follower of the Lord of Blades, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court;
-ICON: VulkoorIcon;
-VERIFIED: 2012-06-26, in-game;
+NEEDSONE: Race Morninglord, Race Purple Dragon Knight, Race Shadar-Kai;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Silvanus;
+ICON: EverWatchfulIcon;
+
+**FEATNAME: Favored by Silvanus;
+FEATDESCRIPTION: You follow Silvanus. You are proficient with mauls and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Morninglord, Race Purple Dragon Knight, Race Shadar-Kai;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm;
+ICON: BlessingofSilvanusIcon;
 
 PARENTHEADING: Favored Enemy;
 FEATNAME: Aberration;
@@ -2404,7 +2543,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Finishing Moves;
 FEATNAME: Breath of the Fire Dragon;
-FEATDESCRIPTION: Fire:Fire:Fire Finisher - A cone of searing flame shoots forth, damaging targets in the area of the flames for 1 to 6 damage for each monk level.  A successful Reflex save (DC 10 + Monk Level + Wisdom Modifier) reduces the damage by half.\par\par D&D Dice: Deals 1d6 fire damage per monk level.;
+FEATDESCRIPTION: Fire:Fire:Fire Finisher - A cone of searing flame shoots forth, damaging targets in the area of the flames for 1 to 6 damage for each monk level.  A successful Reflex save (DC 10 + Monk Level + Wisdom Modifier) reduces the damage by half.\par\par D&D Dice: Deals 1d6 fire damage per monk level. Scales with 2x melee Power.;
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;
@@ -2413,7 +2552,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Finishing Moves;
 FEATNAME: The Gathering Storm;
-FEATDESCRIPTION: Air:Air:Air Finisher - Winds gather about your enemy, decreasing your opponent's chance to land attacks. A successful Fortitude save ends this effect. (DC 10 + Monk Level + Wisdom mod);
+FEATDESCRIPTION: Air:Air:Air Finisher - Winds gather about your enemy, decreasing your opponent's chance to land attacks. A successful Fortitude save ends this effect. (DC 15 + Monk Level + Wisdom mod);
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;
@@ -2422,7 +2561,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Finishing Moves;
 FEATNAME: The Raging Sea;
-FEATDESCRIPTION: Water:Water:Water Finisher - Like a swimmer fighting against the raging sea, your enemy finds it difficult to act with speed. This attack slows your enemies attacks. A successful Fortitude save ends this effect. (DC 10 + Monk Level + Wisdom mod);
+FEATDESCRIPTION: Water:Water:Water Finisher - Like a swimmer fighting against the raging sea, your enemy finds it difficult to act with speed. This attack slows your enemies attacks. A successful Fortitude save ends this effect. (DC 15 + Monk Level + Wisdom mod);
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;
@@ -2467,7 +2606,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Finishing Moves: Path of Harmonious Balance;
 FEATNAME: Healing Ki;
-FEATDESCRIPTION: Light:Light:Light Finisher - Activate this finisher to heal all nearby allies for 1 to 4 points of positive energy, plus an additional 1 to 4 every two monk levels.\par\par D&D Dice: Heals allies with 1d4 positive energy for every two monk levels.;
+FEATDESCRIPTION: Light:Light:Light Finisher - Activate this finisher to heal all nearby allies for 1 to 4 points of positive energy, plus an additional 1 to 4 every monk levels.\par\par D&D Dice: Heals allies with 1d4 positive energy for every two monk levels.;
 CLASSLIST: Monk;
 LEVEL: 3;
 ACQUIRE: Automatic;
@@ -2536,6 +2675,17 @@ ACQUIRE: Automatic;
 ICON: FlurryofBlowsIcon;
 VERIFIED: 2012-06-26, in-game;
 
+**FEATNAME: Follower of Aureon;
+FEATDESCRIPTION: You follow Aureon, member of the Sovereign Host, and use his favored weapon. You are proficient with Quarterstaves and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: AureonsInstructionIcon;
+VERIFIED: 2016-10-21, in-game;
+
 FEATNAME: Follower of the Lord of Blades;
 FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You are considered proficient with greatswords.;
 FEATTAG: Divine;
@@ -2543,9 +2693,42 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Warforged, Race Bladeforged;
-LOCK: Favored by Amaunator, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulcoor;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: LordofbladesIcon;
 VERIFIED: 2012-06-26, in-game;
+
+**FEATNAME: Follower of Olladra;
+FEATDESCRIPTION: You follow Olladra, member of the Sovereign Host, and use her favored weapon. You are proficient with Sickles and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: LuckofOlladraIcon;
+VERIFIED: 2016-10-21, in-game;
+
+**FEATNAME: Follower of Onatar;
+FEATDESCRIPTION: You follow Onatar, member of the Sovereign Host, and use his favored weapon. You are proficient with Warhammers and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: OntarsForgeIcon;
+VERIFIED: 2016-10-21, in-game;
+
+**FEATNAME: Follower the Blood of Vol;
+FEATDESCRIPTION: You follow Blood of Vol. You are proficient with Daggers and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: BloodistheLifeIcon;
+VERIFIED: 2016-10-21, in-game;
 
 FEATNAME: Follower of the Silver Flame;
 FEATDESCRIPTION: You are a favored soul of the Silver Flame. You are considered proficient with longbows.;
@@ -2553,8 +2736,8 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc;
-LOCK: Favored by Amaunator, Follower of the Lord of Blades, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulcoor;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: SilverflameIcon;
 VERIFIED: 2012-06-26, in-game;
 
@@ -2564,8 +2747,8 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc;
-LOCK: Favored by Amaunator, Follower of the Lord of Blades, Follower of the Silver Flame, Follower of the Undying Court, Follower of Vulcoor;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: SovereignhostIcon;
 VERIFIED: 2012-06-26, in-game;
 
@@ -2576,8 +2759,19 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Elf, Race Half-Elf;
-LOCK: Favored by Amaunator, Follower of the Lord of Blades, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of Vulcoor;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: UndyingIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Follower of Vulkoor;
+FEATDESCRIPTION: You are a favored soul of Vulkoor. You are considered proficient with shortswords.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSALL: Race Drow;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Favored by Helm, Favored by Silvanus;
+ICON: VulkoorIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Force of Personality;
@@ -2662,7 +2856,7 @@ VERIFIED: 2013-08-11, in-game;
 
 PARENTHEADING: Grandmaster of Forms;
 FEATNAME: Grandmaster of Oceans;
-FEATDESCRIPTION: Ocean Stance now grants +4 Wisdom, a +4% dodge bonus to Armor Class, +5 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 Strength.;
+FEATDESCRIPTION: Ocean Stance now grants +4 Wisdom, a +12% dodge bonus to Armor Class, +8 dodge cap, +5 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 Strength.;
 CLASSLIST: Monk;
 LEVEL: 18;
 ACQUIRE: Automatic;
@@ -2671,7 +2865,7 @@ VERIFIED: 2013-08-11, in-game;
 
 PARENTHEADING: Grandmaster of Forms;
 FEATNAME: Grandmaster of Storms;
-FEATDESCRIPTION: Wind Stance now grants +4 Dexterity, a 15% Enhancement bonus to melee and thrown attack speed, and grants a 10% chance to doublestrike with melee weapons, at the cost of -2 Constitution./r;
+FEATDESCRIPTION: Wind Stance now grants +4 Dexterity, a 15% Enhancement bonus to melee and thrown attack speed, and grants a 12% chance to doublestrike with melee weapons, at the cost of -2 Constitution./r;
 CLASSLIST: Monk;
 LEVEL: 18;
 ACQUIRE: Automatic;
@@ -4182,6 +4376,14 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: LuckOfHeroesIcon;
 VERIFIED: 2012-06-26, in-game;
 
+**FEATNAME: Luck of Olladra;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Follower of Olladra;
+ICON: LuckofOlladraIcon;
+
 FEATNAME: Magical Training;
 FEATDESCRIPTION: Increases your maximum spell points, representing the training you received as a level 1 character in the arcane or divine arts.;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
@@ -4445,7 +4647,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of Bonfires;
-FEATDESCRIPTION: Sun Stance now grants +3 Strength at a cost of -2 Wisdom. While in Greater Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 4 ki'.;
+FEATDESCRIPTION: Sun Stance now grants +3 Strength at a cost of -2 Wisdom, and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20. While in Greater Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 4 ki'.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4454,7 +4656,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of Stone;
-FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, a +150% Insight bonus to melee threat generation, and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
+FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, and a +150% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4463,7 +4665,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of Thunder;
-FEATDESCRIPTION: Wind Stance now grants +3 Dexterity, a 12.5% Enhancement bonus to melee and thrown attack speed, and grants a 7.5% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
+FEATDESCRIPTION: Wind Stance now grants +3 Dexterity, a 12.5% Enhancement bonus to melee and thrown attack speed, and grants a 9% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4472,7 +4674,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of the Sea;
-FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +3% dodge, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
+FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +6% dodge and +4 dodge cap, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4561,7 +4763,7 @@ ICON: MobilityIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Moment of Clarity;
-FEATDESCRIPTION: Void:Light:Void Finisher - Activate this finisher to clear away all distractions from your allies, granting a +5 Insight bonus to hit and a +5 Insight bonus to skill checks for a very short period of time. This ability functions only in private instances.;
+FEATDESCRIPTION: Void:Light:Void Finisher - Activate this finisher to clear away all distractions from your allies, granting a +5 stacking bonus to hit and a +5 stacking bonus to skill checks for a very short period of time. This ability functions only in private instances.;
 CLASSLIST: Monk;
 LEVEL: 10;
 ACQUIRE: Automatic;
@@ -4592,6 +4794,14 @@ LEVEL: 1;
 ACQUIRE: Train;
 ICON: NimbleFingersIcon;
 VERIFIED: 2012-06-26, in-game;
+
+**FEATNAME: Ontar's Forge;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Follower of Onatar;
+ICON: OntarsForgeIcon;
 
 FEATNAME: Opportunist;
 FEATDESCRIPTION: A rogue with this ability gains a 3% chance to double strike with melee weapons and bypasses 10% fortification.;
@@ -5254,7 +5464,7 @@ ICON: ShieldProfIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Shining Star;
-FEATDESCRIPTION: You use the combined power of Earth, Wind, and Fire to set up harmonic vibrations within your enemy that force them to dance. A successful Will save negates this effect. (DC 10 + Monk Level + Charisma mod).;
+FEATDESCRIPTION: You use the combined power of Earth, Wind, and Fire to set up harmonic vibrations within your enemy that force them to dance. A successful Will save negates this effect. (DC 10 + Monk Level + Wisdom mod).;
 CLASSLIST: Monk;
 LEVEL: 20;
 ACQUIRE: Automatic;
@@ -5816,7 +6026,7 @@ ICON: StunningBlowIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Stunning Fist;
-FEATDESCRIPTION: A swift unarmed attack to vulnerable areas that cause your target to be stunned for a short period of time.;
+FEATDESCRIPTION: A swift unarmed attack to vulnerable areas that cause your target to be stunned for a short period of time. /par Requires Handwrap;
 FEATTAG: Monk Bonus;
 CLASSLIST: Monk;
 LEVEL: 1;
@@ -5938,6 +6148,14 @@ NEEDSALL: Ability Dexterity 13;
 ICON: TenThousandStars;
 VERIFIED: 25-10-2015, in-game;
 
+**FEATNAME: The Blood is The Life;
+FEATDESCRIPTION: ;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic;
+NEEDSALL: Feat Follower the Blood of Vol;
+ICON: BloodistheLifeIcon;
+
 FEATNAME: The Way of Air;
 FEATDESCRIPTION: The wind is untouchable, and you have taken your first steps on the path to understanding what it is to be a leaf on the wind.;
 FEATTAG: Parent Feat;
@@ -5949,7 +6167,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: The Way of Air;
 FEATNAME: Wind Stance;
-FEATDESCRIPTION:  The relentless storm focuses on movement and speed. Lesser Wind Stance grants +2 Dexterity, a 7.5% Enhancement bonus to melee and thrown attack speed, and grants a 2.5% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
+FEATDESCRIPTION:  The relentless storm focuses on movement and speed. Lesser Wind Stance grants +2 Dexterity, a 7.5% Enhancement bonus to melee and thrown attack speed, and grants a 3% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;
@@ -6039,7 +6257,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: The Way of Water;
 FEATNAME: Ocean Stance;
-FEATDESCRIPTION: The eternal ocean focuses on redirection and the supernatural. Lesser Ocean Stance grants +2 Wisdom, +1% dodge, and +2 to all Saving Throws at a cost of -2 Strength.;
+FEATDESCRIPTION: The eternal ocean focuses on redirection and the supernatural. Lesser Ocean Stance grants +2 Wisdom, +3% dodge, +2 dodge cap, and +2 to all Saving Throws at a cost of -2 Strength.;
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;
