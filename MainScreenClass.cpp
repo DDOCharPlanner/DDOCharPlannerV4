@@ -1002,10 +1002,10 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 
 		case WM_KEYDOWN:
 		{		
-			wchar_t test[25];
-				swprintf(test,L"%d\n",(int)wParam);
+			//wchar_t test[25];
+			//	swprintf(test,L"%d\n",(int)wParam);
 
-				OutputDebugStringW(test);
+			//	OutputDebugStringW(test);
             if ((int)wParam == VK_DOWN)	
                 {
                 ChangeInstructionWindowSelection(CurrentInstructionSelection+1);

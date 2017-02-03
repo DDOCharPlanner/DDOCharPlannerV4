@@ -2367,7 +2367,7 @@ bool CharacterClass::HasSkill(int Skillindex, int AtLevel)
 {
 	bool Result;
 	Result = false;
-	for (unsigned int i = 0; i<AtLevel; i++)
+	for (int i = 0; i<AtLevel; i++)
 	{
 		if (Data.IsSkillPrimary(ClassRecord[i], Skillindex) == true)
 		{

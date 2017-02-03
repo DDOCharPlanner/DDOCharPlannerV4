@@ -640,7 +640,7 @@ void MultiSkillsWindowClass::DrawSkills(SKILLS Skill)
 	ostringstream ss;
 	ostringstream vs;
 	int X, Y;
-	int Width, Height;
+	//int Width, Height;
 	COLORREF OldColor;
 	HDC hdc;
 	hdc = GetWindowDC(MultiSkillsHandle);
@@ -822,7 +822,7 @@ float MultiSkillsWindowClass::GetSkillPointSpendLimit(SKILLS Skill, unsigned int
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::AcceptSkillPoints()
 {
-	int point;
+	//int point;
 	if (SkillChange)
 	{
 
@@ -869,6 +869,7 @@ void MultiSkillsWindowClass::ClearSkillFrame(HDC hdc)
 	rc.right -= 5;
 	rc.bottom -= 5;
 	FillRect(hdc, &rc, hbrBkGnd);
+	
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearRect(HDC hdc, RECT rc)
@@ -883,6 +884,7 @@ void MultiSkillsWindowClass::ClearRect(HDC hdc, RECT rc)
 	rc.right += 2;
 	rc.bottom += 2;
 	FillRect(hdc, &rc, hbrBkGnd);
+
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearAutoFillFrame(HDC hdc)
@@ -900,6 +902,7 @@ void MultiSkillsWindowClass::ClearAutoFillFrame(HDC hdc)
 	rc.right -= 5;
 	rc.bottom -= 50;
 	FillRect(hdc, &rc, hbrBkGnd);
+
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearSkillFrameTotals(HDC hdc)
@@ -938,7 +941,7 @@ long MultiSkillsWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 {
 
 	static bool TrackingMouse = false;
-	RECT Rect;
+	//RECT Rect;
 	int pos;
 	POINTS ps;
 	POINT ps1;
@@ -1055,11 +1058,11 @@ void MultiSkillsWindowClass::TrackMouse(HWND hwnd)
 void MultiSkillsWindowClass::HandleLeftMouseButtonClick(int x, int y)
 {
 	string Description;
-	int Index;
+	//int Index;
 	int Width;
 	int Height;
 	int X, Y;
-	int Position;
+	//int Position;
 	float PointsSpent;
 	float PointLimit;
 	float PointRaise;
@@ -1231,7 +1234,7 @@ void MultiSkillsWindowClass::HandleLeftMouseButtonClick(int x, int y)
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::AutoSetRanks()
 {
-	int TempSkills[NUMSKILLS][HEROICLEVELS];
+	//int TempSkills[NUMSKILLS][HEROICLEVELS];
 	vector<int> PriorityList[6];
 	vector<int> tempPriorityList;
 	bool skillrankchanged;
@@ -1266,7 +1269,7 @@ void MultiSkillsWindowClass::AutoSetRanks()
 				{
 					skillrankchanged = false;
 					//cycle though the skills for current Priority
-					for (int cPriority = 0; cPriority < tempPriorityList.size(); cPriority++)
+					for (int cPriority = 0; cPriority < static_cast<int>(tempPriorityList.size()); cPriority++)
 					{
 
 						if (Data.IsSkillPrimary(currentClass, tempPriorityList[cPriority]) && UseClassFirst)
@@ -1308,7 +1311,7 @@ void MultiSkillsWindowClass::AutoSetRanks()
 					{
 						skillrankchanged = false;
 						//cycle throu skills at priority level
-						for (int cPriority = 0; cPriority < tempPriorityList.size(); cPriority++)
+						for (int cPriority = 0; cPriority < static_cast<int>(tempPriorityList.size()); cPriority++)
 						{
 							//Check for Classonly or if skill has been taken
 							CrossSkill = Data.IsSkillCross(currentClass, tempPriorityList[cPriority]);
@@ -1365,11 +1368,11 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 
 
 	string Description;
-	int Index;
+	//int Index;
 	int Width;
 	int Height;
 	int X, Y;
-	int Position;
+	//int Position;
 	float PointsSpent;
 	ostringstream ss;
 	UIComponentManager *UIManager;
@@ -1439,11 +1442,11 @@ void MultiSkillsWindowClass::HandleMouseHover(int x, int y)
 	int Width;
 	int Height;
 	int X, Y;
-	int Position;
-	float PointsSpent;
-	float PointLimit;
-	float PointRaise;
-	int PointsRemain;
+	//int Position;
+	//float PointsSpent;
+	//float PointLimit;
+	//float PointRaise;
+	//int PointsRemain;
 	ostringstream ss;
 	UIComponentManager *UIManager;
 	InterfaceGraphicStruct *Graphic;

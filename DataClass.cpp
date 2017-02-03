@@ -2268,7 +2268,7 @@ void DataClass::InitializeEnhancementTrees()
 	Arrows = "1-0-U-1, 2-0-U-1, 3-0-U-1";
 	EnhancementTreeData[ENHT_VANGUARD_FTR].InitializeEnhancementTree(ENHT_VANGUARD_FTR, ENHTT_CLASS, RACENONE, FIGHTER, "Vanguard (Ftr)", true, "FighterBackground", Arrows);
 	//Monk
-	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 2-1-U-1, 3-0-U-1, 3-1-U-1, 3-3-U-1, 3-4-U-1, 4-0-U-1";
+	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 2-1-U-1, 3-0-U-1, 3-1-U-1, 3-3-U-1, 3-4-U-1, 4-0-U-1, 4-1-U-1";
 	EnhancementTreeData[ENHT_HENSHIN_MYSTIC_MNK].InitializeEnhancementTree(ENHT_HENSHIN_MYSTIC_MNK, ENHTT_CLASS, RACENONE, MONK, "Henshin Mystic (Mnk)", true, "MonkBackground", Arrows);
 	Arrows = "1-0-U-1, 1-2-U-1, 2-0-U-1, 2-2-U-1, 3-0-U-1, 3-2-U-1, 3-4-U-1, 4-0-U-1, 4-2-U-1";
 	EnhancementTreeData[ENHT_NINJA_SPY_MNK].InitializeEnhancementTree(ENHT_NINJA_SPY_MNK, ENHTT_CLASS, RACENONE, MONK, "Ninja Spy (Mnk)", true, "MonkBackground", Arrows);

@@ -1,10 +1,9 @@
-﻿Build started 10/14/2016 10:50:33 AM.
+﻿Build started 2/3/2017 5:09:01 PM.
      1>Project "E:\Planner\DDOCharGen\DDOCharGen.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp DDOCharGen.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiClassWindowClass.cpp MultiAbilityWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
          AboutWindowClass.cpp
          CharacterClass.cpp
-     1>CharacterClass.cpp(2370): warning C4018: '<' : signed/unsigned mismatch
          Character_Destinies_Class.cpp
          Character_Enhancements_Class.cpp
          ControlWindowClass.cpp
@@ -31,31 +30,11 @@
          ItemEffectClass.cpp
          LoadWindowClass.cpp
          MainScreenClass.cpp
-     1>MainScreenClass.cpp(1006): warning C4995: 'swprintf': name was marked as #pragma deprecated
-     1>MainScreenClass.cpp(1006): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
          MultiClassWindowClass.cpp
          MultiAbilityWindowClass.cpp
          MultiEnhancementWindowClass.cpp
          MultiFeatWindowClass.cpp
-     1>MultiFeatWindowClass.cpp(569): warning C4101: 'Position' : unreferenced local variable
          MultiSkillsWindowClass.cpp
-     1>MultiSkillsWindowClass.cpp(643): warning C4101: 'Width' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(643): warning C4101: 'Height' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(825): warning C4101: 'point' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(941): warning C4101: 'Rect' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1058): warning C4101: 'Index' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1062): warning C4101: 'Position' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1269): warning C4018: '<' : signed/unsigned mismatch
-     1>MultiSkillsWindowClass.cpp(1311): warning C4018: '<' : signed/unsigned mismatch
-     1>MultiSkillsWindowClass.cpp(1234): warning C4101: 'TempSkills' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1368): warning C4101: 'Index' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1372): warning C4101: 'Position' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1443): warning C4101: 'PointsSpent' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1446): warning C4101: 'PointsRemain' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1444): warning C4101: 'PointLimit' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1442): warning C4101: 'Position' : unreferenced local variable
-     1>MultiSkillsWindowClass.cpp(1445): warning C4101: 'PointRaise' : unreferenced local variable
          MultiSpellsWindowClass.cpp
          PrintClass.cpp
          PrintWindowClass.cpp
@@ -64,15 +43,8 @@
          Screen_Destiny_Class.cpp
      1>Screen_Destiny_Class.cpp(226): warning C4390: ';' : empty controlled statement found; is this the intent?
      1>Screen_Destiny_Class.cpp(231): warning C4390: ';' : empty controlled statement found; is this the intent?
-     1>Screen_Destiny_Class.cpp(1180): warning C4101: 'ParentDC' : unreferenced local variable
-     1>Screen_Destiny_Class.cpp(1176): warning C4101: 'Rect' : unreferenced local variable
-     1>Screen_Destiny_Class.cpp(1178): warning C4101: 'IconDrag' : unreferenced local variable
-     1>Screen_Destiny_Class.cpp(1177): warning C4101: 'Selection' : unreferenced local variable
-     1>Screen_Destiny_Class.cpp(1345): warning C4101: 'hdc' : unreferenced local variable
          ToolTipWindowClass.cpp
          UIComponentManager.cpp
-     1>UIComponentManager.cpp(740): warning C4101: 'BaseX' : unreferenced local variable
-     1>UIComponentManager.cpp(740): warning C4101: 'BaseY' : unreferenced local variable
          Generating Code...
        ResourceCompile:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _USING_V110_SDK71_ /l"0x0409" /nologo /fo"Release\DDOCharGen.res" DDOCharGen.rc 
@@ -122,4 +94,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:53.47
+Time Elapsed 00:00:55.03

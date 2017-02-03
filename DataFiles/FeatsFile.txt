@@ -95,7 +95,7 @@ VERIFIED: 2013-08-10, in-game;
 
 PARENTHEADING: Adept of Forms;
 FEATNAME: Adept of Rock;
-FEATDESCRIPTION: Mountain Stance now grants +2 Constitution, a 10% boost to AC, 8 physical resistance, and a +100% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
+FEATDESCRIPTION: Mountain Stance now grants +2 Constitution, a 10% boost to AC, 8 physical resistance, and a +40% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
 CLASSLIST: Monk;
 LEVEL: 6;
 ACQUIRE: Automatic;
@@ -245,7 +245,7 @@ ACQUIRE: Automatic;
 ICON: AuraOfGoodIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Aureon's Instruction;
+FEATNAME: Aureon's Instruction;
 FEATDESCRIPTION: ;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
@@ -262,7 +262,7 @@ NEEDSALL: Feat Child of Amaunator;
 ICON: AmaunatorsBrilliance;
 VERIFIED: unknown;
 
-**FEATNAME: Beloved of Aureon;
+FEATNAME: Beloved of Aureon;
 FEATDESCRIPTION: You follow Aureon. You have +3 to attack and damage rolls with Quarterstaves.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -270,7 +270,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Child of Aureon;
 ICON: AureonsInstructionIcon;
 
-**FEATNAME: Beloved of Helm;
+FEATNAME: Beloved of Helm;
 FEATDESCRIPTION: You follow Helm. You have +1 to attack and damage rolls with Bastard swords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -278,7 +278,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Child of Helm;
 ICON: EverWatchful;
 
-**FEATNAME: Beloved of Olladra;
+FEATNAME: Beloved of Olladra;
 FEATDESCRIPTION: You follow Olladra. You have +3 to attack and damage rolls with Sickles.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -286,7 +286,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Child of Olladra;
 ICON: LuckofOlladraIcon;
 
-**FEATNAME: Beloved of Onatar;
+FEATNAME: Beloved of Onatar;
 FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Warhammers .;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -294,7 +294,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Child of Onatar;
 ICON: OntarsForgeIcon;
 
-**FEATNAME: Beloved of Silvanus;
+FEATNAME: Beloved of Silvanus;
 FEATDESCRIPTION: You follow Silvanus. You have +3 to attack and damage rolls with mauls.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -302,7 +302,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Child of Silvanus;
 ICON: BlessingofSilvanus;
 
-**FEATNAME: Beloved of the Blood of Vol;
+FEATNAME: Beloved of the Blood of Vol;
 FEATDESCRIPTION: You follow Onatar. You have +3 to attack and damage rolls with Daggers .;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 12, 12, 12;
@@ -371,8 +371,8 @@ ACQUIRE: Automatic, Automatic, Automatic;
 NEEDSALL: Feat Follower of the Lord of Blades;
 ICON: LordofbladesIcon;
 
-**FEATNAME: Blessing of Silvanus;
-FEATDESCRIPTION: ;
+FEATNAME: Blessing of Silvanus;
+FEATDESCRIPTION: You are a devoted follower of Silvanus, and your faith has been rewarded. Toggling this on gives you Blessing of Silvanus: You permanently gain a +4 natural armor bonus to AC, and Mauls you wield gain +2 to their Critical Threat Range.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
@@ -425,7 +425,7 @@ NEEDSALL: Feat Favored by Amaunator;
 ICON: AmaunatorsBrilliance;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Child of Aureon;
+FEATNAME: Child of Aureon;
 FEATDESCRIPTION: You follow Aureon. You have +2 to attack and damage rolls with Quarterstaves.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -433,7 +433,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Follower of Aureon;
 ICON: AureonsInstructionIcon;
 
-**FEATNAME: Child of Helm;
+FEATNAME: Child of Helm;
 FEATDESCRIPTION: You follow Helm. You have +1 to attack and damage rolls with Bastard swords.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -441,7 +441,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Favored by Helm;
 ICON: EverWatchfulIcon;
 
-**FEATNAME: Child of Olladra;
+FEATNAME: Child of Olladra;
 FEATDESCRIPTION: You follow Olladra. You have +2 to attack and damage rolls with Sickles.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -449,7 +449,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Follower of Olladra;
 ICON: LuckofOlladraIcon;
 
-**FEATNAME: Child of Onatar;
+FEATNAME: Child of Onatar;
 FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Warhammers .;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -457,7 +457,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Follower of Onatar;
 ICON: OntarsForgeIcon;
 
-**FEATNAME: Child of Silvanus;
+FEATNAME: Child of Silvanus;
 FEATDESCRIPTION: You follow Silvanus. You have +2 to attack and damage rolls with mauls.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -465,7 +465,7 @@ ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Favored by Silvanus;
 ICON: BlessingofSilvanusIcon;
 
-**FEATNAME: Child of the Blood of Vol;
+FEATNAME: Child of the Blood of Vol;
 FEATDESCRIPTION: You follow Onatar. You have +2 to attack and damage rolls with Daggers .;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
@@ -869,7 +869,7 @@ VERIFIED: 2013-01-16, in-game;
 
 PARENTHEADING: Epic;
 FEATNAME: Burst of Glacial Wrath;
-FEATDESCRIPTION: Spell Point Cost: 35\par Target: Foe, Directional, Breakable\par Cone spell, deals 300d6 Cold Damage and freezes creatures within the cone. Monsters who succeed a Fortitude save of (20 + the highest of your INT/WIS/CHA modifiers + Evocation bonuses) negate the freeze.\par\par Passive: +140 Maximum Spell Points.;
+FEATDESCRIPTION: Spell Point Cost: 35\par Target: Foe, Directional, Breakable\par Cone spell, deals 30d6 Cold Damage and freezes creatures within the cone. Monsters who succeed a Fortitude save of (20 + the highest of your INT/WIS/CHA modifiers + Evocation bonuses) negate the freeze.\par\par Passive: +140 Maximum Spell Points.;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome;
 LEVEL: 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
@@ -2178,8 +2178,8 @@ NEEDSALL: BAB 1;
 ICON: ExoticWeaponProfIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Ever Watchful;
-FEATDESCRIPTION: ;
+FEATNAME: Ever Watchful;
+FEATDESCRIPTION: You are a devoted follower of Helm, and your faith has been rewarded. Activate this ability to draw upon the vigilance of Helm for 24 seconds plus 6 seconds per Religious Lore feat you have. In this state, you gain True Seeing, +5 Sacred bonus to Spot and Search, +4 Wisdom, +5 to Fortitude saves, and PRR equal to the number of Religious Lore feats you have.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
@@ -2229,7 +2229,7 @@ NEEDSONE: Race Morninglord, Race Purple Dragon Knight, Race Shadar-Kai;
 LOCK: Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: AmaunatorsBrilliance;
 
-**FEATNAME: Favored by Helm;
+FEATNAME: Favored by Helm;
 FEATDESCRIPTION: You follow Helm. You are proficient with Bastard swords and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2239,7 +2239,7 @@ NEEDSONE: Race Morninglord, Race Purple Dragon Knight, Race Shadar-Kai;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Silvanus;
 ICON: EverWatchfulIcon;
 
-**FEATNAME: Favored by Silvanus;
+FEATNAME: Favored by Silvanus;
 FEATDESCRIPTION: You follow Silvanus. You are proficient with mauls and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2675,7 +2675,7 @@ ACQUIRE: Automatic;
 ICON: FlurryofBlowsIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Follower of Aureon;
+FEATNAME: Follower of Aureon;
 FEATDESCRIPTION: You follow Aureon, member of the Sovereign Host, and use his favored weapon. You are proficient with Quarterstaves and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2697,7 +2697,7 @@ LOCK: Favored by Amaunator, Follower of Aureon, Follower of Olladra, Follower of
 ICON: LordofbladesIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Follower of Olladra;
+FEATNAME: Follower of Olladra;
 FEATDESCRIPTION: You follow Olladra, member of the Sovereign Host, and use her favored weapon. You are proficient with Sickles and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2708,7 +2708,7 @@ LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, 
 ICON: LuckofOlladraIcon;
 VERIFIED: 2016-10-21, in-game;
 
-**FEATNAME: Follower of Onatar;
+FEATNAME: Follower of Onatar;
 FEATDESCRIPTION: You follow Onatar, member of the Sovereign Host, and use his favored weapon. You are proficient with Warhammers and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2719,7 +2719,7 @@ LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, 
 ICON: OntarsForgeIcon;
 VERIFIED: 2016-10-21, in-game;
 
-**FEATNAME: Follower the Blood of Vol;
+FEATNAME: Follower the Blood of Vol;
 FEATDESCRIPTION: You follow Blood of Vol. You are proficient with Daggers and gain +1 to hit with them.;
 FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
@@ -2847,7 +2847,7 @@ VERIFIED: 2013-08-11, in-game;
 
 PARENTHEADING: Grandmaster of Forms;
 FEATNAME: Grandmaster of Mountains;
-FEATDESCRIPTION: Mountain Stance now grants +4 Constitution, a 20% boost to AC, 15 physical resistance, a +200% Insight bonus to melee threat generation, and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20, at the cost of -2 Dexterity and -10% movement speed. While in Ultimate Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
+FEATDESCRIPTION: Mountain Stance now grants +4 Constitution, a 20% boost to AC, 15 physical resistance, a +70% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Ultimate Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
 CLASSLIST: Monk;
 LEVEL: 18;
 ACQUIRE: Automatic;
@@ -2874,7 +2874,7 @@ VERIFIED: 2013-08-11, in-game;
 
 PARENTHEADING: Grandmaster of Forms;
 FEATNAME: Grandmaster of the Sun;
-FEATDESCRIPTION: Sun Stance now grants +4 Strength at a cost of -2 Wisdom. While in Ultimate Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 5 ki.';
+FEATDESCRIPTION: Sun Stance now grants +4 Strength and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20 at a cost of -2 Wisdom. While in Ultimate Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 5 ki./;
 CLASSLIST: Monk;
 LEVEL: 18;
 ACQUIRE: Automatic;
@@ -4376,8 +4376,8 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: LuckOfHeroesIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Luck of Olladra;
-FEATDESCRIPTION: ;
+FEATNAME: Luck of Olladra;
+FEATDESCRIPTION: Luck of Olladra: You are a devoted follower of Olladra, and your faith has been rewarded. Activate this ability to heal yourself or an ally to full health and bestow +1d6 Luck bonus to each Ability Score, lasting 24 seconds plus 6 seconds per Religious Lore feat you have.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
@@ -4656,7 +4656,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of Stone;
-FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, and a +150% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
+FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, and a +55% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4674,7 +4674,7 @@ VERIFIED: 2013-08-11, in-game
 
 PARENTHEADING: Master of Forms;
 FEATNAME: Master of the Sea;
-FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +6% dodge and +4 dodge cap, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
+FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +9% dodge and +6 dodge cap, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
 CLASSLIST: Monk;
 LEVEL: 12;
 ACQUIRE: Automatic;
@@ -4795,8 +4795,8 @@ ACQUIRE: Train;
 ICON: NimbleFingersIcon;
 VERIFIED: 2012-06-26, in-game;
 
-**FEATNAME: Ontar's Forge;
-FEATDESCRIPTION: ;
+FEATNAME: Ontar's Forge;
+FEATDESCRIPTION: You are a devoted follower of Onatar, and your faith has been rewarded. Activate this ability to channel the power of Onatar's mighty forge for 24 seconds plus 6 seconds per Religious Lore feat you have.\parIn this state, you gain +3 to tactical feat DCs, +10 Melee Power, +10 Repair Spell Power, +10 Rust Spell Power, and +10 Fire Spell Power. If you are a Warforged or otherwise already benefit from Repair, you gain +30 Repair Amplification.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
@@ -5110,7 +5110,7 @@ ICON: PastWizardIcon;
 VERIFIED: unknown;
 
 FEATNAME: Path of Harmonious Balance: Fists of Light;
-FEATDESCRIPTION: You have chosen to follow the path of light. You seek to be at harmony with the world, and your training will reflect your philosophy. You can activate this ability to channel positive energy into your attack, dealing 4 to 24 additional damage against undead, and applying a healing shield to your target which heals your allies that strike your target. On a vorpal strike (natural 20 followed by critical confirmation), you deal an additional 1 to 50 positive energy damage to undead.\par\par D&D Dice: Activate this ability to deal 4d6 additional damage to undead plus another 1d50 to undead on vorpal.;
+FEATDESCRIPTION: You have chosen to follow the path of light. You seek to be at harmony with the world, and your training will reflect your philosophy. You can activate this ability to channel positive energy into your attack, dealing 4d6 additional damage against undead, and applying a healing shield to your target which heals your allies that strike your target. On a vorpal strike (natural 20 followed by critical confirmation), you deal an additional 1 to 50 positive energy damage to undead.\par\par D&D Dice: Activate this ability to deal 4d6 additional damage to undead plus another 1d50 to undead on vorpal(scales with Melee).;
 FEATTAG: Monk Path;
 CLASSLIST: Monk;
 LEVEL: 3;
@@ -5119,7 +5119,7 @@ ICON: PhilosophyPathofHarmoniousBalanceIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Path of Inevitable Dominion: Fists of Darkness;
-FEATDESCRIPTION: You have chosen to follow the path of darkness. You seek to dominate the world, and your training will reflect your philosophy. You can activate this ability to channel negative energy into your attack, dealing 2 to 20 additional damage against living creatures, and then rendering the target shaken. (A successful DC 10 + Monk Level + Wisdom Mod Will save negate the shaken effect.) On a vorpal strike (Natural 20 followed by critical confirmation), you deal an additional 1 to 50 negative energy damage.\par\par D&D Dice: Activate this ability to deal 2d10 additional damage to living creatures plus another 1d50 damage on vorpal.;
+FEATDESCRIPTION: You have chosen to follow the path of darkness. You seek to dominate the world, and your training will reflect your philosophy. You can activate this ability to channel negative energy into your attack, dealing 2 to 20 additional damage against living creatures, and then rendering the target shaken. (A successful DC 10 + Monk Level + Wisdom Mod Will save negate the shaken effect.) On a vorpal strike (Natural 20 followed by critical confirmation), you deal an additional 1 to 50 negative energy damage.\par\par D&D Dice: Activate this ability to deal 2d10 additional damage to living creatures plus another 1d50 damage on vorpal (scales with Melee).;
 FEATTAG: Monk Path;
 CLASSLIST: Monk;
 LEVEL: 3;
@@ -5992,7 +5992,7 @@ VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Spring Attack;
 FEATDESCRIPTION: You suffer no penalty to your attack roll when moving and attacking. You will also gain a 2% Dodge bonus.;
-FEATTAG: Fighter Bonus;
+FEATTAG: Fighter Bonus, Monk Bonus;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
@@ -6148,8 +6148,8 @@ NEEDSALL: Ability Dexterity 13;
 ICON: TenThousandStars;
 VERIFIED: 25-10-2015, in-game;
 
-**FEATNAME: The Blood is The Life;
-FEATDESCRIPTION: ;
+FEATNAME: The Blood is The Life;
+FEATDESCRIPTION: You are a devoted follower of The Blood of Vol, and your zeal has been rewarded. Activate this ability to draw upon the power within your own blood for 24 seconds plus 6 seconds per Religious Lore feat you have. In this state, you gain +4 Constitution, 100% Fortification, +10 to Fortitude Saves, and PRR and MRR equal to the number of Religious Lore feats you have. While in this state and have a Dagger in your main hand, you also gain Vampirism, stacking with other sources of Vampirism.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
@@ -6221,7 +6221,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: The Way of Earth;
 FEATNAME: Mountain Stance;
-FEATDESCRIPTION: The unyielding mountain stance focuses on endurance and defense. Lesser Mountain Stance grants +2 Constitution, a 5% boost to AC, 3 physical resistance, and a +50% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Lesser Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
+FEATDESCRIPTION: The unyielding mountain stance focuses on endurance and defense. Lesser Mountain Stance grants +2 Constitution, a 5% boost to AC, 3 physical resistance, and a +25% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Lesser Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
 CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Automatic;

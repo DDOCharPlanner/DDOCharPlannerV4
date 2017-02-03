@@ -1173,11 +1173,11 @@ long Screen_Destiny_Class::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARA
 long Screen_Destiny_Class::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam, LPARAM lParam)
 	{
 	PAINTSTRUCT ps;
-	RECT Rect;
-	DWORD Selection;
-	int IconDrag;
+	//RECT Rect;
+	//DWORD Selection;
+	//int IconDrag;
 	Character_Destinies_Class *CharacterDestinies;
-	HDC ParentDC;
+	//HDC ParentDC;
 
 	//ParentDC = GetDC(DestinyWindowHandle);
 	//if (ParentDC == nullptr)
@@ -1342,7 +1342,7 @@ bool Screen_Destiny_Class::IsSlotSelected(int x, int y, int *rTier, int *rColumn
 //--------------------------------------------------------------------------
 void Screen_Destiny_Class::LoadGraphics(HWND Parent)
 	{
-	HDC hdc;
+	//HDC hdc;
 
 	//palette for halftone work
 	//hdc = GetDC(Parent);

@@ -231,6 +231,7 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 		{
 			InterfaceManager.ShowChild(MULTIFEATWINDOW, false);
 			return 0;
+			break;
 		}
 		case WM_COMMAND:
 		{
@@ -259,6 +260,7 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 				//return 0;
 
 			}
+			break;
 
 		}
 		case WM_MOUSEWHEEL:
@@ -295,12 +297,14 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 				else
 					SendMessage(DescPanel, WM_VSCROLL, SB_LINEDOWN, 0);
 			}
+			break;
 		}
 		case WM_LBUTTONDOWN:
 		{
 
 			HandleLeftMouseButtonClick(ps1.x, ps1.y);
 			return 0;
+			break;
 		}
 		case WM_LBUTTONUP:
 		{
@@ -311,11 +315,13 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 				//Character.EnableValidations(true);
 			}
 			return 0;
+			break;
 		}
 		case WM_RBUTTONDOWN:
 		{
 			HandleRightMouseButtonClick(ps1.x, ps1.y);
 			return 0;
+			break;
 		}
 
 
@@ -323,12 +329,14 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 		{
 			SetBkMode((HDC)wParam, TRANSPARENT);
 			return (long)GetStockObject(DKGRAY_BRUSH);
+			break;
 		}
 		case WM_CTLCOLORSTATIC:
 		{
 			SetBkMode((HDC)wParam, TRANSPARENT);
 			SetTextColor((HDC)wParam, RGB(255, 255, 255));
 			return (long)GetStockObject(DKGRAY_BRUSH);
+			break;
 		}
 		case WM_DRAWITEM:
 		{
@@ -349,6 +357,7 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 				DrawFeatWishBoxItem(((LPDRAWITEMSTRUCT)lParam)->hDC, ((LPDRAWITEMSTRUCT)lParam)->itemID, ((LPDRAWITEMSTRUCT)lParam)->itemData, ((LPDRAWITEMSTRUCT)lParam)->rcItem.top, ((LPDRAWITEMSTRUCT)lParam)->rcItem.left);
 				return true;
 			}
+			break;
 		}
 		case WM_SETCURSOR:
 		{
@@ -363,13 +372,14 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 				return 1;
 			}
 			return DefWindowProc(Wnd, Message, wParam, lParam);
+			break;
 		}
 		default:
 		{
 			return DefWindowProc(Wnd, Message, wParam, lParam);
 		}
 	}
-
+	return DefWindowProc(Wnd, Message, wParam, lParam);
 }
 //--------------------------------------------------------------------------
 long MultiFeatWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARAM wParam, LPARAM lParam)
@@ -542,6 +552,7 @@ long MultiFeatWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARA
 				IconDrag = SendMessage(FeatWishPanelList, LB_GETITEMDATA, Selection, 0);
 				RemoveFeatWishListItem(IconDrag);
 			}
+			break;
 		}
 		case WM_LBUTTONUP:
 			{
@@ -566,7 +577,7 @@ void MultiFeatWindowClass::HandleLeftMouseButtonClick(int x, int y)
 		int Width;
 		int Height;
 		int X, Y;
-		int Position;
+		//int Position;
 		ostringstream ss;
 		UIComponentManager *UIManager;
 		InterfaceGraphicStruct *Graphic;
@@ -1555,6 +1566,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 		}
 
 		SetTextColor(hdc, OldColor);
+
 	}
 }
 //-------------------------------------------------------------------------

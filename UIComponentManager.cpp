@@ -737,7 +737,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("ClassString", MULTICLASSWINDOW, "STATIC", "Class", WS_CHILD, 10, 25, 500, 25, MCL_CLASSSTRING);
 
 	int ClassX, ClassY;
-	int BaseX, BaseY;
+	//int BaseX, BaseY;
 	int FrameBaseX, FrameBaseY;
 	int Width, Height;
 	int SpacingX, SpacingY;
