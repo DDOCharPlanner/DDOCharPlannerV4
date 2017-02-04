@@ -297,7 +297,8 @@ void MultiSkillsWindowClass::DrawSkillTable()
 	HDC hdc;
 	RECT rc;
 	hdc = GetWindowDC(MultiSkillsHandle);
-	string TextString;
+	string TextString,EraseString;
+	EraseString = "  ";
 	SelectObject(hdc, DefaultFont);
 	SetBkMode(hdc, TRANSPARENT);
 	bool oldError = ErrorFound;
@@ -459,6 +460,7 @@ void MultiSkillsWindowClass::DrawSkillTable()
 					}
 				}
 			}
+			//Uddate Skiils Totals
 			if (UpdateAll || x == static_cast<int>(CurrentSkill))
 			{
 				SelectObject(hdc, DefaultFont);
@@ -481,10 +483,12 @@ void MultiSkillsWindowClass::DrawSkillTable()
 				TextString = vs.str();
 				if (GetTotalSkillPointsSpentDisplay(static_cast<SKILLS>(x)) < 10)
 					X += 10;
+				//TextOut(hdc, X, Y, EraseString.c_str(), EraseString.size());
 				TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
 				SetTextColor(hdc, OldColor);
 			}
 		}
+		//Update Skills Spent
 		for (int i = 0; i < HEROICLEVELS; i++)
 		{
 			if (i+1 == CurrentLevel || UpdateAll)
@@ -507,6 +511,7 @@ void MultiSkillsWindowClass::DrawSkillTable()
 				TextString = to_string(GetLevelSkillPointsSpent(i + 1));
 				if (TextString.length() < 2)
 					X += 5;
+				//TextOut(hdc, X, Y, EraseString.c_str(), EraseString.size());
 				TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
 				SetTextColor(hdc, OldColor);
 
@@ -527,6 +532,7 @@ void MultiSkillsWindowClass::DrawSkillTable()
 				TextString = to_string(CalculateAvailableSkillPoints(i + 1));
 				if (TextString.length() < 2)
 					X += 5;
+				//TextOut(hdc, X, Y, EraseString.c_str(), EraseString.size());
 				TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
 				SetTextColor(hdc, OldColor);
 			}
@@ -545,7 +551,8 @@ void MultiSkillsWindowClass::DrawAutoRank()
 	InterfaceGraphicStruct *Graphic;
 	int X, Y, Width, Height;
 	COLORREF OldColor;
-	string TextString;
+	string TextString, EraseString;
+	EraseString = "  ";
 	SelectObject(hdc, DefaultFont);
 	SetBkMode(hdc, TRANSPARENT);
 	for (int i = 0; i < NUMSKILLS; i++)
@@ -569,6 +576,7 @@ void MultiSkillsWindowClass::DrawAutoRank()
 		Graphic = UIManager->GetGraphicData(ss.str(), MULTISKILLSWINDOW);
 		X = static_cast<int>(Graphic->BaseLocationX);
 		Y = static_cast<int>(Graphic->BaseLocationY);
+		//TextOut(hdc, X, Y, EraseString.c_str(), EraseString.size());
 		TextString = to_string(SetTotalValue[i]);
 		TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
 		SetTextColor(hdc, OldColor);
@@ -869,7 +877,7 @@ void MultiSkillsWindowClass::ClearSkillFrame(HDC hdc)
 	rc.right -= 5;
 	rc.bottom -= 5;
 	FillRect(hdc, &rc, hbrBkGnd);
-	
+	DeleteObject(hbrBkGnd);
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearRect(HDC hdc, RECT rc)
@@ -879,12 +887,12 @@ void MultiSkillsWindowClass::ClearRect(HDC hdc, RECT rc)
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
 	HBRUSH hbrBkGnd = CreateSolidBrush(lb.lbColor);
-	rc.top -= 2;
-	rc.left -= 2;
-	rc.right += 2;
-	rc.bottom += 2;
+	rc.top -= 3;
+	rc.left -= 3;
+	rc.right += 3;
+	rc.bottom += 3;
 	FillRect(hdc, &rc, hbrBkGnd);
-
+	DeleteObject(hbrBkGnd);
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearAutoFillFrame(HDC hdc)
@@ -902,7 +910,7 @@ void MultiSkillsWindowClass::ClearAutoFillFrame(HDC hdc)
 	rc.right -= 5;
 	rc.bottom -= 50;
 	FillRect(hdc, &rc, hbrBkGnd);
-
+	DeleteObject(hbrBkGnd);
 }
 //---------------------------------------------------------------------------
 void MultiSkillsWindowClass::ClearSkillFrameTotals(HDC hdc)

@@ -1621,10 +1621,11 @@ string DataClass::GetAbilityString(ABILITIES Ability, bool Full)
 //---------------------------------------------------------------------------
 int DataClass::CalculateAbilityModifier(int AbilityValue)
     {
-    if (AbilityValue <=1)
+		int value;
+		if (AbilityValue <=1)
         return -5;
-
-    return (AbilityValue/2 - 5);
+		value = AbilityValue / 2 - 5;
+    return value;
     }
 
 //---------------------------------------------------------------------------

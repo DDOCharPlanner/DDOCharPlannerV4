@@ -13,7 +13,6 @@ ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;
 ADVANCEMENT: 1, REINCARNATION, Set Past Lives;
 ADVANCEMENT: 1, RACEANDSEX, Select a Race and Sex;
 ADVANCEMENT: 1, CLASS, Select an Initial Class;
-ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;
 ADVANCEMENT: 1, ABILITYPOINT, Ability Increase (%i points to spend), 28;
 ADVANCEMENT: 2, CLASS, Select a Class;
 ADVANCEMENT: 3, CLASS, Select a Class;
