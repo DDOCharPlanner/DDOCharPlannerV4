@@ -65,16 +65,14 @@ void AboutWindowClass::Create(HINSTANCE Instance, HWND Parent)
     AboutString += VERSION;
     AboutString += "\\par (C) 2006-2014 Ron Hiler\\par \
 All rights reserverd\\par \
-{\\cf2 www.rjcyberware.com\\par\\par}}\
-Graphics and text descriptions are property of {\\cf1 {\\b Turbine Inc.}} (C) 2005-2014, and are used with permission.\\par\\par \
-{\\cf2 {\\b Programmers:\\par}}\
-   {\\cf1 Ron Hiler} (general messer upper of code)\\par \
-   {\\cf1 DragonStar} (True messer upper of code :) )\\par \
-   {\\cf1 Muiread} (aka plus10swordofpimp and/or Eric)\\par \
-   {\\cf1 Ascendant Madness} (random tidbits for feats, item and enhancement data)\\par\\par \
-   {\\cf1 Jonesth3} (updates)\\par\\par\
-{\\cf2 {\\b Data Input:\\par}}\
-   {\\cf1 Tech13 aka 'Shoemaker'} (Equipment)\\par \
+Graphics and text descriptions are property of {\\cf1 {\\b Standing Stone Games.}} (C) 2016, and are used with permission.\\par\\par \
+A big thank you goes out to Ron Hiler the original creator of the first DDO Character Planner back in 2006. \\par \
+{\\cf2 {\\b Programmer Hall of Fame:\\par}}\
+	{\\cf1 Ron Hiler} (general messer upper of code)\\par \
+	{\\cf1 DragonStar} (True messer upper of code :) )\\par \
+    {\\cf1 Muiread} (aka plus10swordofpimp and/or Eric)\\par \
+    {\\cf1 Ascendant Madness} (random tidbits for feats, item and enhancement data)\\par \
+{\\cf2 {\\b contrubutor Hall of Fame:\\par}}\
    {\\cf1 Dworkin} (much equipment)\\par \
    {\\cf1 ChimRitchells} (general data input)\\par \
    {\\cf1 Valoir Wildfire} (Graphics Input)\\par \
@@ -87,15 +85,18 @@ Graphics and text descriptions are property of {\\cf1 {\\b Turbine Inc.}} (C) 20
    {\\cf1 BuckGB} \\par \
    {\\cf1 Cataclysm} \\par \
    {\\cf1 Garix} (new enhancements)\\par \
-   {\\cf1 BlackDae} (new enhancements)\\par\
-   {\\cf1 Shindoku} (new enhancements and data updates)\\par\
+   {\\cf1 BlackDae} (new enhancements)\\par\\par\
+{\\cf2 {\\b Programmers:\\par}}\
+   {\\cf1 Jonesth3} (Current Programer)\\par\\par\
+{\\cf2 {\\b Data Input:\\par}}\
+   {\\cf1 Tech13 aka 'Shoemaker'} (Equipment)\\par \
+   {\\cf1 Shindoku} (new enhancements and data updates)\\par\\par\
 {\\cf2 {\\b Special Thanks:\\par}}\
-  A big \"Thanks\" go out to {\\cf1 Turbine} for creating an amazing \\par \
+  A big \"Thanks\" go out to {\\cf1 Standing Stone Games} for creating an amazing \\par \
   game (and for allowing me to use their graphics and text).\\par \
 And of course, thanks go out to {\\cf1 everyone} that offered their opinions, comments, and support for the project, not to mention all the bug reports! \
 This project would not have been possible without you. Keep them coming, guys!\\par\\par \
-Please don't hesitate to send comments, suggestions, bug reports, and hate mail to me. I can be reached on the official DDO forums (username {\\cf1 Ron}), via \
-email at {\\cf1 rhiler@rjcyberware.com}, or on the forums at {\\cf1 www.rjcyberware.com}\\par\\par \
+Please don't hesitate to send comments, suggestions, bug reports, and hate mail to me. I can be reached on the official DDO forums (username {\\cf1 Ron})\
 {\\fs15\"So Brain, what do you want to do today?\"\\par \
 \"The same thing we do every day, Pinky, TRY TO TAKE OVER THE WORLD!\"}";
     Stream.dwCookie = (DWORD)AboutString.c_str();
