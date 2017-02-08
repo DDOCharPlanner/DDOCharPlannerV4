@@ -14,7 +14,7 @@ ControlWindowClass::~ControlWindowClass()
 //---------------------------------------------------------------------------
 void ControlWindowClass::CreateControlWindow(HINSTANCE Instance, int Width, int Height)
     {
-    static char AppName[] = "Dungeons & Dragons Character Planner";
+    static char AppName[] = "DDO Character Planner";
 	char WindowName[MAX_PATH];
     WNDCLASSEX wc;
 	RECT WindowRect;
