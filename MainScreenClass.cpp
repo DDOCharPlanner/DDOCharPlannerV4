@@ -1789,6 +1789,9 @@ void MainScreenClass::SetToRaceAndSex()
 	ShowWindow(AdvWinSpellClearButton, false);
 	ShowWindow(HeroicClassRadioButton, true);
 	ShowWindow(IconicClassRadioButton, true);
+	ShowWindow(HeroicPastRadioButton, false);
+	ShowWindow(IconicPastRadioButton, false);
+	ShowWindow(EpicPastRadioButton, false);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -1835,6 +1838,9 @@ void MainScreenClass::SetToReincarnation()
 	ShowWindow(AdvWinSpellClearButton, false);
 	ShowWindow(HeroicClassRadioButton, false);
 	ShowWindow(IconicClassRadioButton, false);
+	ShowWindow(HeroicPastRadioButton, true);
+	ShowWindow(IconicPastRadioButton, true);
+	ShowWindow(EpicPastRadioButton, true);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -1886,6 +1892,9 @@ void MainScreenClass::SetToNameAlignment()
 	ShowWindow(AdvWinSpellClearButton, false);
 	ShowWindow(HeroicClassRadioButton, false);
 	ShowWindow(IconicClassRadioButton, false);
+	ShowWindow(HeroicPastRadioButton, false);
+	ShowWindow(IconicPastRadioButton, false);
+	ShowWindow(EpicPastRadioButton, false);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -5132,12 +5141,16 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 
 			//Character.GetMulticlassClasses(CurrentSelectedLevel, Classes);
 			//if (Classes[2] != CLASSNONE)
+			int ClassIconCount = NUMCLASSES;
 			Character.GetMulticlassClasses(20, Classes);
 			if (Classes[2] != CLASSNONE && Character.GetNumClassLevels(Character.GetClass(CurrentSelectedLevel, false)) > 1)
 				{
 				//we have the maximum number of classes already!
-				for (unsigned int i=0; i<3; i++)
-					ClassSlot[i] = Classes[i];
+					for (unsigned int i = 0; i < 3; i++)
+					{
+						ClassSlot[i] = Classes[i];
+					}
+					ClassIconCount = 3;
 				}
             else if (CurrentSelectedLevel > 1)
                 {
@@ -5151,9 +5164,10 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
                         Index++;
                         }
                     }
+				ClassIconCount = Index;
                 }
 			//draw the class icons
-			for (unsigned int i=0; i<NUMCLASSES; i++)
+			for (unsigned int i=0; i<ClassIconCount; i++)
                 {
                 if (ClassSlot[i] == CLASSNONE)
                     break;
@@ -6262,15 +6276,27 @@ void MainScreenClass::HandleLeftMouseButtonClick(int x, int y)
 		Character.EnableValidations(false);
         RedrawWindow(ParentWindow, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
         CurrentInstructionSelection = 0;
+		if (CurrentSelectedLevel == 1)
+		{
+			ShowWindow(AdvWinFirstNameInput, true);
+			ShowWindow(AdvWinSurnameInput, true);
+		}
+		else
+		{
+	        ShowWindow(AdvWinFirstNameInput, false);
+	        ShowWindow(AdvWinSurnameInput, false);
+		}
         ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
         ShowWindow(AdvWinFeatList, false);
-        ShowWindow(AdvWinFirstNameInput, false);
-        ShowWindow(AdvWinSurnameInput, false);
+
         ShowWindow(AdvSkillPointSpendBox, false);
         ShowWindow(AdvWinSpellList, false);
         ShowWindow(AdvWinSpellClearButton, false);
 		ShowWindow(HeroicClassRadioButton, false);
 		ShowWindow(IconicClassRadioButton, false);
+		ShowWindow(HeroicPastRadioButton, false);
+		ShowWindow(IconicPastRadioButton, false);
+		ShowWindow(EpicPastRadioButton, false);
 	    CurrentRace = Character.GetRace();
 		CurrentClass = Character.GetClass(CurrentSelectedLevel);
 		AdvancementType = Data.GetAdvancementType(CurrentSelectedLevel, CurrentRace, CurrentClass, CurrentInstructionSelection, &Value);

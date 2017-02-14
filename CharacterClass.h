@@ -109,6 +109,8 @@ class CharacterClass
 		void IncreaseIconicPastLife(ICONICRACES Race);
 		void DecreaseIconicPastLife(ICONICRACES Race);
 		int GetIconicFeatIndex(ICONICRACES Race);
+		int GetFeatCountAtLevel(int Level);
+		int GetFeatAtLevel(int Level,int index);
 		
         //skill stuff
         float CalculateSkillLevel(SKILLS Skill, unsigned int AtLevel, bool AddMiscMod);

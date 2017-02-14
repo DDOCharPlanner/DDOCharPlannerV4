@@ -95,7 +95,7 @@ void MultiFeatWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	FeatWishPanel = CreateWindowEx(NULL, "STATIC", "", WS_CHILD | SS_GRAYFRAME, currentx, currenty, width, height, MultiFeatHandle, (HMENU)MFW_FEATWISHPANEL, Instance, NULL);
 	FeatWishPanelLabel = CreateWindowEx(NULL, "STATIC", "Wish List", WS_CHILD, currentx + 5, currenty + 5, width - 10, 20, MultiFeatHandle, (HMENU)MFW_FEATWISHPANELLIST, Instance, NULL);
 	FeatWishPanelList = CreateWindowEx(NULL, "LISTBOX", "Feat List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, currentx + 5, currenty + 25, width - 10, height - 35, MultiFeatHandle, (HMENU)MFW_FEATWISHPANELLIST, Instance, NULL);
-	
+	ClearButton = CreateWindowEx(NULL, "BUTTON", "Reset Level Feats", WS_CHILD | BS_PUSHBUTTON, 860, 550, 125, 60, MultiFeatHandle, (HMENU)MFW_CLEAR , Instance, NULL);
 	
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
 
@@ -165,6 +165,7 @@ void MultiFeatWindowClass::Show(bool State)
 	ShowWindow(SelectedPanelLabel, State);
 	ShowWindow(FeatWishPanelLabel, State);
 	ShowWindow(CharClassText, State);
+	ShowWindow(ClearButton, State);
 	//ShowWindow(AddButton, State);
 	//ShowWindow(RemoveButton, State);
 
@@ -247,11 +248,11 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 					InterfaceManager.ShowChild(MULTIFEATWINDOW, false);
 					return 0;
 				}
-				//if ((int)LOWORD(wParam) == MFW_Add)
-				//{
-
-				//return 0;
-				//}
+				if ((int)LOWORD(wParam) == MFW_CLEAR)
+				{
+					ClearFeats();
+					return 0;
+				}
 				//if ((int)LOWORD(wParam) == MFW_Remove)
 				//{
 
@@ -380,6 +381,23 @@ long MultiFeatWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM w
 		}
 	}
 	return DefWindowProc(Wnd, Message, wParam, lParam);
+}
+//--------------------------------------------------------------------------
+void MultiFeatWindowClass::ClearFeats()
+{
+	HDC hdc;
+	int FeatCount = Character.GetFeatCountAtLevel(CurrentSelectedLevel);
+	if (FeatCompare > 0)
+	{
+		for (int i = 0; i<FeatCount; i++)
+		{
+			Character.RemoveFeat(Character.GetFeatAtLevel(CurrentSelectedLevel,0));
+		}
+		hdc = GetDC(MultiFeatHandle);
+		DrawSelectPanel(hdc);
+		ReleaseDC(MultiFeatHandle, hdc);
+	}
+	
 }
 //--------------------------------------------------------------------------
 long MultiFeatWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARAM wParam, LPARAM lParam)
@@ -622,9 +640,9 @@ void MultiFeatWindowClass::HandleLeftMouseButtonClick(int x, int y)
 			Description += " \\par\\par ";
 			Description += Feat->GetPrereqString(CurrentSelectedLevel);
 			fillDescPanel(Description, FeatIcon[Feat->GetFeatIconIndex()].Graphic);
-			//Dragging = true;
-			//Cursor = CreateCursorFromBitmap(MultiFeatHandle, Palette, &FeatIcon[Feat->GetFeatIconIndex()], RGB(0, 0, 0), 16, 16);
-			//SetCursor(Cursor);
+			Dragging = true;
+			Cursor = CreateCursorFromBitmap(MultiFeatHandle, Palette, &FeatIcon[Feat->GetFeatIconIndex()], RGB(0, 0, 0), 16, 16);
+			SetCursor(Cursor);
 
 			return;
 		}
@@ -1671,6 +1689,16 @@ void MultiFeatWindowClass::FillSelectedPanel()
 //-------------------------------------------------------------------------
 void MultiFeatWindowClass::AddFeatWishListItem(int FeatIndex)
 {
+	HDC hdc;
+	if(Character.HasFeat(CurrentSelectedLevel,FeatIndex))
+	{
+		Character.RemoveFeat(FeatIndex);
+		hdc = GetDC(MultiFeatHandle);
+		DrawSelectPanel(hdc);
+		ReleaseDC(MultiFeatHandle, hdc);
+
+	}
+	
 	unsigned int Index1, Index2, CurrentFeatIndex;
 	FeatWishList.push_back(FeatIndex);
 	//make the list entries unique, then sort it

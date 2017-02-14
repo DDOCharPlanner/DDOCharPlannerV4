@@ -1352,7 +1352,55 @@ int CharacterClass::GetFeat(int Level, FEATSLOTTYPE FeatType, unsigned int Index
         }
     return -1;
     }
-   
+//---------------------------------------------------------------------------
+int CharacterClass::GetFeatCountAtLevel(int Level)
+{
+	unsigned int FeatCount = 0;
+	for (unsigned int i = 0; i < FeatList.size(); i++)
+	{
+		if ((FeatList[i].FeatAquireType == FEATCHARACTER) || (FeatList[i].FeatAquireType == FEATHUMANBONUS) ||
+			(FeatList[i].FeatAquireType == FEATFIGHTERBONUS) || (FeatList[i].FeatAquireType == FEATWIZARDBONUS) ||
+			(FeatList[i].FeatAquireType == FEATRANGERFAVOREDENEMY) || (FeatList[i].FeatAquireType == FEATROGUEBONUS) ||
+			(FeatList[i].FeatAquireType == FEATMONKBONUS) || (FeatList[i].FeatAquireType == FEATMONKPATH) ||
+			(FeatList[i].FeatAquireType == FEATDEITY) || (FeatList[i].FeatAquireType == FEATFAVOREDSOULBONUS) ||
+			(FeatList[i].FeatAquireType == FEATPASTLIFE) || (FeatList[i].FeatAquireType == FEATHALFELFBONUS) ||
+			(FeatList[i].FeatAquireType == FEATARTIFICERBONUS) || (FeatList[i].FeatAquireType == FEATDRUIDWILDSHAPE) ||
+			(FeatList[i].FeatAquireType == FEATDESTINY || (FeatList[i].FeatAquireType == FEATLEGENDARY)))
+		{
+			if (FeatList[i].Level == Level)
+				FeatCount++;
+		}
+	}
+	return FeatCount;
+}
+//---------------------------------------------------------------------------
+int CharacterClass::GetFeatAtLevel(int Level,int index)
+{
+	unsigned int FeatCount = 0;
+	for (unsigned int i = 0; i < FeatList.size(); i++)
+	{
+		if (FeatList[i].Level == Level)
+		{
+			if ((FeatList[i].FeatAquireType == FEATCHARACTER) || (FeatList[i].FeatAquireType == FEATHUMANBONUS) ||
+				(FeatList[i].FeatAquireType == FEATFIGHTERBONUS) || (FeatList[i].FeatAquireType == FEATWIZARDBONUS) ||
+				(FeatList[i].FeatAquireType == FEATRANGERFAVOREDENEMY) || (FeatList[i].FeatAquireType == FEATROGUEBONUS) ||
+				(FeatList[i].FeatAquireType == FEATMONKBONUS) || (FeatList[i].FeatAquireType == FEATMONKPATH) ||
+				(FeatList[i].FeatAquireType == FEATDEITY) || (FeatList[i].FeatAquireType == FEATFAVOREDSOULBONUS) ||
+				(FeatList[i].FeatAquireType == FEATPASTLIFE) || (FeatList[i].FeatAquireType == FEATHALFELFBONUS) ||
+				(FeatList[i].FeatAquireType == FEATARTIFICERBONUS) || (FeatList[i].FeatAquireType == FEATDRUIDWILDSHAPE) ||
+				(FeatList[i].FeatAquireType == FEATDESTINY || (FeatList[i].FeatAquireType == FEATLEGENDARY)))
+			{
+				if (FeatCount == index)
+				{
+					return FeatList[i].FeatIndex;
+				}
+				FeatCount++;
+			}
+				
+		}
+			
+	}
+}
 //---------------------------------------------------------------------------
 FEATSLOTTYPE CharacterClass::GetFeatAquireType(int FeatIndex, int Level)
     {

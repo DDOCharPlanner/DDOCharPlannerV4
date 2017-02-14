@@ -30,6 +30,7 @@ private:
 	HFONT DefaultFont;
 	HWND MultiFeatLabel;
 	HWND CancelButton;
+	HWND ClearButton;
 	HWND AcceptButton;
 	HWND SelectedPanel;
 	HWND SelectedPanelList;
@@ -45,6 +46,7 @@ private:
 	HWND CharClassText;
 	//HWND AddButton;
 	//HWND RemoveButton;
+	void ClearFeats();
 	void AddFeatWishListItem(int FeatIndex);
 	void RemoveFeatWishListItem(int FeatIndex);
 	vector <unsigned int> FeatWishList;
