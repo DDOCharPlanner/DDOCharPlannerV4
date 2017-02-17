@@ -123,6 +123,8 @@ void MultiFeatWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	//create a default font
  
 
+
+
 	SendMessage(DescPanel, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	SendMessage(SelectedPanelList, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	SendMessage(SelectedPanelList, LB_SETITEMHEIGHT, 0, MAKELPARAM(35, 0));

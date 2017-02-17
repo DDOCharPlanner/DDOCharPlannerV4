@@ -1,6 +1,9 @@
 #pragma once
 
 #include "stdafx.h"
+#include "RichEditBitmapClass.h"
+#include "UIcomponentManager.h"
+#include "IconClass.h"
 
 class MultiAbilityWindowClass
 {
@@ -17,6 +20,7 @@ public:
 
 private:
 	HFONT TitleFontLarge;
+	HFONT DefaultFont;
 	HWND MultiAbilityLabel;
 	HWND CancelButton;
 	HWND AcceptButton;

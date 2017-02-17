@@ -668,6 +668,62 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("EquipmentHighlightSlot15", MAINWINDOW, EquipBasX + 220, EquipBasY+130, 45, 47);
 	InitializeUIGraphic("EquipmentHighlightSlot16", MAINWINDOW, EquipBasX + 220, EquipBasY+185, 45, 47);
 
+	//**************************** Skills Window Graphic *************************
+	//Standard components
+	InitializeUIComponent("MultiAbiityText", MULTIABILITYWINDOW, "STATIC", "Add Abilities", WS_CHILD, 10, 5, 200, 25, MAB_LABEL);
+	InitializeUIComponent("Close", MULTIABILITYWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MAB_CLOSE);
+	int Width;
+	int Height;
+	int AbilityFrameBaseX;
+	int AbilityFrameBaseY;
+	Width = 200;
+	Height = 455;
+	AbilityFrameBaseX = 5;
+	AbilityFrameBaseY = 30;
+	
+	CurrentX = AbilityFrameBaseX;
+	CurrentY = AbilityFrameBaseY;
+	//Creation Frame
+	InitializeUIComponent("CreationFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CREATIONFRAME);
+	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-10, 50, MAB_CREATIONLABEL);
+	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 60, 100, 25, MAB_AVAILIBLELABEL);
+	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 110, CurrentY + 90, 15, 25, MAB_AVAILABLEPOINTS);
+	InitializeUIComponent("32PointBuild", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 130, CurrentY + 90, 80, 25, MAB_32BUILD);
+	InitializeUIComponent("BaseValueLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 55, CurrentY + 120, 45, 25, MAB_BASE);
+	InitializeUIComponent("PointsSpentLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 55, CurrentY + 120, 45, 25, MAB_SPENT);
+
+	//Grid Layout
+	InitializeUIComponent("CreationStr", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 150, 45, 50, MAB_CRESTR);
+	InitializeUIComponent("CreationDex", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 200, 45, 50, MAB_CREDEX);
+	InitializeUIComponent("CreationCon", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 250, 45, 50, MAB_CRECON);
+	InitializeUIComponent("CreationInt", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 300, 45, 50, MAB_CREINT);
+	InitializeUIComponent("CreationWis", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 350, 45, 50, MAB_CREWIS);
+	InitializeUIComponent("CreationCha", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 400, 45, 50, MAB_CRECHA);
+
+	CurrentY += 150;
+	for (int x = 0; x < 6; x++)
+	{
+		GraphicName = "AbilityDown" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 10, CurrentY + 7, 50, 15);
+
+		GraphicName = "AbiltiyValue" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 35, CurrentY + 5, 75, 25);
+
+		GraphicName = "AbiltiyUp" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 60, CurrentY + 7, 115, 15);
+
+		GraphicName = "PointsSpent" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 90, CurrentY + 7, 140, 25);
+
+		GraphicName = "CurrentCost" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 115, CurrentY + 5, 180, 25);
+
+		CurrentY += 50;
+	}
+
+
+
+
 	//**************************** MultiFeat Window Graphic *************************
 
 	//Level Bars
