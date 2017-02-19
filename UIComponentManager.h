@@ -47,6 +47,8 @@ class UIComponentManager
 		unordered_map<string, InterfaceComponentStruct> InterfaceComponentsMultiSkillWindow;
 		unordered_map<string, InterfaceGraphicStruct> InterfaceGraphicsMultiSkillWindow;
 		unordered_map<string, InterfaceComponentStruct> InterfaceComponentsMultiSpellsWindow;
+		unordered_map<string, InterfaceComponentStruct> InterfaceComponentsMultiAbilityWindow;
+		unordered_map<string, InterfaceGraphicStruct> InterfaceGraphicsMultiAbilityWindow;
 		unordered_map<string, InterfaceGraphicStruct> InterfaceGraphicsMultiSpellsWindow;
 		void InitializeUIComponent(string ComponentName, CHILDWINDOW Screen, string WindowType, string WindowLabel, DWORD Style, unsigned int BaseLocationX, unsigned int BaseLocationY, unsigned int BaseWidth, unsigned int BaseHeight, WINDOWID WindowID, string TooltipText="");
 		void InitializeUIGraphic(string GraphicName, CHILDWINDOW Screen, unsigned int BaseLocationX, unsigned int BaseLocationY, unsigned int BaseWidth, unsigned int BaseHeight);

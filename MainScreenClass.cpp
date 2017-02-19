@@ -5556,13 +5556,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
                     }
 				X += static_cast<int>(65.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
-                ss.str("");
-                Modifier = Data.CalculateAbilityModifier(Ability);
-                if (Modifier > 0)
-                    ss << "+" << Modifier;
-                else
-                    ss << Modifier;
-                OutputString = ss.str();
+
 				X += static_cast<int>(50.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
                 PointsSpent += Character.GetAbilityPointsSpent(i);

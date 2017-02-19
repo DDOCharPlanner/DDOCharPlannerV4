@@ -2,10 +2,10 @@
 
 #include "stdafx.h"
 #include "RichEditBitmapClass.h"
-#include "UIcomponentManager.h"
+#include "UIComponentManager.h"
 #include "IconClass.h"
 
-class MultiAbilityWindowClass
+class MultiAbilityWindowClass : public IconClass
 {
 public:
 
@@ -21,13 +21,44 @@ public:
 private:
 	HFONT TitleFontLarge;
 	HFONT DefaultFont;
-	HWND MultiAbilityLabel;
-	HWND CancelButton;
-	HWND AcceptButton;
+	HFONT LargeFont;
+	HFONT AbilityFontLarge;
+	HFONT AbilityFontSmall;
+	HFONT ArielFontSmall;
 
+	//HWND MultiAbilityLabel;
+	//HWND CancelButton;
+	//HWND AcceptButton;
 
+	HWND MultiAbilityText;
+	HWND CloseButton;
+	HWND CreationFrame;
+	HWND	CreationFrameLabel;
+	HWND	CreationAvilablePointLabel;
+	HWND	CreationAvilablePoint;
+	HWND	PointBuild32;
+	HWND	BaseValueLabel;
+	HWND	ModLabel;
+	HWND	CostLabel;
+	HWND	CreationStr;
+	HWND	CreationDex;
+	HWND	CreationCon;
+	HWND	CreationInt;
+	HWND	CreationWis;
+	HWND	CreationCha;
+	HWND	CreationStr2;
+	HWND	CreationDex2;
+	HWND	CreationCon2;
+	HWND	CreationInt2;
+	HWND	CreationWis2;
+	HWND	CreationCha2;
+	HPALETTE Palette;
+	GraphicStruct Minus;
+	GraphicStruct Plus;
+	void DrawCreation();
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);
+	void LoadGraphics(HWND Parent);
 
 };

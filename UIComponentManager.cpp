@@ -670,14 +670,14 @@ void UIComponentManager::InitializeUI()
 
 	//**************************** Skills Window Graphic *************************
 	//Standard components
-	InitializeUIComponent("MultiAbiityText", MULTIABILITYWINDOW, "STATIC", "Add Abilities", WS_CHILD, 10, 5, 200, 25, MAB_LABEL);
-	InitializeUIComponent("Close", MULTIABILITYWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MAB_CLOSE);
+	InitializeUIComponent("MultiAbilityText", MULTIABILITYWINDOW, "STATIC", "Add Abilities", WS_CHILD, 10, 5, 200, 25, MAB_LABEL);
+	InitializeUIComponent("CloseButton", MULTIABILITYWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MAB_CLOSE);
 	int Width;
 	int Height;
 	int AbilityFrameBaseX;
 	int AbilityFrameBaseY;
-	Width = 200;
-	Height = 455;
+	Width = 300;
+	Height = 330;
 	AbilityFrameBaseX = 5;
 	AbilityFrameBaseY = 30;
 	
@@ -685,40 +685,48 @@ void UIComponentManager::InitializeUI()
 	CurrentY = AbilityFrameBaseY;
 	//Creation Frame
 	InitializeUIComponent("CreationFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CREATIONFRAME);
-	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-10, 50, MAB_CREATIONLABEL);
-	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 60, 100, 25, MAB_AVAILIBLELABEL);
-	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 110, CurrentY + 90, 15, 25, MAB_AVAILABLEPOINTS);
-	InitializeUIComponent("32PointBuild", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 130, CurrentY + 90, 80, 25, MAB_32BUILD);
-	InitializeUIComponent("BaseValueLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 55, CurrentY + 120, 45, 25, MAB_BASE);
-	InitializeUIComponent("PointsSpentLabel", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 55, CurrentY + 120, 45, 25, MAB_SPENT);
+	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-10, 25, MAB_CREATIONLABEL);
+	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "Points Availible", WS_CHILD, CurrentX + 5, CurrentY + 30, 110, 25, MAB_AVAILIBLELABEL);
+	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "28", WS_CHILD, CurrentX + 115, CurrentY + 30, 15, 25, MAB_AVAILABLEPOINTS);
+	InitializeUIComponent("PointBuild32", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 170, CurrentY + 25, 120, 25, MAB_32BUILD);
+	InitializeUIComponent("BaseValueLabel", MULTIABILITYWINDOW, "STATIC", "Base Value", WS_CHILD, CurrentX + 80, CurrentY + 55, 100, 25, MAB_BASE);
+	InitializeUIComponent("CostLabel", MULTIABILITYWINDOW, "STATIC", "Cost", WS_CHILD, CurrentX + 190, CurrentY + 55, 50, 25, MAB_SPENT);
+	InitializeUIComponent("ModLabel", MULTIABILITYWINDOW, "STATIC", "Mod", WS_CHILD, CurrentX + 250, CurrentY + 55, 40, 25, MAB_COST);
+
 
 	//Grid Layout
-	InitializeUIComponent("CreationStr", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 150, 45, 50, MAB_CRESTR);
-	InitializeUIComponent("CreationDex", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 200, 45, 50, MAB_CREDEX);
-	InitializeUIComponent("CreationCon", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 250, 45, 50, MAB_CRECON);
-	InitializeUIComponent("CreationInt", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 300, 45, 50, MAB_CREINT);
-	InitializeUIComponent("CreationWis", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 350, 45, 50, MAB_CREWIS);
-	InitializeUIComponent("CreationCha", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD, CurrentX + 5, CurrentY + 400, 45, 50, MAB_CRECHA);
+	InitializeUIComponent("CreationStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 85, 45, 20, MAB_CRESTR);
+	InitializeUIComponent("CreationStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_CRESTR);
+	InitializeUIComponent("CreationDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 125, 45, 20, MAB_CREDEX);
+	InitializeUIComponent("CreationDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_CREDEX);
+	InitializeUIComponent("CreationCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 165, 45, 20, MAB_CRECON);
+	InitializeUIComponent("CreationCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_CRECON);
+	InitializeUIComponent("CreationInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 205, 45, 20, MAB_CREINT);
+	InitializeUIComponent("CreationInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_CREINT);
+	InitializeUIComponent("CreationWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 245, 45, 20, MAB_CREWIS);
+	InitializeUIComponent("CreationWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_CREWIS);
+	InitializeUIComponent("CreationCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_CRECHA);
+	InitializeUIComponent("CreationCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_CRECHA);
 
-	CurrentY += 150;
+	CurrentY += 85;
 	for (int x = 0; x < 6; x++)
 	{
 		GraphicName = "AbilityDown" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 10, CurrentY + 7, 50, 15);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 75, CurrentY + 7, 20, 20);
 
-		GraphicName = "AbiltiyValue" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 35, CurrentY + 5, 75, 25);
+		GraphicName = "AbilityValue" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 120, CurrentY + 9, 25, 25);
 
-		GraphicName = "AbiltiyUp" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 60, CurrentY + 7, 115, 15);
-
-		GraphicName = "PointsSpent" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 90, CurrentY + 7, 140, 25);
+		GraphicName = "AbilityUp" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 145, CurrentY + 7, 20, 20);
 
 		GraphicName = "CurrentCost" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 115, CurrentY + 5, 180, 25);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 210, CurrentY + 9, 25, 25);
 
-		CurrentY += 50;
+		GraphicName = "CurrentMod" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 260, CurrentY + 9, 25, 25);
+
+		CurrentY += 40;
 	}
 
 
@@ -795,7 +803,6 @@ void UIComponentManager::InitializeUI()
 	int ClassX, ClassY;
 	//int BaseX, BaseY;
 	int FrameBaseX, FrameBaseY;
-	int Width, Height;
 	int SpacingX, SpacingY;
 
 	ClassX = 10;
@@ -1087,6 +1094,21 @@ void UIComponentManager::InitializeUIComponent(string ComponentName, CHILDWINDOW
 			InterfaceComponentsMultiSpellsWindow.emplace(pair<string, InterfaceComponentStruct>(ComponentName, NewUI));
 			break;
 		}
+		case MULTIABILITYWINDOW:
+		{
+			NewUI.ComponentName = ComponentName;
+			NewUI.WindowType = WindowType;
+			NewUI.WindowLabel = WindowLabel;
+			NewUI.Style = Style;
+			NewUI.BaseLocationX = static_cast<double>(BaseLocationX);
+			NewUI.BaseLocationY = static_cast<double>(BaseLocationY);
+			NewUI.BaseWidth = static_cast<double>(BaseWidth);
+			NewUI.BaseHeight = static_cast<double>(BaseHeight);
+			NewUI.WindowID = WindowID;
+			NewUI.TooltipText = TooltipText;
+			InterfaceComponentsMultiAbilityWindow.emplace(pair<string, InterfaceComponentStruct>(ComponentName, NewUI));
+			break;
+		}
 		}
 	}
 
@@ -1147,6 +1169,16 @@ void UIComponentManager::InitializeUIGraphic(string GraphicName, CHILDWINDOW Scr
 			InterfaceGraphicsMultiSpellsWindow.emplace(pair<string, InterfaceGraphicStruct>(GraphicName, NewUI));
 			break;
 		}
+		case MULTIABILITYWINDOW:
+		{
+			NewUI.GraphicName = GraphicName;
+			NewUI.BaseLocationX = static_cast<double>(BaseLocationX);
+			NewUI.BaseLocationY = static_cast<double>(BaseLocationY);
+			NewUI.BaseWidth = static_cast<double>(BaseWidth);
+			NewUI.BaseHeight = static_cast<double>(BaseHeight);
+			InterfaceGraphicsMultiAbilityWindow.emplace(pair<string, InterfaceGraphicStruct>(GraphicName, NewUI));
+			break;
+		}
 		}
 	}
 	
@@ -1160,18 +1192,27 @@ InterfaceComponentStruct* UIComponentManager::GetComponentData(string ComponentN
 		case MAINWINDOW:
 			{
 			return &InterfaceComponentsMainScreen.at(ComponentName);
+			break;
 			}
 		case MULTICLASSWINDOW:
 			{
 			return &InterfaceComponentsMultiClassScreen.at(ComponentName);
+			break;
 			}
 		case MULTISKILLSWINDOW:
 			{
 				return &InterfaceComponentsMultiSkillWindow.at(ComponentName);
+				break;
 			}
 		case MULTISPELLSWINDOW:
 		{
 			return &InterfaceComponentsMultiSpellsWindow.at(ComponentName);
+			break;
+		}
+		case MULTIABILITYWINDOW:
+		{
+			return &InterfaceComponentsMultiAbilityWindow.at(ComponentName);
+			break;
 		}
 		}
 
@@ -1189,23 +1230,33 @@ InterfaceGraphicStruct* UIComponentManager::GetGraphicData(string GraphicName, C
 		case MAINWINDOW:
 			{
 			return &InterfaceGraphicsMainScreen.at(GraphicName);
+			break;
 			}
 		case MULTIFEATWINDOW:
 			{
 				return &InterfaceGraphicsFeatWindow.at(GraphicName);
+				break;
 			}
 		case MULTICLASSWINDOW:
 			{
 				return &InterfaceGraphicsMultiClassScreen.at(GraphicName);
+				break;
 			}
 		case MULTISKILLSWINDOW:
 			{
 				return &InterfaceGraphicsMultiSkillWindow.at(GraphicName);
+				break;
 			}
 		case MULTISPELLSWINDOW:
 			{
 				return &InterfaceGraphicsMultiSpellsWindow.at(GraphicName);
-			}			
+				break;
+			}	
+		case MULTIABILITYWINDOW:
+		{
+			return &InterfaceGraphicsMultiAbilityWindow.at(GraphicName);
+			break;
+		}
 		}
 
 				
@@ -1222,10 +1273,12 @@ string UIComponentManager::GetTooltipText(string ComponentName, CHILDWINDOW Scre
 		case MAINWINDOW:
 			{
 			return InterfaceComponentsMainScreen.at(ComponentName).TooltipText;
+			break;
 			}
 		case MULTICLASSWINDOW:
 		{
 			return InterfaceComponentsMultiClassScreen.at(ComponentName).TooltipText;
+			break;
 		}
 		}
 
