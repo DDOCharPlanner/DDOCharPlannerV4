@@ -678,14 +678,15 @@ void UIComponentManager::InitializeUI()
 	int AbilityFrameBaseY;
 	Width = 300;
 	Height = 330;
-	AbilityFrameBaseX = 5;
+	AbilityFrameBaseX = 10;
 	AbilityFrameBaseY = 30;
 	
-	CurrentX = AbilityFrameBaseX;
+	CurrentX = AbilityFrameBaseX + 5;
 	CurrentY = AbilityFrameBaseY;
 	//Creation Frame
 	InitializeUIComponent("CreationFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CREATIONFRAME);
-	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-10, 25, MAB_CREATIONLABEL);
+	CurrentX += 5;
+	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-20, 25, MAB_CREATIONLABEL);
 	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "Points Availible", WS_CHILD, CurrentX + 5, CurrentY + 30, 110, 25, MAB_AVAILIBLELABEL);
 	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "28", WS_CHILD, CurrentX + 115, CurrentY + 30, 15, 25, MAB_AVAILABLEPOINTS);
 	InitializeUIComponent("PointBuild32", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 170, CurrentY + 25, 120, 25, MAB_32BUILD);
@@ -696,17 +697,17 @@ void UIComponentManager::InitializeUI()
 
 	//Grid Layout
 	InitializeUIComponent("CreationStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 85, 45, 20, MAB_CRESTR);
-	InitializeUIComponent("CreationStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_CRESTR);
+	InitializeUIComponent("CreationStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_CRESTR2);
 	InitializeUIComponent("CreationDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 125, 45, 20, MAB_CREDEX);
-	InitializeUIComponent("CreationDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_CREDEX);
+	InitializeUIComponent("CreationDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_CREDEX2);
 	InitializeUIComponent("CreationCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 165, 45, 20, MAB_CRECON);
-	InitializeUIComponent("CreationCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_CRECON);
+	InitializeUIComponent("CreationCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_CRECON2);
 	InitializeUIComponent("CreationInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 205, 45, 20, MAB_CREINT);
-	InitializeUIComponent("CreationInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_CREINT);
+	InitializeUIComponent("CreationInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_CREINT2);
 	InitializeUIComponent("CreationWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 245, 45, 20, MAB_CREWIS);
-	InitializeUIComponent("CreationWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_CREWIS);
+	InitializeUIComponent("CreationWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_CREWIS2);
 	InitializeUIComponent("CreationCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_CRECHA);
-	InitializeUIComponent("CreationCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_CRECHA);
+	InitializeUIComponent("CreationCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_CRECHA2);
 
 	CurrentY += 85;
 	for (int x = 0; x < 6; x++)
@@ -729,9 +730,56 @@ void UIComponentManager::InitializeUI()
 		CurrentY += 40;
 	}
 
+	CurrentX = AbilityFrameBaseX+320;
+	CurrentY = AbilityFrameBaseY;
+	Width = 330;
+	Height = 330;
+
+	InitializeUIComponent("LevelUpFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_LEVELUPFRAME);
+	CurrentX += 5;
+	InitializeUIComponent("LevelUpLabel", MULTIABILITYWINDOW, "STATIC", "Level Up", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_LEVELUPLABEL);
+	InitializeUIComponent("LevelUpStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 85, 45, 20, MAB_LEVSTR);
+	InitializeUIComponent("LevelUpStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_LEVSTR2);
+	InitializeUIComponent("LevelUpDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 125, 45, 20, MAB_LEVDEX);
+	InitializeUIComponent("LevelUpDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_LEVDEX2);
+	InitializeUIComponent("LevelUpCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 165, 45, 20, MAB_LEVCON);
+	InitializeUIComponent("LevelUpCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_LEVCON2);
+	InitializeUIComponent("LevelUpInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 205, 45, 20, MAB_LEVINT);
+	InitializeUIComponent("LevelUpInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_LEVINT2);
+	InitializeUIComponent("LevelUpWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 245, 45, 20, MAB_LEVWIS);
+	InitializeUIComponent("LevelUpWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_LEVWIS2);
+	InitializeUIComponent("LevelUpCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_LEVCHA);
+	InitializeUIComponent("LevelUpCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_LEVCHA2);
+	
+	CurrentY += 55;
+
+	InitializeUIComponent("LevelLabel", MULTIABILITYWINDOW, "STATIC", "Level", WS_CHILD, CurrentX + 5, CurrentY + 30, 50, 25, MAB_LEVEL);
+
+	CurrentX += 65;
+
+	InitializeUIComponent("Level4", MULTIABILITYWINDOW, "STATIC", "4", WS_CHILD, CurrentX + 2, CurrentY, 15, 25, MAB_L4);
+	InitializeUIComponent("Level8", MULTIABILITYWINDOW, "STATIC", "8", WS_CHILD, CurrentX + 34, CurrentY, 15, 25, MAB_L8);
+	InitializeUIComponent("Level12", MULTIABILITYWINDOW, "STATIC", "12", WS_CHILD, CurrentX + 60, CurrentY, 15, 25, MAB_L12);
+	InitializeUIComponent("Level6", MULTIABILITYWINDOW, "STATIC", "16", WS_CHILD, CurrentX + 90, CurrentY, 15, 25, MAB_L16);
+	InitializeUIComponent("Level20", MULTIABILITYWINDOW, "STATIC", "20", WS_CHILD, CurrentX + 120, CurrentY, 15, 25, MAB_L20);
+	InitializeUIComponent("Level24", MULTIABILITYWINDOW, "STATIC", "24", WS_CHILD, CurrentX + 150, CurrentY, 15, 25, MAB_L24);
+	InitializeUIComponent("Level28", MULTIABILITYWINDOW, "STATIC", "28", WS_CHILD, CurrentX + 180, CurrentY, 15, 25, MAB_L28);
+	InitializeUIComponent("TotalLabel", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 210, CurrentY, 40, 25, MAB_LTOTAL);
+
+	CurrentY += 30;
+
+	InitializeUIComponent("StrRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY, 15, 25, MAB_4STR);
+	InitializeUIComponent("StrRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 30, CurrentY, 15, 25, MAB_8STR);
+	InitializeUIComponent("StrRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 60, CurrentY, 15, 25, MAB_12STR);
+	InitializeUIComponent("StrRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 90, CurrentY, 15, 25, MAB_16STR);
+	InitializeUIComponent("StrRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 120, CurrentY, 15, 25, MAB_20STR);
+	InitializeUIComponent("StrRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 150, CurrentY, 15, 25, MAB_24STR);
+	InitializeUIComponent("StrRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 180, CurrentY, 15, 25, MAB_28STR);
+	InitializeUIComponent("StrTotal", MULTIABILITYWINDOW, "STATIC", "0", WS_CHILD, CurrentX + 225, CurrentY+5, 25, 25, MAB_STRTOT);
 
 
 
+	
 	//**************************** MultiFeat Window Graphic *************************
 
 	//Level Bars

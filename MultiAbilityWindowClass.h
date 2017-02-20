@@ -52,6 +52,42 @@ private:
 	HWND	CreationInt2;
 	HWND	CreationWis2;
 	HWND	CreationCha2;
+
+	HWND LevelUpFrame;
+	HWND LevelUpLabel;
+	HWND LevelLabel;
+	HWND TotalLabel;
+	HWND LevelUpStr;
+	HWND LevelUpStr2;
+	HWND LevelUpDex;
+	HWND LevelUpDex2;
+	HWND LevelUpCon;
+	HWND LevelUpCon2;
+	HWND LevelUpInt;
+	HWND LevelUpInt2;
+	HWND LevelUpWis;
+	HWND LevelUpWis2;
+	HWND LevelUpCha;
+	HWND LevelUpCha2;
+	HWND Level4;
+	HWND Level8;
+	HWND Level12;
+	HWND Level6;
+	HWND Level20;
+	HWND Level24;
+	HWND Level28;
+	HWND StrRadio4;
+	HWND StrRadio8;
+	HWND StrRadio12;
+	HWND StrRadio16;
+	HWND StrRadio20;
+	HWND StrRadio24;
+	HWND StrRadio28;
+	HWND StrTotal;
+
+
+
+
 	HPALETTE Palette;
 	GraphicStruct Minus;
 	GraphicStruct Plus;

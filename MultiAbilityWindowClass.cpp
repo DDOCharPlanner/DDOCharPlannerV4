@@ -99,7 +99,6 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	CreationWis = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("CreationCha", MULTIABILITYWINDOW);
 	CreationCha = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-
 	Component = UIManager->GetComponentData("CreationStr2", MULTIABILITYWINDOW);
 	CreationStr2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("CreationDex2", MULTIABILITYWINDOW);
@@ -113,7 +112,80 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	Component = UIManager->GetComponentData("CreationCha2", MULTIABILITYWINDOW);
 	CreationCha2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
-	
+	Component = UIManager->GetComponentData("LevelUpFrame", MULTIABILITYWINDOW);
+	LevelUpFrame = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpLabel", MULTIABILITYWINDOW);
+	LevelUpLabel = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
+
+	Component = UIManager->GetComponentData("LevelUpStr", MULTIABILITYWINDOW);
+	LevelUpStr = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpStr2", MULTIABILITYWINDOW);
+	LevelUpStr2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpDex", MULTIABILITYWINDOW);
+	LevelUpDex = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpDex2", MULTIABILITYWINDOW);
+	LevelUpDex2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpCon", MULTIABILITYWINDOW);
+	LevelUpCon = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpCon2", MULTIABILITYWINDOW);
+	LevelUpCon2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpInt", MULTIABILITYWINDOW);
+	LevelUpInt = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpInt2", MULTIABILITYWINDOW);
+	LevelUpInt2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpWis", MULTIABILITYWINDOW);
+	LevelUpWis = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpWis2", MULTIABILITYWINDOW);
+	LevelUpWis2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpCha", MULTIABILITYWINDOW);
+	LevelUpCha = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("LevelUpCha2", MULTIABILITYWINDOW);
+	LevelUpCha2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
+	Component = UIManager->GetComponentData("LevelLabel", MULTIABILITYWINDOW);
+	LevelLabel = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level4", MULTIABILITYWINDOW);
+	Level4 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level8", MULTIABILITYWINDOW);
+	Level8 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level12", MULTIABILITYWINDOW);
+	Level12 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level6", MULTIABILITYWINDOW);
+	Level6 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level20", MULTIABILITYWINDOW);
+	Level20 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level24", MULTIABILITYWINDOW);
+	Level24 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("Level28", MULTIABILITYWINDOW);
+	Level28 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TotalLabel", MULTIABILITYWINDOW);
+	TotalLabel = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
+	Component = UIManager->GetComponentData("StrRadio4", MULTIABILITYWINDOW);
+	StrRadio4 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio8", MULTIABILITYWINDOW);
+	StrRadio8 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio12", MULTIABILITYWINDOW);
+	StrRadio12 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio16", MULTIABILITYWINDOW);
+	StrRadio16 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio20", MULTIABILITYWINDOW);
+	StrRadio20 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio24", MULTIABILITYWINDOW);
+	StrRadio24 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrRadio28", MULTIABILITYWINDOW);
+	StrRadio28 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("StrTotal", MULTIABILITYWINDOW);
+	StrTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
+
+
+
+
+
+
+
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
 
@@ -194,6 +266,21 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SendMessage(CreationWis2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
 	SendMessage(CreationCha2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
 
+	SendMessage(MultiAbilityText, WM_SETFONT, (WPARAM)TitleFontLarge, 0);
+	SendMessage(CreationFrameLabel, WM_SETFONT, (WPARAM)TitleFontLarge, 0);
+	SendMessage(LevelUpStr, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpDex, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpCon, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpInt, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpWis, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpCha, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(LevelUpStr2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(LevelUpDex2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(LevelUpCon2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(LevelUpInt2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(LevelUpWis2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(LevelUpCha2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+
 	LoadGraphics(MultiAbilityHandle);
 
 
@@ -228,6 +315,41 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(CreationInt2, State);
 	ShowWindow(CreationWis2, State);
 	ShowWindow(CreationCha2, State);
+
+	ShowWindow(LevelUpFrame, State);
+	ShowWindow(LevelUpLabel, State);
+	ShowWindow(LevelUpStr, State);
+	ShowWindow(LevelUpDex, State);
+	ShowWindow(LevelUpCon, State);
+	ShowWindow(LevelUpInt, State);
+	ShowWindow(LevelUpWis, State);
+	ShowWindow(LevelUpCha, State);
+	ShowWindow(LevelUpStr2, State);
+	ShowWindow(LevelUpDex2, State);
+	ShowWindow(LevelUpCon2, State);
+	ShowWindow(LevelUpInt2, State);
+	ShowWindow(LevelUpWis2, State);
+	ShowWindow(LevelUpCha2, State);
+
+	ShowWindow(Level4, State);
+	ShowWindow(Level8, State);
+	ShowWindow(Level12, State);
+	ShowWindow(Level6, State);
+	ShowWindow(Level20, State);
+	ShowWindow(Level24, State);
+	ShowWindow(Level28, State);
+	ShowWindow(TotalLabel, State);
+
+	ShowWindow(StrRadio4, State);
+	ShowWindow(StrRadio8, State);
+	ShowWindow(StrRadio12, State);
+	ShowWindow(StrRadio16, State);
+	ShowWindow(StrRadio20, State);
+	ShowWindow(StrRadio24, State);
+	ShowWindow(StrRadio28, State);
+	ShowWindow(StrTotal, State);
+
+
 	//Center in Window
 
 	int ParentX;
@@ -411,7 +533,9 @@ long MultiAbilityWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARA
 
 		SetBkMode((HDC)wParam, TRANSPARENT);
 		if((HWND)lParam == CreationStr || (HWND)lParam == CreationDex || (HWND)lParam == CreationCon ||
-			(HWND)lParam == CreationInt || (HWND)lParam == CreationWis || (HWND)lParam == CreationCha)
+			(HWND)lParam == CreationInt || (HWND)lParam == CreationWis || (HWND)lParam == CreationCha ||
+			(HWND)lParam == LevelUpStr || (HWND)lParam == LevelUpDex || (HWND)lParam == LevelUpCon ||
+			(HWND)lParam == LevelUpInt || (HWND)lParam == LevelUpWis || (HWND)lParam == LevelUpCha)
 		{
 			SetTextColor((HDC)wParam, RGB(230, 230, 30));
 		}
