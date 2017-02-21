@@ -474,7 +474,6 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	EnableWindow(ItemBuilderButton, false);
 
 	//disable the feature buttons not yet ready
-	EnableWindow(SideAbilityButton, false);
 	EnableWindow(SideSpellButton, false);
 	EnableWindow(SideDestinyButton, false);
 	EnableWindow(DestinyPanelButton, false);
@@ -1021,8 +1020,6 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					//enable feature buttons that are being worked on
 					EnableWindow(DestinyPanelButton, true);
 					EnableWindow(SideDestinyButton, true);
-
-					EnableWindow(SideAbilityButton, true);
 					EnableWindow(SideSkillButton, true);
 					EnableWindow(SideSpellButton, true);
 					return 0;

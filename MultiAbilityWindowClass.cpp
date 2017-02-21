@@ -63,9 +63,6 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 
 	UIManager = InterfaceManager.GetUIComponents();
 	//the child windows
-	//MultiAbilityLabel = CreateWindowEx(NULL, "STATIC", "Select Ability Advancement", WS_CHILD, 5, 5, 300, 20, MultiAbilityHandle, (HMENU)MAB_LABEL, Instance, NULL);
-	//AcceptButton = CreateWindowEx(NULL, "BUTTON", "Accept", WS_CHILD | BS_PUSHBUTTON, 485, 5, 50, 25, MultiAbilityHandle, (HMENU)MAB_ACCEPT, Instance, NULL);
-	//CancelButton = CreateWindowEx(NULL, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 940, 5, 50, 25, MultiAbilityHandle, (HMENU)MAB_CLOSE, Instance, NULL);
 	Component = UIManager->GetComponentData("MultiAbilityText", MULTIABILITYWINDOW);
 	MultiAbilityText = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("CloseButton", MULTIABILITYWINDOW);
@@ -287,6 +284,50 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	Component = UIManager->GetComponentData("CurrentMod", MULTIABILITYWINDOW);
 	CurrentMod = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
+	Component = UIManager->GetComponentData("TomeFrame", MULTIABILITYWINDOW);
+	TomeFrame = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel", MULTIABILITYWINDOW);
+	TomeLabel = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeStr", MULTIABILITYWINDOW);
+	TomeStr = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeDex", MULTIABILITYWINDOW);
+	TomeDex = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeCon", MULTIABILITYWINDOW);
+	TomeCon = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeInt", MULTIABILITYWINDOW);
+	TomeInt = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeWis", MULTIABILITYWINDOW);
+	TomeWis = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeCha", MULTIABILITYWINDOW);
+	TomeCha = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeStr2", MULTIABILITYWINDOW);
+	TomeStr2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeDex2", MULTIABILITYWINDOW);
+	TomeDex2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeCon2", MULTIABILITYWINDOW);
+	TomeCon2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeInt2", MULTIABILITYWINDOW);
+	TomeInt2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeWis2", MULTIABILITYWINDOW);
+	TomeWis2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeCha2", MULTIABILITYWINDOW);
+	TomeCha2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
+	Component = UIManager->GetComponentData("TomeLabel1", MULTIABILITYWINDOW);
+	TomeLabel1 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel2", MULTIABILITYWINDOW);
+	TomeLabel2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel3", MULTIABILITYWINDOW);
+	TomeLabel3 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel4", MULTIABILITYWINDOW);
+	TomeLabel4 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel5", MULTIABILITYWINDOW);
+	TomeLabel5 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel6", MULTIABILITYWINDOW);
+	TomeLabel6 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel7", MULTIABILITYWINDOW);
+	TomeLabel7 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
 
@@ -396,6 +437,20 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SendMessage(CurrentWis2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
 	SendMessage(CurrentCha2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
 
+	SendMessage(TomeLabel, WM_SETFONT, (WPARAM)TitleFontLarge, 0);
+	SendMessage(TomeStr, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeDex, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeCon, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeInt, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeWis, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeCha, WM_SETFONT, (WPARAM)AbilityFontLarge, 0);
+	SendMessage(TomeStr2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(TomeDex2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(TomeCon2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(TomeInt2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(TomeWis2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+	SendMessage(TomeCha2, WM_SETFONT, (WPARAM)AbilityFontSmall, 0);
+
 	LoadGraphics(MultiAbilityHandle);
 
 
@@ -463,7 +518,7 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(StrRadio20, State);
 	ShowWindow(StrRadio24, State);
 	ShowWindow(StrRadio28, State);
-	//ShowWindow(StrTotal, State);
+
 
 	ShowWindow(DexRadio4, State);
 	ShowWindow(DexRadio8, State);
@@ -472,7 +527,7 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(DexRadio20, State);
 	ShowWindow(DexRadio24, State);
 	ShowWindow(DexRadio28, State);
-	//ShowWindow(DexTotal, State);
+
 
 	ShowWindow(ConRadio4, State);
 	ShowWindow(ConRadio8, State);
@@ -481,7 +536,6 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(ConRadio20, State);
 	ShowWindow(ConRadio24, State);
 	ShowWindow(ConRadio28, State);
-	//ShowWindow(ConTotal, State);
 
 	ShowWindow(IntRadio4, State);
 	ShowWindow(IntRadio8, State);
@@ -490,7 +544,6 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(IntRadio20, State);
 	ShowWindow(IntRadio24, State);
 	ShowWindow(IntRadio28, State);
-	//ShowWindow(IntTotal, State);
 
 	ShowWindow(WisRadio4, State);
 	ShowWindow(WisRadio8, State);
@@ -499,7 +552,6 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(WisRadio20, State);
 	ShowWindow(WisRadio24, State);
 	ShowWindow(WisRadio28, State);
-	//ShowWindow(WisTotal, State);
 
 	ShowWindow(ChaRadio4, State);
 	ShowWindow(ChaRadio8, State);
@@ -508,7 +560,6 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(ChaRadio20, State);
 	ShowWindow(ChaRadio24, State);
 	ShowWindow(ChaRadio28, State);
-	//ShowWindow(ChaTotal, State);
 
 	ShowWindow(CurrentFrame, State);
 	ShowWindow(CurrentLabel, State);
@@ -526,6 +577,29 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(CurrentCha2, State);
 	ShowWindow(CurrentValue, State);
 	ShowWindow(CurrentMod, State);
+
+	ShowWindow(TomeFrame, State);
+	ShowWindow(TomeLabel, State);
+	ShowWindow(TomeStr, State);
+	ShowWindow(TomeDex, State);
+	ShowWindow(TomeCon, State);
+	ShowWindow(TomeInt, State);
+	ShowWindow(TomeWis, State);
+	ShowWindow(TomeCha, State);
+	ShowWindow(TomeStr2, State);
+	ShowWindow(TomeDex2, State);
+	ShowWindow(TomeCon2, State);
+	ShowWindow(TomeInt2, State);
+	ShowWindow(TomeWis2, State);
+	ShowWindow(TomeCha2, State);
+
+	ShowWindow(TomeLabel1, State);
+	ShowWindow(TomeLabel2, State);
+	ShowWindow(TomeLabel3, State);
+	ShowWindow(TomeLabel4, State);
+	ShowWindow(TomeLabel5, State);
+	ShowWindow(TomeLabel6, State);
+	ShowWindow(TomeLabel7, State);
 
 	//Center in Window
 
@@ -602,6 +676,7 @@ void MultiAbilityWindowClass::Show(bool State)
 	DrawLevelUp();
 	DrawCurrent();
 	DrawLevelBars();
+	DrawTome();
 }
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::DrawCreation()
@@ -1184,6 +1259,77 @@ void MultiAbilityWindowClass::DrawLevelBars()
 	ReleaseDC(MultiAbilityHandle, hdc);
 }
 //---------------------------------------------------------------------------
+void MultiAbilityWindowClass::DrawTome()
+{
+	HDC hdc;
+
+	hdc = GetWindowDC(MultiAbilityHandle);
+	COLORREF OldColor;
+	ostringstream ss;
+	int X, Y;
+	int Width, Height;
+	//FeatDataClass *Feat;
+	UIComponentManager *UIManager;
+	InterfaceGraphicStruct *Graphic;
+	//RECT Frame;
+	int ButtonSpacing = 30;
+	int feat;
+	int TomeLevel;
+	TomeLevel = 0;
+	SetBkMode(hdc, TRANSPARENT);
+	SetTextAlign(hdc, TA_CENTER);
+	//InvalidateRect(MultiFeatHandle, NULL, FALSE);
+	//UpdateWindow(MultiFeatHandle);
+	UIManager = InterfaceManager.GetUIComponents();
+	for (int i = 0; i < 6; i++)
+	{ 
+		TomeLevel = 0;
+		for (int x = 0; x < 7; x++)
+		{
+			if (x > 4)
+				TomeLevel = 20;
+			ss.str("");
+			ss << "Tome_" << x << "Ability_" << i;
+			Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+			X = static_cast<int>(Graphic->BaseLocationX);
+			Y = static_cast<int>(Graphic->BaseLocationY);
+			Width = static_cast<int>(Graphic->BaseWidth);
+			Height = static_cast<int>(Graphic->BaseHeight);
+			if (TomeLevel > 0)
+			{
+				DrawGraphic(hdc, &Spinner, X, Y, Width, Height);
+				OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+				ss.str("");
+				ss << TomeLevel;
+				TextOut(hdc, X + 12, Y + 3, ss.str().c_str(), ss.str().size());
+				SetTextColor(hdc, OldColor);
+			}
+				
+			else
+				DrawGraphic(hdc, &Spinnerwithcover, X, Y, Width, Height);
+		}
+		ss.str("");
+		ss << "TomeTotal" << i;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+		ss.str("");
+		ss << "0";
+		TextOut(hdc, X, Y, ss.str().c_str(), ss.str().size());
+		SetTextColor(hdc, OldColor);
+	}
+
+
+
+
+	ReleaseDC(MultiAbilityHandle, hdc);
+}
+
+
+//---------------------------------------------------------------------------
 void MultiAbilityWindowClass::LoadGraphics(HWND Parent)
 {
 	HDC hdc;
@@ -1198,7 +1344,8 @@ void MultiAbilityWindowClass::LoadGraphics(HWND Parent)
 	LoadBitmap("PlusBox", "UserInterface", &Plus);
 	LoadBitmap("LevelBoxBlue", "UserInterface", &BlueLevelBox);
 	LoadBitmap("LevelBoxGreen", "UserInterface", &GreenLevelBox);
-
+	LoadBitmap("Spinner", "UserInterface", &Spinner);
+	LoadBitmap("Spinnerwithcover", "UserInterface", &Spinnerwithcover);
 
 }
 //---------------------------------------------------------------------------
@@ -1260,7 +1407,9 @@ long MultiAbilityWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARA
 			(HWND)lParam == LevelUpStr || (HWND)lParam == LevelUpDex || (HWND)lParam == LevelUpCon ||
 			(HWND)lParam == LevelUpInt || (HWND)lParam == LevelUpWis || (HWND)lParam == LevelUpCha ||
 			(HWND)lParam == CurrentStr || (HWND)lParam == CurrentDex || (HWND)lParam == CurrentCon ||
-			(HWND)lParam == CurrentInt || (HWND)lParam == CurrentWis || (HWND)lParam == CurrentCha)
+			(HWND)lParam == CurrentInt || (HWND)lParam == CurrentWis || (HWND)lParam == CurrentCha ||
+			(HWND)lParam == TomeStr || (HWND)lParam == TomeDex || (HWND)lParam == TomeCon ||
+			(HWND)lParam == TomeInt || (HWND)lParam == TomeWis || (HWND)lParam == TomeCha)
 		{
 			SetTextColor((HDC)wParam, RGB(230, 230, 30));
 		}

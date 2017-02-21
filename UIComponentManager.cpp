@@ -913,7 +913,57 @@ void UIComponentManager::InitializeUI()
 		}
 	}
 
+	CurrentX = AbilityFrameBaseX + 5;
+	CurrentY = AbilityFrameBaseY +340;
+	Width = 645;
+	Height = 300;
 
+	InitializeUIComponent("TomeFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_TOMEFRAME);
+	CurrentX += 5;
+	InitializeUIComponent("TomeLabel", MULTIABILITYWINDOW, "STATIC", "Tomes", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_TOMELABEL);
+	InitializeUIComponent("TomeStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 65, 45, 20, MAB_TOMSTR);
+	InitializeUIComponent("TomeStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 82, 45, 10, MAB_TOMSTR2);
+	InitializeUIComponent("TomeDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 105, 45, 20, MAB_TOMDEX);
+	InitializeUIComponent("TomeDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 122, 45, 10, MAB_TOMDEX2);
+	InitializeUIComponent("TomeCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 145, 45, 20, MAB_TOMCON);
+	InitializeUIComponent("TomeCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 162, 45, 10, MAB_TOMCON2);
+	InitializeUIComponent("TomeInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 185, 45, 20, MAB_TOMINT);
+	InitializeUIComponent("TomeInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 202, 45, 10, MAB_TOMINT2);
+	InitializeUIComponent("TomeWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 225, 45, 20, MAB_TOMWIS);
+	InitializeUIComponent("TomeWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 242, 45, 10, MAB_TOMWIS2);
+	InitializeUIComponent("TomeCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 265, 45, 20, MAB_TOMCHA);
+	InitializeUIComponent("TomeCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 282, 45, 10, MAB_TOMCHA2);
+
+	CurrentX += 65;
+	CurrentY += 35;
+	InitializeUIComponent("TomeLabel1", MULTIABILITYWINDOW, "STATIC", "+1", WS_CHILD, CurrentX +12, CurrentY, 45, 25, MAB_T1);
+	InitializeUIComponent("TomeLabel2", MULTIABILITYWINDOW, "STATIC", "+2", WS_CHILD, CurrentX + 62, CurrentY, 45, 25, MAB_T2);
+	InitializeUIComponent("TomeLabel3", MULTIABILITYWINDOW, "STATIC", "+3", WS_CHILD, CurrentX + 112, CurrentY, 45, 25, MAB_T3);
+	InitializeUIComponent("TomeLabel4", MULTIABILITYWINDOW, "STATIC", "+4", WS_CHILD, CurrentX + 162, CurrentY, 45, 25, MAB_T4);
+	InitializeUIComponent("TomeLabel5", MULTIABILITYWINDOW, "STATIC", "+5", WS_CHILD, CurrentX + 212, CurrentY, 45, 25, MAB_T5);
+	InitializeUIComponent("TomeLabel6", MULTIABILITYWINDOW, "STATIC", "+6", WS_CHILD, CurrentX + 262, CurrentY, 45, 25, MAB_T6);
+	InitializeUIComponent("TomeLabel7", MULTIABILITYWINDOW, "STATIC", "+7", WS_CHILD, CurrentX + 312, CurrentY, 45, 25, MAB_T7);
+	InitializeUIComponent("TomeTotal", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 362, CurrentY, 45, 25, MAB_TOMETOTAL);
+
+	int TomeBaseX, TomeBaseY;
+	TomeBaseX = CurrentX;
+	TomeBaseY = CurrentY + 37;
+
+	CurrentX = TomeBaseX;
+	CurrentY = TomeBaseY;
+	for (int i = 0; i < 6; i++)
+	{
+		for (int x = 0; x < 7; x++)
+		{
+			GraphicName = "Tome_" + to_string(x) + "Ability_" + to_string(i);
+			InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX, CurrentY, 45, 20);
+			CurrentX += 50;
+		}
+		GraphicName = "TomeTotal" + to_string(i);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX+40, CurrentY+3, 25, 25);
+		CurrentY += 40;
+		CurrentX = TomeBaseX;
+	}
 
 
 	//**************************** MultiFeat Window Graphic *************************

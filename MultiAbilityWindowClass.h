@@ -148,6 +148,29 @@ private:
 	HWND CurrentValue;
 	HWND CurrentMod;
 
+	HWND	TomeFrame;
+	HWND	TomeLabel;
+	HWND	TomeStr;
+	HWND	TomeDex;
+	HWND	TomeCon;
+	HWND	TomeInt;
+	HWND	TomeWis;
+	HWND	TomeCha;
+	HWND	TomeStr2;
+	HWND	TomeDex2;
+	HWND	TomeCon2;
+	HWND	TomeInt2;
+	HWND	TomeWis2;
+	HWND	TomeCha2;
+
+	HWND	TomeLabel1;
+	HWND	TomeLabel2;
+	HWND	TomeLabel3;
+	HWND	TomeLabel4;
+	HWND	TomeLabel5;
+	HWND	TomeLabel6;
+	HWND	TomeLabel7;
+
 	int CurrentLevel;
 
 	int RadioButtonID[6][7];
@@ -157,12 +180,15 @@ private:
 	GraphicStruct Plus;
 	GraphicStruct BlueLevelBox;
 	GraphicStruct GreenLevelBox;
+	GraphicStruct Spinner;
+	GraphicStruct Spinnerwithcover;
 	void DrawCreation();
 	void DrawLevelUp();
 	void LevelUpAbility(int Button);
 	void ClearRect(HDC hdc, RECT rc);
 	void DrawCurrent();
 	void DrawLevelBars();
+	void DrawTome();
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);
