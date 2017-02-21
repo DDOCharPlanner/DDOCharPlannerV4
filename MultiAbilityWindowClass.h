@@ -69,6 +69,7 @@ private:
 	HWND LevelUpWis2;
 	HWND LevelUpCha;
 	HWND LevelUpCha2;
+
 	HWND Level4;
 	HWND Level8;
 	HWND Level12;
@@ -85,13 +86,74 @@ private:
 	HWND StrRadio28;
 	HWND StrTotal;
 
+	HWND DexRadio4;
+	HWND DexRadio8;
+	HWND DexRadio12;
+	HWND DexRadio16;
+	HWND DexRadio20;
+	HWND DexRadio24;
+	HWND DexRadio28;
+	HWND DexTotal;
 
+	HWND ConRadio4;
+	HWND ConRadio8;
+	HWND ConRadio12;
+	HWND ConRadio16;
+	HWND ConRadio20;
+	HWND ConRadio24;
+	HWND ConRadio28;
+	HWND ConTotal;
 
+	HWND IntRadio4;
+	HWND IntRadio8;
+	HWND IntRadio12;
+	HWND IntRadio16;
+	HWND IntRadio20;
+	HWND IntRadio24;
+	HWND IntRadio28;
+	HWND IntTotal;
+
+	HWND WisRadio4;
+	HWND WisRadio8;
+	HWND WisRadio12;
+	HWND WisRadio16;
+	HWND WisRadio20;
+	HWND WisRadio24;
+	HWND WisRadio28;
+	HWND WisTotal;
+
+	HWND ChaRadio4;
+	HWND ChaRadio8;
+	HWND ChaRadio12;
+	HWND ChaRadio16;
+	HWND ChaRadio20;
+	HWND ChaRadio24;
+	HWND ChaRadio28;
+	HWND ChaTotal;
+
+	HWND CurrentFrame;
+	HWND CurrentLabel;
+	HWND CurrentStr;
+	HWND CurrentStr2;
+	HWND CurrentDex;
+	HWND CurrentDex2;
+	HWND CurrentCon;
+	HWND CurrentCon2;
+	HWND CurrentInt;
+	HWND CurrentInt2;
+	HWND CurrentWis;
+	HWND CurrentWis2;
+	HWND CurrentCha;
+	HWND CurrentCha2;
+	int RadioButtonID[6][7];
 
 	HPALETTE Palette;
 	GraphicStruct Minus;
 	GraphicStruct Plus;
 	void DrawCreation();
+	void DrawLevelUp();
+	void LevelUpAbility(int Button);
+	void ClearRect(HDC hdc, RECT rc);
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);

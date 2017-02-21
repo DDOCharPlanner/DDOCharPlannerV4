@@ -13,9 +13,9 @@ UIComponentManager::~UIComponentManager()
 
 //---------------------------------------------------------------------------
 void UIComponentManager::InitializeUI()
-	{
-		int currentX = 0;
-		int currentY = 0;
+{
+	int currentX = 0;
+	int currentY = 0;
 	//*************The Main Screen Windows***************
 
 	//Menu Bar
@@ -38,8 +38,8 @@ void UIComponentManager::InitializeUI()
 
 	InitializeUIComponent("QuitButton", MAINWINDOW, "BUTTON", "Quit", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 10, MenuBarY, MenuButtonW, MenuButtonH, MS_QUITBUTTON);
 	InitializeUIComponent("AboutButton", MAINWINDOW, "BUTTON", "About", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 11, MenuBarY, MenuButtonW, MenuButtonH, MS_ABOUTBUTTON);
-	InitializeUIComponent("NameLabel", MAINWINDOW, "STATIC", "Name Label", WS_CHILD, MenuBarX, MenuBarY+23, 585, 20, MS_NAMELABEL);
-	InitializeUIComponent("RaceClassLabel", MAINWINDOW, "STATIC", "RaceClass Label", WS_CHILD, MenuBarX, MenuBarY+41, 585, 20, MS_RACECLASSLABEL);
+	InitializeUIComponent("NameLabel", MAINWINDOW, "STATIC", "Name Label", WS_CHILD, MenuBarX, MenuBarY + 23, 585, 20, MS_NAMELABEL);
+	InitializeUIComponent("RaceClassLabel", MAINWINDOW, "STATIC", "RaceClass Label", WS_CHILD, MenuBarX, MenuBarY + 41, 585, 20, MS_RACECLASSLABEL);
 
 
 	//side Menu
@@ -76,54 +76,54 @@ void UIComponentManager::InitializeUI()
 
 
 
-    //the ability box
+	//the ability box
 	int abilityboxX = 5;
 	int abilityboxY = 68;
 	InitializeUIComponent("AbilityBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, abilityboxX, abilityboxY, 290, 205, MS_ABILITYBOXFRAME);
-	InitializeUIComponent("AbilityLabel", MAINWINDOW, "STATIC", "Ability", WS_CHILD | SS_CENTER, abilityboxX + 85, abilityboxY+5, 70, 20, MS_ABILITYLABEL);
-	InitializeUIComponent("AbilityModifierLabel", MAINWINDOW, "STATIC", "Modifier", WS_CHILD | SS_CENTER, abilityboxX + 185, abilityboxY+5, 70, 20, MS_ABILITYMODIFIERLABEL);
-	InitializeUIComponent("StrLabel", MAINWINDOW, "STATIC", "STR", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+20, 60, 20, MS_STRLABEL);
-	InitializeUIComponent("StrLabel2", MAINWINDOW, "STATIC", "STRENGTH", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+37, 60, 10, MS_STRLABEL2);
-	InitializeUIComponent("DexLabel", MAINWINDOW, "STATIC", "DEX", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+50, 60, 20, MS_DEXLABEL);
-	InitializeUIComponent("DexLabel2", MAINWINDOW, "STATIC", "DEXTERITY", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+67, 60, 10, MS_DEXLABEL2);
-	InitializeUIComponent("ConLabel", MAINWINDOW, "STATIC", "CON", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+80, 60, 20, MS_CONLABEL);
-	InitializeUIComponent("ConLabel2", MAINWINDOW, "STATIC", "CONSTITUTION", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+97, 60, 10, MS_CONLABEL2);
-	InitializeUIComponent("IntLabel", MAINWINDOW, "STATIC", "INT", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+110, 60, 20, MS_INTLABEL);
-	InitializeUIComponent("IntLabel2", MAINWINDOW, "STATIC", "INTELLIGENCE", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+127, 60, 10, MS_INTLABEL2);
-	InitializeUIComponent("WisLabel", MAINWINDOW, "STATIC", "WIS", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+140, 60, 20, MS_WISLABEL);
-	InitializeUIComponent("WisLabel2", MAINWINDOW, "STATIC", "WISDOM", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+157, 60, 10, MS_WISLABEL2);
-	InitializeUIComponent("ChaLabel", MAINWINDOW, "STATIC", "CHA", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+170, 60, 20, MS_CHALABEL);
-	InitializeUIComponent("ChaLabel2", MAINWINDOW, "STATIC", "CHARISMA", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY+187, 60, 10, MS_CHALABEL2);
-	InitializeUIComponent("StrNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+25, 70, 20, MS_STRNUMBER);
-	InitializeUIComponent("DexNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+55, 70, 20, MS_DEXNUMBER);
-	InitializeUIComponent("ConNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+85, 70, 20, MS_CONNUMBER);
-	InitializeUIComponent("IntNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+115, 70, 20, MS_INTNUMBER);
-	InitializeUIComponent("WisNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+145, 70, 20, MS_WISNUMBER);
-	InitializeUIComponent("ChaNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY+175, 70, 20, MS_CHANUMBER);
-	InitializeUIComponent("StrModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+25, 70, 20, MS_STRMODIFIER);
-	InitializeUIComponent("DexModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+55, 70, 20, MS_DEXMODIFIER);
-	InitializeUIComponent("ConModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+85, 70, 20, MS_CONMODIFIER);
-	InitializeUIComponent("IntModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+115, 70, 20, MS_INTMODIFIER);
-	InitializeUIComponent("WisModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+145, 70, 20, MS_WISMODIFIER);
-	InitializeUIComponent("ChaModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY+175, 70, 20, MS_CHAMODIFIER);
+	InitializeUIComponent("AbilityLabel", MAINWINDOW, "STATIC", "Ability", WS_CHILD | SS_CENTER, abilityboxX + 85, abilityboxY + 5, 70, 20, MS_ABILITYLABEL);
+	InitializeUIComponent("AbilityModifierLabel", MAINWINDOW, "STATIC", "Modifier", WS_CHILD | SS_CENTER, abilityboxX + 185, abilityboxY + 5, 70, 20, MS_ABILITYMODIFIERLABEL);
+	InitializeUIComponent("StrLabel", MAINWINDOW, "STATIC", "STR", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 20, 60, 20, MS_STRLABEL);
+	InitializeUIComponent("StrLabel2", MAINWINDOW, "STATIC", "STRENGTH", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 37, 60, 10, MS_STRLABEL2);
+	InitializeUIComponent("DexLabel", MAINWINDOW, "STATIC", "DEX", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 50, 60, 20, MS_DEXLABEL);
+	InitializeUIComponent("DexLabel2", MAINWINDOW, "STATIC", "DEXTERITY", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 67, 60, 10, MS_DEXLABEL2);
+	InitializeUIComponent("ConLabel", MAINWINDOW, "STATIC", "CON", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 80, 60, 20, MS_CONLABEL);
+	InitializeUIComponent("ConLabel2", MAINWINDOW, "STATIC", "CONSTITUTION", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 97, 60, 10, MS_CONLABEL2);
+	InitializeUIComponent("IntLabel", MAINWINDOW, "STATIC", "INT", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 110, 60, 20, MS_INTLABEL);
+	InitializeUIComponent("IntLabel2", MAINWINDOW, "STATIC", "INTELLIGENCE", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 127, 60, 10, MS_INTLABEL2);
+	InitializeUIComponent("WisLabel", MAINWINDOW, "STATIC", "WIS", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 140, 60, 20, MS_WISLABEL);
+	InitializeUIComponent("WisLabel2", MAINWINDOW, "STATIC", "WISDOM", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 157, 60, 10, MS_WISLABEL2);
+	InitializeUIComponent("ChaLabel", MAINWINDOW, "STATIC", "CHA", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 170, 60, 20, MS_CHALABEL);
+	InitializeUIComponent("ChaLabel2", MAINWINDOW, "STATIC", "CHARISMA", WS_CHILD | SS_CENTER, abilityboxX + 5, abilityboxY + 187, 60, 10, MS_CHALABEL2);
+	InitializeUIComponent("StrNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 25, 70, 20, MS_STRNUMBER);
+	InitializeUIComponent("DexNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 55, 70, 20, MS_DEXNUMBER);
+	InitializeUIComponent("ConNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 85, 70, 20, MS_CONNUMBER);
+	InitializeUIComponent("IntNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 115, 70, 20, MS_INTNUMBER);
+	InitializeUIComponent("WisNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 145, 70, 20, MS_WISNUMBER);
+	InitializeUIComponent("ChaNumber", MAINWINDOW, "STATIC", "8", WS_CHILD | SS_CENTER, abilityboxX + 90, abilityboxY + 175, 70, 20, MS_CHANUMBER);
+	InitializeUIComponent("StrModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 25, 70, 20, MS_STRMODIFIER);
+	InitializeUIComponent("DexModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 55, 70, 20, MS_DEXMODIFIER);
+	InitializeUIComponent("ConModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 85, 70, 20, MS_CONMODIFIER);
+	InitializeUIComponent("IntModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 115, 70, 20, MS_INTMODIFIER);
+	InitializeUIComponent("WisModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 145, 70, 20, MS_WISMODIFIER);
+	InitializeUIComponent("ChaModifier", MAINWINDOW, "STATIC", "+8", WS_CHILD | SS_CENTER, abilityboxX + 190, abilityboxY + 175, 70, 20, MS_CHAMODIFIER);
 
-    //the ability statistics box
+	//the ability statistics box
 	int AbilityStatboxX = 300;
 	int AbilityStatboxY = 68;
 	InitializeUIComponent("AbilityStatBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, AbilityStatboxX, AbilityStatboxY, 290, 205, MS_ABILITYSTATBOXFRAME);
 	InitializeUIComponent("AbilityStatBox", MAINWINDOW, "LISTBOX", "Ability Statbox", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS, AbilityStatboxX + 5, AbilityStatboxY + 5, 280, 195, MS_ABILITYSTATBOX);
 
 
-    //the skill box
+	//the skill box
 	int SkillBoxX = 5;
 	int SkillBoxY = 278;
 	InitializeUIComponent("SkillBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, SkillBoxX, SkillBoxY, 290, 480, MS_SKILLBOXFRAME);
-	InitializeUIComponent("SkillTitle", MAINWINDOW, "STATIC", "Skill", WS_CHILD, SkillBoxX + 5, SkillBoxY+5, 90, 25, MS_SKILLTITLE);
-	InitializeUIComponent("KeyAbilityTitle", MAINWINDOW, "STATIC", "Mod", WS_CHILD | SS_CENTER, SkillBoxX + 120, SkillBoxY+5, 30, 33, MS_KEYABILITYTITLE);
-	InitializeUIComponent("TotalModTitle", MAINWINDOW, "STATIC", "Tot", WS_CHILD | SS_CENTER, SkillBoxX + 162, SkillBoxY+5, 30, 30, MS_TOTALMODTITLE);
-	InitializeUIComponent("AbilityModTitle", MAINWINDOW, "STATIC", "Abil", WS_CHILD | SS_CENTER, SkillBoxX + 200, SkillBoxY+5, 30, 30, MS_ABILITYMODTITLE);
-	InitializeUIComponent("MiscModTitle", MAINWINDOW, "STATIC", "Misc", WS_CHILD | SS_CENTER, SkillBoxX + 232, SkillBoxY+5, 30, 30, MS_MISCMODTITLE);
-	InitializeUIComponent("SkillsList", MAINWINDOW, "LISTBOX", "Skill", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, SkillBoxX + 5, SkillBoxY+40, 280, 425, MS_SKILLSLIST);
+	InitializeUIComponent("SkillTitle", MAINWINDOW, "STATIC", "Skill", WS_CHILD, SkillBoxX + 5, SkillBoxY + 5, 90, 25, MS_SKILLTITLE);
+	InitializeUIComponent("KeyAbilityTitle", MAINWINDOW, "STATIC", "Mod", WS_CHILD | SS_CENTER, SkillBoxX + 120, SkillBoxY + 5, 30, 33, MS_KEYABILITYTITLE);
+	InitializeUIComponent("TotalModTitle", MAINWINDOW, "STATIC", "Tot", WS_CHILD | SS_CENTER, SkillBoxX + 162, SkillBoxY + 5, 30, 30, MS_TOTALMODTITLE);
+	InitializeUIComponent("AbilityModTitle", MAINWINDOW, "STATIC", "Abil", WS_CHILD | SS_CENTER, SkillBoxX + 200, SkillBoxY + 5, 30, 30, MS_ABILITYMODTITLE);
+	InitializeUIComponent("MiscModTitle", MAINWINDOW, "STATIC", "Misc", WS_CHILD | SS_CENTER, SkillBoxX + 232, SkillBoxY + 5, 30, 30, MS_MISCMODTITLE);
+	InitializeUIComponent("SkillsList", MAINWINDOW, "LISTBOX", "Skill", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, SkillBoxX + 5, SkillBoxY + 40, 280, 425, MS_SKILLSLIST);
 
 	//Known Item boxs
 	int KnownBaseX = 300;
@@ -144,25 +144,25 @@ void UIComponentManager::InitializeUI()
 
 
 
-    //the feat list box
+	//the feat list box
 	int FeatBoxX = KnownBaseX;
-	int FeatBoxY = KnownBaseY+23;
+	int FeatBoxY = KnownBaseY + 23;
 	InitializeUIComponent("FeatBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, FeatBoxX, FeatBoxY, KnownFrameWidth, KnownFrameHight, MS_FEATBOXFRAME);
-	InitializeUIComponent("FeatListTitle", MAINWINDOW, "STATIC", "Known Feats", WS_CHILD, FeatBoxX + 5, FeatBoxY+5, 100, 20, MS_FEATLISTLABEL);
-	InitializeUIComponent("FeatList", MAINWINDOW, "LISTBOX", "Feat List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, FeatBoxX + 5, FeatBoxY + 25, KnownFrameWidth - 10, KnownFrameHight-30, MS_FEATSLIST);
+	InitializeUIComponent("FeatListTitle", MAINWINDOW, "STATIC", "Known Feats", WS_CHILD, FeatBoxX + 5, FeatBoxY + 5, 100, 20, MS_FEATLISTLABEL);
+	InitializeUIComponent("FeatList", MAINWINDOW, "LISTBOX", "Feat List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, FeatBoxX + 5, FeatBoxY + 25, KnownFrameWidth - 10, KnownFrameHight - 30, MS_FEATSLIST);
 
 	//the enhancement list box
 	int EnhBoxX = KnownBaseX;
 	int EnhBoxY = KnownBaseY + 23;
 	InitializeUIComponent("EnhancementBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, EnhBoxX, EnhBoxY, KnownFrameWidth, KnownFrameHight, MS_ENHANCEMENTBOXFRAME);
-	InitializeUIComponent("EnhancementTitle", MAINWINDOW, "STATIC", "Known Enhancements", WS_CHILD, EnhBoxX + 5, EnhBoxY+5, 200, 20, MS_ENHANCEMENTLABEL);
+	InitializeUIComponent("EnhancementTitle", MAINWINDOW, "STATIC", "Known Enhancements", WS_CHILD, EnhBoxX + 5, EnhBoxY + 5, 200, 20, MS_ENHANCEMENTLABEL);
 	InitializeUIComponent("EnhancementList", MAINWINDOW, "LISTBOX", "Enhancement List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, EnhBoxX + 5, EnhBoxY + 25, KnownFrameWidth - 10, KnownFrameHight - 30, MS_ENHANCEMENTLIST);
 
 	//the spell box
 	int SpellBoxX = KnownBaseX;
 	int SpellBoxY = KnownBaseY + 23;
 	InitializeUIComponent("SpellBoxFrame", MAINWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, SpellBoxX, SpellBoxY, KnownFrameWidth, KnownFrameHight, MS_SPELLBOXFRAME);
-	InitializeUIComponent("SpellBoxTitle", MAINWINDOW, "STATIC", "Known Spells", WS_CHILD, SpellBoxX + 5, SpellBoxY+5, 100, 20, MS_SPELLBOXLABEL);
+	InitializeUIComponent("SpellBoxTitle", MAINWINDOW, "STATIC", "Known Spells", WS_CHILD, SpellBoxX + 5, SpellBoxY + 5, 100, 20, MS_SPELLBOXLABEL);
 	InitializeUIComponent("SpellList", MAINWINDOW, "LISTBOX", "Spell List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, SpellBoxX + 5, SpellBoxY + 25, KnownFrameWidth - 10, KnownFrameHight - 30, MS_SPELLLIST);
 
 	//the Destiny box
@@ -179,22 +179,22 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("InstructionWindowTitle", MAINWINDOW, "STATIC", "Level 1 Human Fighter", WS_CHILD, InstructionBoxX + 5, InstructionBoxY + 5, 280, 20, MS_IW_TITLE);
 	InitializeUIComponent("InstructionWindowList", MAINWINDOW, "RichEdit", "RichEdit", WS_CHILD | WS_VSCROLL | ES_MULTILINE | ES_READONLY, InstructionBoxX + 5, InstructionBoxY + 23, 280, 140, MS_IW_LIST);
 
-    //the description box
+	//the description box
 	int DescBoxX = 595;
 	int DescBoxY = 573;
 	InitializeUIComponent("DescriptionWindow", MAINWINDOW, "RichEdit", "RichEdit", WS_CHILD | WS_VSCROLL | WS_BORDER | ES_MULTILINE | ES_READONLY, DescBoxX, DescBoxY, 410, 185, MS_DESCRIPTIONWINDOW);
 
-    //equipment select box
-    InitializeUIComponent("EquipmentDisplayTitle", MAINWINDOW, "STATIC", "Generic Armor Selection", WS_CHILD, 310, 350, 270, 20, MS_ED_TITLE);
-    InitializeUIComponent("EquipmentDisplaySelectList", MAINWINDOW, "LISTBOX", "Armor", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_NOTIFY, 310, 370, 270, 155, MS_EQUIPMENTDISPLAYSELECTLIST);
-	
+	//equipment select box
+	InitializeUIComponent("EquipmentDisplayTitle", MAINWINDOW, "STATIC", "Generic Armor Selection", WS_CHILD, 310, 350, 270, 20, MS_ED_TITLE);
+	InitializeUIComponent("EquipmentDisplaySelectList", MAINWINDOW, "LISTBOX", "Armor", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_NOTIFY, 310, 370, 270, 155, MS_EQUIPMENTDISPLAYSELECTLIST);
+
 	//additional Stats items
 	InitializeUIComponent("AdditionalStatsTitle", MAINWINDOW, "STATIC", "Additional Unbuffed Stats", WS_CHILD, 310, 45, 270, 20, MS_AS_TITLE);
-    InitializeUIComponent("AdditionalStatsList", MAINWINDOW, "LISTBOX", "Additional Stats List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, 305, 65, 280, 270, MS_ASLIST);
+	InitializeUIComponent("AdditionalStatsList", MAINWINDOW, "LISTBOX", "Additional Stats List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED, 305, 65, 280, 270, MS_ASLIST);
 
 	//heroic or epic level select buttons
-    InitializeUIComponent("HeroicLevelRadio", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, 750, 30, 70, 18, MS_HEROICLEVELRADIO);
-    InitializeUIComponent("EpicLevelRadio", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, 880, 30, 70, 18, MS_EPICLEVELRADIO);
+	InitializeUIComponent("HeroicLevelRadio", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, 750, 30, 70, 18, MS_HEROICLEVELRADIO);
+	InitializeUIComponent("EpicLevelRadio", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, 880, 30, 70, 18, MS_EPICLEVELRADIO);
 
 
 	//*************The Main Screen Graphics***************
@@ -207,8 +207,8 @@ void UIComponentManager::InitializeUI()
 	int LevelBarYinc = 28;
 	CurrentX = LevelBarX;
 	CurrentY = LevelBarY;
-	for (int i = 1; i <= 30; i+=1)
-	{	
+	for (int i = 1; i <= 30; i += 1)
+	{
 		GraphicName = "LevelBar" + to_string(i);
 		InitializeUIGraphic(GraphicName, MAINWINDOW, CurrentX, CurrentY, 40, 25);
 		if (i % 10 == 0)
@@ -230,8 +230,8 @@ void UIComponentManager::InitializeUI()
 
 
 	//Race Advancement Box 
-	int RaceBaseX = AdvBoxX+5;
-	int RaceBaseY = AdvBoxY+5;
+	int RaceBaseX = AdvBoxX + 5;
+	int RaceBaseY = AdvBoxY + 5;
 
 	int AdvBoxCurrentX = RaceBaseX;
 	int AdvBoxCurrentY = RaceBaseY;
@@ -254,7 +254,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("MaleHumanOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleHumanOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleHumanOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
-	
+
 	AdvBoxCurrentY += AdvBoxShiftY;
 
 	InitializeUIGraphic("MaleElfOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
@@ -283,7 +283,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleWarforgedOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleWarforgedOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
-	AdvBoxCurrentY = RaceBaseY+85;
+	AdvBoxCurrentY = RaceBaseY + 85;
 	AdvBoxCurrentX += AdvBoxShiftX;
 
 	InitializeUIGraphic("MaleHalfelfOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
@@ -315,7 +315,7 @@ void UIComponentManager::InitializeUI()
 
 	//iconics Advancement Panel
 
-	AdvBoxCurrentY = RaceBaseY+85;
+	AdvBoxCurrentY = RaceBaseY + 85;
 	AdvBoxCurrentX = RaceBaseX;
 
 
@@ -367,7 +367,7 @@ void UIComponentManager::InitializeUI()
 		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 70, 70);
 		if (i % 4 == 0)
 		{
-			
+
 			AdvBoxCurrentY += AdvBoxShiftY;
 			AdvBoxCurrentX = ClassBaseX;
 		}
@@ -376,15 +376,15 @@ void UIComponentManager::InitializeUI()
 			AdvBoxCurrentX += AdvBoxShiftX;
 		}
 	}
-// Name and Alignment Advancement Panel
+	// Name and Alignment Advancement Panel
 
 	int AlignmentBaseX = AdvBoxX + 10;
-	int AlignmentBaseY = AdvBoxY+5;
+	int AlignmentBaseY = AdvBoxY + 5;
 	InitializeUIGraphic("FirstNameText", MAINWINDOW, AlignmentBaseX, AlignmentBaseY, 0, 0);
-	InitializeUIComponent("AdvWinFirstNameInput", MAINWINDOW, "EDIT", "", WS_CHILD | WS_BORDER, AlignmentBaseX + 20, AlignmentBaseY+20, 200, 25, MS_ADVWINFIRSTNAMEINPUT);
+	InitializeUIComponent("AdvWinFirstNameInput", MAINWINDOW, "EDIT", "", WS_CHILD | WS_BORDER, AlignmentBaseX + 20, AlignmentBaseY + 20, 200, 25, MS_ADVWINFIRSTNAMEINPUT);
 	AlignmentBaseY += 50;
 	InitializeUIGraphic("SurnameText", MAINWINDOW, AlignmentBaseX, AlignmentBaseY, 0, 0);
-	InitializeUIComponent("AdvWinSurnameInput", MAINWINDOW, "EDIT", "", WS_CHILD | WS_BORDER, AlignmentBaseX + 20, AlignmentBaseY+20, 200, 25, MS_ADVWINSURNAMEINPUT);
+	InitializeUIComponent("AdvWinSurnameInput", MAINWINDOW, "EDIT", "", WS_CHILD | WS_BORDER, AlignmentBaseX + 20, AlignmentBaseY + 20, 200, 25, MS_ADVWINSURNAMEINPUT);
 
 	AlignmentBaseY += 70;
 
@@ -409,7 +409,7 @@ void UIComponentManager::InitializeUI()
 
 	//Reincarnate Advancement Panel
 	int ReinCarnateBaseX = AdvBoxX + 5;
-	int ReinCarnateBaseY = AdvBoxY -10;
+	int ReinCarnateBaseY = AdvBoxY - 10;
 
 	AdvBoxCurrentX = ReinCarnateBaseX;
 	AdvBoxCurrentY = ReinCarnateBaseY;
@@ -426,7 +426,7 @@ void UIComponentManager::InitializeUI()
 		GraphicName = "ReincarnateIcon" + to_string(i);
 		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 60, 60);
 		GraphicName = "ReincarnateNumText" + to_string(i);
-		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX+27, AdvBoxCurrentY+58, 0, 0);
+		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 27, AdvBoxCurrentY + 58, 0, 0);
 		GraphicName = "ReincarnateLA" + to_string(i);
 		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 3, AdvBoxCurrentY + 56, 20, 20);
 		GraphicName = "ReincarnateRA" + to_string(i);
@@ -444,16 +444,16 @@ void UIComponentManager::InitializeUI()
 
 
 
-//Abiltiy Advancement Panel
+	//Abiltiy Advancement Panel
 	string Abilitytext[] = { "AbilityPointStrengthText", "AbilityPointDexterityText", "AbilityPointConstitutionText", "AbilityPointIntelligenceText", "AbilityPointWisdomText", "AbilityPointCharismaText" };
-	int AbilityBaseX = AdvBoxX+10;
+	int AbilityBaseX = AdvBoxX + 10;
 	int AbilityBaseY = AdvBoxY + 2;
 
 	AdvBoxCurrentX = AbilityBaseX;
 	AdvBoxCurrentY = AbilityBaseY;
 	AdvBoxShiftY = 30;
-	AdvBoxShiftX = 70;	
-	
+	AdvBoxShiftX = 70;
+
 	InitializeUIGraphic("AbilityPointAbilityText", MAINWINDOW, AbilityBaseX + 10, AbilityBaseY, 0, 0);
 	InitializeUIGraphic("AbilityPointValueText", MAINWINDOW, AbilityBaseX + 120, AbilityBaseY, 0, 0);
 	InitializeUIGraphic("AbilityPointCostText", MAINWINDOW, AbilityBaseX + 190, AbilityBaseY, 0, 0);
@@ -464,24 +464,24 @@ void UIComponentManager::InitializeUI()
 
 	for (int i = 1; i <= 6; i += 1)
 	{
-		GraphicName = Abilitytext[i-1];
+		GraphicName = Abilitytext[i - 1];
 		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 0, 0);
 		GraphicName = "AbilityPointValue" + to_string(i);
 		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 135, AdvBoxCurrentY, 0, 0);
 		GraphicName = "AbilityPointLA" + to_string(i);
-		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 105, AdvBoxCurrentY -2, 20, 20);
+		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 105, AdvBoxCurrentY - 2, 20, 20);
 		GraphicName = "AbilityPointRA" + to_string(i);
-		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 160, AdvBoxCurrentY -2, 20, 20);
+		InitializeUIGraphic(GraphicName, MAINWINDOW, AdvBoxCurrentX + 160, AdvBoxCurrentY - 2, 20, 20);
 
 		AdvBoxCurrentY += AdvBoxShiftY;
-		
+
 	}
 	InitializeUIGraphic("AbilityPointSpendRemain", MAINWINDOW, AdvBoxCurrentX + 10, AdvBoxCurrentY, 0, 0);
 	AdvBoxCurrentY += AdvBoxShiftY;
 	InitializeUIComponent("AdvWinBonusAbilityPointsCheckBox", MAINWINDOW, "BUTTON", "+4 Bonus Points (Requires 1750 Favor)", WS_CHILD | BS_AUTOCHECKBOX, AdvBoxCurrentX, AdvBoxCurrentY, 275, 20, MS_ADVWINBONUSABILITY);
 
 
-//Skill Advancement Panel
+	//Skill Advancement Panel
 
 	int SkillBaseX = AdvBoxX + 10;
 	int SkillBaseY = AdvBoxY + 2;
@@ -489,13 +489,13 @@ void UIComponentManager::InitializeUI()
 	AdvBoxCurrentX = SkillBaseX;
 	AdvBoxCurrentY = SkillBaseY;
 
-	InitializeUIGraphic("SkillsSkillText", MAINWINDOW, AdvBoxCurrentX+10, SkillBaseY, 0, 0);
-	InitializeUIGraphic("SkillsTotalText", MAINWINDOW, AdvBoxCurrentX+140, SkillBaseY, 0, 0);
-	InitializeUIGraphic("SkillsPointsText", MAINWINDOW, AdvBoxCurrentX+203, SkillBaseY, 0, 0);
+	InitializeUIGraphic("SkillsSkillText", MAINWINDOW, AdvBoxCurrentX + 10, SkillBaseY, 0, 0);
+	InitializeUIGraphic("SkillsTotalText", MAINWINDOW, AdvBoxCurrentX + 140, SkillBaseY, 0, 0);
+	InitializeUIGraphic("SkillsPointsText", MAINWINDOW, AdvBoxCurrentX + 203, SkillBaseY, 0, 0);
 	SkillBaseY += 15;
 
-	InitializeUIGraphic("SkillsModText", MAINWINDOW, SkillBaseX+145, SkillBaseY, 0, 0);
-	InitializeUIGraphic("SkillsSpentText", MAINWINDOW, SkillBaseX+204, SkillBaseY, 0, 0);
+	InitializeUIGraphic("SkillsModText", MAINWINDOW, SkillBaseX + 145, SkillBaseY, 0, 0);
+	InitializeUIGraphic("SkillsSpentText", MAINWINDOW, SkillBaseX + 204, SkillBaseY, 0, 0);
 
 	SkillBaseY += 20;
 	InitializeUIComponent("AdvSkillPointSpendBox", MAINWINDOW, "LISTBOX", "Skill Point Spend", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_NOTIFY, SkillBaseX, SkillBaseY, 280, 250, MS_ADVWINSKILLSPEND);
@@ -503,7 +503,7 @@ void UIComponentManager::InitializeUI()
 	SkillBaseY += 260;
 	InitializeUIGraphic("SkillsRemainingText", MAINWINDOW, SkillBaseX + 10, SkillBaseY, 0, 0);
 
-//Feat Advancement Panel
+	//Feat Advancement Panel
 	int FeatAdvBaseX = AdvBoxX + 5;
 	int FeatAdvBaseY = AdvBoxY + 5;
 
@@ -511,17 +511,17 @@ void UIComponentManager::InitializeUI()
 
 	FeatAdvBaseY += 242;
 	InitializeUIGraphic("FeatSlot1", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY, 45, 45);
-	InitializeUIGraphic("FeatFilled1", MAINWINDOW, AdvBoxX + 23, FeatAdvBaseY+2, 40, 40); // X and Y are now relative to slot
-	
+	InitializeUIGraphic("FeatFilled1", MAINWINDOW, AdvBoxX + 23, FeatAdvBaseY + 2, 40, 40); // X and Y are now relative to slot
+
 
 	InitializeUIGraphic("FeatSlot2", MAINWINDOW, AdvBoxX + 120, FeatAdvBaseY, 45, 45);
-	InitializeUIGraphic("FeatFilled2", MAINWINDOW, AdvBoxX + 123, FeatAdvBaseY+2, 40, 40); // X and Y are now relative to slot
-	
+	InitializeUIGraphic("FeatFilled2", MAINWINDOW, AdvBoxX + 123, FeatAdvBaseY + 2, 40, 40); // X and Y are now relative to slot
+
 
 	InitializeUIGraphic("FeatSlot3", MAINWINDOW, AdvBoxX + 220, FeatAdvBaseY, 45, 45);
-	InitializeUIGraphic("FeatFilled3", MAINWINDOW, AdvBoxX + 223, FeatAdvBaseY+2, 40, 40); // X and Y are now relative to slot
-	
-	InitializeUIGraphic("FeatTextLegendary", MAINWINDOW, AdvBoxX + 8, FeatAdvBaseY+45, 0, 0);
+	InitializeUIGraphic("FeatFilled3", MAINWINDOW, AdvBoxX + 223, FeatAdvBaseY + 2, 40, 40); // X and Y are now relative to slot
+
+	InitializeUIGraphic("FeatTextLegendary", MAINWINDOW, AdvBoxX + 8, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact", MAINWINDOW, AdvBoxX + 14, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFavored", MAINWINDOW, AdvBoxX + 15, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextHuman", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
@@ -531,7 +531,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MAINWINDOW, AdvBoxX + 24, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
-	
+
 	InitializeUIGraphic("FeatTextLegendaryFeat", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MAINWINDOW, AdvBoxX + 00, FeatAdvBaseY + 45, 0, 0);
@@ -541,8 +541,8 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextEnemy", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat2", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextPath", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
-	
-	
+
+
 	//Spell Advancement Panel
 	int SpellAdvBaseX = AdvBoxX + 5;
 	int SpellAdvBaseY = AdvBoxY + 5;
@@ -554,18 +554,18 @@ void UIComponentManager::InitializeUI()
 
 	SpellAdvBaseY += 185;
 	InitializeUIGraphic("SpellsSelectText", MAINWINDOW, SpellAdvBaseX + 20, SpellAdvBaseY, 0, 0);
-	
+
 	int SpellAdvIncX = 50;
 	int SpellAdvIncY = 40;
 
 	CurrentX = SpellAdvBaseX + 20;
-	CurrentY = SpellAdvBaseY +20;
+	CurrentY = SpellAdvBaseY + 20;
 
 
 
-	InitializeUIGraphic("SpellsLevelText1", MAINWINDOW, CurrentX, CurrentY+5, 0, 0);
-	InitializeUIGraphic("SpellsLevelText2", MAINWINDOW, CurrentX, CurrentY + SpellAdvIncY+5, 0, 0);
-	InitializeUIGraphic("SpellsLevelText3", MAINWINDOW, CurrentX, CurrentY + SpellAdvIncY*2+5, 0, 0);
+	InitializeUIGraphic("SpellsLevelText1", MAINWINDOW, CurrentX, CurrentY + 5, 0, 0);
+	InitializeUIGraphic("SpellsLevelText2", MAINWINDOW, CurrentX, CurrentY + SpellAdvIncY + 5, 0, 0);
+	InitializeUIGraphic("SpellsLevelText3", MAINWINDOW, CurrentX, CurrentY + SpellAdvIncY * 2 + 5, 0, 0);
 
 	for (int i = 1; i <= 12; i += 1)
 	{
@@ -575,18 +575,18 @@ void UIComponentManager::InitializeUI()
 
 		if (i % 4 == 0)
 		{
-			CurrentX = SpellAdvBaseX+20;
+			CurrentX = SpellAdvBaseX + 20;
 			CurrentY += SpellAdvIncY;
 		}
 		else
 		{
 			CurrentX += SpellAdvIncX;
 		}
-		
+
 
 	}
 
-//Tome Advancement Panel
+	//Tome Advancement Panel
 	int TomeAdvBaseX = AdvBoxX + 5;
 	int TomeAdvBaseY = AdvBoxY + 5;
 	int TomeAdvIncX = 30;
@@ -599,23 +599,23 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("TomeAbilityText", MAINWINDOW, CurrentX + 5, CurrentY, 0, 0);
 	InitializeUIGraphic("TomeValueText", MAINWINDOW, CurrentX + 125, CurrentY, 0, 0);
 	InitializeUIGraphic("TomeChangeText", MAINWINDOW, CurrentX + 195, CurrentY, 0, 0);
-	
+
 	CurrentY += TomeAdvIncY;
 
 	InitializeUIGraphic("TomeStrengthText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
 	CurrentY += TomeAdvIncY;
 	InitializeUIGraphic("TomeDexterityText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
-	CurrentY += TomeAdvIncY; 
+	CurrentY += TomeAdvIncY;
 	InitializeUIGraphic("TomeConstitutionText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
-	CurrentY += TomeAdvIncY; 
+	CurrentY += TomeAdvIncY;
 	InitializeUIGraphic("TomeIntelligenceText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
-	CurrentY += TomeAdvIncY; 
+	CurrentY += TomeAdvIncY;
 	InitializeUIGraphic("TomeWisdomText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
-	CurrentY += TomeAdvIncY; 
+	CurrentY += TomeAdvIncY;
 	InitializeUIGraphic("TomeCharismaText", MAINWINDOW, CurrentX, CurrentY, 0, 0);
 
 	CurrentY = TomeAdvBaseY + TomeAdvIncY;
-	
+
 	for (int i = 1; i <= 6; i += 1)
 	{
 
@@ -635,38 +635,38 @@ void UIComponentManager::InitializeUI()
 	}
 
 	InitializeUIGraphic("TomeInstructionText1", MAINWINDOW, CurrentX + 5, CurrentY, 0, 0);
-	CurrentY += TomeAdvIncY; 
-	InitializeUIGraphic("TomeInstructionText2", MAINWINDOW, CurrentX + 5, CurrentY-12, 0, 0);
-	CurrentY += TomeAdvIncY; 
-	InitializeUIGraphic("TomeInstructionText3", MAINWINDOW, CurrentX + 5, CurrentY-24, 0, 0);
-	CurrentY += TomeAdvIncY; 
-	InitializeUIGraphic("TomeInstructionText4", MAINWINDOW, CurrentX + 5, CurrentY-36, 0, 0);
-	CurrentY += TomeAdvIncY; 
-	InitializeUIGraphic("TomeInstructionText5", MAINWINDOW, CurrentX + 5, CurrentY-48, 0, 0);
 	CurrentY += TomeAdvIncY;
-	InitializeUIGraphic("TomeInstructionText6", MAINWINDOW, CurrentX + 5, CurrentY-60, 0, 0);
+	InitializeUIGraphic("TomeInstructionText2", MAINWINDOW, CurrentX + 5, CurrentY - 12, 0, 0);
+	CurrentY += TomeAdvIncY;
+	InitializeUIGraphic("TomeInstructionText3", MAINWINDOW, CurrentX + 5, CurrentY - 24, 0, 0);
+	CurrentY += TomeAdvIncY;
+	InitializeUIGraphic("TomeInstructionText4", MAINWINDOW, CurrentX + 5, CurrentY - 36, 0, 0);
+	CurrentY += TomeAdvIncY;
+	InitializeUIGraphic("TomeInstructionText5", MAINWINDOW, CurrentX + 5, CurrentY - 48, 0, 0);
+	CurrentY += TomeAdvIncY;
+	InitializeUIGraphic("TomeInstructionText6", MAINWINDOW, CurrentX + 5, CurrentY - 60, 0, 0);
 	CurrentY += TomeAdvIncY;
 
 	//Advancement Equipement Panel
 	int EquipBasX = AdvBoxX + 5;
 	int EquipBasY = AdvBoxY + 5;
 	InitializeUIGraphic("EquipmentPanel", MAINWINDOW, EquipBasX, EquipBasY, 270, 250);
-	InitializeUIGraphic("EquipmentHighlightSlot1", MAINWINDOW, EquipBasX + 7, EquipBasY+20, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot2", MAINWINDOW, EquipBasX + 7, EquipBasY+73, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot3", MAINWINDOW, EquipBasX + 7, EquipBasY+136, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot4", MAINWINDOW, EquipBasX + 7, EquipBasY+179, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot5", MAINWINDOW, EquipBasX + 62, EquipBasY+20, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot6", MAINWINDOW, EquipBasX + 62, EquipBasY+73, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot7", MAINWINDOW, EquipBasX + 62, EquipBasY+130, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot8", MAINWINDOW, EquipBasX + 62, EquipBasY+185, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot9", MAINWINDOW, EquipBasX + 112, EquipBasY+7, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot10", MAINWINDOW, EquipBasX + 112, EquipBasY+200, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot11", MAINWINDOW, EquipBasX + 112, EquipBasY+7, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot12", MAINWINDOW, EquipBasX + 112, EquipBasY+200, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot13", MAINWINDOW, EquipBasX + 220, EquipBasY+20, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot14", MAINWINDOW, EquipBasX + 220, EquipBasY+73, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot15", MAINWINDOW, EquipBasX + 220, EquipBasY+130, 45, 47);
-	InitializeUIGraphic("EquipmentHighlightSlot16", MAINWINDOW, EquipBasX + 220, EquipBasY+185, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot1", MAINWINDOW, EquipBasX + 7, EquipBasY + 20, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot2", MAINWINDOW, EquipBasX + 7, EquipBasY + 73, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot3", MAINWINDOW, EquipBasX + 7, EquipBasY + 136, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot4", MAINWINDOW, EquipBasX + 7, EquipBasY + 179, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot5", MAINWINDOW, EquipBasX + 62, EquipBasY + 20, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot6", MAINWINDOW, EquipBasX + 62, EquipBasY + 73, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot7", MAINWINDOW, EquipBasX + 62, EquipBasY + 130, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot8", MAINWINDOW, EquipBasX + 62, EquipBasY + 185, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot9", MAINWINDOW, EquipBasX + 112, EquipBasY + 7, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot10", MAINWINDOW, EquipBasX + 112, EquipBasY + 200, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot11", MAINWINDOW, EquipBasX + 112, EquipBasY + 7, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot12", MAINWINDOW, EquipBasX + 112, EquipBasY + 200, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot13", MAINWINDOW, EquipBasX + 220, EquipBasY + 20, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot14", MAINWINDOW, EquipBasX + 220, EquipBasY + 73, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot15", MAINWINDOW, EquipBasX + 220, EquipBasY + 130, 45, 47);
+	InitializeUIGraphic("EquipmentHighlightSlot16", MAINWINDOW, EquipBasX + 220, EquipBasY + 185, 45, 47);
 
 	//**************************** Skills Window Graphic *************************
 	//Standard components
@@ -680,13 +680,13 @@ void UIComponentManager::InitializeUI()
 	Height = 330;
 	AbilityFrameBaseX = 10;
 	AbilityFrameBaseY = 30;
-	
+
 	CurrentX = AbilityFrameBaseX + 5;
 	CurrentY = AbilityFrameBaseY;
 	//Creation Frame
 	InitializeUIComponent("CreationFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CREATIONFRAME);
 	CurrentX += 5;
-	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width-20, 25, MAB_CREATIONLABEL);
+	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_CREATIONLABEL);
 	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "Points Availible", WS_CHILD, CurrentX + 5, CurrentY + 30, 110, 25, MAB_AVAILIBLELABEL);
 	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "28", WS_CHILD, CurrentX + 115, CurrentY + 30, 15, 25, MAB_AVAILABLEPOINTS);
 	InitializeUIComponent("PointBuild32", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 170, CurrentY + 25, 120, 25, MAB_32BUILD);
@@ -716,7 +716,7 @@ void UIComponentManager::InitializeUI()
 		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 75, CurrentY + 7, 20, 20);
 
 		GraphicName = "AbilityValue" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 120, CurrentY + 9, 25, 25);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 117, CurrentY + 9, 25, 25);
 
 		GraphicName = "AbilityUp" + to_string(x);
 		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 145, CurrentY + 7, 20, 20);
@@ -730,7 +730,7 @@ void UIComponentManager::InitializeUI()
 		CurrentY += 40;
 	}
 
-	CurrentX = AbilityFrameBaseX+320;
+	CurrentX = AbilityFrameBaseX + 320;
 	CurrentY = AbilityFrameBaseY;
 	Width = 330;
 	Height = 330;
@@ -750,7 +750,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("LevelUpWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_LEVWIS2);
 	InitializeUIComponent("LevelUpCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_LEVCHA);
 	InitializeUIComponent("LevelUpCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_LEVCHA2);
-	
+
 	CurrentY += 55;
 
 	InitializeUIComponent("LevelLabel", MULTIABILITYWINDOW, "STATIC", "Level", WS_CHILD, CurrentX + 5, CurrentY + 30, 50, 25, MAB_LEVEL);
@@ -767,19 +767,120 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("TotalLabel", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 210, CurrentY, 40, 25, MAB_LTOTAL);
 
 	CurrentY += 30;
+	int RadioY;
+	RadioY = CurrentY;
 
-	InitializeUIComponent("StrRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY, 15, 25, MAB_4STR);
-	InitializeUIComponent("StrRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 30, CurrentY, 15, 25, MAB_8STR);
-	InitializeUIComponent("StrRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 60, CurrentY, 15, 25, MAB_12STR);
-	InitializeUIComponent("StrRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 90, CurrentY, 15, 25, MAB_16STR);
-	InitializeUIComponent("StrRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 120, CurrentY, 15, 25, MAB_20STR);
-	InitializeUIComponent("StrRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 150, CurrentY, 15, 25, MAB_24STR);
-	InitializeUIComponent("StrRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX + 180, CurrentY, 15, 25, MAB_28STR);
-	InitializeUIComponent("StrTotal", MULTIABILITYWINDOW, "STATIC", "0", WS_CHILD, CurrentX + 225, CurrentY+5, 25, 25, MAB_STRTOT);
+	InitializeUIComponent("StrRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_4STR);
+	InitializeUIComponent("DexRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_4DEX);
+	InitializeUIComponent("ConRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_4CON);
+	InitializeUIComponent("IntRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_4INT);
+	InitializeUIComponent("WisRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_4WIS);
+	InitializeUIComponent("ChaRadio4", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_4CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_8STR);
+	InitializeUIComponent("DexRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_8DEX);
+	InitializeUIComponent("ConRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_8CON);
+	InitializeUIComponent("IntRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_8INT);
+	InitializeUIComponent("WisRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_8WIS);
+	InitializeUIComponent("ChaRadio8", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_8CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_12STR);
+	InitializeUIComponent("DexRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_12DEX);
+	InitializeUIComponent("ConRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_12CON);
+	InitializeUIComponent("IntRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_12INT);
+	InitializeUIComponent("WisRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_12WIS);
+	InitializeUIComponent("ChaRadio12", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_12CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_16STR);
+	InitializeUIComponent("DexRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_16DEX);
+	InitializeUIComponent("ConRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_16CON);
+	InitializeUIComponent("IntRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_16INT);
+	InitializeUIComponent("WisRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_16WIS);
+	InitializeUIComponent("ChaRadio16", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_16CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_20STR);
+	InitializeUIComponent("DexRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_20DEX);
+	InitializeUIComponent("ConRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_20CON);
+	InitializeUIComponent("IntRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_20INT);
+	InitializeUIComponent("WisRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_20WIS);
+	InitializeUIComponent("ChaRadio20", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_20CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_24STR);
+	InitializeUIComponent("DexRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_24DEX);
+	InitializeUIComponent("ConRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_24CON);
+	InitializeUIComponent("IntRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_24INT);
+	InitializeUIComponent("WisRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_24WIS);
+	InitializeUIComponent("ChaRadio24", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_24CHA);
+
+	CurrentX += 30;
+	CurrentY = RadioY;
+
+	InitializeUIComponent("StrRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, CurrentX, CurrentY, 15, 25, MAB_28STR);
+	InitializeUIComponent("DexRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 40, 15, 25, MAB_28DEX);
+	InitializeUIComponent("ConRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 80, 15, 25, MAB_28CON);
+	InitializeUIComponent("IntRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 120, 15, 25, MAB_28INT);
+	InitializeUIComponent("WisRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 160, 15, 25, MAB_28WIS);
+	InitializeUIComponent("ChaRadio28", MULTIABILITYWINDOW, "BUTTON", "", WS_CHILD | BS_AUTORADIOBUTTON, CurrentX, CurrentY + 200, 15, 25, MAB_28CHA);
+
+	CurrentX += 45;
+	CurrentY = RadioY;
+
+	for (int x = 0; x < 6; x++)
+	{
+		GraphicName = "LevelUpTotal" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX, CurrentY + 7, 25, 25);
+
+		CurrentY += 40;
+	}
+
+
+	InitializeUIGraphic(GraphicName, MULTIFEATWINDOW, CurrentX, CurrentY, 40, 25);
+
+	CurrentX = AbilityFrameBaseX + 660;
+	CurrentY = AbilityFrameBaseY;
+	Width = 180;
+	Height = 330;
+
+	InitializeUIComponent("CurrentFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CURRENTFRAME);
+	CurrentX += 5;
+	InitializeUIComponent("CurrentLabel", MULTIABILITYWINDOW, "STATIC", "Totals", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_CURRENTLABEL);
+	InitializeUIComponent("CurrentStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 85, 45, 20, MAB_CURSTR);
+	InitializeUIComponent("CurrentStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_CURSTR2);
+	InitializeUIComponent("CurrentDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 125, 45, 20, MAB_CURDEX);
+	InitializeUIComponent("CurrentDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_CURDEX2);
+	InitializeUIComponent("CurrentCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 165, 45, 20, MAB_CURCON);
+	InitializeUIComponent("CurrentCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_CURCON2);
+	InitializeUIComponent("CurrentInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 205, 45, 20, MAB_CURINT);
+	InitializeUIComponent("CurrentInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_CURINT2);
+	InitializeUIComponent("CurrentWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 245, 45, 20, MAB_CURWIS);
+	InitializeUIComponent("CurrentWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_CURWIS2);
+	InitializeUIComponent("CurrentCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_CURCHA);
+	InitializeUIComponent("CurrentCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_CURCHA2);
 
 
 
-	
+
+
+
+
+
+
+
 	//**************************** MultiFeat Window Graphic *************************
 
 	//Level Bars

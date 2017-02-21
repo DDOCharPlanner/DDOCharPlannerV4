@@ -5167,7 +5167,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				ClassIconCount = Index;
                 }
 			//draw the class icons
-			for (unsigned int i=0; i<ClassIconCount; i++)
+			for (int i=0; i<ClassIconCount; i++)
                 {
                 if (ClassSlot[i] == CLASSNONE)
                     break;
