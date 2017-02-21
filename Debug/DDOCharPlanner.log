@@ -1,13 +1,14 @@
-﻿Build started 2/20/2017 10:29:47 PM.
+﻿Build started 2/21/2017 1:43:48 AM.
      1>Project "C:\users\Tom\Documents\GitHub\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DDOCharGen.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MultiAbilityWindowClass.cpp
          MultiAbilityWindowClass.cpp
-     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(624): warning C4101: 'rc' : unreferenced local variable
-     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(738): warning C4101: 'GetState' : unreferenced local variable
-     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(723): warning C4101: 'LevelUpTotal' : unreferenced local variable
-     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(722): warning C4101: 'Ability' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(756): warning C4101: 'GetState' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(741): warning C4101: 'LevelUpTotal' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(740): warning C4101: 'Ability' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(1065): warning C4101: 'Cost' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(1152): warning C4101: 'feat' : unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Debug\DDOCharPlanner.res
          Debug\AboutWindowClass.obj
@@ -54,4 +55,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.90
+Time Elapsed 00:00:02.74

@@ -716,7 +716,7 @@ void UIComponentManager::InitializeUI()
 		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 75, CurrentY + 7, 20, 20);
 
 		GraphicName = "AbilityValue" + to_string(x);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 117, CurrentY + 9, 25, 25);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 117, CurrentY + 9, 15, 25);
 
 		GraphicName = "AbilityUp" + to_string(x);
 		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 145, CurrentY + 7, 20, 20);
@@ -753,7 +753,7 @@ void UIComponentManager::InitializeUI()
 
 	CurrentY += 55;
 
-	InitializeUIComponent("LevelLabel", MULTIABILITYWINDOW, "STATIC", "Level", WS_CHILD, CurrentX + 5, CurrentY + 30, 50, 25, MAB_LEVEL);
+	InitializeUIComponent("LevelLabel", MULTIABILITYWINDOW, "STATIC", "Level", WS_CHILD, CurrentX + 5, CurrentY, 50, 25, MAB_LEVEL);
 
 	CurrentX += 65;
 
@@ -872,11 +872,46 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("CurrentCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_CURCHA);
 	InitializeUIComponent("CurrentCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_CURCHA2);
 
+	CurrentX += 65;
+	CurrentY += 55;
 
+	InitializeUIComponent("CurrentValue", MULTIABILITYWINDOW, "STATIC", "Value", WS_CHILD, CurrentX + 2, CurrentY, 50, 25, MAB_VALUE);
+	InitializeUIComponent("CurrentMod", MULTIABILITYWINDOW, "STATIC", "Mod", WS_CHILD, CurrentX + 57, CurrentY, 40, 25, MAB_MOD);
 
+	CurrentY += 30;
 
+	for (int x = 0; x < 6; x++)
+	{
+		GraphicName = "CurrentValue" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 17, CurrentY + 7, 25, 25);
 
+		GraphicName = "ModValue" + to_string(x);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX + 72, CurrentY + 7, 25, 25);
 
+		CurrentY += 40;
+	}
+	
+	//Level Bar
+	LevelBarX = 880;
+	LevelBarY = AbilityFrameBaseY + 10;
+	LevelBarXinc = 50;
+	LevelBarYinc = 30;
+	CurrentX = LevelBarX;
+	CurrentY = LevelBarY;
+	for (int i = 1; i <= 30; i += 1)
+	{
+		GraphicName = "AbilityLevelBar" + to_string(i);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX, CurrentY, 40, 25);
+		if (i % 15 == 0)
+		{
+			CurrentX += LevelBarXinc;
+			CurrentY = LevelBarY;
+		}
+		else
+		{
+			CurrentY += LevelBarYinc;
+		}
+	}
 
 
 

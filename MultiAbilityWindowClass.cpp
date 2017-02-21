@@ -252,19 +252,6 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	Component = UIManager->GetComponentData("ChaRadio28", MULTIABILITYWINDOW);
 	ChaRadio28 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
-	//Component = UIManager->GetComponentData("StrTotal", MULTIABILITYWINDOW);
-	//StrTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-	//Component = UIManager->GetComponentData("DexTotal", MULTIABILITYWINDOW);
-	//DexTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-	//Component = UIManager->GetComponentData("ConTotal", MULTIABILITYWINDOW);
-	//ConTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-	//Component = UIManager->GetComponentData("IntTotal", MULTIABILITYWINDOW);
-	//IntTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-	//Component = UIManager->GetComponentData("WisTotal", MULTIABILITYWINDOW);
-	//WisTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-	//Component = UIManager->GetComponentData("ChaTotal", MULTIABILITYWINDOW);
-	//ChaTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
-
 	Component = UIManager->GetComponentData("CurrentFrame", MULTIABILITYWINDOW);
 	CurrentFrame = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("CurrentLabel", MULTIABILITYWINDOW);
@@ -295,6 +282,10 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	Component = UIManager->GetComponentData("CurrentCha2", MULTIABILITYWINDOW);
 	CurrentCha2 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
+	Component = UIManager->GetComponentData("CurrentValue", MULTIABILITYWINDOW);
+	CurrentValue = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("CurrentMod", MULTIABILITYWINDOW);
+	CurrentMod = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
@@ -455,6 +446,7 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(LevelUpWis2, State);
 	ShowWindow(LevelUpCha2, State);
 
+	ShowWindow(LevelLabel, State);
 	ShowWindow(Level4, State);
 	ShowWindow(Level8, State);
 	ShowWindow(Level12, State);
@@ -532,6 +524,8 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(CurrentInt2, State);
 	ShowWindow(CurrentWis2, State);
 	ShowWindow(CurrentCha2, State);
+	ShowWindow(CurrentValue, State);
+	ShowWindow(CurrentMod, State);
 
 	//Center in Window
 
@@ -602,9 +596,12 @@ void MultiAbilityWindowClass::Show(bool State)
 	RadioButtonID[5][5] = MAB_24CHA;
 	RadioButtonID[5][6] = MAB_28CHA;
 
+	CurrentLevel = 30;
 
 	DrawCreation();
 	DrawLevelUp();
+	DrawCurrent();
+	DrawLevelBars();
 }
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::DrawCreation()
@@ -661,8 +658,15 @@ void MultiAbilityWindowClass::DrawCreation()
 		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
 		X = static_cast<int>(Graphic->BaseLocationX);
 		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		rc.left = X;
+		rc.top = Y;
+		rc.right = X + Width;
+		rc.bottom = Y + Height;
+		ClearRect(hdc, rc);
 		ss.str("");
-		Ability = Character.GetAbility(i, 1, true, true, true);
+		Ability = Character.GetAbility(i, 1, false, false, false, false);
 		ss << Ability;
 		TextString = ss.str();
 		if (TextString.size()>1)
@@ -678,6 +682,13 @@ void MultiAbilityWindowClass::DrawCreation()
 		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
 		X = static_cast<int>(Graphic->BaseLocationX);
 		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		rc.left = X;
+		rc.top = Y;
+		rc.right = X + Width;
+		rc.bottom = Y + Height;
+		ClearRect(hdc, rc);
 		ss.str("");
 		Cost = Character.GetAbilityCost(i);
 		if (Cost == -1)
@@ -700,6 +711,13 @@ void MultiAbilityWindowClass::DrawCreation()
 		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
 		X = static_cast<int>(Graphic->BaseLocationX);
 		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		rc.left = X;
+		rc.top = Y;
+		rc.right = X + Width;
+		rc.bottom = Y + Height;
+		ClearRect(hdc, rc);
 		ss.str("");
 		Modifier = Data.CalculateAbilityModifier(Ability);
 		if (Modifier > 0)
@@ -1039,8 +1057,132 @@ void MultiAbilityWindowClass::DrawLevelUp()
 	}
 	ReleaseDC(MultiAbilityHandle, hdc);
 }
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::DrawCurrent()
+{
+	int Ability;
+	int Modifier;
+	int Cost;
+	UIComponentManager *UIManager;
+	UIManager = InterfaceManager.GetUIComponents();
+	InterfaceGraphicStruct *Graphic;
+	ostringstream ss;
+	ostringstream vs;
+	int X, Y;
+	int Width, Height;
+	COLORREF OldColor;
+	HDC hdc;
+	RECT rc;
+	hdc = GetWindowDC(MultiAbilityHandle);
+	string TextString, EraseString;
+	EraseString = "  ";
+	SelectObject(hdc, DefaultFont);
+	SetBkMode(hdc, TRANSPARENT);
+	for (int i = 0; i < 6; i++)
+	{
+	//Current Value
+	SelectObject(hdc, DefaultFont);
+	OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+	ss.str("");
+	ss << "CurrentValue" << i;
+	Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+	X = static_cast<int>(Graphic->BaseLocationX);
+	Y = static_cast<int>(Graphic->BaseLocationY);
+	Width = static_cast<int>(Graphic->BaseWidth);
+	Height = static_cast<int>(Graphic->BaseHeight);
+	rc.left = X;
+	rc.top = Y;
+	rc.right = X + Width;
+	rc.bottom = Y + Height;
+	ClearRect(hdc, rc);
+	ss.str("");
+	Ability = Character.GetAbility(i, CurrentLevel, true, false, false, false);
+	ss << Ability;
+	TextString = ss.str();
+	if (TextString.size()>1)
+		X -= 5;
+	TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
+	SetTextColor(hdc, OldColor);
 
+	//Current Mod
+	SelectObject(hdc, DefaultFont);
+	OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+	ss.str("");
+	ss << "ModValue" << i;
+	Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+	X = static_cast<int>(Graphic->BaseLocationX);
+	Y = static_cast<int>(Graphic->BaseLocationY);
+	Width = static_cast<int>(Graphic->BaseWidth);
+	Height = static_cast<int>(Graphic->BaseHeight);
+	rc.left = X;
+	rc.top = Y;
+	rc.right = X + Width;
+	rc.bottom = Y + Height;
+	ClearRect(hdc, rc);
+	ss.str("");
+	Modifier = Data.CalculateAbilityModifier(Ability);
+	if (Modifier > 0)
+		ss << "+" << Modifier;
+	else
+		ss << Modifier;
+	TextString = ss.str();
+	if (TextString.size()>1)
+		X -= 5;
+	TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
+	SetTextColor(hdc, OldColor);
+	}
 
+	ReleaseDC(MultiAbilityHandle, hdc);
+}
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::DrawLevelBars()
+{
+	HDC hdc;
+
+	hdc = GetWindowDC(MultiAbilityHandle);
+	COLORREF OldColor;
+	ostringstream ss;
+	int X, Y;
+	int Width, Height;
+	//FeatDataClass *Feat;
+	UIComponentManager *UIManager;
+	InterfaceGraphicStruct *Graphic;
+	//RECT Frame;
+	int ButtonSpacing = 30;
+	int feat;
+
+	SetBkMode(hdc, TRANSPARENT);
+	SetTextAlign(hdc, TA_CENTER);
+	//InvalidateRect(MultiFeatHandle, NULL, FALSE);
+	//UpdateWindow(MultiFeatHandle);
+	UIManager = InterfaceManager.GetUIComponents();
+
+	for (unsigned int i = 0; i < 30; i++)
+	{
+		ss.str("");
+		ss << "AbilityLevelBar" << i + 1;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+
+		if (CurrentLevel == i + 1)
+			DrawGraphic(hdc, &GreenLevelBox, X, Y, Width, Height);
+		else
+			DrawGraphic(hdc, &BlueLevelBox, X, Y, Width, Height);
+
+	
+
+		OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+		ss.str("");
+		ss << "L" << i + 1;
+		TextOut(hdc, X + 20, Y + 6, ss.str().c_str(), ss.str().size());
+		SetTextColor(hdc, OldColor);
+	}
+	SetTextAlign(hdc, TA_LEFT);
+	ReleaseDC(MultiAbilityHandle, hdc);
+}
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::LoadGraphics(HWND Parent)
 {
@@ -1054,6 +1196,8 @@ void MultiAbilityWindowClass::LoadGraphics(HWND Parent)
 	//The Plus Minus
 	LoadBitmap("MinusBox", "UserInterface", &Minus);
 	LoadBitmap("PlusBox", "UserInterface", &Plus);
+	LoadBitmap("LevelBoxBlue", "UserInterface", &BlueLevelBox);
+	LoadBitmap("LevelBoxGreen", "UserInterface", &GreenLevelBox);
 
 
 }
@@ -1100,6 +1244,7 @@ long MultiAbilityWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARA
 			{
 				LevelUpAbility(wParam);
 				DrawLevelUp();
+				DrawCurrent();
 				return 0;
 				break;
 			}

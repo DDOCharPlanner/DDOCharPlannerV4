@@ -145,15 +145,24 @@ private:
 	HWND CurrentWis2;
 	HWND CurrentCha;
 	HWND CurrentCha2;
+	HWND CurrentValue;
+	HWND CurrentMod;
+
+	int CurrentLevel;
+
 	int RadioButtonID[6][7];
 
 	HPALETTE Palette;
 	GraphicStruct Minus;
 	GraphicStruct Plus;
+	GraphicStruct BlueLevelBox;
+	GraphicStruct GreenLevelBox;
 	void DrawCreation();
 	void DrawLevelUp();
 	void LevelUpAbility(int Button);
 	void ClearRect(HDC hdc, RECT rc);
+	void DrawCurrent();
+	void DrawLevelBars();
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);
