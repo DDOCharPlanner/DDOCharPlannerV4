@@ -1274,8 +1274,32 @@ void MultiAbilityWindowClass::DrawTome()
 	//RECT Frame;
 	int ButtonSpacing = 30;
 	int feat;
-	int TomeLevel;
-	TomeLevel = 0;
+	int TomeLevel[6][7];
+	for (int i = 0; i < 6; i++)
+	{
+		for (int x = 0; x < 7; x++)
+		{
+			TomeLevel[i][x] = MAXLEVEL +1;
+		}
+	}
+	//Check Each Level for Tome
+	for (int i = 1; i <= MAXLEVEL; ++i)
+	{
+		//Check Each Ability
+		for (int x = 0; x < 6; ++x)
+		{
+			//Check for Each Tome
+			for (int y = 0; y < 7; ++y)
+			{
+				int test = 31;
+				test = Character.GetTomeRaise(static_cast<ABILITIES>(x), i, true, true);
+				if (Character.GetTomeRaise(static_cast<ABILITIES>(x),i,true,true)==y+1 && i < TomeLevel[x][y])
+				{
+					TomeLevel[x][y] = i;
+				}
+			}
+		}
+	}
 	SetBkMode(hdc, TRANSPARENT);
 	SetTextAlign(hdc, TA_CENTER);
 	//InvalidateRect(MultiFeatHandle, NULL, FALSE);
@@ -1283,11 +1307,8 @@ void MultiAbilityWindowClass::DrawTome()
 	UIManager = InterfaceManager.GetUIComponents();
 	for (int i = 0; i < 6; i++)
 	{ 
-		TomeLevel = 0;
 		for (int x = 0; x < 7; x++)
 		{
-			if (x > 4)
-				TomeLevel = 20;
 			ss.str("");
 			ss << "Tome_" << x << "Ability_" << i;
 			Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
@@ -1295,12 +1316,16 @@ void MultiAbilityWindowClass::DrawTome()
 			Y = static_cast<int>(Graphic->BaseLocationY);
 			Width = static_cast<int>(Graphic->BaseWidth);
 			Height = static_cast<int>(Graphic->BaseHeight);
-			if (TomeLevel > 0)
+			if (TomeLevel[i][x] < MAXLEVEL +1)
 			{
 				DrawGraphic(hdc, &Spinner, X, Y, Width, Height);
 				OldColor = SetTextColor(hdc, RGB(255, 255, 255));
 				ss.str("");
-				ss << TomeLevel;
+				ss << TomeLevel[i][x];
+				if (ss.str().size() < 2)
+				{
+					X += 2;
+				}
 				TextOut(hdc, X + 12, Y + 3, ss.str().c_str(), ss.str().size());
 				SetTextColor(hdc, OldColor);
 			}

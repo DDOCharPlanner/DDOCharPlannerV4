@@ -1,61 +1,17 @@
-﻿Build started 2/21/2017 2:22:16 PM.
-     1>Project "E:\Planner\jonesth3\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/22/2017 10:44:47 PM.
+     1>Project "C:\users\Tom\Documents\GitHub\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DDOCharGen.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DDOCharPlanner.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiAbilityWindowClass.cpp MultiClassWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
-         UIComponentManager.cpp
-         Generating Code...
-         Compiling...
-         ToolTipWindowClass.cpp
-         Screen_Destiny_Class.cpp
-         Screen_Destiny_Base_Class.cpp
-         RichEditBitmapClass.cpp
-         PrintWindowClass.cpp
-         PrintClass.cpp
-         MultiSpellsWindowClass.cpp
-         MultiSkillsWindowClass.cpp
-         MultiFeatWindowClass.cpp
-         MultiEnhancementWindowClass.cpp
-         MultiClassWindowClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MultiAbilityWindowClass.cpp
          MultiAbilityWindowClass.cpp
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(831): warning C4101: 'GetState' : unreferenced local variable
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(816): warning C4101: 'LevelUpTotal' : unreferenced local variable
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(815): warning C4101: 'Ability' : unreferenced local variable
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(1140): warning C4101: 'Cost' : unreferenced local variable
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(1227): warning C4101: 'feat' : unreferenced local variable
-     1>e:\planner\jonesth3\ddocharplannerv4\multiabilitywindowclass.cpp(1276): warning C4101: 'feat' : unreferenced local variable
-         MainScreenClass.cpp
-         LoadWindowClass.cpp
-         ItemEffectClass.cpp
-         ItemClickyEffectClass.cpp
-         ItemClass.cpp
-         ItemBuilderClass.cpp
-         InterfaceManagerClass.cpp
-         IconClass.cpp
-         Generating Code...
-         Compiling...
-         ForumExportClass.cpp
-         FeatDataClass.cpp
-         ExportTemplateDesignWindowClass.cpp
-         EnhancementWindowClass.cpp
-         EnhancementWindowBaseClass.cpp
-         Data_Enhancement_Tree_Class.cpp
-         Data_Enhancement_MultiSelector_Class.cpp
-         Data_Enhancement_Class.cpp
-         Data_Destiny_Tree_Class.cpp
-         Data_Destiny_MultiSelector_Class.cpp
-         Data_Destiny_Class.cpp
-         DataClass.cpp
-         DDOCharPlanner.cpp
-         ControlWindowClass.cpp
-         Character_Enhancements_Class.cpp
-         Character_Destinies_Class.cpp
-         CharacterClass.cpp
-         AboutWindowClass.cpp
-         Generating Code...
-     1>e:\planner\jonesth3\ddocharplannerv4\characterclass.cpp(1403): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(831): warning C4101: 'GetState' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(816): warning C4101: 'LevelUpTotal' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(815): warning C4101: 'Ability' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(1140): warning C4101: 'Cost' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(1227): warning C4101: 'feat' : unreferenced local variable
+     1>c:\users\tom\documents\github\ddocharplannerv4\multiabilitywindowclass.cpp(1276): warning C4101: 'feat' : unreferenced local variable
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Planner\jonesth3\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Planner\jonesth3\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Planner\jonesth3\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Debug\DDOCharPlanner.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Debug\DDOCharPlanner.res
          Debug\AboutWindowClass.obj
          Debug\CharacterClass.obj
          Debug\Character_Destinies_Class.obj
@@ -95,9 +51,9 @@
          Debug\Screen_Destiny_Class.obj
          Debug\ToolTipWindowClass.obj
          Debug\UIComponentManager.obj
-         DDOCharPlanner.vcxproj -> E:\Planner\jonesth3\DDOCharPlannerV4\\DDOCharPlanner.exe
-     1>Done Building Project "E:\Planner\jonesth3\DDOCharPlannerV4\DDOCharPlanner.vcxproj" (Build target(s)).
+         DDOCharPlanner.vcxproj -> C:\Users\Tom\Documents\GitHub\DDOCharPlannerV4\\DDOCharPlanner.exe
+     1>Done Building Project "C:\users\Tom\Documents\GitHub\DDOCharPlannerV4\DDOCharPlanner.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:56.23
+Time Elapsed 00:00:02.53
