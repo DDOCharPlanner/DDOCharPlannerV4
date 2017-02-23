@@ -65,6 +65,7 @@ class CharacterClass
         int GetAbilityCost(int AbilityIndex);
         int GetAbilityPointsSpent(int AbilityIndex);
         void AdjustAbilityRaise(int AbilityIndex, int Direction);
+		int GetAbilityRaise(int AbilityIndex);
         void SetAbilityIncrease(int AtLevel, ABILITIES Ability);
         ABILITIES GetAbilityIncrease(int AtLevel);
         void SetAbilityFavorBonus(bool NewSetting);

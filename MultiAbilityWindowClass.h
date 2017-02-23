@@ -185,10 +185,14 @@ private:
 	void DrawCreation();
 	void DrawLevelUp();
 	void LevelUpAbility(int Button);
+	void LevelUpAllAbilities(int AbilityIndex);
+	void LevelUpClear();
 	void ClearRect(HDC hdc, RECT rc);
 	void DrawCurrent();
 	void DrawLevelBars();
 	void DrawTome();
+	int TomeLevel[6][7];
+	void HandleLeftMouseButtonClick(int x, int y);
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);

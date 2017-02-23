@@ -695,10 +695,32 @@ void MultiAbilityWindowClass::DrawCreation()
 	HDC hdc;
 	RECT rc;
 	hdc = GetWindowDC(MultiAbilityHandle);
-	string TextString, EraseString;
-	EraseString = "  ";
+	string TextString;
 	SelectObject(hdc, DefaultFont);
 	SetBkMode(hdc, TRANSPARENT);
+	//Check for 32 point build
+
+	if (Character.GetAbilityFavorBonus() == true)
+		SendMessage(PointBuild32, BM_SETCHECK, BST_CHECKED, 1);
+	else
+		SendMessage(PointBuild32, BM_SETCHECK, BST_UNCHECKED, 1);
+
+
+
+	int TotalPoints, PointsSpent;
+	string Remainingpoints;
+	TotalPoints = Character.CalculateTotalAbilityPoints();
+	PointsSpent = 0;;
+	for (unsigned int i = 0; i<6; i++)
+		PointsSpent += Character.GetAbilityPointsSpent(i);
+	ss.str("");
+	ss << TotalPoints - PointsSpent;
+	
+	Remainingpoints = ss.str();
+
+
+	SendMessage(CreationAvilablePoint, WM_SETTEXT, NULL, (LPARAM)Remainingpoints.c_str());
+
 	for (int i = 0; i < 6; i++)
 	{
 		ss.str("");
@@ -708,9 +730,9 @@ void MultiAbilityWindowClass::DrawCreation()
 		Y = static_cast<int>(Graphic->BaseLocationY);
 		Width = static_cast<int>(Graphic->BaseWidth);
 		Height = static_cast<int>(Graphic->BaseHeight);
-		//if (SetTotalValue[i] < 1)
-			//DrawGraphicGreyscale(hdc, &LeftArrow, X, Y, Width, Height);
-		//else
+		if (Character.GetAbilityRaise(i) == 0)
+			DrawGraphicGreyscale(hdc, &Minus, X, Y, Width, Height);
+		else
 		DrawGraphic(hdc, &Minus, X, Y, Width, Height);
 
 		ss.str("");
@@ -720,9 +742,9 @@ void MultiAbilityWindowClass::DrawCreation()
 		Y = static_cast<int>(Graphic->BaseLocationY);
 		Width = static_cast<int>(Graphic->BaseWidth);
 		Height = static_cast<int>(Graphic->BaseHeight);
-		//if (SetTotalValue[i] < 1)
-		//DrawGraphicGreyscale(hdc, &LeftArrow, X, Y, Width, Height);
-		//else
+		if (Character.GetAbilityRaise(i) == 10)
+			DrawGraphicGreyscale(hdc, &Plus, X, Y, Width, Height);
+		else
 		DrawGraphic(hdc, &Plus, X, Y, Width, Height);
 
 		//Ability Value
@@ -759,9 +781,9 @@ void MultiAbilityWindowClass::DrawCreation()
 		Y = static_cast<int>(Graphic->BaseLocationY);
 		Width = static_cast<int>(Graphic->BaseWidth);
 		Height = static_cast<int>(Graphic->BaseHeight);
-		rc.left = X;
+		rc.left = X-15;
 		rc.top = Y;
-		rc.right = X + Width;
+		rc.right = X + Width+15;
 		rc.bottom = Y + Height;
 		ClearRect(hdc, rc);
 		ss.str("");
@@ -770,11 +792,11 @@ void MultiAbilityWindowClass::DrawCreation()
 			TextString = "MAX";
 		else
 		{
-			ss << Cost;
+			ss << "+" << Cost;
 			TextString = ss.str();
 		}
 		if (TextString.size()>1)
-			X -= 5;
+			X -= (TextString.size()-1) * 5 + 5;
 		TextOut(hdc, X, Y, TextString.c_str(), TextString.size());
 		SetTextColor(hdc, OldColor);
 
@@ -812,8 +834,8 @@ void MultiAbilityWindowClass::DrawCreation()
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::DrawLevelUp()
 {
-	int Ability;
-	int LevelUpTotal;
+//	int Ability;
+//	int LevelUpTotal;
 	UIComponentManager *UIManager;
 	UIManager = InterfaceManager.GetUIComponents();
 	InterfaceGraphicStruct *Graphic;
@@ -828,15 +850,14 @@ void MultiAbilityWindowClass::DrawLevelUp()
 	string TextString;
 	SelectObject(hdc, DefaultFont);
 	SetBkMode(hdc, TRANSPARENT);
-	LRESULT GetState;
+	//LRESULT GetState;
 	ABILITIES LevelUpAbility;
 	//Set Radio Buttons
+	LevelUpClear();
 	int LevelUpLevel[7] = { 4, 8, 12, 16, 20, 24, 28 };
 	for (int x = 0; x < 7; x++)
 		{
 			LevelUpAbility = Character.GetAbilityIncrease(LevelUpLevel[x]);
-			if (LevelUpAbility != -1)
-			{
 				switch (LevelUpAbility)
 				{
 					case 0:
@@ -845,11 +866,13 @@ void MultiAbilityWindowClass::DrawLevelUp()
 						{
 						case 0:
 						{
+
 							SendMessage(StrRadio4, BM_SETCHECK, BST_CHECKED, 1);
 							break;
 						}
 						case 1:
 						{
+
 							SendMessage(StrRadio8, BM_SETCHECK, BST_CHECKED, 1);
 							break;
 						}
@@ -875,6 +898,7 @@ void MultiAbilityWindowClass::DrawLevelUp()
 						}
 						case 6:
 						{
+
 							SendMessage(StrRadio28, BM_SETCHECK, BST_CHECKED, 1);
 							break;
 						}
@@ -1097,7 +1121,7 @@ void MultiAbilityWindowClass::DrawLevelUp()
 						}
 						break;
 					}
-				}
+				
 			}
 		}
 
@@ -1137,7 +1161,7 @@ void MultiAbilityWindowClass::DrawCurrent()
 {
 	int Ability;
 	int Modifier;
-	int Cost;
+//	int Cost;
 	UIComponentManager *UIManager;
 	UIManager = InterfaceManager.GetUIComponents();
 	InterfaceGraphicStruct *Graphic;
@@ -1224,7 +1248,7 @@ void MultiAbilityWindowClass::DrawLevelBars()
 	InterfaceGraphicStruct *Graphic;
 	//RECT Frame;
 	int ButtonSpacing = 30;
-	int feat;
+//	int feat;
 
 	SetBkMode(hdc, TRANSPARENT);
 	SetTextAlign(hdc, TA_CENTER);
@@ -1273,8 +1297,8 @@ void MultiAbilityWindowClass::DrawTome()
 	InterfaceGraphicStruct *Graphic;
 	//RECT Frame;
 	int ButtonSpacing = 30;
-	int feat;
-	int TomeLevel[6][7];
+//	int feat;
+
 	for (int i = 0; i < 6; i++)
 	{
 		for (int x = 0; x < 7; x++)
@@ -1420,8 +1444,79 @@ long MultiAbilityWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARA
 				return 0;
 				break;
 			}
+			if ((int)LOWORD(wParam) == MAB_32BUILD)
+			{
+				LRESULT state;
+				state = SendMessage(PointBuild32, BM_GETCHECK, 0, 0);
+				if (SendMessage(PointBuild32, BM_GETCHECK, 0, 0) == BST_CHECKED)
+					Character.SetAbilityFavorBonus(true);
+				else
+					Character.SetAbilityFavorBonus(false);
+
+				DrawCreation();
+				return 0;
+				break;
+			}
+		}
+		if (HIWORD(wParam) == STN_CLICKED)
+		{
+			if ((HWND)lParam == LevelUpStr || (HWND)lParam == LevelUpStr2)
+			{
+				LevelUpAllAbilities(0);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
+			if ((HWND)lParam == LevelUpDex || (HWND)lParam == LevelUpDex2)
+			{
+				LevelUpAllAbilities(1);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
+			if ((HWND)lParam == LevelUpCon || (HWND)lParam == LevelUpCon2)
+			{
+				LevelUpAllAbilities(2);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
+			if ((HWND)lParam == LevelUpInt || (HWND)lParam == LevelUpInt2)
+			{
+				LevelUpAllAbilities(3);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
+			if ((HWND)lParam == LevelUpWis || (HWND)lParam == LevelUpWis2)
+			{
+				LevelUpAllAbilities(4);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
+			if ((HWND)lParam == LevelUpCha || (HWND)lParam == LevelUpCha2)
+			{
+				LevelUpAllAbilities(5);
+				DrawLevelUp();
+				DrawCurrent();
+				return 0;
+				break;
+			}
 
 		}
+	}
+	case WM_LBUTTONDOWN:
+	{
+
+		HandleLeftMouseButtonClick(ps1.x, ps1.y);
+		return 0;
+		break;
 	}
 	case WM_CTLCOLORSTATIC:
 	{
@@ -1480,6 +1575,162 @@ void MultiAbilityWindowClass::LevelUpAbility(int Button)
 	}
 
 }
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::LevelUpAllAbilities(int AbilityIndex)
+{
+	int LevelUpLevel[7] = { 4, 8, 12, 16, 20, 24, 28 };
+	for (int i = 0; i < 7; i++)
+	{
+		Character.SetAbilityIncrease(LevelUpLevel[i], static_cast<ABILITIES>(AbilityIndex));
+	}
+}
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::LevelUpClear()
+{
+	SendMessage(StrRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(StrRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+
+	SendMessage(DexRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(DexRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+
+	SendMessage(ConRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ConRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+
+	SendMessage(IntRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(IntRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+
+	SendMessage(WisRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(WisRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+							
+						
+}
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::HandleLeftMouseButtonClick(int x, int y)
+{
+//	HDC  ParentDC;
+	string Description;
+	int Index;
+	int Width;
+	int Height;
+	int X, Y;
+	//int Position;
+	ostringstream ss;
+	UIComponentManager *UIManager;
+	InterfaceGraphicStruct *Graphic;
+//	FeatDataClass *Feat;
+	RECT Frame;
+	int OldSelectedLevel;
+
+	UIManager = InterfaceManager.GetUIComponents();
+	//Check Creation
+	GetWindowRect(CreationFrame, &Frame);
+	MapWindowPoints(HWND_DESKTOP, MultiAbilityHandle, (LPPOINT)&Frame, 2);
+	int FrameBottom = Frame.bottom;
+	Index = -1;
+	for (unsigned int i = 0; i<6; i++)
+	{
+		ss.str("");
+		ss << "AbilityDown" << i;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		if (y >= Y && y <= Y + Height)
+			Index = i;
+	}
+
+	if (Index != -1)
+	{
+		ss.str("");
+		ss << "AbilityDown" << Index;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		if (x >= X && x <= X + Width)
+		{
+			Character.AdjustAbilityRaise(Index, -1);
+			DrawCreation();
+			DrawCurrent();
+		}
+
+
+		ss.str("");
+
+		ss << "AbilityUp" << Index;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		if (x >= X && x <= X + Width)
+		{
+			Character.AdjustAbilityRaise(Index, 1);
+			DrawCreation();
+			DrawCurrent();
+		}
+	
+
+
+	}
+	//Check Level Bar
+	OldSelectedLevel = CurrentLevel;
+	for (int i = 0; i < 30; i++)
+	{
+		ss.str("");
+		ss << "AbilityLevelBar" << i + 1;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+		{
+
+			if (i + 1 == (int)CurrentLevel)
+				return;
+			CurrentLevel = i + 1;
+		}
+
+		if (CurrentLevel != OldSelectedLevel)
+		{
+
+			DrawCurrent();
+			DrawLevelBars();
+
+			return;
+		}
+	}
+
+}
+//---------------------------------------------------------------------------
 void MultiAbilityWindowClass::ClearRect(HDC hdc, RECT rc)
 {
 

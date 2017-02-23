@@ -737,19 +737,19 @@ void UIComponentManager::InitializeUI()
 
 	InitializeUIComponent("LevelUpFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_LEVELUPFRAME);
 	CurrentX += 5;
-	InitializeUIComponent("LevelUpLabel", MULTIABILITYWINDOW, "STATIC", "Level Up", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_LEVELUPLABEL);
-	InitializeUIComponent("LevelUpStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD, CurrentX + 5, CurrentY + 85, 45, 20, MAB_LEVSTR);
-	InitializeUIComponent("LevelUpStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD, CurrentX + 5, CurrentY + 102, 45, 10, MAB_LEVSTR2);
-	InitializeUIComponent("LevelUpDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD, CurrentX + 5, CurrentY + 125, 45, 20, MAB_LEVDEX);
-	InitializeUIComponent("LevelUpDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD, CurrentX + 5, CurrentY + 142, 45, 10, MAB_LEVDEX2);
-	InitializeUIComponent("LevelUpCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD, CurrentX + 5, CurrentY + 165, 45, 20, MAB_LEVCON);
-	InitializeUIComponent("LevelUpCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD, CurrentX + 5, CurrentY + 182, 45, 10, MAB_LEVCON2);
-	InitializeUIComponent("LevelUpInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD, CurrentX + 5, CurrentY + 205, 45, 20, MAB_LEVINT);
-	InitializeUIComponent("LevelUpInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD, CurrentX + 5, CurrentY + 222, 45, 10, MAB_LEVINT2);
-	InitializeUIComponent("LevelUpWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD, CurrentX + 5, CurrentY + 245, 45, 20, MAB_LEVWIS);
-	InitializeUIComponent("LevelUpWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD, CurrentX + 5, CurrentY + 262, 45, 10, MAB_LEVWIS2);
-	InitializeUIComponent("LevelUpCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD, CurrentX + 5, CurrentY + 285, 45, 20, MAB_LEVCHA);
-	InitializeUIComponent("LevelUpCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD, CurrentX + 5, CurrentY + 302, 45, 10, MAB_LEVCHA2);
+	InitializeUIComponent("LevelUpLabel", MULTIABILITYWINDOW, "STATIC", "Level Up", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_LEVELUPLABEL);
+	InitializeUIComponent("LevelUpStr", MULTIABILITYWINDOW, "STATIC", "STR", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 85, 45, 20, MAB_LEVSTR);
+	InitializeUIComponent("LevelUpStr2", MULTIABILITYWINDOW, "STATIC", "Strength", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 102, 45, 10, MAB_LEVSTR2);
+	InitializeUIComponent("LevelUpDex", MULTIABILITYWINDOW, "STATIC", "DEX", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 125, 45, 20, MAB_LEVDEX);
+	InitializeUIComponent("LevelUpDex2", MULTIABILITYWINDOW, "STATIC", "Dexterity", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 142, 45, 10, MAB_LEVDEX2);
+	InitializeUIComponent("LevelUpCon", MULTIABILITYWINDOW, "STATIC", "CON", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 165, 45, 20, MAB_LEVCON);
+	InitializeUIComponent("LevelUpCon2", MULTIABILITYWINDOW, "STATIC", "Constitution", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 182, 45, 10, MAB_LEVCON2);
+	InitializeUIComponent("LevelUpInt", MULTIABILITYWINDOW, "STATIC", "INT", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 205, 45, 20, MAB_LEVINT);
+	InitializeUIComponent("LevelUpInt2", MULTIABILITYWINDOW, "STATIC", "Intelligence", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 222, 45, 10, MAB_LEVINT2);
+	InitializeUIComponent("LevelUpWis", MULTIABILITYWINDOW, "STATIC", "WIS", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 245, 45, 20, MAB_LEVWIS);
+	InitializeUIComponent("LevelUpWis2", MULTIABILITYWINDOW, "STATIC", "Wisdom", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 262, 45, 10, MAB_LEVWIS2);
+	InitializeUIComponent("LevelUpCha", MULTIABILITYWINDOW, "STATIC", "CHA", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 285, 45, 20, MAB_LEVCHA);
+	InitializeUIComponent("LevelUpCha2", MULTIABILITYWINDOW, "STATIC", "Charisma", WS_CHILD | SS_NOTIFY, CurrentX + 5, CurrentY + 302, 45, 10, MAB_LEVCHA2);
 
 	CurrentY += 55;
 

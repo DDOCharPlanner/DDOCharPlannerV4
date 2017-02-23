@@ -944,6 +944,11 @@ int CharacterClass::GetAbilityPointsSpent(int AbilityIndex)
     return 0;
     }
 
+int CharacterClass::GetAbilityRaise(int AbilityIndex)
+{
+	return AbilityRaise[AbilityIndex];
+}
+
 //---------------------------------------------------------------------------
 void CharacterClass::AdjustAbilityRaise(int AbilityIndex, int Direction)
     {

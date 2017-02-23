@@ -5478,6 +5478,11 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
             }
         case ADV_ABILITYPOINT:
             {
+				if (Character.GetAbilityFavorBonus() == true)
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 1);
+				else
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_UNCHECKED, 1);
+
             OldColor = SetTextColor(hdc, RGB(255,255,255));
 			Graphic = UIManager->GetGraphicData("AbilityPointAbilityText", MAINWINDOW);
 			X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
