@@ -12,6 +12,7 @@ MultiAbilityWindowClass::MultiAbilityWindowClass()
 //---------------------------------------------------------------------------
 MultiAbilityWindowClass::~MultiAbilityWindowClass()
 {
+	DeleteGraphics();
 	DeleteObject(TitleFontLarge);
 }
 
@@ -329,10 +330,16 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	TomeLabel7 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("TomeTotal", MULTIABILITYWINDOW);
 	TomeTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("InstructionFrame", MULTIABILITYWINDOW);
+	InstructionFrame = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("InstructionLabel", MULTIABILITYWINDOW);
+	InstructionLabel = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("DescriptionWindow", MULTIABILITYWINDOW);
+	DescriptionWindow = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
-
+	SendMessage(DescriptionWindow, EM_SETBKGNDCOLOR, 0, RGB(0, 0, 0));
 
 	//create a font
 	lf.lfHeight = 20;
@@ -603,8 +610,9 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(TomeLabel6, State);
 	ShowWindow(TomeLabel7, State);
 	ShowWindow(TomeTotal, State);
-	
-
+	ShowWindow(InstructionFrame, State);
+	ShowWindow(InstructionLabel, State);
+	ShowWindow(DescriptionWindow, State);
 	if (State != false)
 	{
 		//Center in Window
@@ -683,6 +691,7 @@ void MultiAbilityWindowClass::Show(bool State)
 		DrawCurrent();
 		DrawLevelBars();
 		DrawTome();
+		FillInstructionBox();
 	}
 }
 //---------------------------------------------------------------------------
@@ -1293,7 +1302,7 @@ void MultiAbilityWindowClass::DrawLevelBars()
 void MultiAbilityWindowClass::DrawTome()
 {
 	HDC hdc;
-
+	RECT rc;
 	hdc = GetWindowDC(MultiAbilityHandle);
 	COLORREF OldColor;
 	ostringstream ss;
@@ -1372,19 +1381,35 @@ void MultiAbilityWindowClass::DrawTome()
 		Width = static_cast<int>(Graphic->BaseWidth);
 		Height = static_cast<int>(Graphic->BaseHeight);
 		OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+		rc.left = X;
+		rc.top = Y;
+		rc.right = X + Width;
+		rc.bottom = Y + Height;
+		ClearRect(hdc, rc);
 		ss.str("");
-		ss << "0";
+		ss << Character.GetTomeRaise(static_cast<ABILITIES>(i),30,true,true);
 		TextOut(hdc, X, Y, ss.str().c_str(), ss.str().size());
 		SetTextColor(hdc, OldColor);
 	}
 
+	
 
 
 
 	ReleaseDC(MultiAbilityHandle, hdc);
 }
-
-
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::FillInstructionBox()
+{
+	EDITSTREAM Stream;
+	string String1;
+	String1 = "To fill all level up abilities at on time Click on the {\\b {\\cf1 Ability Name}}\\par\\par ";
+	String1 += "Select your Level to see your current abilities at a given level. \\par\\par";
+	Stream.dwCookie = (DWORD)String1.c_str();
+	Stream.dwError = false;
+	Stream.pfnCallback = EditStreamCallback;
+	SendMessage(DescriptionWindow, EM_STREAMIN, SF_RTF, (LPARAM)&Stream);
+}
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::LoadGraphics(HWND Parent)
 {
@@ -1764,15 +1789,13 @@ void MultiAbilityWindowClass::HandleLeftMouseButtonClick(int x, int y)
 			Width = static_cast<int>(Graphic->BaseWidth);
 			Height = static_cast<int>(Graphic->BaseHeight);
 			if (x >= X && x <= X + Width)
-				if (x >= X + 22 && x <= X + Width && y >= Y && y <= Y + Height / 2)
+				if (x >= X + 22 && x <= X + Width && y >= Y - 3 && y <= Y + Height / 2 -3)
 				{
-					ss << "Up";
-					teststring = ss.str();
+					SetTomes(i, Index, 1);
 				}
-				else if (x >= X + 20 && x <= X + Width && y >= Y + Height / 2 && y <= Y + Height)
+				else if (x >= X + 20 && x <= X + Width && y >= Y + Height / 2 - 3 && y <= Y + Height + 3)
 				{	
-					ss << "Down";
-					teststring = ss.str();
+					SetTomes(i, Index, -1);
 				}
 				
 		}
@@ -1782,37 +1805,122 @@ void MultiAbilityWindowClass::HandleLeftMouseButtonClick(int x, int y)
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::SetTomes(int Tome, int Ability, int Dir)
 {
-	if (TomeLevel[Ability][Tome] == 31 && Dir == 1)
+	int Raise;
+	int CurrentTome;
+	int TomeRaise[6][MAXLEVEL];
+		int temp;
+		if (TomeLevel[Ability][Tome] == 31 && Dir == 1)
 	{
-		TomeLevel[Ability][Tome] == 1;
-		return;
-	}
-	if (TomeLevel[Ability][Tome] == 1 && Dir == -1)
-	{
-		TomeLevel[Ability][Tome] == 31;
-		return;
-	}
-	if (Dir == 1)
-	{
-		TomeLevel[Ability][Tome] += 1;
-	}
-	if (Dir == -1)
-	{
-		TomeLevel[Ability][Tome] -= 1;
-	}
-		
-	for (int i = 0; i < 7; i++)
-	{
-		for (int x = 0; x < 6; i++)
+		temp = 1;
+		for (int i = Tome ; i > -1 ; i--)
 		{
-			if (TomeLevel[Ability][Tome] == 31)
+			if (TomeLevel[Ability][i] != 31)
 			{
-
+				if (temp < TomeLevel[Ability][i] + 1)
+				{
+					temp = TomeLevel[Ability][i] + 1;
+					break;
+				}
 			}
 		}
+
+		TomeLevel[Ability][Tome] = temp;
 	}
+	else if (TomeLevel[Ability][Tome] == 1 && Dir == -1)
+	{
+		TomeLevel[Ability][Tome] = 31;
+	}
+	else if (Dir == 1 && TomeLevel[Ability][Tome] < 30)
+	{
+		temp = 31;
+		for (int i = Tome + 1; i < 7; i++)
+		{
+			if (TomeLevel[Ability][i] < 31)
+			{
+				temp = TomeLevel[Ability][i];
+			}
+				
+		}
 
+		if (TomeLevel[Ability][Tome] + 1 < temp)
+		{
+			if (TomeLevel[Ability][Tome] +1 != 31)
+			{
+			TomeLevel[Ability][Tome] += 1;
+			}
 
+		}
+		
+	}
+	else if (Dir == -1 && TomeLevel[Ability][Tome] >= 1 && TomeLevel[Ability][Tome] < 31)
+	{
+		temp = 0;
+		for (int i = Tome - 1; i >- 1; i--)
+		{
+			if (TomeLevel[Ability][i] < 31)
+			{
+				if (TomeLevel[Ability][i] > temp)
+					temp = TomeLevel[Ability][i];
+			}
+
+		}
+
+		if (TomeLevel[Ability][Tome] - 1 > temp)
+		{
+			if (TomeLevel[Ability][Tome] - 1 != 0)
+			{
+				TomeLevel[Ability][Tome] -= 1;
+			}
+			else
+				TomeLevel[Ability][Tome] = 31;
+
+		}
+		else
+		{
+			TomeLevel[Ability][Tome] = 31;
+		}
+
+	}
+	
+	for (int i = 0; i < 6; i++)
+	{
+		Raise = 0;
+		
+		for (int y = 0; y < MAXLEVEL; y++)
+		{
+			TomeRaise[i][y] = 0;
+
+		}
+		for (int x = 0; x < 7; x++)
+		{	
+			Raise += 1;
+			if (TomeLevel[i][x] != 31)
+			{
+				CurrentTome = 0;
+				for (int y = 0; y < TomeLevel[i][x]; y++)
+				{
+					
+					if (TomeRaise[i][y] > 0)
+					{
+						CurrentTome += TomeRaise[i][y];
+					}
+				}
+				if (TomeRaise[i][TomeLevel[i][x] - 1] != 0)
+				{
+					TomeRaise[i][TomeLevel[i][x] - 1] = Raise + TomeRaise[i][TomeLevel[i][x] - 1];
+				}
+				else
+				{
+					TomeRaise[i][TomeLevel[i][x] - 1] = Raise - CurrentTome;
+				}
+
+			}
+
+		}
+	}
+	Character.SetTome(static_cast<ABILITIES>(Ability), TomeRaise);
+	DrawTome();
+	DrawCurrent();
 }
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::ClearRect(HDC hdc, RECT rc)
@@ -1833,4 +1941,34 @@ void MultiAbilityWindowClass::ClearRect(HDC hdc, RECT rc)
 HWND MultiAbilityWindowClass::GetHandle()
 {
 	return MultiAbilityHandle;
+}
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::DeleteGraphics()
+{
+
+	DeleteObject(TitleFontLarge);
+	DeleteObject(DefaultFont);
+	DeleteObject(LargeFont);
+	DeleteObject(AbilityFontLarge);
+	DeleteObject(AbilityFontSmall);
+	DeleteObject(ArielFontSmall);
+
+
+	DeleteObject(Minus.Graphic);
+	DeleteObject(Plus.Graphic);
+	DeleteObject(BlueLevelBox.Graphic);
+	DeleteObject(GreenLevelBox.Graphic);
+	DeleteObject(Spinner.Graphic);
+	DeleteObject(Spinnerwithcover.Graphic);
+
+	DeleteObject(Minus.Mask);
+	DeleteObject(Plus.Mask);
+	DeleteObject(BlueLevelBox.Mask);
+	DeleteObject(GreenLevelBox.Mask);
+	DeleteObject(Spinner.Mask);
+	DeleteObject(Spinnerwithcover.Mask);
+
+
+	DeleteObject(Palette);
+
 }

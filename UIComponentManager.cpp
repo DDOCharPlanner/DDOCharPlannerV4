@@ -915,7 +915,7 @@ void UIComponentManager::InitializeUI()
 
 	CurrentX = AbilityFrameBaseX + 5;
 	CurrentY = AbilityFrameBaseY +340;
-	Width = 645;
+	Width = 510;
 	Height = 300;
 
 	InitializeUIComponent("TomeFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_TOMEFRAME);
@@ -960,10 +960,23 @@ void UIComponentManager::InitializeUI()
 			CurrentX += 50;
 		}
 		GraphicName = "TomeTotal" + to_string(i);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX+40, CurrentY+3, 25, 25);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX+40, CurrentY+3, 25, 15);
 		CurrentY += 40;
 		CurrentX = TomeBaseX;
 	}
+	// Ability instruction Frame
+	CurrentX = AbilityFrameBaseX + 525;
+	CurrentY = AbilityFrameBaseY + 340;
+	Width = 315;
+	Height = 300;
+
+	InitializeUIComponent("InstructionFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_INSFRAME);
+	CurrentX += 5;
+	InitializeUIComponent("InstructionLabel", MULTIABILITYWINDOW, "STATIC", "Instructions", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_INSLABEL);
+
+	//Description Box
+	InitializeUIComponent("DescriptionWindow", MULTIABILITYWINDOW, "RichEdit", "RichEdit", WS_CHILD | WS_VSCROLL | WS_BORDER | ES_MULTILINE | ES_READONLY, CurrentX + 5, CurrentY + 35, Width-20, Height - 45, MAB_INSBOX);
+
 
 
 	//**************************** MultiFeat Window Graphic *************************

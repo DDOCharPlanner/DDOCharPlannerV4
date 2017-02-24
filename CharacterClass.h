@@ -72,6 +72,7 @@ class CharacterClass
         bool GetAbilityFavorBonus();
         void ChangeTomeRaise(ABILITIES Ability, int AtLevel, int Change);
 		int GetTomeRaise(ABILITIES Ability, int AtLevel, bool IncludeThisLevel, bool IncludeAllTomes=false);
+		void SetTome(ABILITIES Ability, int SetTomeRaise[6][MAXLEVEL]);
 
         //ability stat stuff
         int GetHitPoints(int AtLevel);

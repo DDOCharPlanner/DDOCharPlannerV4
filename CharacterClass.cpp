@@ -1092,6 +1092,14 @@ void CharacterClass::ChangeTomeRaise(ABILITIES Ability, int AtLevel, int Change)
     }
 
 //---------------------------------------------------------------------------
+void CharacterClass::SetTome(ABILITIES Ability, int SetTomeRaise[6][MAXLEVEL])
+{
+	for (int i = 0; i < MAXLEVEL; i++)
+	{
+		TomeRaise[Ability][i] = SetTomeRaise[Ability][i];
+	}
+}
+//---------------------------------------------------------------------------
 void CharacterClass::AddRaceAutoFeats(int AtLevel)
     {
     int FeatIndex;

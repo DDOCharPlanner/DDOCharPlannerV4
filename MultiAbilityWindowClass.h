@@ -172,6 +172,10 @@ private:
 	HWND	TomeLabel7;
 	HWND	TomeTotal;
 
+	HWND	InstructionFrame;
+	HWND	InstructionLabel;
+	HWND	DescriptionWindow;
+
 	int CurrentLevel;
 
 	int RadioButtonID[6][7];
@@ -195,7 +199,8 @@ private:
 	int TomeLevel[6][7];
 	void HandleLeftMouseButtonClick(int x, int y);
 	void SetTomes(int Tome, int Ability, int Dir);
-
+	void DeleteGraphics();
+	void FillInstructionBox();
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);
