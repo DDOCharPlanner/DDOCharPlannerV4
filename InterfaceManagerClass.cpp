@@ -180,9 +180,10 @@ void InterfaceManagerClass::ShowChild(CHILDWINDOW Child, bool State)
 			MultiAbilityWindowVisible = State;
 			if (State == false)
 			{
-				//MainScreen.RefreshInstructionWindow();
+				MainScreen.RefreshInstructionWindow();
 				MainScreen.RefreshMainScreen();
 			}
+			break;
 		}
 		case MULTISKILLSWINDOW:
 		{

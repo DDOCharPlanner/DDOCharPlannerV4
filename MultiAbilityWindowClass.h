@@ -170,6 +170,7 @@ private:
 	HWND	TomeLabel5;
 	HWND	TomeLabel6;
 	HWND	TomeLabel7;
+	HWND	TomeTotal;
 
 	int CurrentLevel;
 
@@ -193,6 +194,8 @@ private:
 	void DrawTome();
 	int TomeLevel[6][7];
 	void HandleLeftMouseButtonClick(int x, int y);
+	void SetTomes(int Tome, int Ability, int Dir);
+
 	//do not implement these two functions, instance  control!!
 	MultiAbilityWindowClass(const MultiAbilityWindowClass &source);
 	MultiAbilityWindowClass& operator=(const MultiAbilityWindowClass &source);

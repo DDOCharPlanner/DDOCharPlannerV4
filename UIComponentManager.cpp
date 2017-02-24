@@ -943,7 +943,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("TomeLabel5", MULTIABILITYWINDOW, "STATIC", "+5", WS_CHILD, CurrentX + 212, CurrentY, 45, 25, MAB_T5);
 	InitializeUIComponent("TomeLabel6", MULTIABILITYWINDOW, "STATIC", "+6", WS_CHILD, CurrentX + 262, CurrentY, 45, 25, MAB_T6);
 	InitializeUIComponent("TomeLabel7", MULTIABILITYWINDOW, "STATIC", "+7", WS_CHILD, CurrentX + 312, CurrentY, 45, 25, MAB_T7);
-	InitializeUIComponent("TomeTotal", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 362, CurrentY, 45, 25, MAB_TOMETOTAL);
+	InitializeUIComponent("TomeTotal", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 370, CurrentY, 45, 25, MAB_TOMETOTAL);
 
 	int TomeBaseX, TomeBaseY;
 	TomeBaseX = CurrentX;

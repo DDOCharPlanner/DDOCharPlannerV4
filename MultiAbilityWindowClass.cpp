@@ -327,6 +327,8 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	TomeLabel6 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("TomeLabel7", MULTIABILITYWINDOW);
 	TomeLabel7 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeTotal", MULTIABILITYWINDOW);
+	TomeTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 
 
 	GetObject(GetStockObject(DKGRAY_BRUSH), sizeof(LOGBRUSH), &lb);
@@ -600,83 +602,88 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(TomeLabel5, State);
 	ShowWindow(TomeLabel6, State);
 	ShowWindow(TomeLabel7, State);
+	ShowWindow(TomeTotal, State);
+	
 
-	//Center in Window
+	if (State != false)
+	{
+		//Center in Window
 
-	int ParentX;
-	int ParentY;
+		int ParentX;
+		int ParentY;
 
-	RECT WindowRect;
-	RECT ParentRect;
-	int WindowX;
-	int WindowY;
-	HWND ParentWindow;
-	ParentWindow = InterfaceManager.ControlWindow.GetControlWindowHandle();
-	GetWindowRect(ParentWindow, &ParentRect);
-	ParentX = ParentRect.right - ParentRect.left;
-	ParentY = ParentRect.bottom - ParentRect.top;
+		RECT WindowRect;
+		RECT ParentRect;
+		int WindowX;
+		int WindowY;
+		HWND ParentWindow;
+		ParentWindow = InterfaceManager.ControlWindow.GetControlWindowHandle();
+		GetWindowRect(ParentWindow, &ParentRect);
+		ParentX = ParentRect.right - ParentRect.left;
+		ParentY = ParentRect.bottom - ParentRect.top;
 
-	GetWindowRect(MultiAbilityHandle, &WindowRect);
-	WindowX = WindowRect.right - WindowRect.left;
-	WindowY = WindowRect.bottom - WindowRect.top;
-	SetWindowPos(MultiAbilityHandle, ParentWindow, ParentRect.left + (ParentX / 2) - (WindowX / 2), ParentRect.top + (ParentY / 2) - (WindowY / 2), 0, 0, SWP_NOSIZE);
+		GetWindowRect(MultiAbilityHandle, &WindowRect);
+		WindowX = WindowRect.right - WindowRect.left;
+		WindowY = WindowRect.bottom - WindowRect.top;
+		SetWindowPos(MultiAbilityHandle, ParentWindow, ParentRect.left + (ParentX / 2) - (WindowX / 2), ParentRect.top + (ParentY / 2) - (WindowY / 2), 0, 0, SWP_NOSIZE);
 
-	//Find RadioButtonIDs
-	RadioButtonID[0][0] = MAB_4STR;
-	RadioButtonID[0][1] = MAB_8STR;
-	RadioButtonID[0][2] = MAB_12STR;
-	RadioButtonID[0][3] = MAB_16STR;
-	RadioButtonID[0][4] = MAB_20STR;
-	RadioButtonID[0][5] = MAB_24STR;
-	RadioButtonID[0][6] = MAB_28STR;
+		//Find RadioButtonIDs
+		RadioButtonID[0][0] = MAB_4STR;
+		RadioButtonID[0][1] = MAB_8STR;
+		RadioButtonID[0][2] = MAB_12STR;
+		RadioButtonID[0][3] = MAB_16STR;
+		RadioButtonID[0][4] = MAB_20STR;
+		RadioButtonID[0][5] = MAB_24STR;
+		RadioButtonID[0][6] = MAB_28STR;
 
-	RadioButtonID[1][0] = MAB_4DEX;
-	RadioButtonID[1][1] = MAB_8DEX;
-	RadioButtonID[1][2] = MAB_12DEX;
-	RadioButtonID[1][3] = MAB_16DEX;
-	RadioButtonID[1][4] = MAB_20DEX;
-	RadioButtonID[1][5] = MAB_24DEX;
-	RadioButtonID[1][6] = MAB_28DEX;
+		RadioButtonID[1][0] = MAB_4DEX;
+		RadioButtonID[1][1] = MAB_8DEX;
+		RadioButtonID[1][2] = MAB_12DEX;
+		RadioButtonID[1][3] = MAB_16DEX;
+		RadioButtonID[1][4] = MAB_20DEX;
+		RadioButtonID[1][5] = MAB_24DEX;
+		RadioButtonID[1][6] = MAB_28DEX;
 
-	RadioButtonID[2][0] = MAB_4CON;
-	RadioButtonID[2][1] = MAB_8CON;
-	RadioButtonID[2][2] = MAB_12CON;
-	RadioButtonID[2][3] = MAB_16CON;
-	RadioButtonID[2][4] = MAB_20CON;
-	RadioButtonID[2][5] = MAB_24CON;
-	RadioButtonID[2][6] = MAB_28CON;
+		RadioButtonID[2][0] = MAB_4CON;
+		RadioButtonID[2][1] = MAB_8CON;
+		RadioButtonID[2][2] = MAB_12CON;
+		RadioButtonID[2][3] = MAB_16CON;
+		RadioButtonID[2][4] = MAB_20CON;
+		RadioButtonID[2][5] = MAB_24CON;
+		RadioButtonID[2][6] = MAB_28CON;
 
-	RadioButtonID[3][0] = MAB_4INT;
-	RadioButtonID[3][1] = MAB_8INT;
-	RadioButtonID[3][2] = MAB_12INT;
-	RadioButtonID[3][3] = MAB_16INT;
-	RadioButtonID[3][4] = MAB_20INT;
-	RadioButtonID[3][5] = MAB_24INT;
-	RadioButtonID[3][6] = MAB_28INT;
+		RadioButtonID[3][0] = MAB_4INT;
+		RadioButtonID[3][1] = MAB_8INT;
+		RadioButtonID[3][2] = MAB_12INT;
+		RadioButtonID[3][3] = MAB_16INT;
+		RadioButtonID[3][4] = MAB_20INT;
+		RadioButtonID[3][5] = MAB_24INT;
+		RadioButtonID[3][6] = MAB_28INT;
 
-	RadioButtonID[4][0] = MAB_4WIS;
-	RadioButtonID[4][1] = MAB_8WIS;
-	RadioButtonID[4][2] = MAB_12WIS;
-	RadioButtonID[4][3] = MAB_16WIS;
-	RadioButtonID[4][4] = MAB_20WIS;
-	RadioButtonID[4][5] = MAB_24WIS;
-	RadioButtonID[4][6] = MAB_28WIS;
+		RadioButtonID[4][0] = MAB_4WIS;
+		RadioButtonID[4][1] = MAB_8WIS;
+		RadioButtonID[4][2] = MAB_12WIS;
+		RadioButtonID[4][3] = MAB_16WIS;
+		RadioButtonID[4][4] = MAB_20WIS;
+		RadioButtonID[4][5] = MAB_24WIS;
+		RadioButtonID[4][6] = MAB_28WIS;
 
-	RadioButtonID[5][0] = MAB_4CHA;
-	RadioButtonID[5][1] = MAB_8CHA;
-	RadioButtonID[5][2] = MAB_12CHA;
-	RadioButtonID[5][3] = MAB_16CHA;
-	RadioButtonID[5][4] = MAB_20CHA;
-	RadioButtonID[5][5] = MAB_24CHA;
-	RadioButtonID[5][6] = MAB_28CHA;
+		RadioButtonID[5][0] = MAB_4CHA;
+		RadioButtonID[5][1] = MAB_8CHA;
+		RadioButtonID[5][2] = MAB_12CHA;
+		RadioButtonID[5][3] = MAB_16CHA;
+		RadioButtonID[5][4] = MAB_20CHA;
+		RadioButtonID[5][5] = MAB_24CHA;
+		RadioButtonID[5][6] = MAB_28CHA;
 
-	CurrentLevel = 30;
+		CurrentLevel = 30;
 
-	DrawCreation();
-	DrawLevelUp();
-	DrawCurrent();
-	DrawLevelBars();
-	DrawTome();
+		DrawCreation();
+		DrawLevelUp();
+		DrawCurrent();
+		DrawLevelBars();
+		DrawTome();
+	}
 }
 //---------------------------------------------------------------------------
 void MultiAbilityWindowClass::DrawCreation()
@@ -1728,6 +1735,83 @@ void MultiAbilityWindowClass::HandleLeftMouseButtonClick(int x, int y)
 			return;
 		}
 	}
+
+	//Check Tome Clicks
+	Index = -1;
+	for (unsigned int i = 0; i<6; i++)
+	{
+		ss.str("");
+		ss << "Tome_" << 0 << "Ability_" << i;
+		Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+		X = static_cast<int>(Graphic->BaseLocationX);
+		Y = static_cast<int>(Graphic->BaseLocationY);
+		Width = static_cast<int>(Graphic->BaseWidth);
+		Height = static_cast<int>(Graphic->BaseHeight);
+		if (y >= Y && y <= Y + Height)
+			Index = i;
+	}
+	string teststring;
+	teststring = "";
+	if (Index != -1)
+	{
+		for (int i = 0; i < 7; i++)
+		{
+			ss.str("");
+			ss << "Tome_" << i << "Ability_" << Index;
+			Graphic = UIManager->GetGraphicData(ss.str(), MULTIABILITYWINDOW);
+			X = static_cast<int>(Graphic->BaseLocationX);
+			Y = static_cast<int>(Graphic->BaseLocationY);
+			Width = static_cast<int>(Graphic->BaseWidth);
+			Height = static_cast<int>(Graphic->BaseHeight);
+			if (x >= X && x <= X + Width)
+				if (x >= X + 22 && x <= X + Width && y >= Y && y <= Y + Height / 2)
+				{
+					ss << "Up";
+					teststring = ss.str();
+				}
+				else if (x >= X + 20 && x <= X + Width && y >= Y + Height / 2 && y <= Y + Height)
+				{	
+					ss << "Down";
+					teststring = ss.str();
+				}
+				
+		}
+	}
+
+}
+//---------------------------------------------------------------------------
+void MultiAbilityWindowClass::SetTomes(int Tome, int Ability, int Dir)
+{
+	if (TomeLevel[Ability][Tome] == 31 && Dir == 1)
+	{
+		TomeLevel[Ability][Tome] == 1;
+		return;
+	}
+	if (TomeLevel[Ability][Tome] == 1 && Dir == -1)
+	{
+		TomeLevel[Ability][Tome] == 31;
+		return;
+	}
+	if (Dir == 1)
+	{
+		TomeLevel[Ability][Tome] += 1;
+	}
+	if (Dir == -1)
+	{
+		TomeLevel[Ability][Tome] -= 1;
+	}
+		
+	for (int i = 0; i < 7; i++)
+	{
+		for (int x = 0; x < 6; i++)
+		{
+			if (TomeLevel[Ability][Tome] == 31)
+			{
+
+			}
+		}
+	}
+
 
 }
 //---------------------------------------------------------------------------
