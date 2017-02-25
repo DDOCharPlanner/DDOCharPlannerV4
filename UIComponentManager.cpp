@@ -687,7 +687,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("CreationFrame", MULTIABILITYWINDOW, "STATIC", "", WS_CHILD | SS_GRAYFRAME, CurrentX, CurrentY, Width, Height, MAB_CREATIONFRAME);
 	CurrentX += 5;
 	InitializeUIComponent("CreationFrameLabel", MULTIABILITYWINDOW, "STATIC", "Creation", WS_CHILD, CurrentX + 5, CurrentY + 5, Width - 20, 25, MAB_CREATIONLABEL);
-	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "Points Availible", WS_CHILD, CurrentX + 5, CurrentY + 30, 110, 25, MAB_AVAILIBLELABEL);
+	InitializeUIComponent("CreationAvilablePointLabel", MULTIABILITYWINDOW, "STATIC", "Points Available", WS_CHILD, CurrentX + 5, CurrentY + 30, 110, 25, MAB_AVAILIBLELABEL);
 	InitializeUIComponent("CreationAvilablePoint", MULTIABILITYWINDOW, "STATIC", "28", WS_CHILD, CurrentX + 115, CurrentY + 30, 15, 25, MAB_AVAILABLEPOINTS);
 	InitializeUIComponent("PointBuild32", MULTIABILITYWINDOW, "BUTTON", "32 Point Build", WS_CHILD | BS_AUTOCHECKBOX, CurrentX + 170, CurrentY + 25, 120, 25, MAB_32BUILD);
 	InitializeUIComponent("BaseValueLabel", MULTIABILITYWINDOW, "STATIC", "Base Value", WS_CHILD, CurrentX + 80, CurrentY + 55, 100, 25, MAB_BASE);

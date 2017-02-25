@@ -1404,7 +1404,8 @@ void MultiAbilityWindowClass::FillInstructionBox()
 	EDITSTREAM Stream;
 	string String1;
 	String1 = "To fill all level up abilities at on time Click on the {\\b {\\cf1 Ability Name}}\\par\\par ";
-	String1 += "Select your Level to see your current abilities at a given level. \\par\\par";
+	String1 += "Select your Level to see your current abilities at a given level. \\par\\par ";
+	String1 += "For Past life tomes add them at level 1.  Add other tomes at the level that they are used. \\par\\par ";
 	Stream.dwCookie = (DWORD)String1.c_str();
 	Stream.dwError = false;
 	Stream.pfnCallback = EditStreamCallback;
