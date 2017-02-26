@@ -28757,7 +28757,7 @@ MODVALUE2: 2;
 DESC3: +3 Reflex Saves and an additional +3 to Saves against Traps.;
 MOD3: Save;
 MODNAME3: Reflex;
-MODVALUE1: 3;
+MODVALUE3: 3;
 ICON: TMPS_ImprovedReaction;
 
 NAME: Improved Defense;

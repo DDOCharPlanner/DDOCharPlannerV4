@@ -131,8 +131,6 @@ void MultiSkillsWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	StringCbCopy(lf.lfFaceName, LF_FACESIZE, TEXT("Times New Roman"));
 	DefaultFont = CreateFontIndirect(&lf);
 
-
-
 	//create a font
 	lf.lfHeight = 18;
 	lf.lfWidth = 0;

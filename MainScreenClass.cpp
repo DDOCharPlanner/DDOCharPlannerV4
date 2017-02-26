@@ -474,7 +474,6 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	EnableWindow(ItemBuilderButton, false);
 
 	//disable the feature buttons not yet ready
-	EnableWindow(SideAbilityButton, false);
 	EnableWindow(SideSpellButton, false);
 	EnableWindow(SideDestinyButton, false);
 	EnableWindow(DestinyPanelButton, false);
@@ -1021,8 +1020,6 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					//enable feature buttons that are being worked on
 					EnableWindow(DestinyPanelButton, true);
 					EnableWindow(SideDestinyButton, true);
-
-					EnableWindow(SideAbilityButton, true);
 					EnableWindow(SideSkillButton, true);
 					EnableWindow(SideSpellButton, true);
 					return 0;
@@ -5167,7 +5164,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				ClassIconCount = Index;
                 }
 			//draw the class icons
-			for (unsigned int i=0; i<ClassIconCount; i++)
+			for (int i=0; i<ClassIconCount; i++)
                 {
                 if (ClassSlot[i] == CLASSNONE)
                     break;
@@ -5481,6 +5478,11 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
             }
         case ADV_ABILITYPOINT:
             {
+				if (Character.GetAbilityFavorBonus() == true)
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 1);
+				else
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_UNCHECKED, 1);
+
             OldColor = SetTextColor(hdc, RGB(255,255,255));
 			Graphic = UIManager->GetGraphicData("AbilityPointAbilityText", MAINWINDOW);
 			X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
@@ -5556,13 +5558,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
                     }
 				X += static_cast<int>(65.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
-                ss.str("");
-                Modifier = Data.CalculateAbilityModifier(Ability);
-                if (Modifier > 0)
-                    ss << "+" << Modifier;
-                else
-                    ss << Modifier;
-                OutputString = ss.str();
+
 				X += static_cast<int>(50.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
                 PointsSpent += Character.GetAbilityPointsSpent(i);

@@ -4001,12 +4001,12 @@ ICON: ImprovedEvasionIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Improved Feint;
-FEATDESCRIPTION: An attack which also Bluffs the enemy, enabling a sneak attack.;
+FEATDESCRIPTION: An attack which also Bluffs the enemy, enabling a sneak attack. Adds +2[W] damage, and has a cooldown of six seconds. Threat reduction of 40%.
+;
 FEATTAG: Fighter Bonus;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-NEEDSALL: Feat Combat Expertise;
 NEEDSONE: Feat Half-Elf Dilettante: Rogue, Feat Sneak Attack;
 ICON: ImprovedFeintIcon;
 VERIFIED: unknown;

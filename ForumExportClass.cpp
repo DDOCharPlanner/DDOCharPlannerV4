@@ -352,7 +352,7 @@ string ForumExportClass::FillExampleExportBoxHeader()
 
     ss.str("");
     ss << "{\\ul {\\b Character Plan by DDO Character Planner Version " << VERSION << " \\par ";
-    ss << "{\\cf1 DDO Character Planner Home Page }}} \\par\\par ";
+    ss << "{\\cf1 DDO Character Planner Home Page https://github.com/DDOCharPlanner/DDOCharPlannerV4/releases}}} \\par\\par ";
 	Text = ss.str();
 
     return Text;

@@ -65,12 +65,14 @@ class CharacterClass
         int GetAbilityCost(int AbilityIndex);
         int GetAbilityPointsSpent(int AbilityIndex);
         void AdjustAbilityRaise(int AbilityIndex, int Direction);
+		int GetAbilityRaise(int AbilityIndex);
         void SetAbilityIncrease(int AtLevel, ABILITIES Ability);
         ABILITIES GetAbilityIncrease(int AtLevel);
         void SetAbilityFavorBonus(bool NewSetting);
         bool GetAbilityFavorBonus();
         void ChangeTomeRaise(ABILITIES Ability, int AtLevel, int Change);
 		int GetTomeRaise(ABILITIES Ability, int AtLevel, bool IncludeThisLevel, bool IncludeAllTomes=false);
+		void SetTome(ABILITIES Ability, int SetTomeRaise[6][MAXLEVEL]);
 
         //ability stat stuff
         int GetHitPoints(int AtLevel);
