@@ -4300,7 +4300,7 @@ void CharacterClass::Save(HWND hwnd)
 		StringCbPrintf(WriteBuffer, 1024, "%i, ", CharacterItemsEquipped[i]);
 		WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 		}
-	StringCbPrintf(WriteBuffer, 1024, "\r\n;\r\n");
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 
 	StringCbPrintf(WriteBuffer, 1024, "PASTLIFE: \r\n");
@@ -4310,16 +4310,39 @@ void CharacterClass::Save(HWND hwnd)
 		StringCbPrintf(WriteBuffer, 1024, "%i, ", ReincarnationCount[i]);
 		WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 		}
-	StringCbPrintf(WriteBuffer, 1024, "\r\n;\r\n");
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 		
+	StringCbPrintf(WriteBuffer, 1024, "ICONICPL: \r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	for (unsigned int i = 0; i<ICONICPASTLIFEFEAT; i++)
+	{
+		StringCbPrintf(WriteBuffer, 1024, "%i, ", IconicPastLifeCount[i]);
+		WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	}
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+
+	StringCbPrintf(WriteBuffer, 1024, "EPICPL: \r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	for (unsigned int i = 0; i<EPICPASTLIFESPHERE; i++)
+	{
+		for (unsigned int x = 0; x < 3; x++)
+		{
+			StringCbPrintf(WriteBuffer, 1024, "%i, ", EpicPastLifeCount[i][x]);
+			WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+		}
+	}
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+
     CloseHandle(FileHandle);
     }
 
 //---------------------------------------------------------------------------
 void CharacterClass::Load(HWND hwnd)
     {
-    #define NUMKEYWORDS 24
+    #define NUMKEYWORDS 26
     HANDLE FileHandle;
     char *FileData;
     DWORD FileSize;
@@ -4427,6 +4450,8 @@ void CharacterClass::Load(HWND hwnd)
 	StringCbCopy(KeywordString[21], 256, "ITEMS: ");
 	StringCbCopy(KeywordString[22], 256, "EQUIPPED: ");
 	StringCbCopy(KeywordString[23], 256, "PASTLIFE: ");
+	StringCbCopy(KeywordString[24], 256, "ICONICPL:");
+	StringCbCopy(KeywordString[25], 256, "EPICPL:");
     for (unsigned int i=0; i<NUMKEYWORDS; i++)
         TempPointer[i] = strstr(FileData, KeywordString[i]);
     while (true)
@@ -4843,12 +4868,18 @@ void CharacterClass::Load(HWND hwnd)
 				}
             case 23:     //past lives
 				{
-				Count = 0;
-				while (strstr(DataPointer, ",") != NULL)
+					SearchString = StringData;
+					CommaCount = 0;
+					Found = SearchString.find(",");
+					while (Found != string::npos)
+					{
+						CommaCount++;
+						Found = SearchString.find(",", Found + 1);
+					}
+					for (int Count = 0; Count < CommaCount; Count++)
 					{
 					for (int i=0; i<atoi(StringData); i++)
 						IncreasePastLife(static_cast<CLASS>(Count));
-					Count++;
 		            DataPointer = strstr(DataPointer, ",");
 			        DataPointer += 2;
 				    strncpy_s (StringData, DataPointer, strstr(DataPointer, ";") - DataPointer);
@@ -4856,6 +4887,61 @@ void CharacterClass::Load(HWND hwnd)
 					}
 				break;
 				}
+			case 24:     //Iconic past lives
+			{
+				SearchString = StringData;
+				CommaCount = 0;
+				Found = SearchString.find(",");
+				while (Found != string::npos)
+				{
+					CommaCount++;
+					Found = SearchString.find(",", Found + 1);
+				}
+				for (int Count = 0; Count < CommaCount; Count++)
+				{
+					for (int i = 0; i<atoi(StringData); i++)
+						IncreaseIconicPastLife(static_cast<ICONICRACES>(Count));
+					DataPointer = strstr(DataPointer, ",");
+					DataPointer += 2;
+					strncpy_s(StringData, DataPointer, strstr(DataPointer, ";") - DataPointer);
+					StringData[strstr(DataPointer, ";") - DataPointer] = '\0';
+				}
+				break;
+			}
+			case 25:     //Epic past lives
+			{
+				SearchString = StringData;
+				CommaCount = 0;
+				Found = SearchString.find(",");
+				while (Found != string::npos)
+				{
+					CommaCount++;
+					Found = SearchString.find(",", Found + 1);
+				}
+				int Sphere;
+				int FeatPos;
+				Sphere = 0;
+				FeatPos = 0;
+				for (int Count = 0; Count < CommaCount; Count++)
+				{
+					//Sphere = Count % EPICPASTLIFESPHERE;
+					//FeatPos = (Count - Sphere) / 3;
+
+					for (int i = 0; i<atoi(StringData); i++)
+						Character.IncreaseEpicFeat(static_cast<DESTINY_SPHERE>(Sphere), FeatPos);
+					FeatPos++;
+					if (FeatPos > 2)
+					{
+						FeatPos = 0;
+						Sphere++;
+					}
+					DataPointer = strstr(DataPointer, ",");
+					DataPointer += 2;
+					strncpy_s(StringData, DataPointer, strstr(DataPointer, ";") - DataPointer);
+					StringData[strstr(DataPointer, ";") - DataPointer] = '\0';
+				}
+				break;
+			}
             }
         }
 
