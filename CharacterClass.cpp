@@ -4118,7 +4118,7 @@ void CharacterClass::Save(HWND hwnd)
 	FileOpen.nMaxFileTitle = 512;
 	FileOpen.lpstrInitialDir = InitDirectory;
 	FileOpen.lpstrTitle = TitleString;
-	FileOpen.Flags = OFN_OVERWRITEPROMPT;
+	FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
 	FileOpen.nFileOffset = 0;
 	FileOpen.nFileExtension = 0;
 	FileOpen.lpstrDefExt = DefaultExtension;
@@ -4399,7 +4399,7 @@ void CharacterClass::Load(HWND hwnd)
 	FileOpen.nMaxFileTitle = 512;
 	FileOpen.lpstrInitialDir = InitDirectory;
 	FileOpen.lpstrTitle = TitleString;
-	FileOpen.Flags = OFN_OVERWRITEPROMPT;
+	FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
 	FileOpen.nFileOffset = 0;
 	FileOpen.nFileExtension = 0;
 	FileOpen.lpstrDefExt = DefaultExtension;
