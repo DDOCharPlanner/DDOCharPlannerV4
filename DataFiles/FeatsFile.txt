@@ -1,4 +1,4 @@
-FEATNAME: Abundant Step;
+FFEATNAME: Abundant Step;
 FEATDESCRIPTION: You are able to leap through the air to bring the fight to your enemies or traverse chasms that make normal adventurers balk.;
 CLASSLIST: Monk;
 LEVEL: 12;
@@ -6792,7 +6792,7 @@ CLASSLIST: Monk;
 LEVEL: 1;
 ACQUIRE: Train;
 NEEDSALL: Feat Weapon Focus: Slashing Weapons;
-NEEDSONE: Feat Favored by the Sovereign Host, Feat Half-Elf Dilettante: Fighter, Feat Martial Weapon Proficiency: Longsword;
+NEEDSONE: Feat Follower of the Sovereign Host, Feat Half-Elf Dilettante: Fighter, Feat Martial Weapon Proficiency: Longsword;
 ICON: MartialWeaponProfIcon;
 VERIFIED: 2012-06-26, in-game;
 
