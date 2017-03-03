@@ -12,6 +12,7 @@ DURATION: 5 Minutes;
 COOLDOWN: 1 Minute;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: AblativeArmor;
 
 SPELLNAME: Acid Blast;
@@ -28,6 +29,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: AcidBlast;
 
 SPELLNAME: Acid Fog;
@@ -44,6 +46,7 @@ DURATION: 40 seconds + 2 seconds per caster level;
 COOLDOWN: 10 seconds (Wiz), 6 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: AcidFog;
 
 SPELLNAME: Acid Rain;
@@ -60,6 +63,7 @@ DURATION: 8 seconds;
 COOLDOWN: 5 seconds (Wiz), 4 seconds (Sor);
 SAVING: Reflex hald on initial tic only;
 RESIST: No;
+RARE: 0;
 ICON: AcidRain;
 
 SPELLNAME: Acid Spray;
@@ -76,6 +80,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (Wiz), 1.5 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: AcidSpray;
 
 SPELLNAME: Adamantine Weapons;
@@ -92,6 +97,7 @@ DURATION: 6 minutes;
 COOLDOWN: 3 seconds;
 SAVING: No;
 RESIST: No;
+RARE: 0;
 ICON: AdamantineWeapons;
 
 SPELLNAME: Aid;
@@ -108,6 +114,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Aid;
 
 SPELLNAME: Aid, Mass;
@@ -124,6 +131,7 @@ DURATION: 60;
 COOLDOWN: 3;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: AidMass;
 
 SPELLNAME: Align Fang;
@@ -140,6 +148,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: AlignFang;
 
 SPELLNAME: Angelskin;
@@ -156,6 +165,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Angelskin;
 
 SPELLNAME: Anger of the Noonday Sun;
@@ -172,6 +182,7 @@ DURATION: 20 minutes;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: AngeroftheNoondaySun;
 
 SPELLNAME: Animal Growth;
@@ -188,6 +199,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: AnimalGrowth;
 
 SPELLNAME: Animal Trance;
@@ -204,6 +216,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Will;
 RESIST: Yes;
+RARE: 0;
 ICON: AnimalTrance;
 
 SPELLNAME: Armor of Speed;
@@ -220,6 +233,7 @@ DURATION: 60 seconds + 12 seconds per caster level;
 COOLDOWN: ;
 SAVING: No;
 RESIST: No;
+RARE: 1;
 ICON: ArmorofSpeed;
 
 SPELLNAME: Baiting Bite;
@@ -236,6 +250,7 @@ DURATION: tbd;
 COOLDOWN: 12 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: BaitingBite;
 
 SPELLNAME: Ball Lightning;
@@ -252,6 +267,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds (Wiz), 3 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: BallLightning;
 
 SPELLNAME: Bane;
@@ -268,6 +284,7 @@ DURATION: 24 seconds + 6 seconds per caster level;
 COOLDOWN: 2 seconds;
 SAVING: Will save negates;
 RESIST: No;
+RARE: 0;
 ICON: Bane;
 
 SPELLNAME: Banishment;
@@ -284,6 +301,7 @@ DURATION: Instantaneous;
 COOLDOWN: 15 seconds (all except sor), 10 seconds (Sor);
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Banishment;
 
 SPELLNAME: Barkskin;
@@ -300,6 +318,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Barkskin;
 
 SPELLNAME: Bear's Endurance;
@@ -316,6 +335,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: BearsEndurance;
 
 SPELLNAME: Bear's Endurance, Mass;
@@ -332,6 +352,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: BearsEnduranceMass;
 
 SPELLNAME: Bestow Curse;
@@ -348,6 +369,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds (all except Sor), 2 seconds (Sor);
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: BestowCurse;
 
 SPELLNAME: Black Dragon Bolt;
@@ -364,6 +386,7 @@ DURATION: 6 seconds;
 COOLDOWN: 5.5 seconds (Wiz), 3.25 seconds (Sor);
 SAVING: Reflex half;
 RESIST: No;
+RARE: 1;
 ICON: BlackDragonBolt;
 
 SPELLNAME: Blade Barrier;
@@ -380,6 +403,7 @@ DURATION: 30 seconds;
 COOLDOWN: 5 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 1;
 ICON: BladeBarrier;
 
 SPELLNAME: Blast Rod;
@@ -396,6 +420,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: BlastRod;
 
 SPELLNAME: Bless;
@@ -412,6 +437,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Bless;
 
 SPELLNAME: Blindness;
@@ -428,6 +454,7 @@ DURATION: 30 seconds per caster level;
 COOLDOWN: 3 seconds (all except Sor), 2 seconds (Sor);
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Blindness;
 
 SPELLNAME: Blur;
@@ -444,6 +471,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Blur;
 
 SPELLNAME: Body of the Sun;
@@ -460,6 +488,7 @@ DURATION: tbd;
 COOLDOWN: 2 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: BodyoftheSun;
 
 SPELLNAME: Break Enchantment;
@@ -476,6 +505,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds (all except Sor), 3 seconds (Sor);
 SAVING: 11+spell's caster level or None;
 RESIST: No;
+RARE: 0;
 ICON: BreakEnchantment;
 
 SPELLNAME: Bull's Strength;
@@ -492,6 +522,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: BullsStrength;
 
 SPELLNAME: Bull's Strength, Mass;
@@ -508,6 +539,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: BullsStrengthMass;
 
 SPELLNAME: Burning Blood;
@@ -524,6 +556,7 @@ DURATION: 12 seconds;
 COOLDOWN: 10 seconds (Wiz), 5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: BurningBlood;
 
 SPELLNAME: Burning Hands;
@@ -540,6 +573,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (Wiz), 1.5 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: BurningHands;
 
 SPELLNAME: Byeshk Weapons;
@@ -556,6 +590,7 @@ DURATION: 5 minutes;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ByeshkWeapons;
 
 SPELLNAME: Call Lightning;
@@ -572,6 +607,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: No;
+RARE: 0;
 ICON: CallLightning;
 
 SPELLNAME: Call Lightning Storm;
@@ -588,6 +624,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Refelx;
 RESIST: No;
+RARE: 0;
 ICON: CallLightningStorm;
 
 SPELLNAME: Camouflage;
@@ -604,6 +641,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Camouflage;
 
 SPELLNAME: Camouflage, Mass;
@@ -620,6 +658,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: CamouflageMass;
 
 SPELLNAME: Cat's Grace;
@@ -636,6 +675,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: CatsGrace;
 
 SPELLNAME: Cat's Grace, Mass;
@@ -652,6 +692,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: CatsGraceMass;
 
 SPELLNAME: Cause Fear;
@@ -668,6 +709,7 @@ DURATION: Up to 45 seconds;
 COOLDOWN: 2 seconds;
 SAVING: Will save takes partial Shaken condition;
 RESIST: Yes;
+RARE: 0;
 ICON: CauseFear;
 
 SPELLNAME: Chain Lightning;
@@ -684,6 +726,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: ChainLightning;
 
 SPELLNAME: Chain Missiles;
@@ -700,6 +743,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ChainMissiles;
 
 SPELLNAME: Chaos Hammer;
@@ -716,6 +760,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Will save takes half damage and negates slow;
 RESIST: No;
+RARE: 1;
 ICON: ChaosHammer;
 
 SPELLNAME: Charm Animal;
@@ -732,6 +777,7 @@ DURATION: 60 seconds +6 seconds per caster level;
 COOLDOWN: tbd;
 SAVING: Will;
 RESIST: Yes;
+RARE: 0;
 ICON: CharmAnimal;
 
 SPELLNAME: Charm Monster;
@@ -748,7 +794,25 @@ DURATION: 60 seconds +6 seconds per caster level;
 COOLDOWN: 3.5 seconds (Wiz/Brd), 2.25 seconds (Sor);
 SAVING: Will save negates, new Will save every 3d6+12 seconds;
 RESIST: Yes;
+RARE: 0;
 ICON: CharmMonster;
+
+SPELLNAME: Charm Monster, Mass;
+DESCRIPTION: A group of enemy monsters are charmed and will fight as trusted friends and allies. Charmed monsters get additional saves every 3d6+12 seconds. A successful Will save negates this effect.;
+CLASSLIST: Wizard, Sorcerer, Bard, Warlock;
+LEVEL: 8, 8, 6, 6;
+SCHOOL: Enchantment;
+COST: 25 (General), 20 (Bard);
+COMPONENTS: Somatic, Verbal;
+META: Enlarge, Extend, Heighten, Quicken;
+RANGE: Standard;
+TARGET: Foe;
+DURATION: 3d6 + 12 seconds;
+COOLDOWN: 6 seconds (Wiz/Brd), 6 seconds (Sor);
+SAVING: Will save negates, new Will save every 3d6+12 seconds;
+RESIST: Yes;
+RARE: 1;
+ICON: CharmMonsterMass;
 
 SPELLNAME: Charm Person;
 DESCRIPTION: Charms an enemy humanoid, which will fight as a trusted friend and ally.  Charmed humanoids get an additional save every 15 to 30 seconds. A successful Will save negates this effect.  Humanoids include kobolds, goblinoids, player races except for warforged, troglodytes, and more, but do not include Monstrous Humanoids.;
@@ -764,6 +828,7 @@ DURATION: 60 seconds +6 seconds per caster level;
 COOLDOWN: 2 seconds (Wiz/Brd), 1.5 seconds (Sor);
 SAVING: Will save negates, new Will save every 3d6+12 seconds;
 RESIST: Yes;
+RARE: 0;
 ICON: CharmPerson;
 
 SPELLNAME: Chill Touch;
@@ -780,6 +845,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (Wiz), 1 second (Sor);
 SAVING: Fortitude partial or Will negates (see text);
 RESIST: No;
+RARE: 0;
 ICON: ChillTouch;
 
 SPELLNAME: Circle of Death;
@@ -796,6 +862,7 @@ DURATION: Instantaneous;
 COOLDOWN: 60 seconds;
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: CircleofDeath;
 
 SPELLNAME: Close Wounds;
@@ -812,6 +879,7 @@ DURATION: Instantaneous;
 COOLDOWN: 1 second;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes;
+RARE: 1;
 ICON: CloseWounds;
 
 SPELLNAME: Cloudkill;
@@ -828,6 +896,7 @@ DURATION: 40 seconds + 2 seconds every 2 caster levels;
 COOLDOWN: 9 seconds (Wiz), 6 seconds (Sor);
 SAVING: Fortitude save takes partial half constitution damage and half acid damage;
 RESIST: No;
+RARE: 1;
 ICON: Cloudkill;
 
 SPELLNAME: Cold Breath;
@@ -844,6 +913,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: ColdBreath;
 
 SPELLNAME: Cold Iron Weapons;
@@ -860,6 +930,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: ColdIronWeapons;
 
 SPELLNAME: Cometfall;
@@ -876,6 +947,7 @@ DURATION: Instantaneous, then 8 seconds;
 COOLDOWN: 5 seconds;
 SAVING: 2 Reflex saves. One for half damage, and one to negate knockdown;
 RESIST: No;
+RARE: 0;
 ICON: Cometfall;
 
 SPELLNAME: Command;
@@ -892,6 +964,7 @@ DURATION: 6 seconds;
 COOLDOWN: 2 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Command;
 
 SPELLNAME: Command Undead;
@@ -908,6 +981,7 @@ DURATION: Mindless undead 1 to 4 minutes, other undead maximum of 10 minutes;
 COOLDOWN: 3 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: CommandUndead;
 
 SPELLNAME: Cone of Cold;
@@ -924,6 +998,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds (Wiz), 3 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: ConeofCold;
 
 SPELLNAME: Conjure Bolts;
@@ -940,6 +1015,7 @@ DURATION: Instantaneous;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: ConjureBolts;
 
 SPELLNAME: Contagion;
@@ -956,6 +1032,7 @@ DURATION: Permanent;
 COOLDOWN: ;
 SAVING: Fortitude save negates;
 RESIST: No;
+RARE: 0;
 ICON: Contagion;
 
 SPELLNAME: Control Undead;
@@ -972,6 +1049,7 @@ DURATION: 50 seconds + 6 seconds per caster level;
 COOLDOWN: 42 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: ControlUndead;
 
 SPELLNAME: Create Undead;
@@ -988,6 +1066,7 @@ DURATION: 10 minutes;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: CreateUndead;
 
 SPELLNAME: Creeping Cold;
@@ -1004,6 +1083,7 @@ DURATION: 12 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: CreepingCold;
 
 SPELLNAME: Creeping Doom;
@@ -1020,6 +1100,7 @@ DURATION: 16 seconds;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: No;
+RARE: 0;
 ICON: CreepingDoom;
 
 SPELLNAME: Crushing Despair;
@@ -1036,6 +1117,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 4 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: CrushingDespair;
 
 SPELLNAME: Curative Admixture: Cure Light Wounds;
@@ -1052,6 +1134,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds;
 SAVING: Will save for half (undead only);
 RESIST: No;
+RARE: 1;
 ICON: CurativeAdmixtureCureLightWounds;
 
 SPELLNAME: Curative Admixture: Cure Moderate Wounds;
@@ -1068,6 +1151,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: No;
 RESIST: No;
+RARE: 1;
 ICON: CurativeAdmixtureCureModerateWounds;
 
 SPELLNAME: Curative Admixture: Cure Serious Wounds;
@@ -1084,6 +1168,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: No;
 RESIST: No;
+RARE: 1;
 ICON: CurativeAdmixtureCureSeriousWounds;
 
 SPELLNAME: Curative Admixture: Remove Curse;
@@ -1100,6 +1185,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: CurativeAdmixtureRemoveCurse;
 
 SPELLNAME: Curative Admixture: Remove Disease;
@@ -1116,6 +1202,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: CurativeAdmixtureRemoveDisease;
 
 SPELLNAME: Curative Admixture: Remove Poison;
@@ -1132,6 +1219,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: CurativeAdmixtureRemovePoison;
 
 SPELLNAME: Cure Critical Wounds;
@@ -1148,6 +1236,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureCriticalWounds;
 
 SPELLNAME: Cure Critical Wounds, Mass;
@@ -1164,6 +1253,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5.5 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 1;
 ICON: CureCriticalWoundsMass;
 
 SPELLNAME: Cure Light Wounds;
@@ -1180,6 +1270,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureLightWounds;
 
 SPELLNAME: Cure Light Wounds, Mass;
@@ -1196,6 +1287,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureLightWoundsMass;
 
 SPELLNAME: Cure Moderate Wounds;
@@ -1212,6 +1304,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureModerateWounds;
 
 SPELLNAME: Cure Moderate Wounds, Mass;
@@ -1228,6 +1321,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4.5 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureModerateWoundsMass;
 
 SPELLNAME: Cure Serious Wounds;
@@ -1244,6 +1338,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 0;
 ICON: CureSeriousWounds;
 
 SPELLNAME: Cure Serious Wounds, Mass;
@@ -1260,6 +1355,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: Will save takes half damage (undead only);
 RESIST: Yes (undead only);
+RARE: 1;
 ICON: CureSeriousWoundsMass;
 
 SPELLNAME: Cyclonic Blast;
@@ -1276,6 +1372,7 @@ DURATION: 6 seconds;
 COOLDOWN: 3 seconds;
 SAVING: Reflex save takes half damage and avoids strength check or dexterity check to negate knocked prone;
 RESIST: No;
+RARE: 0;
 ICON: CyclonicBlast;
 
 SPELLNAME: Dark Discorporation;
@@ -1292,6 +1389,7 @@ DURATION: 20 Seconds;
 COOLDOWN: 2 minutes;
 SAVING: ;
 RESIST: No;
+RARE: 0;
 ICON: DarkDiscorporation;
 
 SPELLNAME: Daze Monster;
@@ -1308,6 +1406,7 @@ DURATION: 6 seconds;
 COOLDOWN: 10 seconds (Wiz), 8 seconds (Sor);
 SAVING: Will save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: DazeMonster;
 
 SPELLNAME: Deadly Weapons;
@@ -1324,6 +1423,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: ;
 SAVING: No;
 RESIST: No;
+RARE: 1;
 ICON: DeadlyWeapons;
 
 SPELLNAME: Death Aura;
@@ -1340,6 +1440,7 @@ DURATION: 24 seconds + 3 seconds per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: DeathAura;
 
 SPELLNAME: Death Pact;
@@ -1356,6 +1457,7 @@ DURATION: Permanent;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: DeathPact;
 
 SPELLNAME: Death Ward;
@@ -1372,6 +1474,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: DeathWard;
 
 SPELLNAME: Death Ward, Mass;
@@ -1388,6 +1491,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: DeathWardMass;
 
 SPELLNAME: Deconstruct;
@@ -1404,6 +1508,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: Deconstruct;
 
 SPELLNAME: Deep Slumber;
@@ -1420,6 +1525,7 @@ DURATION: 20 seconds + 1 per caster level;
 COOLDOWN: 3 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: DeepSlumber;
 
 SPELLNAME: Deific Vengeance;
@@ -1436,6 +1542,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: Will save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: DeificVengeance;
 
 SPELLNAME: Delayed Blast Fireball;
@@ -1452,6 +1559,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds (Wiz), 3 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 1;
 ICON: DelayedBlastFireball;
 
 SPELLNAME: Destruction;
@@ -1468,6 +1576,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: Fortitude save partial;
 RESIST: Yes;
+RARE: 1;
 ICON: Destruction;
 
 SPELLNAME: Detect Secret Doors;
@@ -1484,6 +1593,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds (Wiz), 1.5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: DetectSecretDoors;
 
 SPELLNAME: Dimension Door;
@@ -1500,6 +1610,7 @@ DURATION: 30 seconds;
 COOLDOWN: 60 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: DimensionDoor;
 
 SPELLNAME: Disintegrate;
@@ -1516,6 +1627,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: Fortitude save takes partial damage (6D3+12);
 RESIST: No;
+RARE: 0;
 ICON: Disintegrate;
 
 SPELLNAME: Dismissal;
@@ -1532,6 +1644,7 @@ DURATION: Instantaneous;
 COOLDOWN: 8 seconds;
 SAVING: Will save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: Dismissal;
 
 SPELLNAME: Dispel Magic;
@@ -1548,6 +1661,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: 11 + spell's caster level;
 RESIST: No;
+RARE: 0;
 ICON: DispelMagic;
 
 SPELLNAME: Displacement;
@@ -1564,6 +1678,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Displacement;
 
 SPELLNAME: Disrupt Undead;
@@ -1580,6 +1695,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (Wiz), 1.5 seconds (Sor);
 SAVING: Will save for half;
 RESIST: Yes;
+RARE: 1;
 ICON: DisruptUndead;
 
 SPELLNAME: Divine Favor;
@@ -1596,6 +1712,7 @@ DURATION: 24 seconds + 6 seconds per caster level;
 COOLDOWN: 1 second;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: DivineFavor;
 
 SPELLNAME: Divine Power;
@@ -1612,6 +1729,7 @@ DURATION: 24 seconds + 6 seconds per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: DivinePower;
 
 SPELLNAME: Divine Punishment;
@@ -1628,6 +1746,7 @@ DURATION: 16 seconds;
 COOLDOWN: 10 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: DivinePunishment;
 
 SPELLNAME: Dominate Animal;
@@ -1644,6 +1763,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Will;
 RESIST: Yes;
+RARE: 0;
 ICON: DominateAnimal;
 
 SPELLNAME: Dominate Monster;
@@ -1660,6 +1780,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 13 seconds;
 SAVING: Will save negates, Will save every 15 to 30 seconds;
 RESIST: Yes;
+RARE: 1;
 ICON: DominateMonster;
 
 SPELLNAME: Dominate Person;
@@ -1676,6 +1797,7 @@ DURATION: 1 minute + 6 seconds per caster level;
 COOLDOWN: 9 seconds (Wiz), 6 seconds (Sor);
 SAVING: Will save negates, Will save every 15 to 30 seconds;
 RESIST: Yes;
+RARE: 0;
 ICON: DominatePerson;
 
 SPELLNAME: Doom;
@@ -1692,6 +1814,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Doom;
 
 SPELLNAME: Eagle's Splendor;
@@ -1708,6 +1831,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: EaglesSplendor;
 
 SPELLNAME: Eagle's Splendor, Mass;
@@ -1724,6 +1848,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: EaglesSplendorMass;
 
 SPELLNAME: Earthquake;
@@ -1740,6 +1865,7 @@ DURATION: 30 Seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Earthquake;
 
 SPELLNAME: Eladar's Electric Surge;
@@ -1756,6 +1882,7 @@ DURATION: 16 seconds;
 COOLDOWN: 10 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: EladarsElectricSurge;
 
 SPELLNAME: Electric Loop;
@@ -1772,6 +1899,7 @@ DURATION: 7 to 12 seconds;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: Reflex save takes half damage, Will save negates Dazed;
 RESIST: No;
+RARE: 0;
 ICON: ElectricLoop;
 
 SPELLNAME: Elemental Prod;
@@ -1788,6 +1916,7 @@ DURATION: 7 to 12 seconds;
 COOLDOWN: 6 seconds;
 SAVING: Will, see text;
 RESIST: No;
+RARE: 0;
 ICON: ElementalProd;
 
 SPELLNAME: Elemental Toughness;
@@ -1804,6 +1933,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: ElementalToughness;
 
 SPELLNAME: Elemental Weapons;
@@ -1820,6 +1950,7 @@ DURATION: 6 minutes;
 COOLDOWN: None;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ElementalWeapons;
 
 SPELLNAME: Enchant Armor;
@@ -1836,6 +1967,7 @@ DURATION: 5 minutes;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: EnchantArmor;
 
 SPELLNAME: Enchant Weapons;
@@ -1852,6 +1984,7 @@ DURATION: 5 minutes;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: EnchantWeapons;
 
 SPELLNAME: Energy Drain;
@@ -1868,6 +2001,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds (Clr/FvS/Wiz), 3.5 seconds (Sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 1;
 ICON: EnergyDrain;
 
 SPELLNAME: Enervation;
@@ -1884,6 +2018,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds (Wiz), 2.25 seconds (Sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: Enervation;
 
 SPELLNAME: Entangle;
@@ -1900,6 +2035,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Reflex, Strength;
 RESIST: No;
+RARE: 0;
 ICON: Entangle;
 
 SPELLNAME: Enveloping Swarm;
@@ -1916,6 +2052,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: EnvelopingSwarm;
 
 SPELLNAME: Evard's Black Tentacles;
@@ -1932,6 +2069,7 @@ DURATION: 10 seconds;
 COOLDOWN: 20 seconds;
 SAVING: Strength check or become Entangled, Fortitude save partial takes half bludgeoning damage;
 RESIST: Yes;
+RARE: 0;
 ICON: EvardsBlackTentacles;
 
 SPELLNAME: Expeditious Retreat;
@@ -1948,6 +2086,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds (Wiz/Brd), 1.5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ExpeditiousRetreat;
 
 SPELLNAME: Faerie Fire;
@@ -1964,6 +2103,7 @@ DURATION: 30 Seconds;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: Yes;
+RARE: 0;
 ICON: FaerieFire;
 
 SPELLNAME: False Life;
@@ -1980,6 +2120,7 @@ DURATION: 1 minute per caster level or until discharged;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FalseLife;
 
 SPELLNAME: Fear;
@@ -1996,6 +2137,7 @@ DURATION: 30 seconds;
 COOLDOWN: 4 seconds (Wiz), 2 seconds (Sor);
 SAVING: Will save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: Fear;
 
 SPELLNAME: Feather Fall;
@@ -2012,6 +2154,7 @@ DURATION: 24 seconds plus 6 seconds per caster level;
 COOLDOWN: 2 seconds (Wiz/Brd), 1.5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FeatherFall;
 
 SPELLNAME: Feeblemind;
@@ -2028,6 +2171,7 @@ DURATION: 60 second plus 10 seconds per casster level with a diminished duration
 COOLDOWN: 4 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Feeblemind;
 
 SPELLNAME: Find Traps;
@@ -2044,6 +2188,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FindTraps;
 
 SPELLNAME: Finger of Death;
@@ -2060,6 +2205,7 @@ DURATION: Instantaneous;
 COOLDOWN: 8 seconds (Wiz), 6 seconds (Sor);
 SAVING: Fortitude partial;
 RESIST: Yes;
+RARE: 0;
 ICON: FingerofDeath;
 
 SPELLNAME: Fire Seeds;
@@ -2076,6 +2222,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: No;
+RARE: 0;
 ICON: FireSeeds;
 
 SPELLNAME: Fire Shield;
@@ -2092,6 +2239,7 @@ DURATION: 15 seconds plus 6 seconds per caster level;
 COOLDOWN: 3.5 seconds (Wiz), 2.25 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FireShield;
 
 SPELLNAME: Fire Storm;
@@ -2108,6 +2256,7 @@ DURATION: ;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: FireStorm;
 
 SPELLNAME: Fire Trap;
@@ -2124,6 +2273,7 @@ DURATION: ;
 COOLDOWN: 8 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: FireTrap;
 
 SPELLNAME: Fireball;
@@ -2140,6 +2290,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: Fireball;
 
 SPELLNAME: Fires of Purity;
@@ -2156,6 +2307,7 @@ DURATION: tbd;
 COOLDOWN: 5 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: FiresofPurity;
 
 SPELLNAME: Flame Arrow;
@@ -2172,6 +2324,7 @@ DURATION: 10 minutes per caster level;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FlameArrow;
 
 SPELLNAME: Flame Blade;
@@ -2188,6 +2341,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: FlameBlade;
 
 SPELLNAME: Flame Strike;
@@ -2204,6 +2358,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: FlameStrike;
 
 SPELLNAME: Flame Turret;
@@ -2220,6 +2375,7 @@ DURATION: 1 minute;
 COOLDOWN: 15 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: FlameTurret;
 
 SPELLNAME: Flaming Sphere;
@@ -2236,6 +2392,7 @@ DURATION: ;
 COOLDOWN: 60 seconds;
 SAVING: Reflex save negates;
 RESIST: No;
+RARE: 0;
 ICON: FlamingSphere;
 
 SPELLNAME: Flesh to Stone;
@@ -2252,6 +2409,7 @@ DURATION: 60 seconds, + 10 seconds per caster level;
 COOLDOWN: 4.5 seconds (Wiz), 2.75 seconds (Sor);
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: FleshtoStone;
 
 SPELLNAME: Focusing Chant;
@@ -2268,6 +2426,7 @@ DURATION: 36 seconds + 6 seconds per caster level;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FocusingChant;
 
 SPELLNAME: Fog Cloud;
@@ -2284,6 +2443,7 @@ DURATION: 40 seconds + 2 seconds per caster level;
 COOLDOWN: 5 seconds (Wiz), 3 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FogCloud;
 
 SPELLNAME: Force Missiles;
@@ -2300,6 +2460,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds (Wiz), 2.25 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ForceMissiles;
 
 SPELLNAME: Fox's Cunning;
@@ -2316,6 +2477,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FoxsCunning;
 
 SPELLNAME: Fox's Cunning, Mass;
@@ -2332,6 +2494,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: FoxsCunningMass;
 
 SPELLNAME: Freedom of Movement;
@@ -2348,6 +2511,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: FreedomofMovement;
 
 SPELLNAME: Freezing Spray;
@@ -2364,6 +2528,7 @@ DURATION: 30 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: FreezingSpray;
 
 SPELLNAME: Frost Lance;
@@ -2380,6 +2545,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds (Wiz), 2 seconds (Sor);
 SAVING: Fortitude save takes half damage;
 RESIST: No;
+RARE: 0;
 ICON: FrostLance;
 
 SPELLNAME: Frostbite;
@@ -2396,6 +2562,7 @@ DURATION: 30 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Frostbite;
 
 SPELLNAME: Ghoul Touch;
@@ -2412,6 +2579,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: GhoulTouch;
 
 SPELLNAME: Glitterdust;
@@ -2428,6 +2596,7 @@ DURATION: 40 seoncds + 2 seconds per caster level;
 COOLDOWN: 5 seconds (Wiz/Brd), 3 seconds (Sor);
 SAVING: Will save negates blindness;
 RESIST: No;
+RARE: 0;
 ICON: Glitterdust;
 
 SPELLNAME: Globe of Invulnerability;
@@ -2444,6 +2613,7 @@ DURATION: 30 seconds;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: GlobeofInvulnerability;
 
 SPELLNAME: Glyph of Warding;
@@ -2460,6 +2630,7 @@ DURATION: ;
 COOLDOWN: 15 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 1;
 ICON: GlyphofWarding;
 
 SPELLNAME: Good Hope;
@@ -2476,6 +2647,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: GoodHope;
 
 SPELLNAME: Grease;
@@ -2492,6 +2664,7 @@ DURATION: 20 seconds + 1 second per caster level;
 COOLDOWN: 2 seconds, 1.5 seconds (Sor);
 SAVING: DC 12 Reflex save negates fall, and other (see text);
 RESIST: No;
+RARE: 0;
 ICON: Grease;
 
 SPELLNAME: Greater Command;
@@ -2508,6 +2681,7 @@ DURATION: ;
 COOLDOWN: 4 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: GreaterCommand;
 
 SPELLNAME: Greater Creeping Cold;
@@ -2524,6 +2698,7 @@ DURATION: 12 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: GreaterCreepingCold;
 
 SPELLNAME: Greater Dispel Magic;
@@ -2540,6 +2715,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4.5 seconds, 2.75 seconds (Sor);
 SAVING: 11 + spell caster level;
 RESIST: No;
+RARE: 0;
 ICON: GreaterDispelMagic;
 
 SPELLNAME: Greater Glyph of Warding;
@@ -2556,6 +2732,7 @@ DURATION: ;
 COOLDOWN: 5 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 1;
 ICON: GreaterGlyphofWarding;
 
 SPELLNAME: Greater Heroism;
@@ -2572,6 +2749,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: GreaterHeroism;
 
 SPELLNAME: Greater Restoration;
@@ -2588,6 +2766,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: GreaterRestoration;
 
 SPELLNAME: Greater Shout;
@@ -2604,6 +2783,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds, 3 seconds (Sor);
 SAVING: Fortitude save takes half damage and negates daze;
 RESIST: No;
+RARE: 1;
 ICON: GreaterShout;
 
 SPELLNAME: Greater Teleport;
@@ -2620,6 +2800,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds, 3 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: GreaterTeleport;
 
 SPELLNAME: Greater Vigor;
@@ -2636,6 +2817,7 @@ DURATION: 10 Seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: GreaterVigor;
 
 SPELLNAME: Greater Vigor, Mass;
@@ -2652,6 +2834,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: GreaterVigorMass;
 
 SPELLNAME: Gust of Wind;
@@ -2668,6 +2851,7 @@ DURATION: 10 seconds;
 COOLDOWN: 3 seconds;
 SAVING: Small or smaller enemies Strength or Dexterity check negates prone, medium or smaller enemies Reflex save negates slow;
 RESIST: No;
+RARE: 0;
 ICON: GustofWind;
 
 SPELLNAME: Halt Undead;
@@ -2684,6 +2868,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HaltUndead;
 
 SPELLNAME: Harm;
@@ -2700,6 +2885,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: Harm;
 
 SPELLNAME: Harrowing Pack;
@@ -2716,6 +2902,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: HarrowingPack;
 
 SPELLNAME: Haste;
@@ -2732,6 +2919,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Haste;
 
 SPELLNAME: Heal;
@@ -2748,6 +2936,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Heal;
 
 SPELLNAME: Heal, Mass;
@@ -2764,6 +2953,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: HealMass;
 
 SPELLNAME: Heroes Feast;
@@ -2780,6 +2970,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HeroesFeast;
 
 SPELLNAME: Heroism;
@@ -2796,6 +2987,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Heroism;
 
 SPELLNAME: Hold Animal;
@@ -2812,6 +3004,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HoldAnimal;
 
 SPELLNAME: Hold Monster;
@@ -2828,6 +3021,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HoldMonster;
 
 SPELLNAME: Hold Monster, Mass;
@@ -2844,6 +3038,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: HoldMonsterMass;
 
 SPELLNAME: Hold Person;
@@ -2860,6 +3055,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HoldPerson;
 
 SPELLNAME: Hold Person, Mass;
@@ -2876,6 +3072,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HoldPersonMass;
 
 SPELLNAME: Holy Aura;
@@ -2892,6 +3089,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: HolyAura;
 
 SPELLNAME: Holy Smite;
@@ -2908,6 +3106,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HolySmite;
 
 SPELLNAME: Holy Sword;
@@ -2924,6 +3123,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HolySword;
 
 SPELLNAME: Horrid Wilting;
@@ -2940,6 +3140,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: HorridWilting;
 
 SPELLNAME: Howl of Terror;
@@ -2956,6 +3157,7 @@ DURATION: tbd;
 COOLDOWN: 2 seconds;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: HowlofTerror;
 
 SPELLNAME: Hypnotic Pattern;
@@ -2972,6 +3174,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: HypnoticPattern;
 
 SPELLNAME: Hypnotism;
@@ -2988,6 +3191,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Hypnotism;
 
 SPELLNAME: Ice Flowers;
@@ -3004,6 +3208,7 @@ DURATION: tbd;
 COOLDOWN: 2 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: IceFlowers;
 
 SPELLNAME: Ice Storm;
@@ -3020,6 +3225,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: IceStorm;
 
 SPELLNAME: Implosion;
@@ -3036,6 +3242,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: Implosion;
 
 SPELLNAME: Incendiary Cloud;
@@ -3052,6 +3259,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: IncendiaryCloud;
 
 SPELLNAME: Inflict Critical Damage;
@@ -3068,6 +3276,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictCriticalDamage;
 
 SPELLNAME: Inflict Critical Damage, Mass;
@@ -3084,6 +3293,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictCriticalDamageMass;
 
 SPELLNAME: Inflict Critical Wounds;
@@ -3100,6 +3310,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictCriticalWounds;
 
 SPELLNAME: Inflict Critical Wounds, Mass;
@@ -3116,6 +3327,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictCriticalWoundsMass;
 
 SPELLNAME: Inflict Light Damage;
@@ -3132,6 +3344,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictLightDamage;
 
 SPELLNAME: Inflict Light Damage, Mass;
@@ -3148,6 +3361,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictLightDamageMass;
 
 SPELLNAME: Inflict Light Wounds;
@@ -3164,6 +3378,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictLightWounds;
 
 SPELLNAME: Inflict Light Wounds, Mass;
@@ -3180,6 +3395,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictLightWoundsMass;
 
 SPELLNAME: Inflict Moderate Damage;
@@ -3196,6 +3412,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictModerateDamage;
 
 SPELLNAME: Inflict Moderate Damage, Mass;
@@ -3212,6 +3429,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictModerateDamageMass;
 
 SPELLNAME: Inflict Moderate Wounds;
@@ -3228,6 +3446,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictModerateWounds;
 
 SPELLNAME: Inflict Moderate Wounds, Mass;
@@ -3244,6 +3463,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictModerateWoundsMass;
 
 SPELLNAME: Inflict Serious Damage;
@@ -3260,6 +3480,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictSeriousDamage;
 
 SPELLNAME: Inflict Serious Damage, Mass;
@@ -3276,6 +3497,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictSeriousDamageMass;
 
 SPELLNAME: Inflict Serious Wounds;
@@ -3292,6 +3514,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InflictSeriousWounds;
 
 SPELLNAME: Inflict Serious Wounds, Mass;
@@ -3308,6 +3531,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: InflictSeriousWoundsMass;
 
 SPELLNAME: Invisibility;
@@ -3324,6 +3548,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Invisibility;
 
 SPELLNAME: Invisibility, Mass;
@@ -3340,6 +3565,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: InvisibilityMass;
 
 SPELLNAME: Jaws of Winter;
@@ -3356,6 +3582,7 @@ DURATION: 30 Seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: JawsofWinter;
 
 SPELLNAME: Jump;
@@ -3372,6 +3599,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Jump;
 
 SPELLNAME: Knock;
@@ -3388,6 +3616,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Knock;
 
 SPELLNAME: Lesser Death Aura;
@@ -3404,6 +3633,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: LesserDeathAura;
 
 SPELLNAME: Lesser Globe of Invulnerability;
@@ -3420,6 +3650,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LesserGlobeofInvulnerability;
 
 SPELLNAME: Lesser Restoration;
@@ -3436,6 +3667,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LesserRestoration;
 
 SPELLNAME: Lesser Vigor;
@@ -3452,6 +3684,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: No;
 RESIST: tbd;
+RARE: 0;
 ICON: LesserVigor;
 
 SPELLNAME: Lesser Vigor, Mass;
@@ -3468,6 +3701,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: LesserVigorMass;
 
 SPELLNAME: Lightning Bolt;
@@ -3484,6 +3718,7 @@ DURATION: Instant;
 COOLDOWN: 3 Seconds;
 SAVING: 13 (Reflex);
 RESIST: No;
+RARE: 0;
 ICON: LightningBolt;
 
 SPELLNAME: Lightning Motes;
@@ -3500,6 +3735,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LightningMotes;
 
 SPELLNAME: Lightning Sphere;
@@ -3516,6 +3752,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LightningSphere;
 
 SPELLNAME: Lionheart;
@@ -3532,6 +3769,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Lionheart;
 
 SPELLNAME: Longstrider;
@@ -3548,6 +3786,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Longstrider;
 
 SPELLNAME: Longstrider, Mass;
@@ -3564,6 +3803,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LongstriderMass;
 
 SPELLNAME: Lucky Cape;
@@ -3580,6 +3820,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: LuckyCape;
 
 SPELLNAME: Mage Armor;
@@ -3596,6 +3837,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MageArmor;
 
 SPELLNAME: Magic Circle Against Evil;
@@ -3612,6 +3854,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MagicCircleAgainstEvil;
 
 SPELLNAME: Magic Fang;
@@ -3628,6 +3871,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: tbd;
 SAVING: No;
 RESIST: No;
+RARE: 0;
 ICON: MagicFang;
 
 SPELLNAME: Magic Missile;
@@ -3644,6 +3888,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MagicMissile;
 
 SPELLNAME: Mantle of the Icy Soul;
@@ -3660,6 +3905,7 @@ DURATION: 20 minutes;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: MantleoftheIcySoul;
 
 SPELLNAME: Mass Charm Monster;
@@ -3676,6 +3922,7 @@ DURATION: 60 seconds +6 seconds per caster level;
 COOLDOWN: 6 seconds;
 SAVING: Will save negates, new Will save every 3d6+12 seconds;
 RESIST: Yes;
+RARE: 0;
 ICON: MassCharmMonster;
 
 SPELLNAME: Mass Suggestion;
@@ -3692,6 +3939,7 @@ DURATION: 30 seconds + 2 seconds per caster level;
 COOLDOWN: 5 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: MassSuggestion;
 
 SPELLNAME: Master's Touch;
@@ -3708,6 +3956,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MastersTouch;
 
 SPELLNAME: Maul;
@@ -3724,6 +3973,7 @@ DURATION: tbd;
 COOLDOWN: 12 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Maul;
 
 SPELLNAME: Melf's Acid Arrow;
@@ -3740,6 +3990,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MelfsAcidArrow;
 
 SPELLNAME: Merfolk's Blessing;
@@ -3756,6 +4007,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MerfolksBlessing;
 
 SPELLNAME: Meteor Swarm;
@@ -3772,6 +4024,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: MeteorSwarm;
 
 SPELLNAME: Mind Fog;
@@ -3788,6 +4041,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: MindFog;
 
 SPELLNAME: Mordenkainen's Disjunction;
@@ -3804,6 +4058,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: MordenkainensDisjunction;
 
 SPELLNAME: Necrotic Ray;
@@ -3820,6 +4075,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: NecroticRay;
 
 SPELLNAME: Negative Energy Burst;
@@ -3836,6 +4092,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: NegativeEnergyBurst;
 
 SPELLNAME: Neutralize Poison;
@@ -3852,6 +4109,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: NeutralizePoison;
 
 SPELLNAME: Niac's Biting Cold;
@@ -3868,6 +4126,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: NiacsBitingCold;
 
 SPELLNAME: Niac's Cold Ray;
@@ -3884,6 +4143,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: NiacsColdRay;
 
 SPELLNAME: Nightshield;
@@ -3900,6 +4160,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: Nightshield;
 
 SPELLNAME: Nimbus of Light;
@@ -3916,6 +4177,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: NimbusofLight;
 
 SPELLNAME: Obscuring Mist;
@@ -3932,6 +4194,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: ObscuringMist;
 
 SPELLNAME: Ooze Puppet;
@@ -3948,6 +4211,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: OozePuppet;
 
 SPELLNAME: Order's Wrath;
@@ -3964,6 +4228,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: OrdersWrath;
 
 SPELLNAME: Otiluke's Freezing Sphere;
@@ -3980,6 +4245,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: OtilukesFreezingSphere;
 
 SPELLNAME: Otto's Irresistible Dance;
@@ -3996,6 +4262,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: OttosIrresistibleDance;
 
 SPELLNAME: Otto's Resistible Dance;
@@ -4012,6 +4279,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: OttosResistibleDance;
 
 SPELLNAME: Otto's Sphere of Dancing;
@@ -4028,6 +4296,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: OttosSphereofDancing;
 
 SPELLNAME: Owl's Wisdom;
@@ -4044,6 +4313,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: OwlsWisdom;
 
 SPELLNAME: Owl's Wisdom, Mass;
@@ -4060,7 +4330,8 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
-ICON: OwlsWisdomMass;
+RARE: 0;
+ICON: OwlsWisdomMass
 
 SPELLNAME: Pack Aptitude;
 DESCRIPTION: Forms a link between a leader and his or her pack, granting all of the target's hirelings, pets, summoned creatures, and charmed creatures a circumstance bonus to an ability score. It grants a +2 bonus per 3 caster levels, with a maximum of +6. The caster chooses which ability score to increase. Only one may be active at a time. ;
@@ -4076,6 +4347,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: PackAptitude;
 
 SPELLNAME: Pack Presence;
@@ -4092,6 +4364,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: PackPresence;
 
 SPELLNAME: Panacea;
@@ -4108,6 +4381,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3.5 seconds;
 SAVING: Will save for half damage;
 RESIST: Yes;
+RARE: 1;
 ICON: Panacea;
 
 SPELLNAME: Pass Without Trace;
@@ -4124,6 +4398,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: ;
 RESIST: No;
+RARE: 0;
 ICON: PassWithoutTrace;
 
 SPELLNAME: Personal Augmentation: Insightful Damage;
@@ -4140,6 +4415,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: PersonalAugmentationInsightfulDamage;
 
 SPELLNAME: Personal Augmentation: Insightful Strikes;
@@ -4156,6 +4432,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 0;
 ICON: PersonalAugmentationInsightfulStrikes;
 
 SPELLNAME: Phantasmal Killer;
@@ -4172,7 +4449,8 @@ DURATION: Instantaneous;
 COOLDOWN: 8 seconds;
 SAVING: Will save negates of Fortitude save takes partial damage;
 RESIST: Yes;
-ICON: PhantasmalKiller;
+RARE: 0;
+ICON: PhantasmalKiller
 
 SPELLNAME: Planar Weapons;
 DESCRIPTION: Your target's currently equipped weapons gain the ability to bypass alignment based damage reduction.  An item can have only one temporary item enchantment at a time.;
@@ -4188,6 +4466,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: PlanarWeapons;
 
 SPELLNAME: Poison;
@@ -4204,6 +4483,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3.5 seconds;
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: Poison;
 
 SPELLNAME: Polar Ray;
@@ -4220,6 +4500,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5.5 seconds (wiz), 3.25 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: PolarRay;
 
 SPELLNAME: Positive Energy Infusion;
@@ -4236,6 +4517,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: ;
 RESIST: ;
+RARE: 1;
 ICON: PositiveEnergyInfusion;
 
 SPELLNAME: Power Word: Blind;
@@ -4252,6 +4534,7 @@ DURATION: Varies;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: PowerWordBlind;
 
 SPELLNAME: Power Word: Kill;
@@ -4268,6 +4551,7 @@ DURATION: Instantaneous;
 COOLDOWN: 210 seconds (wiz), 180 seconds (sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 1;
 ICON: PowerWordKill;
 
 SPELLNAME: Power Word: Stun;
@@ -4284,6 +4568,7 @@ DURATION: Varies;
 COOLDOWN: 40 seconds (wiz), 30 seconds (sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 1;
 ICON: PowerWordStun;
 
 SPELLNAME: Prayer;
@@ -4300,6 +4585,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Prayer;
 
 SPELLNAME: Prismatic Ray;
@@ -4314,8 +4600,9 @@ RANGE: Double;
 TARGET: Foe, Directional, Breakable;
 DURATION: Instantaneous;
 COOLDOWN: 4 seconds (wiz), 2.5 seconds (sor);
-SAVING: Reflex save takes half damage; Fortitude save negates Death and Stone effects; Will save negates Fear and Death;
+SAVING: Reflex save takes half damage. Fortitude save negates Death and Stone effects. Will save negates Fear and Death;
 RESIST: No;
+RARE: 0;
 ICON: PrismaticRay;
 
 SPELLNAME: Prismatic Spray;
@@ -4330,8 +4617,9 @@ RANGE: ;
 TARGET: Foe, Directional, Breakable;
 DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
-SAVING: Reflex save takes half damage; Fortitude save negates Death and Stone effects; Will save negates Fear and Death;
+SAVING: Reflex save takes half damage, Fortitude save negates Death and Stone effects, Will save negates Fear and Death;
 RESIST: No;
+RARE: 0;
 ICON: PrismaticSpray;
 
 SPELLNAME: Prismatic Strike;
@@ -4348,6 +4636,7 @@ DURATION: 10 to 22 seconds;
 COOLDOWN: 4 seconds;
 SAVING: Fortitude, Reflex, Will;
 RESIST: No;
+RARE: 1;
 ICON: PrismaticStrike;
 
 SPELLNAME: Produce Flame;
@@ -4364,6 +4653,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: ProduceFlame;
 
 SPELLNAME: Protection from Elements;
@@ -4380,6 +4670,7 @@ DURATION: 1 minute per caster level or until discharged;
 COOLDOWN: 4 seconds (All except Sor), 2.5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ProtectionfromElements;
 
 SPELLNAME: Protection from Elements, Mass;
@@ -4396,6 +4687,7 @@ DURATION: 1 minute per caster level or until discharged;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: ProtectionfromElementsMass;
 
 SPELLNAME: Protection from Energy;
@@ -4412,6 +4704,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds (All except Sor), 2 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ProtectionfromEnergy;
 
 SPELLNAME: Protection from Evil;
@@ -4428,6 +4721,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds (all except sor), 1.5 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ProtectionfromEvil;
 
 SPELLNAME: Quench;
@@ -4444,6 +4738,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Fortitude;
 RESIST: Yes;
+RARE: 0;
 ICON: Quench;
 
 SPELLNAME: Radiant Forcefield;
@@ -4460,6 +4755,7 @@ DURATION: 22 seconds;
 COOLDOWN: 3 minutes;
 SAVING: ;
 RESIST: No;
+RARE: 1;
 ICON: RadiantForcefield;
 
 SPELLNAME: Rage;
@@ -4476,6 +4772,7 @@ DURATION: 1 minute + 6 seconds per caster level;
 COOLDOWN: 3 seconds (wiz/brd), 2 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Rage;
 
 SPELLNAME: Raise Dead;
@@ -4492,6 +4789,7 @@ DURATION: instantaneous;
 COOLDOWN: 9 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RaiseDead;
 
 SPELLNAME: Ram's Might;
@@ -4508,6 +4806,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RamsMight;
 
 SPELLNAME: Ray of Enfeeblement;
@@ -4524,6 +4823,7 @@ DURATION: 24 seconds + 6 seconds per caster level;
 COOLDOWN: 3 seconds (wiz), 2 seconds (sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: RayofEnfeeblement;
 
 SPELLNAME: Ray of Exhaustion;
@@ -4540,6 +4840,7 @@ DURATION: 60 seconds + 6 seconds per caster level;
 COOLDOWN: 3 seconds (wiz), 2 seconds (sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: RayofExhaustion;
 
 SPELLNAME: Recitation;
@@ -4556,6 +4857,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Recitation;
 
 SPELLNAME: Reconstruct;
@@ -4572,6 +4874,7 @@ DURATION: ;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Reconstruct;
 
 SPELLNAME: Regenerate;
@@ -4588,6 +4891,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: Regenerate;
 
 SPELLNAME: Regenerate, Mass;
@@ -4604,6 +4908,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: RegenerateMass;
 
 SPELLNAME: Reincarnate;
@@ -4620,6 +4925,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Reincarnate;
 
 SPELLNAME: Reinforce Construct;
@@ -4636,6 +4942,7 @@ DURATION: ;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ReinforceConstruct;
 
 SPELLNAME: Relentless Onslaught;
@@ -4652,6 +4959,7 @@ DURATION: 30 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: RelentlessOnslaught;
 
 SPELLNAME: Remove Blindness;
@@ -4668,6 +4976,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: RemoveBlindness;
 
 SPELLNAME: Remove Curse;
@@ -4684,6 +4993,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (sor), 3 seconds (others);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RemoveCurse;
 
 SPELLNAME: Remove Disease;
@@ -4700,6 +5010,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RemoveDisease;
 
 SPELLNAME: Remove Fear;
@@ -4716,6 +5027,7 @@ DURATION: 10 minutes;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RemoveFear;
 
 SPELLNAME: Remove Paralysis;
@@ -4732,6 +5044,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RemoveParalysis;
 
 SPELLNAME: Repair Critical Damage;
@@ -4748,6 +5061,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairCriticalDamage;
 
 SPELLNAME: Repair Critical Damage, Mass;
@@ -4764,6 +5078,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: RepairCriticalDamageMass;
 
 SPELLNAME: Repair Light Damage;
@@ -4780,6 +5095,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds (Art/Wiz), 1.5 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairLightDamage;
 
 SPELLNAME: Repair Light Damage, Mass;
@@ -4796,6 +5112,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairLightDamageMass;
 
 SPELLNAME: Repair Moderate Damage;
@@ -4812,6 +5129,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2.5 seconds (Art/Wiz), 1.75 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairModerateDamage;
 
 SPELLNAME: Repair Moderate Damage, Mass;
@@ -4828,6 +5146,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairModerateDamageMass;
 
 SPELLNAME: Repair Serious Damage;
@@ -4844,6 +5163,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RepairSeriousDamage;
 
 SPELLNAME: Repair Serious Damage, Mass;
@@ -4860,6 +5180,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: RepairSeriousDamageMass;
 
 SPELLNAME: Resist Energy;
@@ -4876,6 +5197,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2.5 seconds (all but Sor), 1.75 seconds (Sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ResistEnergy;
 
 SPELLNAME: Resistance;
@@ -4892,6 +5214,7 @@ DURATION: 1 minute;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: Resistance;
 
 SPELLNAME: Restoration;
@@ -4908,6 +5231,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Restoration;
 
 SPELLNAME: Restoration, Mass;
@@ -4924,6 +5248,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: RestorationMass;
 
 SPELLNAME: Resurrection;
@@ -4940,6 +5265,7 @@ DURATION: Instantaneous;
 COOLDOWN: 11 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Resurrection;
 
 SPELLNAME: Rising Fury;
@@ -4956,6 +5282,7 @@ DURATION: tbd;
 COOLDOWN: 2 minutes;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: RisingFury;
 
 SPELLNAME: Roar;
@@ -4972,6 +5299,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Roar;
 
 SPELLNAME: Salt Ray;
@@ -4988,6 +5316,7 @@ DURATION: tbd;
 COOLDOWN: 2 seconds;
 SAVING: Fortitude;
 RESIST: No;
+RARE: 0;
 ICON: SaltRay;
 
 SPELLNAME: Scare;
@@ -5004,6 +5333,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: Will save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: Scare;
 
 SPELLNAME: Scorch;
@@ -5020,6 +5350,7 @@ DURATION: Instant;
 COOLDOWN: 3 seconds (wiz), 2 seconds (sor);
 SAVING: Reflex save partial;
 RESIST: No;
+RARE: 0;
 ICON: Scorch;
 
 SPELLNAME: Scorching Ray;
@@ -5036,6 +5367,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ScorchingRay;
 
 SPELLNAME: Searing Light;
@@ -5052,6 +5384,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SearingLight;
 
 SPELLNAME: See Invisibility;
@@ -5068,6 +5401,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SeeInvisibility;
 
 SPELLNAME: Seek Eternal Rest;
@@ -5084,6 +5418,7 @@ DURATION: ;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: SeekEternalRest;
 
 SPELLNAME: Shadow Walk;
@@ -5100,6 +5435,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ShadowWalk;
 
 SPELLNAME: Shield;
@@ -5116,6 +5452,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds (wiz), 1.5 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Shield;
 
 SPELLNAME: Shield of Faith;
@@ -5132,6 +5469,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: ;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ShieldofFaith;
 
 SPELLNAME: Shield of Faith, Mass;
@@ -5148,6 +5486,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ShieldofFaithMass;
 
 SPELLNAME: Shillelagh;
@@ -5164,6 +5503,7 @@ DURATION: 1 minute per level;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Shillelagh;
 
 SPELLNAME: Shocking Grasp;
@@ -5180,6 +5520,7 @@ DURATION: Instantaneous;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ShockingGrasp;
 
 SPELLNAME: Shout;
@@ -5196,6 +5537,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Fortitude save halves;
 RESIST: No;
+RARE: 0;
 ICON: Shout;
 
 SPELLNAME: Shred;
@@ -5212,6 +5554,7 @@ DURATION: tbd;
 COOLDOWN: 6 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Shred;
 
 SPELLNAME: Silence Creature;
@@ -5228,6 +5571,7 @@ DURATION: 6 seconds +1 second per caster level;
 COOLDOWN: 30 seconds;
 SAVING: Will save negates. New save every 2 seconds;
 RESIST: No;
+RARE: 0;
 ICON: SilenceCreature;
 
 SPELLNAME: Silver Weapons;
@@ -5244,6 +5588,7 @@ DURATION: 5 minutes;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: Yes;
+RARE: 1;
 ICON: SilverWeapons;
 
 SPELLNAME: Slay Living;
@@ -5260,6 +5605,7 @@ DURATION: Instantaneous;
 COOLDOWN: 8 seconds;
 SAVING: Fortitude save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: SlayLiving;
 
 SPELLNAME: Sleep;
@@ -5276,6 +5622,7 @@ DURATION: 20 seconds + 2 seconds per caster level;
 COOLDOWN: 2 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Sleep;
 
 SPELLNAME: Sleet Storm;
@@ -5292,6 +5639,7 @@ DURATION: ;
 COOLDOWN: 7 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SleetStorm;
 
 SPELLNAME: Slow;
@@ -5308,6 +5656,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Slow;
 
 SPELLNAME: Snare;
@@ -5324,6 +5673,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: Strength check every 2 seconds to escape;
 RESIST: No;
+RARE: 0;
 ICON: Snare;
 
 SPELLNAME: Snowball Swarm;
@@ -5340,6 +5690,7 @@ DURATION: ;
 COOLDOWN: 3 seconds;
 SAVING: Reflex save halves;
 RESIST: No;
+RARE: 0;
 ICON: SnowballSwarm;
 
 SPELLNAME: Snowslide;
@@ -5356,6 +5707,7 @@ DURATION: 30 seconds;
 COOLDOWN: 15 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Snowslide;
 
 SPELLNAME: Solid Fog;
@@ -5372,6 +5724,7 @@ DURATION: 40 seconds + 2 seconds every 2 caster levels;
 COOLDOWN: 8 seconds (wiz), 5 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: SolidFog;
 
 SPELLNAME: Sonic Blast;
@@ -5388,6 +5741,7 @@ DURATION: Instant for the damage, 2 to 6 seconds for the daze;
 COOLDOWN: 1 second (sor), 2 seconds (wiz/brd);
 SAVING: Will save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: SonicBlast;
 
 SPELLNAME: Soundburst;
@@ -5404,6 +5758,7 @@ DURATION: Instantaneous;
 COOLDOWN: 3 seconds;
 SAVING: Fortitude save partial;
 RESIST: Yes;
+RARE: 0;
 ICON: Soundburst;
 
 SPELLNAME: Spawn Screen;
@@ -5420,6 +5775,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SpawnScreen;
 
 SPELLNAME: Spell Resistance;
@@ -5436,6 +5792,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SpellResistance;
 
 SPELLNAME: Spell Resistance, Mass;
@@ -5452,6 +5809,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SpellResistanceMass;
 
 SPELLNAME: Spiderskin;
@@ -5468,6 +5826,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Spiderskin;
 
 SPELLNAME: Spike Growth;
@@ -5484,6 +5843,7 @@ DURATION: ;
 COOLDOWN: 6 seconds;
 SAVING: Reflex save partial;
 RESIST: No;
+RARE: 0;
 ICON: SpikeGrowth;
 
 SPELLNAME: Splinterbolt;
@@ -5500,6 +5860,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Splinterbolt;
 
 SPELLNAME: Stalwart Pact;
@@ -5516,6 +5877,7 @@ DURATION: Permanent until triggered;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: StalwartPact;
 
 SPELLNAME: Static Shock;
@@ -5532,6 +5894,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: Reflex and Will saves partial;
 RESIST: No;
+RARE: 0;
 ICON: StaticShock;
 
 SPELLNAME: Stinking Cloud;
@@ -5548,6 +5911,7 @@ DURATION: ;
 COOLDOWN: 7 seconds;
 SAVING: Fortitude save partial;
 RESIST: No;
+RARE: 0;
 ICON: StinkingCloud;
 
 SPELLNAME: Stone to Flesh;
@@ -5564,6 +5928,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4.5 seconds (wiz), 2.75 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: StonetoFlesh;
 
 SPELLNAME: Stoneskin;
@@ -5580,6 +5945,7 @@ DURATION: 1 minute per caster level or until discharged;
 COOLDOWN: 3.5 seconds (wiz/art), 2.25 seconds (sor);
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Stoneskin;
 
 SPELLNAME: Storm of Vengeance;
@@ -5596,6 +5962,7 @@ DURATION: 1 minute;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: StormofVengeance;
 
 SPELLNAME: Suggestion;
@@ -5612,6 +5979,7 @@ DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: Suggestion;
 
 SPELLNAME: Summon Monster I;
@@ -5628,6 +5996,7 @@ DURATION: 10 minutes;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterI;
 
 SPELLNAME: Summon Monster II;
@@ -5644,6 +6013,7 @@ DURATION: 10 minutes;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterII;
 
 SPELLNAME: Summon Monster III;
@@ -5660,6 +6030,7 @@ DURATION: 10 minutes;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterIII;
 
 SPELLNAME: Summon Monster IV;
@@ -5676,6 +6047,7 @@ DURATION: 10 minutes;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterIV;
 
 SPELLNAME: Summon Monster IX;
@@ -5692,6 +6064,7 @@ DURATION: 10 minutes;
 COOLDOWN: 10 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: SummonMonsterIX;
 
 SPELLNAME: Summon Monster V;
@@ -5708,6 +6081,7 @@ DURATION: 10 minutes;
 COOLDOWN: 8 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterV;
 
 SPELLNAME: Summon Monster VI;
@@ -5724,6 +6098,7 @@ DURATION: 10 minutes;
 COOLDOWN: 8 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterVI;
 
 SPELLNAME: Summon Monster VII;
@@ -5740,6 +6115,7 @@ DURATION: 10 minutes;
 COOLDOWN: 8 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonMonsterVII;
 
 SPELLNAME: Summon Monster VIII;
@@ -5756,6 +6132,7 @@ DURATION: 10 minutes;
 COOLDOWN: 8 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: SummonMonsterVIII;
 
 SPELLNAME: Summon Nature's Ally I;
@@ -5772,6 +6149,7 @@ DURATION: 10 minutes;
 COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyI;
 
 SPELLNAME: Summon Nature's Ally II;
@@ -5788,6 +6166,7 @@ DURATION: 10 minutes;
 COOLDOWN: 8 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyII;
 
 SPELLNAME: Summon Nature's Ally III;
@@ -5804,6 +6183,7 @@ DURATION: 10 minutes;
 COOLDOWN: 10 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyIII;
 
 SPELLNAME: Summon Nature's Ally IV;
@@ -5820,6 +6200,7 @@ DURATION: 10 minutes;
 COOLDOWN: 12 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyIV;
 
 SPELLNAME: Summon Nature's Ally IX;
@@ -5836,6 +6217,7 @@ DURATION: 10 minutes;
 COOLDOWN: 22 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyIX;
 
 SPELLNAME: Summon Nature's Ally V;
@@ -5852,6 +6234,7 @@ DURATION: 10 minutes;
 COOLDOWN: 14 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyV;
 
 SPELLNAME: Summon Nature's Ally VI;
@@ -5868,6 +6251,7 @@ DURATION: 10 minutes;
 COOLDOWN: 16 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyVI;
 
 SPELLNAME: Summon Nature's Ally VII;
@@ -5884,6 +6268,7 @@ DURATION: 10 minutes;
 COOLDOWN: 18 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyVII;
 
 SPELLNAME: Summon Nature's Ally VIII;
@@ -5900,6 +6285,7 @@ DURATION: 10 minutes;
 COOLDOWN: 20 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: SummonNaturesAllyVIII;
 
 SPELLNAME: Sunbeam;
@@ -5916,6 +6302,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: Yes;
+RARE: 0;
 ICON: Sunbeam;
 
 SPELLNAME: Sunburst;
@@ -5932,6 +6319,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds;
 SAVING: Reflex save takes half damage and negates blind;
 RESIST: No;
+RARE: 1;
 ICON: Sunburst;
 
 SPELLNAME: Symbol of Death;
@@ -5948,6 +6336,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 80 seconds;
 SAVING: ;
 RESIST: Yes;
+RARE: 1;
 ICON: SymbolofDeath;
 
 SPELLNAME: Symbol of Fear;
@@ -5964,6 +6353,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 90 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: SymbolofFear;
 
 SPELLNAME: Symbol of Flame;
@@ -5980,6 +6370,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 60 seconds;
 SAVING: Reflex save takes half damage;
 RESIST: No;
+RARE: 1;
 ICON: SymbolofFlame;
 
 SPELLNAME: Symbol of Pain;
@@ -5996,6 +6387,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 75 seconds;
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: SymbolofPain;
 
 SPELLNAME: Symbol of Persuasion;
@@ -6012,6 +6404,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 90 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: SymbolofPersuasion;
 
 SPELLNAME: Symbol of Stunning;
@@ -6028,6 +6421,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 105 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: SymbolofStunning;
 
 SPELLNAME: Symbol of Weakness;
@@ -6044,6 +6438,7 @@ DURATION: 20 seconds after being triggered, or 5 minutes otherwise;
 COOLDOWN: 40 seconds(wiz/clr), 30 seconds (sor);
 SAVING: Fortitude save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: SymbolofWeakness;
 
 SPELLNAME: Tactical Detonation;
@@ -6060,6 +6455,7 @@ DURATION: Instantaneous, Then several seconds for the knockdown;
 COOLDOWN: ;
 SAVING: Reflex save halves fire damage and negates knockdown;
 RESIST: No;
+RARE: 1;
 ICON: TacticalDetonation;
 
 SPELLNAME: Takedown;
@@ -6076,6 +6472,7 @@ DURATION: tbd;
 COOLDOWN: 6 seconds;
 SAVING: ;
 RESIST: No;
+RARE: 0;
 ICON: Takedown;
 
 SPELLNAME: Teleport;
@@ -6092,6 +6489,7 @@ DURATION: Instantaneous;
 COOLDOWN: 10 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Teleport;
 
 SPELLNAME: Tenacious Pack;
@@ -6108,6 +6506,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: TenaciousPack;
 
 SPELLNAME: Tenser's Transformation;
@@ -6124,6 +6523,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: no;
+RARE: 0;
 ICON: TensersTransformation;
 
 SPELLNAME: Thundering Armor;
@@ -6140,6 +6540,7 @@ DURATION: 5 minutes;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: ThunderingArmor;
 
 SPELLNAME: Touch of Idiocy;
@@ -6156,6 +6557,7 @@ DURATION: 5 minutes;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: TouchofIdiocy;
 
 SPELLNAME: Toughen Construct;
@@ -6172,6 +6574,7 @@ DURATION: 5 minutes;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: ToughenConstruct;
 
 SPELLNAME: Trap the Soul;
@@ -6188,6 +6591,7 @@ DURATION: Instantaneous;
 COOLDOWN: 6 seconds (wiz), 3.5 seconds (sor);
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 1;
 ICON: TraptheSoul;
 
 SPELLNAME: Tremor;
@@ -6204,6 +6608,7 @@ DURATION: tbd;
 COOLDOWN: 20 seconds;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Tremor;
 
 SPELLNAME: True Resurrection;
@@ -6220,6 +6625,7 @@ DURATION: Instantaneous;
 COOLDOWN: 13 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: TrueResurrection;
 
 SPELLNAME: True Seeing;
@@ -6236,6 +6642,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: TrueSeeing;
 
 SPELLNAME: Tumble;
@@ -6252,7 +6659,8 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 2 seconds (wiz), 1.5 seconds (sor);
 SAVING: None;
 RESIST: No;
-ICON: Tumble;
+RARE: 0;
+ICON: Tumble
 
 SPELLNAME: Undeath to Death;
 DESCRIPTION: Destroys undead creatures in the area. A successful Will save negates this effect.;
@@ -6268,6 +6676,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: Will save negates;
 RESIST: Yes;
+RARE: 0;
 ICON: UndeathtoDeath;
 
 SPELLNAME: Unholy Blight;
@@ -6284,6 +6693,7 @@ DURATION: Instantaneous;
 COOLDOWN: 4 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 1;
 ICON: UnholyBlight;
 
 SPELLNAME: Unstoppable;
@@ -6300,6 +6710,7 @@ DURATION: 15 seconds;
 COOLDOWN: 5 minutes;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Unstoppable;
 
 SPELLNAME: Vigor;
@@ -6316,6 +6727,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: Vigor;
 
 SPELLNAME: Vigor, Mass;
@@ -6332,6 +6744,7 @@ DURATION: 10 seconds;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: No;
+RARE: 0;
 ICON: VigorMass;
 
 SPELLNAME: Virtue;
@@ -6348,6 +6761,7 @@ DURATION: 1 minute per caster level or until discharged;
 COOLDOWN: 2 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Virtue;
 
 SPELLNAME: Wail of the Banshee;
@@ -6364,6 +6778,7 @@ DURATION: Instantaneous;
 COOLDOWN: 30 seconds (wiz), 25 seconds (sor);
 SAVING: Fortitude save partial;
 RESIST: Yes;
+RARE: 1;
 ICON: WailoftheBanshee;
 
 SPELLNAME: Wall of Fire;
@@ -6380,6 +6795,7 @@ DURATION: 30 seconds;
 COOLDOWN: 4 seconds;
 SAVING: Reflex on first tick;
 RESIST: No;
+RARE: 1;
 ICON: WallofFire;
 
 SPELLNAME: Water Breathing;
@@ -6396,6 +6812,7 @@ DURATION: 90 seconds;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: WaterBreathing;
 
 SPELLNAME: Waves of Exhaustion;
@@ -6412,6 +6829,7 @@ DURATION: 120 seconds + 6 seconds per caster level;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: WavesofExhaustion;
 
 SPELLNAME: Waves of Fatigue;
@@ -6428,6 +6846,7 @@ DURATION: 60 seconds + 6 seconds per caster level;
 COOLDOWN: 4 seconds (Wiz), 2.5 seconds (Sor);
 SAVING: None;
 RESIST: Yes;
+RARE: 0;
 ICON: WavesofFatigue;
 
 SPELLNAME: Web;
@@ -6444,6 +6863,7 @@ DURATION: 30 seconds;
 COOLDOWN: 6 seconds (Wiz), 4 seconds (Sor);
 SAVING: Reflex save negates, Strength check every 2 seconds to escape;
 RESIST: No;
+RARE: 0;
 ICON: Web;
 
 SPELLNAME: Wild Instincts;
@@ -6460,6 +6880,7 @@ DURATION: 1 minute per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: WildInstincts;
 
 SPELLNAME: Word of Balance;
@@ -6476,6 +6897,7 @@ DURATION: tbd;
 COOLDOWN: tbd;
 SAVING: tbd;
 RESIST: Yes;
+RARE: 0;
 ICON: WordofBalance;
 
 SPELLNAME: Word of Recall;
@@ -6492,6 +6914,7 @@ DURATION: Instantaneous;
 COOLDOWN: 5 seconds;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: WordofRecall;
 
 SPELLNAME: Zeal;
@@ -6508,4 +6931,5 @@ DURATION: 24 seconds + 6 seconds per caster level;
 COOLDOWN: 1 second;
 SAVING: None;
 RESIST: No;
+RARE: 0;
 ICON: Zeal;

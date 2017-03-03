@@ -999,7 +999,7 @@ FILESTATE DataClass::LoadEnhancementFile()
 //---------------------------------------------------------------------------
 FILESTATE DataClass::LoadSpellFile()
     {
-    #define NUMKEYWORDS 15
+    #define NUMKEYWORDS 16
     char FileName[MAX_PATH];
     HANDLE FileHandle;
     char *FileData;
@@ -1051,7 +1051,8 @@ FILESTATE DataClass::LoadSpellFile()
 	StringCbCopy(KeywordString[11], 256, "RANGE: ");
 	StringCbCopy(KeywordString[12], 256, "SAVING: ");
 	StringCbCopy(KeywordString[13], 256, "RESIST: ");
-	StringCbCopy(KeywordString[14], 256, "ICON: ");
+	StringCbCopy(KeywordString[14], 256, "RARE: ");
+	StringCbCopy(KeywordString[15], 256, "ICON: ");
     for (unsigned int i=0; i<NUMKEYWORDS; i++)
         TempPointer[i] = strstr(FileData, KeywordString[i]);
     while (true)
@@ -1193,7 +1194,12 @@ FILESTATE DataClass::LoadSpellFile()
 				Spell[Index].Resist = Data;
                 break;
 				}
-            case 14:     //the graphic icon
+			case 14:     //spell resist
+			{
+				Spell[Index].Rare = static_cast<bool>(Data);
+				break;
+			}
+            case 15:     //the graphic icon
                 {
                 Spell[Index].GraphicIconIndex = InterfaceManager.LoadIcon(SPELLICON, Data);
                 break;

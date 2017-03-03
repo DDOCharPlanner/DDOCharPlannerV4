@@ -78,6 +78,7 @@ struct SpellStruct
 	string Range;
 	string Save;
 	string Resist;
+	bool	Rare;
     unsigned int GraphicIconIndex;
     };
 
