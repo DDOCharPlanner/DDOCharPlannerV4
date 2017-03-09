@@ -290,6 +290,7 @@ void Data_Enhancement_Tree_Class::InitHash()
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Warforged",ENHT_WARFORGED));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Gnome", ENHT_GNOME));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Deep Gnome", ENHT_DEEPGNOME));
+		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Dragonborn", ENHT_DRAGONBORN));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Air Savant (Sor)", ENHT_AIR_SAVANT_SOR));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Angel of Vengeance (Fvs)",ENHT_ANGEL_OF_VENGEANCE_FVS));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Arcane Archer (Elf)",ENHT_ARCANE_ARCHER_ELF));

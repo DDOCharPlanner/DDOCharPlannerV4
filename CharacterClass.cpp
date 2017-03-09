@@ -141,6 +141,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Gnome";
 			case DEEPGNOME:
 				return "Deep-Gnome";
+			case DRAGONBORN:
+				return "Dragonborn";
 			}
 		}
 	else
@@ -175,6 +177,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Gnome";
 			case DEEPGNOME:
 				return "Deep-Gnome";
+			case DRAGONBORN:
+				return "Dragonborn";
 			}
 		}
 	return "";
@@ -1546,6 +1550,13 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 		Result[Index] = FEATHUMANBONUS;
         Index++;
 	    }
+
+	//Dragonborn bonus feat
+	if (CurrentSelectedLevel == 1 && (Race == DRAGONBORN))
+	{
+		Result[Index] = FEATDRAGONBORNBONUS;
+		Index++;
+	}
 
 	//Half-Elf bonus feat
 	if (CurrentSelectedLevel == 1 && Race == HALFELF)

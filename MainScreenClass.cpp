@@ -3110,6 +3110,11 @@ void MainScreenClass::FillFeatSelectBox()
 					if (F1 == FEATLEGENDARY || F2 == FEATLEGENDARY || F3 == FEATLEGENDARY)
 						FeatVector.push_back(FeatIndex);
 				}
+				if (Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
+				{
+					if (F1 == FEATDRAGONBORNBONUS || F2 == FEATDRAGONBORNBONUS || F3 == FEATDRAGONBORNBONUS)
+						FeatVector.push_back(FeatIndex);
+				}
 			    else
 					FeatVector.push_back(FeatIndex);
 				}
@@ -3970,6 +3975,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleGnomeOff", "Races", &FemaleGnomeOff);
 	LoadBitmap("MaleDeepGnomeOff", "Races", &MaleDeepGnomeOff);
 	LoadBitmap("FemaleDeepGnomeOff", "Races", &FemaleDeepGnomeOff);
+	LoadBitmap("MaleDragonbornOff", "Races", &MaleDragonbornOff);
+	LoadBitmap("FemaleDragonbornOff", "Races", &FemaleDragonbornOff);
 
     LoadBitmap("MaleHumanOn", "Races", &MaleHumanOn);
     LoadBitmap("FemaleHumanOn", "Races", &FemaleHumanOn);
@@ -3999,6 +4006,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleGnomeOn", "Races", &FemaleGnomeOn);
 	LoadBitmap("MaleDeepGnomeOn", "Races", &MaleDeepGnomeOn);
 	LoadBitmap("FemaleDeepGnomeOn", "Races", &FemaleDeepGnomeOn);
+	LoadBitmap("MaleDragonbornOn", "Races", &MaleDragonbornOn);
+	LoadBitmap("FemaleDragonbornOn", "Races", &FemaleDragonbornOn);
 
 	//male/female buttons
 	LoadBitmap("MaleOn", "Races", &MaleOn);
@@ -4160,6 +4169,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleDeepGnomeOff.Mask);
 	DeleteObject(FemaleDeepGnomeOff.Graphic);
 	DeleteObject(FemaleDeepGnomeOff.Mask);
+	DeleteObject(MaleDragonbornOff.Graphic);
+	DeleteObject(MaleDragonbornOff.Mask);
+	DeleteObject(FemaleDragonbornOff.Graphic);
+	DeleteObject(FemaleDragonbornOff.Mask);
 
     DeleteObject(MaleHumanOn.Graphic);
     DeleteObject(MaleHumanOn.Mask);
@@ -4217,6 +4230,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleDeepGnomeOn.Mask);
 	DeleteObject(FemaleDeepGnomeOn.Graphic);
 	DeleteObject(FemaleDeepGnomeOn.Mask);
+	DeleteObject(MaleDragonbornOn.Graphic);
+	DeleteObject(MaleDragonbornOn.Mask);
+	DeleteObject(FemaleDragonbornOn.Graphic);
+	DeleteObject(FemaleDragonbornOn.Mask);
 
     DeleteObject(MaleOn.Graphic);
     DeleteObject(MaleOn.Mask);
@@ -4738,6 +4755,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						DrawGraphic(hdc, &MaleGnomeOff, X, Y, Width, Height);
 					}
+					if (CurrentRace == DRAGONBORN)
+					{
+						Graphic = UIManager->GetGraphicData("MaleDragonbornOn", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleDragonbornOn, X, Y, Width, Height);
+					}
+					else
+					{
+						Graphic = UIManager->GetGraphicData("MaleDragonbornOff", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleDragonbornOff, X, Y, Width, Height);
+					}
 				}
 				else
 				{
@@ -4833,6 +4868,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						DrawGraphic(hdc, &MaleDeepGnomeOff, X, Y, Width, Height);
 					}
+
 				}
 				Graphic = UIManager->GetGraphicData("MaleOn", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
@@ -5012,6 +5048,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 							DrawGraphic(hdc, &FemaleGnomeOff, X, Y, Width, Height);
+						}
+						if (CurrentRace == DRAGONBORN)
+						{
+							Graphic = UIManager->GetGraphicData("FemaleDragonbornOn", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleDragonbornOn, X, Y, Width, Height);
+						}
+						else
+						{
+							Graphic = UIManager->GetGraphicData("FemaleDragonbornOff", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleDragonbornOff, X, Y, Width, Height);
 						}
 					}
 					else
@@ -5801,7 +5855,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				if (FeatSlot[i] == FEATFIGHTERBONUS || FeatSlot[i] == FEATWIZARDBONUS || FeatSlot[i] == FEATARTIFICERBONUS || FeatSlot[i] == FEATROGUEBONUS || FeatSlot[i] == FEATMONKBONUS ||
 					FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATRANGERFAVOREDENEMY || FeatSlot[i] == FEATMONKPATH || FeatSlot[i] == FEATDRUIDWILDSHAPE || FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY)
 					OldColor = SetTextColor(hdc, RGB(230, 230, 30));
-				if (FeatSlot[i] == FEATHALFELFBONUS)
+				if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS)
 					OldColor = SetTextColor(hdc, RGB(255, 0, 155));
 				if (FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATWARLOCKPACT)
 					OldColor = SetTextColor(hdc, RGB(100, 255, 0));
@@ -5877,6 +5931,19 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					X = static_cast<int>(X + 4); // CDE: Keep second word aligned below
 					Y = static_cast<int>(FrameBottom - 20);
 					OutputString = "Path";
+					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+				}
+				if (FeatSlot[i] == FEATDRAGONBORNBONUS)
+				{
+					Graphic = UIManager->GetGraphicData("FeatTextDragonborn", MAINWINDOW);
+					X = static_cast<int>((Graphic->BaseLocationX + 100.0*i / DEFAULTWIDTH)*ScreenSize.cx);
+					Y = static_cast<int>(FrameBottom - 35);
+					OutputString = "Dragonborn";
+					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+					Graphic = UIManager->GetGraphicData("FeatTextBonusFeat", MAINWINDOW);
+					X = static_cast<int>(X-5); // CDE: Keep second word aligned below
+					Y = static_cast<int>(FrameBottom - 20);
+					OutputString = "Bonus Feat";
 					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 				}
 				if (FeatSlot[i] == FEATHALFELFBONUS)
@@ -6559,6 +6626,13 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
 					Character.SetRace(HALFORC);
+				Graphic = UIManager->GetGraphicData("MaleDragonbornOff", MAINWINDOW);
+				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+					Character.SetRace(DRAGONBORN);
 			}
 			else
 			{
@@ -7250,6 +7324,11 @@ void MainScreenClass::EndDragAndDropOperation(int x, int y)
 					valid = Feat->GetFeatTag(FEATTAGLEGENDARY) == true;
 					break;
 					}
+				case FEATDRAGONBORNBONUS:
+				{
+					valid = Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true;
+					break;
+				}
 				default:
 					// Not valid
 					break;

@@ -248,6 +248,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleOn", MAINWINDOW, AdvBoxCurrentX + 162, AdvBoxCurrentY, 90, 40);
 	InitializeUIGraphic("FemaleOff", MAINWINDOW, AdvBoxCurrentX + 162, AdvBoxCurrentY, 90, 40);
 
+	//Column 1
 	AdvBoxCurrentY += 55;
 
 	InitializeUIGraphic("MaleHumanOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
@@ -283,6 +284,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleWarforgedOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleWarforgedOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
+//Column 2
 	AdvBoxCurrentY = RaceBaseY + 85;
 	AdvBoxCurrentX += AdvBoxShiftX;
 
@@ -311,6 +313,13 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("MaleGnomeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleGnomeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleGnomeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+
+	AdvBoxCurrentY += AdvBoxShiftY;
+
+	InitializeUIGraphic("MaleDragonbornOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("MaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleDragonbornOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
 
 	//iconics Advancement Panel
@@ -531,7 +540,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MAINWINDOW, AdvBoxX + 24, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
-
+	InitializeUIGraphic("FeatTextDragonborn", MAINWINDOW, AdvBoxX + 5, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextLegendaryFeat", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MAINWINDOW, AdvBoxX + 00, FeatAdvBaseY + 45, 0, 0);
@@ -541,6 +550,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextEnemy", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat2", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextPath", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
+
 
 
 	//Spell Advancement Panel
@@ -1029,7 +1039,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MULTIFEATWINDOW, X + 24, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
-
+	InitializeUIGraphic("FeatTextDragonborn", MULTIFEATWINDOW, AdvBoxX + 5, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextLegendaryFeat", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MULTIFEATWINDOW, X + 00, Y + 45, 0, 0);

@@ -2197,10 +2197,10 @@ void DataClass::InitializeEnhancementTrees()
 	Arrows = "";
 	EnhancementTreeData[ENHT_NOTREE].InitializeEnhancementTree(ENHT_NOTREE, ENHTT_UI, RACENONE, CLASSNONE, "NoTree", false, "NoTreeBackground", Arrows);
 	EnhancementTreeData[ENHT_UNSET].InitializeEnhancementTree(ENHT_UNSET, ENHTT_UI, RACENONE, CLASSNONE, "Unset", false, "UnsetBackground", Arrows);
-	EnhancementTreeData[ENHT_FUTURETREE].InitializeEnhancementTree(ENHT_FUTURETREE, ENHTT_UI, RACENONE, CLASSNONE, "Future Tree", false, "FutureTreeBackground", Arrows);
 	EnhancementTreeData[ENHT_UNKNOWN].InitializeEnhancementTree(ENHT_UNKNOWN, ENHTT_UI, RACENONE, CLASSNONE, "Unknown Tree", false, "UnknownTreeBackground", Arrows);
+	EnhancementTreeData[ENHT_FUTURETREE].InitializeEnhancementTree(ENHT_FUTURETREE, ENHTT_UI, RACENONE, CLASSNONE, "Future Tree", false, "FutureTreeBackground", Arrows);
 
-	//Race Trees (14)
+	//Race Trees (15)
 	Arrows = "4-1-L-1";
 	EnhancementTreeData[ENHT_BLADEFORGED].InitializeEnhancementTree(ENHT_BLADEFORGED, ENHTT_RACE, BLADEFORGED, CLASSNONE, "Bladeforged", true, "BladeforgedBackground", Arrows);
 	Arrows = "1-2-U-1, 1-3-U-1, 2-1-U-2, 2-3-U-1, 3-3-U-1";
@@ -2229,6 +2229,8 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_GNOME].InitializeEnhancementTree(ENHT_GNOME, ENHTT_RACE, GNOME, CLASSNONE, "Gnome", true, "GnomeBackground", Arrows);
 	Arrows = "1-4-U-1, 2-4-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_DEEPGNOME].InitializeEnhancementTree(ENHT_DEEPGNOME, ENHTT_RACE, DEEPGNOME, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);// Added a space in "Deep-Gnome" to allow for lockouts in enhancement trees
+	Arrows = "";
+	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);
 
 	//Class Trees (33) sorted by Class
 	//Artificer

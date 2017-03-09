@@ -5349,16 +5349,16 @@ VERIFIED: 2012-06-26, in-game;
 FEATNAME: Scion of Arborea;
 FEATDESCRIPTION: +20 Melee and Ranged Power\par +20 Force Spell Power and +20 Universal Spell Power\par +2 to the Enhancement Bonus of your weapon\par +4 to Fortitude Saves;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LEVEL: 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 FEATTAG: Legendary;
 ICON: ScionofArborea;
 
 FEATNAME: Scion of Celestia;
 FEATDESCRIPTION: +20 Positive, Light, & Alignment Spell Power, +20 Universal Spell Power\par +30% Crit Damage with Positive, Light, & Alignment spells\par +150 Maximum Hit Points\par +4 to Will Saves;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LEVEL: 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 FEATTAG: Legendary;
 ICON: ScionofCelestia;
 
