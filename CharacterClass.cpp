@@ -842,23 +842,81 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 			switch (Ability)
 				{
 				case STRENGTH:
+				{
+					if (CountFeat("Race Past Life: Half Orc Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Strength", AtLevel);
 					break;
+				}
+					
 				case DEXTERITY:
+				{
+					if (CountFeat("Race Past Life: Elf Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
+					if (CountFeat("Race Past Life: Halfling Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Dexterity", AtLevel);
 					break;
+				}
+
 				case CONSTITUTION:
+				{
+					if (CountFeat("Race Past Life: Warforged Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
+					if (CountFeat("Race Past Life: Dwarf Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Constitution", AtLevel);
 					break;
+				}
+
 				case INTELLIGENCE:
+				{
+					if (CountFeat("Race Past Life: Drow Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
+					if (CountFeat("Race Past Life: Gnome Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Intelligence", AtLevel);
 					break;
+				}
+
 				case WISDOM:
+				{
+					if (CountFeat("Race Past Life: Human Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Wisdom", AtLevel);
 					break;
+				}
+
 				case CHARISMA:
+				{
+					if (CountFeat("Race Past Life: Half Elf Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
+					if (CountFeat("Race Past Life: Dragonborn Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Charisma", AtLevel);
 					break;
+				}
+
 				}
 			return Result;
 			}
@@ -2328,6 +2386,114 @@ int CharacterClass::GetIconicFeatIndex(ICONICRACES Race)
 	return FeatIndex;
 }
 //---------------------------------------------------------------------------
+int CharacterClass::GetRacePastLifeCount(PAST_RACE Race)
+{
+	return RacePastLifeCount[Race];
+}
+//---------------------------------------------------------------------------
+void CharacterClass::IncreaseRacePastLife(PAST_RACE Race)
+{
+	int FeatIndex;
+	if (RacePastLifeCount[Race] == 3)
+		return;
+
+	RacePastLifeCount[Race]++;
+	FeatIndex = GetRaceFeatIndex(Race);
+	if (FeatIndex != -1)
+		AddFeat(1, FeatIndex, FEATPASTLIFE);
+
+
+
+}
+//---------------------------------------------------------------------------
+void CharacterClass::DecreaseRacePastLife(PAST_RACE Race)
+{
+	int FeatIndex;
+	if (RacePastLifeCount[Race] == 0)
+		return;
+
+	RacePastLifeCount[Race]--;
+	FeatIndex = GetRaceFeatIndex(Race);
+	if (FeatIndex != -1)
+		RemoveFeatOnce(FeatIndex);
+
+
+
+}
+//---------------------------------------------------------------------------
+int CharacterClass::GetRaceFeatIndex(PAST_RACE Race)
+{
+	int FeatIndex = -1;
+
+	switch (Race)
+	{
+	case FEAT_HUMAN:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Human Past Life");
+		break;
+	}
+
+	case FEAT_ELF:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Elf Past Life");
+		break;
+	}
+
+	case FEAT_HALFLING:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Halfling Past Life");
+		break;
+	}
+
+	case FEAT_DWARF:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Dwarf Past Life");
+		break;
+	}
+
+	case FEAT_WARFORGED:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Warforged Past Life");
+		break;
+	}
+	case FEAT_DROW:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Drow Past Life");
+		break;
+	}
+
+	case FEAT_HALFORC:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Half Orc Past Life");
+		break;
+	}
+	case FEAT_HALFELF:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Half Elf Past Life");
+		break;
+	}
+
+	case FEAT_GNOME:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Gnome Past Life");
+		break;
+	}
+
+	case FEAT_DRAGONBORN:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Dragonborn Past Life");
+		break;
+	}
+
+	default:
+		break;
+	}
+
+
+
+	return FeatIndex;
+}
+//---------------------------------------------------------------------------
 float CharacterClass::CalculateSkillLevel(SKILLS Skill, unsigned int AtLevel, bool AddMiscMod)
     {
     float Result;
@@ -2483,10 +2649,11 @@ int CharacterClass::CalculateAvailableSkillPoints(unsigned int AtLevel)
         return 0;
 
     Result = Data.GetClassSkillPoints(ClassRecord[AtLevel-1]);
-	AbilityTotal = GetAbility(INTELLIGENCE, AtLevel, false) + GetTomeRaise(INTELLIGENCE, AtLevel, false);
+	AbilityTotal = GetAbility(INTELLIGENCE, AtLevel, false,false,false,false) + GetTomeRaise(INTELLIGENCE, AtLevel, false);
+
 	//we need to subtract 2 points of they have completionist loaded up
-	if (HasFeat("Completionist", AtLevel) == true)
-		AbilityTotal -= 2;
+	//if (HasFeat("Completionist", AtLevel) == true)
+	//	AbilityTotal -= 2;
     Result += Data.CalculateAbilityModifier(AbilityTotal);
     if (Race == HUMAN || Race == PURPLEDRAGONKNIGHT)
         Result++;
@@ -2527,6 +2694,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Martial Sphere: Epic Skill Focus: Balance", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Dwarf Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Balance", AtLevel);
 		}
     if (Skill == BLUFF)
@@ -2569,6 +2738,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
             Mod += 3;
 		if (HasFeat("Divine Sphere: Epic Skill Focus: Diplomacy", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Half Elf Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Diplomacy", AtLevel);
         }
     if (Skill == DISABLEDEVICE)
@@ -2598,6 +2769,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 5;
 		if (HasFeat("Gnomish Proficiences", AtLevel) == true)
 			Mod += 2;
+		if (HasFeat("Race Past Life: Human Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Haggle", AtLevel);
         }
     if (Skill == HEAL)
@@ -2660,6 +2833,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Primal Sphere: Epic Skill Focus: Intimidate", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Half Orc Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Intimidate", AtLevel);
 		}
     if (Skill == JUMP)
@@ -2716,6 +2891,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
             Mod += 1;
 		if (HasFeat("Primal Sphere: Epic Skill Focus: Move Silently", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Halfling Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Move Silently", AtLevel);
         }
     if (Skill == OPENLOCK)
@@ -2742,7 +2919,7 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 5;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Perform", AtLevel);
         }
-    if (Skill == 14)
+    if (Skill == REPAIR)
         {
         //repair
         Mod += CountFeat("Skill Mastery", AtLevel);
@@ -2755,6 +2932,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Arcane Sphere: Epic Skill Focus: Repair", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Warforged Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Repair", AtLevel);
 		}
     if (Skill == SEARCH)
@@ -2772,6 +2951,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Martial Sphere: Epic Skill Focus: Search", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Drow Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Search", AtLevel);
 		}
     if (Skill == SPELLCRAFT)
@@ -2784,6 +2965,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 3;
 		if (HasFeat("Arcane Sphere: Epic Skill Focus: Spellcraft", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Dragonborn Past Life", AtLevel) == true)
+			Mod += 1;
 		}
     if (Skill == SPOT)
         {
@@ -2799,6 +2982,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
             Mod += 3;
 		if (HasFeat("Primal Sphere: Epic Skill Focus: Spot", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Elf Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Spot", AtLevel);
         }
     if (Skill == SWIM)
@@ -2860,6 +3045,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			}
 		if (HasFeat("Gnomish Proficiences", AtLevel) == true)
 			Mod += 2;
+		if (HasFeat("Race Past Life: Gnome Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Use Magic Device", AtLevel);
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "UMD", AtLevel);
         }

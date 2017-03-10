@@ -192,6 +192,8 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	IconicPastRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIComponent->GetComponentData("EpicPastRadioButton", MAINWINDOW);
 	EpicPastRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIComponent->GetComponentData("RacePastRadioButton", MAINWINDOW);
+	RacePastRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
 
 
 	//Knownbox buttons
@@ -264,7 +266,6 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	HeroicLevelRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIComponent->GetComponentData("EpicLevelRadio", MAINWINDOW);
 	IconicLevelRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
-
 
 
     //the description box
@@ -376,6 +377,13 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 		SendMessage(IconicClassRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 		SendMessage(HeroicLevelRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 		SendMessage(IconicLevelRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+
+		SendMessage(HeroicPastRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(IconicPastRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(EpicPastRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(RacePastRadioButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+
+
 
 	    SendMessage(StrNumber, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(DexNumber, WM_SETFONT, (WPARAM)DefaultFont, 0);
@@ -509,7 +517,7 @@ void MainScreenClass::Show(bool State)
 	ShowWindow(HeroicPastRadioButton, false);
 	ShowWindow(IconicPastRadioButton, false);
 	ShowWindow(EpicPastRadioButton, false);
-
+	ShowWindow(RacePastRadioButton, false);
 	//Side Menu
 	ShowWindow(SideMenuTitle, State);
 	ShowWindow(SideRaceSexButton, State);
@@ -915,6 +923,12 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					return 0;
 				}
 				if ((int)LOWORD(wParam) == MS_EPICPASTLIFE)
+				{
+					ClearAdvancementBox();
+					DrawGraphics(Wnd, &ps);
+					return 0;
+				}
+				if ((int)LOWORD(wParam) == MS_RACEPASTLIFE)
 				{
 					ClearAdvancementBox();
 					DrawGraphics(Wnd, &ps);
@@ -1789,6 +1803,7 @@ void MainScreenClass::SetToRaceAndSex()
 	ShowWindow(HeroicPastRadioButton, false);
 	ShowWindow(IconicPastRadioButton, false);
 	ShowWindow(EpicPastRadioButton, false);
+	ShowWindow(RacePastRadioButton, false);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -1838,6 +1853,7 @@ void MainScreenClass::SetToReincarnation()
 	ShowWindow(HeroicPastRadioButton, true);
 	ShowWindow(IconicPastRadioButton, true);
 	ShowWindow(EpicPastRadioButton, true);
+	ShowWindow(RacePastRadioButton, true);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -1892,6 +1908,7 @@ void MainScreenClass::SetToNameAlignment()
 	ShowWindow(HeroicPastRadioButton, false);
 	ShowWindow(IconicPastRadioButton, false);
 	ShowWindow(EpicPastRadioButton, false);
+	ShowWindow(RacePastRadioButton, false);
 	CurrentRace = Character.GetRace();
 	FillInstructionBox();
 	FillAbilityBox();
@@ -2117,6 +2134,7 @@ void MainScreenClass::ChangeInstructionWindowSelection(int NewInstructionIndex)
 	ShowWindow(HeroicPastRadioButton, false);
 	ShowWindow(IconicPastRadioButton, false);
 	ShowWindow(EpicPastRadioButton, false);
+	ShowWindow(RacePastRadioButton, false);
     if (AdvancementType == ADV_ABILITYPOINT)
         {
         if (CurrentRace != DROW && CurrentRace != BLADEFORGED && CurrentRace != MORNINGLORD && CurrentRace != PURPLEDRAGONKNIGHT && CurrentRace != SHADARKAI && CurrentRace != DEEPGNOME)
@@ -2152,6 +2170,7 @@ void MainScreenClass::ChangeInstructionWindowSelection(int NewInstructionIndex)
 		ShowWindow(HeroicPastRadioButton, true);
 		ShowWindow(IconicPastRadioButton, true);
 		ShowWindow(EpicPastRadioButton, true);
+		ShowWindow(RacePastRadioButton, true);
 	}
     FillInstructionBox();
 	ClearAdvancementBox();
@@ -5334,6 +5353,9 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 			GetState = SendMessage(EpicPastRadioButton, BM_GETCHECK, 0, 0);
 			if (GetState == 1)
 				PastLifeRadioState = 2;
+			GetState = SendMessage(RacePastRadioButton, BM_GETCHECK, 0, 0);
+			if (GetState == 1)
+				PastLifeRadioState = 3;
 			switch (PastLifeRadioState)
 			{
 			case 0:
@@ -5419,7 +5441,6 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					RAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 					//Change for Iconic pastlife count
 					
-					Count = Character.GetReincarnateCount(static_cast<CLASS>(i));
 					Count = Character.GetIconicPastLifeCount(static_cast<ICONICRACES>(i));
 					int FeatIndex = Character.GetIconicFeatIndex(static_cast<ICONICRACES>(i));
 					Feat = Data.GetFeatPointer(FeatIndex);
@@ -5488,7 +5509,6 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						RAWidth = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 						RAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						//Change for Epic pastlife count
-						Count = Character.GetReincarnateCount(static_cast<CLASS>(i));
 						Count = Character.GetEpicFeatCount(static_cast<DESTINY_SPHERE>(y1), x1);
 						int FeatIndex = Character.GetEpicFeatIndex(static_cast<DESTINY_SPHERE>(y1), x1);
 						Feat = Data.GetFeatPointer(FeatIndex);
@@ -5524,6 +5544,71 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 						SetTextColor(hdc, OldColor);
 					}
+				}
+				break;
+			}
+			case 3:
+				//Iconic Past Lifes
+			{
+				for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+				{
+					ss.str("");
+					ss << "ReincarnateIcon" << i + 1;
+					Graphic = UIManager->GetGraphicData(ss.str(), MAINWINDOW);
+					X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+					Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+					Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+					Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+					ss.str("");
+					ss << "ReincarnateLA" << i + 1;
+					Graphic = UIManager->GetGraphicData(ss.str(), MAINWINDOW);
+					LAX = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+					LAY = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+					LAWidth = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+					LAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+					ss.str("");
+					ss << "ReincarnateRA" << i + 1;
+					Graphic = UIManager->GetGraphicData(ss.str(), MAINWINDOW);
+					RAX = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+					RAY = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+					RAWidth = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+					RAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+					//Change for Iconic pastlife count
+
+					Count = Character.GetRacePastLifeCount(static_cast<PAST_RACE>(i));
+					int FeatIndex = Character.GetRaceFeatIndex(static_cast<PAST_RACE>(i));
+					Feat = Data.GetFeatPointer(FeatIndex);
+					int FeatIconIndex = Feat->GetFeatIconIndex();
+					GraphicStruct CurrentIcon;
+					if (FeatIndex == -1)
+						CurrentIcon = NoImage;
+					else
+						CurrentIcon = FeatIcon[FeatIconIndex];
+					if (Count == 0)
+					{
+						DrawGraphicGreyscale(hdc, &CurrentIcon, X, Y, Width, Height);
+						DrawGraphicGreyscale(hdc, &LeftArrow, LAX, LAY, LAWidth, LAHeight);
+					}
+					else
+					{
+						DrawGraphic(hdc, &CurrentIcon, X, Y, Width, Height);
+						DrawGraphic(hdc, &LeftArrow, LAX, LAY, LAWidth, LAHeight);
+					}
+					if (Count == 3)
+						DrawGraphicGreyscale(hdc, &RightArrow, RAX, RAY, RAWidth, RAHeight);
+					else
+						DrawGraphic(hdc, &RightArrow, RAX, RAY, RAWidth, RAHeight);
+					OldColor = SetTextColor(hdc, RGB(255, 255, 255));
+					ss.str("");
+					ss << "ReincarnateNumText" << i + 1;
+					Graphic = UIManager->GetGraphicData(ss.str(), MAINWINDOW);
+					X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+					Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+					ss.str("");
+					ss << Count;
+					OutputString = ss.str();
+					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+					SetTextColor(hdc, OldColor);
 				}
 				break;
 			}
@@ -5941,7 +6026,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					OutputString = "Dragonborn";
 					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 					Graphic = UIManager->GetGraphicData("FeatTextBonusFeat", MAINWINDOW);
-					X = static_cast<int>(X-5); // CDE: Keep second word aligned below
+					X = static_cast<int>(X); // CDE: Keep second word aligned below
 					Y = static_cast<int>(FrameBottom - 20);
 					OutputString = "Bonus Feat";
 					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
@@ -6360,6 +6445,7 @@ void MainScreenClass::HandleLeftMouseButtonClick(int x, int y)
 		ShowWindow(HeroicPastRadioButton, false);
 		ShowWindow(IconicPastRadioButton, false);
 		ShowWindow(EpicPastRadioButton, false);
+		ShowWindow(RacePastRadioButton, false);
 	    CurrentRace = Character.GetRace();
 		CurrentClass = Character.GetClass(CurrentSelectedLevel);
 		AdvancementType = Data.GetAdvancementType(CurrentSelectedLevel, CurrentRace, CurrentClass, CurrentInstructionSelection, &Value);
@@ -7162,6 +7248,20 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBoxTrueReincarnation(
 
 			break;
 		}
+		case 3:
+			//Race Radio Button
+		{
+			FeatIndex = Character.GetRaceFeatIndex(static_cast<PAST_RACE>(ClickedIcon));
+			if (FeatIndex != -1)
+			{
+				if (ClickedLeftArrow)
+					Character.DecreaseRacePastLife(static_cast<PAST_RACE>(ClickedIcon));
+				if (ClickedRightArrow)
+					Character.IncreaseRacePastLife(static_cast<PAST_RACE>(ClickedIcon));
+			}
+
+			break;
+		}
 			
 		default:
 			break;
@@ -7178,6 +7278,7 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBoxTrueReincarnation(
 			{
 				ClearAdvancementBox();
 				FillFeatBox();
+				FillAbilityBox();
 				FillAbilityStatBox();
 				FillSkillBox();
 				FillInstructionBox();
@@ -7188,6 +7289,7 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBoxTrueReincarnation(
 
 	}
 	Character.EnableValidations(true);
+	
 	//ReleaseDC(ParentWindow, hdc);
 	}
 

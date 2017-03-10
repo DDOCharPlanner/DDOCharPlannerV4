@@ -708,6 +708,38 @@ NEEDSALL: Ability Dexterity 13;
 ICON: DodgeIcon;
 VERIFIED: 2012-06-26, in-game;
 
+FEATNAME: Draconic Ancestry: Black;
+FEATDESCRIPTION: Your ancestry is linked to Black Dragons of a bygone age. You gain a stacking bonus to Acid Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+RACELIST: Dragonborn;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: DraconicAncestryBlackIcon;
+VERIFIED: unknown;
+
+FEATNAME: Draconic Ancestry: Blue;
+FEATDESCRIPTION: Your ancestry is linked to Blue Dragons of a bygone age. You gain a stacking bonus to Electric Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+RACELIST: Dragonborn;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: DraconicAncestryBlueIcon;
+VERIFIED: unknown;
+
+FEATNAME: Draconic Ancestry: Red;
+FEATDESCRIPTION: Your ancestry is linked to Red Dragons of a bygone age. You gain a stacking bonus to Fire Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+RACELIST: Dragonborn;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: DraconicAncestryRedIcon;
+VERIFIED: unknown;
+
+FEATNAME: Draconic Ancestry: White;
+FEATDESCRIPTION: Your ancestry is linked to Red Dragons of a bygone age. You gain a stacking bonus to Cold Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+RACELIST: Dragonborn;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: DraconicAncestryWhiteIcon;
+VERIFIED: unknown;
+
 FEATNAME: Drow Spell Resistance;
 FEATDESCRIPTION: Drow are naturally resistant to spells and magical effects. You have Spell Resistance equal to 10 plus your level, protecting you from many nondamaging spells and effects.;
 RACELIST: Drow;
@@ -5259,6 +5291,106 @@ LEVEL: 15;
 ACQUIRE: Automatic;
 ICON: QuiveringPalmIcon;
 VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Human Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeHumanIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Elf Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeElfIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Halfling Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeHalflingIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Dwarf Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeDwarfIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Warforged Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeWarforgedIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Drow Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeDrowIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Half Elf Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeHalfElfIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Half Orc Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeHalfOrcIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Gnome Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeGnomeIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Race Past Life;
+FEATNAME: Dragonborn Past Life;
+FEATDESCRIPTION: ;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: RacePastLifeDragonbornIcon;
+VERIFIED: unknown;
 
 FEATNAME: Racial Spell Resistance;
 FEATDESCRIPTION: You are naturally resistance to spells and magical effects. You have Spell Resistance equal to 10 plus your level, protecting you from many non-damaging spells and effects.;

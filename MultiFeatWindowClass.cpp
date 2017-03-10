@@ -1546,7 +1546,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 			OutputString = "Dragonborn";
 			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 			Graphic = UIManager->GetGraphicData("FeatTextBonusFeat", MULTIFEATWINDOW);
-			X = static_cast<int>(X-5); // CDE: Keep second word aligned below
+			X = static_cast<int>(X); // CDE: Keep second word aligned below
 			Y = static_cast<int>(FrameBottom - 20);
 			OutputString = "Bonus Feat";
 			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());

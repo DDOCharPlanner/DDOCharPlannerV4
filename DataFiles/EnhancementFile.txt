@@ -1534,56 +1534,6 @@ COST: 1;
 DESC1: EMPTY;
 ICON: None;
 
-NAME: LEVEL 5-1;
-TREE: Dragonborn;
-LEVEL: 5;
-SLOT: 0;
-RANKS: 1;
-TYPE: Passive;
-COST: 1;
-DESC1: EMPTY;
-ICON: None;
-
-NAME: LEVEL 5-2;
-TREE: Dragonborn;
-LEVEL: 5;
-SLOT: 1;
-RANKS: 1;
-TYPE: Passive;
-COST: 1;
-DESC1: EMPTY;
-ICON: None;
-
-NAME: LEVEL 5-3;
-TREE: Dragonborn;
-LEVEL: 5;
-SLOT: 2;
-RANKS: 1;
-TYPE: Passive;
-COST: 1;
-DESC1: EMPTY;
-ICON: None;
-
-NAME: LEVEL 5-4;
-TREE: Dragonborn;
-LEVEL: 5;
-SLOT: 3;
-RANKS: 1;
-TYPE: Passive;
-COST: 1;
-DESC1: EMPTY;
-ICON: None;
-
-NAME: LEVEL 5-5;
-TREE: Dragonborn;
-LEVEL: 5;
-SLOT: 4;
-RANKS: 1;
-TYPE: Passive;
-COST: 1;
-DESC1: EMPTY;
-ICON: None;
-
 [Drow] ****************************************************************
 
 NAME: Spell Resistance;

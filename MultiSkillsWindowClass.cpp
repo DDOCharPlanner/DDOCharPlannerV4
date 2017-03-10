@@ -697,10 +697,10 @@ int MultiSkillsWindowClass::CalculateAvailableSkillPoints(unsigned int AtLevel)
 		return 0;
 
 	Result = Data.GetClassSkillPoints(CurrentClass);
-	AbilityTotal = Character.GetAbility(INTELLIGENCE, AtLevel, false) + Character.GetTomeRaise(INTELLIGENCE, AtLevel, false);
+	AbilityTotal = Character.GetAbility(INTELLIGENCE, AtLevel, false,false,false,false) + Character.GetTomeRaise(INTELLIGENCE, AtLevel, false);
 	//we need to subtract 2 points of they have completionist loaded up
-	if (Character.HasFeat("Completionist", AtLevel) == true)
-		AbilityTotal -= 2;
+	//if (Character.HasFeat("Completionist", AtLevel) == true)
+	//	AbilityTotal -= 2;
 	Result += Data.CalculateAbilityModifier(AbilityTotal);
 	if (CurrentRace == HUMAN || CurrentRace == PURPLEDRAGONKNIGHT)
 		Result++;

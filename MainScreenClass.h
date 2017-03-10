@@ -189,6 +189,7 @@ class MainScreenClass : public IconClass
 		HWND IconicLevelRadioButton;
 		HWND HeroicPastRadioButton;
 		HWND IconicPastRadioButton;
+		HWND RacePastRadioButton;
 		HWND EpicPastRadioButton;
 		int PastLifeRadioState;
         //the description box

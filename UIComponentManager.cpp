@@ -239,7 +239,7 @@ void UIComponentManager::InitializeUI()
 	int AdvBoxShiftX = 140;
 
 	InitializeUIComponent("HeroicClassRadio", MAINWINDOW, "BUTTON", "Heroic Class", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX + 17, AdvBoxCurrentY, 110, 18, MS_HEROICCLASS);
-	InitializeUIComponent("IconicClassRadio", MAINWINDOW, "BUTTON", "Iconic Class", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 158, AdvBoxCurrentY, 110, 18, MS_ICONICCLASS);
+	InitializeUIComponent("IconicClassRadio", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 158, AdvBoxCurrentY, 110, 18, MS_ICONICCLASS);
 
 	AdvBoxCurrentY += 30;
 
@@ -422,9 +422,11 @@ void UIComponentManager::InitializeUI()
 
 	AdvBoxCurrentX = ReinCarnateBaseX;
 	AdvBoxCurrentY = ReinCarnateBaseY;
-	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX, AdvBoxCurrentY, 75, 18, MS_HERIOCPASTLIFE);
-	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 85, AdvBoxCurrentY, 75, 18, MS_ICONICPASTLIFE);
-	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 165, AdvBoxCurrentY, 75, 18, MS_EPICPASTLIFE);
+	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX, AdvBoxCurrentY, 60, 18, MS_HERIOCPASTLIFE);
+	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 65, AdvBoxCurrentY, 60, 18, MS_ICONICPASTLIFE);
+	InitializeUIComponent("RacePastRadioButton", MAINWINDOW, "BUTTON", "Race", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 130, AdvBoxCurrentY, 60, 18, MS_RACEPASTLIFE);
+	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 195, AdvBoxCurrentY, 60, 18, MS_EPICPASTLIFE);
+
 	AdvBoxCurrentY = ReinCarnateBaseY + 35;
 
 
@@ -1039,7 +1041,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MULTIFEATWINDOW, X + 24, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
-	InitializeUIGraphic("FeatTextDragonborn", MULTIFEATWINDOW, AdvBoxX + 5, FeatAdvBaseY + 45, 0, 0);
+	InitializeUIGraphic("FeatTextDragonborn", MULTIFEATWINDOW, X + 6, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextLegendaryFeat", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MULTIFEATWINDOW, X + 00, Y + 45, 0, 0);
