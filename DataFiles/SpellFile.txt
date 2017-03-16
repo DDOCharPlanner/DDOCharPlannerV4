@@ -4331,7 +4331,7 @@ COOLDOWN: ;
 SAVING: ;
 RESIST: ;
 RARE: 0;
-ICON: OwlsWisdomMass
+ICON: OwlsWisdomMass;
 
 SPELLNAME: Pack Aptitude;
 DESCRIPTION: Forms a link between a leader and his or her pack, granting all of the target's hirelings, pets, summoned creatures, and charmed creatures a circumstance bonus to an ability score. It grants a +2 bonus per 3 caster levels, with a maximum of +6. The caster chooses which ability score to increase. Only one may be active at a time. ;
@@ -4450,7 +4450,7 @@ COOLDOWN: 8 seconds;
 SAVING: Will save negates of Fortitude save takes partial damage;
 RESIST: Yes;
 RARE: 0;
-ICON: PhantasmalKiller
+ICON: PhantasmalKiller;
 
 SPELLNAME: Planar Weapons;
 DESCRIPTION: Your target's currently equipped weapons gain the ability to bypass alignment based damage reduction.  An item can have only one temporary item enchantment at a time.;
@@ -6660,7 +6660,7 @@ COOLDOWN: 2 seconds (wiz), 1.5 seconds (sor);
 SAVING: None;
 RESIST: No;
 RARE: 0;
-ICON: Tumble
+ICON: Tumble;
 
 SPELLNAME: Undeath to Death;
 DESCRIPTION: Destroys undead creatures in the area. A successful Will save negates this effect.;

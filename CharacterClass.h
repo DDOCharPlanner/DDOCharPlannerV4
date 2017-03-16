@@ -47,7 +47,7 @@ class CharacterClass
         ALIGNMENT GetAlignment();
         void SetAlignment(ALIGNMENT NewAlignment);
         bool IsAlignmentLegal(ALIGNMENT Test);
-
+		
 		//class
         CLASS GetClass(int AtLevel, bool Change = true);
         void SetClass(CLASS NewClass, int AtLevel);
@@ -186,6 +186,7 @@ class CharacterClass
 		void GetTurnData(unsigned int CurrentSelectedLevel, int *TurnsPerDay, int *Check, int *Damage);
 		/*bool IsMonkCentered(unsigned int CurrentSelectedLevel);*/
 		int TomeRaise[6][MAXLEVEL];
+		int GetRaceEnhancement();
 
     private:
         string FirstName;
@@ -219,6 +220,7 @@ class CharacterClass
 
 		//Enhancement Variables
 		Character_Enhancements_Class CharacterEnhancements;
+		int RaceEnhancement;
 
 		//Destiny Variables
 		Character_Destinies_Class CharacterDestinies;

@@ -98,6 +98,10 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		int TotalAP;
 		int TotalAPAvailable;
 		int TotalAPSpent;
+		int RaceAP;
+		int RaceAPAvailable;
+		int RaceAPSpent;
+
 		vector <CLASS> ClassProgression;
 		vector <ENHANCEMENT_TREE> PossibleTrees;
 
@@ -109,8 +113,8 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		void CalculateAPSpentInTree(int Tree);	//Not used yet.
 		bool IsChildWindowVisible();
 		void UpdateCurrentTrees(string Direction);
-		void UpdateAPAvailableLabel(int NewValue);
-		void UpdateAPSpentLabel(int NewValue);
+		void UpdateAPAvailableLabel(int NewValue, int RaceAPValue = -1);
+		void UpdateAPSpentLabel(int NewValue, int RaceAPValue = -1);
 		bool IsSlotSelected(int x, int y, int *rTree, int *rLevel, int *rSlot);
 		void Accept();
 		bool FindPossibleTree(ENHANCEMENT_TREE EnhancementTree);

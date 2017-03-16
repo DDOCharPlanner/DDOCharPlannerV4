@@ -182,6 +182,7 @@ class MainScreenClass : public IconClass
         HWND AdvWinSurnameInput;
         HWND AdvSkillPointSpendBox;
         HWND AdvWinSpellList;
+		HWND AdvWinSpellRareCheck;
 		HWND AdvWinSpellClearButton;
 		HWND HeroicClassRadioButton;
 		HWND IconicClassRadioButton;
@@ -306,6 +307,7 @@ class MainScreenClass : public IconClass
         vector <ParentHeadingStruct> SpellListParentHeading;
         vector <ParentHeadingStruct> SpellListSelectParentHeading;
         bool EquipmentScreenShown;
+		bool ShowRareSpells;
         EQUIPMENTSLOTTYPE EquipmentScreenCurrentSelectedSlot;
 		vector <ParentHeadingStruct> ASListParentHeading;
 		vector <ASListItemStruct> ASListItems;

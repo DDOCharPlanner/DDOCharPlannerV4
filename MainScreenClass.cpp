@@ -255,7 +255,9 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	AdvSkillPointSpendBox = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("AdvWinSpellList", MAINWINDOW);
 	AdvWinSpellList = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
-    Component = UIComponent->GetComponentData("AdvWinSpellClearButton", MAINWINDOW);
+	Component = UIComponent->GetComponentData("AdvWinSpellRareCheck", MAINWINDOW);
+	AdvWinSpellRareCheck = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIComponent->GetComponentData("AdvWinSpellClearButton", MAINWINDOW);
 	AdvWinSpellClearButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIComponent->GetComponentData("HeroicClassRadio", MAINWINDOW);
 	HeroicClassRadioButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
@@ -430,8 +432,8 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	    SendMessage(AdvWinSurnameInput, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(AdvSkillPointSpendBox, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(AdvWinSpellList, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(AdvWinSpellRareCheck, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(AdvWinSpellClearButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
-
 	    SendMessage(DescriptionWindow, WM_SETFONT, (WPARAM)DefaultFont, 0);
 
 	    SendMessage(EquipmentDisplayTitle, WM_SETFONT, (WPARAM)DefaultFont, 0);
@@ -599,6 +601,8 @@ void MainScreenClass::Show(bool State)
 
 	if (State == true)
 		DrawLevelBars(GetDC(ParentWindow));
+
+	ShowRareSpells = false;
     }
 
 //---------------------------------------------------------------------------
@@ -675,6 +679,8 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					SetUp = true;
                     ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
                     SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_UNCHECKED, 0);
+					ShowWindow(AdvWinSpellRareCheck, false);
+					SendMessage(AdvWinSpellRareCheck, BM_SETCHECK, BST_UNCHECKED, 0);
                     ShowWindow(AdvWinFeatList, false);
                     ShowWindow(AdvWinFirstNameInput, false);
                     ShowWindow(AdvWinSurnameInput, false);
@@ -717,6 +723,7 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
                         SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_UNCHECKED, 0);
                     else
                         SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 0);
+					ShowWindow(AdvWinSpellRareCheck, false);
                     ShowWindow(AdvWinFeatList, false);
                     ShowWindow(AdvWinFirstNameInput, false);
                     ShowWindow(AdvWinSurnameInput, false);
@@ -889,12 +896,27 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
                     //InvalidateRect(Wnd, NULL, TRUE);
                     return 0;
                     }
+				if ((int)LOWORD(wParam) == MS_RARESPELLCHECK)
+				{
+					if (SendMessage(AdvWinSpellRareCheck, BM_GETCHECK, 0, 0) == BST_CHECKED)
+						ShowRareSpells = true;
+					else
+						ShowRareSpells = false;
+					FillSpellSelectBox();
+					FillInstructionBox();
+					//InvalidateRect(Wnd, NULL, TRUE);
+					return 0;
+				}
                 if ((int)LOWORD(wParam) == MS_ES_ADVWINSPELLCLEARBUTTON)
                     {
                     Character.ClearSpells();
 					//erase old text
 					FillSpellBox();
 					FillSpellSelectBox();
+					HDC hdc;
+					hdc = GetDC(ParentWindow);
+					DrawAdvancementBoxGraphics(hdc);
+					ReleaseDC(ParentWindow, hdc);
                     //InvalidateRect(Wnd, NULL, TRUE);
                     return 0;
                     }
@@ -1792,6 +1814,7 @@ void MainScreenClass::SetToRaceAndSex()
 
 	CurrentInstructionSelection = Index;
 	ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+	ShowWindow(AdvWinSpellRareCheck, false);
 	ShowWindow(AdvWinFeatList, false);
 	ShowWindow(AdvWinFirstNameInput, false);
 	ShowWindow(AdvWinSurnameInput, false);
@@ -1842,6 +1865,7 @@ void MainScreenClass::SetToReincarnation()
 	Character.EnableValidations(false);
 	RedrawWindow(ParentWindow, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
 	ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+	ShowWindow(AdvWinSpellRareCheck, false);
 	ShowWindow(AdvWinFeatList, false);
 	ShowWindow(AdvWinFirstNameInput, false);
 	ShowWindow(AdvWinSurnameInput, false);
@@ -1897,6 +1921,7 @@ void MainScreenClass::SetToNameAlignment()
 	RedrawWindow(ParentWindow, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
 
 	ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+	ShowWindow(AdvWinSpellRareCheck, false);
 	ShowWindow(AdvWinFeatList, false);
 	ShowWindow(AdvWinFirstNameInput, true);
 	ShowWindow(AdvWinSurnameInput, true);
@@ -2123,6 +2148,7 @@ void MainScreenClass::ChangeInstructionWindowSelection(int NewInstructionIndex)
     CurrentClass = Character.GetClass(CurrentSelectedLevel);
     AdvancementType = Data.GetAdvancementType(CurrentSelectedLevel, CurrentRace, CurrentClass, CurrentInstructionSelection, &Value);
     ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+	ShowWindow(AdvWinSpellRareCheck, false);
     ShowWindow(AdvWinFeatList, false);
     ShowWindow(AdvWinFirstNameInput, false);
     ShowWindow(AdvWinSurnameInput, false);
@@ -2158,6 +2184,19 @@ void MainScreenClass::ChangeInstructionWindowSelection(int NewInstructionIndex)
         {
         FillSpellSelectBox();
         ShowWindow(AdvWinSpellList, true);
+		CurrentClass = Character.GetClass(CurrentSelectedLevel, false);
+			if (CurrentClass == WIZARD || CurrentClass == ARTIFICER)
+			{
+				ShowWindow(AdvWinSpellRareCheck, true);
+				if (ShowRareSpells == true)
+					SendMessage(AdvWinSpellRareCheck, BM_SETCHECK, BST_CHECKED, 1);
+				else
+					SendMessage(AdvWinSpellRareCheck, BM_SETCHECK, BST_UNCHECKED, 1);
+			}
+			else
+			{
+				ShowWindow(AdvWinSpellRareCheck, false);
+			}
         ShowWindow(AdvWinSpellClearButton, true);
         }
 	else if (AdvancementType == ADV_RACEANDSEX)
@@ -2186,10 +2225,10 @@ void MainScreenClass::FillAbilityBox()
     int Modifier;
 
     //strength
-    Ability = Character.GetAbility((int)STRENGTH, CurrentSelectedLevel);
+    Ability = Character.GetAbility((int)STRENGTH, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)STRENGTH, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)STRENGTH, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(StrNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -2209,10 +2248,10 @@ void MainScreenClass::FillAbilityBox()
     SendMessage(StrModifier, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
 
     //dexterity
-	Ability = Character.GetAbility((int)DEXTERITY, CurrentSelectedLevel);
+	Ability = Character.GetAbility((int)DEXTERITY, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)DEXTERITY, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)DEXTERITY, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(DexNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -2232,10 +2271,10 @@ void MainScreenClass::FillAbilityBox()
     SendMessage(DexModifier, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
 
     //Constitution
-    Ability = Character.GetAbility((int)CONSTITUTION, CurrentSelectedLevel);
+    Ability = Character.GetAbility((int)CONSTITUTION, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)CONSTITUTION, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)CONSTITUTION, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(ConNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -2255,10 +2294,10 @@ void MainScreenClass::FillAbilityBox()
     SendMessage(ConModifier, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
 
     //Intelligence
-    Ability = Character.GetAbility((int)INTELLIGENCE, CurrentSelectedLevel);
+    Ability = Character.GetAbility((int)INTELLIGENCE, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)INTELLIGENCE, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)INTELLIGENCE, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(IntNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -2278,10 +2317,10 @@ void MainScreenClass::FillAbilityBox()
     SendMessage(IntModifier, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
 
     //Wisdom
-    Ability = Character.GetAbility((int)WISDOM, CurrentSelectedLevel);
+    Ability = Character.GetAbility((int)WISDOM, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)WISDOM, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)WISDOM, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(WisNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -2301,10 +2340,10 @@ void MainScreenClass::FillAbilityBox()
     SendMessage(WisModifier, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
 
     //Charisma
-    Ability = Character.GetAbility((int)CHARISMA, CurrentSelectedLevel);
+    Ability = Character.GetAbility((int)CHARISMA, CurrentSelectedLevel, true, false, false, false);
     ss.str("");
     ss << Ability;
-    ModAbility = Character.GetAbility((int)CHARISMA, CurrentSelectedLevel, true, true, true);
+    ModAbility = Character.GetAbility((int)CHARISMA, CurrentSelectedLevel, true, true, true, true);
     if (ModAbility != Ability)
         ss << " (" << ModAbility << ")";
     SendMessage(ChaNumber, WM_SETTEXT, 0, (LPARAM)ss.str().c_str());
@@ -3662,10 +3701,13 @@ void MainScreenClass::FillSpellSelectBox()
                 {
                 if (Character.HasSpell(SpellIndex, CurrentSelectedLevel) == false)
                     {
-                    NewSpell.SpellName = Data.GetSpellName(SpellIndex);
-                    NewSpell.SpellLevel = Data.GetSpellLevel(ClassType, SpellIndex);
-                    NewSpell.SpellIndex = SpellIndex;
-                    SpellListSort.push_back(NewSpell);
+					if (ShowRareSpells != true || Data.GetSpellRare(SpellIndex) == true)
+						{
+						NewSpell.SpellName = Data.GetSpellName(SpellIndex);
+						NewSpell.SpellLevel = Data.GetSpellLevel(ClassType, SpellIndex);
+						NewSpell.SpellIndex = SpellIndex;
+						SpellListSort.push_back(NewSpell);
+						}
                     }
                 Index++;
                 SpellIndex = Data.GetSpellIndex(ClassType, i, Index);
@@ -5682,7 +5724,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
                 ss.str("");
-                Ability = Character.GetAbility(i, CurrentSelectedLevel, true, true, true);
+                Ability = Character.GetAbility(i, CurrentSelectedLevel, false, false, false, false);
                 ss << Ability;
                 OutputString = ss.str();
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
@@ -5697,7 +5739,12 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
                     }
 				X += static_cast<int>(65.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
-
+				ss.str("");
+				Modifier = Data.CalculateAbilityModifier(Ability);
+				if (Modifier > 0)
+					ss << "+";
+				ss << Modifier;
+				OutputString = ss.str();
 				X += static_cast<int>(50.0/DEFAULTWIDTH*ScreenSize.cx);
                 TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
                 PointsSpent += Character.GetAbilityPointsSpent(i);
@@ -6435,6 +6482,7 @@ void MainScreenClass::HandleLeftMouseButtonClick(int x, int y)
 	        ShowWindow(AdvWinSurnameInput, false);
 		}
         ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+		ShowWindow(AdvWinSpellRareCheck, false);
         ShowWindow(AdvWinFeatList, false);
 
         ShowWindow(AdvSkillPointSpendBox, false);
@@ -7704,6 +7752,7 @@ void MainScreenClass::ToggleEquipmentScreen()
         EquipmentScreenShown = true;
         EquipmentScreenCurrentSelectedSlot = NOSLOT;
         ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+		ShowWindow(AdvWinSpellRareCheck, false);
         ShowWindow(AdvWinFeatList, false);
         ShowWindow(AdvWinFirstNameInput, false);
         ShowWindow(AdvWinSurnameInput, false);
@@ -8074,6 +8123,7 @@ void MainScreenClass::ResizeScreen(HWND Wnd)
     //the advancement box
     ResizeWindow("AdvancementWindowFrame", AdvancementWindowFrame, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
     ResizeWindow("AdvWinBonusAbilityPointsCheckBox", AdvWinBonusAbilityPointsCheckBox, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("AdvWinSpellRareCheck", AdvWinSpellRareCheck, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
     FitContent("AdvancementWindowFrame", "AdvWinFeatList", AdvWinFeatList, NewScreenSize.cx, NewScreenSize.cy, UIComponent, 10, 10, 10, 85);
     ResizeWindow("AdvWinFirstNameInput", AdvWinFirstNameInput, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
     ResizeWindow("AdvWinSurnameInput", AdvWinSurnameInput, NewScreenSize.cx, NewScreenSize.cy, UIComponent);

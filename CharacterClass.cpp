@@ -58,12 +58,15 @@ void CharacterClass::Reset()
 	}
 	for (unsigned int i = 0; i < ICONICPASTLIFEFEAT; i++)
 		IconicPastLifeCount[i] = 0;
+	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+		RacePastLifeCount[i] = 0;
 	CharacterEnhancements.Clear();
 	CharacterDestinies.ClearAll();
     SpellList.clear();
 	ClearCharacterItems();
     AddRaceAutoFeats(1);
     AddClassAutoFeats(FIGHTER, 1, 1);
+	RaceEnhancement = 0;
 	for (unsigned int i=0; i<NUMCHAREQUPMENTSLOTS; i++)
 		CharacterItemsEquipped[i] = -1;
     EnableValidations(true);
@@ -2396,7 +2399,8 @@ void CharacterClass::IncreaseRacePastLife(PAST_RACE Race)
 	int FeatIndex;
 	if (RacePastLifeCount[Race] == 3)
 		return;
-
+	if (RacePastLifeCount[Race] == 2)
+		RaceEnhancement++;
 	RacePastLifeCount[Race]++;
 	FeatIndex = GetRaceFeatIndex(Race);
 	if (FeatIndex != -1)
@@ -2411,7 +2415,8 @@ void CharacterClass::DecreaseRacePastLife(PAST_RACE Race)
 	int FeatIndex;
 	if (RacePastLifeCount[Race] == 0)
 		return;
-
+	if (RacePastLifeCount[Race] == 3)
+		RaceEnhancement--;
 	RacePastLifeCount[Race]--;
 	FeatIndex = GetRaceFeatIndex(Race);
 	if (FeatIndex != -1)
@@ -3290,7 +3295,7 @@ void CharacterClass::GetSpellSelectionSlots(int AtLevel, int *SpellLevel, int *N
         {
         if (ClassLevel == 1)
             {
-            Ability = GetAbility((int)INTELLIGENCE, AtLevel, true);
+            Ability = GetAbility((int)INTELLIGENCE, AtLevel, true, false, false, false);
             AbilityModifier = Data.CalculateAbilityModifier(Ability);
             if (AbilityModifier == -1)
 				NumSpells[0] = 3;
@@ -3324,7 +3329,7 @@ void CharacterClass::GetSpellSelectionSlots(int AtLevel, int *SpellLevel, int *N
         {
         if (ClassLevel == 1)
             {
-            Ability = GetAbility((int)INTELLIGENCE, AtLevel, true);
+            Ability = GetAbility((int)INTELLIGENCE, AtLevel, true, false, false, false);
             AbilityModifier = Data.CalculateAbilityModifier(Ability);
             if (AbilityModifier == -1)
 				NumSpells[0] = 2;
@@ -4301,35 +4306,115 @@ void CharacterClass::Save(HWND hwnd)
     GetCurrentDirectory(MAX_PATH, InitDirectory);
 	StringCbCat (InitDirectory, MAX_PATH, "\\SaveFiles\\");
     StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
+	IFileDialog *pfd = NULL;
+	LPCWSTR TxtStr = L".txt";
+	//char *dir_org = NULL;
+	char FiletoOpen[MAX_PATH + 1];
+	HRESULT hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
+	if (SUCCEEDED(hr))
+	{
+		HRESULT hr;
+		int rc;
+		// Create a new common open file dialog.
+		IFileOpenDialog *pfd = NULL;
+		hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
+		rc = -1;  // Error
+		if (SUCCEEDED(hr))
+		{
+			DWORD dwOptions;
+			hr = pfd->GetOptions(&dwOptions);
+			if (SUCCEEDED(hr))
+				hr = pfd->SetOptions(dwOptions | FOS_STRICTFILETYPES);
+			// Set the title of the dialog.
+			if (SUCCEEDED(hr))
+			{
+				LPCWSTR szTXT = L"Text File";
+				hr = pfd->SetTitle(L"Select File");
+				if (SUCCEEDED(hr))
+				{
+					COMDLG_FILTERSPEC rgSpec[] =
+					{
+						{ szTXT, L"*.txt" },
+					};
+					hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
+					hr = pfd->SetDefaultExtension(L"txt");
+				}
+			}
+			// Show the open file dialog.
+			if (SUCCEEDED(hr))
+			{
+				hr = pfd->Show(NULL);
+				if (SUCCEEDED(hr))
+				{  // Get the selection from the user.
+					IShellItem *psiResult = NULL;
+					hr = pfd->GetResult(&psiResult);
+					if (SUCCEEDED(hr))
+					{
+						PWSTR pszPath = NULL;
+						hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+						int len;
+						if (SUCCEEDED(hr))
+						{
+							if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
+							{
+								rc = 0;
+								FiletoOpen[len] = '\0';
 
-    memset(&FileOpen, 0, sizeof(OPENFILENAME));
-	FileOpen.lStructSize = sizeof (OPENFILENAME);
-	FileOpen.hwndOwner = hwnd;
-    FileOpen.hInstance = 0;
-	FileOpen.lpstrFilter = FileFilter;
-    FileOpen.lpstrCustomFilter = NULL;
-    FileOpen.nMaxCustFilter = 0;
-	FileOpen.nFilterIndex = 1;
-    FileOpen.lpstrFile = FileName;
-	FileOpen.nMaxFile = 1024;
-    FileOpen.lpstrFileTitle = NULL;
-	FileOpen.nMaxFileTitle = 512;
-	FileOpen.lpstrInitialDir = InitDirectory;
-	FileOpen.lpstrTitle = TitleString;
-	FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
-	FileOpen.nFileOffset = 0;
-	FileOpen.nFileExtension = 0;
-	FileOpen.lpstrDefExt = DefaultExtension;
-	FileOpen.lCustData = 0;
-	FileOpen.lpfnHook = 0;
-	FileOpen.lpTemplateName = NULL;
+								FileHandle = CreateFile(FiletoOpen, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+								if (FileHandle == INVALID_HANDLE_VALUE)
+									return;
+								*FiletoOpen = NULL;
+							}
+							else
+								rc = 1;
+							CoTaskMemFree(pszPath);
+						}
+						psiResult->Release();
+					}
+				}
+				else
+				{
+					if (hr == HRESULT_FROM_WIN32(ERROR_CANCELLED))
+						rc = 1; // User cancelled the dialog...
+				}
+			}
+			pfd->Release();
+			if (rc == 1)
+				return;
+		}
+	}
+	else
+	{
+		// use GetOpenFileName() as needed...
 
-	if (GetSaveFileName(&FileOpen) == false)
-		return;
+		memset(&FileOpen, 0, sizeof(OPENFILENAME));
+		FileOpen.lStructSize = sizeof(OPENFILENAME);
+		FileOpen.hwndOwner = hwnd;
+		FileOpen.hInstance = 0;
+		FileOpen.lpstrFilter = FileFilter;
+		FileOpen.lpstrCustomFilter = NULL;
+		FileOpen.nMaxCustFilter = 0;
+		FileOpen.nFilterIndex = 1;
+		FileOpen.lpstrFile = FileName;
+		FileOpen.nMaxFile = 1024;
+		FileOpen.lpstrFileTitle = NULL;
+		FileOpen.nMaxFileTitle = 512;
+		FileOpen.lpstrInitialDir = InitDirectory;
+		FileOpen.lpstrTitle = TitleString;
+		FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
+		FileOpen.nFileOffset = 0;
+		FileOpen.nFileExtension = 0;
+		FileOpen.lpstrDefExt = DefaultExtension;
+		FileOpen.lCustData = 0;
+		FileOpen.lpfnHook = 0;
+		FileOpen.lpTemplateName = NULL;
 
-	FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
-	if (FileHandle == INVALID_HANDLE_VALUE)
-        return;
+		if (GetSaveFileName(&FileOpen) == false)
+			return;
+		FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+		if (FileHandle == INVALID_HANDLE_VALUE)
+			return;
+	}
 
 	StringCbPrintf(WriteBuffer, 1024, "VERSION: %s;\r\n", VERSION);
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
@@ -4534,13 +4619,24 @@ void CharacterClass::Save(HWND hwnd)
 	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 
+
+	StringCbPrintf(WriteBuffer, 1024, "RACEPL: \r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	for (unsigned int i = 0; i<RACEPASTLIFE; i++)
+	{
+			StringCbPrintf(WriteBuffer, 1024, "%i, ", RacePastLifeCount[i]);
+			WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	}
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+
     CloseHandle(FileHandle);
     }
 
 //---------------------------------------------------------------------------
 void CharacterClass::Load(HWND hwnd)
     {
-    #define NUMKEYWORDS 26
+    #define NUMKEYWORDS 27
     HANDLE FileHandle;
     char *FileData;
     DWORD FileSize;
@@ -4574,7 +4670,7 @@ void CharacterClass::Load(HWND hwnd)
 	unsigned int CommaCount;
 	unsigned int Found;
 	unsigned int RecordedLevels;
-
+	HWND hWnd;
 	//disable validations while we load
 	EnableValidations(false);
 
@@ -4582,35 +4678,114 @@ void CharacterClass::Load(HWND hwnd)
     GetCurrentDirectory(1024, InitDirectory);
 	StringCbCat (InitDirectory, 1024, "\\SaveFiles\\");
 	StringCbCopy(FileName, 1024, "\0");
+	IFileDialog *pfd = NULL;
+	char FiletoOpen[MAX_PATH + 1];
+	HRESULT hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileDialog, (void**)&pfd);
+	if (SUCCEEDED(hr))
+	{
+		HRESULT hr;
+		int rc;
+		// Create a new common open file dialog.
+		IFileOpenDialog *pfd = NULL;
+		hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&pfd));
+		rc = -1;  // Error
+		if (SUCCEEDED(hr))
+		{
+			DWORD dwOptions;
+			hr = pfd->GetOptions(&dwOptions);
+			if (SUCCEEDED(hr))
+				hr = pfd->SetOptions(dwOptions);
+			// Set the title of the dialog.
+			if (SUCCEEDED(hr))
+			{
+				LPCWSTR szTXT = L"Text File";
+				hr = pfd->SetTitle(L"Select File");
+				if (SUCCEEDED(hr))
+				{
+					COMDLG_FILTERSPEC rgSpec[] =
+					{
+						{ szTXT, L"*.txt" },
+					};
+					hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
+				}
+			}
+			// Show the open file dialog.
+			if (SUCCEEDED(hr))
+			{
+				hr = pfd->Show(NULL);
+				if (SUCCEEDED(hr))
+				{  // Get the selection from the user.
+					IShellItem *psiResult = NULL;
+					hr = pfd->GetResult(&psiResult);
+					if (SUCCEEDED(hr))
+					{
+						PWSTR pszPath = NULL;
+						hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+						int len;
+						if (SUCCEEDED(hr))
+						{
+							if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
+							{
+								rc = 0;
+								FiletoOpen[len] = '\0';
 
-	memset(&FileOpen, 0, sizeof(OPENFILENAME));
-	FileOpen.lStructSize = sizeof (OPENFILENAME);
-	FileOpen.hwndOwner = hwnd;
-    FileOpen.hInstance = 0;
-	FileOpen.lpstrFilter = FileFilter;
-    FileOpen.lpstrCustomFilter = NULL;
-    FileOpen.nMaxCustFilter = 0;
-	FileOpen.nFilterIndex = 1;
-	FileOpen.lpstrFile = FileName;
-	FileOpen.nMaxFile = 1024;
-	FileOpen.lpstrFileTitle = NULL;
-	FileOpen.nMaxFileTitle = 512;
-	FileOpen.lpstrInitialDir = InitDirectory;
-	FileOpen.lpstrTitle = TitleString;
-	FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
-	FileOpen.nFileOffset = 0;
-	FileOpen.nFileExtension = 0;
-	FileOpen.lpstrDefExt = DefaultExtension;
-	FileOpen.lCustData = 0;
-	FileOpen.lpfnHook = 0;
-	FileOpen.lpTemplateName = NULL;
+								FileHandle = CreateFile(FiletoOpen, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+								if (FileHandle == INVALID_HANDLE_VALUE)
+									return;
+								*FiletoOpen = NULL;
+							}
+							else
+								rc = 1;
+							CoTaskMemFree(pszPath);
+						}
+						psiResult->Release();
+					}
+				}
+				else
+				{
+					if (hr == HRESULT_FROM_WIN32(ERROR_CANCELLED))
+						rc = 1; // User cancelled the dialog...
+				}
+			}
+			pfd->Release();
+			if (rc == 1)
+				return;
+		}
+	}
+	else
+	{
+		// use GetOpenFileName() as needed...
 
-    if (GetOpenFileName(&FileOpen) == false)
-		return;
+		memset(&FileOpen, 0, sizeof(OPENFILENAME));
+		FileOpen.lStructSize = sizeof(OPENFILENAME);
+		FileOpen.hwndOwner = hwnd;
+		FileOpen.hInstance = 0;
+		FileOpen.lpstrFilter = FileFilter;
+		FileOpen.lpstrCustomFilter = NULL;
+		FileOpen.nMaxCustFilter = 0;
+		FileOpen.nFilterIndex = 1;
+		FileOpen.lpstrFile = FileName;
+		FileOpen.nMaxFile = 1024;
+		FileOpen.lpstrFileTitle = NULL;
+		FileOpen.nMaxFileTitle = 512;
+		FileOpen.lpstrInitialDir = InitDirectory;
+		FileOpen.lpstrTitle = TitleString;
+		FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
+		FileOpen.nFileOffset = 0;
+		FileOpen.nFileExtension = 0;
+		FileOpen.lpstrDefExt = DefaultExtension;
+		FileOpen.lCustData = 0;
+		FileOpen.lpfnHook = 0;
+		FileOpen.lpTemplateName = NULL;
 
-	FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+		if (GetOpenFileName(&FileOpen) == false)
+			return;
+		FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return;
+	}
+
+
 
 	FileSize = GetFileSize(FileHandle, NULL);
 	FileData = new char[FileSize+1];
@@ -4650,6 +4825,7 @@ void CharacterClass::Load(HWND hwnd)
 	StringCbCopy(KeywordString[23], 256, "PASTLIFE: ");
 	StringCbCopy(KeywordString[24], 256, "ICONICPL:");
 	StringCbCopy(KeywordString[25], 256, "EPICPL:");
+	StringCbCopy(KeywordString[26], 256, "RACEPL:");
     for (unsigned int i=0; i<NUMKEYWORDS; i++)
         TempPointer[i] = strstr(FileData, KeywordString[i]);
     while (true)
@@ -5133,6 +5309,27 @@ void CharacterClass::Load(HWND hwnd)
 						FeatPos = 0;
 						Sphere++;
 					}
+					DataPointer = strstr(DataPointer, ",");
+					DataPointer += 2;
+					strncpy_s(StringData, DataPointer, strstr(DataPointer, ";") - DataPointer);
+					StringData[strstr(DataPointer, ";") - DataPointer] = '\0';
+				}
+				break;
+			}
+			case 26:     //Race past lives
+			{
+				SearchString = StringData;
+				CommaCount = 0;
+				Found = SearchString.find(",");
+				while (Found != string::npos)
+				{
+					CommaCount++;
+					Found = SearchString.find(",", Found + 1);
+				}
+				for (int Count = 0; Count < CommaCount; Count++)
+				{
+					for (int i = 0; i<atoi(StringData); i++)
+						Character.IncreaseRacePastLife(static_cast<PAST_RACE>(Count));
 					DataPointer = strstr(DataPointer, ",");
 					DataPointer += 2;
 					strncpy_s(StringData, DataPointer, strstr(DataPointer, ";") - DataPointer);
@@ -8569,3 +8766,8 @@ bool FeatCompare(FeatListStruct F1, FeatListStruct F2)
     {
     return F1.FeatIndex < F2.FeatIndex;
     }
+//---------------------------------------------------------------------------
+int CharacterClass::GetRaceEnhancement()
+{
+	return RaceEnhancement;
+}

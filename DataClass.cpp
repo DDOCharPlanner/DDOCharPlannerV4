@@ -1194,9 +1194,10 @@ FILESTATE DataClass::LoadSpellFile()
 				Spell[Index].Resist = Data;
                 break;
 				}
-			case 14:     //spell resist
+			case 14:     //spell rare
 			{
-				Spell[Index].Rare = static_cast<bool>(Data);
+					Spell[Index].Rare = *Data != '0';
+
 				break;
 			}
             case 15:     //the graphic icon
@@ -1832,6 +1833,12 @@ string DataClass::GetSpellName(int Index)
     }
 		
 //---------------------------------------------------------------------------
+bool DataClass::GetSpellRare(int Index)
+{
+	return Spell[Index].Rare;
+}
+
+//---------------------------------------------------------------------------
 int DataClass::GetSpellIndex(CLASS ClassType, unsigned int Level, unsigned int Index)
     {
     unsigned int Count;
@@ -2229,7 +2236,7 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_GNOME].InitializeEnhancementTree(ENHT_GNOME, ENHTT_RACE, GNOME, CLASSNONE, "Gnome", true, "GnomeBackground", Arrows);
 	Arrows = "1-4-U-1, 2-4-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_DEEPGNOME].InitializeEnhancementTree(ENHT_DEEPGNOME, ENHTT_RACE, DEEPGNOME, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);// Added a space in "Deep-Gnome" to allow for lockouts in enhancement trees
-	Arrows = "";
+	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 3-0-U-1, 3-2-L-1, 3-2-U-1, 3-2-R-1, 3-3-U-1";
 	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);
 
 	//Class Trees (33) sorted by Class

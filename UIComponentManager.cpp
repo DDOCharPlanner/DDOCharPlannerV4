@@ -562,8 +562,9 @@ void UIComponentManager::InitializeUI()
 
 
 	InitializeUIComponent("AdvWinSpellList", MAINWINDOW, "LISTBOX", "Spell List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_NOTIFY, SpellAdvBaseX, SpellAdvBaseY, 280, 180, MS_ADVWINSPELLLIST);
+	InitializeUIComponent("AdvWinSpellRareCheck", MAINWINDOW, "BUTTON", "Show Only Rare Spells", WS_CHILD | BS_AUTOCHECKBOX, SpellAdvBaseX + 5, SpellAdvBaseY + 303, 160, 20, MS_RARESPELLCHECK);
 	InitializeUIComponent("AdvWinSpellClearButton", MAINWINDOW, "BUTTON", "Clear All Spells", WS_CHILD | BS_PUSHBUTTON, SpellAdvBaseX + 173, SpellAdvBaseY + 303, 110, 20, MS_ES_ADVWINSPELLCLEARBUTTON);
-
+	
 	SpellAdvBaseY += 185;
 	InitializeUIGraphic("SpellsSelectText", MAINWINDOW, SpellAdvBaseX + 20, SpellAdvBaseY, 0, 0);
 
