@@ -57,6 +57,7 @@ class FeatDataClass
 		bool DestinyNotExclusive;
 		bool Legendary;
 	    bool NoFeatTag;
+		bool DragonbornBonus;
 		unsigned int GraphicIconIndex;
 		
 		void StripStringLeadingWhiteSpace(string &SourceString);

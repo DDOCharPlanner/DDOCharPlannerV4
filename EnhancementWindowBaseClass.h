@@ -40,6 +40,7 @@ class EnhancementWindowBaseClass : public IconClass
 		bool ChosenLevel5TreeLock[7];
 		int SessionAPSpentTotal;
 		int SessionAPSpentTree[7];
+		int SessionRaceSpent;
 		TRACKMOUSEEVENT tme;
 		bool TMEFlag;
 		unsigned int CurrentStartingTree;

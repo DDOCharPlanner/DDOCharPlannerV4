@@ -38,6 +38,7 @@ FeatDataClass::FeatDataClass()
 	Destiny = false;
 	DestinyNotExclusive = false;
 	Legendary = false;
+	DragonbornBonus = false;
 	NoFeatTag = true;
 	GraphicIconIndex = 0;
 	}
@@ -95,6 +96,7 @@ FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	Destiny = source.Destiny;
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
+	DragonbornBonus = source.DragonbornBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	}
@@ -146,6 +148,7 @@ FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	Destiny = source.Destiny;
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
+	DragonbornBonus = source.DragonbornBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	
@@ -325,11 +328,17 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					DestinyNotExclusive = true;
 					NoFeatTag = false;
 					}
+				if (FeatLine[i].find("Dragonborn Bonus") != string::npos)
+					{
+					DragonbornBonus = true;
+					NoFeatTag = false;
+					}
 				if (FeatLine[i].find("Legendary") != string::npos)
 					{
 					Legendary = true;
 					NoFeatTag = false;
 					}
+
 				break;
                 }
             case 4:     //the race list
@@ -364,6 +373,8 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(GNOME);
 				if (FeatLine[i].find("Deep-Gnome") != string::npos)
 					RaceType.push_back(DEEPGNOME);
+				if (FeatLine[i].find("Dragonborn") != string::npos)
+					RaceType.push_back(DRAGONBORN);
                 break;
                 }
             case 5:     //the class list
@@ -589,6 +600,8 @@ bool FeatDataClass::GetFeatTag(FEATTAG Tag)
 			return DestinyNotExclusive;
 		case FEATTAGLEGENDARY:
 			return Legendary;
+		case FEATTAGDRAGONBORNBONUS:
+			return DragonbornBonus;
 		case FEATTAGNONE:
 			return NoFeatTag;
 		default:
@@ -1141,6 +1154,11 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == DEEPGNOME)
 					return PREREQ_PASS;
                 }
+			if (Substring.find("Dragonborn") != string::npos)
+			{
+				if (CharacterRace == DRAGONBORN)
+					return PREREQ_PASS;
+			}
             }
         }
 
@@ -1685,6 +1703,8 @@ string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 			return "Gnome";
 		case DEEPGNOME:
 			return "Deep-Gnome";
+		case DRAGONBORN:
+			return "Dragonborn";
 		default:
 			return "Unknown Race";
 		}

@@ -591,3 +591,45 @@ ADVANCEMENT: 20, CLASS, Select a Class;
 ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
+
+RACENAME: Dragonborn;
+DESCRIPTION: {\b Descended long ago from Dragons on the continent of Argonessen, 
+Dragonborn have only recently begun to sojourn to places like Stormreach}\par\par
+{\b {\cf5 Stat}} Notes:\par Dragonborn start with higher {\b {\cf5 strength}} and 
+{\b {\cf5 charisma}}, but lower {\b {\cf5 dexterity}}.\par\par
+Strengths: Resistant to an element of your choosing, potential to 
+excel at both martial and spellcasting roles.\par\par
+Weaknessess: Lower {\b {\cf5 dexterity}} makes certain fighting styles difficult, such as Two Weapon Fighting.;
+BASESTATS: 10, 6, 8, 8, 8, 10;
+ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;
+ADVANCEMENT: 1, REINCARNATION, Set Past Lives;
+ADVANCEMENT: 1, RACEANDSEX, Select a Race and Sex;
+ADVANCEMENT: 1, CLASS, Select an Initial Class;
+ADVANCEMENT: 1, ABILITYPOINT, Ability Increase (%i points to spend), 28;
+ADVANCEMENT: 2, CLASS, Select a Class;
+ADVANCEMENT: 3, CLASS, Select a Class;
+ADVANCEMENT: 4, CLASS, Select a Class;
+ADVANCEMENT: 4, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 5, CLASS, Select a Class;
+ADVANCEMENT: 6, CLASS, Select a Class;
+ADVANCEMENT: 7, CLASS, Select a Class;
+ADVANCEMENT: 8, CLASS, Select a Class;
+ADVANCEMENT: 8, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 9, CLASS, Select a Class;
+ADVANCEMENT: 10, CLASS, Select a Class;
+ADVANCEMENT: 11, CLASS, Select a Class;
+ADVANCEMENT: 12, CLASS, Select a Class;
+ADVANCEMENT: 12, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 13, CLASS, Select a Class;
+ADVANCEMENT: 14, CLASS, Select a Class;
+ADVANCEMENT: 15, CLASS, Select a Class;
+ADVANCEMENT: 16, CLASS, Select a Class;
+ADVANCEMENT: 16, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 17, CLASS, Select a Class;
+ADVANCEMENT: 18, CLASS, Select a Class;
+ADVANCEMENT: 19, CLASS, Select a Class;
+ADVANCEMENT: 20, CLASS, Select a Class;
+ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
+

@@ -239,7 +239,7 @@ void UIComponentManager::InitializeUI()
 	int AdvBoxShiftX = 140;
 
 	InitializeUIComponent("HeroicClassRadio", MAINWINDOW, "BUTTON", "Heroic Class", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX + 17, AdvBoxCurrentY, 110, 18, MS_HEROICCLASS);
-	InitializeUIComponent("IconicClassRadio", MAINWINDOW, "BUTTON", "Iconic Class", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 158, AdvBoxCurrentY, 110, 18, MS_ICONICCLASS);
+	InitializeUIComponent("IconicClassRadio", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 158, AdvBoxCurrentY, 110, 18, MS_ICONICCLASS);
 
 	AdvBoxCurrentY += 30;
 
@@ -248,6 +248,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleOn", MAINWINDOW, AdvBoxCurrentX + 162, AdvBoxCurrentY, 90, 40);
 	InitializeUIGraphic("FemaleOff", MAINWINDOW, AdvBoxCurrentX + 162, AdvBoxCurrentY, 90, 40);
 
+	//Column 1
 	AdvBoxCurrentY += 55;
 
 	InitializeUIGraphic("MaleHumanOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
@@ -283,6 +284,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleWarforgedOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleWarforgedOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
+//Column 2
 	AdvBoxCurrentY = RaceBaseY + 85;
 	AdvBoxCurrentX += AdvBoxShiftX;
 
@@ -311,6 +313,13 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("MaleGnomeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleGnomeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleGnomeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+
+	AdvBoxCurrentY += AdvBoxShiftY;
+
+	InitializeUIGraphic("MaleDragonbornOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("MaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleDragonbornOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
 
 	//iconics Advancement Panel
@@ -413,9 +422,11 @@ void UIComponentManager::InitializeUI()
 
 	AdvBoxCurrentX = ReinCarnateBaseX;
 	AdvBoxCurrentY = ReinCarnateBaseY;
-	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX, AdvBoxCurrentY, 75, 18, MS_HERIOCPASTLIFE);
-	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 85, AdvBoxCurrentY, 75, 18, MS_ICONICPASTLIFE);
-	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 165, AdvBoxCurrentY, 75, 18, MS_EPICPASTLIFE);
+	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX, AdvBoxCurrentY, 60, 18, MS_HERIOCPASTLIFE);
+	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 65, AdvBoxCurrentY, 60, 18, MS_ICONICPASTLIFE);
+	InitializeUIComponent("RacePastRadioButton", MAINWINDOW, "BUTTON", "Race", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 130, AdvBoxCurrentY, 60, 18, MS_RACEPASTLIFE);
+	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 195, AdvBoxCurrentY, 60, 18, MS_EPICPASTLIFE);
+
 	AdvBoxCurrentY = ReinCarnateBaseY + 35;
 
 
@@ -531,7 +542,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MAINWINDOW, AdvBoxX + 24, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
-
+	InitializeUIGraphic("FeatTextDragonborn", MAINWINDOW, AdvBoxX + 5, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextLegendaryFeat", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MAINWINDOW, AdvBoxX + 00, FeatAdvBaseY + 45, 0, 0);
@@ -543,6 +554,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextPath", MAINWINDOW, AdvBoxX + 28, FeatAdvBaseY + 45, 0, 0);
 
 
+
 	//Spell Advancement Panel
 	int SpellAdvBaseX = AdvBoxX + 5;
 	int SpellAdvBaseY = AdvBoxY + 5;
@@ -550,8 +562,9 @@ void UIComponentManager::InitializeUI()
 
 
 	InitializeUIComponent("AdvWinSpellList", MAINWINDOW, "LISTBOX", "Spell List", WS_CHILD | WS_VSCROLL | LBS_NOSEL | LBS_NOINTEGRALHEIGHT | LBS_OWNERDRAWFIXED | LBS_NOTIFY, SpellAdvBaseX, SpellAdvBaseY, 280, 180, MS_ADVWINSPELLLIST);
+	InitializeUIComponent("AdvWinSpellRareCheck", MAINWINDOW, "BUTTON", "Show Only Rare Spells", WS_CHILD | BS_AUTOCHECKBOX, SpellAdvBaseX + 5, SpellAdvBaseY + 303, 160, 20, MS_RARESPELLCHECK);
 	InitializeUIComponent("AdvWinSpellClearButton", MAINWINDOW, "BUTTON", "Clear All Spells", WS_CHILD | BS_PUSHBUTTON, SpellAdvBaseX + 173, SpellAdvBaseY + 303, 110, 20, MS_ES_ADVWINSPELLCLEARBUTTON);
-
+	
 	SpellAdvBaseY += 185;
 	InitializeUIGraphic("SpellsSelectText", MAINWINDOW, SpellAdvBaseX + 20, SpellAdvBaseY, 0, 0);
 
@@ -1029,7 +1042,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextMonk", MULTIFEATWINDOW, X + 24, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextEpic", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);
-
+	InitializeUIGraphic("FeatTextDragonborn", MULTIFEATWINDOW, X + 6, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextLegendaryFeat", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextWarlockPact2", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextBonusFeat", MULTIFEATWINDOW, X + 00, Y + 45, 0, 0);

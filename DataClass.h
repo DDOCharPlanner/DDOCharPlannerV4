@@ -163,6 +163,7 @@ class DataClass
         //spell stuff
 		SpellStruct* GetSpellData(int Index);
         string GetSpellName(int Index);
+		bool GetSpellRare(int Index);
         int GetSpellPoints(CLASS ClassType, int Level);
         int GetSpellIndex(CLASS ClassType, unsigned int Level, unsigned int Index);
         int GetSpellIndex(string SpellName);

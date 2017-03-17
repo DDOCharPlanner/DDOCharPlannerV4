@@ -182,6 +182,7 @@ class MainScreenClass : public IconClass
         HWND AdvWinSurnameInput;
         HWND AdvSkillPointSpendBox;
         HWND AdvWinSpellList;
+		HWND AdvWinSpellRareCheck;
 		HWND AdvWinSpellClearButton;
 		HWND HeroicClassRadioButton;
 		HWND IconicClassRadioButton;
@@ -189,6 +190,7 @@ class MainScreenClass : public IconClass
 		HWND IconicLevelRadioButton;
 		HWND HeroicPastRadioButton;
 		HWND IconicPastRadioButton;
+		HWND RacePastRadioButton;
 		HWND EpicPastRadioButton;
 		int PastLifeRadioState;
         //the description box
@@ -269,6 +271,10 @@ class MainScreenClass : public IconClass
 		GraphicStruct MaleDeepGnomeOff;
 		GraphicStruct FemaleDeepGnomeOn;
 		GraphicStruct FemaleDeepGnomeOff;
+		GraphicStruct MaleDragonbornOn;
+		GraphicStruct MaleDragonbornOff;
+		GraphicStruct FemaleDragonbornOn;
+		GraphicStruct FemaleDragonbornOff;
 		GraphicStruct MaleOn;
 		GraphicStruct FemaleOn;
         GraphicStruct MaleOff;
@@ -301,6 +307,7 @@ class MainScreenClass : public IconClass
         vector <ParentHeadingStruct> SpellListParentHeading;
         vector <ParentHeadingStruct> SpellListSelectParentHeading;
         bool EquipmentScreenShown;
+		bool ShowRareSpells;
         EQUIPMENTSLOTTYPE EquipmentScreenCurrentSelectedSlot;
 		vector <ParentHeadingStruct> ASListParentHeading;
 		vector <ASListItemStruct> ASListItems;

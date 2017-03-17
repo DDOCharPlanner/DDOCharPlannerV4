@@ -47,7 +47,7 @@ class CharacterClass
         ALIGNMENT GetAlignment();
         void SetAlignment(ALIGNMENT NewAlignment);
         bool IsAlignmentLegal(ALIGNMENT Test);
-
+		
 		//class
         CLASS GetClass(int AtLevel, bool Change = true);
         void SetClass(CLASS NewClass, int AtLevel);
@@ -113,6 +113,10 @@ class CharacterClass
 		int GetIconicFeatIndex(ICONICRACES Race);
 		int GetFeatCountAtLevel(int Level);
 		int GetFeatAtLevel(int Level,int index);
+		int GetRacePastLifeCount(PAST_RACE Race);
+		void IncreaseRacePastLife(PAST_RACE Race);
+		void DecreaseRacePastLife(PAST_RACE Race);
+		int GetRaceFeatIndex(PAST_RACE Race);
 		
         //skill stuff
         float CalculateSkillLevel(SKILLS Skill, unsigned int AtLevel, bool AddMiscMod);
@@ -182,6 +186,7 @@ class CharacterClass
 		void GetTurnData(unsigned int CurrentSelectedLevel, int *TurnsPerDay, int *Check, int *Damage);
 		/*bool IsMonkCentered(unsigned int CurrentSelectedLevel);*/
 		int TomeRaise[6][MAXLEVEL];
+		int GetRaceEnhancement();
 
     private:
         string FirstName;
@@ -204,6 +209,7 @@ class CharacterClass
         int ReincarnationCount[NUMCLASSES];
 		int EpicPastLifeCount[EPICPASTLIFESPHERE][3];
 		int IconicPastLifeCount[ICONICPASTLIFEFEAT];
+		int RacePastLifeCount[RACEPASTLIFE];
         vector <SpellListStruct> SpellList;
         vector <string> ValidationError;
 		bool LevelError[MAXLEVEL];
@@ -214,6 +220,7 @@ class CharacterClass
 
 		//Enhancement Variables
 		Character_Enhancements_Class CharacterEnhancements;
+		int RaceEnhancement;
 
 		//Destiny Variables
 		Character_Destinies_Class CharacterDestinies;

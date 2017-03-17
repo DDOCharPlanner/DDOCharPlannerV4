@@ -1211,7 +1211,7 @@ void MultiAbilityWindowClass::DrawCurrent()
 	rc.bottom = Y + Height;
 	ClearRect(hdc, rc);
 	ss.str("");
-	Ability = Character.GetAbility(i, CurrentLevel, true, false, false, false);
+	Ability = Character.GetAbility(i, CurrentLevel, true, false, false, true);
 	ss << Ability;
 	TextString = ss.str();
 	if (TextString.size()>1)

@@ -2019,7 +2019,7 @@ bool Data_Enhancement_Class::IsRaceTree()
 		return true;
 	if (Tree == "Warforged")
 		return true;
-	if (Tree == "Warforged")
+	if (Tree == "Dragonborn")
 		return true;
 		
 	return false;
@@ -2444,6 +2444,8 @@ RACE Data_Enhancement_Class::SetTreeRace(ENHANCEMENT_TREE EnhancementTree)
 			return GNOME;
 		case ENHT_DEEPGNOME:
 			return DEEPGNOME;
+		case ENHT_DRAGONBORN:
+			return DRAGONBORN;
 		}
 	return RACENONE;
 	}
@@ -2481,6 +2483,8 @@ string Data_Enhancement_Class::GetRaceName()
 			return "Gnome";
 		case ENHT_DEEPGNOME:
 			return "Deep Gnome";
+		case ENHT_DRAGONBORN:
+			return "Dragonborn";
 		}
 	return "";
 	}

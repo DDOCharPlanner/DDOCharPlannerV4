@@ -114,8 +114,8 @@ void EnhancementWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SetWindowPos(EnhancementWindowHandle, Parent, (ScreenX/2)-(WindowX/2), (ScreenY/2)-(WindowY/2), 0, 0, SWP_NOSIZE);
 
 	//the child windows
-	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_RIGHT, 520, 510, 200, 15, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
-	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD, 720, 510, 70, 15, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
+	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_CENTER, 450, 510, 400, 15, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
+	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD | SS_CENTER, 450, 530, 400, 15, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
 	ResetAllTreesButton = CreateWindowEx(NULL, "BUTTON", "Reset All Trees", WS_CHILD, 865, 505, 125, 20, EnhancementWindowHandle, (HMENU)EW_RESETALLTREESBUTTON, Instance, NULL);
 	CancelButton = CreateWindowEx(NULL, "BUTTON", "Cancel", WS_CHILD, 865, 530, 60, 20, EnhancementWindowHandle, (HMENU)EW_CANCELBUTTON, Instance, NULL);
 	AcceptButton = CreateWindowEx(NULL, "BUTTON", "Accept", WS_CHILD, 930, 530, 60, 20, EnhancementWindowHandle, (HMENU)EW_ACCEPTBUTTON, Instance, NULL);
@@ -199,7 +199,18 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 		TotalAP = CharacterLevel *4;
 	else
 		TotalAP = 80; //this is max attainable action points
+	//Check for Race Past Life Action Points
+	RaceAP = Character.GetRaceEnhancement();
+	if (RaceAP > 0)
+	{
+		RaceAPAvailable = RaceAP;
+	}
+	else
+	{
+		RaceAPAvailable = 0;
+	}
 	TotalAPAvailable = TotalAP;
+	TotalAPAvailable += RaceAPAvailable;
 	TotalAPSpent = 0;
 
 	//Lets set our ClassProgression so we know what classes player took at what levels
@@ -226,14 +237,29 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 	UpdateCurrentTrees("New");
 	
 	//Set the APRemaing & APSpent Labels
+	if (RaceAP < APSpentTree[0])
+		RaceAPSpent = RaceAPAvailable;
+	else
+		RaceAPSpent = APSpentTree[0];
+	
+	RaceAPAvailable -= RaceAPSpent;
 	for (unsigned int i=0; i<7; i++)
 		{
 		TotalAPSpent += APSpentTree[i];
 		}
 	TotalAPAvailable -= TotalAPSpent;
-	
-	UpdateAPSpentLabel(TotalAPSpent);
-	UpdateAPAvailableLabel(TotalAPAvailable);
+
+	if (Character.GetRaceEnhancement() > 0)
+	{
+		UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+		UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+	}
+	else
+	{
+		UpdateAPSpentLabel(TotalAPSpent);
+		UpdateAPAvailableLabel(TotalAPAvailable);
+	}
+
 	SessionAPSpentTotal = 0;
 	for (int i=0; i<7; i++)
 		SessionAPSpentTree[i] = 0;
@@ -877,6 +903,9 @@ void EnhancementWindowClass::ResetAllTrees()
 
 	//Lets modify our Total Variables
 	TotalAPAvailable = TotalAP;
+	RaceAPAvailable = RaceAP;
+	TotalAPAvailable += RaceAPAvailable;
+	RaceAPSpent = 0;
 	TotalAPSpent = 0;
 	SessionAPSpentTotal = 0;
 	//lets reset our Tree stuff
@@ -913,8 +942,16 @@ void EnhancementWindowClass::ResetAllTrees()
 		}
 	
 	//Update our Labels and graphics
-	UpdateAPAvailableLabel(TotalAPAvailable);
-	UpdateAPSpentLabel(TotalAPSpent);
+	if (RaceAP > 0)
+	{
+		UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+		UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+	}
+	else
+	{
+		UpdateAPAvailableLabel(TotalAPAvailable);
+		UpdateAPSpentLabel(TotalAPSpent);
+	}
 	EnableWindow(AcceptButton, false);
 	DrawGraphics(hdc);
 	UpdateWindow(EnhancementWindowHandle);
@@ -946,6 +983,13 @@ void EnhancementWindowClass::ResetCurrentTree(int CurrentTree)
 		}
 
 	//Lets modify our AP Variable before resetting the tree
+	if ((CurrentStartingTree + CurrentTree) == 0)
+	{
+		TotalAPAvailable += RaceAP;
+		RaceAPAvailable = RaceAP;
+		RaceAPSpent = 0;
+	}
+
 	TotalAPAvailable += APSpentTree[CurrentStartingTree + CurrentTree];
 	TotalAPSpent -= APSpentTree[CurrentStartingTree + CurrentTree];
 	APSpentTree[CurrentStartingTree + CurrentTree] = 0;
@@ -994,9 +1038,20 @@ void EnhancementWindowClass::ResetCurrentTree(int CurrentTree)
 	//change our Session Variables
 	SessionAPSpentTotal -= SessionAPSpentTree[CurrentStartingTree + CurrentTree];
 	SessionAPSpentTree[CurrentStartingTree + CurrentTree] = 0;
+	if((CurrentStartingTree + CurrentTree) == 0)
+		SessionRaceSpent = 0;
 	//Update our Labels and graphics
-	UpdateAPAvailableLabel(TotalAPAvailable);
-	UpdateAPSpentLabel(TotalAPSpent);
+	if (RaceAP > 0)
+	{
+		UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+		UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+	}
+	else
+	{
+		UpdateAPAvailableLabel(TotalAPAvailable);
+		UpdateAPSpentLabel(TotalAPSpent);
+	}
+
 	if (DrawAllTrees == true)
 		DrawGraphics(hdc);
 	else
@@ -1098,6 +1153,23 @@ void EnhancementWindowClass::MultiEnhancementSelected(int Tree, int Level, int S
 		APSpentTree[CurrentStartingTree + Tree] += Cost;
 		SessionAPSpentTree[CurrentStartingTree + Tree] += Cost;
 		SessionAPSpentTotal += Cost;
+		if ((CurrentStartingTree + Tree) == 0)
+		{
+			if (RaceAPAvailable > Cost)
+			{
+				RaceAPSpent += Cost;
+			}
+			else
+			{
+				if (RaceAPAvailable > 0)
+				{
+					RaceAPSpent = RaceAP;
+				}
+
+			}
+			RaceAPAvailable = RaceAP - RaceAPSpent;
+		}
+
 		TotalAPAvailable -= Cost;
 		TotalAPSpent += Cost;
 
@@ -1119,9 +1191,17 @@ void EnhancementWindowClass::MultiEnhancementSelected(int Tree, int Level, int S
 					ChosenLevel5TreeLock[x] = true;
 				}
 			}
+		if (RaceAP > 0)
+		{
+			UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+			UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+		}
+		else
+		{
+			UpdateAPAvailableLabel(TotalAPAvailable);
+			UpdateAPSpentLabel(TotalAPSpent);
+		}
 
-		UpdateAPAvailableLabel(TotalAPAvailable);
-		UpdateAPSpentLabel(TotalAPSpent);
 		if (Level == 5)
 			DrawGraphics(hdc);
 		else
@@ -1385,27 +1465,52 @@ void EnhancementWindowClass::SetPossibleTrees()
 	}
 
 //-----------------------------------------------------------------------------------
-void EnhancementWindowClass::UpdateAPAvailableLabel(int NewValue)
+void EnhancementWindowClass::UpdateAPAvailableLabel(int NewValue, int RaceAPValue)
 	{
 	string Text;
 	ostringstream ss;
-
 	ss.str("");
-	ss << NewValue;
-	ss << " Action Points Remaining,";
+
+	if (RaceAPValue != -1)
+	{
+		ss << NewValue - RaceAPValue;
+		ss << " Action Points Remaining,";
+		ss << " ";
+		ss << RaceAPValue;
+		ss << " Racial Points Remaining";
+	}
+	else
+	{
+		ss << NewValue;
+		ss << " Action Points Remaining,";
+	}
+
+
 	Text = ss.str();
 	SendMessage(APRemainingLabel, WM_SETTEXT, 0, (LPARAM)Text.c_str());
 	}
 
 //-----------------------------------------------------------------------------------
-void EnhancementWindowClass::UpdateAPSpentLabel(int NewValue)
+void EnhancementWindowClass::UpdateAPSpentLabel(int NewValue, int RaceAPValue)
 	{
 	string Text;
 	ostringstream ss;
 	
 	ss.str("");
-	ss << NewValue;
-	ss << " Spent";
+
+	if (RaceAPValue != -1)
+	{
+		ss << NewValue - RaceAPValue;
+		ss << " Spent";
+		ss << ", ";
+		ss << RaceAPValue;
+		ss << " Racial Points Spent.";
+	}
+	else
+	{
+		ss << NewValue;
+		ss << " Spent";
+	}
 	Text = ss.str();
 	SendMessage(APSpentLabel, WM_SETTEXT, 0, (LPARAM)Text.c_str());
 	}
@@ -1674,6 +1779,16 @@ void EnhancementWindowClass::DrawTree(HDC hdc, int tree)
 	int ArrowRight_Left[3][5] = {{84, 144, 204, 264, 324},
 								{394, 454, 514, 574, 634},
 								{704, 764, 824, 884, 944}};
+	int TreeAPAvailable;
+
+	if (tree == 0)
+	{
+		TreeAPAvailable = TotalAPAvailable;
+	}
+	else
+	{
+		TreeAPAvailable = TotalAPAvailable - RaceAPAvailable;
+	}
 		
 	//Draw the background image for the tree
 	EnhancementTree = Data.GetEnhancementTreePointer(CurrentTree[tree]);
@@ -1720,7 +1835,7 @@ void EnhancementWindowClass::DrawTree(HDC hdc, int tree)
 						Enhancement = EnhancementTree->GetEnhancementPointer(CurrentTreeSlots[tree][xlevel][xslot].EnhancementIndex[j]);
 						if (AreAllRequirementsMet(Enhancement) == true)
 							{    //All the Requirements for an Enhancement were met so set out border color to White.
-							if (CurrentTreeSlots[tree][xlevel][xslot].Cost <= TotalAPAvailable)
+							if (CurrentTreeSlots[tree][xlevel][xslot].Cost <= TreeAPAvailable)
 								{
 								SlotBorderColor = WhiteBorder;
 								tempFlag = true;
@@ -1753,7 +1868,7 @@ void EnhancementWindowClass::DrawTree(HDC hdc, int tree)
 					SlotBorderColor = NoBorder;
 					if (AreAllRequirementsMet(Enhancement) == true)
 						{
-						if (CurrentTreeSlots[tree][xlevel][xslot].Cost <= TotalAPAvailable)
+						if (CurrentTreeSlots[tree][xlevel][xslot].Cost <= TreeAPAvailable)
 							SlotBorderColor = WhiteBorder;   // All Requirments were met for this enhancement
 						}
 					else
@@ -2079,12 +2194,23 @@ void EnhancementWindowClass::HandleLeftMouseButtonClick(int x, int y)
 	bool treesRedraw;
 	Data_Enhancement_Class *Enhancement;
 	Data_Enhancement_Tree_Class *EnhancementTree;
+	int TreeAPAvailable;
+
 
 	ParentDC = GetDC(EnhancementWindowHandle);
 	RequirementsMet = false;
 
 	//Lets find out if user clicked on a slot
 	SlotSelected = IsSlotSelected(x, y, &Tree, &Level, &Slot);
+
+	if (Tree == 0)
+	{
+		TreeAPAvailable = TotalAPAvailable;
+	}
+	else
+	{
+		TreeAPAvailable = TotalAPAvailable - RaceAPAvailable;
+	}
 
 	if (SlotSelected == true)
 		{   // Ok a slot was clicked, let see if its a valid slot
@@ -2103,7 +2229,7 @@ void EnhancementWindowClass::HandleLeftMouseButtonClick(int x, int y)
 
 			if (Enhancement != nullptr)
 				{
-				if (CurrentTreeSlots[Tree][Level][Slot].RanksTaken < CurrentTreeSlots[Tree][Level][Slot].Ranks && CurrentTreeSlots[Tree][Level][Slot].Cost <= TotalAPAvailable)
+				if (CurrentTreeSlots[Tree][Level][Slot].RanksTaken < CurrentTreeSlots[Tree][Level][Slot].Ranks && CurrentTreeSlots[Tree][Level][Slot].Cost <= TreeAPAvailable)
 					{
 					RequirementsMet = AreAllRequirementsMet(Enhancement);
 					}
@@ -2144,6 +2270,25 @@ void EnhancementWindowClass::HandleLeftMouseButtonClick(int x, int y)
 					APSpentTree[CurrentStartingTree + Tree] += Cost;
 					SessionAPSpentTree[CurrentStartingTree + Tree] += Cost;
 					SessionAPSpentTotal += Cost;
+					if ((CurrentStartingTree + Tree) == 0)
+					{
+						if (RaceAPAvailable > Cost)
+						{
+
+							RaceAPSpent += Cost;
+						}
+						else
+						{
+							if (RaceAPAvailable > 0)
+							{
+								RaceAPSpent = RaceAP;
+							}
+
+						}
+						RaceAPAvailable = RaceAP - RaceAPSpent;
+					}
+
+
 					TotalAPAvailable -= Cost;
 					TotalAPSpent += Cost;
 					if (Level == 5)
@@ -2164,8 +2309,16 @@ void EnhancementWindowClass::HandleLeftMouseButtonClick(int x, int y)
 								ChosenLevel5TreeLock[x] = true;
 							}
 						}
-					UpdateAPAvailableLabel(TotalAPAvailable);
-					UpdateAPSpentLabel(TotalAPSpent);
+					if (RaceAP > 0)
+					{
+						UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+						UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+					}
+					else
+					{
+						UpdateAPAvailableLabel(TotalAPAvailable);
+						UpdateAPSpentLabel(TotalAPSpent);
+					}
 					EnableWindow(AcceptButton, true);
 					//check Divine Might and Know the Angles
 					treesRedraw = false;
@@ -2320,10 +2473,12 @@ void EnhancementWindowClass::HandleRightMouseButtonClick(int x, int y)
 	AnotherSlotRequires = false;
 	LockFlag = true;
 
+
 	ParentDC = GetDC(EnhancementWindowHandle);
 
 	//Lets find out if user clicked on a slot
 	SlotSelected = IsSlotSelected(x, y, &Tree, &Level, &Slot);
+
 
 	if (SlotSelected == true)
 		{//ok a Slot was clicked on, lets see if its valid
@@ -2425,10 +2580,38 @@ void EnhancementWindowClass::HandleRightMouseButtonClick(int x, int y)
 							ChosenLevel5TreeLock[x] = false;
 						}
 					}
+				if ((CurrentStartingTree + Tree) == 0)
+				{
+					if (RaceAP > 0 )
+					{
+						if ((APSpentTree[0] - RaceAP) < Cost)
+						{
+							if ((APSpentTree[0] - RaceAP) > 0)
+							{
+								RaceAPSpent += Cost - (APSpentTree[0] - RaceAP);
+							}
+							else
+							{
+								RaceAPSpent -= Cost;
+							}
+						}
+						RaceAPAvailable = RaceAP - RaceAPSpent;
+					}
+
+					
+				}
 				TotalAPAvailable += Cost;
 				TotalAPSpent -= Cost;
-				UpdateAPAvailableLabel(TotalAPAvailable);
-				UpdateAPSpentLabel(TotalAPSpent);
+				if (RaceAP > 0)
+				{
+					UpdateAPAvailableLabel(TotalAPAvailable, RaceAPAvailable);
+					UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+				}
+				else
+				{
+					UpdateAPAvailableLabel(TotalAPAvailable);
+					UpdateAPSpentLabel(TotalAPSpent);
+				}
 				//Check Divine Might
 									treesRedraw = false;
 					if (EnhancementTree->GetTreeIndex() == ENHT_HARPER_AGENT)
