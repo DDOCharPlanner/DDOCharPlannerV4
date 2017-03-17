@@ -38,6 +38,7 @@ FeatDataClass::FeatDataClass()
 	Destiny = false;
 	DestinyNotExclusive = false;
 	Legendary = false;
+	DragonbornBonus = false;
 	NoFeatTag = true;
 	GraphicIconIndex = 0;
 	}
@@ -95,6 +96,7 @@ FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	Destiny = source.Destiny;
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
+	DragonbornBonus = source.DragonbornBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	}
@@ -146,6 +148,7 @@ FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	Destiny = source.Destiny;
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
+	DragonbornBonus = source.DragonbornBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	
@@ -325,16 +328,17 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					DestinyNotExclusive = true;
 					NoFeatTag = false;
 					}
+				if (FeatLine[i].find("Dragonborn Bonus") != string::npos)
+					{
+					DragonbornBonus = true;
+					NoFeatTag = false;
+					}
 				if (FeatLine[i].find("Legendary") != string::npos)
 					{
 					Legendary = true;
 					NoFeatTag = false;
 					}
-				if (FeatLine[i].find("Dragonborn Bonus") != string::npos)
-				{
-					DragonbornBonus = true;
-					NoFeatTag = false;
-				}
+
 				break;
                 }
             case 4:     //the race list

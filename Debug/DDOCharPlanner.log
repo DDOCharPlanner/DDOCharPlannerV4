@@ -1,9 +1,3 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DDOCharGen.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  CharacterClass.cpp
-e:\planner\ddocharplannerv4\characterclass.cpp(5253): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5274): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5299): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5329): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(4673): warning C4101: 'hWnd' : unreferenced local variable
-e:\planner\ddocharplannerv4\characterclass.cpp(1481): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+  DataClass.cpp
   DDOCharPlanner.vcxproj -> E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe

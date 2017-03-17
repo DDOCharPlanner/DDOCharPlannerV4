@@ -2220,7 +2220,7 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_HALFLING].InitializeEnhancementTree(ENHT_HALFLING, ENHTT_RACE, HALFLING, CLASSNONE, "Halfling", true, "HalflingBackground", Arrows);
 	Arrows = "1-0-U-1, 1-3-U-1, 2-0-U-1, 2-1-U-2, 2-3-U-1, 2-3-L-1, 2-4-U-1, 3-0-U-1, 3-3-U-1, 4-3-L-1";
 	EnhancementTreeData[ENHT_HALF_ELF].InitializeEnhancementTree(ENHT_HALF_ELF, ENHTT_RACE, HALFELF, CLASSNONE, "Half Elf", true, "HalfElfBackground", Arrows);// Added a space in "Half-Elf" to allow for lockouts in enhancment trees
-	Arrows = "1-0-U-1, 1-1-U-1, 1-3-U-1, 2-0-U-1, 2-0-R-1, 2-3-U-1, 3-3-U-1, 4-3-L-1";
+	Arrows = "1-0-U-1, 1-3-U-1, 2-0-U-1, 2-3-U-1, 3-3-U-1, 4-3-L-1";
 	EnhancementTreeData[ENHT_HALF_ORC].InitializeEnhancementTree(ENHT_HALF_ORC, ENHTT_RACE, HALFORC, CLASSNONE, "Half Orc", true, "HalfOrcBackground", Arrows);// Added a space in "Half-Orc" to allow for lockouts in enhancment trees
 	Arrows = "1-0-U-1, 1-1-U-1, 1-2-U-1, 1-3-U-2, 2-0-U-1, 2-1-U-1, 2-2-U-1, 3-2-U-1, 3-3-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_HUMAN].InitializeEnhancementTree(ENHT_HUMAN, ENHTT_RACE, HUMAN, CLASSNONE, "Human", true, "HumanBackground", Arrows);
@@ -2230,14 +2230,14 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_PURPLE_DRAGON_KNIGHT].InitializeEnhancementTree(ENHT_PURPLE_DRAGON_KNIGHT, ENHTT_RACE, PURPLEDRAGONKNIGHT, CLASSNONE, "Purple Dragon Knight", true, "HumanBackground", Arrows);
 	Arrows = "1-0-U-1, 1-4-U-1, 2-0-U-1, 2-2-U-1, 2-3-U-1, 3-0-U-1, 3-0-R-1";
 	EnhancementTreeData[ENHT_SHADAR_KAI].InitializeEnhancementTree(ENHT_SHADAR_KAI, ENHTT_RACE, SHADARKAI, CLASSNONE, "Shadar Kai", true, "ShadarKaiBackground", Arrows);// Added a space in "Shadar-Kai" to allow for lockouts in enhancment trees
-	Arrows = "1-0-U-1, 1-3-U-1, 2-3-U-1, 3-3-U-1";
+	Arrows = "1-0-U-1, 1-3-U-1, 2-3-U-1, 3-3-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_WARFORGED].InitializeEnhancementTree(ENHT_WARFORGED, ENHTT_RACE, WARFORGED, CLASSNONE, "Warforged", true, "WarforgedBackground", Arrows);
 	Arrows = "1-0-U-1, 1-4-U-1, 2-0-U-1, 2-4-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_GNOME].InitializeEnhancementTree(ENHT_GNOME, ENHTT_RACE, GNOME, CLASSNONE, "Gnome", true, "GnomeBackground", Arrows);
 	Arrows = "1-4-U-1, 2-4-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_DEEPGNOME].InitializeEnhancementTree(ENHT_DEEPGNOME, ENHTT_RACE, DEEPGNOME, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);// Added a space in "Deep-Gnome" to allow for lockouts in enhancement trees
 	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 3-0-U-1, 3-2-L-1, 3-2-U-1, 3-2-R-1, 3-3-U-1";
-	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);
+	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Dragonborn", true, "DeepGnomeBackground", Arrows);
 
 	//Class Trees (33) sorted by Class
 	//Artificer

@@ -3251,6 +3251,11 @@ void MainScreenClass::FillFeatSelectBox()
                     if (F1 == FEATROGUEBONUS || F2 == FEATROGUEBONUS || F3 == FEATROGUEBONUS)
                         FeatVector.push_back(FeatIndex);
                     }
+				else if (Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
+				{
+					if (F1 == FEATDRAGONBORNBONUS || F2 == FEATDRAGONBORNBONUS || F3 == FEATDRAGONBORNBONUS)
+						FeatVector.push_back(FeatIndex);
+				}
                 else
                     FeatVector.push_back(FeatIndex);
                 }
@@ -3353,7 +3358,9 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 	bool WarlockPact;
 	bool Destiny;
 	bool Legendary;
+	bool DragonbornBonus;
     int XOffset;
+
 	PREREQRESULT FeatPrereqStatus;
 	FeatDataClass *Feat;
 
@@ -3397,6 +3404,7 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 	WarlockPact = false;
 	Destiny = false;
 	Legendary = false;
+	DragonbornBonus = false;
 
     for (unsigned int i=0; i<3; i++)
         {
@@ -3428,6 +3436,8 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 			Destiny = true;
 		if (FeatSlot[i] == FEATLEGENDARY)
 			Legendary = true;
+		if (FeatSlot[i] == FEATDRAGONBORNBONUS)
+			DragonbornBonus = true;
 		}
 		
 	//grab a pointer to the feat
@@ -3470,6 +3480,8 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else if (Legendary == true && Feat->GetFeatTag(FEATTAGLEGENDARY) == true)
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
+		else if (DragonbornBonus == true && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
+			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
 		else
 			OriginalColor = SetTextColor(hDC, RGB(255,255,255));
 		TextOut(hDC, left+45+XOffset, top+10, Text.c_str(), Text.size());
@@ -7400,7 +7412,7 @@ void MainScreenClass::EndDragAndDropOperation(int x, int y)
 			//do not allow them to be placed in other slot types
             if (FeatSlot[Index] == FEATCHARACTER || FeatSlot[Index] == FEATHUMANBONUS)
                 {
-				valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false;
+				valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == false;
                 }
             else switch (FeatSlot[Index])
 				{

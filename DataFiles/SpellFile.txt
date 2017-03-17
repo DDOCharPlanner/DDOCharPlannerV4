@@ -2090,7 +2090,7 @@ RARE: 0;
 ICON: ExpeditiousRetreat;
 
 SPELLNAME: Faerie Fire;
-DESCRIPTION: Arcs a flare of faerie fire through the air, bursting outward to affect all enemies near it. Targets are dazzled and take a -1 penalty to attack, spot, and search. Targets that fail a reflex check are illuminated by faerie fire, dispelling stealth, invisibility, blur, and displacement, for 30 seconds, and giving a -40 penalty to hide. Sightless enemies are immune to the dazzle effect.;
+DESCRIPTION: Arcs a flare of faerie fire through the air, bursting outward to affect all enemies near it. Targets are dazzled and take a -1 penalty to attack, spot, and search. Sightless enemies are immune to the dazzle effect.;
 CLASSLIST: Druid;
 LEVEL: 1;
 SCHOOL: Evocation;
@@ -2099,7 +2099,7 @@ COMPONENTS: Somatic, Verbal;
 META: Enlarge, Heighten, Quicken;
 RANGE: tbd;
 TARGET: tbd;
-DURATION: 30 Seconds;
+DURATION: 10 Seconds;
 COOLDOWN: tbd;
 SAVING: Reflex;
 RESIST: Yes;
