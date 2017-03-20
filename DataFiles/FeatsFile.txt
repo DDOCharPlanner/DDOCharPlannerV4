@@ -36,6 +36,7 @@ RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Blad
 CLASSLIST: Monk;
 LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
+NEEDSALL: Class Monk 1;
 ICON: AdeptOfForms;
 VERIFIED: 2013-09-24, in-game;
 
@@ -55,6 +56,7 @@ FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your 
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Adept of Forms;
 ICON: FlowingWaterStrikeIcon;
 VERIFIED: 2013-08-10, in-game;
 
