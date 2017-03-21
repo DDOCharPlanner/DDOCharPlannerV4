@@ -29,7 +29,7 @@ class CharacterClass
 
         void Reset();
         string GetInstructionString(int CurrentSelectedLevel, int Index, int *Value);
-        void Save(HWND hwnd);
+        void Save(HWND hwnd, bool Saveas = false);
         void Load(HWND hwnd);
 		string GetErrorList();
 		bool GetLevelError(unsigned int Level);
@@ -196,7 +196,7 @@ class CharacterClass
         ALIGNMENT Alignment;
         CLASS ClassRecord[MAXLEVEL];
         int AbilityRaise[6];
-        
+		char FiletoOpen[MAX_PATH + 1];
         ABILITIES AbilityRaise4;
         ABILITIES AbilityRaise8;
         ABILITIES AbilityRaise12;

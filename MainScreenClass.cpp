@@ -63,7 +63,9 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	LoadButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("SaveButton", MAINWINDOW);
 	SaveButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
-    Component = UIComponent->GetComponentData("ClearButton", MAINWINDOW);
+	Component = UIComponent->GetComponentData("SaveAsButton", MAINWINDOW);
+	SaveAsButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIComponent->GetComponentData("ClearButton", MAINWINDOW);
 	ClearButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("PrintButton", MAINWINDOW);
 	PrintButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
@@ -350,6 +352,7 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	    SendMessage(RaceClassLabel, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(LoadButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(SaveButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(SaveAsButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ClearButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(PrintButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ForumExportButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
@@ -503,6 +506,7 @@ void MainScreenClass::Show(bool State)
     ShowWindow(RaceClassLabel, State);
     ShowWindow(LoadButton, State);
     ShowWindow(SaveButton, State);
+	ShowWindow(SaveAsButton, State);
     ShowWindow(ClearButton, State);
     ShowWindow(PrintButton, State);
     ShowWindow(ForumExportButton, State);
@@ -752,6 +756,11 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
                     Character.Save(ParentWindow);
                     return 0;
                     }
+				if ((int)LOWORD(wParam) == MS_SAVEASBUTTON)
+				{
+					Character.Save(ParentWindow, true);
+					return 0;
+				}
                 if ((int)LOWORD(wParam) == MS_PRINTBUTTON)
                     {
                     InterfaceManager.ShowChild(PRINTWINDOW, true);
@@ -7682,6 +7691,9 @@ void MainScreenClass::SubclassChildWindows()
     OriginalProc = (WNDPROC)SetWindowLong(SaveButton, GWL_WNDPROC, (LONG)SubclassWndProc);
     SubclassHWNDs.push_back(SaveButton);
     OriginalProcs.push_back(OriginalProc);
+	//OriginalProc = (WNDPROC)SetWindowLong(SaveAsButton, GWL_WNDPROC, (LONG)SubclassWndProc);
+	//SubclassHWNDs.push_back(SaveAsButton);
+	//OriginalProcs.push_back(OriginalProc);
     OriginalProc = (WNDPROC)SetWindowLong(ClearButton, GWL_WNDPROC, (LONG)SubclassWndProc);
     SubclassHWNDs.push_back(ClearButton);
     OriginalProcs.push_back(OriginalProc);
@@ -8034,6 +8046,7 @@ void MainScreenClass::ResizeScreen(HWND Wnd)
 	ResizeWindow("EquipmentScreenButton", EquipmentScreenButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("LoadButton", LoadButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("SaveButton", SaveButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("SaveAsButton", SaveAsButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ClearButton", ClearButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("PrintButton", PrintButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ForumExportButton", ForumExportButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);

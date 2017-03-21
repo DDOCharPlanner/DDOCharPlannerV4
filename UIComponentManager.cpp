@@ -29,12 +29,13 @@ void UIComponentManager::InitializeUI()
 
 	InitializeUIComponent("LoadButton", MAINWINDOW, "BUTTON", "Load", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 0, MenuBarY, MenuButtonW, MenuButtonH, MS_LOADBUTTON);
 	InitializeUIComponent("SaveButton", MAINWINDOW, "BUTTON", "Save", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 1, MenuBarY, MenuButtonW, MenuButtonH, MS_SAVEBUTTON);
-	InitializeUIComponent("PrintButton", MAINWINDOW, "BUTTON", "Print", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 2, MenuBarY, MenuButtonW, MenuButtonH, MS_PRINTBUTTON);
-	InitializeUIComponent("ForumExportButton", MAINWINDOW, "BUTTON", "Forum Exp", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 3, MenuBarY, MenuButtonW, MenuButtonH, MS_FORUMEXPORTBUTTON);
-	InitializeUIComponent("ClearButton", MAINWINDOW, "BUTTON", "Clear", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 4, MenuBarY, MenuButtonW, MenuButtonH, MS_CLEARBUTTON);
-	InitializeUIComponent("ItemBuilderButton", MAINWINDOW, "BUTTON", "Item Builder", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 5, MenuBarY, MenuButtonW, MenuButtonH, MS_ITEMBUILDERBUTTON);
-	InitializeUIComponent("EquipmentScreenButton", MAINWINDOW, "BUTTON", "Equipment", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 6, MenuBarY, MenuButtonW, MenuButtonH, MS_EQUIPMENTSCREENBUTTON);
-	InitializeUIComponent("DisplayErrorsButton", MAINWINDOW, "BUTTON", "Show Err", WS_CHILD | BS_PUSHBUTTON | WS_DISABLED, MenuBarX + MenuButtonIncX * 7, MenuBarY, MenuButtonW, MenuButtonH, MS_DISPLAYERRORBUTTON);
+	InitializeUIComponent("SaveAsButton", MAINWINDOW, "BUTTON", "Save AS", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 2, MenuBarY, MenuButtonW, MenuButtonH, MS_SAVEASBUTTON);
+	InitializeUIComponent("PrintButton", MAINWINDOW, "BUTTON", "Print", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 3, MenuBarY, MenuButtonW, MenuButtonH, MS_PRINTBUTTON);
+	InitializeUIComponent("ForumExportButton", MAINWINDOW, "BUTTON", "Forum Exp", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 4, MenuBarY, MenuButtonW, MenuButtonH, MS_FORUMEXPORTBUTTON);
+	InitializeUIComponent("ClearButton", MAINWINDOW, "BUTTON", "Clear", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 5, MenuBarY, MenuButtonW, MenuButtonH, MS_CLEARBUTTON);
+	InitializeUIComponent("ItemBuilderButton", MAINWINDOW, "BUTTON", "Item Builder", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 6, MenuBarY, MenuButtonW, MenuButtonH, MS_ITEMBUILDERBUTTON);
+	InitializeUIComponent("EquipmentScreenButton", MAINWINDOW, "BUTTON", "Equipment", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 7, MenuBarY, MenuButtonW, MenuButtonH, MS_EQUIPMENTSCREENBUTTON);
+	InitializeUIComponent("DisplayErrorsButton", MAINWINDOW, "BUTTON", "Show Err", WS_CHILD | BS_PUSHBUTTON | WS_DISABLED, MenuBarX + MenuButtonIncX * 8, MenuBarY, MenuButtonW, MenuButtonH, MS_DISPLAYERRORBUTTON);
 
 	InitializeUIComponent("QuitButton", MAINWINDOW, "BUTTON", "Quit", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 10, MenuBarY, MenuButtonW, MenuButtonH, MS_QUITBUTTON);
 	InitializeUIComponent("AboutButton", MAINWINDOW, "BUTTON", "About", WS_CHILD | BS_PUSHBUTTON, MenuBarX + MenuButtonIncX * 11, MenuBarY, MenuButtonW, MenuButtonH, MS_ABOUTBUTTON);
