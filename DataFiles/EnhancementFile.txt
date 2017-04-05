@@ -28190,11 +28190,8 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: On Attacked: your next attack gains +1 damage. This effect can stack up to 3 times.;
-REQ1: EH: Counterattack [4-0-1];
 DESC2: On Attacked: Your next attack gains +1 damage. This effect can stack up to 6 times.;
-REQ2: EH: Counterattack [4-0-2];
 DESC3: On Attacked: Your next attack gains +1 damage. This effect can stack up to 10 times.;
-REQ3: EH: Counterattack [4-0-3];
 ICON: STLD_Reprisal;
 
 NAME: Block and Cut;

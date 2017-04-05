@@ -738,7 +738,7 @@ ICON: DraconicAncestryRedIcon;
 VERIFIED: unknown;
 
 FEATNAME: Draconic Ancestry: White;
-FEATDESCRIPTION: Your ancestry is linked to Red Dragons of a bygone age. You gain a stacking bonus to Cold Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+FEATDESCRIPTION: Your ancestry is linked to White Dragons of a bygone age. You gain a stacking bonus to Cold Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
 FEATTAG: Dragonborn Bonus;
 RACELIST: Dragonborn;
 LEVEL: 1;

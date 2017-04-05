@@ -1,15 +1,3 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DDOCharGen.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  CharacterClass.cpp
-e:\planner\ddocharplannerv4\characterclass.cpp(4419): warning C4995: 'strcpy': name was marked as #pragma deprecated
-e:\planner\ddocharplannerv4\characterclass.cpp(4419): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
-e:\planner\ddocharplannerv4\characterclass.cpp(4804): warning C4995: 'strcpy': name was marked as #pragma deprecated
-e:\planner\ddocharplannerv4\characterclass.cpp(4804): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
-e:\planner\ddocharplannerv4\characterclass.cpp(5284): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5305): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5330): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(5360): warning C4018: '<' : signed/unsigned mismatch
-e:\planner\ddocharplannerv4\characterclass.cpp(4686): warning C4101: 'hWnd' : unreferenced local variable
-e:\planner\ddocharplannerv4\characterclass.cpp(1482): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+  DataClass.cpp
   DDOCharPlanner.vcxproj -> E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe
