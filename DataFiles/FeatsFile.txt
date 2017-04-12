@@ -4662,6 +4662,7 @@ NEEDSALL: Feat Adept of Forms;
 ICON: MasterOfForms;
 VERIFIED: 2013-09-24, ddo wiki;
 
+
 PARENTHEADING: Master of Forms;
 FEATNAME: Master Fires of Purity;
 FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 20 additional fire damage.\par\par D&D Dice: Your attacks deal 2d10 extra fire damage.;
@@ -5305,7 +5306,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HumanRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5315,7 +5316,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: ElvenRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5325,7 +5326,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalflingRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5335,7 +5336,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DwarvenRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5345,7 +5346,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: WarforgedRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5355,7 +5356,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DrowRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5365,7 +5366,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalfelfRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5375,7 +5376,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalforcRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5385,7 +5386,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: GnomeRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5395,7 +5396,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DragonbornRaceFeatIcon;
 VERIFIED: unknown;
 
 FEATNAME: Racial Spell Resistance;

@@ -5611,7 +5611,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				break;
 			}
 			case 3:
-				//Iconic Past Lifes
+				//Race Past Lifes
 			{
 				for (unsigned int i = 0; i < RACEPASTLIFE; i++)
 				{
@@ -5636,7 +5636,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					RAY = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 					RAWidth = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 					RAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-					//Change for Iconic pastlife count
+					//Change for Race pastlife count
 
 					Count = Character.GetRacePastLifeCount(static_cast<PAST_RACE>(i));
 					int FeatIndex = Character.GetRaceFeatIndex(static_cast<PAST_RACE>(i));
@@ -8561,10 +8561,10 @@ string MainScreenClass::CreateSpellDescription(unsigned int SpellIndex)
 //---------------------------------------------------------------------------
 DWORD CALLBACK EditStreamCallback(DWORD dwCookie, LPBYTE pbBuff, LONG, LONG FAR *pcb)
     {
-    string rtfPrefix = "{\\rtf1\\ansi\\deff0\\deftab720{\\fonttbl{\\f0\\froman "
+	string rtfPrefix = "{\\rtf1\\ansi\\deff0\\deftab720{\\fonttbl{\\f0\\froman "
 		"Times New Roman;}}\n{\\colortbl\\red255\\green255\\blue255;\\red230\\green230\\blue0;"
 		"\\red100\\green100\\blue255;\\red255\\green0\\blue0;\\red0\\green255\\blue0;"
-		"\\red130\\green210\\blue255;}\n\\deflang1033\\pard\\plain\\f3\\fs20\\cf0 ";
+		"\\red130\\green210\\blue255;\\red166\\green166\\blue166;}\n\\deflang1033\\pard\\plain\\f3\\fs20\\cf0 ";
 	string rtfPostfix = "\n\\par }";
     string Final;
 

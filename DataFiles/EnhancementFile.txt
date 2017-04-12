@@ -2123,7 +2123,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Cost: 5 Spell Points\par Spell-like Ability: Fires a bolt of darkness that deals 1d12 damage per character level, Reflex DC (10 + Half Character Level + Charisma Modifier) Half damage. At levels 11 and 21 and additional bolt is fired. Effects that grant extra Action Boost uses give you additional uses per rest of this ability. Scales with 150% Spell Power./par Affected by Empower, Maximize, Quicken, Enlarge and Intensify Metamagic Feats.;
+DESC1: Cooldown: 6 seconds\par Cost: 4 Spell Points\par Spell-like Ability: Fires a bolt of darkness that deals 1d8 damage per character level, Reflex DC (10 + Half Character Level + Charisma Modifier) Half damage. Scales with 100% Spell Power./par Affected by Empower, Maximize, Quicken, Enlarge and Intensify Metamagic Feats.;
 ICON: DROW_Darkfire;
 NAME: Improved Dodge;
 TREE: Drow;

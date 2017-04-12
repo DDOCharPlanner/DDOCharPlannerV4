@@ -2029,6 +2029,8 @@ int CharacterClass::GetReincarnateCount()
 	Result = 0;
 	for (unsigned int i=0; i<NUMCLASSES; i++)
 		Result += GetReincarnateCount(static_cast<CLASS>(i));
+	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+		Result += GetRacePastLifeCount(static_cast<PAST_RACE>(i));
 	return Result;
 	}
 
