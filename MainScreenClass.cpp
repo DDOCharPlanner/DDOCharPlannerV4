@@ -1452,6 +1452,19 @@ long MainScreenClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARAM wPa
 				//add the feat prereqs
                 Description += " \\par\\par ";
 				Description += Feat->GetPrereqString(CurrentSelectedLevel);
+				//add in special cases list
+				string stringcolor;
+				if (Feat->GetFeatName(false) == "Spring Attack")
+				{
+					Description += " \\par ";
+					if (Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
+						stringcolor = "{\\cf3 ";
+					else
+						stringcolor = "{\\cf4 ";
+					Description += stringcolor;
+					Description += "Monk Class Feat Reqires: Monk Level 6 \\par} ";
+				}
+				
 				FillDescriptionBox(Description, FeatIcon[Feat->GetFeatIconIndex()].Graphic);
                 if (Feat->HaveAllFeatPrereqs(CurrentSelectedLevel) != PREREQ_PASS)
                     {
@@ -4001,7 +4014,7 @@ void MainScreenClass::FillInstructionBox()
 void MainScreenClass::FillDescriptionBox(string Description, HBITMAP Bitmap)
     {
     EDITSTREAM Stream;
-    
+	SendMessage(DescriptionWindow, LB_RESETCONTENT, 0, 0);
     Stream.dwCookie = (DWORD)Description.c_str();
     Stream.dwError = false;
     Stream.pfnCallback = EditStreamCallback;
@@ -7458,6 +7471,8 @@ void MainScreenClass::EndDragAndDropOperation(int x, int y)
 				case FEATMONKBONUS:
 					{
 					valid = Feat->GetFeatTag(FEATTAGMONKBONUS) == true || Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == true;
+					if (Feat->GetFeatName(false) == "Spring Attack"  && Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
+						valid = false;
 					break;
 					}
 				case FEATMONKPATH:

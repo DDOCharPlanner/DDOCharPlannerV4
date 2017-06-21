@@ -493,6 +493,18 @@ long MultiFeatWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARA
 				//add in the prereqs lists
 				Description += " \\par\\par ";
 				Description += Feat->GetPrereqString(CurrentSelectedLevel);
+				//add in special cases list
+				string stringcolor;
+				if (Feat->GetFeatName(false) == "Spring Attack")
+				{
+					Description += " \\par ";
+					if (Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
+						stringcolor = "{\\cf3 ";
+					else
+						stringcolor = "{\\cf4 ";
+					Description += stringcolor;
+					Description += "Monk Class Feat Reqires: Monk Level 6 \\par} ";
+				}
 				fillDescPanel(Description, FeatIcon[Feat->GetFeatIconIndex()].Graphic);
 				return 0;
 			}
@@ -531,6 +543,18 @@ long MultiFeatWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPARA
 				//add in the prereqs lists
 				Description += " \\par\\par ";
 				Description += Feat->GetPrereqString(CurrentSelectedLevel);
+				//add in special cases list
+				string stringcolor;
+				if (Feat->GetFeatName(false) == "Spring Attack")
+				{
+					Description += " \\par ";
+					if (Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
+						stringcolor = "{\\cf3 ";
+					else
+						stringcolor = "{\\cf4 ";
+					Description += stringcolor;
+					Description += "Monk Class Feat Reqires: Monk Level 6 \\par} ";
+				}
 				fillDescPanel(Description, FeatIcon[Feat->GetFeatIconIndex()].Graphic);
 				Dragging = true;
 				Cursor = CreateCursorFromBitmap(MultiFeatHandle, Palette, &FeatIcon[Feat->GetFeatIconIndex()], RGB(0, 0, 0), 16, 16);
@@ -641,11 +665,29 @@ void MultiFeatWindowClass::HandleLeftMouseButtonClick(int x, int y)
 			//add in the prereqs lists
 			Description += " \\par\\par ";
 			Description += Feat->GetPrereqString(CurrentSelectedLevel);
+
+			//add in special cases list
+			string stringcolor;
+			if (Feat->GetFeatName(false) == "Spring Attack")
+			{
+				Description += " \\par ";
+				if (Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
+					stringcolor = "{\\cf3 ";
+				else
+					stringcolor = "{\\cf4 ";
+				Description += stringcolor;
+				Description += "Monk Class Feat Reqires: Monk Level 6 \\par} ";
+			}
+
 			fillDescPanel(Description, FeatIcon[Feat->GetFeatIconIndex()].Graphic);
 			Dragging = true;
 			Cursor = CreateCursorFromBitmap(MultiFeatHandle, Palette, &FeatIcon[Feat->GetFeatIconIndex()], RGB(0, 0, 0), 16, 16);
 			SetCursor(Cursor);
 
+
+
+				
+				
 			return;
 		}
 
@@ -845,9 +887,7 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 				case FEATMONKBONUS:
 				{
 					valid = Feat->GetFeatTag(FEATTAGMONKBONUS) == true || Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == true;
-					if (Feat->GetFeatName(false) == "Spring Attack"  && Character.GetClassLevel(MONK, CurrentSelectedLevel) >= 6)
-						valid = true;
-					else
+					if (Feat->GetFeatName(false) == "Spring Attack"  && Character.GetClassLevel(MONK, CurrentSelectedLevel) < 6)
 						valid = false;
 					break;
 				}
