@@ -1,5 +1,17 @@
 Changelog
 =========
+Version 4.35.301
+================
+General
+- Added Race Past lifes to Pastlife count - Per Cordovan
+Enhancements
+- Darkfire updated
+- Stalwart Defender fixed
+Feats
+- Whirling Steel Strike updated
+- Adept of Forms updated
+- draconic Ancestry: White corrected
+
 Version 4.29.002
 ================
 General

@@ -36,6 +36,7 @@ RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Blad
 CLASSLIST: Monk;
 LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
+NEEDSALL: Class Monk 1;
 ICON: AdeptOfForms;
 VERIFIED: 2013-09-24, in-game;
 
@@ -55,6 +56,7 @@ FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your 
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Adept of Forms;
 ICON: FlowingWaterStrikeIcon;
 VERIFIED: 2013-08-10, in-game;
 
@@ -736,7 +738,7 @@ ICON: DraconicAncestryRedIcon;
 VERIFIED: unknown;
 
 FEATNAME: Draconic Ancestry: White;
-FEATDESCRIPTION: Your ancestry is linked to Red Dragons of a bygone age. You gain a stacking bonus to Cold Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
+FEATDESCRIPTION: Your ancestry is linked to White Dragons of a bygone age. You gain a stacking bonus to Cold Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
 FEATTAG: Dragonborn Bonus;
 RACELIST: Dragonborn;
 LEVEL: 1;
@@ -2724,7 +2726,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: AureonsInstructionIcon;
 VERIFIED: 2016-10-21, in-game;
@@ -2746,7 +2748,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: LuckofOlladraIcon;
 VERIFIED: 2016-10-21, in-game;
@@ -2757,7 +2759,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: OntarsForgeIcon;
 VERIFIED: 2016-10-21, in-game;
@@ -2768,7 +2770,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: BloodistheLifeIcon;
 VERIFIED: 2016-10-21, in-game;
@@ -2779,7 +2781,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: SilverflameIcon;
 VERIFIED: 2012-06-26, in-game;
@@ -2790,7 +2792,7 @@ FEATTAG: Divine;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
 ICON: SovereignhostIcon;
 VERIFIED: 2012-06-26, in-game;
@@ -4660,6 +4662,7 @@ NEEDSALL: Feat Adept of Forms;
 ICON: MasterOfForms;
 VERIFIED: 2013-09-24, ddo wiki;
 
+
 PARENTHEADING: Master of Forms;
 FEATNAME: Master Fires of Purity;
 FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 20 additional fire damage.\par\par D&D Dice: Your attacks deal 2d10 extra fire damage.;
@@ -5303,7 +5306,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HumanRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5313,7 +5316,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: ElvenRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5323,7 +5326,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalflingRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5333,7 +5336,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DwarvenRaceFeatsIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5343,7 +5346,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: WarforgedRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5353,7 +5356,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DrowRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5363,7 +5366,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalfelfRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5373,7 +5376,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: HalforcRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5383,7 +5386,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: GnomeRaceFeatIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
@@ -5393,7 +5396,7 @@ FEATTAG: Past Life;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: NoImage;
+ICON: DragonbornRaceFeatIcon;
 VERIFIED: unknown;
 
 FEATNAME: Racial Spell Resistance;

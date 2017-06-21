@@ -85,6 +85,7 @@ class MainScreenClass : public IconClass
         HWND RaceClassLabel;
         HWND LoadButton;
         HWND SaveButton;
+		HWND SaveAsButton;
         HWND ClearButton;
         HWND PrintButton;
         HWND ForumExportButton;

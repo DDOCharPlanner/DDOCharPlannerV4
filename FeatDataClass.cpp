@@ -1280,28 +1280,52 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
     ostringstream ss;
     string Color;
 	int RaceOffset;
+	bool HasRace;
+	bool HasClass;
+	bool ReqOneMet;
+	HasRace = false;
+	HasClass = false;
+	ReqOneMet = false;
     
     //start off with the race/class list
     ss << "{\\ul Race and Class Requirements:} \\par ";
+	for (unsigned int i = 0; i < RaceType.size(); i++)
+	{
+		if (Character.GetRace() == RaceType[i])
+			HasRace = true;
+	}
+	RaceOffset = RaceType.size();
+	for (unsigned int i = 0; i < ClassType.size(); i++)
+	{
+		if (Character.GetClassLevel(ClassType[i], CharacterLevel) >= static_cast<int>(Level[i + RaceOffset]))
+			HasClass = true;
+	}	
 	for (unsigned int i=0; i<RaceType.size(); i++)
 		{
         if (Character.GetRace() == RaceType[i])
             Color = "{\\cf4 ";
         else
-            Color = "{\\cf3 ";
+			if (HasRace || HasClass)
+				Color = "{\\cf6 ";
+			else
+				Color = "{\\cf1 ";
 		ss << Color;
 		ss << ConvertRaceTypeToString(RaceType[i]) << " Level ";
 		ss << Level[i] << " (";
 		ss << ConvertAquireTypeToString(AquireType[i], Level[i]);
 		ss << ")} \\par ";
 		}
-	RaceOffset = RaceType.size();
+
+
 	for (unsigned int i=0; i<ClassType.size(); i++)
 		{
         if (Character.GetClassLevel(ClassType[i], CharacterLevel) >= static_cast<int>(Level[i+RaceOffset]))
             Color = "{\\cf4 ";
         else
-            Color = "{\\cf3 ";
+			if(HasClass || HasRace)
+				Color = "{\\cf6 ";
+			else
+				Color = "{\\cf1 ";
 		ss << Color;
 		ss << ConvertClassTypeToString(ClassType[i]) << " Level ";
 		ss << Level[i+RaceOffset] << " (";

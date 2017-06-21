@@ -70,6 +70,7 @@ void CharacterClass::Reset()
 	for (unsigned int i=0; i<NUMCHAREQUPMENTSLOTS; i++)
 		CharacterItemsEquipped[i] = -1;
     EnableValidations(true);
+	*FiletoOpen = NULL;
     }
 
 //---------------------------------------------------------------------------
@@ -2028,6 +2029,8 @@ int CharacterClass::GetReincarnateCount()
 	Result = 0;
 	for (unsigned int i=0; i<NUMCLASSES; i++)
 		Result += GetReincarnateCount(static_cast<CLASS>(i));
+	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+		Result += GetRacePastLifeCount(static_cast<PAST_RACE>(i));
 	return Result;
 	}
 
@@ -4275,7 +4278,7 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 	}
 
 //---------------------------------------------------------------------------
-void CharacterClass::Save(HWND hwnd)
+void CharacterClass::Save(HWND hwnd, bool SaveAs)
     {
     OPENFILENAME FileOpen;
 	static char FileFilter[] = "Text Files\0*.txt\0All Files\0*.*\0";
@@ -4291,7 +4294,8 @@ void CharacterClass::Save(HWND hwnd)
 	FeatDataClass *Feat;
 	ItemClass *ptItem;
 	ItemEffectClass *ptItemEffect;
-
+	int len;
+	int rc;
 	string CombinedName;
 	if (FirstName != "")
 		CombinedName = FirstName;
@@ -4300,121 +4304,132 @@ void CharacterClass::Save(HWND hwnd)
 			CombinedName += " " + SurName;
 		else
 			CombinedName = SurName;
-
-
+	if (FiletoOpen[0] == NULL || SaveAs == true)
+	{
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, InitDirectory);
 	StringCbCat (InitDirectory, MAX_PATH, "\\SaveFiles\\");
     StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
 	IFileDialog *pfd = NULL;
 	LPCWSTR TxtStr = L".txt";
+	bool xptest;
+	xptest = false;
 	//char *dir_org = NULL;
-	char FiletoOpen[MAX_PATH + 1];
-	HRESULT hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
-	if (SUCCEEDED(hr))
-	{
-		HRESULT hr;
-		int rc;
-		// Create a new common open file dialog.
-		IFileOpenDialog *pfd = NULL;
-		hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
-		rc = -1;  // Error
-		if (SUCCEEDED(hr))
+
+		HRESULT hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
+		if (SUCCEEDED(hr) && xptest != true)
 		{
-			DWORD dwOptions;
-			hr = pfd->GetOptions(&dwOptions);
-			if (SUCCEEDED(hr))
-				hr = pfd->SetOptions(dwOptions | FOS_STRICTFILETYPES);
-			// Set the title of the dialog.
+			HRESULT hr;
+
+			// Create a new common open file dialog.
+			IFileOpenDialog *pfd = NULL;
+			hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
+			rc = -1;  // Error
 			if (SUCCEEDED(hr))
 			{
-				LPCWSTR szTXT = L"Text File";
-				hr = pfd->SetTitle(L"Select File");
+				DWORD dwOptions;
+				hr = pfd->GetOptions(&dwOptions);
+				if (SUCCEEDED(hr))
+					hr = pfd->SetOptions(dwOptions | FOS_STRICTFILETYPES);
+				// Set the title of the dialog.
 				if (SUCCEEDED(hr))
 				{
-					COMDLG_FILTERSPEC rgSpec[] =
-					{
-						{ szTXT, L"*.txt" },
-					};
-					hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
-					hr = pfd->SetDefaultExtension(L"txt");
-				}
-			}
-			// Show the open file dialog.
-			if (SUCCEEDED(hr))
-			{
-				hr = pfd->Show(NULL);
-				if (SUCCEEDED(hr))
-				{  // Get the selection from the user.
-					IShellItem *psiResult = NULL;
-					hr = pfd->GetResult(&psiResult);
+					LPCWSTR szTXT = L"Text File";
+					hr = pfd->SetTitle(L"Select File");
 					if (SUCCEEDED(hr))
 					{
-						PWSTR pszPath = NULL;
-						hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
-						int len;
-						if (SUCCEEDED(hr))
+						COMDLG_FILTERSPEC rgSpec[] =
 						{
-							if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
-							{
-								rc = 0;
-								FiletoOpen[len] = '\0';
-
-								FileHandle = CreateFile(FiletoOpen, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
-								if (FileHandle == INVALID_HANDLE_VALUE)
-									return;
-								*FiletoOpen = NULL;
-							}
-							else
-								rc = 1;
-							CoTaskMemFree(pszPath);
-						}
-						psiResult->Release();
+							{ szTXT, L"*.txt" },
+						};
+						hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
+						hr = pfd->SetDefaultExtension(L"txt");
 					}
 				}
-				else
+				// Show the open file dialog.
+				if (SUCCEEDED(hr))
 				{
-					if (hr == HRESULT_FROM_WIN32(ERROR_CANCELLED))
-						rc = 1; // User cancelled the dialog...
+					hr = pfd->Show(NULL);
+					if (SUCCEEDED(hr))
+					{  // Get the selection from the user.
+						IShellItem *psiResult = NULL;
+						hr = pfd->GetResult(&psiResult);
+						if (SUCCEEDED(hr))
+						{
+							PWSTR pszPath = NULL;
+							hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+
+							if (SUCCEEDED(hr))
+							{
+								if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
+								{
+									rc = 0;
+									FiletoOpen[len] = '\0';
+
+									//FileHandle = CreateFile(FiletoOpen, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+									//if (FileHandle == INVALID_HANDLE_VALUE)
+										//return;
+									//*FiletoOpen = NULL;
+								}
+								else
+									rc = 1;
+								CoTaskMemFree(pszPath);
+							}
+							psiResult->Release();
+						}
+					}
+					else
+					{
+						if (hr == HRESULT_FROM_WIN32(ERROR_CANCELLED))
+							rc = 1; // User cancelled the dialog...
+					}
 				}
+				pfd->Release();
+				if (rc == 1)
+					return;
 			}
-			pfd->Release();
-			if (rc == 1)
+		}
+		else
+		{
+			// use GetOpenFileName() as needed...
+
+			memset(&FileOpen, 0, sizeof(OPENFILENAME));
+			FileOpen.lStructSize = sizeof(OPENFILENAME);
+			FileOpen.hwndOwner = hwnd;
+			FileOpen.hInstance = 0;
+			FileOpen.lpstrFilter = FileFilter;
+			FileOpen.lpstrCustomFilter = NULL;
+			FileOpen.nMaxCustFilter = 0;
+			FileOpen.nFilterIndex = 1;
+			FileOpen.lpstrFile = FileName;
+			FileOpen.nMaxFile = 1024;
+			FileOpen.lpstrFileTitle = NULL;
+			FileOpen.nMaxFileTitle = 512;
+			FileOpen.lpstrInitialDir = InitDirectory;
+			FileOpen.lpstrTitle = TitleString;
+			FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
+			FileOpen.nFileOffset = 0;
+			FileOpen.nFileExtension = 0;
+			FileOpen.lpstrDefExt = DefaultExtension;
+			FileOpen.lCustData = 0;
+			FileOpen.lpfnHook = 0;
+			FileOpen.lpTemplateName = NULL;
+
+			if (GetSaveFileName(&FileOpen) == false)
 				return;
+
+			strcpy(FiletoOpen, FileOpen.lpstrFile);
+			len = strlen(FiletoOpen);
+			FiletoOpen[len] = '\0';
+			//FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+			//if (FileHandle == INVALID_HANDLE_VALUE)
+				//return;
 		}
 	}
-	else
-	{
-		// use GetOpenFileName() as needed...
 
-		memset(&FileOpen, 0, sizeof(OPENFILENAME));
-		FileOpen.lStructSize = sizeof(OPENFILENAME);
-		FileOpen.hwndOwner = hwnd;
-		FileOpen.hInstance = 0;
-		FileOpen.lpstrFilter = FileFilter;
-		FileOpen.lpstrCustomFilter = NULL;
-		FileOpen.nMaxCustFilter = 0;
-		FileOpen.nFilterIndex = 1;
-		FileOpen.lpstrFile = FileName;
-		FileOpen.nMaxFile = 1024;
-		FileOpen.lpstrFileTitle = NULL;
-		FileOpen.nMaxFileTitle = 512;
-		FileOpen.lpstrInitialDir = InitDirectory;
-		FileOpen.lpstrTitle = TitleString;
-		FileOpen.Flags = OFN_OVERWRITEPROMPT | OFN_PATHMUSTEXIST;
-		FileOpen.nFileOffset = 0;
-		FileOpen.nFileExtension = 0;
-		FileOpen.lpstrDefExt = DefaultExtension;
-		FileOpen.lCustData = 0;
-		FileOpen.lpfnHook = 0;
-		FileOpen.lpTemplateName = NULL;
-
-		if (GetSaveFileName(&FileOpen) == false)
-			return;
-		FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
-		if (FileHandle == INVALID_HANDLE_VALUE)
-			return;
-	}
+	FileHandle = CreateFile(FiletoOpen, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (FileHandle == INVALID_HANDLE_VALUE)
+		return;
 
 	StringCbPrintf(WriteBuffer, 1024, "VERSION: %s;\r\n", VERSION);
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
@@ -4671,20 +4686,26 @@ void CharacterClass::Load(HWND hwnd)
 	unsigned int Found;
 	unsigned int RecordedLevels;
 	HWND hWnd;
+	int len;
+	int rc;
+	bool xptest;
+	xptest = false;
 	//disable validations while we load
 	EnableValidations(false);
-
 	StringCbCopy(InitDirectory, 1024, "\0");
     GetCurrentDirectory(1024, InitDirectory);
 	StringCbCat (InitDirectory, 1024, "\\SaveFiles\\");
 	StringCbCopy(FileName, 1024, "\0");
 	IFileDialog *pfd = NULL;
-	char FiletoOpen[MAX_PATH + 1];
+
+	//clear the current character out
+	Reset();
+
 	HRESULT hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileDialog, (void**)&pfd);
-	if (SUCCEEDED(hr))
+	if (SUCCEEDED(hr) && xptest != true)
 	{
 		HRESULT hr;
-		int rc;
+		
 		// Create a new common open file dialog.
 		IFileOpenDialog *pfd = NULL;
 		hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&pfd));
@@ -4721,7 +4742,7 @@ void CharacterClass::Load(HWND hwnd)
 					{
 						PWSTR pszPath = NULL;
 						hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
-						int len;
+						
 						if (SUCCEEDED(hr))
 						{
 							if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
@@ -4729,10 +4750,8 @@ void CharacterClass::Load(HWND hwnd)
 								rc = 0;
 								FiletoOpen[len] = '\0';
 
-								FileHandle = CreateFile(FiletoOpen, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-								if (FileHandle == INVALID_HANDLE_VALUE)
-									return;
-								*FiletoOpen = NULL;
+
+								//*FiletoOpen = NULL;
 							}
 							else
 								rc = 1;
@@ -4778,14 +4797,30 @@ void CharacterClass::Load(HWND hwnd)
 		FileOpen.lpfnHook = 0;
 		FileOpen.lpTemplateName = NULL;
 
+
 		if (GetOpenFileName(&FileOpen) == false)
 			return;
-		FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-    if (FileHandle == INVALID_HANDLE_VALUE)
-        return;
+		//FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    //if (FileHandle == INVALID_HANDLE_VALUE)
+        //return;
+		
+		strcpy(FiletoOpen, FileOpen.lpstrFile);
+		
+		len = strlen(FiletoOpen);
+		if (0 != len)
+		{
+			rc = 0;
+			FiletoOpen[len] = '\0';
+			
+			//*FiletoOpen = NULL;
+		}
 	}
+	if (FiletoOpen == NULL)
+		return;
 
-
+	FileHandle = CreateFile(FiletoOpen, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (FileHandle == INVALID_HANDLE_VALUE)
+		return;
 
 	FileSize = GetFileSize(FileHandle, NULL);
 	FileData = new char[FileSize+1];
@@ -4795,8 +4830,7 @@ void CharacterClass::Load(HWND hwnd)
 	OriginalPointer = FileData;
 	CloseHandle(FileHandle);
 
-    //clear the current character out
-    Reset();
+
 
     //parse the file data
 	StringCbCopy(KeywordString[0], 256, "VERSION: ");
@@ -5341,7 +5375,8 @@ void CharacterClass::Load(HWND hwnd)
         }
 
     FileData = OriginalPointer;
-    delete[] FileData;
+	delete[] FileData;
+    
 
 	//reenable validations (and will automatically validate)
 	EnableValidations(true);

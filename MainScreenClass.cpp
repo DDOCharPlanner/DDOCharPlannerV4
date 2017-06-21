@@ -63,7 +63,9 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	LoadButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("SaveButton", MAINWINDOW);
 	SaveButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
-    Component = UIComponent->GetComponentData("ClearButton", MAINWINDOW);
+	Component = UIComponent->GetComponentData("SaveAsButton", MAINWINDOW);
+	SaveAsButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIComponent->GetComponentData("ClearButton", MAINWINDOW);
 	ClearButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("PrintButton", MAINWINDOW);
 	PrintButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
@@ -350,6 +352,7 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	    SendMessage(RaceClassLabel, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(LoadButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(SaveButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(SaveAsButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ClearButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(PrintButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ForumExportButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
@@ -503,6 +506,7 @@ void MainScreenClass::Show(bool State)
     ShowWindow(RaceClassLabel, State);
     ShowWindow(LoadButton, State);
     ShowWindow(SaveButton, State);
+	ShowWindow(SaveAsButton, State);
     ShowWindow(ClearButton, State);
     ShowWindow(PrintButton, State);
     ShowWindow(ForumExportButton, State);
@@ -752,6 +756,11 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
                     Character.Save(ParentWindow);
                     return 0;
                     }
+				if ((int)LOWORD(wParam) == MS_SAVEASBUTTON)
+				{
+					Character.Save(ParentWindow, true);
+					return 0;
+				}
                 if ((int)LOWORD(wParam) == MS_PRINTBUTTON)
                     {
                     InterfaceManager.ShowChild(PRINTWINDOW, true);
@@ -5602,7 +5611,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				break;
 			}
 			case 3:
-				//Iconic Past Lifes
+				//Race Past Lifes
 			{
 				for (unsigned int i = 0; i < RACEPASTLIFE; i++)
 				{
@@ -5627,7 +5636,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					RAY = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 					RAWidth = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 					RAHeight = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-					//Change for Iconic pastlife count
+					//Change for Race pastlife count
 
 					Count = Character.GetRacePastLifeCount(static_cast<PAST_RACE>(i));
 					int FeatIndex = Character.GetRaceFeatIndex(static_cast<PAST_RACE>(i));
@@ -7682,6 +7691,9 @@ void MainScreenClass::SubclassChildWindows()
     OriginalProc = (WNDPROC)SetWindowLong(SaveButton, GWL_WNDPROC, (LONG)SubclassWndProc);
     SubclassHWNDs.push_back(SaveButton);
     OriginalProcs.push_back(OriginalProc);
+	//OriginalProc = (WNDPROC)SetWindowLong(SaveAsButton, GWL_WNDPROC, (LONG)SubclassWndProc);
+	//SubclassHWNDs.push_back(SaveAsButton);
+	//OriginalProcs.push_back(OriginalProc);
     OriginalProc = (WNDPROC)SetWindowLong(ClearButton, GWL_WNDPROC, (LONG)SubclassWndProc);
     SubclassHWNDs.push_back(ClearButton);
     OriginalProcs.push_back(OriginalProc);
@@ -8034,6 +8046,7 @@ void MainScreenClass::ResizeScreen(HWND Wnd)
 	ResizeWindow("EquipmentScreenButton", EquipmentScreenButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("LoadButton", LoadButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("SaveButton", SaveButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("SaveAsButton", SaveAsButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ClearButton", ClearButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("PrintButton", PrintButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ForumExportButton", ForumExportButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
@@ -8548,10 +8561,10 @@ string MainScreenClass::CreateSpellDescription(unsigned int SpellIndex)
 //---------------------------------------------------------------------------
 DWORD CALLBACK EditStreamCallback(DWORD dwCookie, LPBYTE pbBuff, LONG, LONG FAR *pcb)
     {
-    string rtfPrefix = "{\\rtf1\\ansi\\deff0\\deftab720{\\fonttbl{\\f0\\froman "
+	string rtfPrefix = "{\\rtf1\\ansi\\deff0\\deftab720{\\fonttbl{\\f0\\froman "
 		"Times New Roman;}}\n{\\colortbl\\red255\\green255\\blue255;\\red230\\green230\\blue0;"
 		"\\red100\\green100\\blue255;\\red255\\green0\\blue0;\\red0\\green255\\blue0;"
-		"\\red130\\green210\\blue255;}\n\\deflang1033\\pard\\plain\\f3\\fs20\\cf0 ";
+		"\\red130\\green210\\blue255;\\red166\\green166\\blue166;}\n\\deflang1033\\pard\\plain\\f3\\fs20\\cf0 ";
 	string rtfPostfix = "\n\\par }";
     string Final;
 

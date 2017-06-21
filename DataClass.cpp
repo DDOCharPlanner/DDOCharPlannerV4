@@ -2279,7 +2279,7 @@ void DataClass::InitializeEnhancementTrees()
 	//Fighter
 	Arrows = "1-1-U-1, 1-1-R-1, 2-1-U-1, 2-2-U-1, 3-1-U-1, 3-4-U-1, 4-1-U-1";
 	EnhancementTreeData[ENHT_KENSEI_FTR].InitializeEnhancementTree(ENHT_KENSEI_FTR, ENHTT_CLASS, RACENONE, FIGHTER, "Kensei (Ftr)", true, "FighterBackground", Arrows);
-	Arrows = "1-1-U-1, 1-2-U-1, 2-1-U-1, 2-3-U-1, 3-2-U-1, 3-4-U-1, 4-0-U-1, 4-2-U-1, 4-3-U-1";
+	Arrows = "1-1-U-1, 1-2-U-1, 2-1-U-1, 2-3-U-1, 3-2-U-1, 3-4-U-1, 4-2-U-1, 4-3-U-1";
 	EnhancementTreeData[ENHT_STALWART_DEFENDER_FTR].InitializeEnhancementTree(ENHT_STALWART_DEFENDER_FTR, ENHTT_CLASS, RACENONE, FIGHTER, "Stalwart Defender (Ftr)", true, "FighterBackground", Arrows);
 	Arrows = "1-0-U-1, 2-0-U-1, 3-0-U-1";
 	EnhancementTreeData[ENHT_VANGUARD_FTR].InitializeEnhancementTree(ENHT_VANGUARD_FTR, ENHTT_CLASS, RACENONE, FIGHTER, "Vanguard (Ftr)", true, "FighterBackground", Arrows);
