@@ -845,6 +845,10 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 				case FEATMONKBONUS:
 				{
 					valid = Feat->GetFeatTag(FEATTAGMONKBONUS) == true || Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == true;
+					if (Feat->GetFeatName(false) == "Spring Attack"  && Character.GetClassLevel(MONK, CurrentSelectedLevel) >= 6)
+						valid = true;
+					else
+						valid = false;
 					break;
 				}
 				case FEATMONKPATH:

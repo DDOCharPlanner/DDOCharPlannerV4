@@ -6154,7 +6154,7 @@ ICON: SpellSaveBonusIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Spring Attack;
-FEATDESCRIPTION: You suffer no penalty to your attack roll when moving and attacking. You will also gain a 2% Dodge bonus.;
+FEATDESCRIPTION: You suffer no penalty to your attack roll when moving and attacking. You will also gain a 2% Dodge bonus. \par\par Must be level 6 Monk to take Spring Attack as Class Feat;
 FEATTAG: Fighter Bonus, Monk Bonus;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
