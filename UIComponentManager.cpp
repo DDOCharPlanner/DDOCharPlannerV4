@@ -419,16 +419,16 @@ void UIComponentManager::InitializeUI()
 
 	//Reincarnate Advancement Panel
 	int ReinCarnateBaseX = AdvBoxX + 5;
-	int ReinCarnateBaseY = AdvBoxY - 10;
+	int ReinCarnateBaseY = AdvBoxY+5;
 
 	AdvBoxCurrentX = ReinCarnateBaseX;
 	AdvBoxCurrentY = ReinCarnateBaseY;
-	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX, AdvBoxCurrentY, 60, 18, MS_HERIOCPASTLIFE);
-	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 65, AdvBoxCurrentY, 60, 18, MS_ICONICPASTLIFE);
-	InitializeUIComponent("RacePastRadioButton", MAINWINDOW, "BUTTON", "Race", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 130, AdvBoxCurrentY, 60, 18, MS_RACEPASTLIFE);
-	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 195, AdvBoxCurrentY, 60, 18, MS_EPICPASTLIFE);
+	InitializeUIComponent("HeroicPastRadioButton", MAINWINDOW, "BUTTON", "Heroic", WS_CHILD | BS_AUTORADIOBUTTON | WS_GROUP, AdvBoxCurrentX+5, AdvBoxCurrentY, 60, 18, MS_HERIOCPASTLIFE);
+	InitializeUIComponent("IconicPastRadioButton", MAINWINDOW, "BUTTON", "Iconic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 70, AdvBoxCurrentY, 60, 18, MS_ICONICPASTLIFE);
+	InitializeUIComponent("RacePastRadioButton", MAINWINDOW, "BUTTON", "Race", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 135, AdvBoxCurrentY, 60, 18, MS_RACEPASTLIFE);
+	InitializeUIComponent("EpicPastRadioButton", MAINWINDOW, "BUTTON", "Epic", WS_CHILD | BS_AUTORADIOBUTTON, AdvBoxCurrentX + 200, AdvBoxCurrentY, 60, 18, MS_EPICPASTLIFE);
 
-	AdvBoxCurrentY = ReinCarnateBaseY + 35;
+	AdvBoxCurrentY = ReinCarnateBaseY + 20;
 
 
 	AdvBoxShiftY = 75;

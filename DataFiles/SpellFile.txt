@@ -1665,7 +1665,7 @@ RARE: 0;
 ICON: DispelMagic;
 
 SPELLNAME: Displacement;
-DESCRIPTION: An ally's appearance becomes extremely blurred, giving enemies a 50% miss chance when attacking.;
+DESCRIPTION: Your appearance becomes extremely blurred, giving enemies a 50% miss chance when attacking.;
 CLASSLIST: Wizard, Sorcerer, Bard, Warlock;
 LEVEL: 3, 3, 3, 3;
 SCHOOL: Illusion;
@@ -1673,7 +1673,7 @@ COST: 20sp;
 COMPONENTS: Material, Verbal;
 META: Enlarge, Eschew Materials, Extend, Quicken;
 RANGE: Close (25 feet);
-TARGET: Friend, Self;
+TARGET: Self;
 DURATION: 6 seconds per caster level;
 COOLDOWN: 3 seconds;
 SAVING: None;

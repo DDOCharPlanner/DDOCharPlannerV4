@@ -2243,7 +2243,7 @@ void DataClass::InitializeEnhancementTrees()
 	//Artificer
 	Arrows = "1-0-U-2, 1-3-U-1, 2-1-U-1, 2-3-U-1, 3-0-U-1, 3-1-U-1, 3-3-U-1, 3-4-U-1, 4-0-U-1";
 	EnhancementTreeData[ENHT_ARCANOTECHNICIAN_ART].InitializeEnhancementTree(ENHT_ARCANOTECHNICIAN_ART, ENHTT_CLASS, RACENONE, ARTIFICER, "Arcanotechnician (Art)", true, "ArtificerBackground", Arrows);
-	Arrows = "1-0-U-1, 2-0-U-1, 2-3-U-1, 3-0-U-1, 3-3-U-1, 3-4-U-1, 4-0-U-1, 4-0-R-1, 4-2-U-1, 4-3-U-1, 5-2-R-1";
+	Arrows = "1-0-U-1, 2-0-U-1, 2-2-U-2, 3-0-U-1, 3-4-U-1, 4-0-U-1, 4-0-R-1, 4-2-U-1, 4-3-U-1";
 	EnhancementTreeData[ENHT_BATTLE_ENGINEER_ART].InitializeEnhancementTree(ENHT_BATTLE_ENGINEER_ART, ENHTT_CLASS, RACENONE, ARTIFICER, "Battle Engineer (Art)", true, "ArtificerBackground", Arrows);
 	//Barbarian
 	Arrows = "1-1-U-1, 2-0-U-1, 2-1-U-2, 2-2-U-1, 3-0-U-2, 3-3-U-1, 3-3-L-1, 3-4-U-1";
