@@ -174,6 +174,10 @@ NAME: Charisma or Wisdom;
 DESC: +1 Charisma or Wisdom;
 ICON: MULTI_CharismaorWisdom;
 
+NAME: Caustic Strikes;
+DESC: Pick a Melee or Ranged version of this attack.;
+ICON: MULTI_CausticStrikes;
+
 NAME: Constitution or Intelligence;
 DESC: +1 Constitution or Intelligence;
 ICON: MULTI_ConstitutionorIntelligence;
@@ -443,6 +447,10 @@ NAME: Prophetic Zenith;
 DESC: Gain a new spell-like ability.;
 ICON: MULTI_PropheticZenith;
 
+NAME: Reconstructed Armaments;
+DESC: Gain Critical Threat Range with your chosen set of weapons.;
+ICON: MULTI_ReconstructedArmaments;
+
 NAME: Reinforced Defense;
 DESC: Improves the Armor Class bonuses you receive from shields or armor.;
 ICON: MULTI_ReinforcedDefense;
@@ -473,6 +481,10 @@ ICON: MULTI_SecondarySchoolMastery;
 
 NAME: Shadar Kai Dexterity / Intelligence / Wisdom;
 ICON: MULTI_ShadarKaiDexterityIntelligenceWisdom;
+
+NAME: Shatter Defenses;
+DESC: Pick a Melee or Ranged version of this attack.;
+ICON: MULTI_ShatterDefenses;
 
 NAME: Shattering Strike;
 DESC: Select a melee or ranged special attack that deals extra damage and reduces an opponent's fortification;
@@ -580,6 +592,10 @@ ICON: MULTI_SwashbucklingStyle;
 NAME: Swashbuckling Style II;
 DESC: Improve your swashbuckling Style.;
 ICON: MULTI_SwashbucklingStyleII;
+
+NAME: Thunder-Shock Weapon;
+DESC: Pick a Melee or Ranged version of this attack.;
+ICON: MULTI_ThunderShockWeapon;
 
 NAME: Throw Your Weight Around;
 ICON: MULTI_ThrowYourWeightAround;
@@ -1256,9 +1272,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 2;
-DESC1: Activation Cost: 25 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer as an SLA.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
-DESC2: Activation Cost: 15 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer as an SLA.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
-DESC3: Activation Cost: 5 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer as an SLA.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
+DESC1: Activation Cost: 25 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
+DESC2: Activation Cost: 15 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
+DESC3: Activation Cost: 5 Spell Points\par Cooldown: 16 Seconds\par You gain Phantasmal Killer.\par\par \cf1 Metamagic: Quicken, Heighten, Enlarge, Embolden\par Spell Resistance: Yes;
 ICON: DPGN_PhantasmalKiller;
 
 MULTI: Deep Gnomish Favored Enemy;
@@ -4174,7 +4190,7 @@ SLOT: 3;
 TYPE: Passive;
 RANKS: 1;
 COST: 1;
-DESC1: Your knowledge of magical items has improved, and now extends to potions. For item use purposes you are now treated as a second level Artificer (or your total character level, whichever is lower.);
+DESC1: Your knowledge of magical items has improved, and now extends to potions. For item use purposes you are now treated as a second level Artificer (or your total character level, whichever is lower.) Does not allow the use of Rune Arms;
 REQ1: Feat: Half-Elf Dilettante: Artificer;
 MOD1: Ability;
 MODNAME1: Spell Points;
@@ -13970,7 +13986,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your equipped weapon in your main hand gains +1 to its Enhancement Bonus. Additionally, you gain +1 bonus to your attack roll to confirm a critical hit, and a +1 bonus to the damage of your critical hits (before multipliers).\par \par Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 2, for a total of +16.;
+DESC1: Your equipped weapon in your main hand gains +1 to its Enhancement bonus. Additionally, you gain +1 bonus to your attack roll to confirm a critical hit, and a +1 bonus to the damage of your critical hits (before multipliers). Your equipped rune arm gains +1 stable charge tier. In addition, it grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 2, for a total of +16.;
 REQ1: EH: Battle Engineer [0-0-1];
 ICON: BTEN_InfusedWeapons;	
 
@@ -13981,7 +13997,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your equipped armor gains +1 to its Enhancement Bonus. Additionally, you equipped armor grants you +5 Physical Resistance Rating and -10% Arcane Spell Failure. (Artificer Infusions are not affected by Arcane Spell Failure, but this assists with scroll use.)\par \par Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 3, for a total of +24.;
+DESC1: Your equipped armor gains +1 to its Enhancement bonus. Additionally, your equipped armor or docent grants you +5 PRR and -10% ASF. (Artificer Infusions are not affected by ASF, but this assists with scroll use.) Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 3, for a total of +24.;
 REQ1: EH: Infused Weapons [0-1-1];
 ICON: BTEN_InfusedArmor;
 
@@ -13992,7 +14008,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your equipped weapon in your main hand gains an additional +1 to its Enhancement Bonus, for a total of +2. You also gain an additional +1 bonus to your attack roll to confirm a critical hit, and an additional +1 bonus to the damage of your critical hits (before multipliers), for a total of +2.\par \par Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 4, for a total of +32.;
+DESC1: Your equipped weapon in your main hand gains an additional +1 to its Enhancement bonus, for a total of +2. You also gain an additional +1 bonus to your attack roll to confirm a critical hit, and a +1 bonus to the damage of your critical hits (before multipliers), for a total of +2. Your equipped rune arm gains +1 stable charge tier. In addition, it grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 4, for a total of +32.;
 REQ1: EH: Infused Armor [0-2-1];
 ICON: BTEN_InfusedWeapons;	
 
@@ -14003,7 +14019,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your equipped armor gains an additional +1 to its Enhancement Bonus, for a total of +2. Your equipped armor grants you an additional +5 Physical Resistance Rating, for a total of +10 and an additional-10% Arcane Spell Failure, for a total of -20%. (Artificer Infusions are not affected by Arcane Spell Failure, but this assists with scroll use.)\par \par Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 5, for a total of +40.;
+DESC1: Your equipped armor gains an additional +1 to its Enhancement bonus, for a total of +2. Your equipped armor or docent also grants you an additional +5 PRR for a total of +10 and an additional -10% ASF for a total of -20%. (Artificer Infusions are not affected by ASF, but this assists with scroll use.) You gain an additional +15 PRR and MRR innately, regardless of your Armor. Your equipped rune arm grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 5, for a total of +40.;
 REQ1: EH: Infused Weapons [0-3-1];
 ICON: BTEN_InfusedArmor;
 
@@ -14014,7 +14030,7 @@ SLOT: 5;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: You gain +2 Intelligence. The Enhancement Bonus of your armor and your equipped weapon in your main hand are each increased by an additional +1, for a total of +3. Your equipped weapon in your main hand is now a Spellcasting Implement, providing a +3 Implement Bonus to Universal Spell Power for every +1 of Enhancement Bonus on the weapon.;
+DESC1: You gain +4 Intelligence. The Enhancement bonus of your armor and your equipped weapon in your main hand are each increased by an additional +1, for a total of +3. You gain a +1 Competence bonus to Critical Multiplier with Crossbows, Bastard Swords, Dwarven Axes, Light Hammers, Warhammers, and Morningstars. Your equipped weapon in your main hand is now a Spellcasting Implement, providing a +3 Implement bonus to Universal Spell Power for every +1 Enhancement bonus on the weapon.;
 REQ1: EH: Infused Armor [0-4-1];
 ICON: BTEN_MasterEngineer;
 
@@ -14032,6 +14048,18 @@ ICON: BTEN_CrossbowTraining;
 
 MULTI: Weapon Training;
 MSLOT: 2;
+NAME: Hammer and Morningstar Training;
+TREE: Battle Engineer (Art);
+LEVEL: 1;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 2;
+DESC1: +1 to attack and damage rolls with Light Hammers, Warhammers, and Morningstars.;
+ICON: BTEN_HammerandMorningstarTraining;
+
+MULTI: Weapon Training;
+MSLOT: 3;
 NAME: Hand and a Half Training;
 TREE: Battle Engineer (Art);
 LEVEL: 1;
@@ -14063,29 +14091,29 @@ MODNAME3: Concentration, Disable Device, Open Lock;
 MODVALUE3: 3, 3, 3;
 ICON: BTEN_FieldEngineer;
 
-NAME: Attack Boost;
+NAME: Field Scrapper;
 TREE: Battle Engineer (Art);
 LEVEL: 1;
 SLOT: 2;
 RANKS: 3;
-TYPE: Active;
-COST: 2;
-DESC1: Cooldown: 30 Seconds.\par Activate this ability to gain a +4 Action Boost bonus to your attack rolls for 20 seconds;
-DESC2: Cooldown: 30 Seconds.\par Activate this ability to gain a +6 Action Boost bonus to your attack rolls for 20 seconds;
-DESC3: Cooldown: 30 Seconds.\par Activate this ability to gain a +8 Action Boost bonus to your attack rolls for 20 seconds;
-ICON: BTEN_AttackBoost;
+TYPE: Passive;
+COST: 1;
+DESC1: +1 to Sunder DC;
+DESC2: +2 to Sunder DC;
+DESC3: +3 to Sunder DC;
+ICON: BTEN_FieldScrapper;
 
-NAME: Thermal Venting;
+NAME: Thaumaturgical Conduits;
 TREE: Battle Engineer (Art);
 LEVEL: 1;
 SLOT: 3;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: You have optimized the magical venting of your rune arms. After firing, your cooldown is 10% faster.;
-DESC2: You have optimized the magical venting of your rune arms. After firing, your cooldown is 20% faster.;
-DESC3: You have optimized the magical venting of your rune arms. After firing, your cooldown is 30% faster.;
-ICON: BTEN_ThermalVenting;
+DESC1: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 10% faster.;
+DESC2: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 20% faster.;
+DESC3: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 33% faster.;
+ICON: BTEN_ThaumaturgicalConduits;
 
 NAME: Item Defense;
 TREE: Battle Engineer (Art);
@@ -14114,6 +14142,19 @@ ICON: BTEN_CrossbowTraining;
 
 MULTI: Weapon Training;
 MSLOT: 2;
+NAME: Hammer and Morningstar Training;
+TREE: Battle Engineer (Art);
+LEVEL: 2;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 2;
+DESC1: +1 to attack and damage rolls with Light Hammers, Warhammers, and Morningstars.;
+REQ1: EHM: Weapon Training [1-0-1];
+ICON: BTEN_HammerandMorningstarTraining;
+
+MULTI: Weapon Training;
+MSLOT: 3;
 NAME: Hand and a Half Training;
 TREE: Battle Engineer (Art);
 LEVEL: 2;
@@ -14134,9 +14175,9 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 1d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
-DESC2: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 3d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
-DESC3: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 5d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC1: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 3d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC2: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 6d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC3: Cooldown: 12 seconds\par Melee Attack: On Damage: Deals 9d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
 ICON: BTEN_WrackingStrike;
 
 MULTI: Wrack Construct;
@@ -14148,15 +14189,51 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 1d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
-DESC2: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 3d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
-DESC3: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 5d6 extra damage to constructs and living constructs, and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC1: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 3d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC2: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 6d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
+DESC3: Cooldown: 12 seconds\par Ranged Attack: On Damage: Deals 9d6 extra damage to constructs and living constructs(Scales with 200% Melee Power), and applies Wracked: This constructs or living constructs fortification is reduced by 10% and loses its inherent immunity to sneak attack. This effect stacks up to 5 times.;
 ICON: BTEN_WrackingShot;
+
+MULTI: Caustic Strikes;
+MSLOT: 1;
+NAME: Caustic Shot;
+TREE: Battle Engineer (Art);
+LEVEL: 2;
+SLOT: 2;
+RANKS: 1;
+TYPE: Active;
+COST: 1;
+DESC1: Ranged Crossbow Attack +0.5/1/1.5[W]: On Damage: Deals 3d6 Acid damage and 6d6 extra Rust damage. Damage Scales with 200% ranged power. 6 second cooldown.;
+ICON: BTEN_CausticShot;
+
+MULTI: Caustic Strikes;
+MSLOT: 2;
+NAME: Caustic Strike;
+TREE: Battle Engineer (Art);
+LEVEL: 2;
+SLOT: 2;
+RANKS: 1;
+TYPE: Active;
+COST: 1;
+DESC1: Melee Attack +1/2/3[W]: On Damage: Deals 3d6 Acid damage and 6d6 extra Rust damage. Damage scales with 200% melee power. 6 second cooldown.;
+ICON: BTEN_CausticStrike;
+
+NAME: Extra Action Boost;
+TREE: Battle Engineer (Art);
+LEVEL: 2;
+SLOT: 3;
+RANKS: 3;
+TYPE: Passive;
+COST: 2;
+DESC1: You can use each of your action boost 1 additional time per rest.;
+DESC2: You can use each of your action boost 2 additional times per rest.;
+DESC3: You can use each of your action boost 3 additional times per rest.;
+ICON: BTEN_ExtraActionBoost;
 
 NAME: Damage Boost: Melee and Ranged Power;
 TREE: Battle Engineer (Art);
 LEVEL: 2;
-SLOT: 2;
+SLOT: 4;
 RANKS: 3;
 TYPE: Active;
 COST: 2;
@@ -14165,17 +14242,6 @@ DESC2: Cooldown: 30 seconds\par Activate this ability to receive a +20 Action Bo
 DESC3: Cooldown: 30 seconds\par Activate this ability to receive a +30 Action Boost bonus to Melee and Ranged Power for 20 seconds.;
 ICON: BTEN_DamageBoost;
 
-NAME: Thaumaturgical Conduits;
-TREE: Battle Engineer (Art);
-LEVEL: 2;
-SLOT: 3;
-RANKS: 3;
-TYPE: Passive;
-COST: 1;
-DESC1: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 10% faster.;
-DESC2: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 20% faster.;
-DESC3: You have made improvements to the efficiency of your rune arms. Your rune arms build charge 33% faster.;
-ICON: BTEN_ThaumaturgicalConduits;
 
 MULTI: Weapon Training;
 MSLOT: 1;
@@ -14192,6 +14258,19 @@ ICON: BTEN_CrossbowTraining;
 
 MULTI: Weapon Training;
 MSLOT: 2;
+NAME: Hammer and Morningstar Training;
+TREE: Battle Engineer (Art);
+LEVEL: 3;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 2;
+DESC1: +1 to attack and damage rolls with Light Hammers, Warhammers, and Morningstars.;
+REQ1: EHM: Weapon Training [2-0-1];
+ICON: BTEN_HammerandMorningstarTraining;
+
+MULTI: Weapon Training;
+MSLOT: 3;
 NAME: Hand and a Half Training;
 TREE: Battle Engineer (Art);
 LEVEL: 3;
@@ -14214,29 +14293,6 @@ DESC1: Cooldown: 25 seconds\par Activate: Target construct or living construct i
 DESC2: Cooldown: 25 seconds\par Activate: Target construct or living construct is dazed for 20 seconds. This effect is removed on damage. Using this ability on a target already effected by it will extend the duration.;
 DESC3: Cooldown: 25 seconds\par Activate: Target construct or living construct is dazed for 30 seconds. This effect is removed on damage. Using this ability on a target already effected by it will extend the duration.;
 ICON: BTEN_DisableConstruct;
-
-NAME: Extra Action Boost;
-TREE: Battle Engineer (Art);
-LEVEL: 3;
-SLOT: 2;
-RANKS: 3;
-TYPE: Passive;
-COST: 2;
-DESC1: You can use each of your action boost 1 additional time per rest.;
-DESC2: You can use each of your action boost 2 additional times per rest.;
-DESC3: You can use each of your action boost 3 additional times per rest.;
-ICON: BTEN_ExtraActionBoost;
-
-NAME: Arcane Capacitors;
-TREE: Battle Engineer (Art);
-LEVEL: 3;
-SLOT: 3;
-RANKS: 1;
-TYPE: Passive;
-COST: 2;
-DESC1: When moving, your Rune Arm's charge decays 25% slower than normal.;
-REQ1: EH: Thaumaturgical Conduits [2-3-1];
-ICON: BTEN_ArcaneCapacitors;
 
 MULTI: Strength, Dexterity, or Intelligence;
 MSLOT: 1;
@@ -14298,6 +14354,19 @@ ICON: BTEN_CrossbowTraining;
 
 MULTI: Weapon Training;
 MSLOT: 2;
+NAME: Hammer and Morningstar Training;
+TREE: Battle Engineer (Art);
+LEVEL: 4;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 2;
+DESC1: +1 to attack and damage rolls with Light Hammers, Warhammers, and Morningstars.;
+REQ1: EHM: Weapon Training [3-0-1];
+ICON: BTEN_HammerandMorningstarTraining;
+
+MULTI: Weapon Training;
+MSLOT: 3;
 NAME: Hand and a Half Training;
 TREE: Battle Engineer (Art);
 LEVEL: 4;
@@ -14318,7 +14387,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 30 seconds\par Enchant your crossbow to instantly reload itself for 6 seconds.;
+DESC1: Cooldown: 30 seconds\par Enchant your crossbow to instantly reload itself for 18 seconds.;
 REQ1: EHM: Weapon Training [4-0-1];
 ICON: BTEN_EndlessFusilade;
 
@@ -14331,30 +14400,47 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 30 seconds\par Receive a 30% Action Boost attack speed bonus for 20 seconds.;
+DESC1: Cooldown: 30 seconds\par Activate this ability to receive a 30% Action Boost attack speed bonus for 20 seconds.;
 REQ1: EHM: Weapon Training [4-0-1];
 ICON: BTEN_HasteBoost;
 
-NAME: Rune Arm Overcharge;
+MULTI: Shatter Defenses;
+MSLOT: 1;
+NAME: Shatter Defense(Crossbow);
 TREE: Battle Engineer (Art);
 LEVEL: 4;
 SLOT: 2;
 RANKS: 1;
-TYPE: Passive;
+TYPE: Active;
 COST: 2;
-DESC1: The patterns of magic making up your rune arm are clearer to you than ever. Your stable charge tier is increased to charge tier two.;
-ICON: BTEN_RuneArmOvercharge;
+DESC1: Tactical Ranged Crossbow Attack: +0.5/1/1.5[W]: On Hit: Reduces the target's Armor Class by 5 and lowers fortication by 10%. A sccessful Fortitude save negates this effect. (DC 10 + INT mod + Sunder Bonuses). Regardless of saving throw result tartget will suffer the Traum effect, -3 penalty to frotitude saves due to shock, stacks 5 times. Lasts 24 seconds. This ability shares a cooldown with Sunder. \par \parNote: This attack make your movement pause;
+REQ1: EHM: Caustic Strikes [2-2-1];
+ICON: BTEN_ShatterDefenseCrossbow;
 
-NAME: Arcane Capacitors;
+MULTI: Shatter Defenses;
+MSLOT: 2;
+NAME: Shatter Defense(Melee);
+TREE: Battle Engineer (Art);
+LEVEL: 4;
+SLOT: 2;
+RANKS: 1;
+TYPE: Active;
+COST: 2;
+DESC1: Tactical Melee Attack: +1/2/3[W]: On Hit: Reduces the target's Armor Class by 5 and lowers fortication by 10%. A sccessful Fortitude save negates this effect. (DC 10 + INT mod + Sunder Bonuses). Regardless of saving throw result tartget will suffer the Traum effect, -3 penalty to frotitude saves due to shock, stacks 5 times. Lasts 24 seconds. This ability shares a cooldown with Sunder. \par \par Note: This attack make your movement pause;
+REQ1: EHM: Caustic Strikes [2-2-1];
+ICON: BTEN_ShatterDefenseMelee;
+
+NAME: Agility Engine;
 TREE: Battle Engineer (Art);
 LEVEL: 4;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
-COST: 2;
-DESC1: When moving, your Rune Arm's charge decays 50% slower than normal.;
-REQ1: EH: Arcane Capacitors [3-3-1];
-ICON: BTEN_ArcaneCapacitors;
+COST: 1;
+DESC1: 3% Doublestrike and Doubleshot while wearing a Rune Arm.;
+DESC2: 6% Doublestrike and Doubleshot while wearing a Rune Arm.;
+DESC4: 10% Doublestrike and Doubleshot while wearing a Rune Arm.;
+ICON: BTEN_AgilityEngine;
 
 MULTI: Strength, Dexterity, or Intelligence;
 MSLOT: 1;
@@ -14404,10 +14490,49 @@ MODNAME1: Strength;
 MODVALUE1: 1;
 ICON: BTEN_Strength;
 
-NAME: Weapon Attachment;
+MULTI: Reconstructed Armaments;
+MSLOT: 1;
+NAME: Reconstructed Arms;
 TREE: Battle Engineer (Art);
 LEVEL: 5;
 SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: +1 Competence Bonus to Critical Threat Range with Light Hammers, Warhammers, and Morningstars.;
+REQ1: EHM: Weapon Training [4-0-1];
+ICON: BTEN_ReconstructedArms;
+
+MULTI: Reconstructed Armaments;
+MSLOT: 2;
+NAME: Reconstructed Crossbows;
+TREE: Battle Engineer (Art);
+LEVEL: 5;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: +1 Competence Bonus to Critical Threat Range with Crossbows.;
+REQ1: EHM: Weapon Training [4-0-1];
+ICON: BTEN_ReconstructedCorssbows;
+
+MULTI: Reconstructed Armaments;
+MSLOT: 3;
+NAME: Reconstructed Edges;
+TREE: Battle Engineer (Art);
+LEVEL: 5;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: +1 Competence Bonus to Critical Threat Range with Bastard Swords and Dwarven Axes.;
+REQ1: EHM: Weapon Training [4-0-1];
+ICON: BTEN_ReconstructedEdges;
+
+NAME: Weapon Attachment;
+TREE: Battle Engineer (Art);
+LEVEL: 5;
+SLOT: 1;
 RANKS: 1;
 TYPE: Active;
 COST: 1;
@@ -14416,26 +14541,50 @@ REQ1: EHM: Weapon Training [4-0-1];
 REQONE1: Feat: Warforged Traits, Feat: Construct Essence;
 ICON: BTEN_WeaponAttachment;
 
-NAME: Rune Arm Overcharge;
+MULTI: Thunder-Shock Weapon;
+MSLOT: 1;
+NAME: Thunder-Shock Weapon(Crossbow);
 TREE: Battle Engineer (Art);
 LEVEL: 5;
 SLOT: 2;
 RANKS: 1;
-TYPE: Passive;
-COST: 2;
-DESC1: The patterns of magic making up your rune arm are clearer to you than ever. Your stable charge tier is increased to charge tier three.;
-REQ1: EH: Rune Arm Overcharge [4-2-1];
-ICON: BTEN_RuneArmOvercharge;
+TYPE: Active;
+COST: 1;
+DESC1: Tactical Ranged Crossbow Attack +1.5[W]: On Damage: Deals 6d6 extra Electric damage that scales with 200% Melee Power, and Trips tha target. A successful Strength save negates the Trip effect. (DC 14 + INT mod + Sunder Bonuses). 12 seconds cooldown, shares a cooldown with Trip. \par \par Note: Description saids 'scales with Melee Power' but not sure. might be 'with Ranged Power' \par \par Note: This attack make your movement pause.;
+REQ1: EHM: Shatter Defenses [4-2-1];
+ICON: BTEN_ThunderShockWeaponCrossbow;
 
-NAME: Tactical Mobility;
+MULTI: Thunder-Shock Weapon;
+MSLOT: 2;
+NAME: Thunder-Shock Weapon(Melee);
+TREE: Battle Engineer (Art);
+LEVEL: 5;
+SLOT: 2;
+RANKS: 1;
+TYPE: Active;
+COST: 1;
+DESC1: Tactical Melee Attack +3[W]: On Damage: Deals 6d6 extra Electric damage that scales with 200% Melee Power, and Trips tha target. A successful Strength save negates the Trip effect. (DC 14 + INT mod + Sunder Bonuses). 12 seconds cooldown, shares a cooldown with Trip.;
+REQ1: EHM: Shatter Defenses [4-2-1];
+ICON: BTEN_ThunderShockWeaponMelee;
+
+NAME: Unlock Potential;
 TREE: Battle Engineer (Art);
 LEVEL: 5;
 SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
+COST: 1;
+DESC1: +20 Melee and Ranged Power while wielding a Rune Arm.;
+ICON: BTEN_UnlockPotential;
+
+NAME: Tactical Mobility;
+TREE: Battle Engineer (Art);
+LEVEL: 5;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
 COST: 2;
-DESC1: Charging your rune arm no longer causes you to move at reduced speed.;
-REQ1: EH: Rune Arm Overcharge [5-2-1], EH: Arcane Capacitor [4-3-1];
+DESC1: 10% Action Boost bonus to Movement Speed.;
 ICON: BTEN_TacticalMobility;
 
 
@@ -17921,9 +18070,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 8 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 3d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
-DESC2: Cooldown: 6 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 3d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
-DESC3: Cooldown: 5 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 3d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
+DESC1: Cooldown: 8 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 1d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
+DESC2: Cooldown: 6 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 1d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
+DESC3: Cooldown: 5 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 1d6 Light Damage that scales with Spell Power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Cleave. The damage scales with 100% Spell Power.;
 ICON: ENSP_EldritchBurst;
 
 NAME: Spiritual Ward;
@@ -18015,11 +18164,11 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 1d6 Light damage that scales with Spell Power.;
+DESC1: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 1d4 Light damage that scales with Spell Power.;
 REQ1: EH: Spiritual Ward [3-1-1];
-DESC2: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 2d6 Light damage that scales with Spell Power.;
+DESC2: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 2d4 Light damage that scales with Spell Power.;
 REQ2: EH: Spiritual Ward [3-1-2];
-DESC3: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 3d6 Light damage that scales with Spell Power.;
+DESC3: Your Eldritch Blasts, Melee Attacks, and Ranged Attacks gain 3d4 Light damage that scales with Spell Power.;
 REQ3: EH: Spiritual Ward [3-1-3];
 ICON: ENSP_SpiritualRetribution;
 
@@ -18085,9 +18234,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 8 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 10d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
-DESC2: Cooldown: 6 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 10d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
-DESC3: Cooldown: 5 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 10d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
+DESC1: Cooldown: 8 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 4d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
+DESC2: Cooldown: 6 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 4d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
+DESC3: Cooldown: 5 Seconds \par Fire your Eldritch Blast in an AOE centered on you. All enemies caught in the burst take 4d6 Light Damage that scales with spell power, plus any other effects and damage your Eldritch Blasts produce. This ability shares a cooldown with Great Cleave. Damage scales with 100% Spell Power. \par \par Metamagics: Empower, Maximize, Heighten \par Spell Resistance: No;
 ICON: ENSP_SpiritBlast;
 
 NAME: Beacon;
@@ -19190,7 +19339,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: Your weapon gains an additional +1 to its Enhancement bonus.  \par \par Passive: You gain +20 to your maximum Spell Points.;
+DESC1: Your weapon gains an additional +1 to its Enhancement bonus.  Works with man and off-hand weapon, but does not work with shields.  \par \par Passive: You gain +20 to your maximum Spell Points.;
 ICON: HPAG_HarperEnchantment;
 
 NAME: Weathered Traveler;
@@ -19224,7 +19373,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You can use your Intelligence modifier to hit with Melee and Missile weapons. \par \par Note: This does not function while unarmed, on shields, or using handwraps.;
+DESC1: You can use your Intelligence modifier to hit with Melee and Missile weapons. \par \par Note: This does not function while unarmed, on shields;
 ICON: HPAG_StrategicCombatI;
 
 NAME: Awareness;
@@ -19444,7 +19593,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: You can use your Intelligence modifier for damage with Melee and Missile weapons.
-\par \par Note: This does not function while unarmed, on shields, or using handwraps;
+\par \par Note: This does not function while unarmed, on shields.;
 ICON: HPAG_StrategicCombatII;
 
 MULTI: Dexterity or Intelligence;
@@ -25424,7 +25573,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Sacred Defense increases your movement speed by 10%;
+DESC1: Sacred Defense Action Boost increases your movement speed by 10%;
 ICON: SCDF_SwiftDefense;
 
 MULTI: Greater Sacred Defense;
@@ -26734,7 +26883,7 @@ SLOT: 5;
 RANKS: 1;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 15 Seconds \par You consume the soul of your targeted enemy, killing them instantly unless they make a Will saving throw with a DC of 18 + Warlock level + Charisma bonus. This ability works on undead, but not constructs and other creatures with no lifeforce. Some bosses may be immune. If the target survives then it loses 20 PRR and MRR for 6 seconds. \par \par Passive: +4 Charisma.;
+DESC1: Cooldown: 15 Seconds \par You consume the soul of your targeted enemy, killing them instantly unless they make a Will saving throw with a DC of 10 + Warlock level + Charisma bonus + Necro mod. This ability works on undead, but not constructs and other creatures with no lifeforce. Some bosses may be immune. If the target survives then it loses 20 PRR and MRR for 6 seconds. \par \par Passive: +4 Charisma.;
 REQ1: EH: Eldritch Seeker [0-4-1];
 ICON: SLEA_DevourtheSoul;
 
@@ -28065,7 +28214,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Stalwart Defense increases your movement speed by 10%;
+DESC1: Stalwart Defense Action Boost increases your movement speed by 10%;
 ICON: STLD_SwiftDefense;
 
 MULTI: Greater Stalwart Defense;

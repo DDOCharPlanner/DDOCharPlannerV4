@@ -8172,6 +8172,12 @@ void MainScreenClass::ResizeScreen(HWND Wnd)
     ResizeWindow("AdvWinSpellClearButton", AdvWinSpellClearButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("HeroicClassRadio", HeroicClassRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("IconicClassRadio", IconicClassRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("HeroicPastRadioButton", HeroicPastRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("IconicPastRadioButton", IconicPastRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("RacePastRadioButton", RacePastRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("EpicPastRadioButton", EpicPastRadioButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+
+
 
     //the description box
     ResizeWindow("DescriptionWindow", DescriptionWindow, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
