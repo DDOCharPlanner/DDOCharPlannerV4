@@ -87,6 +87,7 @@ class MainScreenClass : public IconClass
         HWND SaveButton;
 		HWND SaveAsButton;
         HWND ClearButton;
+		HWND TRButton;
         HWND PrintButton;
         HWND ForumExportButton;
         HWND AboutButton;

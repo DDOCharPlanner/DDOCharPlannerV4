@@ -27,7 +27,7 @@ void CharacterClass::Reset()
     SurName = "";
     SetRace(HUMAN);
     CharacterSex = MALE;
-    //set the default class to level 28
+    //set the default class to level MaxLevel
     for (unsigned int i=0; i<MAXLEVEL; i++)
         ClassRecord[i] = CLASSNONE;
     ClassRecord[0] = FIGHTER;
@@ -72,7 +72,103 @@ void CharacterClass::Reset()
     EnableValidations(true);
 	*FiletoOpen = NULL;
     }
+//---------------------------------------------------------------------------
+void CharacterClass::CharacterTR()
+{
+	EnableValidations(false); // Avoid too much UI refresh
+	SetRace(HUMAN);
+	CharacterSex = MALE;
+	//set the default class to level MaxLevel
+	for (unsigned int i = 0; i<MAXLEVEL; i++)
+		ClassRecord[i] = FIGHTER;
+	Alignment = LAWFULGOOD;
+	for (unsigned int i = 0; i<6; i++)
+		AbilityRaise[i] = 0;
+	int MaxTome[6];
+	for (int x = 0; x < 6; x++)
+		MaxTome[x] = 0;
+	// Get Max Tome
+	for (int i = 0; i < 6; i++)
+	{
+		for (unsigned int j = 0; j<MAXLEVEL; j++)
+		{
+				MaxTome[i] += TomeRaise[i][j];
+				TomeRaise[i][j] = 0;
+		}
 
+	}
+
+	for (unsigned int i = 0; i < 6; i++)
+			TomeRaise[i][0] = MaxTome[i];
+
+
+
+	AbilityRaise4 = ABILITYNONE;
+	AbilityRaise8 = ABILITYNONE;
+	AbilityRaise12 = ABILITYNONE;
+	AbilityRaise16 = ABILITYNONE;
+	AbilityRaise20 = ABILITYNONE;
+	AbilityRaise24 = ABILITYNONE;
+	AbilityRaise28 = ABILITYNONE;
+	FavorAbilityBonusPoints = false;
+	for (unsigned int i = 0; i<NUMSKILLS; i++)
+		for (unsigned int j = 0; j<HEROICLEVELS; j++)
+			SkillRaise[i][j] = 0;
+	FeatList.clear();
+
+
+	
+	CharacterEnhancements.Clear();
+	CharacterDestinies.ClearAll();
+	SpellList.clear();
+	ClearCharacterItems();
+	int tempcount = 0;
+	for (unsigned int i = 0; i < NUMCLASSES; i++)
+	{
+		tempcount = ReincarnationCount[i];
+		ReincarnationCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreasePastLife(CLASS(i));
+	}
+
+	for (unsigned int y = 0; y < EPICPASTLIFESPHERE; y++)
+	{
+		for (unsigned int x = 0; x < 3; x++)
+		{
+
+
+			tempcount = EpicPastLifeCount[y][x];
+			EpicPastLifeCount[y][x] = 0;
+			for (int x = 0; x < tempcount; x++)
+				IncreaseEpicFeat(DESTINY_SPHERE(y), x);
+		}
+
+	}
+	for (unsigned int i = 0; i < ICONICPASTLIFEFEAT; i++)
+	{
+
+		tempcount = IconicPastLifeCount[i];
+		IconicPastLifeCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreaseIconicPastLife(ICONICRACES(i));
+	}
+
+	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+	{
+
+		tempcount = RacePastLifeCount[i];
+		RacePastLifeCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreaseRacePastLife(PAST_RACE(i));
+	}
+	AddRaceAutoFeats(1);
+	AddClassAutoFeats(FIGHTER, 1, 1);
+	RaceEnhancement = 0;
+	for (unsigned int i = 0; i<NUMCHAREQUPMENTSLOTS; i++)
+		CharacterItemsEquipped[i] = -1;
+	EnableValidations(true);
+	*FiletoOpen = NULL;
+}
 //---------------------------------------------------------------------------
 void CharacterClass::GetName(string *First, string *Sur)
     {
@@ -1179,6 +1275,7 @@ void CharacterClass::AddRaceAutoFeats(int AtLevel)
     while (FeatIndex != -1)
         {
         Feat = Data.GetFeatPointer(FeatIndex);
+
         if (HasFeat(AtLevel, FeatIndex) == false)
             {
             NewFeat.FeatIndex = FeatIndex;
@@ -1283,6 +1380,7 @@ void CharacterClass::AddClassAutoFeats(CLASS ClassType, int AtLevel, int ClassLe
         {
 
         Feat = Data.GetFeatPointer(FeatIndex);
+
         if (HasFeat(AtLevel, FeatIndex) == false)
 			{
 			if (Feat->HaveAllFeatPrereqs(AtLevel) == PREREQ_PASS)
@@ -1970,6 +2068,8 @@ void CharacterClass::ReAddRemovedAutoFeat(int FeatIndex)
     for (unsigned int i=0; i<3; i++)
         {
         Feat = Data.GetFeatPointer(FeatIndex);
+		if (Feat->GetFeatName() == "Improved Precise Shot")
+			int tempx = 0;
         if (Feat->HasClass(Classes[i], MAXLEVEL, FEATAQUIREAUTOMATIC) == true  || Feat->HasClass(Classes[i], MAXLEVEL, FEATAQUIREAUTONOPREREQ) == true)
             {
             Level = Feat->GetFeatAutoClassLevel(Classes[i]);
@@ -4646,6 +4746,10 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 
     CloseHandle(FileHandle);
+	ostringstream msg;
+	msg.str << FiletoOpen;
+	msg << " was saved.";
+	MessageBox(0, msg.str, "Save", MB_OK);
     }
 
 //---------------------------------------------------------------------------

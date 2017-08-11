@@ -275,9 +275,29 @@ void MultiSkillsWindowClass::ResetSkillValues()
 			SkillsValue[i][x] = 0;
 		}
 	}
+	EnableWindow(AcceptButton, true);
 }
+//---------------------------------------------------------------------------
+void MultiSkillsWindowClass::ClearLevel(int Level)
+{
+	for (int i = 0; i < NUMSKILLS; i++)
+	{
 
+			SkillsValue[i][Level] = 0;
 
+	}
+	EnableWindow(AcceptButton, true);
+}
+//---------------------------------------------------------------------------
+void MultiSkillsWindowClass::ClearSkill(int Skill)
+{
+
+		for (int x = 0; x < HEROICLEVELS; x++)
+		{
+			SkillsValue[Skill][x] = 0;
+		}
+	EnableWindow(AcceptButton, true);
+}
 
 
 //---------------------------------------------------------------------------
@@ -1390,6 +1410,63 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 	MapWindowPoints(HWND_DESKTOP, MultiSkillsHandle, (LPPOINT)&Frame, 2);
 	if (x >= Frame.left && x <= Frame.right && y >= Frame.top && y <= Frame.bottom)
 	{
+		//First check if level was clicked
+		bool LevelClick = false;
+		int LevelClicked = -1;
+		for (unsigned int i = 0; i < HEROICLEVELS; i++)
+		{
+			ss.str("");
+			ss << "LevelLabel" << i;
+			Graphic = UIManager->GetGraphicData(ss.str(), MULTISKILLSWINDOW);
+			X = static_cast<int>(Graphic->BaseLocationX);
+			Y = static_cast<int>(Graphic->BaseLocationY);
+			Width = static_cast<int>(Graphic->BaseWidth);
+			Height = static_cast<int>(Graphic->BaseHeight);
+			if (y >= Y && y <= Y + Height)
+			{
+				LevelClicked = i;
+				LevelClick = true;
+				break;
+			}
+		}
+		if (LevelClick)
+		{
+			ClearLevel(LevelClicked);
+			UpdateAll = true;
+			SkillChange = true;
+			CurrentLevel = LevelClick + 1;
+			DrawSkillTable();
+			EnableWindow(AcceptButton, true);
+			exit;
+		}
+		bool SkillClick = false;
+		int SkillClicked = -1;
+		//Check if Skill was clicked
+		for (int i = 0; i < NUMSKILLS; i++)
+		{
+			ss.str("");
+			ss << "LevelLabel" << i;
+			Graphic = UIManager->GetGraphicData(ss.str(), MULTISKILLSWINDOW);
+			X = static_cast<int>(Graphic->BaseLocationX);
+			Y = static_cast<int>(Graphic->BaseLocationY);
+			Width = static_cast<int>(Graphic->BaseWidth);
+			Height = static_cast<int>(Graphic->BaseHeight);
+			if (y >= Y && y <= Y + Height)
+			{
+				SkillClicked = i;
+				SkillClick = true;
+				break;
+			}
+		}
+		if (SkillClick)
+		{
+			ClearSkill(SkillClicked);
+			UpdateAll = true;
+			SkillChange = true;
+			DrawSkillTable();
+			EnableWindow(AcceptButton, true);
+			exit;
+		}
 		//Find Skill First
 		int Index = -1;
 		for (int i = 0; i < NUMSKILLS; i++)
@@ -1408,6 +1485,7 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 			}
 
 		}
+
 		if (Index != -1)
 		{
 			for (unsigned int i = 0; i < HEROICLEVELS; i++)

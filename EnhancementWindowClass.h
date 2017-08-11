@@ -35,6 +35,7 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		HWND EnhancementWindowHandle;
 		HWND AcceptButton;
 		HWND CancelButton;
+		HWND Respec;
 		HWND ResetAllTreesButton;
 		HWND APRemainingLabel;
 		HWND APSpentLabel;
@@ -95,8 +96,8 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		int EnhLevelWidth;
 		int EnhLevelHeight;
 		bool FirstTime;
-		int TotalAP;
-		int TotalAPAvailable;
+		int LevelAP;
+		int LevelAPAvailable;
 		int TotalAPSpent;
 		int RaceAP;
 		int RaceAPAvailable;
@@ -125,6 +126,7 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		void SetPossibleTrees();
 		void ResetCurrentTree(int CurrentTree);
 		void ResetAllTrees();
+		void ResetAllAtLvlTrees(int x);
 		void FillSelectTreeList(int Tree);
 		void DrawSelectTreeListItem(HDC hdc, DWORD Item, long Top, long Left);
 		void ChangeTree(int TreeIndex);

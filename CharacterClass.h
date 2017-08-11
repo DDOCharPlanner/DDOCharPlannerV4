@@ -28,6 +28,7 @@ class CharacterClass
         virtual ~CharacterClass();
 
         void Reset();
+		void CharacterTR();
         string GetInstructionString(int CurrentSelectedLevel, int Index, int *Value);
         void Save(HWND hwnd, bool Saveas = false);
         void Load(HWND hwnd);
