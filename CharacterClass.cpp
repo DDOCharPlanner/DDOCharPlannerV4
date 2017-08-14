@@ -4378,6 +4378,17 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 	}
 
 //---------------------------------------------------------------------------
+bool CharacterClass::File_Exists(const std::string& name)
+	{
+		if (FILE *file = fopen(name.c_str(), "r")) {
+			fclose(file);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+//---------------------------------------------------------------------------
 void CharacterClass::Save(HWND hwnd, bool SaveAs)
     {
     OPENFILENAME FileOpen;
@@ -4394,6 +4405,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	FeatDataClass *Feat;
 	ItemClass *ptItem;
 	ItemEffectClass *ptItemEffect;
+	IShellItem *MyShellItem;
 	int len;
 	int rc;
 	string CombinedName;
@@ -4410,6 +4422,9 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
     GetCurrentDirectory(MAX_PATH, InitDirectory);
 	StringCbCat (InitDirectory, MAX_PATH, "\\SaveFiles\\");
     StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
+
+
+		
 	IFileDialog *pfd = NULL;
 	LPCWSTR TxtStr = L".txt";
 	bool xptest;
@@ -4420,7 +4435,6 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 		if (SUCCEEDED(hr) && xptest != true)
 		{
 			HRESULT hr;
-
 			// Create a new common open file dialog.
 			IFileOpenDialog *pfd = NULL;
 			hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
@@ -4445,6 +4459,55 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 						hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
 						hr = pfd->SetDefaultExtension(L"txt");
 					}
+					
+					hr = pfd->GetFolder(&MyShellItem);
+					if (SUCCEEDED(hr))
+					{
+						PWSTR pszPath = NULL;
+						hr = MyShellItem->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+						if (SUCCEEDED(hr))
+						{
+							if (CombinedName != "")
+							{
+									int CharCount = 0;
+									char Pathstring[MAX_PATH];
+									string TestString;
+									do	{
+										ss << "";
+										int nlength = wcslen(pszPath);
+										//Gets converted length
+										int nbytes = WideCharToMultiByte(0, 0, pszPath, nlength, NULL, 0, NULL, NULL);
+										WideCharToMultiByte(0, 0, pszPath, nlength, Pathstring, nbytes, NULL, NULL);
+										Pathstring[nbytes] = '\0';
+										if (CharCount > 0)
+											{
+												ss << CharCount;
+												string str = ss.str();
+												CombinedName += str;
+												StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
+											}
+										ss << Pathstring;
+										StringCbCat(Pathstring, MAX_PATH, "\0");
+										ss << "\\";
+										ss << FileName;
+										TestString = ss.str();
+										CharCount += 1;
+									} while (File_Exists(TestString));
+
+								std::wstring stemp = std::wstring(CombinedName.begin(), CombinedName.end());
+								LPCWSTR  DefaultName = (LPCWSTR)stemp.c_str();
+								hr = pfd->SetFileName(DefaultName);
+							}
+
+						}
+						
+
+
+
+
+
+					}
+
 				}
 				// Show the open file dialog.
 				if (SUCCEEDED(hr))
@@ -4747,9 +4810,11 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 
     CloseHandle(FileHandle);
 	ostringstream msg;
-	msg.str << FiletoOpen;
+	msg << FiletoOpen;
 	msg << " was saved.";
-	MessageBox(0, msg.str, "Save", MB_OK);
+	string mymsg;
+	mymsg = msg.str();
+	MessageBox(0, mymsg.c_str() , "Save", MB_OK);
     }
 
 //---------------------------------------------------------------------------
