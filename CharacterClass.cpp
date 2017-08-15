@@ -3,6 +3,7 @@
 #include "DataClass.h"
 #include "InterfaceManagerClass.h"
 #include "MainScreenClass.h"
+#include <time.h>
 
 //---------------------------------------------------------------------------
 CharacterClass Character;
@@ -4406,6 +4407,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	ItemClass *ptItem;
 	ItemEffectClass *ptItemEffect;
 	IShellItem *MyShellItem;
+	string NewCombinedName;
 	int len;
 	int rc;
 	string CombinedName;
@@ -4473,19 +4475,34 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 									char Pathstring[MAX_PATH];
 									string TestString;
 									do	{
-										ss << "";
+										
 										int nlength = wcslen(pszPath);
 										//Gets converted length
 										int nbytes = WideCharToMultiByte(0, 0, pszPath, nlength, NULL, 0, NULL, NULL);
 										WideCharToMultiByte(0, 0, pszPath, nlength, Pathstring, nbytes, NULL, NULL);
 										Pathstring[nbytes] = '\0';
-										if (CharCount > 0)
+										if (CharCount >= 0)
 											{
-												ss << CharCount;
+												ss.str("");
+												ss.clear();
+												time_t t = time(0);   // get time now
+												struct tm * now = localtime(&t);
+												ss << ' ' << (now->tm_year + 1900) << '-'
+													<< (now->tm_mon + 1) << '-'
+													<< now->tm_mday;
+
+												if (CharCount > 0)
+												{
+													ss << ' ' << CharCount;
+												}
+
+												ss << '\0';
 												string str = ss.str();
-												CombinedName += str;
-												StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
+												NewCombinedName = CombinedName + str.c_str();
+												StringCbPrintf(FileName, MAX_PATH, "%s.txt", NewCombinedName.c_str());
 											}
+										ss.str("");
+										ss.clear();
 										ss << Pathstring;
 										StringCbCat(Pathstring, MAX_PATH, "\0");
 										ss << "\\";
@@ -4494,7 +4511,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 										CharCount += 1;
 									} while (File_Exists(TestString));
 
-								std::wstring stemp = std::wstring(CombinedName.begin(), CombinedName.end());
+									std::wstring stemp = std::wstring(NewCombinedName.begin(), NewCombinedName.end());
 								LPCWSTR  DefaultName = (LPCWSTR)stemp.c_str();
 								hr = pfd->SetFileName(DefaultName);
 							}

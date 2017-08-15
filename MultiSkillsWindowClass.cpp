@@ -1422,7 +1422,7 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 			Y = static_cast<int>(Graphic->BaseLocationY);
 			Width = static_cast<int>(Graphic->BaseWidth);
 			Height = static_cast<int>(Graphic->BaseHeight);
-			if (y >= Y && y <= Y + Height)
+			if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
 			{
 				LevelClicked = i;
 				LevelClick = true;
@@ -1445,13 +1445,13 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 		for (int i = 0; i < NUMSKILLS; i++)
 		{
 			ss.str("");
-			ss << "LevelLabel" << i;
+			ss << "SkillLabel" << i;
 			Graphic = UIManager->GetGraphicData(ss.str(), MULTISKILLSWINDOW);
 			X = static_cast<int>(Graphic->BaseLocationX);
 			Y = static_cast<int>(Graphic->BaseLocationY);
 			Width = static_cast<int>(Graphic->BaseWidth);
 			Height = static_cast<int>(Graphic->BaseHeight);
-			if (y >= Y && y <= Y + Height)
+			if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
 			{
 				SkillClicked = i;
 				SkillClick = true;

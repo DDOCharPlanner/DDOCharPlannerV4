@@ -1,5 +1,14 @@
 Changelog
 =========
+Version 4.36.103
+================
+Fixed Master of Knowledge
+Fixed Master of Fire
+Added a button to Rest Enhancement Trees from Current level
+Added feature to rest Skill point by Right clicking on Skill name or Character level.
+Added save file feedback
+Added Default Filename to new savefile or saveas dialogbox.
+
 Version 4.35.301
 ================
 General

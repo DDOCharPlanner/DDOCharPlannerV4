@@ -1282,7 +1282,8 @@ FEATNAME: Master of Fire;
 FEATDESCRIPTION: Duration: Permanent\par Your Burning Hands, Scorch, and Fireball spells gain +10 to their maximum caster level.\par\par Passive: +140 Maximum Spell Points;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: MasterofFire;
 
 PARENTHEADING: Epic;
 FEATNAME: Master of Knowledge;
