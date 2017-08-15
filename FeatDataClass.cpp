@@ -660,7 +660,8 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 	FeatDataClass *CheckFeat;
 	int Levels;
 	int RequiredLevel;
-
+	if (Name == "Improved Precise Shot")
+		int xtemp = 0;
 	//get the character race and class levels and Alignment
     CharacterRace = Character.GetRace();
 	CharacterAlignment = Character.GetAlignment();

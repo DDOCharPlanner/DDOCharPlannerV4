@@ -67,7 +67,9 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	SaveAsButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIComponent->GetComponentData("ClearButton", MAINWINDOW);
 	ClearButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
-    Component = UIComponent->GetComponentData("PrintButton", MAINWINDOW);
+	Component = UIComponent->GetComponentData("TRButton", MAINWINDOW);
+	TRButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIComponent->GetComponentData("PrintButton", MAINWINDOW);
 	PrintButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
     Component = UIComponent->GetComponentData("ForumExportButton", MAINWINDOW);
 	ForumExportButton = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX*WindowX), static_cast<int>(Component->BaseLocationY*WindowY), static_cast<int>(Component->BaseWidth*WindowX), static_cast<int>(Component->BaseHeight*WindowY), Parent, (HMENU)Component->WindowID, Instance, nullptr);
@@ -353,6 +355,7 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 	    SendMessage(LoadButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(SaveButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 		SendMessage(SaveAsButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
+		SendMessage(TRButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ClearButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(PrintButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
 	    SendMessage(ForumExportButton, WM_SETFONT, (WPARAM)DefaultFont, 0);
@@ -508,6 +511,7 @@ void MainScreenClass::Show(bool State)
     ShowWindow(SaveButton, State);
 	ShowWindow(SaveAsButton, State);
     ShowWindow(ClearButton, State);
+	ShowWindow(TRButton, State);
     ShowWindow(PrintButton, State);
     ShowWindow(ForumExportButton, State);
     ShowWindow(AboutButton, State);
@@ -710,8 +714,50 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					if (EquipmentScreenShown == true)
                         ToggleEquipmentScreen();
                     return 0;
-					
+		
                     }
+				if ((int)LOWORD(wParam) == MS_CHARACTERTR)
+				{
+					CurrentSelectedLevel = 1;
+					Character.CharacterTR();
+					FeatListParentHeading.clear();
+					FeatListSelectParentHeading.clear();
+					SpellListParentHeading.clear();
+					SpellListSelectParentHeading.clear();
+					RedrawWindow(ParentWindow, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
+					SetUp = true;
+					ShowWindow(AdvWinBonusAbilityPointsCheckBox, false);
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_UNCHECKED, 0);
+					ShowWindow(AdvWinSpellRareCheck, false);
+					SendMessage(AdvWinSpellRareCheck, BM_SETCHECK, BST_UNCHECKED, 0);
+					ShowWindow(AdvWinFeatList, false);
+					ShowWindow(AdvWinFirstNameInput, false);
+					ShowWindow(AdvWinSurnameInput, false);
+					ShowWindow(AdvSkillPointSpendBox, false);
+					ShowWindow(AdvWinSpellList, false);
+					ShowWindow(AdvWinSpellClearButton, false);
+					ShowWindow(HeroicClassRadioButton, false);
+					ShowWindow(IconicClassRadioButton, false);
+					//EnableWindow(DestinyPanelButton, false);
+					UpdateMetaWindows();
+					FillAbilityBox();
+					FillAbilityStatBox();
+					FillSpellBox();
+					FillSkillBox();
+					FillSkillSpendBox();
+					FillFeatBox();
+					FillInstructionBox();
+					ResetEnhancementList();
+					FillEnhancementBox();
+					ChangeInstructionWindowSelection(1);
+					if (EquipmentScreenShown == true)
+						ToggleEquipmentScreen();
+					String1 = "{\\b {\\cf1 Your Character has TR'ed}}\\par\\par ";
+					String1 += "Please select the new Past Life Feat and save your new file.";
+					FillDescriptionBox(String1);
+					return 0;
+
+				}
                 if ((int)LOWORD(wParam) == MS_LOADBUTTON)
                     {
                     Character.Load(ParentWindow);
@@ -8063,6 +8109,7 @@ void MainScreenClass::ResizeScreen(HWND Wnd)
 	ResizeWindow("SaveButton", SaveButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("SaveAsButton", SaveAsButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ClearButton", ClearButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
+	ResizeWindow("TRButton", TRButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("PrintButton", PrintButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("ForumExportButton", ForumExportButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);
 	ResizeWindow("AboutButton", AboutButton, NewScreenSize.cx, NewScreenSize.cy, UIComponent);

@@ -80,6 +80,8 @@ private:
 	void DrawSkills(SKILLS Skill);
 	void ResetSkillValues();
 	void ClearAutoFillFrame(HDC hdc);
+	void ClearSkill(int Skill);
+	void ClearLevel(int Level);
 	int SkillsValue[NUMSKILLS][HEROICLEVELS];
 	//do not implement these two functions, instance  control!!
 	MultiSkillsWindowClass(const MultiSkillsWindowClass &source);

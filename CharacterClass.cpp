@@ -3,6 +3,7 @@
 #include "DataClass.h"
 #include "InterfaceManagerClass.h"
 #include "MainScreenClass.h"
+#include <time.h>
 
 //---------------------------------------------------------------------------
 CharacterClass Character;
@@ -27,7 +28,7 @@ void CharacterClass::Reset()
     SurName = "";
     SetRace(HUMAN);
     CharacterSex = MALE;
-    //set the default class to level 28
+    //set the default class to level MaxLevel
     for (unsigned int i=0; i<MAXLEVEL; i++)
         ClassRecord[i] = CLASSNONE;
     ClassRecord[0] = FIGHTER;
@@ -72,7 +73,103 @@ void CharacterClass::Reset()
     EnableValidations(true);
 	*FiletoOpen = NULL;
     }
+//---------------------------------------------------------------------------
+void CharacterClass::CharacterTR()
+{
+	EnableValidations(false); // Avoid too much UI refresh
+	SetRace(HUMAN);
+	CharacterSex = MALE;
+	//set the default class to level MaxLevel
+	for (unsigned int i = 0; i<MAXLEVEL; i++)
+		ClassRecord[i] = FIGHTER;
+	Alignment = LAWFULGOOD;
+	for (unsigned int i = 0; i<6; i++)
+		AbilityRaise[i] = 0;
+	int MaxTome[6];
+	for (int x = 0; x < 6; x++)
+		MaxTome[x] = 0;
+	// Get Max Tome
+	for (int i = 0; i < 6; i++)
+	{
+		for (unsigned int j = 0; j<MAXLEVEL; j++)
+		{
+				MaxTome[i] += TomeRaise[i][j];
+				TomeRaise[i][j] = 0;
+		}
 
+	}
+
+	for (unsigned int i = 0; i < 6; i++)
+			TomeRaise[i][0] = MaxTome[i];
+
+
+
+	AbilityRaise4 = ABILITYNONE;
+	AbilityRaise8 = ABILITYNONE;
+	AbilityRaise12 = ABILITYNONE;
+	AbilityRaise16 = ABILITYNONE;
+	AbilityRaise20 = ABILITYNONE;
+	AbilityRaise24 = ABILITYNONE;
+	AbilityRaise28 = ABILITYNONE;
+	FavorAbilityBonusPoints = false;
+	for (unsigned int i = 0; i<NUMSKILLS; i++)
+		for (unsigned int j = 0; j<HEROICLEVELS; j++)
+			SkillRaise[i][j] = 0;
+	FeatList.clear();
+
+
+	
+	CharacterEnhancements.Clear();
+	CharacterDestinies.ClearAll();
+	SpellList.clear();
+	ClearCharacterItems();
+	int tempcount = 0;
+	for (unsigned int i = 0; i < NUMCLASSES; i++)
+	{
+		tempcount = ReincarnationCount[i];
+		ReincarnationCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreasePastLife(CLASS(i));
+	}
+
+	for (unsigned int y = 0; y < EPICPASTLIFESPHERE; y++)
+	{
+		for (unsigned int x = 0; x < 3; x++)
+		{
+
+
+			tempcount = EpicPastLifeCount[y][x];
+			EpicPastLifeCount[y][x] = 0;
+			for (int x = 0; x < tempcount; x++)
+				IncreaseEpicFeat(DESTINY_SPHERE(y), x);
+		}
+
+	}
+	for (unsigned int i = 0; i < ICONICPASTLIFEFEAT; i++)
+	{
+
+		tempcount = IconicPastLifeCount[i];
+		IconicPastLifeCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreaseIconicPastLife(ICONICRACES(i));
+	}
+
+	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
+	{
+
+		tempcount = RacePastLifeCount[i];
+		RacePastLifeCount[i] = 0;
+		for (int x = 0; x < tempcount; x++)
+			IncreaseRacePastLife(PAST_RACE(i));
+	}
+	AddRaceAutoFeats(1);
+	AddClassAutoFeats(FIGHTER, 1, 1);
+	RaceEnhancement = 0;
+	for (unsigned int i = 0; i<NUMCHAREQUPMENTSLOTS; i++)
+		CharacterItemsEquipped[i] = -1;
+	EnableValidations(true);
+	*FiletoOpen = NULL;
+}
 //---------------------------------------------------------------------------
 void CharacterClass::GetName(string *First, string *Sur)
     {
@@ -1179,6 +1276,7 @@ void CharacterClass::AddRaceAutoFeats(int AtLevel)
     while (FeatIndex != -1)
         {
         Feat = Data.GetFeatPointer(FeatIndex);
+
         if (HasFeat(AtLevel, FeatIndex) == false)
             {
             NewFeat.FeatIndex = FeatIndex;
@@ -1283,6 +1381,7 @@ void CharacterClass::AddClassAutoFeats(CLASS ClassType, int AtLevel, int ClassLe
         {
 
         Feat = Data.GetFeatPointer(FeatIndex);
+
         if (HasFeat(AtLevel, FeatIndex) == false)
 			{
 			if (Feat->HaveAllFeatPrereqs(AtLevel) == PREREQ_PASS)
@@ -1970,6 +2069,8 @@ void CharacterClass::ReAddRemovedAutoFeat(int FeatIndex)
     for (unsigned int i=0; i<3; i++)
         {
         Feat = Data.GetFeatPointer(FeatIndex);
+		if (Feat->GetFeatName() == "Improved Precise Shot")
+			int tempx = 0;
         if (Feat->HasClass(Classes[i], MAXLEVEL, FEATAQUIREAUTOMATIC) == true  || Feat->HasClass(Classes[i], MAXLEVEL, FEATAQUIREAUTONOPREREQ) == true)
             {
             Level = Feat->GetFeatAutoClassLevel(Classes[i]);
@@ -4278,6 +4379,17 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 	}
 
 //---------------------------------------------------------------------------
+bool CharacterClass::File_Exists(const std::string& name)
+	{
+		if (FILE *file = fopen(name.c_str(), "r")) {
+			fclose(file);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+//---------------------------------------------------------------------------
 void CharacterClass::Save(HWND hwnd, bool SaveAs)
     {
     OPENFILENAME FileOpen;
@@ -4294,6 +4406,8 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	FeatDataClass *Feat;
 	ItemClass *ptItem;
 	ItemEffectClass *ptItemEffect;
+	IShellItem *MyShellItem;
+	string NewCombinedName;
 	int len;
 	int rc;
 	string CombinedName;
@@ -4310,6 +4424,9 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
     GetCurrentDirectory(MAX_PATH, InitDirectory);
 	StringCbCat (InitDirectory, MAX_PATH, "\\SaveFiles\\");
     StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
+
+
+		
 	IFileDialog *pfd = NULL;
 	LPCWSTR TxtStr = L".txt";
 	bool xptest;
@@ -4320,7 +4437,6 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 		if (SUCCEEDED(hr) && xptest != true)
 		{
 			HRESULT hr;
-
 			// Create a new common open file dialog.
 			IFileOpenDialog *pfd = NULL;
 			hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
@@ -4345,6 +4461,70 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 						hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
 						hr = pfd->SetDefaultExtension(L"txt");
 					}
+					
+					hr = pfd->GetFolder(&MyShellItem);
+					if (SUCCEEDED(hr))
+					{
+						PWSTR pszPath = NULL;
+						hr = MyShellItem->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+						if (SUCCEEDED(hr))
+						{
+							if (CombinedName != "")
+							{
+									int CharCount = 0;
+									char Pathstring[MAX_PATH];
+									string TestString;
+									do	{
+										
+										int nlength = wcslen(pszPath);
+										//Gets converted length
+										int nbytes = WideCharToMultiByte(0, 0, pszPath, nlength, NULL, 0, NULL, NULL);
+										WideCharToMultiByte(0, 0, pszPath, nlength, Pathstring, nbytes, NULL, NULL);
+										Pathstring[nbytes] = '\0';
+										if (CharCount >= 0)
+											{
+												ss.str("");
+												ss.clear();
+												time_t t = time(0);   // get time now
+												struct tm * now = localtime(&t);
+												ss << ' ' << (now->tm_year + 1900) << '-'
+													<< (now->tm_mon + 1) << '-'
+													<< now->tm_mday;
+
+												if (CharCount > 0)
+												{
+													ss << ' ' << CharCount;
+												}
+
+												ss << '\0';
+												string str = ss.str();
+												NewCombinedName = CombinedName + str.c_str();
+												StringCbPrintf(FileName, MAX_PATH, "%s.txt", NewCombinedName.c_str());
+											}
+										ss.str("");
+										ss.clear();
+										ss << Pathstring;
+										StringCbCat(Pathstring, MAX_PATH, "\0");
+										ss << "\\";
+										ss << FileName;
+										TestString = ss.str();
+										CharCount += 1;
+									} while (File_Exists(TestString));
+
+									std::wstring stemp = std::wstring(NewCombinedName.begin(), NewCombinedName.end());
+								LPCWSTR  DefaultName = (LPCWSTR)stemp.c_str();
+								hr = pfd->SetFileName(DefaultName);
+							}
+
+						}
+						
+
+
+
+
+
+					}
+
 				}
 				// Show the open file dialog.
 				if (SUCCEEDED(hr))
@@ -4646,6 +4826,12 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 
     CloseHandle(FileHandle);
+	ostringstream msg;
+	msg << FiletoOpen;
+	msg << " was saved.";
+	string mymsg;
+	mymsg = msg.str();
+	MessageBox(0, mymsg.c_str() , "Save", MB_OK);
     }
 
 //---------------------------------------------------------------------------

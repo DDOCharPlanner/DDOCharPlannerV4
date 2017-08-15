@@ -28,6 +28,7 @@ class CharacterClass
         virtual ~CharacterClass();
 
         void Reset();
+		void CharacterTR();
         string GetInstructionString(int CurrentSelectedLevel, int Index, int *Value);
         void Save(HWND hwnd, bool Saveas = false);
         void Load(HWND hwnd);
@@ -35,6 +36,7 @@ class CharacterClass
 		bool GetLevelError(unsigned int Level);
 		void EnableValidations(bool NewSetting);
 		int GetHighestBuildLevel();
+		bool File_Exists(const std::string& name);
 		
 		//name/sex/race/alignment
         void GetName(string *First, string *Sur);
