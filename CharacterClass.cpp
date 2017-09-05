@@ -4432,7 +4432,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	bool xptest;
 	xptest = false;
 	//char *dir_org = NULL;
-
+	HRESULT temphr;
 		HRESULT hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
 		if (SUCCEEDED(hr) && xptest != true)
 		{
@@ -4461,14 +4461,16 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 						hr = pfd->SetFileTypes(ARRAYSIZE(rgSpec), rgSpec);
 						hr = pfd->SetDefaultExtension(L"txt");
 					}
-					
+
 					hr = pfd->GetFolder(&MyShellItem);
 					if (SUCCEEDED(hr))
 					{
+						
 						PWSTR pszPath = NULL;
-						hr = MyShellItem->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
+						hr = MyShellItem->GetDisplayName(SIGDN_NORMALDISPLAY, &pszPath);
 						if (SUCCEEDED(hr))
 						{
+							
 							if (CombinedName != "")
 							{
 									int CharCount = 0;
@@ -4513,18 +4515,44 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 
 									std::wstring stemp = std::wstring(NewCombinedName.begin(), NewCombinedName.end());
 								LPCWSTR  DefaultName = (LPCWSTR)stemp.c_str();
-								hr = pfd->SetFileName(DefaultName);
+								hr=pfd->SetFileName(DefaultName);
+								if (SUCCEEDED(hr))
+								{
+									DefaultName;
+								}
+								else
+								{
+								ostringstream msg;
+								msg << "Set File Name Failed";
+								string mymsg;
+								mymsg = msg.str();
+								MessageBox(0, mymsg.c_str(), "Save", MB_OK);
+								}
 							}
 
 						}
-						
+						else
+						{
+							ostringstream msg;
+							msg << "Get Display Name Failed";
+							string mymsg;
+							mymsg = msg.str();
+							MessageBox(0, mymsg.c_str(), "Save", MB_OK);
+						}
 
 
 
 
 
 					}
-
+					else
+					{
+						ostringstream msg;
+						msg << "Get Folder Failed";
+						string mymsg;
+						mymsg = msg.str();
+						MessageBox(0, mymsg.c_str(), "Save", MB_OK);
+					}
 				}
 				// Show the open file dialog.
 				if (SUCCEEDED(hr))
