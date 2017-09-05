@@ -1,4 +1,4 @@
-﻿Build started 8/15/2017 1:26:56 PM.
+﻿Build started 9/5/2017 1:27:27 PM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Rebuild target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (DDOCharGen.vcxproj, DDOCharPlan.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
@@ -113,4 +113,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:40.34
+Time Elapsed 00:01:33.51
