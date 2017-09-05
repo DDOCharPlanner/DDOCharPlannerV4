@@ -1056,8 +1056,10 @@ void EnhancementWindowClass::ResetAllAtLvlTrees(int CurrentLvl)
 	
 	//lets Recalculate the points for spent
 	int RankValue;
+	int APTree;
 	for (int xTree = 0; xTree < 7; xTree++)
 	{
+		APTree = 0;
 		APSpentTree[xTree] = 0;
 		SessionAPSpentTree[xTree] = 0;
 		for (int xLevel = 0; xLevel < 6; xLevel++)
@@ -1070,10 +1072,12 @@ void EnhancementWindowClass::ResetAllAtLvlTrees(int CurrentLvl)
 				{
 					TempRanksTaken = CharacterEnhancements->GetRanksTaken(xTree, xLevel, xSlot);
 					RankValue = CharacterEnhancements->GetRanksTaken(xTree, xLevel, xSlot);
+					APTree += ChosenTreeSlots[xTree][xLevel][xSlot].Cost * RankValue;
 					TotalAPSpent += ChosenTreeSlots[xTree][xLevel][xSlot].Cost * RankValue;
 				}
 
 			}
+			APSpentTree[xTree] = APTree;
 		}
 		if (xTree == 0)
 		{

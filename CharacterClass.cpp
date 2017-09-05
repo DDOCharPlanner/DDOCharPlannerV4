@@ -4529,7 +4529,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 				// Show the open file dialog.
 				if (SUCCEEDED(hr))
 				{
-					hr = pfd->Show(NULL);
+					hr = pfd->Show(hwnd);
 					if (SUCCEEDED(hr))
 					{  // Get the selection from the user.
 						IShellItem *psiResult = NULL;
@@ -4919,7 +4919,7 @@ void CharacterClass::Load(HWND hwnd)
 			// Show the open file dialog.
 			if (SUCCEEDED(hr))
 			{
-				hr = pfd->Show(NULL);
+				hr = pfd->Show(hwnd);
 				if (SUCCEEDED(hr))
 				{  // Get the selection from the user.
 					IShellItem *psiResult = NULL;

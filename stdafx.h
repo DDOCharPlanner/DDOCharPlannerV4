@@ -18,7 +18,7 @@
 
 using namespace std;
 
-#define VERSION "4.36.103"
+#define VERSION "4.36.104"
 #define NUMCLASSES 14
 #define NUMRACES 15
 #define MAXLEVEL 30
