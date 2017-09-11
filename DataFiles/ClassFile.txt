@@ -1194,20 +1194,22 @@ ADVANCEMENT: 30, TOME, Tome Increases;
 STARTINGSPHERE: Divine;
 
 CLASSNAME: Artificer;
-DESCRIPTION: {\b Artificers combine magic and technology to repair constructs, summon help, buff the party, or do direct damage.  They are a highly versitile class}\par\par 
+DESCRIPTION: {\b Combining magic with weapon technology and skill, artificers can attack their enemies in
+ multiple ways, summon pets for support, and can also spot and disable traps.}\par\par 
 {\b {\cf5 Solo Ability}}: Good.\par\par
-Artificers are the only class that can learn {\b {\cf5 arcane}} infusions. This eventually gives
- them many spell options when preparing to go on a quest.\par\par 
-Unlike the other classes, Artificers get bonus metamagic {\b {\cf5 feats}}. These feats give them more ways
- to manipulate the power and duration of their spells.\par\par 
-At taverns and rest shrines, Artificers can switch to different spells. This allows them to
- choose the right spell for the situation. Sorcerers and favored souls cannot do this.\par\par
+Artificers use a mix of {\b {\cf5 arcane}} magic and technology to augment items and blast foes. Wielding
+ rapid-fire crossbows and magical 'rune arms', they have a fighting style unlike any other class.\par \par
+Having less {\b {\cf5 spell points}} than wizards and sorcerers, artificers must rely on their weapons more
+ in battle. To achieve this, they learn how to use multiple types of crossbow and special rune arms, magic
+ items that can charge up and shoot enemies with elemental bolts of energy.\par \par
+They also have pets to aid them in battle that advance and grow with them and can be fitted with special
+ equipment to improve their abilities.\par \par
 Important {\b {\cf5 stats}}:\par 
-Intelligence is the most important stat for Artificers. High intelligence makes a Artificer's
+Intelligence is the most important stat for artificers. High intelligence makes an artificer's
  spells more difficult for enemies to resist and gives him or her more {\b {\cf5 spell points}}.\par\par 
-Constitution is important for Artificers who want to increase their {\b {\cf5 hit points}}, and dexterity
- is important for increasing defense.\par\par 
-Notable abilities: {\b {\cf5 Inscribe Infusion}}.;
+Constitution is important for artificers who want to increase their {\b {\cf5 hit points}}. Some artificers
+ may focus more on melee weapons, and for them strength is important.\par \par
+Notable abilities: {\b {\cf5 Inscribe Spell}}, {\b {\cf5 Unleash Iron Defender}}.;
 HITDIE: 6;
 SKILLPOINTS: 4;
 BAB: 0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 16, 17, 17, 18;
@@ -1316,12 +1318,22 @@ ADVANCEMENT: 30, TOME, Tome Increases;
 STARTINGSPHERE: Arcane;
 
 CLASSNAME: Druid;
-DESCRIPTION: Powerful spell casters and shapechangers, druids have a large variety of divine spells and can change into various animal forms to change the role they play in a group.\par\par
+DESCRIPTION: {\b Powerful spell casters and shapechangers, druids have a large variety of divine spells and can
+ change into various animal forms to change the role they play in a group.}\par\par
 {\b {\cf5 Solo Ability}}: Good.\par\par
-Wisdom determines how powerful a spell a druid can cast, how many bonus spell points he receives, and how hard those spells are to resist.\par\par
-Strength is important in combat as it increases both the likelihood that your character will score a hit and the amount of damage the hit is worth.\par\par
-A high Constitution improves a druid's hit points.\par\par
-A high Dexterity score increases a druid's ability to avoid attacks, granting dodge and armor class.\par\par;
+Druids use {\b {\cf5 divine}} magic and gain all of their spells as they level up. They don't have to inscribe
+ new spells like wizards or pick a subset like favored souls. Druids also have the amazing ability to actually
+ change form into animals and other natural creatures. They can use this to change the way they attack enemies.\par \par
+Unlike wizards and sorcerers, druids have access to healing spells, but cannot heal as much as clerics or favored
+ souls.\par \par
+At taverns or rest shrines, druids can switch spells to better address the challenges of their current quest.\par \par
+Druids also have pets to aid them in battle that advance and grow with them.\par \par
+Important {\b {\cf5 stats}}:\par
+Wisdom is the most important stat for druids. High wisdom makes a druid's spells more difficult for enemies to
+ resist and gives him or her more {\b {\cf5 spell points}}.\par \par
+Constitution is important for druids who want to increase their {\b {\cf5 hit points}}, and strength is important
+ for increasing attack chance and damage output in animal form.\par \par
+Notable abilities: {\b {\cf5 Wild Shape}}.;
 HITDIE: 8;
 SKILLPOINTS: 4;
 BAB: 0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 16, 17, 17, 18;
@@ -1410,14 +1422,20 @@ ADVANCEMENT: 30, TOME, Tome Increases;
 STARTINGSPHERE: Primal;
 
 CLASSNAME: Warlock;
-DESCRIPTION: {\b Discription.}\par\par 
+DESCRIPTION: {\b Warlocks make pacts with otherworldly beings to gain power and might. This relationship between warlock
+ and patron is somewhat like that of a cleric and deity, but beings that serve as patrons for warlocks are not gods.}\par\par 
 {\b {\cf5 Solo Ability}}: Fair.\par\par
-Warlocks make pacts with otherworldly beings to gain power and might. This relationship between the Warlock and patron is somewhat like that of a cleric and a deity, but beings that serve as patrons for Warlocks are not gods.\par\par 
-Warlocks summon powerful energies, attacking enemies with {\b {\cf5 Eldritch Blast}}.
- Warlocks cast spells through their connection with their patron. They can only perform a smalls number of spells in this way, but that's supported by the ability to endlessly inflict magical damage with Eldritch Blasts.\par\par 
-Warlocks cannot easily switch spells at taverns or rest shrines. They are able to switch spells but to do so they must undergo a ritual that can only be done once every few days with the help of a Warlock trainer.\par\par
+Warlocks summon powerful energies, attacking enemies with {\b {\cf5 Eldritch Blast}}.\par \par
+Warlocks cast spells through their connection with their patron. They can only perform a smalls number of spells in this way,
+ but that's supported by the ability to endlessly inflict magical damage with Eldritch Blasts.\par\par 
+Warlocks cannot easily switch spells at taverns or rest shrines. They are able to switch spells but to do so they must undergo
+ a special ritual that can only be done once every few days with the help of a Warlock trainer.\par\par
 Important {\b {\cf5 stats}}:\par 
-Charisma is the most important stat for Warlocks. High charisma makes Eldritch Blast and spells more difficult for enemies to resist and also gives more {\b {\cf5 spell points}}.\par\par Constitution is important for Warlocks who want to increase their {\b {\cf5 hit points}}, and Intelligence is important for increasing skills. \par \par Importanbt abilities: {\b {\cf5 Eldritch Blast}};
+Charisma is the most important stat for Warlocks. High charisma makes Eldritch Blast and spells more difficult for enemies to
+ resist and also gives more {\b {\cf5 spell points}}.\par\par
+Constitution is important for Warlocks who want to increase their {\b {\cf5 hit points}}, and Intelligence is important for
+ increasing skills.\par \par
+Important abilities: {\b {\cf5 Eldritch Blast}};
 HITDIE: 6;
 SKILLPOINTS: 2;
 BAB: 0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 16, 17, 17, 18;
