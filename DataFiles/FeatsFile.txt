@@ -1,17 +1,3 @@
-FFEATNAME: Abundant Step;
-FEATDESCRIPTION: You are able to leap through the air to bring the fight to your enemies or traverse chasms that make normal adventurers balk.;
-CLASSLIST: Monk;
-LEVEL: 12;
-ACQUIRE: Automatic;
-ICON: AbundantStepIcon;
-
-FEATNAME: AC Bonus;
-FEATDESCRIPTION: Your training improves your armor class, so long as you remain centered (Unarmored, unencumbered, and wielding ki weapons).;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Automatic;
-ICON: ACBonusIcon;
-
 FEATNAME: Acrobatic;
 FEATDESCRIPTION: You have excellent body awareness and coordination. You receive a +2 bonus on Jump checks and Tumble checks.;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
@@ -28,98 +14,6 @@ LEVEL: 1, 1;
 ACQUIRE: Train, Train;
 ICON: WarforgedFeatIcon;
 VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Adept of Forms;
-FEATDESCRIPTION: You continue on the path to enlightenment, improving your elemental stances and learning new elemental strikes.;
-FEATTAG: Parent Feat;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-CLASSLIST: Monk;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
-NEEDSALL: Class Monk 1;
-ICON: AdeptOfForms;
-VERIFIED: 2013-09-24, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept Fires of Purity;
-FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 12 additional fire damage.\par\par D&D Dice: Your attacks deal 2d6 extra fire damage.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: FiresOfPurityIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept Flowing Water Strike;
-FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your attack will deal 2 to 12 additional cold damage. \par\par D&D Dice: Your attacks deal 2d6 extra cold damage.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: FlowingWaterStrikeIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept Storm Strike;
-FEATDESCRIPTION: You stike an opponent, backed with the power of lightning. Your attack will deal 2 to 12 additional electricity damage. \par\par D&D Dice: Your attacks deal 2d6 extra electricity damage.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: StormStrikeIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept Strike of the Enduring;
-FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. Your attack deals 8 additional damage.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: StrikeOfEnduringIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept of Flame;
-FEATDESCRIPTION: Sun Stance now grants +2 Strength at a cost of -2 Wisdom. While in Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 3 ki.';
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: AdeptofFlameIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept of Rain;
-FEATDESCRIPTION: Ocean Stance now grants +2 Wisdom, +6% dodge, +4 dodge cap, and +3 to all Saving Throws at a cost of -2 Strength.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: AdeptofRainIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept of Rock;
-FEATDESCRIPTION: Mountain Stance now grants +2 Constitution, a 10% boost to AC, 8 physical resistance, and a +40% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: AdeptofRockIcon;
-VERIFIED: 2013-08-10, in-game;
-
-PARENTHEADING: Adept of Forms;
-FEATNAME: Adept of Wind;
-FEATDESCRIPTION: Wind Stance now grants +2 Dexterity, a 10% Enhancement bonus to melee and thrown attack speed, and grants a 6% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: AdeptofWindIcon;
-VERIFIED: 2013-08-10, in-game;
-
 FEATNAME: Alertness;
 FEATDESCRIPTION: You have finely tuned senses. You receive a +2 bonus on Listen checks and Spot checks.;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
@@ -624,32 +518,6 @@ ACQUIRE: Train;
 ICON: DefensiveRollIcon;
 VERIFIED: unknown;
 
-FEATNAME: Deflect Arrows;
-FEATDESCRIPTION: Once every few seconds, you are able to block some projectiles that would otherwise hit you.;
-FEATTAG: Monk Bonus;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Train;
-NEEDSALL: Ability Dexterity 13;
-ICON: DeflectArrowsIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Diamond Body;
-FEATDESCRIPTION: You have firm control over your metabolism and are immune to ability score damage from natural poisons. You gain a +10 racial bonus to saving throws against magical poisons, and do not fail saving throws against them on a roll of a natural 1 (this renders you immune to magical poisons with a DC of less than 11+your Fortitude save).;
-CLASSLIST: Monk;
-LEVEL: 11;
-ACQUIRE: Automatic;
-ICON: DiamondBodyIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Diamond Soul;
-FEATDESCRIPTION: You gain spell resistance equal to your monk level + 10, protecting you from non-damaging spells.;
-CLASSLIST: Monk;
-LEVEL: 13;
-ACQUIRE: Automatic;
-ICON: DiamondSoulIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Diehard;
 FEATDESCRIPTION: You automatically stabilize when incapacitated.;
 FEATTAG: Monk Bonus;
@@ -811,14 +679,6 @@ LEVEL: 4, 4, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: EmpowerSpellIcon;
 VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Empty Body;
-FEATDESCRIPTION: You are able to focus your ki and walk the edge of the Plane of Shadow, mimicing the effects of a Shadow Walk spell. While this effect is active, you move much faster than normal and your outline appears faint and you are harder to hit. Attacking another creature or otherwise interacting with objects shunts you back to the Material Plane.;
-CLASSLIST: Monk;
-LEVEL: 19;
-ACQUIRE: Automatic;
-ICON: EmptyBodyIcon;
-VERIFIED: unknown;
 
 FEATNAME: Enchantment Save Bonus;
 FEATDESCRIPTION: Elves are naturally resistant to enchantments, receiving a +2 bonus on saves against enchantments.;
@@ -1010,9 +870,10 @@ ICON: EpicReputation;
 PARENTHEADING: Epic;
 FEATNAME: Epic Skills;
 FEATDESCRIPTION: As part of your epic training, you gain +1 to all skills. This feat can be acquired multiple times and is granted every epic level.;
+FEATTAG: Multiple;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: EpicSkill;
 VERIFIED: 2013-01-16, in-game;
 
@@ -1441,6 +1302,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Acid;
 ICON: EpicSpellPowerAcid;
 
 PARENTHEADING: Arcane Sphere;
@@ -1450,6 +1312,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Cold;
 ICON: EpicSpellPowerCold;
 
 PARENTHEADING: Arcane Sphere;
@@ -1459,6 +1322,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Electricity;
 ICON: EpicSpellPowerElectricity;
 
 PARENTHEADING: Arcane Sphere;
@@ -1468,6 +1332,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Fire;
 ICON: EpicSpellPowerFire;
 
 PARENTHEADING: Arcane Sphere;
@@ -1477,7 +1342,26 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Sonic;
 ICON: EpicSpellPowerSonic;
+
+PARENTHEADING: Arcane Sphere;
+FEATNAME: Epic Spell Power: Force;
+FEATDESCRIPTION: +20 Force Spell Power. Each spell power feat can only be taken once. \par Sphere: Arcane\par Number of Destinies: 1;
+FEATTAG: Destiny;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: EpicSpellPowerForce;
+
+PARENTHEADING: Arcane Sphere;
+FEATNAME: Epic Spell Power: Repair;
+FEATDESCRIPTION: +20 Repair Spell Power. Each spell power feat can only be taken once. \par Sphere: Arcane\par Number of Destinies: 1;
+FEATTAG: Destiny;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: EpicSpellPowerRepair;
 
 PARENTHEADING: Arcane Sphere;
 FEATNAME: Epic Skill Focus: Repair;
@@ -1499,23 +1383,6 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 NEEDSALL: Skill Spellcraft 20;
 ICON: SkillFocusIcon;
 
-PARENTHEADING: Arcane Sphere;
-FEATNAME: Epic Spell Power: Force;
-FEATDESCRIPTION: +20 Force Spell Power. Each spell power feat can only be taken once. \par Sphere: Arcane\par Number of Destinies: 1;
-FEATTAG: Destiny;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: EpicSpellPowerForce;
-
-PARENTHEADING: Arcane Sphere;
-FEATNAME: Epic Spell Power: Repair;
-FEATDESCRIPTION: +20 Repair Spell Power. Each spell power feat can only be taken once. \par Sphere: Arcane\par Number of Destinies: 1;
-FEATTAG: Destiny;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: EpicSpellPowerRepair;
 
 PARENTHEADING: Arcane Sphere;
 FEATNAME: Hellball;
@@ -1613,13 +1480,14 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: EpicSpellPowerNegative;
 
 PARENTHEADING: Divine Sphere;
-FEATNAME: Epic Spell Power: Fire;
-FEATDESCRIPTION: +20 Fire Spell Power. Each spell power feat can only be taken once. \par Sphere: Arcane, Divine, or Primal\par Number of Destinies: 1;
+FEATNAME: Epic Spell Power: Positive;
+FEATDESCRIPTION: +20 Positive Spell Power. Each spell power feat can only be taken once. \par Sphere: Divine or Primal\par Number of Destinies: 1;
 FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: EpicSpellPowerFire;
+LOCK: Primal Sphere: Epic Spell Power: Positive;
+ICON: EpicSpellPowerPositive;
 
 PARENTHEADING: Divine Sphere;
 FEATNAME: Forced Escape;
@@ -1850,6 +1718,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Acid;
 ICON: EpicSpellPowerAcid;
 
 PARENTHEADING: Primal Sphere;
@@ -1859,6 +1728,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Cold;
 ICON: EpicSpellPowerCold;
 
 PARENTHEADING: Primal Sphere;
@@ -1868,6 +1738,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Electricity;
 ICON: EpicSpellPowerElectricity;
 
 PARENTHEADING: Primal Sphere;
@@ -1877,6 +1748,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Fire;
 ICON: EpicSpellPowerFire;
 
 PARENTHEADING: Primal Sphere;
@@ -1886,6 +1758,7 @@ FEATTAG: Destiny;
 RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+LOCK: Primal Sphere: Epic Spell Power: Sonic;
 ICON: EpicSpellPowerSonic;
 
 PARENTHEADING: Primal Sphere;
@@ -1923,6 +1796,15 @@ RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Blad
 LEVEL: 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: PerfectTwoWeaponFighting;
+
+PARENTHEADING: Primal Sphere;
+FEATNAME: Wind Through the Trees;
+FEATDESCRIPTION: When enemies hit or miss you, they have a 5% chance to be knocked down with no save. This may only trigger once every 12 seconds.\par Sphere: Primal\par Number of Destinies: 3;
+FEATTAG: Destiny;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: WindThroughtheTrees;
 
 PARENTHEADING: Multiple Spheres;
 FEATNAME: Arcane Warrior;
@@ -2713,13 +2595,6 @@ ACQUIRE: Automatic;
 ICON: TouchIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Flurry of Blows;
-FEATDESCRIPTION: While centered (unarmored, unencumbered, and either unarmed or wielding monk weapons such as the kama, quarterstaff, or shuriken), you get an increase to your attack bonus, and a 2% dodge bonus at monk levels 1, 2, and 4 for a total of 6%. The attack bonus increase starts at 1 (at level 1) and increases by 1 for every four additional monk levels. Some rare items are enchanted as 'Ki Weapons' and can be used with your monk abilities, and certain feats or enhancements can further expand the list of weapons available to your monk.;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Automatic;
-ICON: FlurryofBlowsIcon;
-VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Follower of Aureon;
 FEATDESCRIPTION: You follow Aureon, member of the Sovereign Host, and use his favored weapon. You are proficient with Quarterstaves and gain +1 to hit with them.;
@@ -2728,212 +2603,7 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: AureonsInstructionIcon;
-VERIFIED: 2016-10-21, in-game;
-
-FEATNAME: Follower of the Lord of Blades;
-FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You are considered proficient with greatswords.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Warforged, Race Bladeforged;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: LordofbladesIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Follower of Olladra;
-FEATDESCRIPTION: You follow Olladra, member of the Sovereign Host, and use her favored weapon. You are proficient with Sickles and gain +1 to hit with them.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: LuckofOlladraIcon;
-VERIFIED: 2016-10-21, in-game;
-
-FEATNAME: Follower of Onatar;
-FEATDESCRIPTION: You follow Onatar, member of the Sovereign Host, and use his favored weapon. You are proficient with Warhammers and gain +1 to hit with them.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: OntarsForgeIcon;
-VERIFIED: 2016-10-21, in-game;
-
-FEATNAME: Follower the Blood of Vol;
-FEATDESCRIPTION: You follow Blood of Vol. You are proficient with Daggers and gain +1 to hit with them.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: BloodistheLifeIcon;
-VERIFIED: 2016-10-21, in-game;
-
-FEATNAME: Follower of the Silver Flame;
-FEATDESCRIPTION: You are a favored soul of the Silver Flame. You are considered proficient with longbows.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: SilverflameIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Follower of the Sovereign Host;
-FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You are considered proficient with longswords.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: SovereignhostIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Follower of the Undying Court;
-FEATDESCRIPTION: You are a favored soul of the Undying Court. You are considered proficient with scimitars.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSONE: Race Elf, Race Half-Elf;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: UndyingIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Follower of Vulkoor;
-FEATDESCRIPTION: You are a favored soul of Vulkoor. You are considered proficient with shortswords.;
-FEATTAG: Divine;
-CLASSLIST: Paladin, Cleric, Favored Soul;
-LEVEL: 1, 1, 1;
-ACQUIRE: Train, Train, Train;
-NEEDSALL: Race Drow;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Favored by Helm, Favored by Silvanus;
-ICON: VulkoorIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Force of Personality;
-FEATDESCRIPTION: Adds your Charisma modifier to your Will saves instead of your Wisdom modifier.;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
-NEEDSALL: Ability Charisma 13;
-ICON: ForceOfPersonalityIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Goodberry;
-FEATDESCRIPTION: Transmutes natural matter around you into Goodberries. Goodberries are infused with primal magic, and provide a full meal's nourishment. If eaten in a tavern, they act as tavern food and drink, refilling your health and spell points. When cast, Goodberries appear in your inventory. The higher the caster level, the more nourishing the Goodberries are.;
-CLASSLIST: Druid;
-LEVEL: 2;
-ACQUIRE: Automatic;
-ICON: GoodberryIcon;
-VERIFIED: 2012-07-03, in-game;
-
-FEATNAME: Gnomish Proficiences;
-FEATDESCRIPTION: You have some special bonuses due to your gnomish heritage.\par\par +2 Haggle\par+2 Use Magic Device\par Proficient with Light Hammers, Throwing Hammers, and Warhammers.;
-RACELIST: Gnome, Deep-Gnome;
-LEVEL: 1, 1;
-ACQUIRE: Automatic, Automatic;
-ICON: GnomishProficiences;
-
-FEATNAME: Grandmaster of Forms;
-FEATDESCRIPTION: You continue on the path to enlightenment, further improving your elemental stances and learning new elemental strikes. These stance improvements replace those granted by Master of Forms.;
-FEATTAG: Parent Feat;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-CLASSLIST: Monk;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: GrandmasterOfForms;
-VERIFIED: 2013-09-24, ddo wiki;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster Fires of Purity;
-FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 40 additional fire damage.\par\par D&D Dice: Your attacks deal 2d20 extra fire damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: FiresofPurityIcon;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster Flowing Water Strike;
-FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your attack will deal 2 to 40 additional cold damage.\par\par D&D Dice: Your attacks deal 2d20 extra cold damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: FlowingWaterStrikeIcon;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster Storm Strike;
-FEATDESCRIPTION: You strike an opponent, backed with the power of lightning. Your attack will deal 2 to 40 additional electricity damage.\par\par D&D Dice: Your attacks deal 2d20 extra electricity damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: StormStrikeIcon;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster Strike of the Enduring;
-FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. YOur attack deal 16 additional damage, and 2 to 20 acid damage on critical hits.\par\par D&D Dice: Your attacks deal 16 additional damage plus 2d10 extra acid damage on criticals.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: StrikeofEnduringIcon;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster of Mountains;
-FEATDESCRIPTION: Mountain Stance now grants +4 Constitution, a 20% boost to AC, 15 physical resistance, a +70% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Ultimate Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: GrandmasterOfMountains;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster of Oceans;
-FEATDESCRIPTION: Ocean Stance now grants +4 Wisdom, a +12% dodge bonus to Armor Class, +8 dodge cap, +5 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 Strength.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: GrandmasterOfOceans;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster of Storms;
-FEATDESCRIPTION: Wind Stance now grants +4 Dexterity, a 15% Enhancement bonus to melee and thrown attack speed, and grants a 12% chance to doublestrike with melee weapons, at the cost of -2 Constitution./r;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: GrandmasterOfStorms;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Grandmaster of Forms;
-FEATNAME: Grandmaster of the Sun;
-FEATDESCRIPTION: Sun Stance now grants +4 Strength and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20 at a cost of -2 Wisdom. While in Ultimate Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 5 ki./;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Grandmaster of Forms;
-ICON: GrandmasterOfTheSun;
-VERIFIED: 2013-08-11, in-game;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, 
 
 FEATNAME: Great Cleave;
 FEATDESCRIPTION: Activate this ability to attack one or more enemies in a wide arc in front of you. This attack deals +2[W] damage.;
@@ -4280,30 +3950,6 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: IronWillIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Ki Strike: Adamantine;
-FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered adamantine for damage reduction purposes.;
-CLASSLIST: Monk;
-LEVEL: 16;
-ACQUIRE: Automatic;
-ICON: KiStrikeAdamantineIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Ki Strike: Lawful;
-FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered lawful for damage reduction purposes.;
-CLASSLIST: Monk;
-LEVEL: 10;
-ACQUIRE: Automatic;
-ICON: KiStrikeLawfulIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Ki Strike: Magic;
-FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered magical for damage reduction purposes.;
-CLASSLIST: Monk;
-LEVEL: 4;
-ACQUIRE: Automatic;
-ICON: KiStrikeMagicIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Lay on Hands;
 FEATDESCRIPTION: Activate this paladin ability to apply a burst of holiness to your target, either healing an amount based on your paladin level times your Charisma bonus or dealing that much damage to an undead target.;
 CLASSLIST: Paladin;
@@ -4652,99 +4298,6 @@ ACQUIRE: Automatic;
 ICON: MassSuggestionIcon;
 VERIFIED: unknown;
 
-FEATNAME: Master of Forms;
-FEATDESCRIPTION: You continue on the path to enlightenment, further improving your elemental stances and learning new elemental strikes. These stance improvements replace those granted by Adept of Forms.;
-FEATTAG: Parent Feat;
-RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
-CLASSLIST: Monk;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
-NEEDSALL: Feat Adept of Forms;
-ICON: MasterOfForms;
-VERIFIED: 2013-09-24, ddo wiki;
-
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master Fires of Purity;
-FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 20 additional fire damage.\par\par D&D Dice: Your attacks deal 2d10 extra fire damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: FiresOfPurityIcon;
-VERIFIED: 2013-08-11, in-game;
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master Flowing Water Strike;
-FEATDESCRIPTION: You strike and opponent, backed with the power of water. Your attack will deal 2 to 20 additional cold damage.\par\par D&D Dice: your attacks deal 2d10 extra cold damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: FlowingWaterStrikeIcon;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master Storm Strike;
-FEATDESCRIPTION: You strike an opponent, backed with the power of lightning. Your attack will dea 2 to 20 additional electrical damage.\par\par D&D Dice: Your attacks deals 2d10 electricity damage.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: StormStrikeIcon;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master Strike of the Enduring;
-FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. Your attack deals 12 additional damage, and 2 to 12 acid damage on critical hits.\par\par D&D Dice: Your attacks deal 12 additional damage plus 2d6 extra acid damage on criticals.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: StrikeOfEnduringIcon;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master of Bonfires;
-FEATDESCRIPTION: Sun Stance now grants +3 Strength at a cost of -2 Wisdom, and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20. While in Greater Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 4 ki'.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: MasterOfBonfires;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master of Stone;
-FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, and a +55% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-;
-ICON: MasterOfStone;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master of Thunder;
-FEATDESCRIPTION: Wind Stance now grants +3 Dexterity, a 12.5% Enhancement bonus to melee and thrown attack speed, and grants a 9% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: MasterOfThunder;
-VERIFIED: 2013-08-11, in-game
-
-PARENTHEADING: Master of Forms;
-FEATNAME: Master of the Sea;
-FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +9% dodge and +6 dodge cap, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
-CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
-LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
-ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
-NEEDSALL: Feat Master of Forms;
-ICON: MasterOfTheSea;
-VERIFIED: 2013-08-11, in-game
-
 FEATNAME: Maximize Spell;
 FEATDESCRIPTION: While this metamagic feat is active, you gain 150 Spell Power while casting spells affected by Maximize Spell, but they consume 25 additional spell points.;
 FEATTAG: Metamagic, Artificer Bonus;
@@ -4754,13 +4307,6 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: MaximizeSpellIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Meditation;
-FEATDESCRIPTION: Your enlightenment allows you to regenerate ki at a faster rate.;
-CLASSLIST: Monk;
-LEVEL: 2;
-ACQUIRE: Automatic;
-ICON: MeditationIcon;
-VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Medium Armor Proficiency;
 FEATDESCRIPTION: You are proficient with medium armor, and do not suffer armor penalties to your attack rolls when wearing medium armor. You also gain 1.5 * your base attack bonus in physical resistance when wearing medium armor.\par\par Wizards, sorcerers, and bards should avoid wearing medium and heavier armor and shouldn't take this feat because wearing armor can cause arcane spells to fail to cast (known as Arcane Spell Failure). In general, the heavier the armor, the greater the chance of failure.;
@@ -4826,12 +4372,623 @@ NEEDSALL: Feat Dodge;
 ICON: MobilityIcon;
 VERIFIED: 2012-06-26, in-game;
 
+
+FEATNAME: Follower of the Lord of Blades;
+FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You are considered proficient with greatswords.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Warforged, Race Bladeforged;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: LordofbladesIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Follower of Olladra;
+FEATDESCRIPTION: You follow Olladra, member of the Sovereign Host, and use her favored weapon. You are proficient with Sickles and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: LuckofOlladraIcon;
+VERIFIED: 2016-10-21, in-game;
+
+FEATNAME: Follower of Onatar;
+FEATDESCRIPTION: You follow Onatar, member of the Sovereign Host, and use his favored weapon. You are proficient with Warhammers and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: OntarsForgeIcon;
+VERIFIED: 2016-10-21, in-game;
+
+FEATNAME: Follower the Blood of Vol;
+FEATDESCRIPTION: You follow Blood of Vol. You are proficient with Daggers and gain +1 to hit with them.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: BloodistheLifeIcon;
+VERIFIED: 2016-10-21, in-game;
+
+FEATNAME: Follower of the Silver Flame;
+FEATDESCRIPTION: You are a favored soul of the Silver Flame. You are considered proficient with longbows.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: SilverflameIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Follower of the Sovereign Host;
+FEATDESCRIPTION: You are a favored soul of the Sovereign Host. You are considered proficient with longswords.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: SovereignhostIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Follower of the Undying Court;
+FEATDESCRIPTION: You are a favored soul of the Undying Court. You are considered proficient with scimitars.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSONE: Race Elf, Race Half-Elf;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: UndyingIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Follower of Vulkoor;
+FEATDESCRIPTION: You are a favored soul of Vulkoor. You are considered proficient with shortswords.;
+FEATTAG: Divine;
+CLASSLIST: Paladin, Cleric, Favored Soul;
+LEVEL: 1, 1, 1;
+ACQUIRE: Train, Train, Train;
+NEEDSALL: Race Drow;
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Favored by Helm, Favored by Silvanus;
+ICON: VulkoorIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Force of Personality;
+FEATDESCRIPTION: Adds your Charisma modifier to your Will saves instead of your Wisdom modifier.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+NEEDSALL: Ability Charisma 13;
+ICON: ForceOfPersonalityIcon;
+VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Goodberry;
+FEATDESCRIPTION: Transmutes natural matter around you into Goodberries. Goodberries are infused with primal magic, and provide a full meal's nourishment. If eaten in a tavern, they act as tavern food and drink, refilling your health and spell points. When cast, Goodberries appear in your inventory. The higher the caster level, the more nourishing the Goodberries are.;
+CLASSLIST: Druid;
+LEVEL: 2;
+ACQUIRE: Automatic;
+ICON: GoodberryIcon;
+VERIFIED: 2012-07-03, in-game;
+
+FEATNAME: Gnomish Proficiences;
+FEATDESCRIPTION: You have some special bonuses due to your gnomish heritage.\par\par +2 Haggle\par+2 Use Magic Device\par Proficient with Light Hammers, Throwing Hammers, and Warhammers.;
+RACELIST: Gnome, Deep-Gnome;
+LEVEL: 1, 1;
+ACQUIRE: Automatic, Automatic;
+ICON: GnomishProficiences;
+
+FEATNAME: Monk Feats;
+FEATDESCRIPTION: Monk only feats;
+FEATTAG: Parent Feat;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: ;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Abundant Step;
+FEATDESCRIPTION: You are able to leap through the air to bring the fight to your enemies or traverse chasms that make normal adventurers balk.;
+CLASSLIST: Monk;
+LEVEL: 12;
+ACQUIRE: Automatic;
+ICON: AbundantStepIcon;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: AC Bonus;
+FEATDESCRIPTION: Your training improves your armor class, so long as you remain centered (Unarmored, unencumbered, and wielding ki weapons).;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Automatic;
+ICON: ACBonusIcon;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Armor Class Bonus;
+FEATDESCRIPTION: +3 bonus to Armor, and as you increase in power;
+CLASSLIST: Monk;
+LEVEL: 2, 5, 10, 15, 20;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic;
+ICON: ACBonusIcon;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept of Forms;
+FEATDESCRIPTION: You continue on the path to enlightenment, improving your elemental stances and learning new elemental strikes.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+CLASSLIST: Monk;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
+NEEDSALL: Class Monk 1;
+ICON: AdeptOfForms;
+VERIFIED: 2013-09-24, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept Fires of Purity;
+FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 12 additional fire damage.\par\par D&D Dice: Your attacks deal 2d6 extra fire damage.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: FiresOfPurityIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept Flowing Water Strike;
+FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your attack will deal 2 to 12 additional cold damage. \par\par D&D Dice: Your attacks deal 2d6 extra cold damage.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: FlowingWaterStrikeIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept Storm Strike;
+FEATDESCRIPTION: You stike an opponent, backed with the power of lightning. Your attack will deal 2 to 12 additional electricity damage. \par\par D&D Dice: Your attacks deal 2d6 extra electricity damage.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: StormStrikeIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept Strike of the Enduring;
+FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. Your attack deals 8 additional damage.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;;
+ICON: StrikeOfEnduringIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept of Flame;
+FEATDESCRIPTION: Sun Stance now grants +2 Strength at a cost of -2 Wisdom. While in Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 3 ki.';
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: AdeptofFlameIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept of Rain;
+FEATDESCRIPTION: Ocean Stance now grants +2 Wisdom, +6% dodge, +4 dodge cap, and +3 to all Saving Throws at a cost of -2 Strength.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: AdeptofRainIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept of Rock;
+FEATDESCRIPTION: Mountain Stance now grants +2 Constitution, a 10% boost to AC, 8 physical resistance, and a +40% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: AdeptofRockIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Adept of Wind;
+FEATDESCRIPTION: Wind Stance now grants +2 Dexterity, a 10% Enhancement bonus to melee and thrown attack speed, and grants a 6% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: AdeptofWindIcon;
+VERIFIED: 2013-08-10, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Deflect Arrows;
+FEATDESCRIPTION: Once every few seconds, you are able to block some projectiles that would otherwise hit you.;
+FEATTAG: Monk Bonus;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Train;
+NEEDSALL: Ability Dexterity 13;
+ICON: DeflectArrowsIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Diamond Body;
+FEATDESCRIPTION: You have firm control over your metabolism and are immune to ability score damage from natural poisons. You gain a +10 racial bonus to saving throws against magical poisons, and do not fail saving throws against them on a roll of a natural 1 (this renders you immune to magical poisons with a DC of less than 11+your Fortitude save).;
+CLASSLIST: Monk;
+LEVEL: 11;
+ACQUIRE: Automatic;
+ICON: DiamondBodyIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Diamond Soul;
+FEATDESCRIPTION: You gain spell resistance equal to your monk level + 10, protecting you from non-damaging spells.;
+CLASSLIST: Monk;
+LEVEL: 13;
+ACQUIRE: Automatic;
+ICON: DiamondSoulIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Empty Body;
+FEATDESCRIPTION: You are able to focus your ki and walk the edge of the Plane of Shadow, mimicing the effects of a Shadow Walk spell. While this effect is active, you move much faster than normal and your outline appears faint and you are harder to hit. Attacking another creature or otherwise interacting with objects shunts you back to the Material Plane.;
+CLASSLIST: Monk;
+LEVEL: 19;
+ACQUIRE: Automatic;
+ICON: EmptyBodyIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Flurry of Blows;
+FEATDESCRIPTION: While centered (unarmored, unencumbered, and either unarmed or wielding monk weapons such as the kama, quarterstaff, or shuriken), you get an increase to your attack bonus, and a 2% dodge bonus at monk levels 1, 2, and 4 for a total of 6%. The attack bonus increase starts at 1 (at level 1) and increases by 1 for every four additional monk levels. Some rare items are enchanted as 'Ki Weapons' and can be used with your monk abilities, and certain feats or enhancements can further expand the list of weapons available to your monk.;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Automatic;
+ICON: FlurryofBlowsIcon;
+VERIFIED: 2012-06-26, in-game;
+Favored by Helm, Favored by Silvanus;
+ICON: AureonsInstructionIcon;
+VERIFIED: 2016-10-21, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster of Forms;
+FEATDESCRIPTION: You continue on the path to enlightenment, further improving your elemental stances and learning new elemental strikes. These stance improvements replace those granted by Master of Forms.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+CLASSLIST: Monk;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
+NEEDSALL: Feat Master of Forms;
+ICON: GrandmasterOfForms;
+VERIFIED: 2013-09-24, ddo wiki;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster Fires of Purity;
+FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 40 additional fire damage.\par\par D&D Dice: Your attacks deal 2d20 extra fire damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: FiresofPurityIcon;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster Flowing Water Strike;
+FEATDESCRIPTION: You strike an opponent, backed with the power of the sea. Your attack will deal 2 to 40 additional cold damage.\par\par D&D Dice: Your attacks deal 2d20 extra cold damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: FlowingWaterStrikeIcon;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster Storm Strike;
+FEATDESCRIPTION: You strike an opponent, backed with the power of lightning. Your attack will deal 2 to 40 additional electricity damage.\par\par D&D Dice: Your attacks deal 2d20 extra electricity damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: StormStrikeIcon;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster Strike of the Enduring;
+FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. YOur attack deal 16 additional damage, and 2 to 20 acid damage on critical hits.\par\par D&D Dice: Your attacks deal 16 additional damage plus 2d10 extra acid damage on criticals.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: StrikeofEnduringIcon;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster of Mountains;
+FEATDESCRIPTION: Mountain Stance now grants +4 Constitution, a 20% boost to AC, 15 physical resistance, a +70% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Ultimate Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki.';
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: GrandmasterOfMountains;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster of Oceans;
+FEATDESCRIPTION: Ocean Stance now grants +4 Wisdom, a +12% dodge bonus to Armor Class, +8 dodge cap, +5 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 Strength.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: GrandmasterOfOceans;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster of Storms;
+FEATDESCRIPTION: Wind Stance now grants +4 Dexterity, a 15% Enhancement bonus to melee and thrown attack speed, and grants a 12% chance to doublestrike with melee weapons, at the cost of -2 Constitution./r;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: GrandmasterOfStorms;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Grandmaster of the Sun;
+FEATDESCRIPTION: Sun Stance now grants +4 Strength and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20 at a cost of -2 Wisdom. While in Ultimate Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 5 ki./;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Grandmaster of Forms;
+ICON: GrandmasterOfTheSun;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Ki Strike: Adamantine;
+FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered adamantine for damage reduction purposes.;
+CLASSLIST: Monk;
+LEVEL: 16;
+ACQUIRE: Automatic;
+ICON: KiStrikeAdamantineIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Ki Strike: Lawful;
+FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered lawful for damage reduction purposes.;
+CLASSLIST: Monk;
+LEVEL: 10;
+ACQUIRE: Automatic;
+ICON: KiStrikeLawfulIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Ki Strike: Magic;
+FEATDESCRIPTION: All of your unarmed melee attacks are empowered with ki and are considered magical for damage reduction purposes.;
+CLASSLIST: Monk;
+LEVEL: 4;
+ACQUIRE: Automatic;
+ICON: KiStrikeMagicIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master of Forms;
+FEATDESCRIPTION: You continue on the path to enlightenment, further improving your elemental stances and learning new elemental strikes. These stance improvements replace those granted by Adept of Forms.;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+CLASSLIST: Monk;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
+NEEDSALL: Feat Monk Feats: Adept of Forms;
+ICON: MasterOfForms;
+VERIFIED: 2013-09-24, ddo wiki;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master Fires of Purity;
+FEATDESCRIPTION: You strike an opponent, backed with the power of flame. Your attack will deal 2 to 20 additional fire damage.\par\par D&D Dice: Your attacks deal 2d10 extra fire damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: FiresOfPurityIcon;
+VERIFIED: 2013-08-11, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master Flowing Water Strike;
+FEATDESCRIPTION: You strike and opponent, backed with the power of water. Your attack will deal 2 to 20 additional cold damage.\par\par D&D Dice: your attacks deal 2d10 extra cold damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: FlowingWaterStrikeIcon;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master Storm Strike;
+FEATDESCRIPTION: You strike an opponent, backed with the power of lightning. Your attack will dea 2 to 20 additional electrical damage.\par\par D&D Dice: Your attacks deals 2d10 electricity damage.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: StormStrikeIcon;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master Strike of the Enduring;
+FEATDESCRIPTION: You strike an opponent, backed with the strength of the earth. Your attack deals 12 additional damage, and 2 to 12 acid damage on critical hits.\par\par D&D Dice: Your attacks deal 12 additional damage plus 2d6 extra acid damage on criticals.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: StrikeOfEnduringIcon;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master of Bonfires;
+FEATDESCRIPTION: Sun Stance now grants +3 Strength at a cost of -2 Wisdom, and the critical multiplier of all weapons you use is increased by 1 on rolls of a natural 19 or 20. While in Greater Sun Stance you gain 'Hit Effect: Gain 1 ki.' and 'Critical Effect: Gain 4 ki'.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: MasterOfBonfires;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master of Stone;
+FEATDESCRIPTION: Mountain Stance now grants +3 Constitution, a 15% boost to AC, 12 physical resistance, and a +55% Insight bonus to melee threat generation, at the cost of -2 Dexterity and -10% movement speed. While in Greater Mountain Stance, you gain 'Get Hit Effect: Gain 1 ki'.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: MasterOfStone;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master of Thunder;
+FEATDESCRIPTION: Wind Stance now grants +3 Dexterity, a 12.5% Enhancement bonus to melee and thrown attack speed, and grants a 9% chance to doublestrike with melee weapons, at the cost of -2 Constitution.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: MasterOfThunder;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Master of the Sea;
+FEATDESCRIPTION: Ocean Stance now grants +3 Wisdom, +9% dodge and +6 dodge cap, +4 to all Saving Throws, and your passive ki generation when centered is increased by 1, at a cost of -2 strength.;
+CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+LEVEL: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12;
+ACQUIRE: Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, Automatic;
+NEEDSALL: Feat Monk Feats: Master of Forms;
+ICON: MasterOfTheSea;
+VERIFIED: 2013-08-11, in-game
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Meditation;
+FEATDESCRIPTION: Your enlightenment allows you to regenerate ki at a faster rate.;
+CLASSLIST: Monk;
+LEVEL: 2;
+ACQUIRE: Automatic;
+ICON: MeditationIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
 FEATNAME: Moment of Clarity;
 FEATDESCRIPTION: Void:Light:Void Finisher - Activate this finisher to clear away all distractions from your allies, granting a +5 stacking bonus to hit and a +5 stacking bonus to skill checks for a very short period of time. This ability functions only in private instances.;
 CLASSLIST: Monk;
 LEVEL: 10;
 ACQUIRE: Automatic;
 ICON: MomentClarityIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Perfect Self;
+FEATDESCRIPTION: You have transcended your former race, and are now considered a Lawful Outsider. You have gained damage reduction 10 / epic. Warforged retain most living construct traits.;
+CLASSLIST: Monk;
+LEVEL: 20;
+ACQUIRE: Automatic;
+ICON: PerfectSelfIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Purity of Body;
+FEATDESCRIPTION: You have gained control over your body's immune system and are now unaffected by all natural diseases. (This has no effect on magical or supernatural diseases.);
+CLASSLIST: Monk;
+LEVEL: 5;
+ACQUIRE: Automatic;
+ICON: PurityofBodyIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Quivering Palm;
+FEATDESCRIPTION: The monk delivers a fatal attack by sending waves of vibrations through the target. This attack only works while the monk is unarmed.;
+CLASSLIST: Monk;
+LEVEL: 15;
+ACQUIRE: Automatic;
+ICON: QuiveringPalmIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Shining Star;
+FEATDESCRIPTION: You use the combined power of Earth, Wind, and Fire to set up harmonic vibrations within your enemy that force them to dance. A successful Will save negates this effect. (DC 10 + Monk Level + Wisdom mod).;
+CLASSLIST: Monk;
+LEVEL: 20;
+ACQUIRE: Automatic;
+ICON: ShiningStarIcon;
+VERIFIED: unknown;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Slow Fall;
+FEATDESCRIPTION: Your focus allows you to bend nature around you to make gravity have less effect. This is an active feat, and can be turned off should you desire normal gravity to affect you.;
+CLASSLIST: Monk;
+LEVEL: 4;
+ACQUIRE: Automatic;
+ICON: SlowfallIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Still Mind;
+FEATDESCRIPTION: Your training and meditation improve your resistance to mind-affecting attacks, granting you a +2 bonus on saves against enchantments.;
+CLASSLIST: Monk;
+LEVEL: 3;
+ACQUIRE: Automatic;
+ICON: StillmindIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Stunning Fist;
+FEATDESCRIPTION: A swift unarmed attack to vulnerable areas that cause your target to be stunned for a short period of time. /par Requires Handwrap;
+FEATTAG: Monk Bonus;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: StunningFistIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Ten Thousand Stars;
+FEATDESCRIPTION: For 30 seconds while wielding Shurikens:\par \par +1 Ranged Power per Wisdom \par +5 Doubleshot per Monk class level.\par \par Using this ability places Manyshot on a 30 second cool-down.\par \par This ability works with bows if you have the Zen Archery feat.\par \par Manyshot and Ten Thousand Stars share cooldowns.;
+FEATTAG: Monk Bonus;
+CLASSLIST: Monk;
+LEVEL: 6;
+ACQUIRE: Train;
+NEEDSALL: Ability Dexterity 13;
+ICON: TenThousandStars;
+VERIFIED: 25-10-2015, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Unarmed Strike;
+FEATDESCRIPTION: While centered (unarmored, unencumbered, and wielding monk weapons), your fists and feet are lethal weapons.;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Automatic;
+ICON: UnarmedStrikeIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Whirling Steel Strike;
+FEATDESCRIPTION: You treat longswords as if they were monk weapons, remaining centered when you wield them.;
+FEATTAG: Fighter Bonus, Monk Bonus;
+CLASSLIST: Monk;
+LEVEL: 1;
+ACQUIRE: Train;
+NEEDSALL: Feat Weapon Focus: Slashing Weapons;
+NEEDSONE: Feat Follower of the Sovereign Host, Feat Half-Elf Dilettante: Fighter, Feat Martial Weapon Proficiency: Longsword;
+ICON: MartialWeaponProfIcon;
+VERIFIED: 2012-06-26, in-game;
+
+PARENTHEADING: Monk Feats;
+FEATNAME: Wholeness of Body;
+FEATDESCRIPTION: Your enlightenment allows you to heal your own wounds.;
+CLASSLIST: Monk;
+LEVEL: 7;
+ACQUIRE: Automatic;
+ICON: WholenessofBodyIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Natural Fighting;
@@ -4859,13 +5016,13 @@ ACQUIRE: Train;
 ICON: NimbleFingersIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Ontar's Forge;
+FEATNAME: Onatar's Forge;
 FEATDESCRIPTION: You are a devoted follower of Onatar, and your faith has been rewarded. Activate this ability to channel the power of Onatar's mighty forge for 24 seconds plus 6 seconds per Religious Lore feat you have.\parIn this state, you gain +3 to tactical feat DCs, +10 Melee Power, +10 Repair Spell Power, +10 Rust Spell Power, and +10 Fire Spell Power. If you are a Warforged or otherwise already benefit from Repair, you gain +30 Repair Amplification.;
 CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 6, 6, 6;
 ACQUIRE: Automatic, Automatic, Automatic;
 NEEDSALL: Feat Follower of Onatar;
-ICON: OntarsForgeIcon;
+ICON: OnatarsForgeIcon;
 
 FEATNAME: Opportunist;
 FEATDESCRIPTION: A rogue with this ability gains a 3% chance to double strike with melee weapons and bypasses 10% fortification.;
@@ -5191,14 +5348,6 @@ ACQUIRE: Train;
 ICON: PhilosophyPathofInevitableDominionIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Perfect Self;
-FEATDESCRIPTION: You have transcended your former race, and are now considered a Lawful Outsider. You have gained damage reduction 10 / epic. Warforged retain most living construct traits.;
-CLASSLIST: Monk;
-LEVEL: 20;
-ACQUIRE: Automatic;
-ICON: PerfectSelfIcon;
-VERIFIED: unknown;
-
 FEATNAME: Point Blank Shot;
 FEATDESCRIPTION: You gain a +1 bonus to hit with ranged attacks within 45 feet, and your ranged weapons deal +1[W]. (A weapon that deals 1d6 damage per hit will deal 2d6 damage per hit instead, while a weapon that deals 2d8 damage per hit will deal 4d8 damage instead. This affects the base dice associated with a weapon any time they are rolled, including critical hits.);
 FEATTAG: Fighter Bonus, Artificer Bonus;
@@ -5265,14 +5414,6 @@ NEEDSALL: Ability Dexterity 13, BAB 1;
 ICON: PrecisionIcon;
 VERIFIED: unknown;
 
-FEATNAME: Purity of Body;
-FEATDESCRIPTION: You have gained control over your body's immune system and are now unaffected by all natural diseases. (This has no effect on magical or supernatural diseases.);
-CLASSLIST: Monk;
-LEVEL: 5;
-ACQUIRE: Automatic;
-ICON: PurityofBodyIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Quick Draw;
 FEATDESCRIPTION: You can draw and fire throwing weapons more rapidly.;
 FEATTAG: Fighter Bonus;
@@ -5292,13 +5433,6 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: QuickenSpellIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Quivering Palm;
-FEATDESCRIPTION: The monk delivers a fatal attack by sending waves of vibrations through the target. This attack only works while the monk is unarmed.;
-CLASSLIST: Monk;
-LEVEL: 15;
-ACQUIRE: Automatic;
-ICON: QuiveringPalmIcon;
-VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Race Past Life;
 FEATNAME: Human Past Life;
@@ -5626,14 +5760,6 @@ LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Automatic, Automatic, Automatic, Train, Train, Automatic, Automatic, Train, Train, Automatic, Automatic, Train, Automatic, Train;
 ICON: ShieldProfIcon;
 VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Shining Star;
-FEATDESCRIPTION: You use the combined power of Earth, Wind, and Fire to set up harmonic vibrations within your enemy that force them to dance. A successful Will save negates this effect. (DC 10 + Monk Level + Wisdom mod).;
-CLASSLIST: Monk;
-LEVEL: 20;
-ACQUIRE: Automatic;
-ICON: ShiningStarIcon;
-VERIFIED: unknown;
 
 FEATNAME: Shot on the Run;
 FEATDESCRIPTION: You suffer no penalty to your attack roll when moving and shooting. +3 Ranged Power.;
@@ -6013,14 +6139,6 @@ ACQUIRE: Train;
 ICON: MagicalTrainingIcon;
 VERIFIED: unknown;
 
-FEATNAME: Slow Fall;
-FEATDESCRIPTION: Your focus allows you to bend nature around you to make gravity have less effect. This is an active feat, and can be turned off should you desire normal gravity to affect you.;
-CLASSLIST: Monk;
-LEVEL: 4;
-ACQUIRE: Automatic;
-ICON: SlowfallIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Small Size Bonus;
 FEATDESCRIPTION: As a Small creature, you receive a +1 size bonus to attack rolls and Armor Class, and a +4 bonus on Hide checks.;
 RACELIST: Gnome, Deep-Gnome;
@@ -6172,14 +6290,6 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: StealthyIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Still Mind;
-FEATDESCRIPTION: Your training and meditation improve your resistance to mind-affecting attacks, granting you a +2 bonus on saves against enchantments.;
-CLASSLIST: Monk;
-LEVEL: 3;
-ACQUIRE: Automatic;
-ICON: StillmindIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Stunning Blow;
 FEATDESCRIPTION: Tactical Melee Attack: Using this attack, you may stun the target for a few seconds. Some creatures may be immune to the stun effect. A successful Fortitude save negates this effect. (DC 10 + Str mod);
 FEATTAG: Fighter Bonus;
@@ -6187,15 +6297,6 @@ CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sor
 LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: StunningBlowIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Stunning Fist;
-FEATDESCRIPTION: A swift unarmed attack to vulnerable areas that cause your target to be stunned for a short period of time. /par Requires Handwrap;
-FEATTAG: Monk Bonus;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Train;
-ICON: StunningFistIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Suggestion;
@@ -6301,16 +6402,6 @@ CLASSLIST: Fighter;
 LEVEL: 4;
 ACQUIRE: Train;
 ICON: FighterTacticleFeat;
-
-FEATNAME: Ten Thousand Stars;
-FEATDESCRIPTION: For 30 seconds while wielding Shurikens:\par \par +1 Ranged Power per Wisdom \par +5 Doubleshot per Monk class level.\par \par Using this ability places Manyshot on a 30 second cool-down.\par \par This ability works with bows if you have the Zen Archery feat.\par \par Manyshot and Ten Thousand Stars share cooldowns.;
-FEATTAG: Monk Bonus;
-CLASSLIST: Monk;
-LEVEL: 6;
-ACQUIRE: Train;
-NEEDSALL: Ability Dexterity 13;
-ICON: TenThousandStars;
-VERIFIED: 25-10-2015, in-game;
 
 FEATNAME: The Blood is The Life;
 FEATDESCRIPTION: You are a devoted follower of The Blood of Vol, and your zeal has been rewarded. Activate this ability to draw upon the power within your own blood for 24 seconds plus 6 seconds per Religious Lore feat you have. In this state, you gain +4 Constitution, 100% Fortification, +10 to Fortitude Saves, and PRR and MRR equal to the number of Religious Lore feats you have. While in this state and have a Dagger in your main hand, you also gain Vampirism, stacking with other sources of Vampirism.;
@@ -6559,14 +6650,6 @@ LEVEL: 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, AutoNoPrereq, Train, Train, Train, Train, Train, Train, Train, Train;
 NEEDSALL: Ability Dexterity 15;
 ICON: TwoWeaponFightingIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Unarmed Strike;
-FEATDESCRIPTION: While centered (unarmored, unencumbered, and wielding monk weapons), your fists and feet are lethal weapons.;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Automatic;
-ICON: UnarmedStrikeIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Uncanny Dodge;
@@ -6949,17 +7032,6 @@ NEEDSALL: Feat Weapon Focus: Thrown Weapons;
 ICON: GreaterWeaponSpecializationIcon;
 VERIFIED: 2012-06-26, in-game;
 
-FEATNAME: Whirling Steel Strike;
-FEATDESCRIPTION: You treat longswords as if they were monk weapons, remaining centered when you wield them.;
-FEATTAG: Fighter Bonus, Monk Bonus;
-CLASSLIST: Monk;
-LEVEL: 1;
-ACQUIRE: Train;
-NEEDSALL: Feat Weapon Focus: Slashing Weapons;
-NEEDSONE: Feat Follower of the Sovereign Host, Feat Half-Elf Dilettante: Fighter, Feat Martial Weapon Proficiency: Longsword;
-ICON: MartialWeaponProfIcon;
-VERIFIED: 2012-06-26, in-game;
-
 FEATNAME: Whirlwind Attack;
 FEATDESCRIPTION: Tactical Melee Cleave: Activate this ability to attack all enemies in a 360 degree arc around you. This attack deals +4[W] damage.;
 FEATTAG: Fighter Bonus;
@@ -6968,14 +7040,6 @@ LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 NEEDSALL: Feat Combat Expertise, Feat Spring Attack, BAB 4;
 ICON: WhirlwindAttackIcon;
-VERIFIED: 2012-06-26, in-game;
-
-FEATNAME: Wholeness of Body;
-FEATDESCRIPTION: Your enlightenment allows you to heal your own wounds.;
-CLASSLIST: Monk;
-LEVEL: 7;
-ACQUIRE: Automatic;
-ICON: WholenessofBodyIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Wild Empathy;

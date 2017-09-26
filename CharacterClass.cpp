@@ -1327,8 +1327,19 @@ void CharacterClass::AddRaceAutoFeats(int AtLevel)
 				}
 			}
 		}
-        
-    
+    //Add Epic Skills at level 22-30
+	if (AtLevel > 20)
+	{
+		if(Character.CountFeat("Epic: Epic Skills", AtLevel)<AtLevel-20)
+		{
+			FeatIndex = Data.GetFeatIndex("Epic: Epic Skills");
+			NewFeat.Level = AtLevel;
+			NewFeat.FeatIndex = FeatIndex;
+			NewFeat.FeatAquireType = FEATAUTOMATIC;
+			FeatList.push_back(NewFeat);
+		}
+	}
+
     sort(FeatList.begin(), FeatList.end(), FeatCompare);
     }
 
@@ -3167,10 +3178,13 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 		Mod += 1;
 	if (HasFeat("Legendary: Scion of the Ethereal Plane", AtLevel) == true)
 		Mod += 2;
-
+	if (HasFeat("Epic: Epic Skills", AtLevel) == true)
+		{
+			Mod += Character.CountFeat("Epic: Epic Skills", AtLevel);
+		}
 	//add 1 per level above 20
-	if (AtLevel > HEROICLEVELS)
-		Mod += AtLevel - HEROICLEVELS;
+	//if (AtLevel > HEROICLEVELS)
+	//	Mod += AtLevel - HEROICLEVELS;
 
     return Mod;
     }
