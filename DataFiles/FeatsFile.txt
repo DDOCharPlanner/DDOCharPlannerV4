@@ -2595,7 +2595,6 @@ ACQUIRE: Automatic;
 ICON: TouchIcon;
 VERIFIED: 2012-06-26, in-game;
 
-
 FEATNAME: Follower of Aureon;
 FEATDESCRIPTION: You follow Aureon, member of the Sovereign Host, and use his favored weapon. You are proficient with Quarterstaves and gain +1 to hit with them.;
 FEATTAG: Divine;
@@ -2603,7 +2602,9 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn;
-LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, 
+LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower of Onatar, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
+ICON: AureonsInstructionIcon;
+VERIFIED: 2016-10-21, in-game;
 
 FEATNAME: Great Cleave;
 FEATDESCRIPTION: Activate this ability to attack one or more enemies in a wide arc in front of you. This attack deals +2[W] damage.;
@@ -4655,9 +4656,6 @@ LEVEL: 1;
 ACQUIRE: Automatic;
 ICON: FlurryofBlowsIcon;
 VERIFIED: 2012-06-26, in-game;
-Favored by Helm, Favored by Silvanus;
-ICON: AureonsInstructionIcon;
-VERIFIED: 2016-10-21, in-game;
 
 PARENTHEADING: Monk Feats;
 FEATNAME: Grandmaster of Forms;
