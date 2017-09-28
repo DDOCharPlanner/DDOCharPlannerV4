@@ -538,6 +538,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextWarlockPact", MAINWINDOW, AdvBoxX + 14, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFavored", MAINWINDOW, AdvBoxX + 15, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextHuman", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
+	InitializeUIGraphic("FeatTextCleric", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextHalfElf", MAINWINDOW, AdvBoxX + 20, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextDruid", MAINWINDOW, AdvBoxX + 23, FeatAdvBaseY + 45, 0, 0);
 	InitializeUIGraphic("FeatTextClass", MAINWINDOW, AdvBoxX + 24, FeatAdvBaseY + 45, 0, 0);
@@ -1040,6 +1041,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FeatTextHuman", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextHalfElf", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextDruid", MULTIFEATWINDOW, X + 23, Y + 45, 0, 0);
+	InitializeUIGraphic("FeatTextCleric", MULTIFEATWINDOW, X + 20, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextClass", MULTIFEATWINDOW, X + 24, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextMonk", MULTIFEATWINDOW, X + 24, Y + 45, 0, 0);
 	InitializeUIGraphic("FeatTextFeat1", MULTIFEATWINDOW, X + 28, Y + 45, 0, 0);

@@ -931,6 +931,11 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 					valid = Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true;
 					break;
 				}
+				case FEATCLERICBONUS:
+				{
+					valid = Feat->GetFeatTag(FEATTAGCLERICBONUS) == true;
+					break;
+				}
 				default:
 					// Not valid
 					break;
@@ -939,20 +944,15 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 				{
 					RemoveFeatWishListItem(IconDrag);
 					Character.AddFeat(CurrentSelectedLevel, IconDrag, FeatSlot[Index]);
-					ParentDC = GetDC(MultiFeatHandle);
-					DrawLevelBars(ParentDC);
 					//because some automatic feats are now prereqs for other feats, do an auto feat reset
 					Character.ResetAutoFeats(CurrentSelectedLevel);
-					Position = SendMessage(FeatListPanelList, LB_GETTOPINDEX, 0, 0);
-					FillFeatSelectPanel();
-					SendMessage(FeatListPanelList, LB_SETTOPINDEX, (WPARAM)Position, 0);
-					Position = SendMessage(SelectedPanelList, LB_GETTOPINDEX, 0, 0);
-					FillSelectedPanel();
-					SendMessage(SelectedPanelList, LB_SETTOPINDEX, (WPARAM)Position, 0);
-					DrawSelectPanel(ParentDC);
-					ReleaseDC(MultiFeatHandle, ParentDC);
+
+
+
 				}
+
 			}
+
 		}
 
 
@@ -960,7 +960,18 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 
 
 
-	}
+	}			
+	
+	ParentDC = GetDC(MultiFeatHandle);
+	DrawLevelBars(ParentDC);
+	Position = SendMessage(FeatListPanelList, LB_GETTOPINDEX, 0, 0);
+	FillFeatSelectPanel();
+	SendMessage(FeatListPanelList, LB_SETTOPINDEX, (WPARAM)Position, 0);
+	Position = SendMessage(SelectedPanelList, LB_GETTOPINDEX, 0, 0);
+	FillSelectedPanel();
+	SendMessage(SelectedPanelList, LB_SETTOPINDEX, (WPARAM)Position, 0);
+	DrawSelectPanel(ParentDC);
+	ReleaseDC(MultiFeatHandle, ParentDC);
 		//reset
 	GetIconInfo((HICON)IDC_ARROW, &IconInfo);
 	IconInfo.fIcon = false;
@@ -1120,6 +1131,7 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 	bool Destiny;
 	bool Legendary;
 	bool DragonbornBonus;
+	bool ClericBonus;
 
 	int XOffset;
 	PREREQRESULT FeatPrereqStatus;
@@ -1166,6 +1178,7 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 	Destiny = false;
 	Legendary = false;
 	DragonbornBonus = false;
+	ClericBonus = false;
 
 	for (unsigned int i = 0; i<3; i++)
 	{
@@ -1199,6 +1212,8 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 			Legendary = true;
 		if (FeatSlot[i] == FEATDRAGONBORNBONUS)
 			DragonbornBonus = true;
+		if (FeatSlot[i] == FEATCLERICBONUS)
+			ClericBonus = true;
 	}
 
 	//grab a pointer to the feat
@@ -1243,6 +1258,8 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else if (DragonbornBonus == true && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
 			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
+		else if (ClericBonus == true && Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
+			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else
 			OriginalColor = SetTextColor(hDC, RGB(255, 255, 255));
 		TextOut(hDC, left + 35 + XOffset, top + 10, Text.c_str(), Text.size());
@@ -1280,6 +1297,7 @@ void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWOR
 	bool Destiny;
 	bool Legendary;
 	bool Dragonborn;
+	bool ClericBonus;
 
 	PREREQRESULT FeatPrereqStatus;
 
@@ -1298,6 +1316,7 @@ void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWOR
 	Destiny = false;
 	Legendary = false;
 	Dragonborn = false;
+	ClericBonus = false;
 
 	for (unsigned int i = 0; i<3; i++)
 	{
@@ -1331,6 +1350,8 @@ void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWOR
 			Legendary = true;
 		if (FeatSlot[i] == FEATDRAGONBORNBONUS)
 			Dragonborn = true;
+		if (FeatSlot[i] == FEATCLERICBONUS)
+			ClericBonus = true;
 	}
 
 	//grab a pointer to the feat
@@ -1341,6 +1362,7 @@ void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWOR
 	{
 		DrawGraphic(hDC, &FeatIcon[Feat->GetFeatIconIndex()], left, top, 30, 30);
 		Text = Feat->GetFeatName();
+		bool test = Feat->GetFeatTag(FEATTAGCLERICBONUS);
 		if (Metamagic == true && Feat->GetFeatTag(FEATTAGMETAMAGIC) == true)
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else if (FighterBonus == true && Feat->GetFeatTag(FEATTAGFIGHTERBONUS) == true)
@@ -1375,9 +1397,10 @@ void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWOR
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else if (HalfElfBonus == true && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
 			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
+		else if (ClericBonus == true && Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
+			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
 		else
-
-		OriginalColor = SetTextColor(hDC, RGB(255, 255, 255));
+			OriginalColor = SetTextColor(hDC, RGB(255, 255, 255));
 		TextOut(hDC, left + 35, top + 10, Text.c_str(), Text.size());
 		SetTextColor(hDC, OriginalColor);
 	}
@@ -1511,10 +1534,12 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 		}
 
 		//Set Text Color
+		//OldColor = SetTextColor(hdc, RGB(255, 255, 255));
 		if (FeatSlot[i] == FEATCHARACTER || FeatSlot[i] == FEATHUMANBONUS)
 			OldColor = SetTextColor(hdc, RGB(255, 255, 255));
 		if (FeatSlot[i] == FEATFIGHTERBONUS || FeatSlot[i] == FEATWIZARDBONUS || FeatSlot[i] == FEATARTIFICERBONUS || FeatSlot[i] == FEATROGUEBONUS || FeatSlot[i] == FEATMONKBONUS ||
-			FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATRANGERFAVOREDENEMY || FeatSlot[i] == FEATMONKPATH || FeatSlot[i] == FEATDRUIDWILDSHAPE || FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY)
+			FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATRANGERFAVOREDENEMY || FeatSlot[i] == FEATMONKPATH || FeatSlot[i] == FEATDRUIDWILDSHAPE ||
+			FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY || FeatSlot[i] == FEATCLERICBONUS)
 			OldColor = SetTextColor(hdc, RGB(230, 230, 30));
 		if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS)
 			OldColor = SetTextColor(hdc, RGB(255, 0, 155));
@@ -1544,7 +1569,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 		}
 		if (FeatSlot[i] == FEATFIGHTERBONUS || FeatSlot[i] == FEATWIZARDBONUS || FeatSlot[i] == FEATARTIFICERBONUS || FeatSlot[i] == FEATROGUEBONUS || FeatSlot[i] == FEATMONKBONUS ||
-			FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATFAVOREDSOULBONUS)
+			FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATCLERICBONUS)
 		{
 			Graphic = UIManager->GetGraphicData("FeatTextClass", MULTIFEATWINDOW);
 			X = static_cast<int>(Graphic->BaseLocationX + 100.0*i);
@@ -1661,6 +1686,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 			OutputString = "Feat";
 			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 		}
+
 
 		SetTextColor(hdc, OldColor);
 
@@ -1865,24 +1891,24 @@ void MultiFeatWindowClass::FillFeatSelectPanel()
 					if (F1 == FEATHALFELFBONUS || F2 == FEATHALFELFBONUS || F3 == FEATHALFELFBONUS)
 						FeatVector.push_back(FeatIndex);
 				}
-				if (Feat->GetFeatTag(FEATTAGDESTINY) == true)
+				else if (Feat->GetFeatTag(FEATTAGDESTINY) == true)
 				{
 					if (F1 == FEATDESTINY || F2 == FEATDESTINY || F3 == FEATDESTINY)
 						FeatVector.push_back(FeatIndex);
 				}
-				if (Feat->GetFeatTag(FEATTAGLEGENDARY) == true)
+				else if (Feat->GetFeatTag(FEATTAGLEGENDARY) == true)
 				{
 					if (F1 == FEATLEGENDARY || F2 == FEATLEGENDARY || F3 == FEATLEGENDARY)
-						FeatVector.push_back(FeatIndex);
-				}
-				if (Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
-				{
-					if (F1 == FEATDRAGONBORNBONUS || F2 == FEATDRAGONBORNBONUS || F3 == FEATDRAGONBORNBONUS)
 						FeatVector.push_back(FeatIndex);
 				}
 				else if (Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
 				{
 					if (F1 == FEATDRAGONBORNBONUS || F2 == FEATDRAGONBORNBONUS || F3 == FEATDRAGONBORNBONUS)
+						FeatVector.push_back(FeatIndex);
+				}
+				else if (Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
+				{
+					if (F1 == FEATTAGCLERICBONUS || F2 == FEATTAGCLERICBONUS || F3 == FEATTAGCLERICBONUS)
 						FeatVector.push_back(FeatIndex);
 				}
 				else

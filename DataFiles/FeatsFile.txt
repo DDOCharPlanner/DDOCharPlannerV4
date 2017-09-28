@@ -578,6 +578,50 @@ NEEDSALL: Ability Dexterity 13;
 ICON: DodgeIcon;
 VERIFIED: 2012-06-26, in-game;
 
+PARENTHEADING: Domain;
+FEATNAME: Air Domain;
+FEATDESCRIPTION: You gain +1 to the DC of your Evocation spells. This increases by +1 at Cleric levels 6, 12, and 18. Your lightning spells will use Light Spell Power if it is higher, and your light spells will use Lightning Spell power if it is higher. Turn Undead now works on Elemental creatures. Additionally, using Turn Undead provides a bonus to your party's Reflex saving throws equal to half of your Cleric level, and Electric Resistance equal to twice your Cleric level, for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain: Shocking Grasp;
+FEATDESCRIPTION: You gain Shocking Grasp as an SLA. 4 Spell Points, 4 second cooldown;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain: Lightning Bolt;
+FEATDESCRIPTION: You gain Lightning Bolt as an SLA. 8 Spell Points, 6 second cooldown;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain: Chain Lightning;
+FEATDESCRIPTION: You gain Chain Lightning as an SLA. 12 Spell Points, 12 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+
 FEATNAME: Draconic Ancestry: Black;
 FEATDESCRIPTION: Your ancestry is linked to Black Dragons of a bygone age. You gain a stacking bonus to Acid Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
 FEATTAG: Dragonborn Bonus;
@@ -688,7 +732,7 @@ ACQUIRE: Automatic, Automatic;
 ICON: ElvenFeatsIcon;
 VERIFIED: 2012-06-26, in-game;
 
-PARENTHEADING: Energy Resistance;
+PARENTHEADING: Energy Absorption;
 FEATNAME: Acid;
 FEATDESCRIPTION: You gain Acid Resistance: 10.;
 FEATTAG: Favored Soul Bonus;
@@ -698,7 +742,7 @@ ACQUIRE: Train;
 ICON: EnergyResistIcon;
 VERIFIED: 2012-06-26, in-game;
 
-PARENTHEADING: Energy Resistance;
+PARENTHEADING: Energy Absorption;
 FEATNAME: Cold;
 FEATDESCRIPTION: You gain Cold Resistance: 10.;
 FEATTAG: Favored Soul Bonus;
@@ -708,7 +752,7 @@ ACQUIRE: Train;
 ICON: EnergyResistIcon;
 VERIFIED: 2012-06-26, in-game;
 
-PARENTHEADING: Energy Resistance;
+PARENTHEADING: Energy Absorption;
 FEATNAME: Electricity;
 FEATDESCRIPTION: You gain Electricity Resistance: 10.;
 FEATTAG: Favored Soul Bonus;
@@ -718,7 +762,7 @@ ACQUIRE: Train;
 ICON: EnergyResistIcon;
 VERIFIED: 2012-06-26, in-game;
 
-PARENTHEADING: Energy Resistance;
+PARENTHEADING: Energy Absorption;
 FEATNAME: Fire;
 FEATDESCRIPTION: You gain Fire Resistance: 10.;
 FEATTAG: Favored Soul Bonus;
@@ -728,7 +772,7 @@ ACQUIRE: Train;
 ICON: EnergyResistIcon;
 VERIFIED: 2012-06-26, in-game;
 
-PARENTHEADING: Energy Resistance;
+PARENTHEADING: Energy Absorption;
 FEATNAME: Sonic;
 FEATDESCRIPTION: You gain Sonic Resistance: 10.;
 FEATTAG: Favored Soul Bonus;

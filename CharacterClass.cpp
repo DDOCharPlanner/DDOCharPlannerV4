@@ -30,8 +30,8 @@ void CharacterClass::Reset()
     CharacterSex = MALE;
     //set the default class to level MaxLevel
     for (unsigned int i=0; i<MAXLEVEL; i++)
-        ClassRecord[i] = CLASSNONE;
-    ClassRecord[0] = FIGHTER;
+		ClassRecord[i] = FIGHTER;
+    //ClassRecord[0] = FIGHTER;
     Alignment = LAWFULGOOD;
     for (unsigned int i=0; i<6; i++)
         AbilityRaise[i] = 0;
@@ -1848,7 +1848,7 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 	if (ClassRecord[CurrentSelectedLevel-1] == FAVORED_SOUL && CurrentSelectedLevel <= HEROICLEVELS)
 		{
         ClassLevel = GetClassLevel(CurrentSelectedLevel);
-	    if (ClassLevel == 5 || ClassLevel == 10 || ClassLevel == 15)
+	    if (ClassLevel == 2 || ClassLevel == 5 || ClassLevel == 7 || ClassLevel == 10 || ClassLevel == 15)
 		    {
             Result[Index] = FEATFAVOREDSOULBONUS;
 	        Index++;
@@ -1889,6 +1889,21 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 			}
 		}
 	}
+
+	//Cleric Bonus
+	if (CurrentSelectedLevel <= HEROICLEVELS)
+	{
+		if (ClassRecord[CurrentSelectedLevel - 1] == CLERIC)
+		{
+			ClassLevel = GetClassLevel(CurrentSelectedLevel);
+			if (ClassLevel == 2)
+			{
+					Result[Index] = FEATCLERICBONUS;
+					Index++;
+			}
+		}
+	}
+
 
 	//Epic Destiny Feats
 	if (CurrentSelectedLevel == 26 || CurrentSelectedLevel == 28 || CurrentSelectedLevel == 29)

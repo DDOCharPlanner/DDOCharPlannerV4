@@ -1,26 +1,9 @@
-﻿Build started 9/26/2017 4:12:20 PM.
+﻿Build started 9/28/2017 4:49:23 PM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DDOCharGen.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CharacterClass.cpp
-         CharacterClass.cpp
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4398): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4505): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\time.inl(112) : see declaration of 'localtime'
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4643): warning C4995: 'strcpy': name was marked as #pragma deprecated
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4643): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4449): warning C4101: 'temphr' : unreferenced local variable
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5035): warning C4995: 'strcpy': name was marked as #pragma deprecated
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5035): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5515): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5536): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5561): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(5591): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(4916): warning C4101: 'hWnd' : unreferenced local variable
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(1592): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainScreenClass.cpp
+         MainScreenClass.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Debug\DDOCharPlanner.res
          Debug\AboutWindowClass.obj
@@ -62,10 +45,9 @@
          Debug\Screen_Destiny_Class.obj
          Debug\ToolTipWindowClass.obj
          Debug\UIComponentManager.obj
-     1>AboutWindowClass.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
          DDOCharPlanner.vcxproj -> E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe
      1>Done Building Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.14
+Time Elapsed 00:00:02.39

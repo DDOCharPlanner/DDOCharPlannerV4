@@ -1,0 +1,33 @@
+PARENTHEADING: ;
+FEATNAME: ;
+FEATDESCRIPTION: ;
+FEATTAG: ;
+RACELIST: ;
+CLASSLIST: ;
+LEVEL: ;
+ACQUIRE: ;
+NEEDSALL: ;
+NEEDSONE: ;
+LOCK: ;
+ICON: ;
+VERIFIED: ;
+
+
+//Options//
+* Required Field
+Only one of the Racelist or Classlist needs to be used.  Provide a Level and Acquire type for each Racelist then Classlist item in order in the Level and Acquire field.
+
+PARENTHEADING: ;
+*FEATNAME: ;
+*FEATDESCRIPTION: ;
+FEATTAG: Artificer Bonus, Rogue Bonus, Monk Bonus, Fighter Bonus, Dragonborn Bonus, Metamagic, Favored Soul Bonus, Multiple, Destiny, Past Life, Divine, Favored Enemy, Parent Feat, Half-Elf Bonus, Monk Path, Legendary, DestinyNotExclusive, Warlock Pact, Druid Shape, Cleric Bonus;
+*RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+*CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
+*LEVEL: ;
+*ACQUIRE: Train, Automatic;
+NEEDSALL: ;
+NEEDSONE: ;
+LOCK: ;
+*ICON: ;
+VERIFIED: ;
+

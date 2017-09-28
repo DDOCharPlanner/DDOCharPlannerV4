@@ -1,0 +1,44 @@
+PARENTHEADING: Domain;
+FEATNAME: Air Domain;
+FEATDESCRIPTION: ;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain;
+FEATDESCRIPTION: ;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain;
+FEATDESCRIPTION: ;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Air Domain;
+FEATDESCRIPTION: ;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Air Domain;
+ICON: none;
+VERIFIED: ;
+

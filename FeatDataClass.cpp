@@ -39,6 +39,7 @@ FeatDataClass::FeatDataClass()
 	DestinyNotExclusive = false;
 	Legendary = false;
 	DragonbornBonus = false;
+	ClericBonus = false;
 	NoFeatTag = true;
 	GraphicIconIndex = 0;
 	}
@@ -97,6 +98,7 @@ FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
 	DragonbornBonus = source.DragonbornBonus;
+	ClericBonus = source.ClericBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	}
@@ -149,6 +151,7 @@ FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	DestinyNotExclusive = source.DestinyNotExclusive;
 	Legendary = source.Legendary;
 	DragonbornBonus = source.DragonbornBonus;
+	ClericBonus = source.ClericBonus;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	
@@ -338,6 +341,11 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					Legendary = true;
 					NoFeatTag = false;
 					}
+				if (FeatLine[i].find("Cleric Bonus") != string::npos)
+				{
+					ClericBonus = true;
+					NoFeatTag = false;
+				}
 
 				break;
                 }
@@ -602,6 +610,8 @@ bool FeatDataClass::GetFeatTag(FEATTAG Tag)
 			return Legendary;
 		case FEATTAGDRAGONBORNBONUS:
 			return DragonbornBonus;
+		case FEATTAGCLERICBONUS:
+			return ClericBonus;
 		case FEATTAGNONE:
 			return NoFeatTag;
 		default:
@@ -881,6 +891,19 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 			if (AtLevel != 1)
 				return PREREQ_FAIL;
 		}
+	//Check if Favored Soul Bonus Feat is Absorption type or Other
+	if (FavoredSoulBonus == true)
+	{
+		if (ParentHeading == "Energy Absorption")
+		{
+			if (AtLevel == 2 || AtLevel == 7)
+				return PREREQ_FAIL;
+		}
+	}
+
+
+
+
 
 	// we passed the creation test. What about the Skill Requirement test?
 	for (unsigned int i = 0; i<NeedsAll.size(); i++)
@@ -1223,6 +1246,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 			}
 		}
 	}
+
     return PREREQ_FAIL;
     }
     
