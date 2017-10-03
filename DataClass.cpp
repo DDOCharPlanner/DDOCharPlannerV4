@@ -2238,6 +2238,8 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_DEEPGNOME].InitializeEnhancementTree(ENHT_DEEPGNOME, ENHTT_RACE, DEEPGNOME, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);// Added a space in "Deep-Gnome" to allow for lockouts in enhancement trees
 	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 3-0-U-1, 3-2-L-1, 3-2-U-1, 3-2-R-1, 3-3-U-1";
 	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Dragonborn", true, "DeepGnomeBackground", Arrows);
+	Arrows = "";
+	EnhancementTreeData[ENHT_AASIMAR].InitializeEnhancementTree(ENHT_AASIMAR, ENHTT_RACE, AASIMAR, CLASSNONE, "AASIMAR", true, "ElfBackground", Arrows);
 
 	//Class Trees (33) sorted by Class
 	//Artificer
@@ -2344,6 +2346,8 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_ARCANE_ARCHER_ELF].InitializeEnhancementTree(ENHT_ARCANE_ARCHER_ELF, ENHTT_SPECIAL, ELF, CLASSNONE, "Arcane Archer (Elf)", true, "ElfBackground", Arrows);
 	Arrows = "";
 	EnhancementTreeData[ENHT_HARPER_AGENT].InitializeEnhancementTree(ENHT_HARPER_AGENT, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Harper Agent", true, "ElfBackground", Arrows);
+	Arrows = "";
+	EnhancementTreeData[ENHT_VISTANIKNIFEFIGHTER].InitializeEnhancementTree(ENHT_VISTANIKNIFEFIGHTER, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Vistani Knife Fighter", true, "ElfBackground", Arrows);
 }
 
 //---------------------------------------------------------------------------

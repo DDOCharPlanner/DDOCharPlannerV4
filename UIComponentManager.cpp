@@ -286,16 +286,18 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleWarforgedOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleWarforgedOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
-//Column 2
-	AdvBoxCurrentY = RaceBaseY + 85;
-	AdvBoxCurrentX += AdvBoxShiftX;
+	AdvBoxCurrentY += AdvBoxShiftY;
 
 	InitializeUIGraphic("MaleHalfelfOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("MaleHalfelfOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleHalfelfOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleHalfelfOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
-	AdvBoxCurrentY += AdvBoxShiftY;
+
+
+//Column 2
+	AdvBoxCurrentY = RaceBaseY + 85;
+	AdvBoxCurrentX += AdvBoxShiftX;
 
 	InitializeUIGraphic("MaleDrowOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("MaleDrowOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
@@ -322,6 +324,13 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("MaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleDragonbornOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 	InitializeUIGraphic("FemaleDragonbornOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+
+	AdvBoxCurrentY += AdvBoxShiftY;
+
+	InitializeUIGraphic("MaleAasimarOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("MaleAasimarOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleAasimarOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
+	InitializeUIGraphic("FemaleAasimarOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 135, 35);
 
 
 	//iconics Advancement Panel

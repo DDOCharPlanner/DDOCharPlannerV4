@@ -244,6 +244,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Deep-Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
+			case AASIMAR:
+				return "Aasimar";
 			}
 		}
 	else
@@ -280,6 +282,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Deep-Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
+			case AASIMAR:
+				return "Aasimar";
 			}
 		}
 	return "";
@@ -2617,6 +2621,12 @@ int CharacterClass::GetRaceFeatIndex(PAST_RACE Race)
 	case FEAT_DRAGONBORN:
 	{
 		FeatIndex = Data.GetFeatIndex("Race Past Life: Dragonborn Past Life");
+		break;
+	}
+
+	case FEAT_AASIMAR:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Aasimar Past Life");
 		break;
 	}
 

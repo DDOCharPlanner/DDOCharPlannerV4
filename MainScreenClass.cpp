@@ -2041,110 +2041,7 @@ void MainScreenClass::UpdateMetaWindows()
         ss << " Male (";
     else
         ss << " Female (";
- //   First = true;
- //   if (ClassLevel[0] > 0)
- //       {
- //       ss << ClassLevel[0] << " Fighter";
- //       First = false;
- //       }
- //   if (ClassLevel[1] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
- //       ss << ClassLevel[1] << " Paladin";
- //       First = false;
- //       }
- //   if (ClassLevel[2] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
- //       ss << ClassLevel[2] << " Barbarian";
- //       First = false;
-	//	}
-	//if (ClassLevel[3] > 0)
-	//	{
-	//	if (First == false)
-	//		ss << " \\ ";
-	//	ss << ClassLevel[3] << " Monk";
-	//	First = false;
-	//	}
-	//if (ClassLevel[4] > 0)
-	//	{
-	//	if (First == false)
-	//		ss << " \\ ";
-	//	ss << ClassLevel[4] << " Rogue";
-	//	First = false;
-	//	}
-	//if (ClassLevel[5] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[5] << " Ranger";
- //       First = false;
- //       }
-	//if (ClassLevel[6] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[6] << " Cleric";
- //       First = false;
- //       }
-	//if (ClassLevel[7] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[7] << " Wizard";
- //       First = false;
- //       }
-	//if (ClassLevel[8] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[8] << " Sorcerer";
- //       First = false;
- //       }
-	//if (ClassLevel[9] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[9] << " Bard";
- //       First = false;
- //       }
-	//if (ClassLevel[10] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[10] << " Favored Soul";
- //       First = false;
- //       }
-	//if (ClassLevel[11] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[11] << " Artificer";
- //       First = false;
- //       }
-	//if (ClassLevel[12] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[12] << " Druid";
- //       First = false;
- //       }
-	//if (ClassLevel[13] > 0)
- //       {
- //       if (First == false)
- //           ss << " \\ ";
-	//	ss << ClassLevel[13] << " Warlock";
- //       First = false;
- //       }
-	////epic levels
-	//if (CurrentSelectedLevel > 20)
-	//	{
-	//	ss << " \\ ";
-	//	ss << CurrentSelectedLevel-20 << " Epic";
-	//	}
-	ss << Character.GetClassString(CurrentSelectedLevel);
+ 	ss << Character.GetClassString(CurrentSelectedLevel);
     ss << ")";
 
     Text = ss.str();
@@ -2281,7 +2178,6 @@ void MainScreenClass::ChangeInstructionWindowSelection(int NewInstructionIndex)
 	}
     FillInstructionBox();
 	ClearAdvancementBox();
-    //DrawAdvancementBoxGraphics();
     }
 
 //---------------------------------------------------------------------------
@@ -4139,6 +4035,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDeepGnomeOff", "Races", &FemaleDeepGnomeOff);
 	LoadBitmap("MaleDragonbornOff", "Races", &MaleDragonbornOff);
 	LoadBitmap("FemaleDragonbornOff", "Races", &FemaleDragonbornOff);
+	LoadBitmap("MaleAasimarOff", "Races", &MaleAasimarOff);
+	LoadBitmap("FemaleAasimarOff", "Races", &FemaleAasimarOff);
 
     LoadBitmap("MaleHumanOn", "Races", &MaleHumanOn);
     LoadBitmap("FemaleHumanOn", "Races", &FemaleHumanOn);
@@ -4170,6 +4068,10 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDeepGnomeOn", "Races", &FemaleDeepGnomeOn);
 	LoadBitmap("MaleDragonbornOn", "Races", &MaleDragonbornOn);
 	LoadBitmap("FemaleDragonbornOn", "Races", &FemaleDragonbornOn);
+	LoadBitmap("MaleAasimarOn", "Races", &MaleAasimarOn);
+	LoadBitmap("FemaleAasimarOn", "Races", &FemaleAasimarOn);
+
+
 
 	//male/female buttons
 	LoadBitmap("MaleOn", "Races", &MaleOn);
@@ -4335,6 +4237,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleDragonbornOff.Mask);
 	DeleteObject(FemaleDragonbornOff.Graphic);
 	DeleteObject(FemaleDragonbornOff.Mask);
+	DeleteObject(MaleAasimarOff.Graphic);
+	DeleteObject(MaleAasimarOff.Mask);
+	DeleteObject(FemaleAasimarOff.Graphic);
+	DeleteObject(FemaleAasimarOff.Mask);
 
     DeleteObject(MaleHumanOn.Graphic);
     DeleteObject(MaleHumanOn.Mask);
@@ -4396,6 +4302,11 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleDragonbornOn.Mask);
 	DeleteObject(FemaleDragonbornOn.Graphic);
 	DeleteObject(FemaleDragonbornOn.Mask);
+	DeleteObject(MaleAasimarOn.Graphic);
+	DeleteObject(MaleAasimarOn.Mask);
+	DeleteObject(FemaleAasimarOn.Graphic);
+	DeleteObject(FemaleAasimarOn.Mask);
+
 
     DeleteObject(MaleOn.Graphic);
     DeleteObject(MaleOn.Mask);
@@ -4935,6 +4846,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						DrawGraphic(hdc, &MaleDragonbornOff, X, Y, Width, Height);
 					}
+					if (CurrentRace == AASIMAR)
+					{
+						Graphic = UIManager->GetGraphicData("MaleAasimarOn", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleAasimarOn, X, Y, Width, Height);
+					}
+					else
+					{
+						Graphic = UIManager->GetGraphicData("MaleAasimarOff", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleAasimarOff, X, Y, Width, Height);
+					}
 				}
 				else
 				{
@@ -5228,6 +5157,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 							DrawGraphic(hdc, &FemaleDragonbornOff, X, Y, Width, Height);
+						}
+						if (CurrentRace == AASIMAR)
+						{
+							Graphic = UIManager->GetGraphicData("FemaleAasimarOn", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleAasimarOn, X, Y, Width, Height);
+						}
+						else
+						{
+							Graphic = UIManager->GetGraphicData("FemaleAasimarOff", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleAasimarOff, X, Y, Width, Height);
 						}
 					}
 					else
@@ -6870,6 +6817,15 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
 					Character.SetRace(DRAGONBORN);
+				Graphic = UIManager->GetGraphicData("MaleAasimarOff", MAINWINDOW);
+				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+					Character.SetRace(AASIMAR);
+
+
 			}
 			else
 			{

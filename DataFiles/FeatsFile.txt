@@ -5918,6 +5918,15 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: QuickenSpellIcon;
 VERIFIED: 2012-06-26, in-game;
 
+PARENTHEADING: Race Past Life;
+FEATNAME: Aasimar Past Life;
+FEATDESCRIPTION: Life 1 - +1 Haggle, Life 2 - +1 Wisdom, Life 3 - +1 Racial Action Point;
+FEATTAG: Past Life;
+RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Bladeforged, Morninglord, Purple Dragon Knight, Shadar-Kai, Gnome, Deep-Gnome, Dragonborn;
+LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
+ICON: None;
+VERIFIED: unknown;
 
 PARENTHEADING: Race Past Life;
 FEATNAME: Human Past Life;
