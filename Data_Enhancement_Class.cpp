@@ -2021,7 +2021,9 @@ bool Data_Enhancement_Class::IsRaceTree()
 		return true;
 	if (Tree == "Dragonborn")
 		return true;
-		
+	if (Tree == "Aasimar")
+		return true;
+
 	return false;
 	}
 
@@ -2446,6 +2448,8 @@ RACE Data_Enhancement_Class::SetTreeRace(ENHANCEMENT_TREE EnhancementTree)
 			return DEEPGNOME;
 		case ENHT_DRAGONBORN:
 			return DRAGONBORN;
+		case ENHT_AASIMAR:
+			return AASIMAR;
 		}
 	return RACENONE;
 	}
@@ -2485,6 +2489,8 @@ string Data_Enhancement_Class::GetRaceName()
 			return "Deep Gnome";
 		case ENHT_DRAGONBORN:
 			return "Dragonborn";
+		case ENHT_AASIMAR:
+			return "Aasimar";
 		}
 	return "";
 	}

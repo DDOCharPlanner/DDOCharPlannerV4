@@ -291,6 +291,7 @@ void Data_Enhancement_Tree_Class::InitHash()
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Gnome", ENHT_GNOME));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Deep Gnome", ENHT_DEEPGNOME));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Dragonborn", ENHT_DRAGONBORN));
+		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Aasimar", ENHT_AASIMAR));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Air Savant (Sor)", ENHT_AIR_SAVANT_SOR));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Angel of Vengeance (Fvs)",ENHT_ANGEL_OF_VENGEANCE_FVS));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Arcane Archer (Elf)",ENHT_ARCANE_ARCHER_ELF));
@@ -334,6 +335,7 @@ void Data_Enhancement_Tree_Class::InitHash()
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Soul Eater (Wlk)", ENHT_SOULEATER_WLK));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Tainted Scholar (Wlk)", ENHT_TANTEDSCHOLAR_WLK));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Enlightened Spirit (Wlk)", ENHT_ENLIGHTENEDSPIRIT_WLK));
+		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Vistani Knife Fighter", ENHT_VISTANIKNIFEFIGHTER));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Unknown",ENHT_UNKNOWN));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Unset",ENHT_UNSET));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("NoTree",ENHT_NOTREE));
