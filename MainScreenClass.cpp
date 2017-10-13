@@ -6822,8 +6822,8 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
-					Character.SetRace(AASIMAR);
+				//if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				//	Character.SetRace(AASIMAR);
 
 
 			}

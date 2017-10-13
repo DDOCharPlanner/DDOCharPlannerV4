@@ -1004,6 +1004,10 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 					{
 						Result++;
 					}
+					if (CountFeat("Race Past Life: Aasimar Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
 					Result += CountFeat("Epic: Great Wisdom", AtLevel);
 					break;
 				}
@@ -2934,6 +2938,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Divine Sphere: Epic Skill Focus: Heal", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Aasimar Past Life", AtLevel) == true)
+			Mod += 1;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Heal", AtLevel);
 		}
 	if (Skill == HIDE)
