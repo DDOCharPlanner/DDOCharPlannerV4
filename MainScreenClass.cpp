@@ -4037,6 +4037,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDragonbornOff", "Races", &FemaleDragonbornOff);
 	LoadBitmap("MaleAasimarOff", "Races", &MaleAasimarOff);
 	LoadBitmap("FemaleAasimarOff", "Races", &FemaleAasimarOff);
+	LoadBitmap("MaleAasimarScourgeOff", "Races", &MaleAasimarScourgeOff);
+	LoadBitmap("FemaleAasimarScourgeOff", "Races", &FemaleAasimarScourgeOff);
 
     LoadBitmap("MaleHumanOn", "Races", &MaleHumanOn);
     LoadBitmap("FemaleHumanOn", "Races", &FemaleHumanOn);
@@ -4070,7 +4072,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDragonbornOn", "Races", &FemaleDragonbornOn);
 	LoadBitmap("MaleAasimarOn", "Races", &MaleAasimarOn);
 	LoadBitmap("FemaleAasimarOn", "Races", &FemaleAasimarOn);
-
+	LoadBitmap("MaleAasimarScourgeOn", "Races", &MaleAasimarScourgeOn);
+	LoadBitmap("FemaleAasimarScourgeOn", "Races", &FemaleAasimarScourgeOn);
 
 
 	//male/female buttons
@@ -4241,6 +4244,12 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleAasimarOff.Mask);
 	DeleteObject(FemaleAasimarOff.Graphic);
 	DeleteObject(FemaleAasimarOff.Mask);
+	DeleteObject(MaleAasimarScourgeOff.Graphic);
+	DeleteObject(MaleAasimarScourgeOff.Mask);
+	DeleteObject(FemaleAasimarScourgeOff.Graphic);
+	DeleteObject(FemaleAasimarScourgeOff.Mask);
+
+
 
     DeleteObject(MaleHumanOn.Graphic);
     DeleteObject(MaleHumanOn.Mask);
@@ -4306,7 +4315,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleAasimarOn.Mask);
 	DeleteObject(FemaleAasimarOn.Graphic);
 	DeleteObject(FemaleAasimarOn.Mask);
-
+	DeleteObject(MaleAasimarScourgeOn.Graphic);
+	DeleteObject(MaleAasimarScourgeOn.Mask);
+	DeleteObject(FemaleAasimarScourgeOn.Graphic);
+	DeleteObject(FemaleAasimarScourgeOn.Mask);
 
     DeleteObject(MaleOn.Graphic);
     DeleteObject(MaleOn.Mask);
@@ -4959,6 +4971,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						DrawGraphic(hdc, &MaleDeepGnomeOff, X, Y, Width, Height);
 					}
+					if (CurrentRace == AASIMARSCOURGE)
+					{
+						Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOn", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleAasimarScourgeOn, X, Y, Width, Height);
+					}
+					else
+					{
+						Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOff", MAINWINDOW);
+						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+						DrawGraphic(hdc, &MaleAasimarScourgeOff, X, Y, Width, Height);
+					}
 
 				}
 				Graphic = UIManager->GetGraphicData("MaleOn", MAINWINDOW);
@@ -5268,6 +5298,24 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 							DrawGraphic(hdc, &FemaleDeepGnomeOff, X, Y, Width, Height);
+						}
+						if (CurrentRace == AASIMARSCOURGE)
+						{
+							Graphic = UIManager->GetGraphicData("FemaleAasimarScourgeOn", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleAasimarScourgeOn, X, Y, Width, Height);
+						}
+						else
+						{
+							Graphic = UIManager->GetGraphicData("FemaleAasimarScourgeOff", MAINWINDOW);
+							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+							DrawGraphic(hdc, &FemaleAasimarScourgeOff, X, Y, Width, Height);
 						}
 					}
 				
@@ -6749,49 +6797,71 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(HUMAN);
+					Character.SetAbilityFavorBonus(false);
+				}
+					
 				Graphic = UIManager->GetGraphicData("MaleElfOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(ELF);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleHalflingOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(HALFLING);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleDwarfOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(DWARF);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleWarforgedOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(WARFORGED);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleHalfelfOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(HALFELF);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleGnomeOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(GNOME);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleDrowOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
@@ -6809,21 +6879,30 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(HALFORC);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleDragonbornOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
 					Character.SetRace(DRAGONBORN);
+					Character.SetAbilityFavorBonus(false);
+				}
 				Graphic = UIManager->GetGraphicData("MaleAasimarOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-				//if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
-				//	Character.SetRace(AASIMAR);
+				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
+					Character.SetRace(AASIMAR);
+					Character.SetAbilityFavorBonus(false);
+				}
 
 
 			}
@@ -6886,6 +6965,18 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 				{
 					Character.SetRace(DEEPGNOME);
 					Character.SetClass(WIZARD, 1);
+					Character.SetAbilityFavorBonus(true);
+					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 0);
+				}
+				Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOff", MAINWINDOW);
+				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
+				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
+				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
+				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
+				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
+				{
+					Character.SetRace(AASIMARSCOURGE);
+					Character.SetClass(RANGER, 1);
 					Character.SetAbilityFavorBonus(true);
 					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 0);
 				}

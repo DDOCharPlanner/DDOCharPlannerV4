@@ -372,6 +372,13 @@ void UIComponentManager::InitializeUI()
 	InitializeUIGraphic("FemaleDeepGnomeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
 	InitializeUIGraphic("FemaleDeepGnomeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
 
+	AdvBoxCurrentY += AdvBoxShiftY;
+
+	InitializeUIGraphic("MaleAasimarScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("MaleAasimarScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("FemaleAasimarScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("FemaleAasimarScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+
 
 	//Classes Advancement Panel
 	int ClassBaseX = AdvBoxX + 5;

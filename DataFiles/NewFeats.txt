@@ -1,0 +1,31 @@
+PARENTHEADING: Aasimar;
+FEATNAME: Bond: Protector;
+FEATTAG: Aasimar Bond;
+FEATDESCRIPTION: Target: Self \par Duration:Permanent \par Your connection to your Celestial patron causes you to guard the weak and stand vigilant against the darkness.  Shile this protector Bond is toggled on, you tap into that connection, gaining +1 Charisma and + 1 to Will Saving Throws.  Cannot be used while a Warlock Pact is toggled on.;
+Race: Aasimar;
+LEVEL: 1;
+ACQUIRE: Train;
+LOCK: Feat Aasimar: Bond: Fallen;
+ICON: AscendatBondProtector;
+VERIFIED: unknown;
+
+PARENTHEADING: Aasimar;
+FEATNAME: Bond: Fallen;
+FEATTAG: Aasimar Bond;
+FEATDESCRIPTION: Target: Self \par Duration:Permanent \par Twisted by dark powers in your youth, your connection to your Celestial patron is unusual, but powerful.  While this Fallen Bond is toggled on, you tap into that connection, gaining +1 Strength and +1 to Reflex Saving Throws.  Cannot be used while a Warlock Pact is toggled on.;
+Race: Aasimar;
+LEVEL: 1;
+ACQUIRE: Train;
+LOCK: Feat Aasimar: Bond: Protector;
+ICON: AscendatBondFallen;
+VERIFIED: unknown;
+
+PARENTHEADING: Aasimar;
+FEATNAME: Bond: Scourge;
+FEATTAG: Aasimar Bond;
+FEATDESCRIPTION: Target: Self \par Duration:Permanent \par While this Scourge Bond is toggled on, you tap into that connection, gaining +1 Constitution and +1 to Fortitude Saving Throws.  Cannot be used while a Warlock Pact is toggled on.;
+Race: Aasimar Scourge;
+LEVEL: 1;
+ACQUIRE: Train;
+ICON: None;
+VERIFIED: unknown;

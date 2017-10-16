@@ -281,6 +281,10 @@ class MainScreenClass : public IconClass
 		GraphicStruct MaleAasimarOff;
 		GraphicStruct FemaleAasimarOn;
 		GraphicStruct FemaleAasimarOff;
+		GraphicStruct MaleAasimarScourgeOn;
+		GraphicStruct MaleAasimarScourgeOff;
+		GraphicStruct FemaleAasimarScourgeOn;
+		GraphicStruct FemaleAasimarScourgeOff;
 
 		GraphicStruct MaleOn;
 		GraphicStruct FemaleOn;

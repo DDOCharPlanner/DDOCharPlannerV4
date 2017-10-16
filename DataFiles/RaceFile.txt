@@ -634,16 +634,13 @@ ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 
 RACENAME: Aasimar;
-DESCRIPTION: {\b Versatility is the greatest strength of humans. They can do well in any of 
- the classes.}\par\par
-Humans are the most adaptable of all the races and live in all sorts of environments. Although
- considered short-lived by the other races, humans have more ambition and drive than most, and 
- with work, they can achieve success in whatever they set their minds to.\par\par
-Humans start with a bonus {\b {\cf5 feat}} and, on average, are able to learn more skills than other races
- as they level up.\par\par
-Strengths: Versatility, increased capacity to learn skills.\par\par
+DESCRIPTION: {\b Bonded to Celestials, Aasimar are wise and powerful.  They are versatile, accenting Divine roles. \par\par
+Aasimar bear witth their souls the light of the heavens. With a touch of the power of Celestials, Aasimar are born to serve as their Chapions. \par\par
+Stat Notes: \par\par
+Aasimar start with higher { \b wisdom }\par\par
+Strengths: Functional in a variety of roles, connection to Celestials aids in healing. par\par
 Weaknessess: None.;
-BASESTATS: 8, 8, 8, 8, 8, 8;
+BASESTATS: 8, 8, 8, 8, 10, 8;
 ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;
 ADVANCEMENT: 1, REINCARNATION, Set Past Lives;
 ADVANCEMENT: 1, RACEANDSEX, Select a Race and Sex;
@@ -676,4 +673,41 @@ ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 
+RACENAME: Aasimar Scourage;
+DESCRIPTION: {\b My Bond compels me to seek out those that defy death and return them to rest.}\par\par A dual-wielding Ranger that hunts the Undead. \par\par 
+For days and days the call pulled at your mind.  A great horde of Undead hiding within Wheloon, throughout Cormyr, even to places beyond... \par\par 
+Your Bond with will not abide these creatures to stand.  They Must be returned unto death \par\par (Iconics begin at level one and have fifteen levels worth of XP. You may choose
+to keep to the path or change class as you see fit.);
+BASESTATS: 8, 8, 8, 8, 10, 8;
+ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;
+ADVANCEMENT: 1, REINCARNATION, Set Past Lives;
+ADVANCEMENT: 1, RACEANDSEX, Select a Race and Sex;
+ADVANCEMENT: 1, CLASS, Select an Initial Class;
+ADVANCEMENT: 1, ABILITYPOINT, Ability Increase (%i points to spend), 32;
+ADVANCEMENT: 2, CLASS, Select a Class;
+ADVANCEMENT: 3, CLASS, Select a Class;
+ADVANCEMENT: 4, CLASS, Select a Class;
+ADVANCEMENT: 4, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 5, CLASS, Select a Class;
+ADVANCEMENT: 6, CLASS, Select a Class;
+ADVANCEMENT: 7, CLASS, Select a Class;
+ADVANCEMENT: 8, CLASS, Select a Class;
+ADVANCEMENT: 8, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 9, CLASS, Select a Class;
+ADVANCEMENT: 10, CLASS, Select a Class;
+ADVANCEMENT: 11, CLASS, Select a Class;
+ADVANCEMENT: 12, CLASS, Select a Class;
+ADVANCEMENT: 12, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 13, CLASS, Select a Class;
+ADVANCEMENT: 14, CLASS, Select a Class;
+ADVANCEMENT: 15, CLASS, Select a Class;
+ADVANCEMENT: 16, CLASS, Select a Class;
+ADVANCEMENT: 16, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 17, CLASS, Select a Class;
+ADVANCEMENT: 18, CLASS, Select a Class;
+ADVANCEMENT: 19, CLASS, Select a Class;
+ADVANCEMENT: 20, CLASS, Select a Class;
+ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
+ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 

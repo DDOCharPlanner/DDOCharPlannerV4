@@ -1610,7 +1610,7 @@ void EnhancementWindowClass::SetPossibleTrees()
 			}
 		}// AA ELF
 		PossibleTrees.push_back(ENHT_HARPER_AGENT);// Add Harper Agent to List
-		//PossibleTrees.push_back(ENHT_VISTANIKNIFEFIGHTER); // Add Vistani Knife Fighter to List
+		PossibleTrees.push_back(ENHT_VISTANIKNIFEFIGHTER); // Add Vistani Knife Fighter to List
 	}
 
 //-----------------------------------------------------------------------------------

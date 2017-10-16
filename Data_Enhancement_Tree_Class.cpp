@@ -336,6 +336,7 @@ void Data_Enhancement_Tree_Class::InitHash()
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Tainted Scholar (Wlk)", ENHT_TANTEDSCHOLAR_WLK));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Enlightened Spirit (Wlk)", ENHT_ENLIGHTENEDSPIRIT_WLK));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Vistani Knife Fighter", ENHT_VISTANIKNIFEFIGHTER));
+		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Aasimar Scourge", ENHT_AASIMARSCOURGE));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Unknown",ENHT_UNKNOWN));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Unset",ENHT_UNSET));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("NoTree",ENHT_NOTREE));

@@ -1745,6 +1745,13 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 		Index++;
 		}
 
+
+	//Aasimar Bond feat
+	if (CurrentSelectedLevel == 1 && Race == AASIMAR)
+	{
+		Result[Index] = FEATAASIMARBOND;
+		Index++;
+	}
     //fighter bonus feats
 	if (ClassRecord[CurrentSelectedLevel-1] == FIGHTER && CurrentSelectedLevel <= HEROICLEVELS)
         {
@@ -2517,6 +2524,12 @@ int CharacterClass::GetIconicFeatIndex(ICONICRACES Race)
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Deep Gnome");
 		break;
 	}
+	case FEAT_AASIMARSCOURGE:
+	{
+		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Aasimar Scourge");
+		break;
+	}
+
 
 	default:
 		break;
