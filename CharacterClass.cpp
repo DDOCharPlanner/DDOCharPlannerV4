@@ -2953,6 +2953,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 5;
 		if (HasFeat("Race Past Life: Aasimar Past Life", AtLevel) == true)
 			Mod += 1;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Heal", AtLevel);
 		}
 	if (Skill == HIDE)
@@ -3035,6 +3037,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
             Mod += 3;
 		if (HasFeat("Divine Sphere: Epic Skill Focus: Listen", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Listen", AtLevel);
         }
     if (Skill == MOVESILENTLY)
@@ -3148,6 +3152,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 5;
 		if (HasFeat("Race Past Life: Elf Past Life", AtLevel) == true)
 			Mod += 1;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Spot", AtLevel);
         }
     if (Skill == SWIM)
