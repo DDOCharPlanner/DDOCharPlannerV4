@@ -278,8 +278,8 @@ FILESTATE DataClass::LoadClassFile()
 	StringCbCopy(KeywordString[2], 256, "HITDIE: ");
 	StringCbCopy(KeywordString[3], 256, "SKILLPOINTS: ");
 	StringCbCopy(KeywordString[4], 256, "BAB: ");
-	StringCbCopy(KeywordString[5], 256, "FORTSAVE: ");
 	StringCbCopy(KeywordString[6], 256, "REFSAVE: ");
+	StringCbCopy(KeywordString[5], 256, "FORTSAVE: ");
 	StringCbCopy(KeywordString[7], 256, "WILLSAVE: ");
 	StringCbCopy(KeywordString[8], 256, "ALIGNMENT: ");
 	StringCbCopy(KeywordString[9], 256, "SPELLPOINTS: ");
@@ -2238,6 +2238,10 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_DEEPGNOME].InitializeEnhancementTree(ENHT_DEEPGNOME, ENHTT_RACE, DEEPGNOME, CLASSNONE, "Deep Gnome", true, "DeepGnomeBackground", Arrows);// Added a space in "Deep-Gnome" to allow for lockouts in enhancement trees
 	Arrows = "1-0-U-1, 1-1-U-1, 2-0-U-1, 3-0-U-1, 3-2-L-1, 3-2-U-1, 3-2-R-1, 3-3-U-1";
 	EnhancementTreeData[ENHT_DRAGONBORN].InitializeEnhancementTree(ENHT_DRAGONBORN, ENHTT_RACE, DRAGONBORN, CLASSNONE, "Dragonborn", true, "DeepGnomeBackground", Arrows);
+	Arrows = "1-0-U-1, 1-4-U-2, 2-0-U-1, 3-4-U-1";
+	EnhancementTreeData[ENHT_AASIMAR].InitializeEnhancementTree(ENHT_AASIMAR, ENHTT_RACE, AASIMAR, CLASSNONE, "Aasimar", true, "ElfBackground", Arrows);
+	Arrows = "1-0-U-1, 1-4-U-2, 2-0-U-1, 3-4-U-1";
+	EnhancementTreeData[ENHT_AASIMARSCOURGE].InitializeEnhancementTree(ENHT_AASIMARSCOURGE, ENHTT_RACE, AASIMARSCOURGE, CLASSNONE, "Aasimar Scourge", true, "ElfBackground", Arrows);
 
 	//Class Trees (33) sorted by Class
 	//Artificer
@@ -2344,6 +2348,8 @@ void DataClass::InitializeEnhancementTrees()
 	EnhancementTreeData[ENHT_ARCANE_ARCHER_ELF].InitializeEnhancementTree(ENHT_ARCANE_ARCHER_ELF, ENHTT_SPECIAL, ELF, CLASSNONE, "Arcane Archer (Elf)", true, "ElfBackground", Arrows);
 	Arrows = "";
 	EnhancementTreeData[ENHT_HARPER_AGENT].InitializeEnhancementTree(ENHT_HARPER_AGENT, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Harper Agent", true, "ElfBackground", Arrows);
+	Arrows = "1-2-U-1, 2-0-U-1, 2-2-U-1, 3-0-U-1, 3-2-U-1, 4-0-U-1, 4-2-U-1";
+	EnhancementTreeData[ENHT_VISTANIKNIFEFIGHTER].InitializeEnhancementTree(ENHT_VISTANIKNIFEFIGHTER, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Vistani Knife Fighter", true, "ElfBackground", Arrows);
 }
 
 //---------------------------------------------------------------------------

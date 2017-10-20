@@ -59,6 +59,7 @@ class FeatDataClass
 	    bool NoFeatTag;
 		bool DragonbornBonus;
 		bool ClericBonus;
+		bool AasimarBond;
 		unsigned int GraphicIconIndex;
 		
 		void StripStringLeadingWhiteSpace(string &SourceString);

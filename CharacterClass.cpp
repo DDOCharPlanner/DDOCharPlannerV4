@@ -244,6 +244,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Deep-Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
+			case AASIMAR:
+				return "Aasimar";
 			}
 		}
 	else
@@ -280,6 +282,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Deep-Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
+			case AASIMAR:
+				return "Aasimar";
 			}
 		}
 	return "";
@@ -997,6 +1001,10 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 				case WISDOM:
 				{
 					if (CountFeat("Race Past Life: Human Past Life", AtLevel) > 1)
+					{
+						Result++;
+					}
+					if (CountFeat("Race Past Life: Aasimar Past Life", AtLevel) > 1)
 					{
 						Result++;
 					}
@@ -1737,6 +1745,13 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 		Index++;
 		}
 
+
+	//Aasimar Bond feat
+	if (CurrentSelectedLevel == 1 && Race == AASIMAR)
+	{
+		Result[Index] = FEATAASIMARBOND;
+		Index++;
+	}
     //fighter bonus feats
 	if (ClassRecord[CurrentSelectedLevel-1] == FIGHTER && CurrentSelectedLevel <= HEROICLEVELS)
         {
@@ -2509,6 +2524,12 @@ int CharacterClass::GetIconicFeatIndex(ICONICRACES Race)
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Deep Gnome");
 		break;
 	}
+	case FEAT_AASIMARSCOURGE:
+	{
+		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Aasimar Scourge");
+		break;
+	}
+
 
 	default:
 		break;
@@ -2617,6 +2638,12 @@ int CharacterClass::GetRaceFeatIndex(PAST_RACE Race)
 	case FEAT_DRAGONBORN:
 	{
 		FeatIndex = Data.GetFeatIndex("Race Past Life: Dragonborn Past Life");
+		break;
+	}
+
+	case FEAT_AASIMAR:
+	{
+		FeatIndex = Data.GetFeatIndex("Race Past Life: Aasimar Past Life");
 		break;
 	}
 
@@ -2924,6 +2951,10 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Divine Sphere: Epic Skill Focus: Heal", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Race Past Life: Aasimar Past Life", AtLevel) == true)
+			Mod += 1;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Heal", AtLevel);
 		}
 	if (Skill == HIDE)
@@ -3006,6 +3037,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
             Mod += 3;
 		if (HasFeat("Divine Sphere: Epic Skill Focus: Listen", AtLevel) == true)
 			Mod += 5;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Listen", AtLevel);
         }
     if (Skill == MOVESILENTLY)
@@ -3119,6 +3152,8 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 5;
 		if (HasFeat("Race Past Life: Elf Past Life", AtLevel) == true)
 			Mod += 1;
+		if (HasFeat("Aasimar: Aasimar Racial Traits", AtLevel) == true)
+			Mod += 2;
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Spot", AtLevel);
         }
     if (Skill == SWIM)

@@ -630,6 +630,530 @@ ICON: MULTI_YourFleshIsWeak;
 
 [ENDOFMULTI]
 
+[Aasimar] **********************************************************
+
+NAME: Core 1;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 2;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 3;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 4;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 5;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 6;
+TREE: Aasimar;
+LEVEL: 0;
+SLOT: 5;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-1;
+TREE: Aasimar;
+LEVEL: 1;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-2;
+TREE: Aasimar;
+LEVEL: 1;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-3;
+TREE: Aasimar;
+LEVEL: 1;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-4;
+TREE: Aasimar;
+LEVEL: 1;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-5;
+TREE: Aasimar;
+LEVEL: 1;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-1;
+TREE: Aasimar;
+LEVEL: 2;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-2;
+TREE: Aasimar;
+LEVEL: 2;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-3;
+TREE: Aasimar;
+LEVEL: 2;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-4;
+TREE: Aasimar;
+LEVEL: 2;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-5;
+TREE: Aasimar;
+LEVEL: 2;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-1;
+TREE: Aasimar;
+LEVEL: 3;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-2;
+TREE: Aasimar;
+LEVEL: 3;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-3;
+TREE: Aasimar;
+LEVEL: 3;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-4;
+TREE: Aasimar;
+LEVEL: 3;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-5;
+TREE: Aasimar;
+LEVEL: 3;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-1;
+TREE: Aasimar;
+LEVEL: 4;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-2;
+TREE: Aasimar;
+LEVEL: 4;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-3;
+TREE: Aasimar;
+LEVEL: 4;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-4;
+TREE: Aasimar;
+LEVEL: 4;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-5;
+TREE: Aasimar;
+LEVEL: 4;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+[Aasimar Scourge] **********************************************************
+
+NAME: Core 1;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 2;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 3;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 4;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 5;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 6;
+TREE: Aasimar Scourge;
+LEVEL: 0;
+SLOT: 5;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-1;
+TREE: Aasimar Scourge;
+LEVEL: 1;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-2;
+TREE: Aasimar Scourge;
+LEVEL: 1;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-3;
+TREE: Aasimar Scourge;
+LEVEL: 1;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-4;
+TREE: Aasimar Scourge;
+LEVEL: 1;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-5;
+TREE: Aasimar Scourge;
+LEVEL: 1;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-1;
+TREE: Aasimar Scourge;
+LEVEL: 2;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-2;
+TREE: Aasimar Scourge;
+LEVEL: 2;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-3;
+TREE: Aasimar Scourge;
+LEVEL: 2;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-4;
+TREE: Aasimar Scourge;
+LEVEL: 2;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-5;
+TREE: Aasimar Scourge;
+LEVEL: 2;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-1;
+TREE: Aasimar Scourge;
+LEVEL: 3;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-2;
+TREE: Aasimar Scourge;
+LEVEL: 3;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-3;
+TREE: Aasimar Scourge;
+LEVEL: 3;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-4;
+TREE: Aasimar Scourge;
+LEVEL: 3;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-5;
+TREE: Aasimar Scourge;
+LEVEL: 3;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-1;
+TREE: Aasimar Scourge;
+LEVEL: 4;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-2;
+TREE: Aasimar Scourge;
+LEVEL: 4;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-3;
+TREE: Aasimar Scourge;
+LEVEL: 4;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-4;
+TREE: Aasimar Scourge;
+LEVEL: 4;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-5;
+TREE: Aasimar Scourge;
+LEVEL: 4;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
 [Bladeforged] **********************************************************
 
 NAME: Improved Fortification;
@@ -19203,7 +19727,7 @@ COST: 2;
 DESC1: Activation Cost 25 Hit Points\par \par Cooldown 30 seconds\par \par Tactical Melee Cleave: Expend 25 hit points to activate this ability and attack enemies around you. This deals +5(W) damage and has a 50% to knock down each damaged enemy briefly on a failed Fortitude save vs 10 + Strength Modifier + Barbarian Level.\par \par Abilities that trigger on Supreme Cleave also trigger on Tantrum. (Blood Trail, Wade In, Lash Out, Sundering spin);
 ICON: FRBZ_Tantrum;
 
-[Harper Agent] *******************************************************
+[simaadasdd Agent] *******************************************************
 
 NAME: Agent of Good;
 TREE: Harper Agent;
@@ -31178,6 +31702,321 @@ TYPE: Passive;
 COST: 2;
 DESC1: +10 Melee Power;
 ICON: VANG_ArmoredStrength;
+
+[Vistani Knife Fighter] **********************************************************
+
+NAME: Core 1;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 2;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 3;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 4;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 5;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Core 6;
+TREE: Vistani Knife Fighter;
+LEVEL: 0;
+SLOT: 5;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-1;
+TREE: Vistani Knife Fighter;
+LEVEL: 1;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-2;
+TREE: Vistani Knife Fighter;
+LEVEL: 1;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-3;
+TREE: Vistani Knife Fighter;
+LEVEL: 1;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-4;
+TREE: Vistani Knife Fighter;
+LEVEL: 1;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: Level 1-5;
+TREE: Vistani Knife Fighter;
+LEVEL: 1;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-1;
+TREE: Vistani Knife Fighter;
+LEVEL: 2;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-2;
+TREE: Vistani Knife Fighter;
+LEVEL: 2;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-3;
+TREE: Vistani Knife Fighter;
+LEVEL: 2;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-4;
+TREE: Vistani Knife Fighter;
+LEVEL: 2;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 2-5;
+TREE: Vistani Knife Fighter;
+LEVEL: 2;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-1;
+TREE: Vistani Knife Fighter;
+LEVEL: 3;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-2;
+TREE: Vistani Knife Fighter;
+LEVEL: 3;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-3;
+TREE: Vistani Knife Fighter;
+LEVEL: 3;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-4;
+TREE: Vistani Knife Fighter;
+LEVEL: 3;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 3-5;
+TREE: Vistani Knife Fighter;
+LEVEL: 3;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-1;
+TREE: Vistani Knife Fighter;
+LEVEL: 4;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-2;
+TREE: Vistani Knife Fighter;
+LEVEL: 4;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-3;
+TREE: Vistani Knife Fighter;
+LEVEL: 4;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-4;
+TREE: Vistani Knife Fighter;
+LEVEL: 4;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 4-5;
+TREE: Vistani Knife Fighter;
+LEVEL: 4;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 5-1;
+TREE: Vistani Knife Fighter;
+LEVEL: 5;
+SLOT: 0;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 5-2;
+TREE: Vistani Knife Fighter;
+LEVEL: 5;
+SLOT: 1;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 5-3;
+TREE: Vistani Knife Fighter;
+LEVEL: 5;
+SLOT: 2;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 5-4;
+TREE: Vistani Knife Fighter;
+LEVEL: 5;
+SLOT: 3;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+NAME: LEVEL 5-5;
+TREE: Vistani Knife Fighter;
+LEVEL: 5;
+SLOT: 4;
+RANKS: 1;
+TYPE: Passive;
+COST: 1;
+DESC1: EMPTY;
+ICON: None;
+
+
+
 
 [Warchanter (Brd)] ****************************************************
 

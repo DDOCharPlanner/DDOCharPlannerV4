@@ -277,6 +277,15 @@ class MainScreenClass : public IconClass
 		GraphicStruct MaleDragonbornOff;
 		GraphicStruct FemaleDragonbornOn;
 		GraphicStruct FemaleDragonbornOff;
+		GraphicStruct MaleAasimarOn;
+		GraphicStruct MaleAasimarOff;
+		GraphicStruct FemaleAasimarOn;
+		GraphicStruct FemaleAasimarOff;
+		GraphicStruct MaleAasimarScourgeOn;
+		GraphicStruct MaleAasimarScourgeOff;
+		GraphicStruct FemaleAasimarScourgeOn;
+		GraphicStruct FemaleAasimarScourgeOff;
+
 		GraphicStruct MaleOn;
 		GraphicStruct FemaleOn;
         GraphicStruct MaleOff;

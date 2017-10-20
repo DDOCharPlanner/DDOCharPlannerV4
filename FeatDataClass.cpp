@@ -40,6 +40,7 @@ FeatDataClass::FeatDataClass()
 	Legendary = false;
 	DragonbornBonus = false;
 	ClericBonus = false;
+	AasimarBond = false;
 	NoFeatTag = true;
 	GraphicIconIndex = 0;
 	}
@@ -99,6 +100,7 @@ FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	Legendary = source.Legendary;
 	DragonbornBonus = source.DragonbornBonus;
 	ClericBonus = source.ClericBonus;
+	AasimarBond = source.AasimarBond;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	}
@@ -152,6 +154,7 @@ FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	Legendary = source.Legendary;
 	DragonbornBonus = source.DragonbornBonus;
 	ClericBonus = source.ClericBonus;
+	AasimarBond = source.AasimarBond;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	
@@ -346,7 +349,11 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					ClericBonus = true;
 					NoFeatTag = false;
 				}
-
+				if (FeatLine[i].find("Aasimar Bond") != string::npos)
+				{
+					AasimarBond = true;
+					NoFeatTag = false;
+				}
 				break;
                 }
             case 4:     //the race list
@@ -383,6 +390,10 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(DEEPGNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
+				if (FeatLine[i].find("Aasimar") != string::npos)
+					RaceType.push_back(AASIMAR);
+				if (FeatLine[i].find("Aasimar Scourge") != string::npos)
+					RaceType.push_back(AASIMARSCOURGE);
                 break;
                 }
             case 5:     //the class list
@@ -612,6 +623,8 @@ bool FeatDataClass::GetFeatTag(FEATTAG Tag)
 			return DragonbornBonus;
 		case FEATTAGCLERICBONUS:
 			return ClericBonus;
+		case FEATTAGAASIMARBOND:
+			return AasimarBond;
 		case FEATTAGNONE:
 			return NoFeatTag;
 		default:
@@ -1181,6 +1194,16 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 			if (Substring.find("Dragonborn") != string::npos)
 			{
 				if (CharacterRace == DRAGONBORN)
+					return PREREQ_PASS;
+			}
+			if (Substring.find("Aasimar") != string::npos)
+			{
+				if (CharacterRace == AASIMAR)
+					return PREREQ_PASS;
+			}
+			if (Substring.find("Aasimar Scourge") != string::npos)
+			{
+				if (CharacterRace == AASIMARSCOURGE)
 					return PREREQ_PASS;
 			}
             }
@@ -1754,6 +1777,10 @@ string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 			return "Deep-Gnome";
 		case DRAGONBORN:
 			return "Dragonborn";
+		case AASIMAR:
+			return "Aasimar";
+		case AASIMARSCOURGE:
+			return "Aasimar Scourge";
 		default:
 			return "Unknown Race";
 		}

@@ -478,7 +478,7 @@ void MultiSkillsWindowClass::DrawSkillTable()
 					}
 				}
 			}
-			//Uddate Skiils Totals
+			//Uddate Skills Totals
 			if (UpdateAll || x == static_cast<int>(CurrentSkill))
 			{
 				SelectObject(hdc, DefaultFont);
