@@ -14089,7 +14089,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
 ICON: ASSN_HeartseekerPoison;
 
 MULTI: Poison Strikes;
@@ -14101,7 +14101,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an �Assassin's Mark� to an opponent for 10 seconds.  On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an "Assassin's Mark" to an opponent for 10 seconds.  On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
 ICON: ASSN_IceChillPoison;
 
 MULTI: Poison Strikes;
@@ -14113,7 +14113,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modifier negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modifier negates.);
 ICON: ASSN_SoulshatterPoison;
 
 NAME: Toxin Affinity;
@@ -14180,7 +14180,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
 LOCK1: EH: Heartseeker Poison [1-0-1];
 ICON: ASSN_HeartseekerPoison;
 
@@ -14193,7 +14193,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
 LOCK1: EH: Ice Chill Poison [1-0-1];
 ICON: ASSN_IceChillPoison;
 
@@ -14206,7 +14206,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modifier negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modifier negates.);
 LOCK1: EH: Soulshatter Poison [1-0-1];
 ICON: ASSN_SoulshatterPoison;
 
@@ -14266,7 +14266,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Fortitude Save (stacks 5 times), On Critical Hit: 1d6 Constitution damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Heartseeker (-5% hit points. Fortitude DC 10 + Half Rogue Level + Intelligence Modifier negates.);
 LOCK1: EH: Heartseeker Poison [1-0-1], EH: Heartseeker Poison [2-0-1];
 ICON: ASSN_HeartseekerPoison;
 
@@ -14279,7 +14279,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Reflex Save (stacks 5 times). On Critical Hit: 1d6 Dexterity damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Paralysis (Fort DC 10 + Half Rogue Level + Intelligence Modifier negates, 25% chance for an additional save when the affected creature is damaged.);
 LOCK1: EH: Ice Chill Poison [1-0-1], EH: Ice Chill Poison [2-0-1];
 ICON: ASSN_IceChillPoison;
 
@@ -14292,7 +14292,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an �Assassin's Mark� to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modified negates.);
+DESC1: Cooldown: 6 seconds\par Melee Poison Attack: On Damage: -1 Will Save (stacks 5 times). On Critical Hit: 1d6 Wisdom damage. Applies an "Assassin's Mark" to an opponent for 10 seconds. On Vorpal Hit: Shattermantle (-100 Spell Resistance for 10 seconds. Will DC 10 + Half Rogue Level + Intelligence Modified negates.);
 LOCK1: EH: Soulshatter Poison [1-0-1], EH: Soulshatter Poison [2-0-1];
 ICON: ASSN_SoulshatterPoison;
 
