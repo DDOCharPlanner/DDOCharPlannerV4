@@ -628,11 +628,11 @@ NAME: Your Flesh Is Weak;
 DESC: ;
 ICON: MULTI_YourFleshIsWeak;
 
-NAME: Vikani Ability;
+NAME: Vistani Ability;
 DESC: Choose an Ability to improve.;
 ICON: VKFR_MULTI_AbilityScore;
 
-NAME: Vikani Style;
+NAME: Vistani Style;
 DESC: Choose a dagger style to specialize in.;
 ICON: VKFR_DoubleDaggers;
 
@@ -31833,7 +31833,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: When using a dagger in each hand, you now fight in melee using the Vistani style, with both daggers held down point down. You gain +1 to hit and damage with daggers and throwing daggers.;
-ICON: VKFR_KnifeTraining;
+ICON: VKFR_KnifeTrainingII;
 
 NAME: Bleeding Cuts;
 TREE: Vistani Knife Fighter;
@@ -31850,7 +31850,7 @@ TREE: Vistani Knife Fighter;
 LEVEL: 2;
 SLOT: 2;
 RANKS: 1;
-TYPE: Passive;
+TYPE: Passive;123nikki
 COST: 2;
 DESC1: You gain +2 to Will saving throws. You gain +3 Physical Resistance Rating and Magical Resistance Rating.;
 ICON: VKFR_MistStalker;
@@ -31885,7 +31885,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: When using a dagger in each hand, you now fight in melee using the Vistani style, with both daggers held down point down. You gain +1 to hit and damage with daggers and throwing daggers.;
-ICON: VKFR_KinfeTraining;
+ICON: VKFR_KnifeTrainingIII;
 
 NAME: Fan of Knives;
 TREE: Vistani Knife Fighter;
@@ -32036,7 +32036,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: You are immune to energy drain. You gain +3 Physical Resistance Rating and Magical Resistance Rating.;
-ICON: None;
+ICON: VKFR_MistStalkerIV;
 
 MULTI: Vistani Style;
 MSLOT: 1;
