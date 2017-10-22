@@ -31873,8 +31873,8 @@ RANKS: 3;
 TYPE: Active;
 COST: 1;
 DESC1: Activate to gain a +10% Action Boost bonus to attack speed for 20 seconds.;
-DESC1: Activate to gain a +20% Action Boost bonus to attack speed for 20 seconds.;
-DESC1: Activate to gain a +30% Action Boost bonus to attack speed for 20 seconds.;
+DESC2: Activate to gain a +20% Action Boost bonus to attack speed for 20 seconds.;
+DESC3: Activate to gain a +30% Action Boost bonus to attack speed for 20 seconds.;
 ICON: VKFR_HasteBoost;
 
 NAME: Vistani Knife Training III;
