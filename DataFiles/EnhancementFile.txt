@@ -31850,7 +31850,7 @@ TREE: Vistani Knife Fighter;
 LEVEL: 2;
 SLOT: 2;
 RANKS: 1;
-TYPE: Passive;123nikki
+TYPE: Passive;
 COST: 2;
 DESC1: You gain +2 to Will saving throws. You gain +3 Physical Resistance Rating and Magical Resistance Rating.;
 ICON: VKFR_MistStalker;
