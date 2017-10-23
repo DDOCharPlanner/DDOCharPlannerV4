@@ -871,7 +871,7 @@ NAME: Aasimar Improved Recovery;
 TREE: Aasimar;
 LEVEL: 1;
 SLOT: 4;
-RANKS: 2;
+RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: +20 Positive healing Amplification.;
