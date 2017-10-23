@@ -637,7 +637,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-ICON: none;
+ICON: DomainofAir;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -648,7 +648,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Air Domain;
-ICON: none;
+ICON: DomainofAir;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -659,7 +659,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Air Domain;
-ICON: none;
+ICON: DomainofAir;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -670,7 +670,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Air Domain;
-ICON: none;
+ICON: DomainofAir;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -680,8 +680,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Animal Domain;
-ICON: none;
+ICON: DomainofAnimal;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -692,7 +691,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Animal Domain;
-ICON: none;
+ICON: DomainofAnimal;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -703,7 +702,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Animal Domain;
-ICON: none;
+ICON: DomainofAnimal;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -714,9 +713,8 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Animal Domain;
-ICON: none;
+ICON: DomainofAnimal;
 VERIFIED: ;
-
 
 PARENTHEADING: Domain;
 FEATNAME: Chaos Domain;
@@ -725,9 +723,8 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Chaos Domain;
 NEEDSONE: Alignment Neutral Good, Alignment Chaotic Good, Alignment True Neutral, Chaotic Neutral;
-ICON: none;
+ICON: DomainofChaos;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -738,7 +735,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Chaos Domain;
-ICON: none;
+ICON: DomainofChaos;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -749,7 +746,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Chaos Domain;
-ICON: none;
+ICON: DomainofChaos;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -760,7 +757,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Chaos Domain;
-ICON: none;
+ICON: DomainofChaos;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -770,8 +767,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Death Domain;
-ICON: none;
+ICON: DomainofDeath;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -782,7 +778,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Death Domain;
-ICON: none;
+ICON: DomainofDeath;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -793,7 +789,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Death Domain;
-ICON: none;
+ICON: DomainofDeath;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -804,7 +800,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Death Domain;
-ICON: none;
+ICON: DomainofDeath;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -814,8 +810,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Destruction Domain;
-ICON: none;
+ICON: DomainofDestruction;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -826,7 +821,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Destruction Domain;
-ICON: none;
+ICON: DomainofDestruction;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -837,7 +832,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Destruction Domain;
-ICON: none;
+ICON: DomainofDestruction;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -848,7 +843,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Destruction Domain;
-ICON: none;
+ICON: DomainofDestruction;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -858,8 +853,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Earth Domain;
-ICON: none;
+ICON: DomainofEarth;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -870,7 +864,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Earth Domain;
-ICON: none;
+ICON: DomainofEarth;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -881,7 +875,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Earth Domain;
-ICON: none;
+ICON: DomainofEarth;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -892,7 +886,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Earth Domain;
-ICON: none;
+ICON: DomainofEarth;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -902,8 +896,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Fire Domain;
-ICON: none;
+ICON: DomainofFire;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -914,7 +907,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Fire Domain;
-ICON: none;
+ICON: DomainofFire;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -925,7 +918,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Fire Domain;
-ICON: none;
+ICON: DomainofFire;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -936,7 +929,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Fire Domain;
-ICON: none;
+ICON: DomainofFire;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -946,8 +939,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Good Domain;
-ICON: none;
+ICON: DomainofGood;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -958,7 +950,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Good Domain;
-ICON: none;
+ICON: DomainofGood;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -969,7 +961,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Good Domain;
-ICON: none;
+ICON: DomainofGood;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -980,7 +972,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Good Domain;
-ICON: none;
+ICON: DomainofGood;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -990,8 +982,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Healing Domain;
-ICON: none;
+ICON: DomainofHealing;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1002,7 +993,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Healing Domain;
-ICON: none;
+ICON: DomainofHealing;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1013,7 +1004,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Healing Domain;
-ICON: none;
+ICON: DomainofHealing;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1024,7 +1015,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Healing Domain;
-ICON: none;
+ICON: DomainofHealing;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1034,8 +1025,7 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Knowledge Domain;
-ICON: none;
+ICON: DomainofKnowledge;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1046,7 +1036,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Knowledge Domain;
-ICON: none;
+ICON: DomainofKnowledge;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1057,7 +1047,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Knowledge Domain;
-ICON: none;
+ICON: DomainofKnowledge;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1068,7 +1058,7 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Knowledge Domain;
-ICON: none;
+ICON: DomainofKnowledge;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1078,9 +1068,8 @@ FEATTAG: Cleric Bonus;
 CLASSLIST: Cleric;
 LEVEL: 2;
 ACQUIRE: Train;
-NEEDSALL: Feat Domain: Law Domain;
 NEEDSONE: Alignment Neutral Good, Alignment Lawful Good, Alignment True Neutral, Lawful Neutral;
-ICON: none;
+ICON: DomainofLaw;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1091,7 +1080,7 @@ CLASSLIST: Cleric;
 LEVEL: 5;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Law Domain;
-ICON: none;
+ICON: DomainofLaw;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1102,7 +1091,7 @@ CLASSLIST: Cleric;
 LEVEL: 9;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Law Domain;
-ICON: none;
+ICON: DomainofLaw;
 VERIFIED: ;
 
 PARENTHEADING: Domain;
@@ -1113,9 +1102,352 @@ CLASSLIST: Cleric;
 LEVEL: 14;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Domain: Law Domain;
-ICON: none;
+ICON: DomainofLaw;
 VERIFIED: ;
 
+PARENTHEADING: Domain;
+FEATNAME: Luck Domain;
+FEATDESCRIPTION: Level 2: You gain +1 to your Fortitude, Reflex, and Will saving throws. This increases by +1 at 6th level, +1 at 12th level, and +1 at 18th level. \par Upon Turning: When you use Turn Undead your party gains a Divine bonus to saving throws equal to half your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofLuck;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Luck Domain;
+FEATDESCRIPTION: You gain Displacement as an SLA. 10 SP, 6 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Luck Domain;
+ICON: DomainofLuck;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Luck Domain;
+FEATDESCRIPTION: You add +2 to the DC of your spells.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Luck Domain;
+ICON: DomainofLuck;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Luck Domain;
+FEATDESCRIPTION: You no longer automatically fail your saving throws on a roll of 1.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Luck Domain;
+ICON: DomainofLuck;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Magic Domain;
+FEATDESCRIPTION: You gain +1 to the DC of your Evocation spells. This increases by +1 at 6th, 12th, and 18th level Cleric. \par Upon Turning: When you use Turn Undead your party gains a Divine bonus to Universal Spell Power equal to twice your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofMagic;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Magic Domain;
+FEATDESCRIPTION: You gain Chain Missiles as an SLA. (This shares a cooldown with the Archmage SLA.) 8 SP, 10 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Magic Domain;
+ICON: DomainofMagic;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Magic Domain;
+FEATDESCRIPTION: You gain a number of bonus Spell Points equal to your character level x 10.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Magic Domain;
+ICON: DomainofMagic;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Magic Domain;
+FEATDESCRIPTION: You gain points of Universal Spell Power equal to your twice your Cleric level.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Magic Domain;
+ICON: DomainofMagic;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Protection Domain;
+FEATDESCRIPTION: You gain +1 to AC, PRR, and MRR. This increases by +1 at 5th level, 10th level, 15th level, and 20th level. /par Upon Turning: When you use Turn Undead your party gains a Divine bonus to PRR and MRR equal to twice your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofProtection;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Protection Domain;
+FEATDESCRIPTION: You gain the Shield spell as a permanent effect on you.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Protection Domain;
+ICON: DomainofProtection;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Protection Domain;
+FEATDESCRIPTION: You gain Radiant Forcefield as an SLA. 10 SP, 180 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Protection Domain;
+ICON: DomainofProtection;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Protection Domain;
+FEATDESCRIPTION: Your Armor Class and Physical Resistance Rating are increased by your Cleric level.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Protection Domain;
+ICON: DomainofProtection;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Strength Domain;
+FEATDESCRIPTION: You gain +2 Strength. You passively restore all ability score damage to Strength every 6 seconds. \par Upon Turning: When you use Turn Undead your party gains a Divine bonus to Strength equal to half your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofStrength;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Strength Domain;
+FEATDESCRIPTION: Your Reflex saving throws are now based on Strength instead of Dexterity, if it is higher;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Strength Domain;
+ICON: DomainofStrength;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Strength Domain;
+FEATDESCRIPTION: You become immune to knock down effects;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Strength Domain;
+ICON: DomainofStrength;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Strength Domain;
+FEATDESCRIPTION: You always make your saving throw against Stun effects.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Strength Domain;
+ICON: DomainofStrength;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Sun Domain;
+FEATDESCRIPTION: You gain +2 to Fire (Combustion) and Light Spell Power (Radiance) per Cleric level. \par Upon Turning: When you use Turn Undead you and your allies gain True Sight. in addition, for 20 seconds enemies in the radius of the Turn Undead have their incorporeal miss chance negated and will be inflicted with 10% vulnerability to Light damage.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofSun;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Sun Domain;
+FEATDESCRIPTION: You gain Searing Light as an SLA. 4 SP, 4 second cooldown. Shares cooldown with Divine Disciple.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Sun Domain;
+ICON: DomainofSun;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Sun Domain;
+FEATDESCRIPTION: You gain Sunbeam as an SLA. 8 SP, 6 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Sun Domain;
+ICON: DomainofSun;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Sun Domain;
+FEATDESCRIPTION: You gain Sunburst as an SLA. 20 SP, 8 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Sun Domain;
+ICON: DomainofSun;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Trickery Domain;
+FEATDESCRIPTION: You gain +1 to the DC of your Enchantment spells. This increases by +1 at 6th, 12th, and 18th. \par Upon Turning: When you use Turn Undead your party gains points of Charisma equal to half your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofTrickery;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Trickery Domain;
+FEATDESCRIPTION: You gain Invisibility as an SLA. 4 SP, 4 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Trickery Domain;
+ICON: DomainofTrickery;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Trickery Domain;
+FEATDESCRIPTION: You gain Mind Fog as an SLA. 15 SP, 10 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Trickery Domain;
+ICON: DomainofTrickery;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Trickery Domain;
+FEATDESCRIPTION: You gain Charm Monster, Mass as an SLA. 40 SP, 20 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Trickery Domain;
+ICON: DomainofTrickery;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: War Domain;
+FEATDESCRIPTION: You gain +1 to hit and damage with melee and ranged weapons. This increases at 4th, 8th, 12th, 16th and 20th. \par Upon Turning: When you use Turn Undead your party gains a Divine bonus to Melee Power and Ranged Power equal to half your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofWar;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: War Domain;
+FEATDESCRIPTION: You gain proficiency in all martial and exotic weapons.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: War Domain;
+ICON: DomainofWar;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: War Domain;
+FEATDESCRIPTION: Your tactical DCs are increased by half your Cleric level.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: War Domain;
+ICON: DomainofWar;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: War Domain;
+FEATDESCRIPTION: You gain Holy Sword as an SLA. 10 SP, 6 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: War Domain;
+ICON: DomainofWar;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Water Domain;
+FEATDESCRIPTION: You gain Water Breathing. \par You gain +1 to Swimming and +2 Cold Spell Power (Glaciation) per Cleric level. \par Your cold spells will use Positive Spell Power if it is higher. Your healing spells will use Cold Spell Power if it is higher.\par Your Turn Undead works on Elementals. \par Upon Turning: When you use Turn Undead your party gains a bonus to Will saving throws equal to half you Cleric level, and points of Cold Resistance equal to twice your Cleric level for 20 seconds.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: DomainofWater;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Water Domain;
+FEATDESCRIPTION: You gain Solid Fog as an SLA. 10 SP, 12 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 5;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Water Domain;
+ICON: DomainofWater;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Water Domain;
+FEATDESCRIPTION: You gain Cone of Cold as an SLA. 10 SP, 8 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 9;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Water Domain;
+ICON: DomainofWater;
+VERIFIED: ;
+
+PARENTHEADING: Domain;
+FEATNAME: Water Domain;
+FEATDESCRIPTION: You gain Greater Creeping Cold as an SLA. 10 SP, 8 second cooldown.;
+FEATTAG: Cleric Bonus;
+CLASSLIST: Cleric;
+LEVEL: 14;
+ACQUIRE: Automatic;
+NEEDSALL: Feat Domain: Water Domain;
+ICON: DomainofWater;
+VERIFIED: ;
 
 FEATNAME: Draconic Ancestry: Black;
 FEATDESCRIPTION: Your ancestry is linked to Black Dragons of a bygone age. You gain a stacking bonus to Acid Energy Resistance equal to your Character Level. This choice also selects the element you will gain bonuses with in the Dragonborn Racial Enhancement Tree.;
@@ -1229,7 +1561,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Energy Absorption;
 FEATNAME: Acid;
-FEATDESCRIPTION: You gain Acid Resistance: 10.;
+FEATDESCRIPTION: You gain Acid Absorption: 10.;
 FEATTAG: Favored Soul Bonus;
 CLASSLIST: Favored Soul;
 LEVEL: 5;
@@ -1239,7 +1571,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Energy Absorption;
 FEATNAME: Cold;
-FEATDESCRIPTION: You gain Cold Resistance: 10.;
+FEATDESCRIPTION: You gain Cold Absorption: 10.;
 FEATTAG: Favored Soul Bonus;
 CLASSLIST: Favored Soul;
 LEVEL: 5;
@@ -1249,7 +1581,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Energy Absorption;
 FEATNAME: Electricity;
-FEATDESCRIPTION: You gain Electricity Resistance: 10.;
+FEATDESCRIPTION: You gain Electricity Absorption: 10.;
 FEATTAG: Favored Soul Bonus;
 CLASSLIST: Favored Soul;
 LEVEL: 5;
@@ -1259,7 +1591,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Energy Absorption;
 FEATNAME: Fire;
-FEATDESCRIPTION: You gain Fire Resistance: 10.;
+FEATDESCRIPTION: You gain Fire Absorption: 10.;
 FEATTAG: Favored Soul Bonus;
 CLASSLIST: Favored Soul;
 LEVEL: 5;
@@ -1269,7 +1601,7 @@ VERIFIED: 2012-06-26, in-game;
 
 PARENTHEADING: Energy Absorption;
 FEATNAME: Sonic;
-FEATDESCRIPTION: You gain Sonic Resistance: 10.;
+FEATDESCRIPTION: You gain Sonic Absorption: 10.;
 FEATTAG: Favored Soul Bonus;
 CLASSLIST: Favored Soul;
 LEVEL: 5;
@@ -2567,6 +2899,15 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 NEEDSALL: BAB 1, Ability Strength 13;
 ICON: ExoticWeaponProfIcon;
 VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Grace of Battle;
+FEATDESCRIPTION: Your faith allows you to use your Charisma bonus for to-hit and damage purposes with your deities' Favored Weapon if it is higher than your Strength bonus. This benefit only applies if your Favored Soul level is equal to or greater than half of your total Heroic Character level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: GraceofBattle;
+VERIFIED: ;
 
 PARENTHEADING: Exotic Weapon Proficiency;
 FEATNAME: Great Crossbow;
@@ -4500,6 +4841,15 @@ ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, T
 ICON: IronWillIcon;
 VERIFIED: 2012-06-26, in-game;
 
+FEATNAME: Knowledge of Battle;
+FEATDESCRIPTION: Your faith allows you to use your Wisdom bonus for to-hit and damage purposes with your deities' Favored Weapon if it is higher than your Strength bonus. This benefit only applies if your Favored Soul level is equal to or greater than half of your total Heroic Character level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: KnowledgeofBattle;
+VERIFIED: ;
+
 FEATNAME: Lay on Hands;
 FEATDESCRIPTION: Activate this paladin ability to apply a burst of holiness to your target, either healing an amount based on your paladin level times your Charisma bonus or dealing that much damage to an undead target.;
 CLASSLIST: Paladin;
@@ -5961,6 +6311,15 @@ NEEDSALL: Ability Dexterity 13, BAB 1;
 ICON: PrecisionIcon;
 VERIFIED: unknown;
 
+FEATNAME: Purity of Spirit;
+FEATDESCRIPTION: You gain 20 Spell Points per Favored Soul level, and 30 Spell Points per Epic level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 7;
+ACQUIRE: Train;
+ICON: PurityofSpirit;
+VERIFIED: ;
+
 FEATNAME: Quick Draw;
 FEATDESCRIPTION: You can draw and fire throwing weapons more rapidly.;
 FEATTAG: Fighter Bonus;
@@ -6845,6 +7204,15 @@ LEVEL: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: StealthyIcon;
 VERIFIED: 2012-06-26, in-game;
+
+FEATNAME: Stout of Heart;
+FEATDESCRIPTION: You gain 10 Hit Points per Favored Soul or Epic level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 7;
+ACQUIRE: Train;
+ICON: StoutofHeart;
+VERIFIED: ;
 
 FEATNAME: Stunning Blow;
 FEATDESCRIPTION: Tactical Melee Attack: Using this attack, you may stun the target for a few seconds. Some creatures may be immune to the stun effect. A successful Fortitude save negates this effect. (DC 10 + Str mod);

@@ -31,3 +31,39 @@ LOCK: ;
 *ICON: ;
 VERIFIED: ;
 
+FEATNAME: Grace of Battle;
+FEATDESCRIPTION: Your faith allows you to use your Charisma bonus for to-hit and damage purposes with your deities' Favored Weapon if it is higher than your Strength bonus. This benefit only applies if your Favored Soul level is equal to or greater than half of your total Heroic Character level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: None;
+VERIFIED: ;
+
+FEATNAME: Knowledge of Battle;
+FEATDESCRIPTION: Your faith allows you to use your Wisdom bonus for to-hit and damage purposes with your deities' Favored Weapon if it is higher than your Strength bonus. This benefit only applies if your Favored Soul level is equal to or greater than half of your total Heroic Character level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 2;
+ACQUIRE: Train;
+ICON: None;
+VERIFIED: ;
+
+FEATNAME: Stout of Heart;
+FEATDESCRIPTION: You gain 10 Hit Points per Favored Soul or Epic level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 7;
+ACQUIRE: Train;
+ICON: None;
+VERIFIED: ;
+
+FEATNAME: Purity of Heart;
+FEATDESCRIPTION: You gain 20 Spell Points per Favored Soul level, and 30 Spell Points per Epic level.;
+FEATTAG: Favored Soul Bonus;
+CLASSLIST: Favored Soul;
+LEVEL: 7;
+ACQUIRE: Train;
+ICON: None;
+VERIFIED: ;
+
