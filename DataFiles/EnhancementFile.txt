@@ -244,7 +244,7 @@ NAME: Divine Purpose;
 DESC: Choose Divine Purpose;
 ICON: ASMR_DivinePurpose;
 
-NAME: Divine Resolve:
+NAME: Divine Resolve;
 DESC: Choose Divine Resolve;
 ICON: ASMR_DivineResolve;
 
@@ -926,7 +926,7 @@ DESC1: You sprout ethereal wings and bear glowing eyes, the marks of the Protect
 REQ1: Feat Aasimar: Bond: Protector;
 ICON: ASMR_DivinePurposeProtector;
 
-MULTI: Divine Resolve:
+MULTI: Divine Resolve;
 MSLOT: 1;
 NAME: Divine Resolve: Fallen;
 TREE: Aasimar;
@@ -941,7 +941,7 @@ DESC3: +3 Strengthe while your Divine Purpose is active;
 REQ1: Feat Aasimar: Bond: Fallen;
 ICON: ASMR_DivineResolveFallen;
 
-MULTI: Divine Resolve:
+MULTI: Divine Resolve;
 MSLOT: 2;
 NAME: Divine Resolve: Protector;
 TREE: Aasimar;
@@ -1086,10 +1086,10 @@ ICON: ASMR_AasimarImprovedRecovery;
 
 
 
-[Aasimar Scourge] **********************************************************
+[Scourge] **********************************************************
 
 NAME: Stronger Bonds;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 0;
 RANKS: 1;
@@ -1101,7 +1101,7 @@ ICON: ASSC_StrongerBonds;
 MULTI: Aasimar Ability;
 MSLOT: 1;
 NAME: Charisma;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
@@ -1117,7 +1117,7 @@ ICON: ASSC_Charisma;
 MULTI: Aasimar Ability;
 MSLOT: 2;
 NAME: Strength;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
@@ -1133,7 +1133,7 @@ ICON: ASSC_Strength;
 MULTI: Aasimar Ability;
 MSLOT: 3;
 NAME: Wisdom;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
@@ -1147,7 +1147,7 @@ MODVALUE1: 1;
 ICON: ASSC_Wisdom;
 
 NAME: Stronger Bonds;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 2;
 RANKS: 1;
@@ -1160,7 +1160,7 @@ ICON: ASSC_StrongerBonds2;
 MULTI: Aasimar Ability;
 MSLOT: 1;
 NAME: Charisma;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 3;
 RANKS: 1;
@@ -1176,7 +1176,7 @@ ICON: ASSC_Charisma;
 MULTI: Aasimar Ability;
 MSLOT: 2;
 NAME: Strength;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 3;
 RANKS: 1;
@@ -1192,7 +1192,7 @@ ICON: ASSC_Strength;
 MULTI: Aasimar Ability;
 MSLOT: 3;
 NAME: Wisdom;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 3;
 RANKS: 1;
@@ -1206,7 +1206,7 @@ MODVALUE1: 1;
 ICON: ASSC_Wisdom;
 
 NAME: Stronger Bonds;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 0;
 SLOT: 4;
 RANKS: 1;
@@ -1217,7 +1217,7 @@ REQ1: EHM: Aasimar Ability [0-3-1];
 ICON: ASSC_StrongerBonds3;
 
 NAME: Scourge Weapons;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 1;
 SLOT: 0;
 RANKS: 1;
@@ -1227,7 +1227,7 @@ DESC1: You gain proficiency with Clubs, Light Maces, Heavy Maces, and Morningsta
 ICON: ASSC_ScourgeWeapons;
 
 NAME: Counsel;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 1;
 SLOT: 1;
 RANKS: 3;
@@ -1248,7 +1248,7 @@ MODVALUE3: 3, 3, 3;
 ICON: ASSC_Counsel;
 
 NAME: True Resilience: Scourge;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 1;
 SLOT: 2;
 RANKS: 1;
@@ -1261,7 +1261,7 @@ MODVALUE1: 1;
 ICON: ASSC_TrueResienceScourge;
 
 NAME: Bold;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 1;
 SLOT: 3;
 RANKS: 1;
@@ -1273,7 +1273,7 @@ DESC3: You overcome fear Quickly. Fear and shaken effects are removed form you a
 ICON: ASSC_Bold;
 
 NAME: Aasimar Improved Recovery;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 1;
 SLOT: 4;
 RANKS: 1;
@@ -1283,7 +1283,7 @@ DESC1: +20 Positive healing Amplification.;
 ICON: ASSC_AasimarImprovedRecovery;
 
 NAME: Improved Scourge Weapons;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 2;
 SLOT: 0;
 RANKS: 1;
@@ -1294,7 +1294,7 @@ REQ1: EH: Scourge Weapons [1-0-1];
 ICON: ASSC_ImprovedScourgeWeapons;
 
 NAME: Arcanum;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 2;
 SLOT: 1;
 RANKS: 3;
@@ -1306,7 +1306,7 @@ DESC3: +100 spell points and +3 spell penetration.;
 ICON: ASSC_Arcanum;
 
 NAME: Divine Purpose: Scourge;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 2;
 SLOT: 2;
 RANKS: 1;
@@ -1317,7 +1317,7 @@ REQ1: Feat Aasimar: Bond: Fallen;
 ICON: ASSC_DivinePurposeScourge;
 
 NAME: Divine Resolve: Scourge;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 2;
 SLOT: 3;
 RANKS: 3;
@@ -1330,7 +1330,7 @@ REQ1: Feat Aasimar: Bond: Fallen;
 ICON: ASSC_DivineResolveScourge;
 
 NAME: Greater Scourge Weapons;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 3;
 SLOT: 0;
 RANKS: 1;
@@ -1341,7 +1341,7 @@ REQ1: EH: Improved Scourge Weapons [2-0-1];
 ICON: ASSC_GreaterScourgeWeapons;
 
 NAME: Strike Down the Dead;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 3;
 SLOT: 1;
 RANKS: 3;
@@ -1353,7 +1353,7 @@ DESC3: +3[w], single-target attack.. 15 second cooldown. On hit: Deals 1d4+4 per
 ICON: ASSC_StrikeDowntheDead;
 
 NAME: Divine Charges;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 3;
 SLOT: 2;
 RANKS: 3;
@@ -1365,7 +1365,7 @@ DESC3: +3 Divine Charge, Allowing you to use your Divine Purpose more times per 
 ICON: ASSC_DivineCharges;
 
 NAME: Blessings;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 3;
 SLOT: 3;
 RANKS: 1;
@@ -1377,7 +1377,7 @@ DESC3: +30 Positive Spell Power;
 ICON: ASSC_Blessings;
 
 NAME: Aasimar Improved Recovery;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 3;
 SLOT: 4;
 RANKS: 1;
@@ -1388,17 +1388,17 @@ REQ1: EH: Aasimar Improved Recovery [1-4-1];
 ICON: ASSC_AasimarImprovedRecovery;
 
 NAME: Destroyer of Dead;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 4;
 SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Clubs, Light Maces, Heavy Maces, and Morningstars you wield gain a +1 Sacred Bonus to Critical Multiplier.
+DESC1: Clubs, Light Maces, Heavy Maces, and Morningstars you wield gain a +1 Sacred Bonus to Critical Multiplier.;
 ICON: ASSC_DestroyerofDead;
 
 NAME: Divine Form;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 4;
 SLOT: 2;
 RANKS: 1;
@@ -1408,7 +1408,7 @@ DESC1: Form Toggle: Costs 30sp to enable. All bonuses from this skill are remove
 ICON: ASSC_DivineForm;
 
 NAME: Aasimar Improved Recovery;
-TREE: Aasimar Scourge;
+TREE: Scourge;
 LEVEL: 4;
 SLOT: 4;
 RANKS: 1;
@@ -1732,7 +1732,7 @@ COST: 1;
 DESC1: Cooldown: 30 seconds\par +20 Melee and Ranged Power\par +30 Action Boost bonus to Universal Spell Power for 20 seconds.\par +4 Action Boost bonus to all Saving Throws for 20 seconds.\par +10 Action Boost bonus to Armor Class and Physical Resistance Rating for 20 seconds.;
 ICON: BDFG_PoweroftheForge;
 
-[Deep Gnome] **** (Updated: 02-11-2016) ********************************************************
+[Deep Gnome] **** (Update 02-11-2016) ********************************************************
  
 NAME: Wariness;
 TREE: Deep Gnome;
@@ -2980,7 +2980,7 @@ DESC1: +1 to hit and damage with Rapiers, Shortswords, and Shuriken.;
 REQ1: EH: Xen'drik Weapon Training [3-3-1];
 ICON: DROW_XendrikWeaponTraining;
 
-[Dwarf] **** (Updated: 08-09-2012) ***********************************************************
+[Dwarf] **** (Update 08-09-2012) ***********************************************************
 
 NAME: Dwarven Toughness;
 TREE: Dwarf;
@@ -3745,7 +3745,7 @@ DESC1: +3% Doublestrike\par +3% Doubleshot\par +3% Dodge\par\par Doublestrike: Y
 REQ1: EHM: Elven Weapon Training [4-3-1];
 ICON: ELF_Skill;
 
-[Gnome] **** (Updated: 02-11-2016) ********************************************************
+[Gnome] **** (Update 02-11-2016) ********************************************************
  
 NAME: Gnomish Perserverance;
 TREE: Gnome;
@@ -4016,8 +4016,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +2 to hit and damage with light hammers, light maces, light picks, shortswords, shortbows, light crossbows, and light repeating crossbows.
-;
+DESC1: +2 to hit and damage with light hammers, light maces, light picks, shortswords, shortbows, light crossbows, and light repeating crossbows.;
 REQ1: EH: Gnomish Weapon Training [2-4-1];
 ICON: GNME_GnomishWeaponTrainingIII;
 
@@ -4052,12 +4051,11 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +2 to hit and damage with light hammers, light maces, light picks, shortswords, shortbows, light crossbows, and light repeating crossbows. +1 Competence Bonus to Critical Threat Range with the same weapons.
-;
+DESC1: +2 to hit and damage with light hammers, light maces, light picks, shortswords, shortbows, light crossbows, and light repeating crossbows. +1 Competence Bonus to Critical Threat Range with the same weapons.;
 REQ1: EH: Gnomish Weapon Training [3-4-1];
 ICON: GNME_GnomishWeaponTrainingIIII;
 
-[Halfling] **** (Updated: 08-09-2012) ********************************************************
+[Halfling] **** (Update 08-09-2012) ********************************************************
  
 NAME: Halfling Luck;
 TREE: Halfling;
@@ -7859,7 +7857,7 @@ DESC1: Cooldown: 3 seconds\par Spell Like Ability: Cast the Greater Heroism. (Im
 REQ1: EH: Heroism [3-4-1];
 ICON: HUMN_GreaterHeroism;
 
-[Morninglord] **** (Updated: 30-08-2013) ********************************************************
+[Morninglord] **** (Update 30-08-2013) ********************************************************
 
 NAME: Elven Accuracy;
 TREE: Morninglord;
@@ -8178,7 +8176,7 @@ DESC1: +3% doublestrike, +3% doubleshot, +3% dodge, and bypass 3% dodge.;
 REQ1: EH: Morninglord Weapon Training [4-3-1];
 ICON: MNLD_Skill;
 
-[Purple Dragon Knight] **** (Updated: 30-08-2013) ********************************************************
+[Purple Dragon Knight] **** (Update 30-08-2013) ********************************************************
 
 MULTI: Human Versatility;
 MSLOT: 1;
@@ -8915,17 +8913,17 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: Your presence is reassuring to your allies. All nearby allies get +2 unique bonus to their Will saving throws.;
-REQ1: EH: Purple Dragon Focus [2-0-1]
+REQ1: EH: Purple Dragon Focus [2-0-1];
 MOD1: Save;
 MODNAME1: Will;
 MODVALUE1: 2;
 DESC2: Your presence is reassuring to your allies. All nearby allies get +2 unique bonus to their Will and Fortitude saving throws.;
-REQ2: EH: Purple Dragon Focus [2-0-2]
+REQ2: EH: Purple Dragon Focus [2-0-2];
 MOD1: Save, Save;
 MODNAME1: Will, Fortitude;
 MODVALUE1: 2, 2;
 DESC3: Your presence is reassuring to your allies. All nearby allies get +2 unique bonus to their Will, Fortitude and Reflex saving throws.;
-REQ3: EH: Purple Dragon Focus [2-0-3]
+REQ3: EH: Purple Dragon Focus [2-0-3];
 MOD1: Save, Save, Save;
 MODNAME1: Will, Fortitude, Reflex;
 MODVALUE1: 6, 6, 6;
@@ -9423,7 +9421,7 @@ DESC1: Cooldown: 3 seconds\par Spell Like Ability: Cast the Greater Heroism. (Im
 REQ1: EH: Heroism [3-4-1];
 ICON: PDKN_GreaterHeroism;
 
-[Shadar Kai] **** (Updated: 30-08-2013) ********************************************************
+[Shadar Kai] **** (Update 30-08-2013) ********************************************************
 
 NAME: Shadar Kai Grit;
 TREE: Shadar Kai;
@@ -10777,7 +10775,7 @@ COST: 2;
 DESC1: You have extensively practiced with Cold magic, granting an additional +15 Cold Spell Power.;
 ICON: AIRS_PowerofFrost;
 
-[Angel of Vengeance (Fvs)] **** (Updated: 31-08-2013) ********************************************************
+[Angel of Vengeance (Fvs)] **** (Update 31-08-2013) ********************************************************
 
 NAME: Font of Power;
 TREE: Angel of Vengeance (Fvs);
@@ -11426,7 +11424,7 @@ DESC3: The maximum caster level of your Fire, Force, Light, and Physical damage 
 REQ3: EH: Intense Faith [4-3-3];
 ICON: AOFV_ZealousFaith;
 
-[Arcane Archer (Elf)] *************************************************[Updated: 25/10/2015 (Oct 25)]
+[Arcane Archer (Elf)] *************************************************[Update 25/10/2015 (Oct 25)]
 
 NAME: Arcane Archer;
 TREE: Arcane Archer (Elf);
@@ -12067,7 +12065,7 @@ COST: 2;
 DESC1: Bows you wield gain an additional +2 Enhancement bonus. This is considered a Magic Weapon Effect.;
 ICON: AAEL_Runebow;
 
-[Arcane Archer (Rgr)] *********[Updated: 2/12/2016]***************************************
+[Arcane Archer (Rgr)] *********[Update 2/12/2016]***************************************
 
 NAME: Arcane Archer;
 TREE: Arcane Archer (Rgr);
@@ -12709,7 +12707,7 @@ COST: 2;
 DESC1: Bows you wield gain an additional +2 Enhancement bonus. This is considered a Magic Weapon Effect.;
 ICON: AARG_Runebow;
 
-[Arcanotechnician (Art)] ****[UPDATED: 2-12-2016]******************************************
+[Arcanotechnician (Art)] ****[Update 2-12-2016]******************************************
 
 NAME: Arcanotechnician;
 TREE: Arcanotechnician (Art);
@@ -14275,7 +14273,7 @@ REQ1: EHM: School Mastery II [5-2-1];
 LOCK1: EH: Primary Spell Focus: Transmutation [5-2-1];
 ICON: ARCM_PrimarySpellFocusTransmutation;
 
-[Assassin (Rog)] ***(Updated: 28-04-2015)***********************************************
+[Assassin (Rog)] ***(Update 28-04-2015)***********************************************
 
 NAME: Knife in the Darkness;
 TREE: Assassin (Rog);
@@ -20393,7 +20391,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You can use your Intelligence modifier for damage with Melee and Missile weapons.
+DESC1: You can use your Intelligence modifier for damage with Melee and Missile weapons.;
 \par \par Note: This does not function while unarmed, on shields.;
 ICON: HPAG_StrategicCombatII;
 
@@ -22821,7 +22819,7 @@ COST: 2;
 DESC1: You are immune to Energy Drain.;
 ICON: KNCH_SealedLife;
 
-[Mechanic (Rog)] **** (Updated: 28-04-2015) ********************************************************
+[Mechanic (Rog)] **** (Update 28-04-2015) ********************************************************
 
 NAME: Arbalester;
 TREE: Mechanic (Rog);
@@ -22884,7 +22882,7 @@ SLOT: 5;
 RANKS: 1;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 3 minutes \par Passive: +2 Dexterity and Intelligence \par \par Action Boost: You drink a potion that you've been saving for a special occasion. For the next 60 seconds, you gain +1d6 to all ability scores, and +2d6 to attack and damage. You heal for 10d3+30 and gain +10 dodge (and dodge cap) for 10 seconds. Healing scales with Ranged Power. \par \par "A little something of your own creation. Potent stuff, drink sparingly."
+DESC1: Cooldown: 3 minutes \par Passive: +2 Dexterity and Intelligence \par \par Action Boost: You drink a potion that you've been saving for a special occasion. For the next 60 seconds, you gain +1d6 to all ability scores, and +2d6 to attack and damage. You heal for 10d3+30 and gain +10 dodge (and dodge cap) for 10 seconds. Healing scales with Ranged Power. \par \par "A little something of your own creation. Potent stuff, drink sparingly.";
 REQ1: EH: Expert Builder [0-4-1];
 MOD1: Ability, Ability;
 MODNAME1: Dexterity, Intelligence;
@@ -23252,7 +23250,7 @@ COST: 2;
 DESC1: +10 Ranged Power \par \par +10% Ranged Alacrity with repeating crossbows and thrown weapons. \par \par +30% Ranged Alacrity with non-repeating crossbows.;
 ICON: MECH_MechanicalReloader;
 
-[Nature's Warrior (Drd)] **(Update: 24-09-2013)*******************************************
+[Nature's Warrior (Drd)] **(Update 24-09-2013)*******************************************
 
 NAME: Nature's Warrior;
 TREE: Nature's Warrior (Drd);
@@ -24225,7 +24223,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 50 Ki\par Cooldown: 15 seconds\par Dark Ki Melee Attack: You strike a living opponent down with twisted Ki, dealing 500 additional negative energy damage. Your opponent takes half damage on a successful Fortitude Save (DC = 10 + Wisdom Modifier + your Monk level0) Scales with 200% Melee Power;
-REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness
+REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness;
 ICON: none;
 
 NAME: Deadly Striker;
@@ -24721,7 +24719,7 @@ MODNAME3: Hit Points;
 MODVALUE3: 30;
 ICON: OCSL_OneSpirit;
 
-[Pale Master (Wiz)] **** (Updated: 01-09-2013) ********************************************************
+[Pale Master (Wiz)] **** (Update 01-09-2013) ********************************************************
 
 NAME: Dark Reaping;
 TREE: Pale Master (Wiz);
@@ -25144,7 +25142,7 @@ COST: 2;
 DESC1: Your Undead Shrouds gain the following additional benefits: \par \par While in Shroud of the Zombie, you gain +2 Constitution, 15 Physical Resistance Rating, and your Damage Reduction increases to 10/Slashing \par \par While in Shroud of the Vampire, you gain +2 Dexterity, your vulnerability to Light damage is reduced to 200% (from 300%), and your melee and unarmed attacks heal you for 1 point of Negative Energy damage. \par \par While in Shroud of the Wraith, you gain +2 Dexterity and your Incorporeal Miss Chance increases from 25% to 35%. \par \par While in Shroud of the Lich, you gain additional +2 Intelligence and +10 to Negative Energy Spellpower.;
 ICON: PLMS_ImprovedShrouding;
 
-[Radiant Servant (Clr)] **** (Updated: 01-09-2013) *************************************************
+[Radiant Servant (Clr)] **** (Update 01-09-2013) *************************************************
 
 NAME: Healing Domain;
 TREE: Radiant Servant (Clr);
@@ -26577,7 +26575,7 @@ DESC3: Sacred Defense: While wearing medium or heavy armor or wielding a shield 
 REQ3: EHM: Greater Sacred Defense [4-3-3];
 ICON: SCDF_TenaciousDefense;
 
-[Season's Herald (Drd)] **(Update: 24-09-2013)********************************************
+[Season's Herald (Drd)] **(Update 24-09-2013)********************************************
 
 NAME: Seasoned;
 TREE: Season's Herald (Drd);
@@ -28052,8 +28050,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cooldown: 8 Seconds \par Activation Cost: 40 Spellpoints \par You can cast the spell Finger of Death as a Spell-Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. \par \par Slays one living enemy. \par D&D Dice: You can slay any one living creature within range. The target is entitled to a Fortitude saving throw to survive the attack. If the save is successful, the creature instead takes 4d2+4 untyped damage per caster level (Maximum caster level 25 or 100d2+100) damage.
-The subject might die from damage even if it succeeds on its saving throw. \par Finger of Death is a death effect, and as such a Deathblock item, or Deathward spell will provide immunity. \par \par Metamagics: Quicken, Heighten, Enlarge \par Spell Resistance: Yes;
+DESC1: Cooldown: 8 Seconds \par Activation Cost: 40 Spellpoints \par You can cast the spell Finger of Death as a Spell-Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. \par \par Slays one living enemy. \par D&D Dice- You can slay any one living creature within range. The target is entitled to a Fortitude saving throw to survive the attack. If the save is successful, the creature instead takes 4d2+4 untyped damage per caster level (Maximum caster level 25 or 100d2+100) damage. The subject might die from damage even if it succeeds on its saving throw. \par Finger of Death is a death effect, and as such a Deathblock item, or Deathward spell will provide immunity. \par \par Metamagics: Quicken, Heighten, Enlarge \par Spell Resistance: Yes;
 ICON: SLEA_FingerofDeath;
 
 
@@ -28478,7 +28475,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 10 seconds\par Expend a use of Bardic Music to grant +1 morale bonus to caster level for spells cast by you and all nearby allies for 24 seconds plus 6 seconds per bard level.;
-REQ1: EH: Spell Song Trance [3-3-1]
+REQ1: EH: Spell Song Trance [3-3-1];
 ICON: SPSG_SongofArcaneMight;
 
 NAME: Charisma;
@@ -29717,7 +29714,7 @@ TREE: Swashbuckler (Brd);
 LEVEL: 4;
 SLOT: 1;
 RANKS: 1;
-TYPE: Active
+TYPE: Active;
 COST: 1;
 DESC1: While Swashbuckling and wielding nothing in your off hand, activate to deal 1 Bludgeon damage. Damaged enemies can't cast spells for 6 seconds and are stunned for three seconds (Perform + d20 saves for the Stun). 18 second cooldown. Cost 10 spell points.;
 REQ1: EH: Dashing Scoundrel [3-1-1];
@@ -30765,7 +30762,7 @@ DESC2: Cooldown: 15 seconds\par Melee Dual Wielding Attack: Deals +3(W) damage. 
 DESC3: Cooldown: 15 seconds\par Melee Dual Wielding Attack: Deals +5(W) damage. Your basic attacks when dual wielding strike four targets per swing instead of one for 6 seconds.;
 ICON: TMPS_DanceofDeath;
 
-[Thief Acrobat (Rog)] **** (Updated: 28-04-2015)*****************************************
+[Thief Acrobat (Rog)] **** (Update 28-04-2015)*****************************************
 
 NAME: Staff Control;
 TREE: Thief Acrobat (Rog);
@@ -31015,7 +31012,7 @@ REQ1: EH: Quick Strike [2-3-1];
 DESC2: Cooldown: 25 seconds\par Melee Quarterstaff Trip Cleave Attack: Deals +3[W] damage to all nearby enemies and trips them. (Balance DC 14 + Rogue Level + Dexterity Modifier + Trip bonuses Negates trip).;
 REQ2: EH: Quick Strike [2-3-2];
 DESC3: Cooldown: 20 seconds\par Melee Quarterstaff Trip Cleave Attack: Deals +5[W] damage to all nearby enemies and trips them. (Balance DC 18 + Rogue Level + Dexterity Modifier + Trip bonuses Negates trip).;
-REQ3: EH: Quick Strike [2-3-3]
+REQ3: EH: Quick Strike [2-3-3];
 ICON: THAC_SweepingStrikes;
 
 MULTI: Strength or Dexterity;
@@ -31168,7 +31165,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 15 seconds \par Quarterstaff Action: Use your quarterstaff to propel yourself forward at great speed. Requires you to have a quarterstaff equipped.;
-REQ1: EH: Staff Lunge [4-3-1]
+REQ1: EH: Staff Lunge [4-3-1];
 
 ICON: THAC_Vault;
 
@@ -32922,7 +32919,7 @@ DESC2: Cooldown: 2 seconds \par Target ally or self heals 10,000 HP. Removes abi
 DESC3: Cooldown: 2 seconds \par Target ally or self heals 10,000 HP. Removes ability score damage, death penalty effects, negative levels, and the conditions blinded, dazed, deafened, diseased, exhausted, fatigued, feebleminded, insanity, nauseated, poisoned, and stunned. 3 uses per rest;
 ICON: WRCH_KinglyRecovery;
 
-[Warpriest (Clr)] **** (Updated: 17-09-2013) *************************************************
+[Warpriest (Clr)] **** (Update 17-09-2013) *************************************************
 
 NAME: Smite Foe;
 TREE: Warpriest (Clr);
@@ -33349,7 +33346,7 @@ COST: 2;
 DESC1: Activation Cost: 30 Spell Points\par Cooldown: 2 minutes\par Active: Divine Intervention: Ward your target against fatal damage. Hit point damage cannot lower a warded ally's hit point total below -9. When a warded ally is incapacitated, this effect heals the target after a few seconds for 10 to 39 hit points and then fades.;
 ICON: WPCL_DivineIntervention;
 
-[Warpriest (Fvs)] **** (Updated: 17-09-2013) *************************************************
+[Warpriest (Fvs)] **** (Update 17-09-2013) *************************************************
 
 NAME: Smite Foe;
 TREE: Warpriest (Fvs);

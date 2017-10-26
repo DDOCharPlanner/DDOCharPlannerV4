@@ -2241,7 +2241,7 @@ void DataClass::InitializeEnhancementTrees()
 	Arrows = "1-0-U-1, 1-4-U-2, 2-0-U-1, 3-4-U-1";
 	EnhancementTreeData[ENHT_AASIMAR].InitializeEnhancementTree(ENHT_AASIMAR, ENHTT_RACE, AASIMAR, CLASSNONE, "Aasimar", true, "ElfBackground", Arrows);
 	Arrows = "1-0-U-1, 1-4-U-2, 2-0-U-1, 3-4-U-1";
-	EnhancementTreeData[ENHT_AASIMARSCOURGE].InitializeEnhancementTree(ENHT_AASIMARSCOURGE, ENHTT_RACE, AASIMARSCOURGE, CLASSNONE, "Aasimar Scourge", true, "ElfBackground", Arrows);
+	EnhancementTreeData[ENHT_SCOURGE].InitializeEnhancementTree(ENHT_SCOURGE, ENHTT_RACE, SCOURGE, CLASSNONE, "Scourge", true, "ElfBackground", Arrows);
 
 	//Class Trees (33) sorted by Class
 	//Artificer
@@ -2347,9 +2347,9 @@ void DataClass::InitializeEnhancementTrees()
 	Arrows = "1-3-U-1, 2-3-U-1, 3-1-U-1, 3-3-U-1, 3-4-U-1, 4-1-U-1, 4-3-U-1";
 	EnhancementTreeData[ENHT_ARCANE_ARCHER_ELF].InitializeEnhancementTree(ENHT_ARCANE_ARCHER_ELF, ENHTT_SPECIAL, ELF, CLASSNONE, "Arcane Archer (Elf)", true, "ElfBackground", Arrows);
 	Arrows = "";
-	EnhancementTreeData[ENHT_HARPER_AGENT].InitializeEnhancementTree(ENHT_HARPER_AGENT, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Harper Agent", true, "ElfBackground", Arrows);
+	EnhancementTreeData[ENHT_HARPER_AGENT].InitializeEnhancementTree(ENHT_HARPER_AGENT, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Harper Agent", true, "SpecialBackground", Arrows);
 	Arrows = "1-2-U-1, 2-0-U-1, 2-2-U-1, 3-0-U-1, 3-2-U-1, 4-0-U-1, 4-2-U-1";
-	EnhancementTreeData[ENHT_VISTANIKNIFEFIGHTER].InitializeEnhancementTree(ENHT_VISTANIKNIFEFIGHTER, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Vistani Knife Fighter", true, "ElfBackground", Arrows);
+	EnhancementTreeData[ENHT_VISTANIKNIFEFIGHTER].InitializeEnhancementTree(ENHT_VISTANIKNIFEFIGHTER, ENHTT_SPECIAL, RACENONE, CLASSNONE, "Vistani Knife Fighter", true, "SpecialBackground", Arrows);
 }
 
 //---------------------------------------------------------------------------

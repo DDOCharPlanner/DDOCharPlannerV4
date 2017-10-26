@@ -4037,8 +4037,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDragonbornOff", "Races", &FemaleDragonbornOff);
 	LoadBitmap("MaleAasimarOff", "Races", &MaleAasimarOff);
 	LoadBitmap("FemaleAasimarOff", "Races", &FemaleAasimarOff);
-	LoadBitmap("MaleAasimarScourgeOff", "Races", &MaleAasimarScourgeOff);
-	LoadBitmap("FemaleAasimarScourgeOff", "Races", &FemaleAasimarScourgeOff);
+	LoadBitmap("MaleScourgeOff", "Races", &MaleScourgeOff);
+	LoadBitmap("FemaleScourgeOff", "Races", &FemaleScourgeOff);
 
     LoadBitmap("MaleHumanOn", "Races", &MaleHumanOn);
     LoadBitmap("FemaleHumanOn", "Races", &FemaleHumanOn);
@@ -4072,8 +4072,8 @@ void MainScreenClass::LoadGraphics(HWND Parent)
 	LoadBitmap("FemaleDragonbornOn", "Races", &FemaleDragonbornOn);
 	LoadBitmap("MaleAasimarOn", "Races", &MaleAasimarOn);
 	LoadBitmap("FemaleAasimarOn", "Races", &FemaleAasimarOn);
-	LoadBitmap("MaleAasimarScourgeOn", "Races", &MaleAasimarScourgeOn);
-	LoadBitmap("FemaleAasimarScourgeOn", "Races", &FemaleAasimarScourgeOn);
+	LoadBitmap("MaleScourgeOn", "Races", &MaleScourgeOn);
+	LoadBitmap("FemaleScourgeOn", "Races", &FemaleScourgeOn);
 
 
 	//male/female buttons
@@ -4244,10 +4244,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleAasimarOff.Mask);
 	DeleteObject(FemaleAasimarOff.Graphic);
 	DeleteObject(FemaleAasimarOff.Mask);
-	DeleteObject(MaleAasimarScourgeOff.Graphic);
-	DeleteObject(MaleAasimarScourgeOff.Mask);
-	DeleteObject(FemaleAasimarScourgeOff.Graphic);
-	DeleteObject(FemaleAasimarScourgeOff.Mask);
+	DeleteObject(MaleScourgeOff.Graphic);
+	DeleteObject(MaleScourgeOff.Mask);
+	DeleteObject(FemaleScourgeOff.Graphic);
+	DeleteObject(FemaleScourgeOff.Mask);
 
 
 
@@ -4315,10 +4315,10 @@ void MainScreenClass::DeleteGraphics()
 	DeleteObject(MaleAasimarOn.Mask);
 	DeleteObject(FemaleAasimarOn.Graphic);
 	DeleteObject(FemaleAasimarOn.Mask);
-	DeleteObject(MaleAasimarScourgeOn.Graphic);
-	DeleteObject(MaleAasimarScourgeOn.Mask);
-	DeleteObject(FemaleAasimarScourgeOn.Graphic);
-	DeleteObject(FemaleAasimarScourgeOn.Mask);
+	DeleteObject(MaleScourgeOn.Graphic);
+	DeleteObject(MaleScourgeOn.Mask);
+	DeleteObject(FemaleScourgeOn.Graphic);
+	DeleteObject(FemaleScourgeOn.Mask);
 
     DeleteObject(MaleOn.Graphic);
     DeleteObject(MaleOn.Mask);
@@ -4971,23 +4971,23 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 						DrawGraphic(hdc, &MaleDeepGnomeOff, X, Y, Width, Height);
 					}
-					if (CurrentRace == AASIMARSCOURGE)
+					if (CurrentRace == SCOURGE)
 					{
-						Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOn", MAINWINDOW);
+						Graphic = UIManager->GetGraphicData("MaleScourgeOn", MAINWINDOW);
 						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-						DrawGraphic(hdc, &MaleAasimarScourgeOn, X, Y, Width, Height);
+						DrawGraphic(hdc, &MaleScourgeOn, X, Y, Width, Height);
 					}
 					else
 					{
-						Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOff", MAINWINDOW);
+						Graphic = UIManager->GetGraphicData("MaleScourgeOff", MAINWINDOW);
 						X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 						Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 						Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 						Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-						DrawGraphic(hdc, &MaleAasimarScourgeOff, X, Y, Width, Height);
+						DrawGraphic(hdc, &MaleScourgeOff, X, Y, Width, Height);
 					}
 
 				}
@@ -5299,23 +5299,23 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 							DrawGraphic(hdc, &FemaleDeepGnomeOff, X, Y, Width, Height);
 						}
-						if (CurrentRace == AASIMARSCOURGE)
+						if (CurrentRace == SCOURGE)
 						{
-							Graphic = UIManager->GetGraphicData("FemaleAasimarScourgeOn", MAINWINDOW);
+							Graphic = UIManager->GetGraphicData("FemaleScourgeOn", MAINWINDOW);
 							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-							DrawGraphic(hdc, &FemaleAasimarScourgeOn, X, Y, Width, Height);
+							DrawGraphic(hdc, &FemaleScourgeOn, X, Y, Width, Height);
 						}
 						else
 						{
-							Graphic = UIManager->GetGraphicData("FemaleAasimarScourgeOff", MAINWINDOW);
+							Graphic = UIManager->GetGraphicData("FemaleScourgeOff", MAINWINDOW);
 							X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 							Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 							Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 							Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
-							DrawGraphic(hdc, &FemaleAasimarScourgeOff, X, Y, Width, Height);
+							DrawGraphic(hdc, &FemaleScourgeOff, X, Y, Width, Height);
 						}
 					}
 				
@@ -6968,14 +6968,14 @@ void MainScreenClass::HandleLeftMouseButtonClickAdvancementBox(int x, int y)
 					Character.SetAbilityFavorBonus(true);
 					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 0);
 				}
-				Graphic = UIManager->GetGraphicData("MaleAasimarScourgeOff", MAINWINDOW);
+				Graphic = UIManager->GetGraphicData("MaleScourgeOff", MAINWINDOW);
 				X = static_cast<int>(Graphic->BaseLocationX*ScreenSize.cx);
 				Y = static_cast<int>(Graphic->BaseLocationY*ScreenSize.cy);
 				Width = static_cast<int>(Graphic->BaseWidth*ScreenSize.cx);
 				Height = static_cast<int>(Graphic->BaseHeight*ScreenSize.cy);
 				if (x >= X && x <= X + Width && y >= Y && y <= Y + Height)
 				{
-					Character.SetRace(AASIMARSCOURGE);
+					Character.SetRace(SCOURGE);
 					Character.SetClass(RANGER, 1);
 					Character.SetAbilityFavorBonus(true);
 					SendMessage(AdvWinBonusAbilityPointsCheckBox, BM_SETCHECK, BST_CHECKED, 0);

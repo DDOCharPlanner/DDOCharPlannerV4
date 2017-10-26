@@ -284,6 +284,8 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Dragonborn";
 			case AASIMAR:
 				return "Aasimar";
+			case SCOURGE:
+				return "Scourge";
 			}
 		}
 	return "";
@@ -2524,7 +2526,7 @@ int CharacterClass::GetIconicFeatIndex(ICONICRACES Race)
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Deep Gnome");
 		break;
 	}
-	case FEAT_AASIMARSCOURGE:
+	case FEAT_SCOURGE:
 	{
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Aasimar Scourge");
 		break;

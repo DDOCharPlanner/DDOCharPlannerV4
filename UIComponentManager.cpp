@@ -374,10 +374,10 @@ void UIComponentManager::InitializeUI()
 
 	AdvBoxCurrentY += AdvBoxShiftY;
 
-	InitializeUIGraphic("MaleAasimarScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
-	InitializeUIGraphic("MaleAasimarScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
-	InitializeUIGraphic("FemaleAasimarScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
-	InitializeUIGraphic("FemaleAasimarScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("MaleScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("MaleScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("FemaleScourgeOn", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
+	InitializeUIGraphic("FemaleScourgeOff", MAINWINDOW, AdvBoxCurrentX, AdvBoxCurrentY, 124, 35);
 
 
 	//Classes Advancement Panel

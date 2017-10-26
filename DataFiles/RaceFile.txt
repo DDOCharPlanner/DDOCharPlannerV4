@@ -634,7 +634,7 @@ ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 
 RACENAME: Aasimar;
-DESCRIPTION: {\b Bonded to Celestials, Aasimar are wise and powerful.  They are versatile, accenting Divine roles. \par\par
+DESCRIPTION: {\b Bonded to Celestials, Aasimar are wise and powerful.  They are versatile, accenting Divine roles. \par\par 
 Aasimar bear witth their souls the light of the heavens. With a touch of the power of Celestials, Aasimar are born to serve as their Chapions. \par\par
 Stat Notes: \par\par
 Aasimar start with higher { \b wisdom }\par\par
@@ -673,7 +673,7 @@ ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 
-RACENAME: Aasimar Scourage;
+RACENAME: Scourge;
 DESCRIPTION: {\b My Bond compels me to seek out those that defy death and return them to rest.}\par\par A dual-wielding Ranger that hunts the Undead. \par\par 
 For days and days the call pulled at your mind.  A great horde of Undead hiding within Wheloon, throughout Cormyr, even to places beyond... \par\par 
 Your Bond with will not abide these creatures to stand.  They Must be returned unto death \par\par (Iconics begin at level one and have fifteen levels worth of XP. You may choose

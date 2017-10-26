@@ -345,15 +345,15 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					NoFeatTag = false;
 					}
 				if (FeatLine[i].find("Cleric Bonus") != string::npos)
-				{
-					ClericBonus = true;
-					NoFeatTag = false;
-				}
+					{
+						ClericBonus = true;
+						NoFeatTag = false;
+					}
 				if (FeatLine[i].find("Aasimar Bond") != string::npos)
-				{
-					AasimarBond = true;
-					NoFeatTag = false;
-				}
+					{
+						AasimarBond = true;
+						NoFeatTag = false;
+					}
 				break;
                 }
             case 4:     //the race list
@@ -390,10 +390,10 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(DEEPGNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
-				if (FeatLine[i].find("Aasimar") != string::npos)
+				if (FeatLine[i].find(" Aasimar") != string::npos)
 					RaceType.push_back(AASIMAR);
-				if (FeatLine[i].find("Aasimar Scourge") != string::npos)
-					RaceType.push_back(AASIMARSCOURGE);
+				if (FeatLine[i].find("Scourge") != string::npos)
+					RaceType.push_back(SCOURGE);
                 break;
                 }
             case 5:     //the class list
@@ -1196,14 +1196,14 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == DRAGONBORN)
 					return PREREQ_PASS;
 			}
-			if (Substring.find("Aasimar") != string::npos)
+			if (Substring.find(" Aasimar") != string::npos)
 			{
 				if (CharacterRace == AASIMAR)
 					return PREREQ_PASS;
 			}
-			if (Substring.find("Aasimar Scourge") != string::npos)
+			if (Substring.find("Scourge") != string::npos)
 			{
-				if (CharacterRace == AASIMARSCOURGE)
+				if (CharacterRace == SCOURGE)
 					return PREREQ_PASS;
 			}
             }
@@ -1779,8 +1779,8 @@ string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 			return "Dragonborn";
 		case AASIMAR:
 			return "Aasimar";
-		case AASIMARSCOURGE:
-			return "Aasimar Scourge";
+		case SCOURGE:
+			return "Scourge";
 		default:
 			return "Unknown Race";
 		}
