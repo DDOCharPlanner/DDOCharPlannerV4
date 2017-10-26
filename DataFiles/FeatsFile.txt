@@ -35,7 +35,7 @@ FEATTAG: Aasimar Bond;
 FEATDESCRIPTION: Target: Self \par Duration:Permanent \par While this Scourge Bond is toggled on, you tap into that connection, gaining +1 Constitution and +1 to Fortitude Saving Throws.  Cannot be used while a Warlock Pact is toggled on.;
 Race: Scourge;
 LEVEL: 1;
-ACQUIRE: Train;
+ACQUIRE: Automatic;
 ICON: None;
 VERIFIED: unknown;
 
@@ -47,8 +47,6 @@ LEVEL: 1;
 ACQUIRE: Automatic;
 ICON: HealingHands;
 VERIFIED: unknown;
-
-
 
 FEATNAME: Acrobatic;
 FEATDESCRIPTION: You have excellent body awareness and coordination. You receive a +2 bonus on Jump checks and Tumble checks.;
