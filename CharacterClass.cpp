@@ -246,6 +246,9 @@ string CharacterClass::GetRaceString(bool GetPlural)
 				return "Dragonborn";
 			case AASIMAR:
 				return "Aasimar";
+			case SCOURGE:
+				return "Scourge";
+		
 			}
 		}
 	else
@@ -4995,7 +4998,8 @@ void CharacterClass::Load(HWND hwnd)
 			DWORD dwOptions;
 			hr = pfd->GetOptions(&dwOptions);
 			if (SUCCEEDED(hr))
-				hr = pfd->SetOptions(dwOptions);
+				hr = pfd->SetOptions(dwOptions | FOS_FORCEFILESYSTEM);
+
 			// Set the title of the dialog.
 			if (SUCCEEDED(hr))
 			{

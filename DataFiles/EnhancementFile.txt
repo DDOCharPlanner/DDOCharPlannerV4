@@ -1084,6 +1084,7 @@ DESC1: +20 positive Healing Amplification;
 REQ1: EH: Aasimar Improved Recovery [3-4-1];
 ICON: ASMR_AasimarImprovedRecovery;
 
+[ENDOFTREE]
 
 
 [Scourge] **********************************************************
@@ -1418,6 +1419,7 @@ DESC1: +20 positive Healing Amplification;
 REQ1: EH: Aasimar Improved Recovery [3-4-1];
 ICON: ASSC_AasimarImprovedRecovery;
 
+[ENDOFTREE]
 
 [Bladeforged] **********************************************************
 
@@ -1731,6 +1733,8 @@ TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 30 seconds\par +20 Melee and Ranged Power\par +30 Action Boost bonus to Universal Spell Power for 20 seconds.\par +4 Action Boost bonus to all Saving Throws for 20 seconds.\par +10 Action Boost bonus to Armor Class and Physical Resistance Rating for 20 seconds.;
 ICON: BDFG_PoweroftheForge;
+
+[ENDOFTREE]
 
 [Deep Gnome] **** (Update 02-11-2016) ********************************************************
  
@@ -2100,6 +2104,8 @@ COST: 2;
 DESC1: +2 to hit and damage with light hammers, light maces, light picks, shortswords, shortbows, light crossbows, and light repeating crossbows.\par\par +1 Competence Bonus to Critical Threat Range with the same weapons.;
 REQ1: EH: Gnomish Weapon Training [3-4-1];
 ICON: DPGN_GnomishWeaponTrainingIIII;
+
+[ENDOFTREE]
 
 [Dragonborn] **********************************************************
 
@@ -2654,6 +2660,8 @@ DESC1: 8% chance that enemies will be knocked down when affected by your Breath 
 REQ1: EHM: Draconic Knowledge [3-3-1];
 ICON: DRBN_RelentlessBreath;
 
+[ENDOFTREE]
+
 [Drow] ****************************************************************
 
 NAME: Spell Resistance;
@@ -2979,6 +2987,8 @@ COST: 2;
 DESC1: +1 to hit and damage with Rapiers, Shortswords, and Shuriken.;
 REQ1: EH: Xen'drik Weapon Training [3-3-1];
 ICON: DROW_XendrikWeaponTraining;
+
+[ENDOFTREE]
 
 [Dwarf] **** (Update 08-09-2012) ***********************************************************
 
@@ -3360,6 +3370,8 @@ COST: 1;
 DESC1: You may use your constitution modifier to determine the damage you deal with  heavy picks, light hammers, light picks, mauls, throwing hammers, and warhammers.;
 REQ1: EH: Pick and Hammer Training [4-3-1];
 ICON: DWRF_ThrowYourWeightAroundPicksandHammers;
+
+[ENDOFTREE]
 
 [Elf] *****************************************************************
 
@@ -3745,6 +3757,8 @@ DESC1: +3% Doublestrike\par +3% Doubleshot\par +3% Dodge\par\par Doublestrike: Y
 REQ1: EHM: Elven Weapon Training [4-3-1];
 ICON: ELF_Skill;
 
+[ENDOFTREE]
+
 [Gnome] **** (Update 02-11-2016) ********************************************************
  
 NAME: Gnomish Perserverance;
@@ -4055,6 +4069,8 @@ DESC1: +2 to hit and damage with light hammers, light maces, light picks, shorts
 REQ1: EH: Gnomish Weapon Training [3-4-1];
 ICON: GNME_GnomishWeaponTrainingIIII;
 
+[ENDOFTREE]
+
 [Halfling] **** (Update 08-09-2012) ********************************************************
  
 NAME: Halfling Luck;
@@ -4363,6 +4379,8 @@ COST: 1;
 DESC1: +1 Sneak Attack die\par\par Attacks work as long as the monster you attack isn't focused on you.;
 REQ1: EH: Guile [3-3-1];
 ICON: HALF_Guile;
+
+[ENDOFTREE]
 
 [Half-Elf] ************************************************************
 
@@ -6012,6 +6030,8 @@ DESC1: For item use purposes you are now treated as a tenth level Wizard (or you
 REQ1: Feat: Half-Elf Dilettante: Wizard, EHM: Dilettante Ability Score [3-3-1];
 ICON: HELF_ImprovedDilettanteWizard;
 
+[ENDOFTREE]
+
 [Half Orc] ************************************************************
 
 NAME: Orcish Fury;
@@ -6301,6 +6321,8 @@ DESC1: When raging, you gain an additional +1 Strength, but also get an addition
 DESC2: When raging, you gain an additional +2 Strength, but also get an additional -2 penalty to AC.;
 DESC2: When raging, you gain an additional +3 Strength, but also get an additional -3 penalty to AC.;
 ICON: HORC_PowerRage;
+
+[ENDOFTREE]
 
 [Human] ***************************************************************
 
@@ -7857,6 +7879,8 @@ DESC1: Cooldown: 3 seconds\par Spell Like Ability: Cast the Greater Heroism. (Im
 REQ1: EH: Heroism [3-4-1];
 ICON: HUMN_GreaterHeroism;
 
+[ENDOFTREE]
+
 [Morninglord] **** (Update 30-08-2013) ********************************************************
 
 NAME: Elven Accuracy;
@@ -8175,6 +8199,8 @@ COST: 1;
 DESC1: +3% doublestrike, +3% doubleshot, +3% dodge, and bypass 3% dodge.;
 REQ1: EH: Morninglord Weapon Training [4-3-1];
 ICON: MNLD_Skill;
+
+[ENDOFTREE]
 
 [Purple Dragon Knight] **** (Update 30-08-2013) ********************************************************
 
@@ -9421,6 +9447,8 @@ DESC1: Cooldown: 3 seconds\par Spell Like Ability: Cast the Greater Heroism. (Im
 REQ1: EH: Heroism [3-4-1];
 ICON: PDKN_GreaterHeroism;
 
+[ENDOFTREE]
+
 [Shadar Kai] **** (Update 30-08-2013) ********************************************************
 
 NAME: Shadar Kai Grit;
@@ -9744,6 +9772,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: While sneaking, your melee weapons gain the ability to envelop their targets in darkness, making them briefly vulnerable to sneak attacks. Your weapons also have a chance to blind their targets for a short time.;
 ICON: SHKI_GloomStalker;
+
+[ENDOFTREE]
 
 [Warforged] ***********************************************************
 
@@ -10250,6 +10280,7 @@ REQ1: EHM: Memories of the Last War [3-4-1];
 LOCK1: EH: Memories of the Last War: Spellcarved [3-4-1];
 ICON: WARF_Spellcarved;
 
+[ENDOFTREE]
 
 [Air Savant (Sor)] ****************************************************
 
@@ -10774,6 +10805,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: You have extensively practiced with Cold magic, granting an additional +15 Cold Spell Power.;
 ICON: AIRS_PowerofFrost;
+
+[ENDOFTREE]
 
 [Angel of Vengeance (Fvs)] **** (Update 31-08-2013) ********************************************************
 
@@ -11424,6 +11457,8 @@ DESC3: The maximum caster level of your Fire, Force, Light, and Physical damage 
 REQ3: EH: Intense Faith [4-3-3];
 ICON: AOFV_ZealousFaith;
 
+[ENDOFTREE]
+
 [Arcane Archer (Elf)] *************************************************[Update 25/10/2015 (Oct 25)]
 
 NAME: Arcane Archer;
@@ -12064,6 +12099,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: Bows you wield gain an additional +2 Enhancement bonus. This is considered a Magic Weapon Effect.;
 ICON: AAEL_Runebow;
+
+[ENDOFTREE]
 
 [Arcane Archer (Rgr)] *********[Update 2/12/2016]***************************************
 
@@ -12707,6 +12744,8 @@ COST: 2;
 DESC1: Bows you wield gain an additional +2 Enhancement bonus. This is considered a Magic Weapon Effect.;
 ICON: AARG_Runebow;
 
+[ENDOFTREE]
+
 [Arcanotechnician (Art)] ****[Update 2-12-2016]******************************************
 
 NAME: Arcanotechnician;
@@ -13108,6 +13147,8 @@ DESC1: While wielding a Rune Arm, +10 Electric Spell Power, +5 Universal Spell P
 DESC2: While wielding a Rune Arm, +15 Electric Spell Power, +10 Universal Spell Power;
 DESC3: While wielding a Rune Arm, +20 Electric Spell Power, +15 Universal Spell Power;
 ICON: ARTN_ArcaneMechanism;
+
+[ENDOFTREE]
 
 [Archmage (Wiz)] ******************************************************
 
@@ -14273,6 +14314,8 @@ REQ1: EHM: School Mastery II [5-2-1];
 LOCK1: EH: Primary Spell Focus: Transmutation [5-2-1];
 ICON: ARCM_PrimarySpellFocusTransmutation;
 
+[ENDOFTREE]
+
 [Assassin (Rog)] ***(Update 28-04-2015)***********************************************
 
 NAME: Knife in the Darkness;
@@ -14753,6 +14796,8 @@ DESC1: You gain 1 to Maximum Dodge. While wearing light armor, gain 2 to the Max
 DESC2: You gain 2 to Maximum Dodge. While wearing light armor, gain 4 to the Maximum Dexterity Bonus of your armor, -4 armor check penalty, and gain 4 Physical Resistance Rating.;
 DESC3: You gain 3 to Maximum Dodge. While wearing light armor, gain 6 to the Maximum Dexterity Bonus of your armor, -6 armor check penalty, and gain 6 Physical Resistance Rating.;
 ICON: ASSN_LightArmorMastery;
+
+[ENDOFTREE]
 
 [Battle Engineer (Art)] ***********************************************
 
@@ -15386,6 +15431,7 @@ COST: 2;
 DESC1: 10% Action Boost bonus to Movement Speed.;
 ICON: BTEN_TacticalMobility;
 
+[ENDOFTREE]
 
 [Deepwood Stalker (Rgr)] **********************************************
 
@@ -16002,6 +16048,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: Your Archer's Focus Stance can now stack up to 25 times instead of 15. \par \par +5 Melee Power, +5 Ranged Power;
 ICON: DWST_ImprovedArchersFocus;
+
+[ENDOFTREE]
 
 [Divine Disciple (Clr)] ***********************************************
 
@@ -16941,6 +16989,8 @@ COST: 2;
 DESC1: You gain +1 caster level and maximum caster level to Light, Negative Energy, and Fire spells.;
 ICON: DVDS_DivineEmpowerment;
 
+[ENDOFTREE]
+
 [Earth Savant (Sor)] **************************************************
 
 NAME: Earth Savant;
@@ -17465,6 +17515,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: You have extensively practiced with Cold magic, granting an additional +15 Cold Spell Power.;
 ICON: ERTS_PowerofFrost;
+
+[ENDOFTREE]
 
 [Eldritch Knight (Sor)] ***********************************************
 
@@ -18057,6 +18109,8 @@ DESC2: Activation Cost: 40 Spell Points\par Cooldown: 45 seconds\par Activate: P
 DESC3: Activation Cost: 30 Spell Points\par Cooldown: 30 seconds\par Activate: Perform a spinning melee attack, dealing weapon damage +2[W] to all nearby enemies and knocking them prone for one second.\par If any foes are struck by Eldritch Tempest, your weapon also releases an explosion of magical force, dealing an additional 1 to 6 Force Damage per character level to all nearby enemies. This additional Force damage is affected by your Spell Power.;
 ICON: EKSR_EldritchTempest;
 
+[ENDOFTREE]
+
 [Eldritch Knight (Wiz)] ***********************************************
 
 NAME: Eldritch Strike;
@@ -18648,6 +18702,8 @@ DESC2: Activation Cost: 40 Spell Points\par Cooldown: 45 seconds\par Activate: P
 DESC3: Activation Cost: 30 Spell Points\par Cooldown: 30 seconds\par Activate: Perform a spinning melee attack, dealing weapon damage +2[W] to all nearby enemies and knocking them prone for one second.\par If any foes are struck by Eldritch Tempest, your weapon also releases an explosion of magical force, dealing an additional 1 to 6 Force Damage per character level to all nearby enemies. This additional Force damage is affected by your Spell Power.;
 ICON: EKWZ_EldritchTempest;
 
+[ENDOFTREE]
+
 
 [Enlightened Spirit (Wlk)] **********************************************************************************************************************
 
@@ -19078,6 +19134,8 @@ TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 3 Seconds \par Activation Cost: 6 Spell Points \par The caster's appearance becomes extremely blurred, giving enemies a 50% miss chance when attacking. \par \par Metamagics: Extend, Quicken, Eschew Materials, Enlarge \par Spell Resistance: No;
 ICON: ENSP_Displacement;
+
+[ENDOFTREE]
 
 [Fire Savant (Sor)] ***************************************************
 
@@ -19602,6 +19660,8 @@ COST: 2;
 DESC1: You have extensively practiced with Electric magic, granting an additional +15 Electric Spell Power.;
 ICON: FRES_PowerofLightning;
 
+[ENDOFTREE]
+
 [Frenzied Berserker (Bar)] *******************************************
 
 NAME: Die Hard;
@@ -19989,6 +20049,8 @@ TYPE: Active;
 COST: 2;
 DESC1: Activation Cost 25 Hit Points\par \par Cooldown 30 seconds\par \par Tactical Melee Cleave: Expend 25 hit points to activate this ability and attack enemies around you. This deals +5(W) damage and has a 50% to knock down each damaged enemy briefly on a failed Fortitude save vs 10 + Strength Modifier + Barbarian Level.\par \par Abilities that trigger on Supreme Cleave also trigger on Tantrum. (Blood Trail, Wade In, Lash Out, Sundering spin);
 ICON: FRBZ_Tantrum;
+
+[ENDOFTREE]
 
 [simaadasdd Agent] *******************************************************
 
@@ -20566,6 +20628,8 @@ TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 5 Minutes. \par For the next 10 seconds the DC of your spells and your tactical feats is increased by +10. \par \par Passive: +1 DC for your spells.;
 ICON: HPAG_MomentofClarity;
+
+[ENDOFTREE]
 
 [Henshin Mystic (Mnk)] ************************************************
 
@@ -21346,6 +21410,8 @@ COST: 2;
 DESC1: Activation Cost: 15 Ki\par Cooldown: 6 seconds\par Light Ki Melee Attack: Perform an Attack with +2(W) damage. On Damage: Target suffers 1d6 light damage every 2 seconds for 10 seconds. This can stack up to 10 times. If the target dies within 10 seconds, all allies around the target receive 100 Positive Energy healing. (this healing effect is unaffected by Spell Power.);
 REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness;
 ICON: HSMY_ShadowsCannotExistWithoutLight;
+
+[ENDOFTREE]
 
 [Kensei (Ftr)] ********************************************************
 
@@ -22417,6 +22483,8 @@ DESC1: You gain a +1 Competence bonus to Critical Threat Range with your Focus w
 REQONE1: Feat: Improved Critical: Bludgeoning Weapons, Feat: Improved Critical: Piercing Weapons, Feat: Improved Critical: Slashing Weapons, Feat: Improved Critical: Ranged Weapons, Feat: Improved Critical: Thrown Weapons;
 ICON: KENS_KeenEdge;
 
+[ENDOFTREE]
+
 [Knight of the Chalice (Pal)] ****************************************
 
 NAME: Slayer of Evil I;
@@ -22818,6 +22886,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: You are immune to Energy Drain.;
 ICON: KNCH_SealedLife;
+
+[ENDOFTREE]
 
 [Mechanic (Rog)] **** (Update 28-04-2015) ********************************************************
 
@@ -23250,6 +23320,8 @@ COST: 2;
 DESC1: +10 Ranged Power \par \par +10% Ranged Alacrity with repeating crossbows and thrown weapons. \par \par +30% Ranged Alacrity with non-repeating crossbows.;
 ICON: MECH_MechanicalReloader;
 
+[ENDOFTREE]
+
 [Nature's Warrior (Drd)] **(Update 24-09-2013)*******************************************
 
 NAME: Nature's Warrior;
@@ -23644,6 +23716,8 @@ TYPE: Passive;
 COST: 1;
 DESC1: You have mastered the art of wielding divine magic in animal form, and using it to empower your body in physical combat. While in animal form, the cooldown penalty for non-animal form spells is reduced from 2.5 times the usual length to 1.5.;
 ICON: NTWR_NaturalAdept;
+
+[ENDOFTREE]
 
 [Ninja Spy (Mnk)] *****************************************************
 
@@ -24257,6 +24331,9 @@ COST: 2;
 DESC1: Activation Cost: 30 Ki\par Cooldown: 20 seconds\par Ki Melee Attack: You perform a melee attack with +3(W) and gain 50% melee doublestrike for 12 seconds.;
 ICON: NJSP_ShadowDouble;
 
+[ENDOFTREE]
+
+
 [Occult Slayer (Bar)] *************************************************
 
 NAME: Weapon Bond;
@@ -24719,6 +24796,8 @@ MODNAME3: Hit Points;
 MODVALUE3: 30;
 ICON: OCSL_OneSpirit;
 
+[ENDOFTREE]
+
 [Pale Master (Wiz)] **** (Update 01-09-2013) ********************************************************
 
 NAME: Dark Reaping;
@@ -25142,6 +25221,8 @@ COST: 2;
 DESC1: Your Undead Shrouds gain the following additional benefits: \par \par While in Shroud of the Zombie, you gain +2 Constitution, 15 Physical Resistance Rating, and your Damage Reduction increases to 10/Slashing \par \par While in Shroud of the Vampire, you gain +2 Dexterity, your vulnerability to Light damage is reduced to 200% (from 300%), and your melee and unarmed attacks heal you for 1 point of Negative Energy damage. \par \par While in Shroud of the Wraith, you gain +2 Dexterity and your Incorporeal Miss Chance increases from 25% to 35%. \par \par While in Shroud of the Lich, you gain additional +2 Intelligence and +10 to Negative Energy Spellpower.;
 ICON: PLMS_ImprovedShrouding;
 
+[ENDOFTREE]
+
 [Radiant Servant (Clr)] **** (Update 01-09-2013) *************************************************
 
 NAME: Healing Domain;
@@ -25517,6 +25598,8 @@ COST: 2;
 DESC1: Cooldown: 6 seconds \par Channel Divinity: The next time your target falls below half hit points, they receive 250 positive energy healing. A target can only benefit from a Reactive Heal once every 3 minutes (reset by resting). This healing effect is unaffected by spell power.;
 REQ1: EH: Martyrdom [3-3-1];
 ICON: RDSV_ReactiveHeal;
+
+[ENDOFTREE]
 
 [Ravager (Bar)] *******************************************************
 
@@ -25918,6 +26001,8 @@ COST: 2;
 DESC1: Increase your critical threat range by 1 when raging;
 DESC2: Increase your critical threat range by 2 when raging;
 ICON: RVGR_CriticalRage;
+
+[ENDOFTREE]
 
 [Sacred Defender (Pal)] ***********************************************
 
@@ -26575,6 +26660,8 @@ DESC3: Sacred Defense: While wearing medium or heavy armor or wielding a shield 
 REQ3: EHM: Greater Sacred Defense [4-3-3];
 ICON: SCDF_TenaciousDefense;
 
+[ENDOFTREE]
+
 [Season's Herald (Drd)] **(Update 24-09-2013)********************************************
 
 NAME: Seasoned;
@@ -27019,6 +27106,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: +1 to the save DC's of your Evocation and Trasmutation spells.;
 ICON: SNHD_StrengthoftheSolstice;
+
+[ENDOFTREE]
 
 [Shintao (Mnk)] *******************************************************
 
@@ -27617,7 +27706,7 @@ DESC1: Cooldown: 15 minutes\par Activate While Dead: The spirit of a phoenix bur
 REQ1: EHM: Elemental Curatives [4-0-1];
 ICON: SHTA_RiseofthePhoenix;
 
-
+[ENDOFTREE]
 
 [Soul Eater (Wlk)] **********************************************************************************************************************
 
@@ -28053,6 +28142,7 @@ COST: 2;
 DESC1: Cooldown: 8 Seconds \par Activation Cost: 40 Spellpoints \par You can cast the spell Finger of Death as a Spell-Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. \par \par Slays one living enemy. \par D&D Dice- You can slay any one living creature within range. The target is entitled to a Fortitude saving throw to survive the attack. If the save is successful, the creature instead takes 4d2+4 untyped damage per caster level (Maximum caster level 25 or 100d2+100) damage. The subject might die from damage even if it succeeds on its saving throw. \par Finger of Death is a death effect, and as such a Deathblock item, or Deathward spell will provide immunity. \par \par Metamagics: Quicken, Heighten, Enlarge \par Spell Resistance: Yes;
 ICON: SLEA_FingerofDeath;
 
+[ENDOFTREE]
 
 [Spellsinger (Brd)] ***************************************************
 
@@ -28589,6 +28679,8 @@ DESC1: Activation Cost: 50 Spell Points \par Cooldown: 60 Seconds \par You can c
 DESC2: Activation Cost: 25 Spell Points \par Cooldown: 40 Seconds \par You can cast the spell Mass HOld as a Spell Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. Further points Spent in this enhancement reduces the cooldown of this Spell-Like Ability.;
 DESC3: Activation Cost: 20 Spell Points \par Cooldown: 20 Seconds \par You can cast the spell Mass HOld as a Spell Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. Further points Spent in this enhancement reduces the cooldown of this Spell-Like Ability.;
 ICON: SPSG_MassHold;
+
+[ENDOFTREE]
 
 [Stalwart Defender (Ftr)] *********************************************
 
@@ -29243,6 +29335,8 @@ DESC3: The armor class bonus you gain from using a shield is increased by 50%.;
 REQ3: EHM: Reinforced Defense [4-3-3];
 ICON: STLD_ReinforcedShield;
 
+[ENDOFTREE]
+
 [Swashbuckler (Brd)] ********************************************************
 
 NAME: Confidence;
@@ -29839,6 +29933,8 @@ COST: 2;
 DESC1: While Swashbuckling, every time you damage an enemy but do not crit, you gain a +1 Insight bonus to Critical Threat Range until you sucessfully crit.;
 ICON: SWAS_ExploitWeaknesses;
 
+[ENDOFTREE]
+
 
 [Tainted Scholar (Wlk)] **********************************************************************************************************************
 
@@ -30299,6 +30395,7 @@ COST: 2;
 DESC1: +1 to all spell DCs;
 ICON: TNSC_PlanarFocus;
 
+[ENDOFTREE]
 
 [Tempest (Rgr)] *******************************************************
 
@@ -30762,6 +30859,8 @@ DESC2: Cooldown: 15 seconds\par Melee Dual Wielding Attack: Deals +3(W) damage. 
 DESC3: Cooldown: 15 seconds\par Melee Dual Wielding Attack: Deals +5(W) damage. Your basic attacks when dual wielding strike four targets per swing instead of one for 6 seconds.;
 ICON: TMPS_DanceofDeath;
 
+[ENDOFTREE]
+
 [Thief Acrobat (Rog)] **** (Update 28-04-2015)*****************************************
 
 NAME: Staff Control;
@@ -31166,8 +31265,9 @@ TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 15 seconds \par Quarterstaff Action: Use your quarterstaff to propel yourself forward at great speed. Requires you to have a quarterstaff equipped.;
 REQ1: EH: Staff Lunge [4-3-1];
-
 ICON: THAC_Vault;
+
+[ENDOFTREE]
 
 [Vanguard (Ftr)] ********************************************************
 
@@ -31567,6 +31667,8 @@ COST: 2;
 DESC1: +10 Melee Power;
 ICON: VANG_ArmoredStrength;
 
+[ENDOFTREE]
+
 [Vanguard (Pal)] ********************************************************
 
 NAME: To the Fore!;
@@ -31964,6 +32066,8 @@ TYPE: Passive;
 COST: 2;
 DESC1: +10 Melee Power;
 ICON: VANG_ArmoredStrength;
+
+[ENDOFTREE]
 
 [Vistani Knife Fighter] **********************************************************
 
@@ -32468,6 +32572,8 @@ COST: 2;
 DESC1: Cooldown: 1 minute.  Activate to gain a unique +1 Critical Threat Range and +1 Critical damage multiplier to your equipped daggers or throwing knife for 15 seconds.;
 ICON: VKFR_Vendetta;
 
+[ENDOFTREE]
+
 [Warchanter (Brd)] ****************************************************
 
 MULTI: Skaldic Rage;
@@ -32919,6 +33025,8 @@ DESC2: Cooldown: 2 seconds \par Target ally or self heals 10,000 HP. Removes abi
 DESC3: Cooldown: 2 seconds \par Target ally or self heals 10,000 HP. Removes ability score damage, death penalty effects, negative levels, and the conditions blinded, dazed, deafened, diseased, exhausted, fatigued, feebleminded, insanity, nauseated, poisoned, and stunned. 3 uses per rest;
 ICON: WRCH_KinglyRecovery;
 
+[ENDOFTREE]
+
 [Warpriest (Clr)] **** (Update 17-09-2013) *************************************************
 
 NAME: Smite Foe;
@@ -33346,6 +33454,8 @@ COST: 2;
 DESC1: Activation Cost: 30 Spell Points\par Cooldown: 2 minutes\par Active: Divine Intervention: Ward your target against fatal damage. Hit point damage cannot lower a warded ally's hit point total below -9. When a warded ally is incapacitated, this effect heals the target after a few seconds for 10 to 39 hit points and then fades.;
 ICON: WPCL_DivineIntervention;
 
+[ENDOFTREE]
+
 [Warpriest (Fvs)] **** (Update 17-09-2013) *************************************************
 
 NAME: Smite Foe;
@@ -33772,6 +33882,8 @@ TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 30 Spell Points\par Cooldown: 2 minutes\par Active: Divine Intervention: Ward your target against fatal damage. Hit point damage cannot lower a warded ally's hit point total below -9. When a warded ally is incapacitated, this effect heals the target after a few seconds for 10 to 39 hit points and then fades.;
 ICON: WPFS_DivineIntervention;
+
+[ENDOFTREE]
 
 [Water Savant (Sor)] **************************************************
 

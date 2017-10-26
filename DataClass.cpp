@@ -2,6 +2,9 @@
 #include "DataClass.h"
 #include "InterfaceManagerClass.h"
 #include "CharacterClass.h"
+#include <fstream>
+
+
 //---------------------------------------------------------------------------
 DataClass Data;
 
@@ -906,6 +909,7 @@ FILESTATE DataClass::LoadEnhancementFile()
     DWORD FileSize;
     DWORD BytesRead;
 	string FullFileString;
+	string line;
 	string EnhancementDataString;
 	string Tree;
 	size_t StartLoc;
@@ -921,75 +925,95 @@ FILESTATE DataClass::LoadEnhancementFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\EnhancementFile.txt");
-    FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-    if (FileHandle == INVALID_HANDLE_VALUE)
-        return FILEERROR;
+    
 
-    //get the file size and make room for the data
-    FileSize = GetFileSize(FileHandle, NULL);
-    FileData = new char[FileSize+1];
+	//old code
 
-    //read in the data in it's entirety, set up the pointer, and close the file
-    SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
-    ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
-    FileData[BytesRead] = '\0';
-    CloseHandle(FileHandle);
+    //FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    //if (FileHandle == INVALID_HANDLE_VALUE)
+    //    return FILEERROR;
 
-	//drop the entire character field into a string for easier manipulation
-	FullFileString = FileData;
-	//delete the template data
-	if (FullFileString.find("[MULTIPLE ENHANCEMENT SELECTORS]", 0) != string::npos)
+    ////get the file size and make room for the data
+    //FileSize = GetFileSize(FileHandle, NULL);
+    //FileData = new char[FileSize+1];
+
+    ////read in the data in it's entirety, set up the pointer, and close the file
+    //SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
+    //ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
+    //FileData[BytesRead] = '\0';
+    //CloseHandle(FileHandle);
+	FullFileString = "";
+	//Open if stream for enhancement file to read in data line by line.
+	ifstream f(FileName);
+
+	if (!f.is_open())
+		return FILEERROR;
+	while (getline(f, line)) 
 	{
-		FullFileString.erase(FullFileString.begin(), FullFileString.begin() + FullFileString.find("[MULTIPLE ENHANCEMENT SELECTORS]"));
-		FullFileString.erase(FullFileString.begin(), FullFileString.begin() + FullFileString.find("NAME: "));
-
-	}
-
-	while (FullFileString.find("NAME: ") != string::npos)
+		if (line.find("[ENDOFMULTI]", 0) != string::npos || line.find("[ENDOFTREE]", 0) != string::npos)
 		{
-		EnhancementDataString = FullFileString;
-		//there are two sections to the enhancement data file, the multiselectors and the enhancements
-		if (EnhancementDataString.find("[ENDOFMULTI]", 0) != string::npos)
+			FullFileString += line;
+			//drop the entire character field into a string for easier manipulation
+			//FullFileString = FileData;
+			//delete the template data
+			if (FullFileString.find("[MULTIPLE ENHANCEMENT SELECTORS]", 0) != string::npos)
 			{
-			//delete everything past the next Name marker.
-			if (EnhancementDataString.find("NAME: ", 1) != string::npos)
-				EnhancementDataString.erase(EnhancementDataString.find("NAME: ", 1), EnhancementDataString.size());
-			//create a new enhancement entry and send the string over to the enhancement class for initialization
-			EnhancementMultiSelector.push_back(DummyMulti);
-			EnhancementMultiSelector[EnhancementMultiSelector.size()-1].InitializeMultiSelector(EnhancementDataString);
-			//remove this enhancement from the full file string so we can move on to the next one 
-			FullFileString.erase(0, EnhancementDataString.size());
-			}
-		else
-			{
-			EnhancementDataString = FullFileString;
-			//delete everything past the next Name marker.
-			//delete everything after the last semicolon in the ICON keyword line (note that this means
-			//the ICON line MUST be the last line in each feat field)
-			EnhancementDataString.erase(EnhancementDataString.find(";", EnhancementDataString.find("ICON: "))+1, EnhancementDataString.size());
-			//we now have to determine which tree we are working with
-			Tree = EnhancementDataString;
-			StartLoc = Tree.find("TREE: ");
-			EndLoc = Tree.find(";", StartLoc); 
-			Tree = Tree.substr(Tree.find("TREE: "), EndLoc-StartLoc);
-			//drop the keyword from the line string, we don't need it now
-			Tree.erase(0, 6);
-			//get an index
-			TreeIndex = GetEnhTreeIndex(Tree);
-			if (TreeIndex != ENHT_UNKNOWN)
-				{
-				//Add a new Enhancement entry
-				EnhancementTreeData[TreeIndex].AddNewEnhancement(EnhancementDataString); 
-				//create a new enhancement entry and send the string over to the enhancement class for initialization
-				//EnhancementData[TreeIndex].push_back(DummyEnhancement);
-				//EnhancementData[TreeIndex][EnhancementData[TreeIndex].size()-1].InitializeEnhancement(EnhancementDataString, TreeIndex, EnhancementData[TreeIndex].size()-1);
-				}
-			//remove this enhancement from the full file string so we can move on to the next one 
-			FullFileString.erase(0, EnhancementDataString.size());
-			}
-		}
+				FullFileString.erase(FullFileString.begin(), FullFileString.begin() + FullFileString.find("[MULTIPLE ENHANCEMENT SELECTORS]"));
+				FullFileString.erase(FullFileString.begin(), FullFileString.begin() + FullFileString.find("NAME: "));
 
-    delete[] FileData;
+			}
+
+			while (FullFileString.find("NAME: ") != string::npos)
+			{
+				EnhancementDataString = FullFileString;
+				//there are two sections to the enhancement data file, the multiselectors and the enhancements
+				if (EnhancementDataString.find("[ENDOFMULTI]", 0) != string::npos)
+				{
+					//delete everything past the next Name marker.
+					if (EnhancementDataString.find("NAME: ", 1) != string::npos)
+						EnhancementDataString.erase(EnhancementDataString.find("NAME: ", 1), EnhancementDataString.size());
+					//create a new enhancement entry and send the string over to the enhancement class for initialization
+					EnhancementMultiSelector.push_back(DummyMulti);
+					EnhancementMultiSelector[EnhancementMultiSelector.size() - 1].InitializeMultiSelector(EnhancementDataString);
+					//remove this enhancement from the full file string so we can move on to the next one 
+					FullFileString.erase(0, EnhancementDataString.size());
+				}
+				else
+				{
+					EnhancementDataString = FullFileString;
+					//delete everything past the next Name marker.
+					//delete everything after the last semicolon in the ICON keyword line (note that this means
+					//the ICON line MUST be the last line in each feat field)
+					EnhancementDataString.erase(EnhancementDataString.find(";", EnhancementDataString.find("ICON: ")) + 1, EnhancementDataString.size());
+					//we now have to determine which tree we are working with
+					Tree = EnhancementDataString;
+					StartLoc = Tree.find("TREE: ");
+					EndLoc = Tree.find(";", StartLoc);
+					Tree = Tree.substr(Tree.find("TREE: "), EndLoc - StartLoc);
+					//drop the keyword from the line string, we don't need it now
+					Tree.erase(0, 6);
+					//get an index
+					TreeIndex = GetEnhTreeIndex(Tree);
+					if (TreeIndex != ENHT_UNKNOWN)
+					{
+						//Add a new Enhancement entry
+						EnhancementTreeData[TreeIndex].AddNewEnhancement(EnhancementDataString);
+						//create a new enhancement entry and send the string over to the enhancement class for initialization
+						//EnhancementData[TreeIndex].push_back(DummyEnhancement);
+						//EnhancementData[TreeIndex][EnhancementData[TreeIndex].size()-1].InitializeEnhancement(EnhancementDataString, TreeIndex, EnhancementData[TreeIndex].size()-1);
+					}
+					//remove this enhancement from the full file string so we can move on to the next one 
+					FullFileString.erase(0, EnhancementDataString.size());
+				}
+			}
+			FullFileString = "";
+		}
+		else
+		{
+			FullFileString += line ;
+		}
+	}
+    //delete[] FileData;
 
     DataFilesLoaded[ENHANCEMENTFILE] = true;
 

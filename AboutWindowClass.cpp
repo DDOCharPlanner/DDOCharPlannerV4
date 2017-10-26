@@ -86,12 +86,14 @@ A big thank you goes out to Ron Hiler the original creator of the first DDO Char
    {\\cf1 Cataclysm} \\par \
    {\\cf1 Garix} (new enhancements)\\par \
    {\\cf1 BlackDae} (new enhancements)\\par\\par\
-{\\cf2 {\\b Programmers:\\par}}\
-   {\\cf1 Jonesth3} (Current Programer)\\par\\par\
-{\\cf2 {\\b Data Input:\\par}}\
+   {\\cf2 {\\b Programmers:\\par}}\
+   {\\cf1 Jonesth3} (Current Programmer and Data Input)\\par\\par\
+      {\\cf1 Pax} (Programmer and Data Input)\\par\\par\
+   {\\cf2 {\\b Data Input:\\par}}\
    {\\cf1 Tech13 aka 'Shoemaker'} (Equipment)\\par \
-   {\\cf1 Shindoku} (new enhancements and data updates)\\par\\par\
-{\\cf2 {\\b Special Thanks:\\par}}\
+   {\\cf1 Shindoku} (enhancements and data updates)\\par\\par\
+	{\\cf1 Thalamask} (Data updates)\\par\par\
+   {\\cf2 {\\b Special Thanks:\\par}}\
   A big \"Thanks\" go out to {\\cf1 Standing Stone Games} for creating an amazing \\par \
   game (and for allowing me to use their graphics and text).\\par \
 And of course, thanks go out to {\\cf1 everyone} that offered their opinions, comments, and support for the project, not to mention all the bug reports! \

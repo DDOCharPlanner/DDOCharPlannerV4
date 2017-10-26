@@ -151,11 +151,18 @@ void Data_Enhancement_Class::InitializeEnhancement(string Data, ENHANCEMENT_TREE
 	ENH_Requirement NewRequirement;
 	string Reqstring;
 	size_t ReqEndLoc;
-
+	int x;
 	TreeIndex = TIndex;
+	if (TIndex == ENHT_AASIMAR || TIndex == ENHT_SCOURGE)
+	{
+		x = 1;
+	}
+
 	EnhancementIndex = EIndex;
 	Race = SetTreeRace(TreeIndex);
 	Class = SetTreeClass(TreeIndex);
+
+
 
 	NewRequirement.ReqType = ENH_UNKNOWN;
 	NewRequirement.ReqName = "";
