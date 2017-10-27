@@ -1013,6 +1013,7 @@ FILESTATE DataClass::LoadEnhancementFile()
 			FullFileString += line ;
 		}
 	}
+	f.close();
     //delete[] FileData;
 
     DataFilesLoaded[ENHANCEMENTFILE] = true;

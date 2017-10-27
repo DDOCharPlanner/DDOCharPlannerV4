@@ -33,10 +33,10 @@ using namespace std;
 #define DEFAULTHEIGHT 768
 #define NUM_ENHANCEMENT_TREES 65
 #define NUM_DESTINY_TREES 13
-#define PASTLIFEFEAT 14
+#define PASTLIFEFEAT 14 //Past lifes for Class Set to Number of Classes
 #define EPICPASTLIFESPHERE 4
-#define ICONICPASTLIFEFEAT 6
-#define RACEPASTLIFE 12
+#define ICONICPASTLIFEFEAT 6  //Past Lifes for Iconics Set to Numer of Iconice Races
+#define RACEPASTLIFE 11  //Past lifes for Race Set to Number of Races
 #define _WINNT_WIN32 0600
 
 enum WINDOWID {MS_NAMELABEL, MS_RACECLASSLABEL,

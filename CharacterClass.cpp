@@ -2938,6 +2938,7 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 			Mod += 2;
 		if (HasFeat("Race Past Life: Human Past Life", AtLevel) == true)
 			Mod += 1;
+
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "Haggle", AtLevel);
         }
     if (Skill == HEAL)

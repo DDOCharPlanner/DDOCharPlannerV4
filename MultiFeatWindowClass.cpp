@@ -850,7 +850,7 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 				//do not allow them to be placed in other slot types
 				if (FeatSlot[Index] == FEATCHARACTER || FeatSlot[Index] == FEATHUMANBONUS)
 				{
-					valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == false;
+					valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == false && Feat->GetFeatTag(FEATTAGAASIMARBOND) == false;
 				}
 				else switch (FeatSlot[Index])
 				{
@@ -934,6 +934,11 @@ void MultiFeatWindowClass::EndDragAndDropOperation(int x, int y)
 				case FEATCLERICBONUS:
 				{
 					valid = Feat->GetFeatTag(FEATTAGCLERICBONUS) == true;
+					break;
+				}
+				case FEATAASIMARBOND:
+				{
+					valid = Feat->GetFeatTag(FEATTAGAASIMARBOND) == true;
 					break;
 				}
 				default:
@@ -1132,6 +1137,7 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 	bool Legendary;
 	bool DragonbornBonus;
 	bool ClericBonus;
+	bool AasimarBonus;
 
 	int XOffset;
 	PREREQRESULT FeatPrereqStatus;
@@ -1179,6 +1185,7 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 	Legendary = false;
 	DragonbornBonus = false;
 	ClericBonus = false;
+	AasimarBonus = false;
 
 	for (unsigned int i = 0; i<3; i++)
 	{
@@ -1214,6 +1221,8 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 			DragonbornBonus = true;
 		if (FeatSlot[i] == FEATCLERICBONUS)
 			ClericBonus = true;
+		if (FeatSlot[i] == FEATAASIMARBOND)
+			AasimarBonus = true;
 	}
 
 	//grab a pointer to the feat
@@ -1260,6 +1269,8 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
 		else if (ClericBonus == true && Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
+		else if (AasimarBonus == true && Feat->GetFeatTag(FEATTAGAASIMARBOND) == true)
+			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
 		else
 			OriginalColor = SetTextColor(hDC, RGB(255, 255, 255));
 		TextOut(hDC, left + 35 + XOffset, top + 10, Text.c_str(), Text.size());
@@ -1541,7 +1552,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 			FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATRANGERFAVOREDENEMY || FeatSlot[i] == FEATMONKPATH || FeatSlot[i] == FEATDRUIDWILDSHAPE ||
 			FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY || FeatSlot[i] == FEATCLERICBONUS)
 			OldColor = SetTextColor(hdc, RGB(230, 230, 30));
-		if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS)
+		if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS || FeatSlot[i] == FEATAASIMARBOND)
 			OldColor = SetTextColor(hdc, RGB(255, 0, 155));
 		if (FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATWARLOCKPACT)
 			OldColor = SetTextColor(hdc, RGB(100, 255, 0));
@@ -1686,7 +1697,19 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 			OutputString = "Feat";
 			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 		}
-
+		if (FeatSlot[i] == FEATAASIMARBOND)
+		{
+			Graphic = UIManager->GetGraphicData("FeatTextFeat1", MULTIFEATWINDOW);
+			X = static_cast<int>(Graphic->BaseLocationX - 15 + 100.0*i);
+			Y = static_cast<int>(FrameBottom - 35);
+			OutputString = "Aasimar";
+			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+			Graphic = UIManager->GetGraphicData("FeatTextFeat2", MULTIFEATWINDOW);
+			X = static_cast<int>(X + 10);
+			Y = static_cast<int>(FrameBottom - 20);
+			OutputString = "Bond";
+			TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+		}
 
 		SetTextColor(hdc, OldColor);
 
@@ -1909,6 +1932,11 @@ void MultiFeatWindowClass::FillFeatSelectPanel()
 				else if (Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
 				{
 					if (F1 == FEATTAGCLERICBONUS || F2 == FEATTAGCLERICBONUS || F3 == FEATTAGCLERICBONUS)
+						FeatVector.push_back(FeatIndex);
+				}
+				if (Feat->GetFeatTag(FEATTAGAASIMARBOND) == true)
+				{
+					if (F1 == FEATAASIMARBOND || F2 == FEATAASIMARBOND || F3 == FEATAASIMARBOND)
 						FeatVector.push_back(FeatIndex);
 				}
 				else

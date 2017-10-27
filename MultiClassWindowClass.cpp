@@ -918,8 +918,25 @@ void MultiClassWindowClass::FillSelectList()
 		Graphic = UIManager->GetGraphicData(ss.str(), MULTICLASSWINDOW);
 		X = static_cast<int>(Graphic->BaseLocationX);
 		Y = static_cast<int>(Graphic->BaseLocationY);
-		TextString = to_string(Character.GetClassLevel(Character.GetClass(i + 1, false), i + 1));
-		TextOut(hdc, X + 18, Y, TextString.c_str(), TextString.size());
+		CLASS Classes[3];
+		TextString = "";
+		Character.GetMulticlassClasses(i + 1, Classes);
+		for (int z = 0; z < 3; z++)
+		{
+			
+			if (Classes[z] != CLASSNONE)
+			{
+				
+				if (TextString == "")
+					TextString += to_string(Character.GetClassLevel(Classes[z], i + 1));
+				else
+					TextString += "/" + to_string(Character.GetClassLevel(Classes[z], i + 1));
+			}
+		}
+		//TextString = to_string(Character.GetClassLevel(Character.GetClass(i + 1, false), i + 1));
+		int center;
+		center = 12 - TextString.length() * 2;
+		TextOut(hdc, X + center, Y, TextString.c_str(), TextString.size());
 		SetTextColor(hdc, OldColor);
 		
 		//OldColor = SetTextColor(hdc, RGB(255, 255, 255));

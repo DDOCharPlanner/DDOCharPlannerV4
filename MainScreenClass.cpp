@@ -3142,6 +3142,11 @@ void MainScreenClass::FillFeatSelectBox()
 					if (F1 == FEATCLERICBONUS || F2 == FEATCLERICBONUS || F3 == FEATCLERICBONUS)
 						FeatVector.push_back(FeatIndex);
 				}
+				if (Feat->GetFeatTag(FEATTAGAASIMARBOND) == true)
+				{
+					if (F1 == FEATAASIMARBOND || F2 == FEATAASIMARBOND || F3 == FEATAASIMARBOND)
+						FeatVector.push_back(FeatIndex);
+				}
 			    else
 					FeatVector.push_back(FeatIndex);
 				}
@@ -3215,6 +3220,11 @@ void MainScreenClass::FillFeatSelectBox()
 					if (F1 == FEATTAGDRAGONBORNBONUS || F2 == FEATTAGDRAGONBORNBONUS || F3 == FEATTAGDRAGONBORNBONUS)
 						FeatVector.push_back(FeatIndex);
 				}
+				if (Feat->GetFeatTag(FEATTAGAASIMARBOND) == true)
+				{
+					if (F1 == FEATAASIMARBOND || F2 == FEATAASIMARBOND || F3 == FEATAASIMARBOND)
+						FeatVector.push_back(FeatIndex);
+				}
 				else
 					FeatVector.push_back(FeatIndex);
                 }
@@ -3230,11 +3240,6 @@ void MainScreenClass::FillFeatSelectBox()
                     if (F1 == FEATROGUEBONUS || F2 == FEATROGUEBONUS || F3 == FEATROGUEBONUS)
                         FeatVector.push_back(FeatIndex);
                     }
-				else if (Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == true)
-				{
-					if (F1 == FEATDRAGONBORNBONUS || F2 == FEATDRAGONBORNBONUS || F3 == FEATDRAGONBORNBONUS)
-						FeatVector.push_back(FeatIndex);
-				}
                 else
                     FeatVector.push_back(FeatIndex);
                 }
@@ -3339,6 +3344,8 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 	bool Legendary;
 	bool DragonbornBonus;
 	bool ClericBonus;
+	bool AasimarBonus;
+
     int XOffset;
 
 	PREREQRESULT FeatPrereqStatus;
@@ -3386,6 +3393,7 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 	Legendary = false;
 	DragonbornBonus = false;
 	ClericBonus = false;
+	AasimarBonus = false;
 
     for (unsigned int i=0; i<3; i++)
         {
@@ -3421,6 +3429,8 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 			DragonbornBonus = true;
 		if (FeatSlot[i] == FEATCLERICBONUS)
 			ClericBonus = true;
+		if (FeatSlot[i] == FEATAASIMARBOND)
+			AasimarBonus = true;
 		}
 		
 	//grab a pointer to the feat
@@ -3467,6 +3477,8 @@ void MainScreenClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DWORD I
 			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
 		else if (ClericBonus == true && Feat->GetFeatTag(FEATTAGCLERICBONUS) == true)
 			OriginalColor = SetTextColor(hDC, RGB(230, 230, 30));
+		else if (AasimarBonus == true && Feat->GetFeatTag(FEATTAGAASIMARBOND) == true)
+			OriginalColor = SetTextColor(hDC, RGB(255, 0, 155));
 		else
 			OriginalColor = SetTextColor(hDC, RGB(255,255,255));
 		TextOut(hDC, left+45+XOffset, top+10, Text.c_str(), Text.size());
@@ -6083,9 +6095,9 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					OldColor = SetTextColor(hdc, RGB(255, 255, 255));
 				if (FeatSlot[i] == FEATFIGHTERBONUS || FeatSlot[i] == FEATWIZARDBONUS || FeatSlot[i] == FEATARTIFICERBONUS || FeatSlot[i] == FEATROGUEBONUS || FeatSlot[i] == FEATMONKBONUS ||
 					FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATRANGERFAVOREDENEMY || FeatSlot[i] == FEATMONKPATH || FeatSlot[i] == FEATDRUIDWILDSHAPE ||
-					FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY || FeatSlot[i] == FEATCLERICBONUS)
+					FeatSlot[i] == FEATDESTINY || FeatSlot[i] == FEATLEGENDARY || FeatSlot[i] == FEATCLERICBONUS )
 					OldColor = SetTextColor(hdc, RGB(230, 230, 30));
-				if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS)
+				if (FeatSlot[i] == FEATHALFELFBONUS || FeatSlot[i] == FEATDRAGONBORNBONUS || FeatSlot[i] == FEATAASIMARBOND)
 					OldColor = SetTextColor(hdc, RGB(255, 0, 155));
 				if (FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATWARLOCKPACT)
 					OldColor = SetTextColor(hdc, RGB(100, 255, 0));
@@ -6111,7 +6123,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 				}
 				if (FeatSlot[i] == FEATFIGHTERBONUS || FeatSlot[i] == FEATWIZARDBONUS || FeatSlot[i] == FEATARTIFICERBONUS || FeatSlot[i] == FEATROGUEBONUS || FeatSlot[i] == FEATMONKBONUS ||
-					FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATCLERICBONUS)
+					FeatSlot[i] == FEATDEITY || FeatSlot[i] == FEATFAVOREDSOULBONUS || FeatSlot[i] == FEATCLERICBONUS )
 				{
 					Graphic = UIManager->GetGraphicData("FeatTextClass", MAINWINDOW);
 					X = static_cast<int>((Graphic->BaseLocationX + 100.0*i / DEFAULTWIDTH)*ScreenSize.cx);
@@ -6218,7 +6230,7 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 				if (FeatSlot[i] == FEATLEGENDARY)
 					{
 						Graphic = UIManager->GetGraphicData("FeatTextLegendary", MAINWINDOW);
-						X = static_cast<int>((Graphic->BaseLocationX + 100.0*i / DEFAULTWIDTH)*ScreenSize.cx);
+						X = static_cast<int>((Graphic->BaseLocationX - 5 + 100.0*i / DEFAULTWIDTH)*ScreenSize.cx);
 						Y = static_cast<int>(FrameBottom - 35);
 						OutputString = "Legendary";
 						TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
@@ -6227,6 +6239,20 @@ void MainScreenClass::DrawAdvancementBoxGraphics(HDC hdc)
 						Y = static_cast<int>(FrameBottom - 20);
 						OutputString = "Feat";
 						TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+				}
+
+				if (FeatSlot[i] == FEATAASIMARBOND)
+				{
+					Graphic = UIManager->GetGraphicData("FeatTextFeat1", MAINWINDOW);
+					X = static_cast<int>(((Graphic->BaseLocationX+ 100.0*i / DEFAULTWIDTH)*ScreenSize.cx)-15);
+					Y = static_cast<int>(FrameBottom - 35);
+					OutputString = "Aasimar";
+					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
+					Graphic = UIManager->GetGraphicData("FeatTextFeat2", MAINWINDOW);
+					X = static_cast<int>(X + 10);
+					Y = static_cast<int>(FrameBottom - 20);
+					OutputString = "Bond";
+					TextOut(hdc, X, Y, OutputString.c_str(), OutputString.size());
 				}
 				SetTextColor(hdc, OldColor);
                 }
@@ -7564,7 +7590,7 @@ void MainScreenClass::EndDragAndDropOperation(int x, int y)
 			//do not allow them to be placed in other slot types
             if (FeatSlot[Index] == FEATCHARACTER || FeatSlot[Index] == FEATHUMANBONUS)
                 {
-				valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == false;
+					valid = Feat->GetFeatTag(FEATTAGFAVOREDENEMY) == false && Feat->GetFeatTag(FEATTAGMONKPATH) == false && Feat->GetFeatTag(FEATTAGDEITY) == false && Feat->GetFeatTag(FEATTAGFAVOREDSOULBONUS) == false && Feat->GetFeatTag(FEATTAGROGUEBONUS) == false && Feat->GetFeatTag(FEATTAGHALFELFBONUS) == false && Feat->GetFeatTag(FEATTAGMONKEXCLUSIVE) == false && Feat->GetFeatTag(FEATTAGDRUIDWILDSHAPE) == false && Feat->GetFeatTag(FEATTAGLEGENDARY) == false && Feat->GetFeatTag(FEATTAGDRAGONBORNBONUS) == false && Feat->GetFeatTag(FEATTAGAASIMARBOND) == false;
                 }
             else switch (FeatSlot[Index])
 				{
@@ -7648,6 +7674,11 @@ void MainScreenClass::EndDragAndDropOperation(int x, int y)
 				case FEATCLERICBONUS:
 				{
 					valid = Feat->GetFeatTag(FEATTAGCLERICBONUS) == true;
+					break;
+				}
+				case FEATAASIMARBOND:
+				{
+					valid = Feat->GetFeatTag(FEATTAGAASIMARBOND) == true;
 					break;
 				}
 				default:
