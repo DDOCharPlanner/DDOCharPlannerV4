@@ -390,7 +390,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(DEEPGNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
-				if (FeatLine[i].find(" Aasimar") != string::npos)
+				if (FeatLine[i].find("Aasimar") != string::npos)
 					RaceType.push_back(AASIMAR);
 				if (FeatLine[i].find("Scourge") != string::npos)
 					RaceType.push_back(SCOURGE);
