@@ -63,6 +63,7 @@ void AboutWindowClass::Create(HINSTANCE Instance, HWND Parent)
 
     AboutString = "{\\qc{\\b {\\cf1 {\\fs30  DDO Character Planner\\par}}} Version ";
     AboutString += VERSION;
+//BUG:aboutwindowclass.cpp(95): warning C4129: 'p' : unrecognized character escape sequence
     AboutString += "\\par (C) 2006-2014 Ron Hiler\\par \
 All rights reserverd\\par \
 Graphics and text descriptions are property of {\\cf1 {\\b Standing Stone Games.}} (C) 2016, and are used with permission.\\par\\par \
@@ -92,7 +93,7 @@ A big thank you goes out to Ron Hiler the original creator of the first DDO Char
    {\\cf2 {\\b Data Input:\\par}}\
    {\\cf1 Tech13 aka 'Shoemaker'} (Equipment)\\par \
    {\\cf1 Shindoku} (enhancements and data updates)\\par\\par\
-	{\\cf1 Thalamask} (Data updates)\\par\par\
+	{\\cf1 Thalamask} (Data updates)\\par\\par\
    {\\cf2 {\\b Special Thanks:\\par}}\
   A big \"Thanks\" go out to {\\cf1 Standing Stone Games} for creating an amazing \\par \
   game (and for allowing me to use their graphics and text).\\par \

@@ -904,10 +904,14 @@ FILESTATE DataClass::LoadDestinyFile()
 FILESTATE DataClass::LoadEnhancementFile()
     {
     char FileName[MAX_PATH];
-    HANDLE FileHandle;
-    char *FileData;
-    DWORD FileSize;
-    DWORD BytesRead;
+//BUG:dataclass.cpp(907): warning C4101: 'FileHandle' : unreferenced local variable
+	//HANDLE FileHandle;
+//BUG:dataclass.cpp(908): warning C4101: 'FileData' : unreferenced local variable
+//    char *FileData;
+//BUG:dataclass.cpp(909) : warning C4101 : 'FileSize' : unreferenced local variable
+	//    DWORD FileSize;
+//BUG:dataclass.cpp(910): warning C4101: 'BytesRead' : unreferenced local variable
+//    DWORD BytesRead;
 	string FullFileString;
 	string line;
 	string EnhancementDataString;

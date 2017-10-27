@@ -1602,6 +1602,10 @@ int CharacterClass::GetFeatAtLevel(int Level,int index)
 		}
 			
 	}
+//BUG: characterclass.cpp(1605) : warning C4715 : 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+//In the case that there are no feats where we reach this code, guessing we should probably return 0 here instead of an undefined result
+//or if not we should specify explicitly what is being returned by the function
+	return 0;
 }
 //---------------------------------------------------------------------------
 FEATSLOTTYPE CharacterClass::GetFeatAquireType(int FeatIndex, int Level)
@@ -4501,7 +4505,8 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	bool xptest;
 	xptest = false;
 	//char *dir_org = NULL;
-	HRESULT temphr;
+//BUG: warning C4101: 'temphr' : unreferenced local variable
+//	HRESULT temphr;
 		HRESULT hr = CoCreateInstance(CLSID_FileSaveDialog, NULL, CLSCTX_INPROC_SERVER, IID_IFileSaveDialog, (void**)&pfd);
 		if (SUCCEEDED(hr) && xptest != true)
 		{
@@ -4965,10 +4970,17 @@ void CharacterClass::Load(HWND hwnd)
 	CharacterItemStruct NewItem;
 	unsigned int FileVersion = 0;
 	string SearchString;
-	unsigned int CommaCount;
+//BUG: when would CommaCount be negative?  If there is no use for CommaCount to be negative we should be using int instead of unsigned int
+//Addresses: characterclass.cpp(5571): warning C4018: '<' : signed/unsigned mismatch
+//	characterclass.cpp(5592) : warning C4018 : '<' : signed / unsigned mismatch
+//  characterclass.cpp(5617) : warning C4018 : '<' : signed / unsigned mismatch
+//  characterclass.cpp(5647) : warning C4018 : '<' : signed / unsigned mismatch
+//	unsigned int CommaCount;
+	int CommaCount;
 	unsigned int Found;
 	unsigned int RecordedLevels;
-	HWND hWnd;
+//BUG:characterclass.cpp(4971): warning C4101: 'hWnd' : unreferenced local variable
+//	HWND hWnd;
 	int len;
 	int rc;
 	bool xptest;

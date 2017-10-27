@@ -1437,7 +1437,9 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 			CurrentLevel = LevelClick + 1;
 			DrawSkillTable();
 			EnableWindow(AcceptButton, true);
-			exit;
+			//BUG: multiskillswindowclass.cpp(1440): warning C4551: function call missing argument list
+			//exit;
+
 		}
 		bool SkillClick = false;
 		int SkillClicked = -1;
@@ -1465,7 +1467,8 @@ void MultiSkillsWindowClass::HandleRightMouseButtonClick(int x, int y)
 			SkillChange = true;
 			DrawSkillTable();
 			EnableWindow(AcceptButton, true);
-			exit;
+			//BUG:multiskillswindowclass.cpp(1468): warning C4551: function call missing argument list
+			//exit;
 		}
 		//Find Skill First
 		int Index = -1;
