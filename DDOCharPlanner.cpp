@@ -106,10 +106,14 @@ int APIENTRY WinMain(HINSTANCE Instance, HINSTANCE PrevInstance, LPSTR CmdLine, 
                 {
                 Data.LoadDataFiles();
                 FileRead = true;
-                InterfaceManager.ShowChild(DATALOAD, false);
-                Character.Reset();
-                InterfaceManager.SetMainToDefaults();
-                InterfaceManager.ShowChild(MAINWINDOW, true);
+					if (Data.AllDataFilesLoaded())
+					{
+						InterfaceManager.ShowChild(DATALOAD, false);
+						Character.Reset();
+						InterfaceManager.SetMainToDefaults();
+						InterfaceManager.ShowChild(MAINWINDOW, true);
+					}
+
                 }
 
             Sleep(10);   //do not max out processor

@@ -504,6 +504,9 @@ void MainScreenClass::Create(HINSTANCE Instance, HWND Parent, bool UseSystemFont
 //---------------------------------------------------------------------------
 void MainScreenClass::Show(bool State)
     {
+	
+
+
     //meta windows
     ShowWindow(NameLabel, State);
     ShowWindow(RaceClassLabel, State);

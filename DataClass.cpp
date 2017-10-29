@@ -10,35 +10,35 @@ DataClass Data;
 
 //---------------------------------------------------------------------------
 DataClass::DataClass()
-    {
-    Race.clear();
-    Class.clear();
-    Skill.clear();
-    Spell.clear();
-    for (int i=0; i<NUMDATAFILES; i++)
-        DataFilesLoaded[i] = false;
-    }
+{
+	Race.clear();
+	Class.clear();
+	Skill.clear();
+	Spell.clear();
+	for (int i = 0; i < NUMDATAFILES; i++)
+		DataFilesLoaded[i] = false;
+}
 
 //---------------------------------------------------------------------------
 DataClass::~DataClass()
-    {
-    }
+{
+}
 
 //---------------------------------------------------------------------------
 void DataClass::LoadDataFiles()
-    {
-    InterfaceManager.UpdateLoadFileStatus(RACEFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(RACEFILE, LoadRaceFile());
-    InterfaceManager.UpdateLoadFileStatus(CLASSFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(CLASSFILE, LoadClassFile());
-    InterfaceManager.UpdateLoadFileStatus(FEATFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(FEATFILE, LoadFeatFile());
-    InterfaceManager.UpdateLoadFileStatus(SKILLFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(SKILLFILE, LoadSkillFile());
-    InterfaceManager.UpdateLoadFileStatus(ENHANCEMENTFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(ENHANCEMENTFILE, LoadEnhancementFile());
-    InterfaceManager.UpdateLoadFileStatus(SPELLFILE, FILELOADING);
-    InterfaceManager.UpdateLoadFileStatus(SPELLFILE, LoadSpellFile());
+{
+	InterfaceManager.UpdateLoadFileStatus(RACEFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(RACEFILE, LoadRaceFile());
+	InterfaceManager.UpdateLoadFileStatus(CLASSFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(CLASSFILE, LoadClassFile());
+	InterfaceManager.UpdateLoadFileStatus(FEATFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(FEATFILE, LoadFeatFile());
+	InterfaceManager.UpdateLoadFileStatus(SKILLFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(SKILLFILE, LoadSkillFile());
+	InterfaceManager.UpdateLoadFileStatus(ENHANCEMENTFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(ENHANCEMENTFILE, LoadEnhancementFile());
+	InterfaceManager.UpdateLoadFileStatus(SPELLFILE, FILELOADING);
+	InterfaceManager.UpdateLoadFileStatus(SPELLFILE, LoadSpellFile());
 	InterfaceManager.UpdateLoadFileStatus(ITEMEFFECTFILE, FILELOADING);
 	InterfaceManager.UpdateLoadFileStatus(ITEMEFFECTFILE, LoadItemEffectFile());
 	InterfaceManager.UpdateLoadFileStatus(ITEMCLICKYEFFECTFILE, FILELOADING);
@@ -49,17 +49,31 @@ void DataClass::LoadDataFiles()
 	InterfaceManager.UpdateLoadFileStatus(TEMPLATEFILE, LoadTemplateFiles());
 	InterfaceManager.UpdateLoadFileStatus(DESTINYFILE, FILELOADING);
 	InterfaceManager.UpdateLoadFileStatus(DESTINYFILE, LoadDestinyFile());
-    }
+}
 
 //---------------------------------------------------------------------------
 bool DataClass::AllDataFilesLoaded()
-    {
-    for (int i=0; i<NUMDATAFILES; i++)
-        if (DataFilesLoaded[i] == false)
-            return false;
+{
+	for (int i = 0; i < NUMDATAFILES; i++)
+		if (DataFilesLoaded[i] == false)
+			return false;
 
-    return true;
-    }
+	return true;
+}
+
+//---------------------------------------------------------------------------
+bool DataClass::FileExists(string FileName)
+{
+	if (FILE *file = fopen(FileName.c_str(), "r"))
+		{
+			fclose(file);
+			return true;
+		}
+	else
+		{
+			return false;
+		}
+}
 
 //---------------------------------------------------------------------------
 FILESTATE DataClass::LoadRaceFile()
@@ -86,6 +100,9 @@ FILESTATE DataClass::LoadRaceFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\RaceFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -260,6 +277,9 @@ FILESTATE DataClass::LoadClassFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\ClassFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -504,6 +524,9 @@ FILESTATE DataClass::LoadFeatFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\FeatsFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -564,6 +587,9 @@ FILESTATE DataClass::LoadSkillFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\SkillFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -825,6 +851,9 @@ FILESTATE DataClass::LoadDestinyFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
 	GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat(FileName, MAX_PATH, "\\DataFiles\\DestinyFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
 	FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (FileHandle == INVALID_HANDLE_VALUE)
 		return FILEERROR;
@@ -925,7 +954,8 @@ FILESTATE DataClass::LoadEnhancementFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\EnhancementFile.txt");
-    
+	if (!FileExists(FileName))
+		return FILEERROR;
 
 	//old code
 
@@ -1046,6 +1076,9 @@ FILESTATE DataClass::LoadSpellFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\SpellFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -1258,6 +1291,9 @@ FILESTATE DataClass::LoadItemClickyEffectFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\ItemClickyEffectsFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -1311,6 +1347,9 @@ FILESTATE DataClass::LoadItemEffectFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\ItemEffectsFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;
@@ -1369,6 +1408,9 @@ FILESTATE DataClass::LoadItemFile()
 	StringCbCopy(FileName, MAX_PATH, "\0");
     GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat (FileName, MAX_PATH, "\\DataFiles\\ItemsFile.txt");
+	if (!FileExists(FileName))
+		return FILEERROR;
+
     FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (FileHandle == INVALID_HANDLE_VALUE)
         return FILEERROR;

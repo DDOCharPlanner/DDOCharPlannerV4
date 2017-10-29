@@ -113,6 +113,7 @@ class DataClass
         int GetHitDice(int ClassType);
         int GetClassBAB(CLASS ClassType, int AtLevel);
         int GetBaseSave(SAVETYPE SaveType, CLASS ClassType, int AtLevel);
+		bool FileExists(string Filename);
 
         //feat stuff
         FeatDataClass* GetFeatPointer (int FeatIndex);
