@@ -64,15 +64,19 @@ bool DataClass::AllDataFilesLoaded()
 //---------------------------------------------------------------------------
 bool DataClass::FileExists(string FileName)
 {
-	if (FILE *file = fopen(FileName.c_str(), "r"))
-		{
-			fclose(file);
-			return true;
-		}
-	else
-		{
-			return false;
-		}
+	FILE *filepoint;
+	errno_t err;
+	if ((err = fopen_s(&filepoint, FileName.c_str(), "r")) != 0) {
+		// File could not be opened. filepoint was set to NULL
+		return false;
+		
+	}
+	else {
+		// File was opened, filepoint can be used to read the stream.
+		fclose(filepoint);
+		return true;
+		
+	}
 }
 
 //---------------------------------------------------------------------------

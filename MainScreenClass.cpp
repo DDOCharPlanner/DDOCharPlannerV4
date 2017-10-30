@@ -1114,7 +1114,6 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 					//enable feature buttons that are being worked on
 					EnableWindow(DestinyPanelButton, true);
 					EnableWindow(SideDestinyButton, true);
-					EnableWindow(SideSkillButton, true);
 					EnableWindow(SideSpellButton, true);
 					return 0;
 

@@ -3,7 +3,7 @@
 #include "DataClass.h"
 #include "InterfaceManagerClass.h"
 #include "MainScreenClass.h"
-#include <time.h>
+#include "time.h"
 
 //---------------------------------------------------------------------------
 CharacterClass Character;
@@ -4451,12 +4451,16 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 //---------------------------------------------------------------------------
 bool CharacterClass::File_Exists(const std::string& name)
 	{
-		if (FILE *file = fopen(name.c_str(), "r")) {
-			fclose(file);
-			return true;
+		FILE *filepoint;
+		errno_t err;
+		if ((err = fopen_s(&filepoint, name.c_str(), "r")) != 0) {
+			// File could not be opened. filepoint was set to NULL
+			return false;
 		}
 		else {
-			return false;
+			// File was opened, filepoint can be used to read the stream.
+			fclose(filepoint);
+			return true;
 		}
 	}
 //---------------------------------------------------------------------------
@@ -4557,11 +4561,12 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 											{
 												ss.str("");
 												ss.clear();
-												time_t t = time(0);   // get time now
-												struct tm * now = localtime(&t);
-												ss << ' ' << (now->tm_year + 1900) << '-'
-													<< (now->tm_mon + 1) << '-'
-													<< now->tm_mday;
+												struct tm newtime;
+												time_t now = time(0);   // get time now
+												localtime_s(&newtime, &now);
+												ss << ' ' << (newtime.tm_year + 1900) << '-'
+													<< (newtime.tm_mon + 1) << '-'
+													<< newtime.tm_mday;
 
 												if (CharCount > 0)
 												{
@@ -4696,7 +4701,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 			if (GetSaveFileName(&FileOpen) == false)
 				return;
 
-			strcpy(FiletoOpen, FileOpen.lpstrFile);
+			strcpy_s(FiletoOpen, MAX_PATH, FileOpen.lpstrFile);
 			len = strlen(FiletoOpen);
 			FiletoOpen[len] = '\0';
 			//FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
@@ -5089,7 +5094,7 @@ void CharacterClass::Load(HWND hwnd)
     //if (FileHandle == INVALID_HANDLE_VALUE)
         //return;
 		
-		strcpy(FiletoOpen, FileOpen.lpstrFile);
+		strcpy_s(FiletoOpen,MAX_PATH, FileOpen.lpstrFile);
 		
 		len = strlen(FiletoOpen);
 		if (0 != len)
