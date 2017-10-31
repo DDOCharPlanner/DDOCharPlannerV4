@@ -221,11 +221,17 @@ void Screen_Destiny_Class::ActivateDestinyWindow(int Level)
 
 	ParentDC = GetDC(DestinyWindowHandle);
 	if (ParentDC == nullptr)
+	{
 		DEBUG("GetDC Fail");
+	}
+		
 
 	CharacterDestinies = Character.GetCharacterDestiniesPointer();
 	if (CharacterDestinies == nullptr)
+	{
 		DEBUG("GetCharacterDestiniesPointer Fail");
+	}
+		
 
 	//let set our variables
 	CharacterLevel = Level;
