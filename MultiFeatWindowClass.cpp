@@ -13,6 +13,8 @@ MultiFeatWindowClass::MultiFeatWindowClass()
 //---------------------------------------------------------------------------
 MultiFeatWindowClass::~MultiFeatWindowClass()
 {
+		DeleteObject(TitleFontLarge);
+		DeleteObject(DefaultFont);
 		DeleteGraphics();
 }
 //---------------------------------------------------------------------------
@@ -1285,7 +1287,6 @@ void MultiFeatWindowClass::DrawFeatSelectBoxItem(HDC hDC, unsigned int Index, DW
 		SetTextColor(hDC, OriginalColor);
 	}
 
-
 }
 //--------------------------------------------------------------------------
 void MultiFeatWindowClass::DrawFeatWishBoxItem(HDC hDC, unsigned int Index, DWORD Item, long top, long left)
@@ -1491,6 +1492,7 @@ void MultiFeatWindowClass::DrawLevelBars(HDC hdc)
 		SetTextColor(hdc, OldColor);
 	}
 	SetTextAlign(hdc, TA_LEFT);
+
 }
 //-------------------------------------------------------------------------
 void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
@@ -1714,6 +1716,7 @@ void MultiFeatWindowClass::DrawSelectPanel(HDC hdc)
 		SetTextColor(hdc, OldColor);
 
 	}
+
 }
 //-------------------------------------------------------------------------
 void MultiFeatWindowClass::FillSelectedPanel()
@@ -2172,10 +2175,5 @@ void MultiFeatWindowClass::DeleteGraphics()
 		DeleteObject(FeatIcon[i].Graphic);
 		DeleteObject(FeatIcon[i].Mask);
 	}
-
-
-
-
-
 }
 

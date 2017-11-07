@@ -611,7 +611,12 @@ void MainScreenClass::Show(bool State)
     ShowWindow(DescriptionWindow, State);
 
 	if (State == true)
-		DrawLevelBars(GetDC(ParentWindow));
+	{
+		HDC hdc;
+		hdc = GetDC(ParentWindow);
+		DrawLevelBars(hdc);
+		ReleaseDC(ParentWindow, hdc);
+	}
 
 	ShowRareSpells = false;
     }
@@ -8392,7 +8397,10 @@ void MainScreenClass::FitContent(string ContentWindowName, string DestWindowName
 void MainScreenClass::EnableErrorButton(bool State)
 	{
 	EnableWindow(DisplayErrorsButton, State);
-	DrawLevelBars(GetDC(ParentWindow));
+	HDC hdc;
+	hdc = GetDC(ParentWindow);
+	DrawLevelBars(hdc);
+	ReleaseDC(ParentWindow, hdc);
 	}
 
 //---------------------------------------------------------------------------

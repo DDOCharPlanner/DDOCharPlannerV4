@@ -337,7 +337,7 @@ void Screen_Destiny_Class::ChangeDestinyTreeRanks(bool flagIncrease)
 		RedrawWindow(DestinyWindowHandle, &rectFooter, NULL, RDW_ERASE | RDW_INVALIDATE);
 		UpdateWindow(DestinyWindowHandle);
 		DrawScreenTree(ParentDC);
-
+		ReleaseDC(DestinyWindowHandle, ParentDC);
 	}
 
 //--------------------------------------------------------------------------

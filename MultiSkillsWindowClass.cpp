@@ -1601,7 +1601,5 @@ void MultiSkillsWindowClass::DeleteGraphics()
 	DeleteObject(RightArrow.Mask);
 	DeleteObject(LeftArrow.Graphic);
 	DeleteObject(LeftArrow.Mask);
-
-
 	DeleteObject(Palette);
 }
