@@ -1803,17 +1803,17 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +2 to your Perform, a +2 to Bluff and a +2 to Haggle, plus an extra Song per rest.; 
+DESC1: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +2 to your Perform, a +2 to Bluff and a +2 to Haggle, plus an extra Song per rest.;
 MOD1: Skill,, Skill,, Skill;
 MODNAME1: Perform,, Bluff,, Haggle;
 MODTYPE1: Destiny,, Destiny,, Destiny;
 MODVALUE1: 2,, 2,, 2;
-DESC2: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +4 to your Perform, a +4 to Bluff and a +4 to Haggle, plus an extra Song per rest.; 
+DESC2: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +4 to your Perform, a +4 to Bluff and a +4 to Haggle, plus an extra Song per rest.;
 MOD2: Skill,, Skill,, Skill;
 MODNAME2: Perform,, Bluff,, Haggle;
 MODTYPE2: Destiny,, Destiny,, Destiny;
 MODVALUE2: 4,, 4,, 4;
-DESC3: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +6 to your Perform, a +6 to Bluff and a +6 to Haggle, plus an extra Song per rest.; 
+DESC3: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +6 to your Perform, a +6 to Bluff and a +6 to Haggle, plus an extra Song per rest.;
 MOD3: Skill,, Skill,, Skill;
 MODNAME3: Perform,, Bluff,, Haggle;
 MODTYPE3: Destiny,, Destiny,, Destiny;
@@ -1901,19 +1901,19 @@ DESC1: You are eminently fluent in your art. Magic vibrates from your every word
 MOD1: Skill,, Skill,, Skill;
 MODNAME1: Concentration,, Diplomacy,, Use Magic Device;
 MODTYPE1: Destiny,, Destiny,, Destiny;
-NODVALUE1: 2,, 2,, 1;
+MODVALUE1: 2,, 2,, 1;
 REQ1: EH: Allure [1-1-1];
 DESC2: You are eminently fluent in your art. Magic vibrates from your every word.\par \par Gain a +4 Concentration, a +4 to Diplomacy and a +2 to Use Magic Device, plus an extra Song per rest.;
 MOD2: Skill,, Skill,, Skill;
 MODNAME2: Concentration,, Diplomacy,, Use Magic Device;
 MODTYPE2: Destiny,, Destiny,, Destiny;
-NODVALUE2: 4,, 4,, 2;
+MODVALUE2: 4,, 4,, 2;
 REQ2: EH: Allure [1-1-2];
 DESC3: You are eminently fluent in your art. Magic vibrates from your every word.\par \par Gain a +6 Concentration, a +6 to Diplomacy and a +3 to Use Magic Device, plus an extra Song per rest.;
 MOD3: Skill,, Skill,, Skill;
 MODNAME3: Concentration,, Diplomacy,, Use Magic Device;
 MODTYPE3: Destiny,, Destiny,, Destiny;
-NODVALUE3: 6,, 6,, 3;
+MODVALUE3: 6,, 6,, 3;
 REQ1: EH: Allure [1-1-3];
 ICON: Lucidity;
 
@@ -2060,9 +2060,9 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 5d100 +700 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
-REQ1: EH: Siren's Song [3-0-1]; 
+REQ1: EH: Siren's Song [3-0-1];
 DESC2: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 6d100 +800 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
-REQ2: EH: Siren's Song [3-0-2]; 
+REQ2: EH: Siren's Song [3-0-2];
 DESC3: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 7d100 +900 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
 REQ3: EH: Siren's Song [3-0-3];
 ICON: ChordofDisruption;
@@ -2130,7 +2130,7 @@ TIER: 4;
 SLOT: 3;
 RANKS: 1;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par \par Echoes Stance.\par \par The songs of legend fill your soul. You are eternally inspired by the lords of the wild.\par \par +1 Constitution\par +25 maximum HP\par +2 to Fortitude saves\par If you have the Rage Feat, your Rage grants you an additional +1 Strength while raging.\par +3% chance to tripper weapon effects on glancing blows\par Inspire Courage grants an additional +1 damage and +1 to your saves vs. Fear.; 
+DESC1: Cooldown: 6 seconds\par \par Echoes Stance.\par \par The songs of legend fill your soul. You are eternally inspired by the lords of the wild.\par \par +1 Constitution\par +25 maximum HP\par +2 to Fortitude saves\par If you have the Rage Feat, your Rage grants you an additional +1 Strength while raging.\par +3% chance to tripper weapon effects on glancing blows\par Inspire Courage grants an additional +1 damage and +1 to your saves vs. Fear.;
 ICON: EchoesoftheAncestorsPrimal;
 
 MULTI: Stance: Echoes of the Ancestors, Primal;
@@ -2819,7 +2819,7 @@ TYPE: Passive;
 COST: 0;
 DESC1: The state you seek removes all grief, all craving, and all fear to bring the mind, body and soul into harmonious balance.\par \par This enhancement grants you Slippery Mind as a Bonus feat, allowing you extra saving throw when you fail a save versus enchantments. You also gain a +1 to the DC of saving throws against your tactical combat feats.;
 ICON: CenteredMind;
- 
+
 NAME: Wholeness of Spirit:
 TREE: Grandmaster of Flowers;
 TIER: 0;
@@ -2829,7 +2829,7 @@ TYPE: Active;
 COST: 0:
 DESC1: Activation Cost: 30 Ki\par Cooldown: 5 minutes\par \par As warm winds chase away snow and ice, so does new life begin from old.\par \par You may activate this ability to bring your mind, body, and soul into harmonious balance, restoring health as is you were affected by the benefits of a Heal spell, as well as curing all ability damage, negative levels, and other adverse conditions that may be affecting you.;
 ICON: WholenessofSpirit;
- 
+
 NAME: The Abiding Path;
 TREE: Grandmaster of Flowers;
 TIER: 0;
@@ -3921,8 +3921,8 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 1 AC and 5 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.; 
-DESC2: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 2 AC and 10 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.; 
+DESC1: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 1 AC and 5 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
+DESC2: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 2 AC and 10 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
 DESC3: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 3 AC and 15 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
 ICON: SigilofSpellWarding;
 
@@ -3947,7 +3947,7 @@ DESC1: From years of honing your mind, your wits have become quick to react to d
 MOD1: Saves;
 MODNAME1: Reflex;
 NODTYPE1: Destiny;
-MODVALUE1: 2; 
+MODVALUE1: 2;
 DESC2: From years of honing your mind, your wits have become quick to react to danger. You gain a further +1 Dodge and +2 to Reflex saves, for a total of +2 Dodge and +4 to Reflex saves.;
 MOD2: Saves;
 MODNAME2: Reflex;
@@ -5441,7 +5441,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cost: 35 Spell Points\par Cooldown: 5 seconds\par Form: You become an Avatar of Nature. Every 3 seconds, you gain +1 size, +2 Strength, +2 Constitution, a large bonus to damage based on size, and lose some movement speed and cannot jump or cast spells. These bonunses increas up to size 4.\par \par Size 1+: +50 size bonus to Physical Resistance.\par \par Size 2+: When you attack enemies they become poisoned, taking 2d10 poison damage every 2 seconds for several seconds. This poison stacks up to 5 times.\par \par Size 3+: Enemies attacking you have a chance to become diseased, dealing 1d4 Constitution damage every two seconds for 10 seconds.\par \par Size 4: The ground shakes when you put your foot down. Your third attack while standing still knocks down nearby enemies and deals extra bludgeoning damage in an area.\par \par This costs 1 Spirit every few seconds per size you've gained (Turns off if you run out of Spirit.)\par \par You can only be in one form at a time.; 
+DESC1: Cost: 35 Spell Points\par Cooldown: 5 seconds\par Form: You become an Avatar of Nature. Every 3 seconds, you gain +1 size, +2 Strength, +2 Constitution, a large bonus to damage based on size, and lose some movement speed and cannot jump or cast spells. These bonunses increas up to size 4.\par \par Size 1+: +50 size bonus to Physical Resistance.\par \par Size 2+: When you attack enemies they become poisoned, taking 2d10 poison damage every 2 seconds for several seconds. This poison stacks up to 5 times.\par \par Size 3+: Enemies attacking you have a chance to become diseased, dealing 1d4 Constitution damage every two seconds for 10 seconds.\par \par Size 4: The ground shakes when you put your foot down. Your third attack while standing still knocks down nearby enemies and deals extra bludgeoning damage in an area.\par \par This costs 1 Spirit every few seconds per size you've gained (Turns off if you run out of Spirit.)\par \par You can only be in one form at a time.;
 ICON: AvatarofNature;
 
 MULTI: Strength or Wisdom;
@@ -6631,7 +6631,7 @@ COST: 2;
 DESC1: You gain the Turn Undead feat. While enjoying the Vigor of Battle, weapons you equip gain undead bane: Against Undead they gain +2 enhancement bonus and deal +2d6 extra damage.;
 ICON: BaneofUndeath;
 
-NAME: Endless Turning; 
+NAME: Endless Turning;
 TREE: Unyielding Sentinel;
 TIER: 1;
 SLOT: 1;
@@ -6642,7 +6642,7 @@ DESC1: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 10% 
 REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Bane of Undeath - Turn Undead: Cleric, Turn Undead: Paladin ///
 DESC2: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 20% faster if it already regenerates.;
 DESC3: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 30% faster if it already regenerates.;
-ICON: EndlessTurning; 
+ICON: EndlessTurning;
 
 NAME: Brace for Impact;
 TREE: Unyielding Sentinel;
@@ -6800,7 +6800,7 @@ DESC2: While blocking, you absorb 20% of Acid, Cold, Electric, Fire, force, Ligh
 DESC3: While blocking, you absorb 30% of Acid, Cold, Electric, Fire, force, Light and Sonic damage.;
 ICON: BlockEnergy;
 
-NAME: Intolerant Blows; 
+NAME: Intolerant Blows;
 TREE: Unyielding Sentinel;
 TIER: 3;
 SLOT: 1;
@@ -6865,7 +6865,7 @@ MODTYPE1: Destiny;
 MODVALUE1: 1;
 ICON: Charisma;
 
-NAME: Spark of Life; 
+NAME: Spark of Life;
 TREE: Unyielding Sentinel;
 TIER: 4;
 SLOT: 1;
@@ -6928,7 +6928,7 @@ MODTYPE1: Destiny;
 MODVALUE1: 1;
 ICON: Charisma;
 
-NAME: Hardened; 
+NAME: Hardened;
 TREE: Unyielding Sentinel;
 TIER: 5;
 SLOT: 0;
@@ -6938,7 +6938,7 @@ COST: 1;
 DESC1: +3 AC.;
 DESC2: +6 AC.;
 DESC3: +10 AC.;
-ICON: Hardened; 
+ICON: Hardened;
 
 NAME: Ward Against Evil;
 TREE: Unyielding Sentinel;
