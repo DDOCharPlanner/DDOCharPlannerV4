@@ -6,25 +6,25 @@ TREE: 		**(Required) Name of Tree that this enhancement belongs too
 LEVEL: 		**(Required) What level of the tree is the enhancement in (0, 1, 2, 3, 4, or 5)
 SLOT: 		**(Required) What column the enhancement is in (0, 1, 2, 3, 4, or 5)
 RANKS:		**(Required) Number for ranks this enhancement can have. (1, 2, 3)
-TYPE:		**(Required) is this enhancement an Active or Passive one.	
+TYPE:		**(Required) is this enhancement an Active or Passive one.
 COST:		**(Required) how many action points does it cost to select this enhancement and its ranks
 DESC1: 		//Description of enhancements rank 1
 REQ1:		//A list of Requirements to be able to select this enhancement.
 REQONE1:	//A list of Requirements where at least one is needed to select this enhancement
 LOCK1:		//A list of enhancements that can lock this enhancement from being taken.
-MOD1:		//A list of what is modified by this enhancement if passive. Each Value needs its own type. ie Spot and Search would be MOD1: Skill, Skill 
+MOD1:		//A list of what is modified by this enhancement if passive. Each Value needs its own type. ie Spot and Search would be MOD1: Skill, Skill
 		Possible Mod types are (Ability, Skill, Save, Attribute)
 MODNAME1:	//Name of specific Mod being modified one for each MOD above.  Possible values
 		Ability:
 			Hit Points
 			Spell Points
 			Spellcraft
-		
+
 		Save:
 			Fortitude
 			Reflex
 			Will
-	
+
 		Skill:
 			Balance
 			Bluff
@@ -54,14 +54,14 @@ MODNAME1:	//Name of specific Mod being modified one for each MOD above.  Possibl
 			Intelligence
 			Strength
 			Wisdom
-		
+
 MODVALUE1:	//What is the Value of the change(a numeric value), one for each MOD.
 DESC2: 		//Description of enhancements rank 2
 REQ2:
 REQONE2:
-LOCK2: 
-MOD2: 
-MODNAME2: 
+LOCK2:
+MOD2:
+MODNAME2:
 MODVALUE2:
 DESC3: 		//Description of enhancements rank 3
 REQ3:
@@ -859,7 +859,7 @@ NAME: Bold;
 TREE: Aasimar;
 LEVEL: 1;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: You overcome fear Quickly. Fear and shaken effects are removed form you after 12 seconds.;
@@ -932,7 +932,7 @@ NAME: Divine Resolve: Fallen;
 TREE: Aasimar;
 LEVEL: 2;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 Strengthe while your Divine Purpose is active;
@@ -947,7 +947,7 @@ NAME: Divine Resolve: Protector;
 TREE: Aasimar;
 LEVEL: 2;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 Charisma while your Divine Purpose is active.;
@@ -982,7 +982,7 @@ NAME: Blessings;
 TREE: Aasimar;
 LEVEL: 3;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 3;
 DESC1: +10 Positive Spell Power;
@@ -1265,7 +1265,7 @@ NAME: Bold;
 TREE: Scourge;
 LEVEL: 1;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: You overcome fear Quickly. Fear and shaken effects are removed form you after 12 seconds.;
@@ -1369,7 +1369,7 @@ NAME: Blessings;
 TREE: Scourge;
 LEVEL: 3;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 3;
 DESC1: +10 Positive Spell Power;
@@ -1653,7 +1653,7 @@ DESC1: Adamantine Durability: Grants +4 Physical Resistance Rating.;
 REQ1: Feat: Adamantine Body;
 DESC2: Adamantine Durability: Grants +8 Physical Resistance Rating.;
 DESC3: Adamantine Durability: Grants +12 Physical Resistance Rating.;
-ICON: BDFG_CommunionofWarding;
+ICON: BDFG_CommunionOfWarding;
 
 NAME: Brute Fighting;
 TREE: Bladeforged;
@@ -1737,7 +1737,7 @@ ICON: BDFG_PoweroftheForge;
 [ENDOFTREE]
 
 [Deep Gnome] **** (Update 02-11-2016) ********************************************************
- 
+
 NAME: Wariness;
 TREE: Deep Gnome;
 LEVEL: 0;
@@ -1942,7 +1942,7 @@ TYPE: Active;
 COST: 1;
 DESC1: Activation Cost: 25 Spell Points\par Cooldown: 10 Seconds\par Conujure a boulder and hurl it at an enemy, dealing 6d4 bludgeoning damage and knocking down enemy on failed reflex save DC 10 + INT modifier.\par\par \cf1 Spell Resistance: No;
 DESC2: Activation Cost: 15 Spell Points\par Cooldown: 8 Seconds\par Conujure a boulder and hurl it at an enemy, dealing 12d4 bludgeoning damage and knocking down enemy on failed reflex save DC 15 + INT modifier.\par\par \cf1 Spell Resistance: No;
-DESC3: Activation Cost: 5 Spell Points\par Cooldown: 6 Seconds\par Conujure a boulder and hurl it at an enemy, dealing 20d4 bludgeoning damage and knocking down enemy on failed reflex save DC 20 + INT modifier.\par\par \cf1 Spell Resistance: No; 
+DESC3: Activation Cost: 5 Spell Points\par Cooldown: 6 Seconds\par Conujure a boulder and hurl it at an enemy, dealing 20d4 bludgeoning damage and knocking down enemy on failed reflex save DC 20 + INT modifier.\par\par \cf1 Spell Resistance: No;
 ICON: DPGN_ConjureRock;
 
 NAME: Hardy Nature;
@@ -2292,7 +2292,7 @@ NAME: Undaunted;
 TREE: Dragonborn;
 LEVEL: 1;
 SLOT: 4;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 Fortitude;
@@ -2929,7 +2929,7 @@ DESC2: You gain +1 to hit and +1% dodge when dual-wielding or fighting unarmed.;
 DESC3: You gain +1 to hit and damage and +1% dodge when dual-wielding or fighting unarmed.;
 ICON: DROW_Ambidexterity;
 
-**NAME: Darkfire;
+NAME: Darkfire;
 TREE: Drow;
 LEVEL: 3;
 SLOT: 0;
@@ -3560,7 +3560,7 @@ DESC2: Your senses are so acute that you no longer need to spend time searching 
 REQ2: EH: Keen Senses [1-2-2];
 DESC3: Your senses are so acute that you no longer need to spend time searching for the obvious. You will automatically perform a Search check to locate traps and secret doors when you are in range to Spot them, although this Search check occurs at a -8 penalty.;
 REQ3: EH: Keen Senses [1-2-3];
-ICON: ELF_NothingisHidden;
+ICON: ELF_NothingIsHidden;
 
 MULTI: Elven Weapon Training;
 MSLOT: 1;
@@ -3632,7 +3632,7 @@ REQ1: EH: Enchantment Lore [2-1-1];
 DESC2: Activation Cost: 1 Hit Points\par Cooldown: 2 minutes\par Activate: A drop of blood lets you tap into the endless energy of the realm of the fey, giving yourself or an ally temporary spell points, 10% incorporeality, and a -2 penalty to Will saving throws while they last. This ability can be used three times per rest.;
 REQ2: EH: Enchantment Lore [2-1-2];
 DESC3: Activation Cost: 1 Hit Points\par Cooldown: 2 minutes\par Activate: A drop of blood lets you tap into the endless energy of the realm of the fey, giving yourself or an ally temporary spell points, 10% incorporeality, and a -2 penalty to Will saving throws while they last. This ability can be used five times per rest.;
-REQ3: EH: Enchantment Lore [2-1-3]; 
+REQ3: EH: Enchantment Lore [2-1-3];
 ICON: ELF_FeywildTap;
 
 NAME: Fey Sight;
@@ -3760,7 +3760,7 @@ ICON: ELF_Skill;
 [ENDOFTREE]
 
 [Gnome] **** (Update 02-11-2016) ********************************************************
- 
+
 NAME: Gnomish Perserverance;
 TREE: Gnome;
 LEVEL: 0;
@@ -3953,7 +3953,7 @@ COST: 1;
 DESC1: Gnomes have passed their tactics for eluding Giants down over generations.\par \par +2 to Saving Throws and Armor Class against Giants.;
 DESC2: Gnomes have passed their tactics for eluding Giants down over generations.\par \par +4 to Saving Throws and Armor Class against Giants.;
 DESC3: Gnomes have passed their tactics for eluding Giants down over generations.\par \par +6 to Saving Throws and Armor Class against Giants.;
-ICON: GNME_AgainsttheGiants;
+ICON: GNME_AgainstTheGiants;
 
 NAME: Color Spray;
 TREE: Gnome;
@@ -4072,7 +4072,7 @@ ICON: GNME_GnomishWeaponTrainingIIII;
 [ENDOFTREE]
 
 [Halfling] **** (Update 08-09-2012) ********************************************************
- 
+
 NAME: Halfling Luck;
 TREE: Halfling;
 LEVEL: 0;
@@ -4999,7 +4999,7 @@ DESC1: Your knowledge of magical items has improved, and now extends to potions.
 REQ1: Feat: Half-Elf Dilettante: Artificer;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteArtificer;
 
 MULTI: Improved Dilettante;
@@ -5031,7 +5031,7 @@ DESC1: For item use purposes you are now treated as a third level Bard (or your 
 REQ1: Feat: Half-Elf Dilettante: Bard;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteBard;
 
 MULTI: Improved Dilettante;
@@ -5047,7 +5047,7 @@ DESC1: For item use purposes you are now treated as a third level Cleric (or you
 REQ1: Feat: Half-Elf Dilettante: Cleric;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteCleric;
 
 MULTI: Improved Dilettante;
@@ -5063,7 +5063,7 @@ DESC1: For item use purposes you are now treated as a third level Druid (or your
 REQ1: Feat: Half-Elf Dilettante: Druid;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteDruid;
 
 MULTI: Improved Dilettante;
@@ -5079,7 +5079,7 @@ DESC1: For item use purposes you are now treated as a third level Favored Soul (
 REQ1: Feat: Half-Elf Dilettante: Favored Soul;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteFavoredSoul;
 
 MULTI: Improved Dilettante;
@@ -5160,7 +5160,7 @@ DESC1: For item use purposes you are now treated as a third level Sorcerer (or y
 REQ1: Feat: Half-Elf Dilettante: Sorcerer;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 ICON: HELF_ImprovedDilettanteSorcerer;
 
 MULTI: Improved Dilettante;
@@ -5169,13 +5169,13 @@ NAME: Improved Dilettante (Warlock);
 TREE: Half Elf;
 LEVEL: 1;
 SLOT: 3;
-Type: Passive;
+TYPE: Passive;
 RANKS: 1;
 COST: 1;
 DESC1: For item purposes you are now treated as a third level Warlock (or your total character level, whichever is lower)/par +30 Spell Points;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODVALUE: 30;
+MODVALUE1: 30;
 REQ1: Feat: Half-Elf Dilettante: Warlock;
 ICON: HELF_ImprovedDilettanteWarlock;
 
@@ -5293,7 +5293,7 @@ COST: 2;
 DESC1: +5 Universal Spell Power;
 REQ1: EHM: Improved Dilettante [1-3-1];
 REQONE1: Feat: Half-Elf Dilettante: Artificer, Feat: Half-Elf Dilettante: Bard, Feat: Half-Elf Dilettante: Cleric, Feat: Half Elf Dilettante: Druid, Feat: Half-Elf Dilettante: Favored Soul, Feat: Half-Elf Dilettante: Sorcerer, Feat: Half-Elf Dilettante: Wizard, Feat: Half-Elf Dilettante: Warlock;
-ICON: HELF_ImprovedSpellCastingI;
+ICON: HELF_ImprovedSpellcastingI;
 
 MULTI: Dilettante Special Ability;
 MSLOT: 6;
@@ -5790,7 +5790,7 @@ COST: 2;
 DESC1: +5 Universal Spell Power;
 REQONE1: Feat: Half-Elf Dilettante: Artificer, Feat: Half-Elf Dilettante: Bard, Feat: Half-Elf Dilettante: Cleric, Feat: Half-Elf Dilettante: Druid, Feat: Half-Elf Dilettante: Favored Soul, Feat: Half-Elf Dilettante: Sorcerer, Feat: Half-Elf Dilettante: Wizard, Feat: Half-Elf Dilettante: Warlock;
 REQ1: EHM: Improved Dilettante [4-3-1];
-ICON: HELF_ImprovedSpellCastingII;
+ICON: HELF_ImprovedSpellcastingII;
 
 MULTI: Dilettante Special Ability;
 MSLOT: 4;
@@ -7631,7 +7631,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Charisma.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Charisma [1-2-1], EH: Action Surge: Charisma [2-2-1]; 
+LOCK1: EH: Action Surge: Charisma [1-2-1], EH: Action Surge: Charisma [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Charisma.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Charisma.;
@@ -7649,7 +7649,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Constitution.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Constitution [1-2-1], EH: Action Surge: Constitution [2-2-1]; 
+LOCK1: EH: Action Surge: Constitution [1-2-1], EH: Action Surge: Constitution [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Constitution.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Constitution.;
@@ -7667,7 +7667,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Dexterity.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Dexterity [1-2-1], EH: Action Surge: Dexterity [2-2-1]; 
+LOCK1: EH: Action Surge: Dexterity [1-2-1], EH: Action Surge: Dexterity [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Dexterity.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Dexterity.;
@@ -7685,7 +7685,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Intelligence.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Intelligence [1-2-1], EH: Action Surge: Intelligence [2-2-1]; 
+LOCK1: EH: Action Surge: Intelligence [1-2-1], EH: Action Surge: Intelligence [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Intelligence.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Intelligence.;
@@ -7703,7 +7703,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Strength.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Strength [1-2-1], EH: Action Surge: Strength [2-2-1]; 
+LOCK1: EH: Action Surge: Strength [1-2-1], EH: Action Surge: Strength [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Strength.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Strength.;
@@ -7721,7 +7721,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Wisdom.;
 REQ1: EHM: Action Surge [2-2-1];
-LOCK1: EH: Action Surge: Wisdom [1-2-1], EH: Action Surge: Wisdom [2-2-1]; 
+LOCK1: EH: Action Surge: Wisdom [1-2-1], EH: Action Surge: Wisdom [2-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Wisdom.;
 REQ2: EHM: Action Surge [2-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Wisdom.;
@@ -7760,7 +7760,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Charisma.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Charisma [1-2-1], EH: Action Surge: Charisma [2-2-1], EH: Action Surge: Charisma [3-2-1]; 
+LOCK1: EH: Action Surge: Charisma [1-2-1], EH: Action Surge: Charisma [2-2-1], EH: Action Surge: Charisma [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Charisma.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Charisma.;
@@ -7778,7 +7778,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Constitution.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Constitution [1-2-1], EH: Action Surge: Constitution [2-2-1], EH: Action Surge: Constitution [3-2-1]; 
+LOCK1: EH: Action Surge: Constitution [1-2-1], EH: Action Surge: Constitution [2-2-1], EH: Action Surge: Constitution [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Constitution.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Constitution.;
@@ -7796,7 +7796,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Dexterity.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Dexterity [1-2-1], EH: Action Surge: Dexterity [2-2-1], EH: Action Surge: Dexterity [3-2-1]; 
+LOCK1: EH: Action Surge: Dexterity [1-2-1], EH: Action Surge: Dexterity [2-2-1], EH: Action Surge: Dexterity [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Dexterity.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Dexterity.;
@@ -7814,7 +7814,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Intelligence.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Intelligence [1-2-1], EH: Action Surge: Intelligence [2-2-1], EH: Action Surge: Intelligence [3-2-1]; 
+LOCK1: EH: Action Surge: Intelligence [1-2-1], EH: Action Surge: Intelligence [2-2-1], EH: Action Surge: Intelligence [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Intelligence.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Intelligence.;
@@ -7832,7 +7832,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Strength.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Strength [1-2-1], EH: Action Surge: Strength [2-2-1], EH: Action Surge: Strength [3-2-1]; 
+LOCK1: EH: Action Surge: Strength [1-2-1], EH: Action Surge: Strength [2-2-1], EH: Action Surge: Strength [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Strength.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Strength.;
@@ -7850,7 +7850,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: While under the effects of any Action Boost, you gain a +1 Action Boost bonus to Wisdom.;
 REQ1: EHM: Action Surge [3-2-1];
-LOCK1: EH: Action Surge: Wisdom [1-2-1], EH: Action Surge: Wisdom [2-2-1], EH: Action Surge: Wisdom [3-2-1]; 
+LOCK1: EH: Action Surge: Wisdom [1-2-1], EH: Action Surge: Wisdom [2-2-1], EH: Action Surge: Wisdom [3-2-1];
 DESC2: While under the effects of any Action Boost, you gain a +2 Action Boost bonus to Wisdom.;
 REQ2: EHM: Action Surge [3-2-2];
 DESC3: While under the effects of any Action Boost, you gain a +3 Action Boost bonus to Wisdom.;
@@ -8046,7 +8046,7 @@ DESC2: Your senses are so acute that you no longer need to spend time searching 
 REQ2: EH: Keen Senses [1-2-2];
 DESC3: Your senses are so acute that you no longer need to spend time searching for the obvious. You will automatically perform a Search check to locate traps and secret doors when you are in range to Spot them, although this Search check occurs at a -4 penalty.;
 REQ3: EH: Keen Senses [1-2-3];
-ICON: MNLD_NothingisHidden;
+ICON: MNLD_NothingIsHidden;
 
 NAME: Morninglord Weapon Training;
 TREE: Morninglord;
@@ -8104,7 +8104,7 @@ REQ1: EH: Enchantment Lore [2-1-1];
 DESC2: Activation Cost: 1 Hit Points\par Cooldown: 2 minutes\par Activate: A drop of blood lets you tap into the endless energy of the realm of the fey, giving yourself or an ally temporary spell points, 10% incorporeality, and a -2 penalty to Will saving throws while they last. This ability can be used three times per rest.;
 REQ2: EH: Enchantment Lore [2-1-2];
 DESC3: Activation Cost: 1 Hit Points\par Cooldown: 2 minutes\par Activate: A drop of blood lets you tap into the endless energy of the realm of the fey, giving yourself or an ally temporary spell points, 10% incorporeality, and a -2 penalty to Will saving throws while they last. This ability can be used five times per rest.;
-REQ3: EH: Enchantment Lore [2-1-3]; 
+REQ3: EH: Enchantment Lore [2-1-3];
 ICON: MNLD_FeywildTap;
 
 NAME: Fey Sight;
@@ -10337,7 +10337,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: Immunity to most knockdown effects\par +10 Electric and Sonic Spell Power\par +1 Caster Level when casting Electric, Sonic and Air spells\par +1 Maximum Caster Level when casting Electric, SOnic and Air spells\par -10 Acid Spell Power\par -1 Caster Level when casting Acid or Earth spells;
 REQ1: EH: Conduction [0-3-1];
-ICON: AIRS_LightonYourFeet;
+ICON: AIRS_LightOnYourFeet;
 
 NAME: Elemental Apotheosis;
 TREE: Air Savant (Sor);
@@ -10515,7 +10515,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: Whenever you cast an Electric or Sonic damage spell, you have a 10% chance to gain 3 Temporary Spell Points.;
-REQ1: EH: Electrocution [1-4-1]; 
+REQ1: EH: Electrocution [1-4-1];
 DESC2: Whenever you cast an Electric or Sonic damage spell, you have a 20% chance to gain 3 Temporary Spell Points.;
 REQ2: EH: Electrocution [1-4-2];
 DESC3: Whenever you cast an Electric or Sonic damage spell, you have a 30% chance to gain 3 Temporary Spell Points.;
@@ -10818,7 +10818,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: For each action point spent in this tree, you gain +1 Universal Spell Power and +2 Spell Points;
-ICON: AOFV_FontofPower;
+ICON: AOFV_FontOfPower;
 
 NAME: Shield of Condemnation;
 TREE: Angel of Vengeance (Fvs);
@@ -11191,7 +11191,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: Your deity's favored weapon is considered a Spellcasting Implement in your hands.;
-ICON: AOFV_ArticlesofFaith;
+ICON: AOFV_ArticlesOfFaith;
 
 NAME: Spell Power Boost;
 TREE: Angel of Vengeance (Fvs);
@@ -11463,7 +11463,7 @@ ICON: AOFV_ZealousFaith;
 
 NAME: Arcane Archer;
 TREE: Arcane Archer (Elf);
-LEVEL: 0; 
+LEVEL: 0;
 SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
@@ -11570,7 +11570,7 @@ LOCK1: Feat: Magical Training;
 MOD3: Ability;
 MODNAME3: Spell Points;
 MODVALUE3: +100;
-ICON: AAEL_EnergyoftheWild;
+ICON: AAEL_EnergyOfTheWild;
 
 MULTI: Elemental Arrows;
 MSLOT: 1;
@@ -12106,7 +12106,7 @@ ICON: AAEL_Runebow;
 
 NAME: Arcane Archer;
 TREE: Arcane Archer (Rgr);
-LEVEL: 0; 
+LEVEL: 0;
 SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
@@ -12213,7 +12213,7 @@ LOCK1: Feat: Magical Training;
 MOD3: Ability;
 MODNAME3: Spell Points;
 MODVALUE3: +100;
-ICON: AARG_EnergyoftheWild;
+ICON: AARG_EnergyOfTheWild;
 
 MULTI: Elemental Arrows;
 MSLOT: 1;
@@ -13612,7 +13612,7 @@ REQ1: EHM: Archmage Specialization V;
 MOD1: Ability, Skill;
 MODNAME1: Intelligence, Spellcraft;
 MODVALUE1: 2, 5;
-ICON: ARCM_MasterofMagic;
+ICON: ARCM_MasterOfMagic;
 
 NAME: Subtle Spellcasting;
 TREE: Archmage (Wiz);
@@ -14762,7 +14762,7 @@ COST: 1;
 DESC1: Gain +6 Melee Power, +2 Dodge, +2 Maximum Dodge, +1 to hit and +1 to the DC's of your Assassinate abilities for every 4 seconds you remain stealthed. This effect stacks up to five times, and lasts 10 seconds after you come out of stealth.;
 DESC2: Gain +6 Melee Power, +2 Dodge, +2 Maximum Dodge, +1 to hit and +1 to the DC's of your Assassinate abilities for every 2 seconds you remain stealthed. This effect stacks up to five times, and lasts 10 seconds after you come out of stealth.;
 DESC3: Gain +6 Melee Power, +2 Dodge, +2 Maximum Dodge, +1 to hit and +1 to the DC's of your Assassinate abilities for every 1 second you remain stealthed. This effect stacks up to five times, and lasts 10 seconds after you come out of stealth.;
-ICON: ASSN_MeasuretheFoe;
+ICON: ASSN_MeasureTheFoe;
 
 NAME: Deadly Strikes;
 TREE: Assassin (Rog);
@@ -14808,8 +14808,8 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your equipped rune arm grants you +8 Universal Spell Power when it is charged to Charge Tier 1.; 
-ICON: BTEN_BattleEngineer;	
+DESC1: Your equipped rune arm grants you +8 Universal Spell Power when it is charged to Charge Tier 1.;
+ICON: BTEN_BattleEngineer;
 
 NAME: Infused Weapons;
 TREE: Battle Engineer (Art);
@@ -14820,7 +14820,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: Your equipped weapon in your main hand gains +1 to its Enhancement bonus. Additionally, you gain +1 bonus to your attack roll to confirm a critical hit, and a +1 bonus to the damage of your critical hits (before multipliers). Your equipped rune arm gains +1 stable charge tier. In addition, it grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 2, for a total of +16.;
 REQ1: EH: Battle Engineer [0-0-1];
-ICON: BTEN_InfusedWeapons;	
+ICON: BTEN_InfusedWeapons;
 
 NAME: Infused Armor;
 TREE: Battle Engineer (Art);
@@ -14842,7 +14842,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: Your equipped weapon in your main hand gains an additional +1 to its Enhancement bonus, for a total of +2. You also gain an additional +1 bonus to your attack roll to confirm a critical hit, and a +1 bonus to the damage of your critical hits (before multipliers), for a total of +2. Your equipped rune arm gains +1 stable charge tier. In addition, it grants you an additional +8 Universal Spell Power when it is charged to Charge Tier 4, for a total of +32.;
 REQ1: EH: Infused Armor [0-2-1];
-ICON: BTEN_InfusedWeapons;	
+ICON: BTEN_InfusedWeapons;
 
 NAME: Infused Armor;
 TREE: Battle Engineer (Art);
@@ -15283,7 +15283,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: 3% Doublestrike and Doubleshot while wearing a Rune Arm.;
 DESC2: 6% Doublestrike and Doubleshot while wearing a Rune Arm.;
-DESC4: 10% Doublestrike and Doubleshot while wearing a Rune Arm.;
+DESC3: 10% Doublestrike and Doubleshot while wearing a Rune Arm.;
 ICON: BTEN_AgilityEngine;
 
 MULTI: Strength, Dexterity, or Intelligence;
@@ -15437,7 +15437,7 @@ ICON: BTEN_TacticalMobility;
 
 NAME: Far Shot;
 TREE: Deepwood Stalker (Rgr);
-LEVEL: 0; 
+LEVEL: 0;
 SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
@@ -16267,7 +16267,7 @@ COST: 1;
 DESC1: +3 Universal Spellpower;
 DESC2: +3 Universal Spellpower;
 DESC3: +3 Universal Spellpower;
-ICON: DVDS_SpellpowerUniversal;
+ICON: DVDS_SpellPowerUniversal;
 
 NAME: Divine Vitality;
 TREE: Divine Disciple (Clr);
@@ -16392,7 +16392,7 @@ COST: 1;
 DESC1: +3 Universal Spellpower;
 DESC2: +3 Universal Spellpower;
 DESC3: +3 Universal Spellpower;
-ICON: DVDS_SpellpowerUniversal;
+ICON: DVDS_SpellPowerUniversal;
 
 MULTI: Efficient Metamagic;
 MSLOT: 1;
@@ -16633,7 +16633,7 @@ COST: 1;
 DESC1: +3 Universal Spellpower;
 DESC2: +3 Universal Spellpower;
 DESC3: +3 Universal Spellpower;
-ICON: DVDS_SpellpowerUniversal;
+ICON: DVDS_SpellPowerUniversal;
 
 MULTI: Efficient Metamagic;
 MSLOT: 1;
@@ -16817,7 +16817,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: +9 universal spellpower;
-ICON: DVDS_SpellpowerUniversal;
+ICON: DVDS_SpellPowerUniversal;
 
 NAME: Efficient Heighten;
 TREE: Divine Disciple (Clr);
@@ -16977,7 +16977,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: +9 universal spellpower;
-ICON: DVDS_SpellpowerUniversal;
+ICON: DVDS_SpellPowerUniversal;
 
 NAME: Divine Empowerment;
 TREE: Divine Disciple (Clr);
@@ -17224,7 +17224,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: Whenever you cast an Acid damage spell, you have a 10% chance to gain 3 Temporary Spell Points.;
-REQ1: EH: Erosion [1-4-1]; 
+REQ1: EH: Erosion [1-4-1];
 DESC2: Whenever you cast an Acid damage spell, you have a 20% chance to gain 3 Temporary Spell Points.;
 REQ2: EH: Erosion [1-4-2];
 DESC3: Whenever you cast an Acid damage spell, you have a 30% chance to gain 3 Temporary Spell Points.;
@@ -17468,7 +17468,7 @@ TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 15 Spell Points\par Cooldown: 15 seconds\par Earthen hands grasp your foe, rendering them helpless and dealing bludgeoning damage over time on a failed Reflex save (DC: 10 + Constitution Modifier + Sorcerer Level).;
 REQ1: EH: Earthen Armour [4-2-1];
-ICON: ERTS_EarthGrab;
+ICON: ERTS_Earthgrab;
 
 NAME: Conjuration Focus;
 TREE: Earth Savant (Sor);
@@ -17535,7 +17535,7 @@ MULTI: Spellsword;
 MSLOT: 1;
 NAME: Spellsword: Acid;
 TREE: Eldritch Knight (Sor);
-LEVEL: 0;f
+LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
 TYPE: Active;
@@ -17886,7 +17886,7 @@ COST: 1;
 DESC1: +25% effectiveness of your wands, scrolls, and other items that cast spells, and +1 to the save DCs of your offensive wands.;
 DESC2: +50% effectiveness of your wands, scrolls, and other items that cast spells, and +2 to the save DCs of your offensive wands.;
 DESC3: +75% effectiveness of your wands, scrolls, and other items that cast spells, and +3 to the save DCs of your offensive wands.;
-ICON: EKSR_WandandScrollMastery;
+ICON: EKSR_WandAndScrollMastery;
 
 NAME: Arcane Barrier;
 TREE: Eldritch Knight (Sor);
@@ -18479,7 +18479,7 @@ COST: 1;
 DESC1: +25% effectiveness of your wands, scrolls, and other items that cast spells, and +1 to the save DCs of your offensive wands.;
 DESC2: +50% effectiveness of your wands, scrolls, and other items that cast spells, and +2 to the save DCs of your offensive wands.;
 DESC3: +75% effectiveness of your wands, scrolls, and other items that cast spells, and +3 to the save DCs of your offensive wands.;
-ICON: EKWZ_WandandScrollMastery;
+ICON: EKWZ_WandAndScrollMastery;
 
 NAME: Arcane Barrier;
 TREE: Eldritch Knight (Wiz);
@@ -18828,7 +18828,7 @@ NAME: Brute Fighting;
 TREE: Enlightened Spirit (Wlk);
 LEVEL: 1;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 2 Seconds \par Toggle: Your damaging attacks generate 25% more hate than they normally would, making enemies more likely to attack you.;
@@ -19370,7 +19370,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: Whenever you cast an Fire damage spell, you have a 10% chance to gain 3 Temporary Spell Points.;
-REQ1: EH: Conflagration [1-4-1]; 
+REQ1: EH: Conflagration [1-4-1];
 DESC2: Whenever you cast an Fire damage spell, you have a 20% chance to gain 3 Temporary Spell Points.;
 REQ2: EH: Conflagration [1-4-2];
 DESC3: Whenever you cast an Fire damage spell, you have a 30% chance to gain 3 Temporary Spell Points.;
@@ -20038,7 +20038,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: While barbarian raging, you gain +5 Melee power and your attacks gain +1[W] to damage.;
-ICON: FRBZ_RagingBlows;
+ICON: FRBZ_Ragingblows;
 
 NAME: Tantrum;
 TREE: Frenzied Berserker (Bar);
@@ -20089,7 +20089,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Charisma; 
+DESC1: +1 Charisma;
 MOD1: Ability;
 MODNAME1: Charisma;
 MODVALUE1: 1;
@@ -20105,7 +20105,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Intelligence; 
+DESC1: +1 Intelligence;
 MOD1: Ability;
 MODNAME1: Intelligence;
 MODVALUE1: 1;
@@ -20148,7 +20148,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Charisma; 
+DESC1: +1 Charisma;
 MOD1: Ability;
 MODNAME1: Charisma;
 MODVALUE1: 1;
@@ -20164,7 +20164,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Intelligence; 
+DESC1: +1 Intelligence;
 MOD1: Ability;
 MODNAME1: Intelligence;
 MODVALUE1: 1;
@@ -20252,7 +20252,7 @@ DESC2: +2 to Listen, Search, and Spot.;
 MOD2: Skill, Skill, Skill;
 MODNAME2: Listen, Search, Spot;
 MODVALUE2: 2, 2, 2;
-DESC3: +3 to Listen, Search, and Spot. +1 Save vs. Traps.; 
+DESC3: +3 to Listen, Search, and Spot. +1 Save vs. Traps.;
 MOD3: Skill, Skill, Skill;
 MODNAME3: Listen, Search, Spot;
 MODVALUE3: 3, 3, 3;
@@ -20371,7 +20371,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Construct feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Construct feat, dealing +2 damage against those enemies.;
 ICON: HPAG_Construct;
 
 MULTI: Know Your Foe;
@@ -20383,7 +20383,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Dragon feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Dragon feat, dealing +2 damage against those enemies.;
 ICON: HPAG_Dragon;
 
 MULTI: Know Your Foe;
@@ -20395,7 +20395,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Evil Outsider feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Evil Outsider feat, dealing +2 damage against those enemies.;
 ICON: HPAG_EvilOutsider;
 
 MULTI: Know Your Foe;
@@ -20407,7 +20407,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Giant feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Giant feat, dealing +2 damage against those enemies.;
 ICON: HPAG_Giant;
 
 MULTI: Know Your Foe;
@@ -20419,7 +20419,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Monstrous Humanoid feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Monstrous Humanoid feat, dealing +2 damage against those enemies.;
 ICON: HPAG_MonstrousHumanoid;
 
 MULTI: Know Your Foe;
@@ -20431,7 +20431,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You gain the Favored Enemy: Undead feat, dealing +2 damage against those enemies.; 
+DESC1: You gain the Favored Enemy: Undead feat, dealing +2 damage against those enemies.;
 ICON: HPAG_Undead;
 
 NAME: Versatile Adept II;
@@ -20453,8 +20453,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: You can use your Intelligence modifier for damage with Melee and Missile weapons.;
-\par \par Note: This does not function while unarmed, on shields.;
+DESC1: You can use your Intelligence modifier for damage with Melee and Missile weapons.\par \par Note: This does not function while unarmed, on shields.;
 ICON: HPAG_StrategicCombatII;
 
 MULTI: Dexterity or Intelligence;
@@ -20708,7 +20707,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 10 Ki\par Cooldown: 15 seconds\par You gain the Quick Draw feat, which reduces the time between using Spell-Like Abilities and attacking. In addition, while you are centered and wielding a quarterstaff, you gain +2 Ki each time you hit a creature. This stacks with all other sources of Ki generation.;
-ICON: HSMY_AllConsumingFlame;
+ICON: HSMY_AllConsumingflame;
 
 MULTI: Elemental Words;
 MSLOT: 2;
@@ -21074,7 +21073,7 @@ COST: 1;
 DESC1: Cooldown: 3 seconds\par Weapon Stance: While you are centered, you enhance your attacks with Ki flame. Two handed weapons gain On Hit: 2d4 Fire Damage and On Critical: 1d10 Force Damage. One handed weapons and handwraps gain On Hit: 2d2 Fire Damage and On Critical: 1d6 Force damage. Your Ki generation on hit is reduced by 1. Scales with Melee Power.;
 DESC2: Cooldown: 3 seconds\par Weapon Stance: While you are centered, you enhance your attacks with Ki flame. Two handed weapons gain On Hit: 2d6 Fire Damage and On Critical: 2d10 Force Damage. One handed weapons and handwraps gain On Hit: 2d3 Fire Damage and On Critical: 2d6 Force damage. Your Ki generation on hit is reduced by 1. Scales with Melee Power.;;
 DESC3: Cooldown: 3 seconds\par Weapon Stance: While you are centered, you enhance your attacks with Ki flame. Two handed weapons gain On Hit: 2d8 Fire Damage and On Critical: 3d10 Force Damage. One handed weapons and handwraps gain On Hit: 2d4 Fire Damage and On Critical: 3d6 Force damage. Your Ki generation on hit is reduced by 1. Scales with Melee Power.;;
-ICON: HSMY_LightingtheCandle;
+ICON: HSMY_LightingTheCandle;
 
 NAME: Embrace the Void;
 TREE: Henshin Mystic (Mnk);
@@ -21086,7 +21085,7 @@ COST: 1;
 DESC1: Gain 1 Meditation use per rest, and regenerate Ki faster while meditating. While you are meditating, you generate a protective shield which can absorb up to 25 damage, and is refreshed every 3 seconds.;
 DESC2: Gain 2 Meditation use per rest, and regenerate Ki faster while meditating. While you are meditating, you generate a protective shield which can absorb up to 50 damage, and is refreshed every 3 seconds.;
 DESC3: Gain 3 Meditation use per rest, and regenerate Ki faster while meditating. While you are meditating, you generate a protective shield which can absorb up to 100 damage, and is refreshed every 3 seconds.;
-ICON: HSMY_EmbracetheVoid;
+ICON: HSMY_EmbraceTheVoid;
 
 MULTI: Ability Score;
 MSLOT: 1;
@@ -21762,7 +21761,7 @@ DESC1: Cooldown: 15 seconds \par Focus Melee Attack: Deals +1[W] damage. If you 
 REQ1: Feat: Dodge;
 DESC2: Cooldown: 15 seconds \par Focus Melee Attack: Deals +2[W] damage. If you successfully damage your target you gain a +6% Insight bonus to Dodge for 6 seconds.;
 DESC3: Cooldown: 15 seconds \par Focus Melee Attack: Deals +3[W] damage. If you successfully damage your target you gain a +9% Insight bonus to Dodge for 6 seconds.;
-ICON: KENS_ReedintheWind;
+ICON: KENS_ReedInTheWind;
 
 NAME: Tactics;
 TREE: Kensei (Ftr);
@@ -22446,7 +22445,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: Passive: +20 Melee and Ranged Power. Your melee Focus weapons are considered Centering. While Centered, you may gain various benefits from levels in Monk or as a Grandmaster of Flowers.;
-ICON: KENS_OneWithTheBlade;
+ICON: KENS_OnewiththeBlade;
 
 MULTI: Deadly Strike;
 MSLOT: 1;
@@ -22495,7 +22494,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: You gain +1 to attack evil creatures and deal 1d4 additional light damage that scales with 100% Melee Power. You resist evil influences particularly well, gaining a +2 bonus to saves against spell and effects produced by evil creatures.;
-ICON: KNCH_Fiendslayer;
+ICON: KNCH_FiendSlayer;
 
 NAME: Courage of Heaven;
 TREE: Knight of the Chalice (Pal);
@@ -22517,7 +22516,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: Your Slayer of Evil now grants +2 to attack evil creatures and deal 2d6 additional light damage that scales with 100% Melee Power. You resist evil influences particularly well, gaining a +2 bonus to saves against spell and effects produced by evil creatures. Your weapons gain the Ghost Touch effect.;
 REQ1: EH: Courage of Heaven [0-1-1];
-ICON: KNCH_Fiendslayer;
+ICON: KNCH_FiendSlayer;
 
 NAME: Improved Courage of Heaven;
 TREE: Knight of the Chalice (Pal);
@@ -22537,9 +22536,9 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: Your Slayer of Evil now grants +4 to attack evil creatures and deal 5d6 additional light damage that scales with 100% Melee Power. You resist evil influences particularly well, gaining a +4 bonus to saves against spell and effects produced by evil creatures. Your vorpal hits against undead do an additional 500 damage.; 
+DESC1: Your Slayer of Evil now grants +4 to attack evil creatures and deal 5d6 additional light damage that scales with 100% Melee Power. You resist evil influences particularly well, gaining a +4 bonus to saves against spell and effects produced by evil creatures. Your vorpal hits against undead do an additional 500 damage.;
 REQ1: EH: Improved Courage of Heaven [0-3-1];
-ICON: KNCH_Fiendslayer;
+ICON: KNCH_FiendSlayer;
 
 NAME: Champion of Good;
 TREE: Knight of the Chalice (Pal);
@@ -23331,7 +23330,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: +1 HP per AP spent in this tree.; 
+DESC1: +1 HP per AP spent in this tree.;
 ICON: NTWR_NaturesWarrior;
 
 NAME: Instinctive Fighting;
@@ -23341,7 +23340,7 @@ SLOT: 1;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.; 
+DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.;
 REQ1: EH: Nature's Warrior [0-0-1];
 ICON: NTWR_InstinctiveFighting;
 
@@ -23352,7 +23351,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.; 
+DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.;
 REQ1: EH: Instinctive Fighting [0-1-1];
 ICON: NTWR_InstinctiveFighting;
 
@@ -23363,7 +23362,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.; 
+DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.;
 REQ1: EH: Instinctive Fighting [0-2-1];
 ICON: NTWR_InstinctiveFighting;
 
@@ -23374,7 +23373,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 1;
-DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.; 
+DESC1: +1d6 Sneak Attack dice while in any Wolf Form.\par \par +5 PRR while in any Bear form.\par \par +1 base melee damage while in any Wolf or Bear form.\par \par +10 Positive Spellpower.;
 REQ1: EH: Instinctive Fighting [0-3-1];
 ICON: NTWR_InstinctiveFighting;
 
@@ -23399,9 +23398,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: +1 Wild Empathy use per rest. \par \par +1 Improved Wild Empathy use per rest (if you have this ability)\par \par +5 Positive Spellpower; 
-DESC2: +2 Wild Empathy use per rest. \par \par +2 Improved Wild Empathy use per rest (if you have this ability)\par \par +10 Positive Spellpower; 
-DESC3: +3 Wild Empathy use per rest. \par \par +3 Improved Wild Empathy use per rest (if you have this ability)\par \par +15 Positive Spellpower; 
+DESC1: +1 Wild Empathy use per rest. \par \par +1 Improved Wild Empathy use per rest (if you have this ability)\par \par +5 Positive Spellpower;
+DESC2: +2 Wild Empathy use per rest. \par \par +2 Improved Wild Empathy use per rest (if you have this ability)\par \par +10 Positive Spellpower;
+DESC3: +3 Wild Empathy use per rest. \par \par +3 Improved Wild Empathy use per rest (if you have this ability)\par \par +15 Positive Spellpower;
 ICON: NTWR_ExtraWildEmpathy;
 
 NAME: Aggravate;
@@ -23411,9 +23410,9 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 2 DR/- for the duration of the intimidate effect.; 
-DESC2: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 4 DR/- for the duration of the intimidate effect.; 
-DESC3: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 6 DR/- for the duration of the intimidate effect.; 
+DESC1: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 2 DR/- for the duration of the intimidate effect.;
+DESC2: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 4 DR/- for the duration of the intimidate effect.;
+DESC3: Your enemy's fear galvanizes you. Whenever you use intimidate, or use an ability that triggers an intimidate check, you gain 6 DR/- for the duration of the intimidate effect.;
 ICON: NTWR_Aggravate;
 
 NAME: Bestial Nature;
@@ -23423,9 +23422,9 @@ SLOT: 2;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +1 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.; 
-DESC2: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +2 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.; 
-DESC3: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +3 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.; 
+DESC1: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +1 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.;
+DESC2: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +2 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.;
+DESC3: Cooldown: 1 second\par Beast Stance: Lose yourself in your animal nature. While this stance is active, you gain a +3 Insight bonus to Fortitude and Reflex Saves, and -2 penalty to Will.\par \par You can only have one Beast Stance active at a time.;
 ICON: NTWR_BestialNature;
 
 NAME: Shifting Rake;
@@ -23435,9 +23434,9 @@ SLOT: 3;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -2 penalty to AC for one minute.; 
-DESC2: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -4 penalty to AC for one minute.; 
-DESC3: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -6 penalty to AC for one minute.; 
+DESC1: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -2 penalty to AC for one minute.;
+DESC2: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -4 penalty to AC for one minute.;
+DESC3: You move in deceptive and misleading ways. Whenever you bluff an enemy, or use an ability that triggers a bluff check, that enemy takes a -6 penalty to AC for one minute.;
 ICON: NTWR_ShiftingRake;
 
 NAME: Athletic;
@@ -23447,15 +23446,15 @@ SLOT: 4;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: +1 Balance, Jump, Swim, and Tumble.\par \par Rank 3 grants: +1 Wild Empathy use per rest and +1 Improved Wild Empathy use per rest (if you have this ability).; 
+DESC1: +1 Balance, Jump, Swim, and Tumble.\par \par Rank 3 grants: +1 Wild Empathy use per rest and +1 Improved Wild Empathy use per rest (if you have this ability).;
 MOD1: Skill, Skill, Skill, Skill;
 MODNAME1: Balance, Jump, Swim, Tumble;
 MODVALUE1: 1, 1, 1, 1;
-DESC2: +2 Balance, Jump, Swim, and Tumble.\par \par Rank 3 grants: +1 Wild Empathy use per rest and +1 Improved Wild Empathy use per rest (if you have this ability).; 
+DESC2: +2 Balance, Jump, Swim, and Tumble.\par \par Rank 3 grants: +1 Wild Empathy use per rest and +1 Improved Wild Empathy use per rest (if you have this ability).;
 MOD2: Skill, Skill, Skill, Skill;
 MODNAME2: Balance, Jump, Swim, Tumble;
 MODVALUE2: 2, 2, 2, 2;
-DESC3: +3 Balance, Jump, Swim, and Tumble.\par \par +1 Wild Empathy use per rest.\par \par +1 Improved Wild Empathy use per rest (if you have this ability); 
+DESC3: +3 Balance, Jump, Swim, and Tumble.\par \par +1 Wild Empathy use per rest.\par \par +1 Improved Wild Empathy use per rest (if you have this ability);
 MOD3: Skill, Skill, Skill, Skill;
 MODNAME3: Balance, Jump, Swim, Tumble;
 MODVALUE3: 3, 3, 3, 3;
@@ -23468,9 +23467,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 12 seconds. Costs 1 Wild Empathy.; 
-DESC2: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 24 seconds. Costs 1 Wild Empathy.; 
-DESC3: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 36 seconds. Costs 1 Wild Empathy.; 
+DESC1: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 12 seconds. Costs 1 Wild Empathy.;
+DESC2: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 24 seconds. Costs 1 Wild Empathy.;
+DESC3: Cooldown: 1 minute 30 seconds\par Gain +10% dodge for 36 seconds. Costs 1 Wild Empathy.;
 ICON: NTWR_Flight;
 
 NAME: Vengeful Hunter;
@@ -23492,9 +23491,9 @@ SLOT: 2;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 40% for 8 seconds.; 
-DESC2: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 50% for 8 seconds.; 
-DESC3: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 60% for 8 seconds.; 
+DESC1: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 40% for 8 seconds.;
+DESC2: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 50% for 8 seconds.;
+DESC3: Cooldown: 5 minutes\par \par Your skin thickens and hardens, and the cold confidence of the crocodile fills you.\par \par Activating this ability reduces the damage you take from physical or acid attacks by 60% for 8 seconds.;
 ICON: NTWR_HideoftheCrocodile;
 
 NAME: Blood Moon Frenzy;
@@ -23504,9 +23503,9 @@ SLOT: 3;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 20% enhancement bonus to movement speed and a 10% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.; 
-DESC2: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 30% enhancement bonus to movement speed and a 15% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.; 
-DESC3: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 40% enhancement bonus to movement speed and a 20% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.; 
+DESC1: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 20% enhancement bonus to movement speed and a 10% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.;
+DESC2: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 30% enhancement bonus to movement speed and a 15% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.;
+DESC3: Your pack has caught the scent of blood.\par \par Killing an enemy grants your hirelings, pets, summoned creatures, and charmed creatures a 40% enhancement bonus to movement speed and a 20% enhancement bonus to attack speed for 15 seconds.\par \par Enemies your own level or higher have a 100% chance of activating this ability. For every level below you, the chances are reduced by 20%. A monster two levels below you only has a 60% chance of creating this effect.;
 ICON: NTWR_BloodMoonFrenzy;
 
 NAME: Action Boost: Double Strike;
@@ -23516,9 +23515,9 @@ SLOT: 4;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 30 seconds \par \par Gain +10% Action Boost bonus to Doublestrike for 20 seconds.; 
-DESC2: Cooldown: 30 seconds \par \par Gain +20% Action Boost bonus to Doublestrike for 20 seconds.; 
-DESC3: Cooldown: 30 seconds \par \par Gain +30% Action Boost bonus to Doublestrike for 20 seconds.; 
+DESC1: Cooldown: 30 seconds \par \par Gain +10% Action Boost bonus to Doublestrike for 20 seconds.;
+DESC2: Cooldown: 30 seconds \par \par Gain +20% Action Boost bonus to Doublestrike for 20 seconds.;
+DESC3: Cooldown: 30 seconds \par \par Gain +30% Action Boost bonus to Doublestrike for 20 seconds.;
 ICON: NTWR_ActionBoostDoubleStrike;
 
 NAME: Fight;
@@ -23528,11 +23527,11 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: +1 base melee damage while in any Bear or Wolf form.; 
+DESC1: +1 base melee damage while in any Bear or Wolf form.;
 REQ1: EH: Flight [2-0-1];
-DESC2: +2 base melee damage while in any Bear or Wolf form.; 
+DESC2: +2 base melee damage while in any Bear or Wolf form.;
 REQ2: EH: Flight [2-0-2];
-DESC3: +3 base melee damage while in any Bear or Wolf form.; 
+DESC3: +3 base melee damage while in any Bear or Wolf form.;
 REQ3: EH: Flight [2-0-3];
 ICON: NTWR_Fight;
 
@@ -23543,9 +23542,9 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 2% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 5d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.; 
-DESC2: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 4% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 7d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.; 
-DESC3: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 6% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 9d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.; 
+DESC1: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 2% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 5d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.;
+DESC2: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 4% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 7d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.;
+DESC3: Cooldown:\par Beast Stance: While this stance is active, killing an enemy grants you a 6% competence bonus to threat generation for 10 seconds, and creates a burst of sonic damage that hits all nearby enemies for 9d6 sonic damage.\par \par Enemies your own level or higher have a 100% chance of prompting this effect. For every level below you, the chances are reduced by 20%, meaning that a monster two levels below you only has a 60% chance of creating this effect.\par \par You can only have one Beast Stance active at a time.;
 ICON: NTWR_ReavingRoar;
 
 NAME: Improved Dodge;
@@ -23555,10 +23554,10 @@ SLOT: 2;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: +1 Dodge while in any Bear or Wolf form.; 
+DESC1: +1 Dodge while in any Bear or Wolf form.;
 REQ1: Feat: Dodge;
-DESC2: +2 Dodge while in any Bear or Wolf form.; 
-DESC3: +3 Dodge while in any Bear or Wolf form.; 
+DESC2: +2 Dodge while in any Bear or Wolf form.;
+DESC3: +3 Dodge while in any Bear or Wolf form.;
 ICON: NTWR_ImprovedDodge;
 
 NAME: Fatal Harrier;
@@ -23582,7 +23581,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Strength; 
+DESC1: +1 Strength;
 MOD1: Ability;
 MODNAME1: Strength;
 MODVALUE1: 1;
@@ -23597,7 +23596,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Wisdom; 
+DESC1: +1 Wisdom;
 MOD1: Ability;
 MODNAME1: Wisdom;
 MODVALUE1: 1;
@@ -23610,8 +23609,8 @@ SLOT: 1;
 RANKS: 2;
 TYPE: Passive;
 COST: 1;
-DESC1: Your enemy's blows give you the determination to keep fighting. When an enemy hits you while in any Bear form, there is a 5% chance that you will gain 10 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower; 
-DESC2: Your enemy's blows give you the determination to keep fighting. When an enemy hits you while in any Bear form, there is a 5% chance that you will gain 20 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower; 
+DESC1: Your enemy's blows give you the determination to keep fighting. When an enemy hits you while in any Bear form, there is a 5% chance that you will gain 10 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower;
+DESC2: Your enemy's blows give you the determination to keep fighting. When an enemy hits you while in any Bear form, there is a 5% chance that you will gain 20 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower;
 ICON: NTWR_EssenceoftheTurtle;
 
 NAME: Four Legs Good;
@@ -23632,8 +23631,8 @@ SLOT: 3;
 RANKS: 2;
 TYPE: Passive;
 COST: 1;
-DESC1: Striking a blow focuses your mind and body. When you critically hit an enemy while in any wolf form, you gain 10 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower; 
-DESC2: Striking a blow focuses your mind and body. When you critically hit an enemy while in any wolf form, you gain 20 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower; 
+DESC1: Striking a blow focuses your mind and body. When you critically hit an enemy while in any wolf form, you gain 10 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower;
+DESC2: Striking a blow focuses your mind and body. When you critically hit an enemy while in any wolf form, you gain 20 temporary spell points for 8 seconds.\par \par Passive (permanent): +5 Positive Spellpower;
 ICON: NTWR_EssenceoftheShrike;
 
 MULTI: Strength or Wisdom;
@@ -23645,7 +23644,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Strength; 
+DESC1: +1 Strength;
 MOD1: Ability;
 MODNAME1: Strength;
 MODVALUE1: 1;
@@ -23661,7 +23660,7 @@ SLOT: 4;
 RANKS: 1;
 TYPE: Passive;
 COST: 2;
-DESC1: +1 Wisdom; 
+DESC1: +1 Wisdom;
 MOD1: Ability;
 MODNAME1: Wisdom;
 MODVALUE1: 1;
@@ -23675,11 +23674,11 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Activation Cost: 12 Spell Points\par Cooldown: 18 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +3[W]. This attack can doublestrike. Also deals +3d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.; 
+DESC1: Activation Cost: 12 Spell Points\par Cooldown: 18 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +3[W]. This attack can doublestrike. Also deals +3d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.;
 REQ1: EH: Fight [3-0-1];
-DESC2: Activation Cost: 9 Spell Points\par Cooldown: 15 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +6[W]. This attack can doublestrike. Also deals +6d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.; 
+DESC2: Activation Cost: 9 Spell Points\par Cooldown: 15 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +6[W]. This attack can doublestrike. Also deals +6d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.;
 REQ2: EH: Fight [3-0-2];
-DESC3: Activation Cost: 6 Spell Points\par Cooldown: 12 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +10[W]. This attack can doublestrike. Also deals +10d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.; 
+DESC3: Activation Cost: 6 Spell Points\par Cooldown: 12 seconds\par Area Melee Attack: You fight for leadership of the pack. Area damage melee attack dealing +10[W]. This attack can doublestrike. Also deals +10d6 extra slashing damage Elementals, Animals, Magical Beast, Vermin, and Plants.\par \par Requires and Wolf, Bear or Tree form.;
 REQ3: EH: Fight [3-0-3];
 ICON: NTWR_AlphaStrike;
 
@@ -23690,9 +23689,9 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 10 temporary hitpoints and a 10% morale bonus to your healing amplification.; 
-DESC2: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 15 temporary hitpoints and a 15% morale bonus to your healing amplification.; 
-DESC3: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 20 temporary hitpoints and a 20% morale bonus to your healing amplification.; 
+DESC1: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 10 temporary hitpoints and a 10% morale bonus to your healing amplification.;
+DESC2: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 15 temporary hitpoints and a 15% morale bonus to your healing amplification.;
+DESC3: Despite your wounds, you are a wellspring of vigor. When you are struck in battle there is a 5% chance of receiving 20 temporary hitpoints and a 20% morale bonus to your healing amplification.;
 ICON: NTWR_WildHealing;
 
 NAME: Celerity;
@@ -23702,9 +23701,9 @@ SLOT: 3;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 30% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.; 
-DESC2: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 40% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.; 
-DESC3: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 50% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.; 
+DESC1: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 30% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.;
+DESC2: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 40% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.;
+DESC3: Cooldown: 5 minutes\par \par Your attacks rain down like a lashing wind storm. Activating this ability grants you a 50% enhancement bonus to double-strike for 15 seconds.\par \par Requires: Any Wolf, Bear, or Tree form.;
 ICON: NTWR_Celerity;
 
 NAME: Natural Adept;
@@ -24178,7 +24177,7 @@ TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 3seconds\par Touch of Despair Toggle: If the enemy affected by your Touch of Despair dies within the next 30 seconds, you gain 25 Ki and 25 temporary hit points. Enemies immune to your Touch of Despair cannot be Doomed. \par Passive:  +1 to hit and damage with weapons other than a quarterstaff or handwraps when centered.;
 REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness, EHM: Ninjutsu [3-0-1];
-LOCK1: EH: Impending Doom [1-0-1], EH: Impending Doom [2-0-1], , EH: Impending Doom [3-0-1];
+LOCK1: EH: Impending Doom [1-0-1], EH: Impending Doom [2-0-1], EH: Impending Doom [3-0-1];
 ICON: NJSP_ImpendingDoom;
 
 MULTI: Ninjutsu;
@@ -24206,7 +24205,7 @@ TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 3seconds\par Touch of Despair Toggle: On a failed saving throw, your Touch of Despair finisher also causes your opponent to gain a stack of Ninja Poison every 6 seconds for 30 seconds. \par Passive:  +1 to hit and damage with weapons other than a quarterstaff or handwraps when centered.;
 REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness, EHM: Ninjutsu [3-0-1];
-LOCK1: EH: Poisoned Soul [1-0-1], EH: Poisoned Soul [2-0-1], , EH: Poisoned Soul [3-0-1];
+LOCK1: EH: Poisoned Soul [1-0-1], EH: Poisoned Soul [2-0-1], EH: Poisoned Soul [3-0-1];
 ICON: NJSP_PoisonedSoul;
 
 MULTI: Ninjutsu;
@@ -24220,7 +24219,7 @@ TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 3seconds\par Touch of Despair Toggle: Your Touch of Despair finisher also causes all nearby enemies to suffer one negative level. \par Passive:  +1 to hit and damage with weapons other than a quarterstaff or handwraps when centered.;
 REQ1: Feat: Path of Inevitable Dominion: Fists of Darkness, EHM: Ninjutsu [3-0-1];
-LOCK1: EH: Wave of Despair [1-0-1], EH: Wave of Despair [2-0-1], , EH: Wave of Despair [3-0-1];
+LOCK1: EH: Wave of Despair [1-0-1], EH: Wave of Despair [2-0-1], EH: Wave of Despair [3-0-1];
 ICON: NJSP_WaveofDespair;
 
 NAME: Deadly Exploits;
@@ -24343,7 +24342,7 @@ SLOT: 0;
 RANKS: 1;
 TYPE: Active;
 COST: 1;
-DESC1: Cooldown: 2 minutes\par \par You build a psychic bond with your mainhand weapon. You strengthen your Weapon Bond by damaging enemies with attacks, up to once each second. Your Weapon Bond is broken when you change your mainhand weapon or die.\par \par Activate: You reduce your bond strength by 1 to gain a +5 insight bonus to Attack for 12 seconds.; 
+DESC1: Cooldown: 2 minutes\par \par You build a psychic bond with your mainhand weapon. You strengthen your Weapon Bond by damaging enemies with attacks, up to once each second. Your Weapon Bond is broken when you change your mainhand weapon or die.\par \par Activate: You reduce your bond strength by 1 to gain a +5 insight bonus to Attack for 12 seconds.;
 ICON: OCSL_WeaponBond;
 
 NAME: Resistance;
@@ -24715,7 +24714,7 @@ DESC3: At Weapon Bond 150+, your weapon provides you with 20 temporary hitpoints
 REQ3: EH: Lessons of Nature [3-1-3];
 ICON: OCSL_VampiricBond;
 
-NAME: Seeker's Strike; 
+NAME: Seeker's Strike;
 TREE: Occult Slayer (Bar);
 LEVEL: 5;
 SLOT: 2;
@@ -25802,7 +25801,7 @@ DESC2: Cooldown: 30 seconds\par Melee Attack: Deals 2d6 extra constitution damag
 DESC3: Cooldown: 30 seconds\par Melee Attack: Deals 3d6 extra constitution damage as long as you damage your target.\par \par (Monsters with zero in any ability score are considered helpless and receive +50% extra damage.);
 ICON: RVGR_CruelCut;
 
-**NAME: Action Boost: Melee and Ranged Power;
+NAME: Action Boost: Melee and Ranged Power;
 TREE: Ravager (Bar);
 LEVEL: 2;
 SLOT: 4;
@@ -26389,7 +26388,7 @@ COST: 2;
 DESC1: +1 Charisma;
 MOD1: Ability;
 MODNAME1: Charisma;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 ICON: SCDF_Charisma;
 
 MULTI: Charisma or Constitution;
@@ -26404,7 +26403,7 @@ COST: 2;
 DESC1: +1 Constitution;
 MOD1: Ability;
 MODNAME1: Constitution;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 ICON: SCDF_Constitution;
 
 MULTI: Reinforced Defense;
@@ -26526,7 +26525,7 @@ COST: 2;
 DESC1: +1 Charisma;
 MOD1: Ability;
 MODNAME1: Charisma;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 REQ1: EHM: Charisma or Constitution [3-4-1];
 ICON: SCDF_Charisma;
 
@@ -26542,7 +26541,7 @@ COST: 2;
 DESC1: +1 Constitution;
 MOD1: Ability;
 MODNAME1: Constitution;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 REQ1: EHM: Charisma or Constitution [3-4-1];
 ICON: SCDF_Constitution;
 
@@ -26729,7 +26728,7 @@ DESC1: You are wise and skilled in the art of wielding divine magic to summon ai
 REQ1: EH: Storm of Vengeance [0-4-1];
 MOD1: Ability;
 MODNAME1: Wisdom;
-MODVALUE1: 2; 
+MODVALUE1: 2;
 ICON: SNHD_Hierophant;
 
 NAME: Wand and Scroll Mastery;
@@ -26804,15 +26803,15 @@ COST: 1;
 DESC1: +1 Bluff, Diplomacy, Perform, and Haggle;
 MOD1: Skill, Skill, Skill, Skill;
 MODNAME1: Bluff, Diplomacy, Perform, Haggle;
-MODVALUE1: 1, 1, 1, 1; 
+MODVALUE1: 1, 1, 1, 1;
 DESC2: +2 Bluff, Diplomacy, Perform, and Haggle;
 MOD2: Skill, Skill, Skill, Skill;
 MODNAME2: Bluff, Diplomacy, Perform, Haggle;
-MODVALUE3: 2, 2, 2, 2; 
+MODVALUE3: 2, 2, 2, 2;
 DESC3: +3 Bluff, Diplomacy, Perform, and Haggle. +5 Universal Spell power.;
 MOD3: Skill, Skill, Skill, Skill;
 MODNAME3: Bluff, Diplomacy, Perform, Haggle;
-MODVALUE3: 3, 3, 3, 3; 
+MODVALUE3: 3, 3, 3, 3;
 ICON: SNHD_Negotiator;
 
 NAME: Spell Penetration;
@@ -26985,7 +26984,7 @@ COST: 2;
 DESC1: +1 Wisdom;
 MOD1: Ability;
 MODNAME1: Wisdom;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 ICON: SNHD_Wisdom;
 
 NAME: Spring Resurgence;
@@ -27049,7 +27048,7 @@ DESC1: +1 Wisdom;
 REQ1: EH: Wisdom [3-4-1];
 MOD1: Ability;
 MODNAME1: Wisdom;
-MODVALUE1: 1; 
+MODVALUE1: 1;
 ICON: SNHD_Wisdom;
 
 NAME: Crown of Summer;
@@ -28300,15 +28299,15 @@ COST: 1;
 DESC1: +1 Concentration\par +1 Perform;
 MOD1: Skill, Skill;
 MODNAME1: Concentration, Perform;
-MODVALUE1: 1, 1; 
+MODVALUE1: 1, 1;
 DESC2: +2 Concentration\par +2 Perform;
 MOD2: Skill, Skill;
 MODNAME2: Concentration, Perform;
-MODVALUE2: 2, 2; 
+MODVALUE2: 2, 2;
 DESC3: +3 Concentration\par +3 Perform;
 MOD1: Skill, Skill;
 MODNAME3: Concentration, Perform;
-MODVALUE3: 3, 3; 
+MODVALUE3: 3, 3;
 ICON: SPSG_Charlatan;
 
 NAME: Sharp Note;
@@ -30066,7 +30065,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 Spellcraft \par +1 Concentration.;
-MOD21: Skill, Skill;
+MOD1: Skill, Skill;
 MODNAME1: Spellcraft, Concentration;
 MODVALUE1: 1, 1;
 DESC2: +2 Spellcraft \par +2 Concentration.;
@@ -34118,7 +34117,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: Whenever you cast an Cold damage spell, you have a 10% chance to gain 3 Temporary Spell Points.;
-REQ1: EH: Hoarfrost [1-4-1]; 
+REQ1: EH: Hoarfrost [1-4-1];
 DESC2: Whenever you cast an Cold damage spell, you have a 20% chance to gain 3 Temporary Spell Points.;
 REQ2: EH: Hoarfrost [1-4-2];
 DESC3: Whenever you cast an Cold damage spell, you have a 30% chance to gain 3 Temporary Spell Points.;
