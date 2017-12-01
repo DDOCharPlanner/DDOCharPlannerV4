@@ -197,7 +197,7 @@ TIER: 0;
 SLOT: 0;
 TYPE: Passive;
 COST: 0;
-DESC1: Gain 50 spell points. Each additional level of Draconic Incarnation after this one grants 50 Sepll points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
+DESC: Gain 50 spell points. Each additional level of Draconic Incarnation after this one grants 50 Sepll points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
 ICON: DraconicBloodlineI;
 
 NAME: Draconic Bloodline II;
@@ -206,7 +206,7 @@ TIER: 0;
 SLOT: 1;
 TYPE: Passive;
 COST: 0;
-DESC1: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
+DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
 ICON: DraconicBloodlineII;
 
 NAME: Draconic Bloodline III;
@@ -215,7 +215,7 @@ TIER: 0;
 SLOT: 2;
 TYPE: Passive;
 COST: 0;
-DESC1: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
+DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
 ICON: DraconicBloodlineIII;
 
 NAME: Draconic Bloodline IV;
@@ -224,7 +224,7 @@ TIER: 0;
 SLOT: 3;
 TYPE: Passive;
 COST: 0;
-DESC1: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
+DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
 ICON: DraconicBloodlineIV;
 
 NAME: Draconic Bloodline V;
@@ -233,7 +233,7 @@ TIER: 0;
 SLOT: 4;
 TYPE: Passive;
 COST: 0;
-DESC1: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
+DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
 ICON: DraconicBloodlineV;
 
 NAME: Draconic Fury;
@@ -242,7 +242,7 @@ TIER: 0;
 SLOT: 5;
 TYPE: Passive;
 COST: 0;
-DESC1: Your draconic lineage allows you to periodically enter a furious spell rage. Activate Arcane Draconic Fury to add 50 to your Spell Power for 20 seconds. Passive: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard and Artificer caster leves if you ahve any levels in the class.;
+DESC: Your draconic lineage allows you to periodically enter a furious spell rage. Activate Arcane Draconic Fury to add 50 to your Spell Power for 20 seconds. Passive: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard and Artificer caster leves if you ahve any levels in the class.;
 ICON: DraconicFury;
 
 MULTI: Energy Sheath;
@@ -360,17 +360,17 @@ DESC1: Your draconic lineage makes your senses keener, allowing you to spot dang
 MOD1: Skill,, Save:
 MODNAME1: Spot,, Reflex;
 MODTYPE1: Destiny;
-MODVALUES1: +2,, +2;
+MODVALUE1: +2,, +2;
 DESC2: Your draconic lineage makes your senses keener, allowing you to spot danger and avoid it. You gain a further +2 Spot and +2 to your Reflex saves fore a total of +4 each.;
 MOD2: Skill,, Save:
 MODNAME2: Spot,, Reflex;
 MODTYPE2: Destiny;
-MODVALUES2: +4,, +4;
+MODVALUE2: +4,, +4;
 DESC3: Your draconic lineage makes your senses keener, allowing you to spot danger and avoid it. You gain a further +2 Spot and +2 to your Reflex saves fore a total of +6 each.;
 MOD3: Skill,, Save:
 MODDNAME3: Spot,, Reflex;
 MODTYPE3: Destiny;
-MODVALUES3: +6,, +6;
+MODVALUE3: +6,, +6;
 ICON: DraconicPerception;
 
 MULTI: Intelligence or Charisma;
@@ -479,7 +479,7 @@ TIER: 2;
 SLOT: 2;
 RANKS: 3;
 TYPE: Active;
-COST: 1
+COST: 1;
 DESC1: Activation Cost: 20 Spell Points\par Cooldown: 2 minutes\par You can occasionally make yourself highly resistant to physical damage, much like your draconic ancestors. For the next 30 seconds, you have 60 points of ablative protection versus physical damage. This stacks with the effects of other spells such as Stoneskin and Ablative Armour.;
 REQ1: EHM: Dragonhide [1-2-1];
 DESC2: Activation Cost: 20 Spell Points\par Cooldown: 2 minutes\par You can occasionally make yourself highly resistant to physical damage, much like your draconic ancestors. For the next 60 seconds, you have 90 points of ablative protection versus physical damage. This stacks with the effects of other spells such as Stoneskin and Ablative Armour.;
@@ -738,9 +738,9 @@ RANKS: 2;
 TYPE: Passive;
 COST: 1;
 DESC1: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 10 Acid Spell Power and +1 to your caster level and maximum caster level with acid spells.;
-REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Acid Spell Power and further +1 to your caster level and maximum caster level with acid spells, for a total of +2 to each.;
-REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
 ICON: SecondaryAcidSpecialty;
 
 MULTI: Secondary Spell Specialty;
@@ -753,9 +753,9 @@ RANKS: 2;
 TYPE: Passive;
 COST: 1;
 DESC1: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 10 Cold Spell Power and +1 to your caster level and maximum caster level with cold spells.;
-REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Cold Spell Power and further +1 to your caster level and maximum caster level with cold spells, for a total of +2 to each.;
-REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
 ICON: SecondaryColdSpecialty;
 
 MULTI: Secondary Spell Specialty;
@@ -768,9 +768,9 @@ RANKS: 2;
 TYPE: Passive;
 COST: 1;
 DESC1: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 10 Electric Spell Power and +1 to your caster level and maximum caster level with electric spells.;
-REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Electric Spell Power and further +1 to your caster level and maximum caster level with electric spells, for a total of +2 to each.;
-REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
 ICON: SecondaryElectricSpecialty;
 
 MULTI: Secondary Spell Specialty;
@@ -783,9 +783,9 @@ RANKS: 2;
 TYPE: Passive;
 COST: 1;
 DESC1: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 10 Fire Spell Power and +1 to your caster level and maximum caster level with fire spells.;
-REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Fire Spell Power and further +1 to your caster level and maximum caster level with fire spells, for a total of +2 to each.;
-REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
+//REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
 ICON: SecondaryFireSpecialty;
 
 MULTI: Draconic Spell Knowledge;
@@ -858,7 +858,7 @@ NAME: Draconic Spell Augmentation;
 TREE: Draconic Incarnation;
 TIER: 4;
 SLOT: 3;
-RANKS: 3
+RANKS: 3;
 COST: 1;
 DESC1: Due to your close association with black dragons, your acid spells have a 5% chance to reduce the Fortitude saves of their targets by 5 for 10 seconds.;
 REQ1: EHM: Black Dragon Heritage [3-2-1],, EH: Draconic Spell Knowledge [4-2-1];
@@ -874,7 +874,7 @@ NAME: Draconic Spell Augmentation;
 TREE: Draconic Incarnation;
 TIER: 4;
 SLOT: 3;
-RANKS: 3
+RANKS: 3;
 COST: 1;
 DESC1: Due to your close association with blue dragons, your electric spells have a 5% chance to reduce the Reflex saves of their targets by 5 for 10 seconds.;
 REQ1: EHM: Blue Dragon Heritage [3-2-1],, EH: Draconic Spell Knowledge [4-2-1];
@@ -890,7 +890,7 @@ NAME: Draconic Spell Augmentation;
 TREE: Draconic Incarnation;
 TIER: 4;
 SLOT: 3;
-RANKS: 3
+RANKS: 3;
 COST: 1;
 DESC1: Due to your close association with red dragons, your fire spells have a 5% chance to deal a blast of 3d6 extra light damage.;
 REQ1: EHM: Red Dragon Heritage [3-2-1],, EH: Draconic Spell Knowledge [4-2-1];
@@ -906,7 +906,7 @@ NAME: Draconic Spell Augmentation;
 TREE: Draconic Incarnation;
 TIER: 4;
 SLOT: 3;
-RANKS: 3
+RANKS: 3;
 COST: 1;
 DESC1: Due to your close association with white dragons, your cold spells have a 5% chance to deal a blast of 3d6 extra sonic damage.;
 REQ1: EHM: White Dragon Heritage [3-2-1],, EH: Draconic Spell Knowledge [4-2-1];
@@ -1062,7 +1062,8 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: When enemies are hit by your breath weapon, there is a 15% chance they will also be subject to a 20 second sleep effect.;
-REQ1: EHM: Dragon Breath [5-2-1]; \\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+\\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+REQ1: EHM: Dragon Breath [5-2-1];
 ICON: DraconicBreathAugmentationAcid;
 
 MULTI: Draconic Breath Augmentation;
@@ -1075,7 +1076,8 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: When enemies are hit by your breath weapon, there is a 15% chance they will also be subject to a 20 second slow effect that reduces movement speed by 25%, attack speed by 30%, and Armour Class, Attack bonus, and Reflex saves by 1 each.;
-REQ1: EHM: Dragon Breath [5-2-1]; \\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+\\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+REQ1: EHM: Dragon Breath [5-2-1];
 ICON: DraconicBreathAugmentationElectric;
 
 MULTI: Draconic Breath Augmentation;
@@ -1088,7 +1090,8 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: When enemies are hit by your breath weapon, there is a 15% chance they will also be subject to a 10 second Paralysis effect.;
-REQ1: EHM: Dragon Breath [5-2-1]; \\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+\\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+REQ1: EHM: Dragon Breath [5-2-1];
 ICON: DraconicBreathAugmentationFire;
 
 MULTI: Draconic Breath Augmentation;
@@ -1101,7 +1104,8 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: When enemies are hit by your breath weapon, there is a 15% chance they will also be subject to being weakened by 2d8 strength damage..;
-REQ1: EHM: Dragon Breath [5-2-1]; \\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+\\Not sure about this one as any of the effects of this destiny can apply to any of the breath types
+REQ1: EHM: Dragon Breath [5-2-1];
 ICON: DraconicBreathAugmentationCold;
 
 MULTI: Intelligence or Charisma;
@@ -1444,7 +1448,7 @@ NAME: Lay to Rest;
 TREE: Exalted Angel;
 TIER: 3;
 SLOT: 0;
-RANKS; 1;
+RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 10 Spell Points\par Cooldown: 15 seconds\par Touch Activate: Target Undead or Evil Outsider that is under the effects of Judgement take 10d100 Light damage.;
@@ -1714,8 +1718,7 @@ TYPE: Passive;
 COST: 0;
 DESC1: For every level of Fatesinger, gain 2 songs, a +3 Sonic Resistance and 25 Spell Points.\par \par Passive: (see Character Sheet, Feats.) If you didn't have Inspire Courage, you have that Feat now.;
 MOD1: Feat;
-MODNAME: Inspire Courage;
-MODVALUE: //?
+MODNAME1: Inspire Courage;
 ICON: FatesingersRepertoire;
 
 NAME: Glitter of Fame;
@@ -1803,17 +1806,17 @@ SLOT: 1;
 RANKS: 3;
 TYPE: Passive;
 COST: 1;
-DESC1: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +2 to your Perform, a +2 to Bluff and a +2 to Haggle, plus an extra Song per rest.;
+DESC1: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +2 to your Perform, a +2 to Bluff and a +2 to Haggle, plus an extra Song per rest.; 
 MOD1: Skill,, Skill,, Skill;
 MODNAME1: Perform,, Bluff,, Haggle;
 MODTYPE1: Destiny,, Destiny,, Destiny;
 MODVALUE1: 2,, 2,, 2;
-DESC2: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +4 to your Perform, a +4 to Bluff and a +4 to Haggle, plus an extra Song per rest.;
+DESC2: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +4 to your Perform, a +4 to Bluff and a +4 to Haggle, plus an extra Song per rest.; 
 MOD2: Skill,, Skill,, Skill;
 MODNAME2: Perform,, Bluff,, Haggle;
 MODTYPE2: Destiny,, Destiny,, Destiny;
 MODVALUE2: 4,, 4,, 4;
-DESC3: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +6 to your Perform, a +6 to Bluff and a +6 to Haggle, plus an extra Song per rest.;
+DESC3: 'Seductive, enchanting, tantalizing. These are the qualities that might describe my lessers...'\par --Lolth, Demon Queen\par \par Gain a +6 to your Perform, a +6 to Bluff and a +6 to Haggle, plus an extra Song per rest.; 
 MOD3: Skill,, Skill,, Skill;
 MODNAME3: Perform,, Bluff,, Haggle;
 MODTYPE3: Destiny,, Destiny,, Destiny;
@@ -1967,9 +1970,9 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1; 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 60 seconds.;
-DESC2; 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 50 seconds.;
-DESC3; 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 40 seconds.;
+DESC1: 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 60 seconds.;
+DESC2: 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 50 seconds.;
+DESC3: 'Look into my eyes. Trust in me, my pet, and let all the world melt away...'\par --Selis\par \par Song:\par Mesmerizes a single target and deals 2 Constitution damage every 3 seconds.\par Duration: 12 seconds. Cooldown 40 seconds.;
 ICON: SirensSong;
 
 NAME: Reign;
@@ -2060,9 +2063,9 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 5d100 +700 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
-REQ1: EH: Siren's Song [3-0-1];
+REQ1: EH: Siren's Song [3-0-1]; 
 DESC2: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 6d100 +800 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
-REQ2: EH: Siren's Song [3-0-2];
+REQ2: EH: Siren's Song [3-0-2]; 
 DESC3: 'Poof!'\par \par When Siren's Song expires, Chord of Disruption focuses your energy to a single disruptive point, causing 7d100 +900 disintegrating Sonic damage. If a Fortitude save is made, its effects are halved.;
 REQ3: EH: Siren's Song [3-0-3];
 ICON: ChordofDisruption;
@@ -2130,7 +2133,7 @@ TIER: 4;
 SLOT: 3;
 RANKS: 1;
 COST: 2;
-DESC1: Cooldown: 6 seconds\par \par Echoes Stance.\par \par The songs of legend fill your soul. You are eternally inspired by the lords of the wild.\par \par +1 Constitution\par +25 maximum HP\par +2 to Fortitude saves\par If you have the Rage Feat, your Rage grants you an additional +1 Strength while raging.\par +3% chance to tripper weapon effects on glancing blows\par Inspire Courage grants an additional +1 damage and +1 to your saves vs. Fear.;
+DESC1: Cooldown: 6 seconds\par \par Echoes Stance.\par \par The songs of legend fill your soul. You are eternally inspired by the lords of the wild.\par \par +1 Constitution\par +25 maximum HP\par +2 to Fortitude saves\par If you have the Rage Feat, your Rage grants you an additional +1 Strength while raging.\par +3% chance to tripper weapon effects on glancing blows\par Inspire Courage grants an additional +1 damage and +1 to your saves vs. Fear.; 
 ICON: EchoesoftheAncestorsPrimal;
 
 MULTI: Stance: Echoes of the Ancestors, Primal;
@@ -2343,7 +2346,7 @@ DESC1: +50 maximum HP;
 MOD1: Ability;
 MODNAME1: Hit Points;
 MODTYPE1: Destiny;
-MODVALUE1: 50
+MODVALUE1: 50;
 ICON: Brawn;
 
 NAME: Adrenaline;
@@ -2367,7 +2370,7 @@ DESC1: +50 maximum HP;
 MOD1: Ability;
 MODNAME1: Hit Points;
 MODTYPE1: Destiny;
-MODVALUE1: 50
+MODVALUE1: 50;
 ICON: Brawn;
 
 NAME: Adrenaline;
@@ -2486,7 +2489,7 @@ NAME: Unstoppable Fury;
 TREE: Fury of the Wild;
 TIER: 2;
 SLOT: 1;
-RANKS: 3
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: While raged, when you miss with a melee attack you gain +1 Attack for 20s. This can stack three times and loses only 1 stack each 20s.;
@@ -2565,7 +2568,7 @@ NAME: Malicious Weapons;
 TREE: Fury of the Wild;
 TIER: 3;
 SLOT: 1;
-RANKS: 3
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +3% chance to trigger weapon effects with Glancing Blows.;
@@ -2819,17 +2822,17 @@ TYPE: Passive;
 COST: 0;
 DESC1: The state you seek removes all grief, all craving, and all fear to bring the mind, body and soul into harmonious balance.\par \par This enhancement grants you Slippery Mind as a Bonus feat, allowing you extra saving throw when you fail a save versus enchantments. You also gain a +1 to the DC of saving throws against your tactical combat feats.;
 ICON: CenteredMind;
-
-NAME: Wholeness of Spirit:
+ 
+NAME: Wholeness of Spirit;
 TREE: Grandmaster of Flowers;
 TIER: 0;
 SLOT: 2;
 RANKS: 1;
 TYPE: Active;
-COST: 0:
+COST: 0;
 DESC1: Activation Cost: 30 Ki\par Cooldown: 5 minutes\par \par As warm winds chase away snow and ice, so does new life begin from old.\par \par You may activate this ability to bring your mind, body, and soul into harmonious balance, restoring health as is you were affected by the benefits of a Heal spell, as well as curing all ability damage, negative levels, and other adverse conditions that may be affecting you.;
 ICON: WholenessofSpirit;
-
+ 
 NAME: The Abiding Path;
 TREE: Grandmaster of Flowers;
 TIER: 0;
@@ -2837,7 +2840,7 @@ SLOT: 3;
 RANKS: 1;
 TYPE: Passive;
 COST: 0;
-DECS1: You are no longer troubled by the world's demands. You are unhindered by slippery surfaces such as ice, grease, or flowing water. You also gain +1 to the DC of saving throws against your tactical combat feats.;
+DESC1: You are no longer troubled by the world's demands. You are unhindered by slippery surfaces such as ice, grease, or flowing water. You also gain +1 to the DC of saving throws against your tactical combat feats.;
 ICON: TheAbidingPath;
 
 NAME: Ubiquity;
@@ -2889,7 +2892,7 @@ MODTYPE2: Destiny,, Destiny,, Destiny;
 MODVALUE2: 4,, 4,, 4;
 DESC3: You gain +6 Balance, Jump, Tumble and 3% Dodge.;
 MOD3: Skill,, Skill,, Skill;
-MODNAME31: Balance,, Jump,, Tumble;
+MODNAME3: Balance,, Jump,, Tumble;
 MODTYPE3: Destiny,, Destiny,, Destiny;
 MODVALUE3: 6,, 6,, 6;
 ICON: PerfectBalance;
@@ -2924,7 +2927,7 @@ TIER: 1;
 SLOT: 3;
 RANKS: 3;
 TYPE: Passive;
-Cost: 1;
+COST: 1;
 DESC1: You gain +0.5(W) to the damage of melee attacks you make while centred.;
 DESC2: You gain +1(W) to the damage of melee attacks you make while centred.;
 DESC3: You gain +1.5(W) to the damage of melee attacks you make while centred.;
@@ -3144,7 +3147,7 @@ NAME: Perfection of Mind;
 TREE: Grandmaster of Flowers;
 TIER: 4;
 SLOT: 3;
-RANKS; 3;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: You gain a +2 bonus to Will saving throws. You gain an additional +2 to Will saving throws against Enchantment, Fear, and Illusion effects.;
@@ -3288,7 +3291,7 @@ ICON: AScatteringofPetals;
 NAME: Everything is Nothing;
 TREE: Grandmaster of Flowers;
 TIER: 6;
-SLOT: 2:
+SLOT: 2;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
@@ -3359,7 +3362,7 @@ ICON: ActionHero;
 
 NAME: Unstoppable;
 TREE: Legendary Dreadnought;
-TIR: 0;
+TIER: 0;
 SLOT: 2;
 RANKS: 1;
 TYPE: Active;
@@ -3840,7 +3843,7 @@ COST: 0;
 DESC1: Gain 50 spell points. Each additional level of Magister after this one grants 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneStudyI;
 
@@ -3854,7 +3857,7 @@ COST: 0;
 DESC1: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneStudyII;
 
@@ -3865,10 +3868,10 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Passive;
 COST: 0;
-DESC1; You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
+DESC1: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneStudyIII;
 
@@ -3882,7 +3885,7 @@ COST: 0;
 DESC1: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneStudyIV;
 
@@ -3896,7 +3899,7 @@ COST: 0;
 DESC1: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneStudyV;
 
@@ -3910,7 +3913,7 @@ COST: 0;
 DESC1: Cooldown: 4 minutes\par Your understanding of magic is so keen that you can periodically enter a state of heightened arcane channelling. Activate Arcane Spellsurge to add +5 to all of your spell DCs for the next 20 seconds. Passive: You gain 50 Spell Points and +1 to your Wizard, Sorcerer, Bard, and Artificer caster levels if you have any levels in the class.;
 MOD1: Ability;
 MODNAME1: Spell Points;
-MODTYPE: Destiny;
+MODTYPE1: Destiny;
 MODVALUE1: 50;
 ICON: ArcaneSpellSurge;
 
@@ -3921,8 +3924,8 @@ SLOT: 0;
 RANKS: 3;
 TYPE: Active;
 COST: 1;
-DESC1: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 1 AC and 5 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
-DESC2: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 2 AC and 10 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
+DESC1: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 1 AC and 5 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.; 
+DESC2: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 2 AC and 10 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.; 
 DESC3: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 60 seconds and add 3 AC and 15 physical resistance to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
 ICON: SigilofSpellWarding;
 
@@ -3946,17 +3949,17 @@ COST: 1;
 DESC1: From years of honing your mind, your wits have become quick to react to danger. You gain +1 Dodge and +2 to Reflex saves.;
 MOD1: Saves;
 MODNAME1: Reflex;
-NODTYPE1: Destiny;
-MODVALUE1: 2;
+MODTYPE1: Destiny;
+MODVALUE1: 2; 
 DESC2: From years of honing your mind, your wits have become quick to react to danger. You gain a further +1 Dodge and +2 to Reflex saves, for a total of +2 Dodge and +4 to Reflex saves.;
 MOD2: Saves;
 MODNAME2: Reflex;
-NODTYPE2: Destiny;
+MODTYPE2: Destiny;
 MODVALUE2: 4;
 DESC3: From years of honing your mind, your wits have become quick to react to danger. You gain +1 Dodge and +2 to Reflex saves, for a total of +3 Dodge and +6 to Reflex saves. When you tumble, you will now phase out from reality briefly, passing through enemies as you do so.;
 MOD3: Saves;
 MODNAME3: Reflex;
-NODTYPE3: Destiny;
+MODTYPE3: Destiny;
 MODVALUE3: 6;
 ICON: UnearthlyReactions;
 
@@ -3970,17 +3973,17 @@ COST: 1;
 DESC1: Your mind is protected by powerful psychic wards. You gain +2 Concentration and +2 to Will saves.;
 MOD1: Skills,, Saves;
 MODNAME1: Concentration,, Will;
-NODTYPE1: Destiny,, Destiny;
+MODTYPE1: Destiny,, Destiny;
 MODVALUE1: 2,, 2;
 DESC2: Your mind is protected by powerful psychic wards. You gain a further +2 Concentration and +2 to Will saves, for a total of +4 Concentration and +4 to Will saves.;
 MOD2: Skills,, Saves;
 MODNAME2: Concentration,, Will;
-NODTYPE2: Destiny,, Destiny;
+MODTYPE2: Destiny,, Destiny;
 MODVALUE2: 4,, 4;
 DESC3: Your mind is protected by powerful psychic wards. You gain a further +2 Concentration and +2 to Will saves, for a total of +6 Concentration and +6 to Will saves. You will also no longer automatically fail Will saves on a 1.;
 MOD3: Skills,, Saves;
 MODNAME3: Concentration,, Will;
-NODTYPE3: Destiny,, Destiny;
+MODTYPE3: Destiny,, Destiny;
 MODVALUE3: 6,, 6;
 ICON: ImpregnableMind;
 
@@ -4036,7 +4039,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 2 minutes\par Your mind and body are so closely interweaved with the essence of magic that you can meld into it when you are in danger. Upon activating this ability you trigger a Diplomacy effect, and for te next 20 seconds you are invisible. This invisibility does not break if you cast spells or attack enemies.;
-REQ: EH: Impercetible Casting [1-1-1];
+REQ1: EH: Impercetible Casting [1-1-1];
 ICON: FadeIntotheWeave;
 
 MULTI: Spell School Specialist;
@@ -4656,7 +4659,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 1;
 DESC1: Your Summoned creatures are stronger than those conjured by mages who do not comprehend the intricacies of the arcane. Your summons gain +4 to all ability scores, increased health, and increased fortification (+50%). They also gain an extra 40$ boost to movement speed. These bonuses will stack with Augment Summmoning and similar effects that boost the power of your summons.
-REQ1: //Any of the kindred summons
+//REQ1: //Any of the kindred summons
 ICON: GrandSummoner;
 
 MULTI: Spell School Mastery;
@@ -4882,7 +4885,7 @@ TIER: 0;
 SLOT: 0;
 TYPE: Active;
 COST: 0;
-DESC1: Cooldown 5 seconds\par When you hit with a melee attack, or cast a spell on an ally, or cast an offensive spell on an enemy, you gain 1 Spirit. Each of these three categories triggers only once every three seconds. You can have up to 30 Spirit. Spirit decays at a rate of one every 9 seconds. Toggle: You gain +30 Universal Spell Power. Costs 1 Spirit to activate and 1 Spirit every six seconds. \par \par (Stays toggled on until manually turned off.);
+DESC: Cooldown 5 seconds\par When you hit with a melee attack, or cast a spell on an ally, or cast an offensive spell on an enemy, you gain 1 Spirit. Each of these three categories triggers only once every three seconds. You can have up to 30 Spirit. Spirit decays at a rate of one every 9 seconds. Toggle: You gain +30 Universal Spell Power. Costs 1 Spirit to activate and 1 Spirit every six seconds. \par \par (Stays toggled on until manually turned off.);
 ICON: StrenghtofSpirit;
 
 NAME: Magic of Nature;
@@ -4891,7 +4894,7 @@ TIER: 0;
 SLOT: 1;
 TYPE: Passive;
 COST: 0;
-DESC1: +50 SP per level of Primal Avatar \par \par You gain caster levels equal to your Primal Avatar level for Druid and Ranger spells, if you have any levels in those classes.;
+DESC: +50 SP per level of Primal Avatar \par \par You gain caster levels equal to your Primal Avatar level for Druid and Ranger spells, if you have any levels in those classes.;
 ICON: MagicofNature;
 
 NAME: Primal Travel;
@@ -4900,13 +4903,14 @@ TIER: 0;
 SLOT: 2;
 TYPE: Active;
 COST: 0;
-DESC1: Cooldown: 1 minute\par You quickly jump backwards several times. For the next 12 seconds you gain +10 Primal bonus to tumble and 50% Primal bonus to Dodge (ignoring your maximum dodge). \par Costs 1 Spirit.;
+DESC: Cooldown: 1 minute\par You quickly jump backwards several times. For the next 12 seconds you gain +10 Primal bonus to tumble and 50% Primal bonus to Dodge (ignoring your maximum dodge). \par Costs 1 Spirit.;
 ICON: PrimalTravel;
 
 NAME: Mighty Among Spirits;
 TREE: Primal Avatar;
 TIER: 0;
 SLOT: 3;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: +20 \par HP Spirit decays every 15 seconds instead of every 9 seconds.;
@@ -4922,7 +4926,7 @@ TIER: 0;
 SLOT: 4;
 TYPE: Active;
 COST: 0;
-DESC1: Cooldown: 1 minute\par Toggle: While below 50% health, you gain 12 health and lose one spirit and 4 SP every two seconds. Costs 1 Spirit to activate. \par \par (Stays toggled on until manually turned off.);
+DESC: Cooldown: 1 minute\par Toggle: While below 50% health, you gain 12 health and lose one spirit and 4 SP every two seconds. Costs 1 Spirit to activate. \par \par (Stays toggled on until manually turned off.);
 ICON: EternalReturn;
 
 NAME: Walk with the Spirits;
@@ -4931,7 +4935,7 @@ TIER: 0;
 SLOT: 5;
 TYPE: Active
 COST: 0;
-DESC1: Activation Cost: 100 Spell Points\par Cooldown: 5 seconds\par You become 25% incorporeal, invisible and ethereal to monsters, and gain +30 Hide and Move Silently. This consumes 1 Spirit each second. Cost: 1 Spirit, 100 SP.\par (Turns off if you run out of Spirit.);
+DESC: Activation Cost: 100 Spell Points\par Cooldown: 5 seconds\par You become 25% incorporeal, invisible and ethereal to monsters, and gain +30 Hide and Move Silently. This consumes 1 Spirit each second. Cost: 1 Spirit, 100 SP.\par (Turns off if you run out of Spirit.);
 ICON: WalkwiththeSpirits;
 
 NAME: Ephemeral Evolution;
@@ -5441,7 +5445,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Cost: 35 Spell Points\par Cooldown: 5 seconds\par Form: You become an Avatar of Nature. Every 3 seconds, you gain +1 size, +2 Strength, +2 Constitution, a large bonus to damage based on size, and lose some movement speed and cannot jump or cast spells. These bonunses increas up to size 4.\par \par Size 1+: +50 size bonus to Physical Resistance.\par \par Size 2+: When you attack enemies they become poisoned, taking 2d10 poison damage every 2 seconds for several seconds. This poison stacks up to 5 times.\par \par Size 3+: Enemies attacking you have a chance to become diseased, dealing 1d4 Constitution damage every two seconds for 10 seconds.\par \par Size 4: The ground shakes when you put your foot down. Your third attack while standing still knocks down nearby enemies and deals extra bludgeoning damage in an area.\par \par This costs 1 Spirit every few seconds per size you've gained (Turns off if you run out of Spirit.)\par \par You can only be in one form at a time.;
+DESC1: Cost: 35 Spell Points\par Cooldown: 5 seconds\par Form: You become an Avatar of Nature. Every 3 seconds, you gain +1 size, +2 Strength, +2 Constitution, a large bonus to damage based on size, and lose some movement speed and cannot jump or cast spells. These bonunses increas up to size 4.\par \par Size 1+: +50 size bonus to Physical Resistance.\par \par Size 2+: When you attack enemies they become poisoned, taking 2d10 poison damage every 2 seconds for several seconds. This poison stacks up to 5 times.\par \par Size 3+: Enemies attacking you have a chance to become diseased, dealing 1d4 Constitution damage every two seconds for 10 seconds.\par \par Size 4: The ground shakes when you put your foot down. Your third attack while standing still knocks down nearby enemies and deals extra bludgeoning damage in an area.\par \par This costs 1 Spirit every few seconds per size you've gained (Turns off if you run out of Spirit.)\par \par You can only be in one form at a time.; 
 ICON: AvatarofNature;
 
 MULTI: Strength or Wisdom;
@@ -5668,7 +5672,7 @@ NAME: Lithe;
 TREE: Shadowdancer;
 TIER: 2;
 SLOT: 2;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +2 reflex saves, AC and light armor Max Dex Bonus.;
@@ -5790,7 +5794,7 @@ NAME: Grim Precision;
 TREE: Shadowdancer;
 TIER: 3;
 SLOT: 3;
-RANKS: 1;
+RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: You are familiar with how to find the chinks in an enemy's armor, as well as how to compensate for an evasive opponent. You ypass 5% enemy fortification and 1% enemy dodge.;
@@ -6051,6 +6055,7 @@ NAME: Fey Favor;
 TREE: Shiradi Champion;
 TIER: 0;
 SLOT: 0;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: You gain 100 SP and proficiency with longbows and shortbows and +1 ranged damage. You gain Druid and Ranger caster levels equal to your Shiradi level if you have any levels in those classes.\par \par Each time you Vorpal with ranged and thrown attacks you gain Favor of the Fey. You gain Favor of the Fey 7% of the time you cast an offensive spell.\par \par Favor of the Fey: +1 Luck bonus to Ranged Attacks and +1 Diplomacy. This stacks up to 10 times.;
@@ -6064,6 +6069,7 @@ NAME: Fey Visions;
 TREE: Shiradi Champion;
 TIER: 0;
 SLOT: 1;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: +1 Ranged Damage, +5 Spell Power, +5 Search. You automatically detect nearby secret doors with a DC 45 or lower.;
@@ -6079,13 +6085,14 @@ TIER: 0;
 SLOT: 2;
 TYPE: Passive;
 COST: 0;
-DESC1: +1 Attack. Your ranged and thrown attacks and offensive spells have 7% chance to deal 5d10 additional sonic damage.;
+DESC: +1 Attack. Your ranged and thrown attacks and offensive spells have 7% chance to deal 5d10 additional sonic damage.;
 ICON: FavorableWinds;
 
 NAME: Sixth Sense;
 TREE: Shiradi Champion;
 TIER: 0;
 SLOT: 3;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: +1 Ranged Damage, +5 Spell Power, +5 Listen. You bypass 20% Dodge and have Ghost Touch.;
@@ -6101,7 +6108,7 @@ TIER: 0;
 SLOT: 4;
 TYPE: Passive;
 COST: 0;
-DESC1: +1 Attack. Favorable Winds upgraded to 7% to deal 10d10 sonic damage.;
+DESC: +1 Attack. Favorable Winds upgraded to 7% to deal 10d10 sonic damage.;
 ICON: FavorableWinds;
 
 NAME: Fey Power;
@@ -6110,7 +6117,7 @@ TIER: 0;
 SLOT: 5;
 TYPE: Passive;
 COST: 0;
-DESC1: Your ranged and thrown attacks and offensive spells have 7% chance to deal 2d100 extra force damage.;
+DESC: Your ranged and thrown attacks and offensive spells have 7% chance to deal 2d100 extra force damage.;
 ICON: FeyPower;
 
 NAME: Stay Frosty;
@@ -6356,7 +6363,7 @@ NAME: Stay Good;
 TREE: Shiradi Champion;
 TIER: 4;
 SLOT: 1;
-RANKS: 2;
+RANKS: 3;
 TYPE: Active;
 COST: 1;
 DESC1: Cooldown: 5 seconds\par Shiradi Ranged Stance: Ranged and thrown attacks and offensive spells have a 7% chance to deal 3d10 extra light damage.;
@@ -6547,6 +6554,7 @@ NAME: Vigor of Battle;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 0;
+RANKS: 1;
 TYPE: Active;
 COST: 0;
 DESC1: Cooldown: 20 seconds\par Passive bonuses:\par You gain Cleric, Favored Soul, and Paladin caster levels equal to your Unyielding Sentinel level if you have any levels in those classes.\par +50 HP\par You gain +1 Intimidate for each level of Unyielding Sentinel, including level 0.\par \par Sentinel Stance: Activate to enjoy the Vigor of Battle.\par +10% healing amplification\par +50 HP\par Enemies you hit gain Healing Touch for 3 seconds, which grants 10 temporary hitpoints to targets they attack.\par (You can only be one Sentinel Stance at a time).;
@@ -6556,10 +6564,11 @@ MODTYPE1: Destiny;
 MODVALUE1: 50,, 1;
 ICON: VigorofBattle;
 
-NAME: Unbreakable;  /// CHECK HERE: you gain a feat: Diehard ///
+NAME: Unbreakable;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 1;
+RANKS: 1;
 TYPE: Active;
 COST: 0;
 DESC1: Cooldown: 20 seconds\par Passive bonuses: +5 Sacred bonus to Natural Armor\par You gain the Diehard feat.\par \par Sentinel Stance: Activate to become Unbreakable.\par You gain DR 10 / Epic.\par (You can only be one Sentinel Stance at a time.)
@@ -6573,6 +6582,7 @@ NAME: Stand Against the Tide;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 2;
+RANKS: 1;
 TYPE: Active;
 COST: 0;
 DESC1: Cooldown: 20 seconds\par Passive bonus: +2 Attack\par \par Sentinel Stance: Activate to Stand Against the Tide.\par +1 Attack Damage\par +20% threat generation\par +5% Fortification\par +1 to Fortitude, Reflex, and Will saving throws\par \par This bonus stacks up to four extra times while standing still.\par (You can only be one Sentinel Stance at a time.);
@@ -6586,6 +6596,7 @@ NAME: Stalwart Guardian;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 3;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: Passive bonus:\par +50 HP\par \par +50 HP while enjoying the Vigor of Battle.;
@@ -6599,6 +6610,7 @@ NAME: Heed no Pain;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 4;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: Passive bonus:\par +10 Physical Resistance\par \par +20 Physical Resistance while Unbreakable.;
@@ -6612,6 +6624,7 @@ NAME: Steadfast;
 TREE: Unyielding Sentinel;
 TIER: 0;
 SLOT: 5;
+RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: Passive bonuses:\par +2 Attack\par +1 bonus to Fortitude, Reflex, and Will saving throws\par \par You cannot be knocked down while Standing Against the Tide.;
@@ -6621,7 +6634,7 @@ MODTYPE1: Destiny;
 MODVALUE1: 1,, 2,, 2,, 2;
 ICON: Steadfast;
 
-NAME: Bane of Undeath; /// CHECK HERE: you gain a feat: Turn Undead ///
+NAME: Bane of Undeath;
 TREE: Unyielding Sentinel;
 TIER: 1;
 SLOT: 0;
@@ -6631,7 +6644,7 @@ COST: 2;
 DESC1: You gain the Turn Undead feat. While enjoying the Vigor of Battle, weapons you equip gain undead bane: Against Undead they gain +2 enhancement bonus and deal +2d6 extra damage.;
 ICON: BaneofUndeath;
 
-NAME: Endless Turning;
+NAME: Endless Turning; 
 TREE: Unyielding Sentinel;
 TIER: 1;
 SLOT: 1;
@@ -6639,10 +6652,9 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 10% faster if it already regenerates.;
-REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Bane of Undeath - Turn Undead: Cleric, Turn Undead: Paladin ///
 DESC2: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 20% faster if it already regenerates.;
 DESC3: +1 turn undead per rest. Turn undead regenerates every 2 minutes, or 30% faster if it already regenerates.;
-ICON: EndlessTurning;
+ICON: EndlessTurning; 
 
 NAME: Brace for Impact;
 TREE: Unyielding Sentinel;
@@ -6715,10 +6727,10 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 7 seconds\par Melee Attack: Expend 1 Turn Undead: Deals 10d10 extra Light Damage on a successful hit.
-REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Bane of Undeath - Turn Undead: Cleric, Turn Undead: Paladin ///
+//REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Bane of Undeath - Turn Undead: Cleric, Turn Undead: Paladin ///
 ICON: ConfrontAnyFoe;
 
-NAME: Fanaticism;  /// CHECK HERE: you gain a feat: Smite Evil ///
+NAME: Fanaticism;
 TREE: Unyielding Sentinel;
 TIER: 2;
 SLOT: 1;
@@ -6726,17 +6738,17 @@ RANKS: 1;
 TYPE: Passive;
 COST: 2;
 DESC1: You gain the Smite Evil feat. While you are Unbreakable, weapons you equip gain True Law if you are lawful, and True Chaos if you are Chaotic dealing 1d6 damage of that alignment to enemies of different alignments.;
+/// CHECK HERE: you gain a feat: Smite Evil ///
 ICON: Fanaticism;
 
 NAME: Endless Smiting;
 TREE: Unyielding Sentinel;
 TIER: 2;
 SLOT: 2;
-RANKS: 2;
+RANKS: 3;
 TYPE: Passive;
 COST: 2;
 DESC1: +1 Smite Evil use per rest. Smite evil uses regenerate 10% faster.;
-REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Fanaticism - Smite Evil ///
 DESC2: +2 Smite Evil use per rest. Smite evil uses regenerate 20% faster.;
 DESC3: +3 Smite Evil use per rest. Smite evil uses regenerate 30% faster.;
 ICON: EndlessSmiting;
@@ -6800,7 +6812,7 @@ DESC2: While blocking, you absorb 20% of Acid, Cold, Electric, Fire, force, Ligh
 DESC3: While blocking, you absorb 30% of Acid, Cold, Electric, Fire, force, Light and Sonic damage.;
 ICON: BlockEnergy;
 
-NAME: Intolerant Blows;
+NAME: Intolerant Blows; 
 TREE: Unyielding Sentinel;
 TIER: 3;
 SLOT: 1;
@@ -6828,7 +6840,7 @@ RANKS: 3;
 TYPE: Passive;
 COST: 1;
 DESC1: +1 lay on hands use per rest. Lay on hands regenerate one use every 3 minutes.;
-REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Healing Hands - Lay on Hands ///
+//REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Healing Hands - Lay on Hands ///
 DESC2: +2 lay on hands use per rest. Lay on hands regenerate one use every 3 minutes and regenerate 10% faster, stacks with other effects.;
 DESC3: +3 lay on hands use per rest. Lay on hands regenerate one use every 3 minutes and regenerate 20% faster, stacks with other effects.;
 ICON: EndlessLayonHands;
@@ -6865,7 +6877,7 @@ MODTYPE1: Destiny;
 MODVALUE1: 1;
 ICON: Charisma;
 
-NAME: Spark of Life;
+NAME: Spark of Life; 
 TREE: Unyielding Sentinel;
 TIER: 4;
 SLOT: 1;
@@ -6883,7 +6895,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown 2 seconds: Expand one use of Lay on Hands: Heals 150 HP to allies around you, and deals that much damage to nearby undead enemies.;
-REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Healing Hands - Lay on Hands ///
+//REQ1: /// CHECK HERE: MULTIPLE REQ. POSSIBLE: Healing Hands - Lay on Hands ///
 ICON: LighttheDark;
 
 NAME: Purify Weapon;
@@ -6928,7 +6940,7 @@ MODTYPE1: Destiny;
 MODVALUE1: 1;
 ICON: Charisma;
 
-NAME: Hardened;
+NAME: Hardened; 
 TREE: Unyielding Sentinel;
 TIER: 5;
 SLOT: 0;
@@ -6938,7 +6950,7 @@ COST: 1;
 DESC1: +3 AC.;
 DESC2: +6 AC.;
 DESC3: +10 AC.;
-ICON: Hardened;
+ICON: Hardened; 
 
 NAME: Ward Against Evil;
 TREE: Unyielding Sentinel;
