@@ -118,7 +118,7 @@ void CharacterClass::CharacterTR()
 	FeatList.clear();
 
 
-	
+
 	CharacterEnhancements.Clear();
 	CharacterDestinies.ClearAll();
 	SpellList.clear();
@@ -241,14 +241,14 @@ string CharacterClass::GetRaceString(bool GetPlural)
 			case GNOME:
 				return "Gnome";
 			case DEEPGNOME:
-				return "Deep-Gnome";
+				return "Deep Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
 			case AASIMAR:
 				return "Aasimar";
 			case SCOURGE:
 				return "Scourge";
-		
+
 			}
 		}
 	else
@@ -282,7 +282,7 @@ string CharacterClass::GetRaceString(bool GetPlural)
 			case GNOME:
 				return "Gnome";
 			case DEEPGNOME:
-				return "Deep-Gnome";
+				return "Deep Gnome";
 			case DRAGONBORN:
 				return "Dragonborn";
 			case AASIMAR:
@@ -458,7 +458,7 @@ string CharacterClass::GetClassString(int AtLevel)
 
 	//only look at heroic levels for now
 	HeroicLevels = AtLevel;
-	if (HeroicLevels > HEROICLEVELS) 
+	if (HeroicLevels > HEROICLEVELS)
 		HeroicLevels = HEROICLEVELS;
 
 	GetMulticlassClasses(HeroicLevels, Classes);
@@ -513,12 +513,12 @@ string CharacterClass::GetClassString(int AtLevel)
 
 	return Result.str().c_str();
 	}
-	
+
 //---------------------------------------------------------------------------
 int CharacterClass::GetCharacterLevelAtClassLevel(CLASS ClassType, int ClassLevel)
     {
     int CharacterLevel;
-    
+
     for (unsigned int i=0; i<MAXLEVEL; i++)
         {
         CharacterLevel = GetClassLevel(ClassType, i+1);
@@ -692,7 +692,7 @@ int CharacterClass::GetSpellPoints(int AtLevel)
                     SpellPoints += (9 + ClassLevels[i]) * ((AbilityMod > 0) ? AbilityMod:0);
                     }
                 }
-            }                                             
+            }
         if ((CLASS)i == CLERIC && ClassLevels[i] >= 1)
             {
             Ability = GetAbility((int)WISDOM, AtLevel, false) + GetTomeRaise(WISDOM, AtLevel, true);
@@ -795,7 +795,7 @@ int CharacterClass::GetSpellPoints(int AtLevel)
 
     if (SpellPoints < 0)
         SpellPoints = 0;
-        
+
     return SpellPoints;
     }
 
@@ -833,39 +833,39 @@ int CharacterClass::CalculateTotalAbilityPoints()
 	{
 	int Result;
 	int PastLifeCount;
-	
+
 	Result = 28;
 	//32 point builds
 	if (FavorAbilityBonusPoints == true && Race != DROW)
 		Result = 32;
-		
+
 	//past life feats
 	PastLifeCount = GetReincarnateCount();
 	if (PastLifeCount == 1)
 		{
 		if (Race == DROW)
 			Result = 30;
-		else 
+		else
 			Result = 34;
 		}
 	else if (PastLifeCount >= 2)
 		{
 		if (Race == DROW)
 			Result = 32;
-		else 
+		else
 			Result = 36;
 		}
-	
+
 	return Result;
 	}
-	
+
 //---------------------------------------------------------------------------
 int CharacterClass::GetAbility(int AbilityIndex, int AtLevel, bool IncludeTome, bool IncludeEnhancements, bool IncludeEquipment, bool IncludeFeats)
     {
     int Ability;
 
 	Ability = GetAbilityMod(static_cast<ABILITIES>(AbilityIndex), ABMOD_BASE, AtLevel);
-	
+
 	Ability += GetAbilityMod(static_cast<ABILITIES>(AbilityIndex), ABMOD_LEVELUP, AtLevel);
 	if (IncludeTome == true)
 		Ability += GetAbilityMod(static_cast<ABILITIES>(AbilityIndex), ABMOD_INHERENT, AtLevel);
@@ -901,31 +901,31 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 				if ((int)AbilityRaise4 == Ability)
 		            Result++;
 			    }
-					
+
 		    if (AtLevel >= 8)
 			    {
 				if ((int)AbilityRaise8 == Ability)
 				    Result++;
 			    }
-				
+
 		    if (AtLevel >= 12)
 			    {
 				if ((int)AbilityRaise12 == Ability)
 		            Result++;
 			    }
-					
+
 		    if (AtLevel >= 16)
 			    {
 				if ((int)AbilityRaise16 == Ability)
 				    Result++;
 			    }
-					
+
 			if (AtLevel >= 20)
 				{
 				if ((int)AbilityRaise20 == Ability)
 		            Result++;
 			    }
-					
+
 		    if (AtLevel >= 24)
 			    {
 				if ((int)AbilityRaise24 == Ability)
@@ -960,7 +960,7 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 					Result += CountFeat("Epic: Great Strength", AtLevel);
 					break;
 				}
-					
+
 				case DEXTERITY:
 				{
 					if (CountFeat("Race Past Life: Elf Past Life", AtLevel) > 1)
@@ -1229,14 +1229,14 @@ int CharacterClass::GetTomeRaise(ABILITIES Ability, int AtLevel, bool IncludeThi
 	if (Ability == 3)
 		test = 1;
 	if (Raise > 0 && IncludeAllTomes == false)
-		
+
 	{
 		for (int i = 0; i < Raise; i++)
 		{
 
 				if (TomesLvl[i] <= AtLevel)
 					returnvalue += 1;
-	
+
 		}
 
 	}
@@ -1296,7 +1296,7 @@ void CharacterClass::AddRaceAutoFeats(int AtLevel)
             NewFeat.Level = AtLevel;
             NewFeat.FeatAquireType = FEATAUTOMATIC;
             FeatList.push_back(NewFeat);
-				
+
 			//if the feat is a parent feat, add this feat AND all the derived feats
 			if (Feat->GetFeatTag(FEATTAGPARENTFEAT) == true)
 				{
@@ -1316,12 +1316,12 @@ void CharacterClass::AddRaceAutoFeats(int AtLevel)
 						FeatList.push_back(NewFeat);
 						}
 					FeatIndex = Data.GetFeatWithParentHeading(ParentHeading, FeatIndex+1);
-					}				
+					}
 				}
             }
         FeatIndex = Data.GetRaceAutoFeat(Race, AtLevel, FeatIndex+1);
         }
-    
+
     //one special case we have to hard-code, the Dwarven Waraxe
     //IF the character is a dwarf, AND they have at least one level of fighter, paladin, barbarian, or ranger
     //THEN they automatically get the dwarven waraxe as a free feat
@@ -1438,7 +1438,7 @@ void CharacterClass::AddClassAutoFeats(CLASS ClassType, int AtLevel, int ClassLe
 							FeatList.push_back(NewFeat);
 							}
 						FeatIndex = Data.GetFeatWithParentHeading(ParentHeading, FeatIndex+1);
-						}				
+						}
 					}
 				}
 			}
@@ -1540,7 +1540,7 @@ int CharacterClass::GetFeat(int Level, FEATSLOTTYPE FeatType, unsigned int Index
 						(FeatList[i].FeatAquireType == FEATRANGERFAVOREDENEMY) || (FeatList[i].FeatAquireType == FEATROGUEBONUS) ||
 						(FeatList[i].FeatAquireType == FEATMONKBONUS) || (FeatList[i].FeatAquireType == FEATMONKPATH) ||
 						(FeatList[i].FeatAquireType == FEATDEITY) || (FeatList[i].FeatAquireType == FEATFAVOREDSOULBONUS) ||
-						(FeatList[i].FeatAquireType == FEATPASTLIFE) || (FeatList[i].FeatAquireType == FEATHALFELFBONUS) || 
+						(FeatList[i].FeatAquireType == FEATPASTLIFE) || (FeatList[i].FeatAquireType == FEATHALFELFBONUS) ||
 						(FeatList[i].FeatAquireType == FEATARTIFICERBONUS) || (FeatList[i].FeatAquireType == FEATDRUIDWILDSHAPE)  ||
 						(FeatList[i].FeatAquireType == FEATDESTINY || (FeatList[i].FeatAquireType == FEATLEGENDARY)))
                     {
@@ -1598,9 +1598,9 @@ int CharacterClass::GetFeatAtLevel(int Level,int index)
 				}
 				FeatCount++;
 			}
-				
+
 		}
-			
+
 	}
 }
 //---------------------------------------------------------------------------
@@ -1719,7 +1719,7 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
     for (unsigned int i=0; i<3; i++)
         Result[i] = FEATNONE;
     Index = 0;
-	
+
     //first check the basic character feat at level 1, 3, 6, 9, 12, 15, 18, 21, 24, 27, and 30
 	if (CurrentSelectedLevel == 1 || CurrentSelectedLevel == 3 || CurrentSelectedLevel == 6 || CurrentSelectedLevel == 9 ||
 		CurrentSelectedLevel == 12 || CurrentSelectedLevel == 15 || CurrentSelectedLevel == 18 || CurrentSelectedLevel == 21 ||
@@ -1761,7 +1761,7 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 	if (ClassRecord[CurrentSelectedLevel-1] == FIGHTER && CurrentSelectedLevel <= HEROICLEVELS)
         {
 	    ClassLevel = GetClassLevel(CurrentSelectedLevel);
-        if (ClassLevel == 1 || ClassLevel == 2 || ClassLevel == 4 || ClassLevel == 6 || ClassLevel == 8 || ClassLevel == 10 || 
+        if (ClassLevel == 1 || ClassLevel == 2 || ClassLevel == 4 || ClassLevel == 6 || ClassLevel == 8 || ClassLevel == 10 ||
 			ClassLevel == 12 || ClassLevel == 14 || ClassLevel == 16 || ClassLevel == 18 || ClassLevel == 20)
 	        {
 			Result[Index] = FEATFIGHTERBONUS;
@@ -1863,7 +1863,7 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 			    }
 			}
 		}
-	
+
     //Favored Soul Bonus
 	if (ClassRecord[CurrentSelectedLevel-1] == FAVORED_SOUL && CurrentSelectedLevel <= HEROICLEVELS)
 		{
@@ -1874,7 +1874,7 @@ void CharacterClass::DetermineFeatSlots(int CurrentSelectedLevel, FEATSLOTTYPE *
 	        Index++;
 		    }
         }
-        
+
     //Druid Wild Shape
 	if (ClassRecord[CurrentSelectedLevel-1] == DRUID && CurrentSelectedLevel <= HEROICLEVELS)
 		{
@@ -1954,7 +1954,7 @@ void CharacterClass::AddFeat(int Level, int FeatIndex, FEATSLOTTYPE FeatType)
 	FeatDataClass *Feat;
 	FeatDataClass *DerivedFeat;
 
-	//remove the feat from this level, and all subsequent levels (unless it it a 
+	//remove the feat from this level, and all subsequent levels (unless it it a
 	//feat that can be selected multiple times)
 	Feat = Data.GetFeatPointer(FeatIndex);
 	if (FeatType != FEATPASTLIFE)
@@ -1987,7 +1987,7 @@ void CharacterClass::AddFeat(int Level, int FeatIndex, FEATSLOTTYPE FeatType)
 				FeatList.push_back(NewFeat);
 				}
 			FeatIndex = Data.GetFeatWithParentHeading(ParentHeading, FeatIndex+1);
-			}				
+			}
 		}
 
 	sort(FeatList.begin(), FeatList.end(), FeatCompare);
@@ -2010,9 +2010,9 @@ void CharacterClass::RemoveFeat(int FeatIndex)
     unsigned int Index;
 	int Level;
 	FeatDataClass *Feat;
-	
+
 	Feat = Data.GetFeatPointer(FeatIndex);
-         
+
 	Index = 0;
 	Level = -1;
 	while (Index < FeatList.size())
@@ -2039,9 +2039,9 @@ void CharacterClass::RemoveFeatOnce(int FeatIndex)
     unsigned int Index;
 	int Level;
 	FeatDataClass *Feat;
-	
+
 	Feat = Data.GetFeatPointer(FeatIndex);
-         
+
 	Index = 0;
 	Level = -1;
 	while (Index < FeatList.size())
@@ -2069,8 +2069,8 @@ void CharacterClass::RemoveFeat(int Level, FEATSLOTTYPE FeatType)
 	unsigned int Index;
 	int DeletedFeat;
 	FeatDataClass *Feat;
-	
-	//this function removes all feats of a particular type at a particular level	
+
+	//this function removes all feats of a particular type at a particular level
 	Index = 0;
 	DeletedFeat = -1;
 	while (Index < FeatList.size())
@@ -2086,9 +2086,9 @@ void CharacterClass::RemoveFeat(int Level, FEATSLOTTYPE FeatType)
 				Index++;
             }
 		else
-			Index++;		
+			Index++;
 		}
-	
+
     //if the deleted feat is a parent feat, then we also need to delete the derived feats that go with it
     if (DeletedFeat == -1)
 		return;
@@ -2167,12 +2167,12 @@ void CharacterClass::ResetAutoFeats(unsigned int AtLevel)
 		AddClassAutoFeats(ClassRecord[i-1], i, GetClassLevel(ClassRecord[i-1], i));
 		}
 	}
-	
+
 //---------------------------------------------------------------------------
 int CharacterClass::GetReincarnateCount()
 	{
 	int Result;
-	
+
 	Result = 0;
 	for (unsigned int i=0; i<NUMCLASSES; i++)
 		Result += GetReincarnateCount(static_cast<CLASS>(i));
@@ -2186,7 +2186,7 @@ int CharacterClass::GetReincarnateCount(CLASS Class)
 	{
 	return ReincarnationCount[Class];
 	}
-	
+
 //---------------------------------------------------------------------------
 void CharacterClass::IncreasePastLife(CLASS Class)
 	{
@@ -2199,21 +2199,21 @@ void CharacterClass::IncreasePastLife(CLASS Class)
 			AddFeat(1, FeatIndex, FEATPASTLIFE);
 
 	}
-	
+
 //---------------------------------------------------------------------------
 void CharacterClass::DecreasePastLife(CLASS Class)
 	{
 	int FeatIndex;
-	
+
 	if (GetReincarnateCount(Class) == 0)
 		return;
-	
+
 	ReincarnationCount[Class]--;
 	FeatIndex = GetReincarnateFeatIndex(Class);
 	if (FeatIndex != -1)
 		RemoveFeatOnce(FeatIndex);
 
-		
+
 	}
 //---------------------------------------------------------------------------
 	int CharacterClass::GetReincarnateFeatIndex(CLASS Class)
@@ -2331,7 +2331,7 @@ void CharacterClass::IncreaseEpicFeat(DESTINY_SPHERE Sphere, int feat)
 			{
 				AddFeat(1, FeatIndex, FEATPASTLIFE);
 			}
-				
+
 		}
 	}
 //---------------------------------------------------------------------------
@@ -2353,7 +2353,7 @@ void CharacterClass::DecreaseEpicFeat(DESTINY_SPHERE Sphere, int feat)
 	}
 //---------------------------------------------------------------------------
 int CharacterClass::GetEpicFeatIndex(DESTINY_SPHERE Sphere, int feat)
-{	
+{
 	int FeatIndex = -1;
 
 	switch (Sphere)
@@ -2474,7 +2474,7 @@ void CharacterClass::IncreaseIconicPastLife(ICONICRACES Race)
 		FeatIndex = GetIconicFeatIndex(Race);
 		if (FeatIndex != -1)
 			AddFeat(1, FeatIndex, FEATPASTLIFE);
-		
+
 
 
 	}
@@ -2505,7 +2505,7 @@ int CharacterClass::GetIconicFeatIndex(ICONICRACES Race)
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: Bladeforged");
 		break;
 	}
-		
+
 	case FEAT_MORNINGLORD:
 	{
 		FeatIndex = Data.GetFeatIndex("Iconic Past Life: MorningLord");
@@ -3213,7 +3213,7 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 				{
 					Mod += 10;
 				}
-					
+
 				else
 				{
 					Mod += 5;
@@ -3227,7 +3227,7 @@ int CharacterClass::CalculateSkillMiscMod(SKILLS Skill, unsigned int AtLevel)
 		Mod += CharacterEnhancements.GetTotalEnhancementMod(MC_SKILL, "UMD", AtLevel);
         }
 
-    // add to all skills    
+    // add to all skills
     if (HasFeat("Completionist", AtLevel) == true)
 		Mod += 2;
 	if (HasFeat("Past Life: Sneak of Shadows", AtLevel) == true)
@@ -3426,7 +3426,7 @@ int CharacterClass::GetSpellBySpellLevelAndClass(int AtLevel, int SpellLevel, CL
 			break;
 			}
 		default:
-			return -1; 
+			return -1;
 		}
 
 	Count = 0;
@@ -3445,7 +3445,7 @@ int CharacterClass::GetSpellBySpellLevelAndClass(int AtLevel, int SpellLevel, CL
 				}
 			}
 		}
-	return -1;	
+	return -1;
 	}
 
 //---------------------------------------------------------------------------
@@ -4181,7 +4181,7 @@ SPELLTYPE CharacterClass::GetSpellAquireType(int SpellIndex)
 
 	return SPELLUNKNOWN;
 	}
-	
+
 //---------------------------------------------------------------------------
 int CharacterClass::CalculateBAB(int AtLevel)
     {
@@ -4303,7 +4303,7 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 							{
 				            Result += CalculateTotalAbilityMod(CHARISMA, AtLevel, IncludeEquipment);
 							}
-						}	
+						}
 					//paladin dilettante does not stack with Divine Grace, thus the 'else if'. Also, it maxes at +2 bonus
 					else if (HasFeat("Half-Elf Dilettante: Paladin", AtLevel) == true)
 						{
@@ -4437,11 +4437,11 @@ int CharacterClass::GetSaveMod(SAVETYPE SaveType, SAVEMODS ModType, int AtLevel,
 			}
 		case SAVEMOD_TOTAL:
 			{
-			Result = GetSaveMod(SaveType, SAVEMOD_BASE, AtLevel); 
-			Result += GetSaveMod(SaveType, SAVEMOD_ABILITY, AtLevel); 
-			Result += GetSaveMod(SaveType, SAVEMOD_FEATS, AtLevel); 
-			Result += GetSaveMod(SaveType, SAVEMOD_ENHANCEMENT, AtLevel); 
-			Result += GetSaveMod(SaveType, SAVEMOD_ENCHANTED, AtLevel); 
+			Result = GetSaveMod(SaveType, SAVEMOD_BASE, AtLevel);
+			Result += GetSaveMod(SaveType, SAVEMOD_ABILITY, AtLevel);
+			Result += GetSaveMod(SaveType, SAVEMOD_FEATS, AtLevel);
+			Result += GetSaveMod(SaveType, SAVEMOD_ENHANCEMENT, AtLevel);
+			Result += GetSaveMod(SaveType, SAVEMOD_ENCHANTED, AtLevel);
 			return Result;
 			}
 		}
@@ -4500,7 +4500,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
     StringCbPrintf(FileName, MAX_PATH, "%s.txt", CombinedName.c_str());
 
 
-		
+
 	IFileDialog *pfd = NULL;
 	LPCWSTR TxtStr = L".txt";
 	bool xptest;
@@ -4539,19 +4539,19 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 					hr = pfd->GetFolder(&MyShellItem);
 					if (SUCCEEDED(hr))
 					{
-						
+
 						PWSTR pszPath = NULL;
 						hr = MyShellItem->GetDisplayName(SIGDN_NORMALDISPLAY, &pszPath);
 						if (SUCCEEDED(hr))
 						{
-							
+
 							if (CombinedName != "")
 							{
 									int CharCount = 0;
 									char Pathstring[MAX_PATH];
 									string TestString;
 									do	{
-										
+
 										int nlength = wcslen(pszPath);
 										//Gets converted length
 										int nbytes = WideCharToMultiByte(0, 0, pszPath, nlength, NULL, 0, NULL, NULL);
@@ -4838,7 +4838,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
         }
 	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
-	
+
 	//Items Section
 	StringCbPrintf(WriteBuffer, 1024, "ITEMS: %i, \r\n", CharacterItems.size());
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
@@ -4893,7 +4893,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 		}
 	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
-		
+
 	StringCbPrintf(WriteBuffer, 1024, "ICONICPL: \r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 	for (unsigned int i = 0; i<ICONICPASTLIFEFEAT; i++)
@@ -4994,7 +4994,7 @@ void CharacterClass::Load(HWND hwnd)
 	if (SUCCEEDED(hr) && xptest != true)
 	{
 		HRESULT hr;
-		
+
 		// Create a new common open file dialog.
 		IFileOpenDialog *pfd = NULL;
 		hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&pfd));
@@ -5032,7 +5032,7 @@ void CharacterClass::Load(HWND hwnd)
 					{
 						PWSTR pszPath = NULL;
 						hr = psiResult->GetDisplayName(SIGDN_FILESYSPATH, &pszPath);
-						
+
 						if (SUCCEEDED(hr))
 						{
 							if (0 != (len = WideCharToMultiByte(CP_ACP, 0, pszPath, -1, FiletoOpen, MAX_PATH, NULL, NULL)))
@@ -5093,15 +5093,15 @@ void CharacterClass::Load(HWND hwnd)
 		//FileHandle = CreateFile(FileOpen.lpstrFile, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     //if (FileHandle == INVALID_HANDLE_VALUE)
         //return;
-		
+
 		strcpy_s(FiletoOpen,MAX_PATH, FileOpen.lpstrFile);
-		
+
 		len = strlen(FiletoOpen);
 		if (0 != len)
 		{
 			rc = 0;
 			FiletoOpen[len] = '\0';
-			
+
 			//*FiletoOpen = NULL;
 		}
 	}
@@ -5195,7 +5195,7 @@ void CharacterClass::Load(HWND hwnd)
 					Index = String1.find('.');
 					}
 				FileVersion = atoi(String1.c_str());
-				break;								
+				break;
 				}
             case 1:     //character name
                 {
@@ -5233,8 +5233,8 @@ void CharacterClass::Load(HWND hwnd)
 						strstr(StringData, "Rogue") == NULL && strstr(StringData, "Ranger") == NULL &&
 						strstr(StringData, "Cleric") == NULL && strstr(StringData, "Wizard") == NULL &&
 						strstr(StringData, "Sorcerer") == NULL && strstr(StringData, "Bard") == NULL &&
-						strstr(StringData, "Monk") == NULL && strstr(StringData, "Favored Soul") == NULL && 
-						strstr(StringData, "Artificer") == NULL && strstr(StringData, "Druid") == NULL && 
+						strstr(StringData, "Monk") == NULL && strstr(StringData, "Favored Soul") == NULL &&
+						strstr(StringData, "Artificer") == NULL && strstr(StringData, "Druid") == NULL &&
 						strstr(StringData, "Warlock") == NULL)
 					{
 					//old version, using indeces
@@ -5522,7 +5522,7 @@ void CharacterClass::Load(HWND hwnd)
 					DataPointer = strstr(DataPointer, ",");
 					DataPointer += 2;
 					//Item Effect 6
-					//older files do not include this 
+					//older files do not include this
 					if (FileVersion < 30902)
 						CharacterItems[Index].ItemEffect6 = Data.GetItemEffectIndex("<None>");
 					else
@@ -5666,7 +5666,7 @@ void CharacterClass::Load(HWND hwnd)
 
     FileData = OriginalPointer;
 	delete[] FileData;
-    
+
 
 	//reenable validations (and will automatically validate)
 	EnableValidations(true);
@@ -5713,7 +5713,7 @@ void CharacterClass::ValidateCharacter()
 		if (GetNumClassLevels(static_cast<CLASS>(i+1)) > 0)
 			Count++;
 		}
-		
+
 	if (Count > 3)
 		{
 		//we know we've failed, do a more detailed check now
@@ -5732,7 +5732,7 @@ void CharacterClass::ValidateCharacter()
 					{
 					if (HasClass[j] == true)
 						Count++;
-					}	
+					}
 				if (Count > 3)
 					{
 					Level = i+1;
@@ -5741,8 +5741,8 @@ void CharacterClass::ValidateCharacter()
 					}
 				}
 			}
-				
-		ss << "- Level " << Level << ": Too many classes selected."; 
+
+		ss << "- Level " << Level << ": Too many classes selected.";
 		ValidationError.push_back(ss.str());
 		ss.str("");
 		}
@@ -5753,7 +5753,7 @@ void CharacterClass::ValidateCharacter()
         if (ClassRecord[i] != CLASSNONE && Data.IsAlignmentCompatable(ClassRecord[i], Alignment) == false)
             {
 			LevelError[i] = true;
-			ss << "- Level " << i+1 << ": Alignment Error, selected class alignments are not compatable."; 
+			ss << "- Level " << i+1 << ": Alignment Error, selected class alignments are not compatable.";
             ValidationError.push_back(ss.str());
 			ss.str("");
             }
@@ -5870,10 +5870,10 @@ void CharacterClass::ValidateCharacter()
                     }
                 }
             }
-        }   
-        
-    MainScreen = InterfaceManager.GetMainScreen();    
-    
+        }
+
+    MainScreen = InterfaceManager.GetMainScreen();
+
     if (ValidationError.size() > 0)
 		MainScreen->EnableErrorButton(true);
 	else
@@ -5884,7 +5884,7 @@ void CharacterClass::ValidateCharacter()
 string CharacterClass::GetErrorList()
 	{
 	string ErrorString;
-	
+
 	ErrorString = "{\\cf3 ";
 	for (unsigned int i=0; i<ValidationError.size(); i++)
 		{
@@ -5905,7 +5905,7 @@ bool CharacterClass::GetLevelError(unsigned int Level)
 void CharacterClass::EnableValidations(bool NewSetting)
 	{
 	ostringstream ss;
-	
+
 	if (NewSetting == true)
 		{
 		if (ValidationsDisabledCount > 0)
@@ -5916,7 +5916,7 @@ void CharacterClass::EnableValidations(bool NewSetting)
 
 	ss << "Validation Change: " << ValidationsDisabledCount << "\r\n";
 	OutputDebugString(ss.str().c_str());
-	
+
 	if (ValidationsDisabledCount == 0)
 		ValidateCharacter();
 	}
@@ -5968,7 +5968,7 @@ void CharacterClass::SetActiveEquipment(unsigned int Index, EQUIPMENTSLOTTYPE Ch
 		if (OldItemType == GREATCLUB || OldItemType == GREATSWORD || OldItemType == GREATAXE || OldItemType == FALCHION || OldItemType == MAUL || OldItemType == QUARTERSTAFF)
 			CharacterItemsEquipped[RIGHTHANDSLOT] = -1;
 		}
-	
+
 	//note that if we are adding an item to the right hand and the left hand has a two handed ranged weapon,
 	//we need to deactivate it.
     if (ChosenSlot == RIGHTHANDSLOT)
@@ -6126,7 +6126,7 @@ void CharacterClass::AddItemToCharacterItems(int ItemIndex, int Effect1, int Eff
 //---------------------------------------------------------------------------------------
 bool CharacterClass::IsItemEquipped(int Item)
 	{
-	for (unsigned int i=0; i<NUMCHAREQUPMENTSLOTS; i++)	
+	for (unsigned int i=0; i<NUMCHAREQUPMENTSLOTS; i++)
 		{
 		if (CharacterItemsEquipped[i] == Item)
 			return true;
@@ -6360,7 +6360,7 @@ string CharacterClass::GetItemStaticEffectsDescription(int ItemIndex)
 							strStaticEffectDescriptions += "}}: ";
 							}
 						strStaticEffectDescriptions += ptItemEffect->GetItemEffectDescription();
-						
+
 						Index++;
 						Result = ptItem->GetItemStaticEffectIndex(Index, &StaticEffectIndex);
 						}
@@ -6381,10 +6381,10 @@ string CharacterClass::GetItemStaticEffectsDescription(int ItemIndex)
 							strStaticEffectDescriptions += "}}: ";
 							}
 						strStaticEffectDescriptions += ptItemEffect->GetItemEffectDescription();
-					
+
 						Index++;
 						Result = ptItem->GetItemStaticEffectIndex(Index, &StaticEffectIndex);
-						}																			
+						}
 				}*/
 
 	return strStaticEffectDescriptions;
@@ -8325,7 +8325,7 @@ int CharacterClass::GetItemBaseAC(string Type)
 				}
 			}
 		else if (Type == "Shield")
-			{ 
+			{
 			switch(ptItem->GetItemType())
 				{
 				case SMALLSHIELD:
@@ -8387,7 +8387,7 @@ int CharacterClass::GetItemBaseAC(string Type)
 		}
 	return 0;
 	}
-			
+
 //------------------------------------------------------------------------------
 int CharacterClass::GetItemACChange(MODTYPE ACType)
 	{
@@ -8404,8 +8404,8 @@ int CharacterClass::GetItemACChange(MODTYPE ACType)
 	Index = 0;
 
 	ACChanges.clear();
-	
-	
+
+
 	int WarforgedAC; //Special instances for Warforged Composite Plating and "Body" feats
 	WarforgedAC = 0; // that are also used if we have a docent equipped.
 	if (GetRace() == WARFORGED && ACType == ARMORMOD)
@@ -8415,7 +8415,7 @@ int CharacterClass::GetItemACChange(MODTYPE ACType)
 		else if (HasFeat("Mithral Body", 20))
 			WarforgedAC = 5;
 		else //Warforged standard Composite Plating adds +2AC but does not stack with other "Body" feats
-			WarforgedAC = 2;		
+			WarforgedAC = 2;
 		WarforgedAC += GetItemBaseAC("Docent");
 		}
 
@@ -8597,7 +8597,7 @@ int CharacterClass::GetArmorClassFeats(unsigned int CurrentSelectedLevel)
 				FeatBonus += 5;
 			}
 		}
-		
+
 	return FeatBonus;
 	}
 
@@ -8624,7 +8624,7 @@ int CharacterClass::GetACDexBonus()
 		MaxDexArmorBonus = 5;
 	else
 		MaxDexArmorBonus = 99;
-	
+
 	for (unsigned int i=0; i<NUMCHAREQUPMENTSLOTS; i++)
 		{
 		if (CharacterItemsEquipped[i] == -1)
@@ -8663,7 +8663,7 @@ int CharacterClass::GetACDexBonus()
 	//Compare Max Dex bonus for Shields & Armor and take the lesser one.
 	if (MaxDexArmorBonus < MaxDexShieldBonus)
 		MaxDexBonus = MaxDexArmorBonus;
-	else 
+	else
 		MaxDexBonus = MaxDexShieldBonus;
 	//Now we need to compare this to how much Dex Bonus the Character has
 	Ability = GetAbility((int)DEXTERITY, 20, true) + GetTomeRaise(DEXTERITY, 20, true);
@@ -8671,7 +8671,7 @@ int CharacterClass::GetACDexBonus()
 	Modifier = Data.CalculateAbilityModifier((Ability + EquipAbility));
 	if (Modifier < MaxDexBonus)
 		DexBonus = Modifier;
-	else 
+	else
 		DexBonus = MaxDexBonus;
 
 	return DexBonus;
@@ -8723,7 +8723,7 @@ void CharacterClass::GetRageData(unsigned int CurrentSelectedLevel, int *RagesPe
 		*StrBonus = 6;
 	if (HasFeat("Mighty Rage", CurrentSelectedLevel))
 		*StrBonus = 8;
- 
+
 	//con bonus
 	if (HasFeat("Rage", CurrentSelectedLevel))
 		*ConBonus = 4;
@@ -8753,7 +8753,7 @@ void CharacterClass::GetRageData(unsigned int CurrentSelectedLevel, int *RagesPe
 	if (HasFeat("Rage", CurrentSelectedLevel))
 		*ACPenalty = -2;
 	}
-	
+
 //---------------------------------------------------------------------------
 void CharacterClass::GetTurnData(unsigned int CurrentSelectedLevel, int *TurnsPerDay, int *Check, int *Damage)
 	{
@@ -8829,7 +8829,7 @@ void CharacterClass::ValidateCharacterEnhancements(string ActionType, int atLeve
 			//Lets check to see if we will need to remove any speical trees
 			if (EnhancementTree->GetTreeIndex() == ENHT_ELF || EnhancementTree->GetTreeIndex() == ENHT_HALF_ELF || EnhancementTree->GetTreeIndex() == ENHT_MORNINGLORD)
 				RemoveAAElf = true;
-			
+
 			//Lets change our race tree now.
 			CharacterEnhancements.ClearCharacterEnhancementSlots(0);
 			CharacterEnhancements.SetTreeIndex(0, Data.GetRacialTree(GetRace()));

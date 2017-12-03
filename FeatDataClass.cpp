@@ -44,18 +44,18 @@ FeatDataClass::FeatDataClass()
 	NoFeatTag = true;
 	GraphicIconIndex = 0;
 	}
-	
+
 //---------------------------------------------------------------------------
 FeatDataClass::~FeatDataClass()
 	{
 	}
-	
+
 //---------------------------------------------------------------------------
 FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	{
 	//the copy constructor. We need this because this class lives in a vector
 	//and the vector may need to copy the class somewhere else...
-	
+
 	Name = source.Name;
 	Description = source.Description;
 	for (unsigned int i=0; i<source.NeedsAll.size(); i++)
@@ -104,7 +104,7 @@ FeatDataClass::FeatDataClass(const FeatDataClass &source)
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
 	}
-	
+
 //---------------------------------------------------------------------------
 FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	{
@@ -157,10 +157,10 @@ FeatDataClass& FeatDataClass::operator=(const FeatDataClass &source)
 	AasimarBond = source.AasimarBond;
 	NoFeatTag = source.NoFeatTag;
 	GraphicIconIndex = source.GraphicIconIndex;
-	
+
 	return *this;
 	}
-	
+
 //---------------------------------------------------------------------------
 FeatDataClass* const FeatDataClass::GetFeatAddress()
 	{
@@ -169,7 +169,7 @@ FeatDataClass* const FeatDataClass::GetFeatAddress()
 	//may end up with a bad pointer!
 	return this;
 	}
-	
+
 //---------------------------------------------------------------------------
 void FeatDataClass::InitializeFeat(string FeatData)
 	{
@@ -181,7 +181,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 	size_t EndLoc;
 	int Value;
 	string Substring;
-	
+
     //parse the FeatData string, storing each line of the string
     //into its appropriate individual line
 	KeywordString[0] = "PARENTHEADING: ";
@@ -204,7 +204,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 			//find the first semicolon after our keyword. Store that as our individual line
 			//(note that this function cuts off the ending semicolon, which is fine)
 			StartLoc = FeatData.find(KeywordString[i]);
-			EndLoc = FeatData.find(";", FeatData.find(KeywordString[i])); 
+			EndLoc = FeatData.find(";", FeatData.find(KeywordString[i]));
 			FeatLine[i] = FeatData.substr(FeatData.find(KeywordString[i]), EndLoc-StartLoc);
 			//drop the keyword from the line string, we don't need it now
 			FeatLine[i].erase(0, KeywordString[i].size());
@@ -384,10 +384,10 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(PURPLEDRAGONKNIGHT);
 				if (FeatLine[i].find("Shadar-Kai") != string::npos)
 					RaceType.push_back(SHADARKAI);
-				if (FeatLine[i].find(" Gnome") != string::npos) //don't grab Deep Gnome here
+        if (FeatLine[i].find("Deep Gnome") != string::npos) // Look for Deep Gnome before just Gnome
+          RaceType.push_back(DEEPGNOME);
+        if (FeatLine[i].find("Gnome") != string::npos)
 					RaceType.push_back(GNOME);
-				if (FeatLine[i].find("Deep-Gnome") != string::npos)
-					RaceType.push_back(DEEPGNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
 				if (FeatLine[i].find("Aasimar") != string::npos)
@@ -434,7 +434,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					if (Substring == "Warlock")
 						ClassType.push_back(WARLOCK);
 					FeatLine[i].erase(0, EndLoc+1);
-					}                
+					}
 	            StripStringLeadingWhiteSpace(FeatLine[i]);
 	            EndLoc = FeatLine[i].find(",");
 	            Substring = FeatLine[i];
@@ -480,7 +480,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					if (FeatLine[i].find(",") == string::npos)
                         break;
 					EndLoc = FeatLine[i].find(",");
-					FeatLine[i].erase(0, EndLoc+1);	
+					FeatLine[i].erase(0, EndLoc+1);
                     }
                 break;
                 }
@@ -497,17 +497,17 @@ void FeatDataClass::InitializeFeat(string FeatData)
 						AquireType.push_back(FEATAQUIREAUTOMATIC);
 					else if (Substring == "AutoNoPrereq")
 						AquireType.push_back(FEATAQUIREAUTONOPREREQ);
-					else		
+					else
 						AquireType.push_back(FEATAQUIRETRAIN);
 					FeatLine[i].erase(0, EndLoc+1);
-					}                
+					}
                 StripStringLeadingWhiteSpace(FeatLine[i]);
                 Substring = FeatLine[i];
                 if (Substring == "Automatic")
 					AquireType.push_back(FEATAQUIREAUTOMATIC);
 				else if (Substring == "AutoNoPrereq")
 					AquireType.push_back(FEATAQUIREAUTONOPREREQ);
-				else		
+				else
 					AquireType.push_back(FEATAQUIRETRAIN);
                 break;
                 }
@@ -522,7 +522,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 	                NeedsAll.push_back("");
 	                NeedsAll[NeedsAll.size()-1] = FeatLine[i].substr(0, EndLoc);
 					FeatLine[i].erase(0, EndLoc+1);
-					}                
+					}
                 StripStringLeadingWhiteSpace(FeatLine[i]);
                 NeedsAll.push_back("");
                 NeedsAll[NeedsAll.size()-1] = FeatLine[i];
@@ -539,7 +539,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 	                NeedsOne.push_back("");
 	                NeedsOne[NeedsOne.size()-1] = FeatLine[i].substr(0, EndLoc);
 					FeatLine[i].erase(0, EndLoc+1);
-					}                
+					}
                 StripStringLeadingWhiteSpace(FeatLine[i]);
                 NeedsOne.push_back("");
                 NeedsOne[NeedsOne.size()-1] = FeatLine[i];
@@ -556,7 +556,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 	                LockFeat.push_back("");
 	                LockFeat[LockFeat.size()-1] = FeatLine[i].substr(0, EndLoc);
 					FeatLine[i].erase(0, EndLoc+1);
-					}                
+					}
                 StripStringLeadingWhiteSpace(FeatLine[i]);
                 LockFeat.push_back("");
                 LockFeat[LockFeat.size()-1] = FeatLine[i];
@@ -571,11 +571,11 @@ void FeatDataClass::InitializeFeat(string FeatData)
                 }
             }
         }
-        
+
     return;
     #undef NUMKEYWORDS
 	}
-	
+
 //---------------------------------------------------------------------------
 bool FeatDataClass::GetFeatTag(FEATTAG Tag)
 	{
@@ -631,7 +631,7 @@ bool FeatDataClass::GetFeatTag(FEATTAG Tag)
 			return false;
 		}
 	}
-	
+
 //---------------------------------------------------------------------------
 string FeatDataClass::GetFeatName(bool PrependParentHeading)
     {
@@ -658,13 +658,13 @@ string FeatDataClass::GetFeatDescription()
     {
     return Description;
     }
-    
+
 //---------------------------------------------------------------------------
 unsigned int FeatDataClass::GetFeatIconIndex()
 	{
 	return GraphicIconIndex;
 	}
-    
+
 //---------------------------------------------------------------------------
 PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
     {
@@ -691,7 +691,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 	for (unsigned int i=0; i<NUMCLASSES; i++)
         ClassLevel[i] = Character.GetClassLevel((CLASS)i, AtLevel);
 
-	//first let's see if the character can even get this feat based on their 
+	//first let's see if the character can even get this feat based on their
 	//race and classes (they don't need to have the level requirement satisfied)
 	FeatQualify = false;
     for (unsigned int i=0; i<RaceType.size(); i++)
@@ -744,7 +744,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				}
 			}
 		}
-		
+
 	//Check the class level requirements, if any
 	HasRequiredClassLevel = false;
 	Offset = RaceType.size();
@@ -769,7 +769,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 	//check the level requirements
 	if (HasRequiredRaceLevel == false && HasRequiredClassLevel == false)
 		return PREREQ_FAIL;
-		
+
 	//note that some class restricted feats are also race restricted (such as the FvS divine feats)
 	//make sure we don't disqualify due to race
 	for (unsigned int i=0; i<NeedsAll.size(); i++)
@@ -1181,16 +1181,16 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == SHADARKAI)
 					return PREREQ_PASS;
 				}
-			if (Substring.find(" Gnome") != string::npos)
+      if (Substring.find("Deep Gnome") != string::npos) // Look for Deep Gnome before just Gnome
+      {
+        if (CharacterRace == DEEPGNOME)
+          return PREREQ_PASS;
+      }
+      if (Substring.find("Gnome") != string::npos)
 			{
 				if (CharacterRace == GNOME)
 					return PREREQ_PASS;
 				}
-			if (Substring.find("Deep-Gnome") != string::npos)
-				{
-				if (CharacterRace == DEEPGNOME)
-					return PREREQ_PASS;
-                }
 			if (Substring.find("Dragonborn") != string::npos)
 			{
 				if (CharacterRace == DRAGONBORN)
@@ -1272,7 +1272,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 
     return PREREQ_FAIL;
     }
-    
+
 //---------------------------------------------------------------------------
 FEATAQUIRETYPE FeatDataClass::HasRace(RACE Race, unsigned int AtLevel)
     {
@@ -1296,13 +1296,13 @@ bool FeatDataClass::HasClass(CLASS Class, unsigned int AtLevel, FEATAQUIRETYPE T
             {
             if (AquireType[RaceOffset+i] == Type)
 				return true;
-			if (Type == FEATAQUIREANY)	
+			if (Type == FEATAQUIREANY)
 				return true;
             }
         }
     return false;
     }
-    
+
 //---------------------------------------------------------------------------
 int FeatDataClass::GetFeatAutoClassLevel(CLASS Class)
     {
@@ -1334,7 +1334,7 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
 	HasRace = false;
 	HasClass = false;
 	ReqOneMet = false;
-    
+
     //start off with the race/class list
     ss << "{\\ul Race and Class Requirements:} \\par ";
 	for (unsigned int i = 0; i < RaceType.size(); i++)
@@ -1347,7 +1347,7 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
 	{
 		if (Character.GetClassLevel(ClassType[i], CharacterLevel) >= static_cast<int>(Level[i + RaceOffset]))
 			HasClass = true;
-	}	
+	}
 	for (unsigned int i=0; i<RaceType.size(); i++)
 		{
         if (Character.GetRace() == RaceType[i])
@@ -1380,7 +1380,7 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
 		ss << ConvertAquireTypeToString(AquireType[i+RaceOffset], Level[i+RaceOffset]);
 		ss << ")} \\par ";
 		}
-		
+
 	//add in the required (NEEDSALL) prereqs
 	ss << " \\par ";
 	for (unsigned int i=0; i<NeedsAll.size(); i++)
@@ -1388,7 +1388,7 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
 		Color = GetPrereqColorCode(NeedsAll[i], CharacterLevel, true);
         ss << Color << "Requires: " << NeedsAll[i] << "} \\par ";
 		}
-    
+
 	//add in the required (NEEDSONE) prereqs
 	for (unsigned int i=0; i<NeedsOne.size(); i++)
 		{
@@ -1398,7 +1398,7 @@ string FeatDataClass::GetPrereqString(int CharacterLevel)
 
 	return ss.str();
 	}
-	
+
 //---------------------------------------------------------------------------
 string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel, bool RequireAll)
 	{
@@ -1413,7 +1413,7 @@ string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel,
 		FailColor = "{\\cf3 ";
 	else
 		FailColor = "{\\cf1 ";
-	PassColor = "{\\cf4 ";	
+	PassColor = "{\\cf4 ";
 
 	//feat requirements
 	if (Requirement.find("Feat ") != string::npos)
@@ -1436,7 +1436,7 @@ string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel,
         else
             return PassColor;
 		}
-		
+
 	//class requirements
 	if (Requirement.find("Class ") != string::npos)
 		{
@@ -1462,7 +1462,7 @@ string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel,
 		else
 			return FailColor;
 		}
-		
+
 	//ability requirement
 	if (Requirement.find("Ability ") != string::npos)
 		{
@@ -1523,7 +1523,7 @@ string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel,
 				return PassColor;
             }
 		}
-		
+
 	//BAB requirement
 	if (Requirement.find("BAB ") != string::npos)
 		{
@@ -1734,14 +1734,14 @@ string FeatDataClass::GetPrereqColorCode(string Requirement, int CharacterLevel,
 
 	return FailColor;
 	}
-	
+
 //---------------------------------------------------------------------------
 void FeatDataClass::StripStringLeadingWhiteSpace(string &SourceString)
 	{
 	while (SourceString.size() > 0 && SourceString[0] == ' ')
 		SourceString.erase(0, 1);
 	}
-	
+
 //---------------------------------------------------------------------------
 string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 	{
@@ -1774,7 +1774,7 @@ string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 		case GNOME:
 			return "Gnome";
 		case DEEPGNOME:
-			return "Deep-Gnome";
+			return "Deep Gnome";
 		case DRAGONBORN:
 			return "Dragonborn";
 		case AASIMAR:
