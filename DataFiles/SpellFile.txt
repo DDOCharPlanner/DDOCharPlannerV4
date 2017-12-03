@@ -2257,7 +2257,7 @@ COOLDOWN: 6 seconds;
 SAVING: None;
 RESIST: No;
 RARE: 1;
-ICON: FireStorm;
+ICON: Firestorm;
 
 SPELLNAME: Fire Trap;
 DESCRIPTION: Creates a trap that wards an area. When an enemy triggers the spell by entering the area, a fiery explosion does 4 to 6 fire damage for every caster level up to caster level 20. A successful Reflex save reduces the damage by half.  D&D Dice: Deals 1d3+3 fire damage per caster level.;
@@ -2410,7 +2410,7 @@ COOLDOWN: 4.5 seconds (Wiz), 2.75 seconds (Sor);
 SAVING: Fortitude save negates;
 RESIST: Yes;
 RARE: 0;
-ICON: FleshtoStone;
+ICON: FleshToStone;
 
 SPELLNAME: Focusing Chant;
 DESCRIPTION: You gain a +1 circumstance bonus to attack rolls and skill checks.;
