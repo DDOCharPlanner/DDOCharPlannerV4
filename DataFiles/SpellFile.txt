@@ -2410,7 +2410,7 @@ COOLDOWN: 4.5 seconds (Wiz), 2.75 seconds (Sor);
 SAVING: Fortitude save negates;
 RESIST: Yes;
 RARE: 0;
-ICON: FleshtoStone;
+ICON: FleshToStone;
 
 SPELLNAME: Focusing Chant;
 DESCRIPTION: You gain a +1 circumstance bonus to attack rolls and skill checks.;
