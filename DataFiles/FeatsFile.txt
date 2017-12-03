@@ -408,7 +408,7 @@ CLASSLIST: Paladin, Cleric, Favored Soul;
 LEVEL: 3, 3, 3;
 ACQUIRE: Train, Train, Automatic;
 NEEDSALL: Feat Follower of Onatar;
-ICON: OntarsForgeIcon;
+ICON: OnatarsForgeIcon;
 
 FEATNAME: Child of Silvanus;
 FEATDESCRIPTION: You follow Silvanus. You have +2 to attack and damage rolls with mauls.;
@@ -574,7 +574,7 @@ FEATTAG: Monk Bonus;
 CLASSLIST: Fighter, Paladin, Barbarian, Monk, Rogue, Ranger, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Artificer, Druid, Warlock;
 LEVEL: 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Automatic, Train, Train, Train, Train, Train, Train, Train, Train;
-ICON: DieHardIcon;
+ICON: DiehardIcon;
 VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Discipline;
@@ -5270,7 +5270,6 @@ NEEDSALL: Feat Dodge;
 ICON: MobilityIcon;
 VERIFIED: 2012-06-26, in-game;
 
-
 FEATNAME: Follower of the Lord of Blades;
 FEATDESCRIPTION: You are a favored soul of the Lord of Blades. You are considered proficient with greatswords.;
 FEATTAG: Divine;
@@ -5301,7 +5300,7 @@ LEVEL: 1, 1, 1;
 ACQUIRE: Train, Train, Train;
 NEEDSONE: Race Human, Race Elf, Race Halfling, Race Dwarf, Race Warforged, Race Drow, Race Half-Elf, Race Half-Orc, Race Gnome, Race Dragonborn, Race Aasimar;
 LOCK: Favored by Amaunator, Follower of Aureon, Follower of the Lord of Blades, Follower of Olladra, Follower the Blood of Vol, Follower of the Silver Flame, Follower of the Sovereign Host, Follower of the Undying Court, Follower of Vulkoor, Favored by Helm, Favored by Silvanus;
-ICON: OntarsForgeIcon;
+ICON: OnatarsForgeIcon;
 VERIFIED: 2016-10-21, in-game;
 
 FEATNAME: Follower the Blood of Vol;
@@ -7462,7 +7461,7 @@ FEATDESCRIPTION: At level 17, a barbarian no longer becomes fatigued after ragin
 CLASSLIST: Barbarian;
 LEVEL: 17;
 ACQUIRE: Automatic;
-ICON: DieHardIcon;
+ICON: DiehardIcon;
 VERIFIED: unknown;
 
 FEATNAME: Toughness;
@@ -7667,7 +7666,7 @@ CLASSLIST: Warlock;
 LEVEL: 6;
 ACQUIRE: Automatic;
 NEEDSALL: Feat Warlock: Pact: Fiend;
-ICON: DarkOnesLuckIcon;
+ICON: DarkonesLuckIcon;
 VERIFIED: unknown;
 
 PARENTHEADING: Warlock;

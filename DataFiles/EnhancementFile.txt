@@ -140,7 +140,7 @@ ICON: MULTI_AugmentedBreath;
 
 NAME: Balance in Dawn;
 DESC: Select a melee attack that opposes your philosophy.;
-ICON: MULTI_BalanceInDawn;
+ICON: MULTI_BalanceinDawn;
 
 NAME: Battle Mastery;
 DESC: Select either Action Boost: Haste or Endless Fusilade.;
@@ -1653,7 +1653,7 @@ DESC1: Adamantine Durability: Grants +4 Physical Resistance Rating.;
 REQ1: Feat: Adamantine Body;
 DESC2: Adamantine Durability: Grants +8 Physical Resistance Rating.;
 DESC3: Adamantine Durability: Grants +12 Physical Resistance Rating.;
-ICON: BDFG_CommunionOfWarding;
+ICON: BDFG_Communionofwarding;
 
 NAME: Brute Fighting;
 TREE: Bladeforged;
@@ -7952,7 +7952,7 @@ TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 3 minutes\par Activate: Heals 10,000 hit point damage, and removes all ability damage, death penalty effects, negative levels, and the conditions blinded, dazed, deafened, diseased, exhausted, fatigued, feebleminded, insanity, nauseated, poisoned, and stunned.\par \par This ability can be used once per rest.;
 DESC2: Cooldown: 3 minutes\par Activate: Heals 10,000 hit point damage, and removes all ability damage, death penalty effects, negative levels, and the conditions blinded, dazed, deafened, diseased, exhausted, fatigued, feebleminded, insanity, nauseated, poisoned, and stunned.\par \par This ability can be used twice per rest.;
-ICON: MNLD_RejuvenationofDawn;
+ICON: MNLD_RejuvenationOfDawn;
 
 NAME: Bane of the Restless;
 TREE: Morninglord;
@@ -24023,7 +24023,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Activation Cost: 5 Ki\par Cooldown: 3 seconds\par Air Ki Attack: You strike your opponent, deflecting their momentum. Performs a melee attack with a +1(W) damage, and your enemy deals 2% less physical damage for 30 seconds. This effect can stack up to 5 times.;
-ICON: NJSP_KnockontheSky;
+ICON: NJSP_KnockOnTheSky;
 
 MULTI: Elemental Ki Strikes;
 MSLOT: 4;
@@ -26092,7 +26092,7 @@ COST: 1;
 DESC1: +1 Lay on Hands use per rest;
 DESC2: +2 Lay on Hands use per rest;
 DESC3: +3 Lay on Hands use per rest;
-ICON: SCDF_ExtraLayonHands;
+ICON: SCDF_ExtraLayOnHands;
 
 MULTI: Improved Sacred Defense;
 MSLOT: 1;
@@ -26591,7 +26591,7 @@ COST: 1;
 DESC1: You gain +10 Physical and Magical Resistance. \par You gain 1 additional Lay On hands. \par In addition, while you are actively blocking with a shield, enemies that attack you will take 3d4 Light Damage.;
 DESC2: You gain +15 Physical and Magical Resistance. \par you gain 2 additional Lay On Hands. \par In addition, while you are actively blocking with a shield, enemies that attack you will take 4d4 Light Damage.;
 DESC3: You gain +25 Physical and Magical Resistance. \par You gain 3 additional Lay On Hands. \par In addition, while you are actively blocking with a shield, enemies that attack you will take 5d4 Light Damage.;
-ICON: SCDF_HarboredbyLight;
+ICON: SCDF_HarboredByLight;
 
 NAME: Reprisal;
 TREE: Sacred Defender (Pal);
@@ -26922,7 +26922,7 @@ COST: 1;
 DESC1: Cooldown: 30 seconds\par Activate to gain a +10 Action Boost bonus to Universal Spell Power for 20 seconds.;
 DESC2: Cooldown: 30 seconds\par Activate to gain a +20 Action Boost bonus to Universal Spell Power for 20 seconds.;
 DESC3: Cooldown: 30 seconds\par Activate to gain a +30 Action Boost bonus to Universal Spell Power for 20 seconds.;
-ICON: SNHD_ActionBoostSpellpower;
+ICON: SNHD_ActionBoostSpellPower;
 
 NAME: Nature's Warden;
 TREE: Season's Herald (Drd);
@@ -27202,7 +27202,7 @@ TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 3 seconds\par Healing Ki Toggle: Your Healing Ki finishing move also removes blindness. \par +1 to Hit and Damage with Handwraps while Centered.;;
 REQ1: Feat: Path of Harmonious Balance: Fists of Light;
-ICON: SHTA_LiftingtheVeil;
+ICON: SHTA_LIftingtheVeil;
 
 MULTI: Elemental Curatives;
 MSLOT: 3;
@@ -27240,7 +27240,7 @@ COST: 1;
 DESC1: Cooldown: 15 seconds\par Ki Melee Attack: Deals +1(W) damage. If you successfully damage your target you gain +3% Insight Bonus to Dodge for 6 seconds.;
 DESC2: Cooldown: 15 seconds\par Ki Melee Attack: Deals +2(W) damage. If you successfully damage your target you gain +6% Insight Bonus to Dodge for 6 seconds.;
 DESC3: Cooldown: 15 seconds\par Ki Melee Attack: Deals +3(W) damage. If you successfully damage your target you gain +9% Insight Bonus to Dodge for 6 seconds.;
-ICON: SHTA_ReedintheWind;
+ICON: SHTA_ReedInTheWind;
 
 NAME: Deft Strikes;
 TREE: Shintao (Mnk);
@@ -27311,7 +27311,7 @@ COST: 1;
 DESC1: Cooldown: 3 seconds\par Healing Ki Toggle: Your Healing Ki finishing move also removes blindness. \par +1 to Hit and Damage with Handwraps while Centered.;;
 REQ1: Feat: Path of Harmonious Balance: Fists of Light, EHM: Elemental Curatives [1-0-1];
 LOCK1: EH: Lifting the Veil [1-0-1];
-ICON: SHTA_LiftingtheVeil;
+ICON: SHTA_LIftingtheVeil;
 
 MULTI: Elemental Curatives;
 MSLOT: 3;
@@ -27457,7 +27457,7 @@ COST: 1;
 DESC1: Cooldown: 3 seconds\par Healing Ki Toggle: Your Healing Ki finishing move also removes blindness. \par +1 to Hit and Damage with Handwraps while Centered.;;
 REQ1: Feat: Path of Harmonious Balance: Fists of Light, EHM: Elemental Curatives [2-0-1];
 LOCK1: EH: Lifting the Veil [1-0-1], EH: Lifting the Veil [2-0-1];
-ICON: SHTA_LiftingtheVeil;
+ICON: SHTA_LIftingtheVeil;
 
 MULTI: Elemental Curatives;
 MSLOT: 3;
@@ -27564,7 +27564,7 @@ COST: 1;
 DESC1: Cooldown: 3 seconds\par Healing Ki Toggle: Your Healing Ki finishing move also removes blindness. \par +1 to Hit and Damage with Handwraps while Centered.;;
 REQ1: Feat: Path of Harmonious Balance: Fists of Light, EHM: Elemental Curatives [3-0-1];
 LOCK1: EH: Lifting the Veil [1-0-1], EH: Lifting the Veil [2-0-1], EH: Lifting the Veil [3-0-1];
-ICON: SHTA_LiftingtheVeil;
+ICON: SHTA_LIftingtheVeil;
 
 MULTI: Elemental Curatives;
 MSLOT: 3;
@@ -28663,7 +28663,7 @@ COST: 2;
 DESC1: Activation Cost: 30 Spell Points \par Cooldown: 20 Seconds \par You can cast the spell Horn of Thunder as a Spell Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. Further points Spent in this enhancement reduces the cooldown and Spell point cost of this Spell-Like Ability.;
 DESC2: Activation Cost: 25 Spell Points \par Cooldown: 16 Seconds \par You can cast the spell Horn of Thunder as a Spell Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. Further points Spent in this enhancement reduces the cooldown and Spell point cost of this Spell-Like Ability.;
 DESC3: Activation Cost: 20 Spell Points \par Cooldown: 12 Seconds \par You can cast the spell Horn of Thunder as a Spell Like Ability. You may use Metamagic Feats with Spell-Like Abilities at no additional cost. Further points Spent in this enhancement reduces the cooldown and Spell point cost of this Spell-Like Ability.;
-ICON: SPSG_HornOfThunder;
+ICON: SPSG_HornofThunder;
 
 MULTI: Mass Hold/Horn of Thunder;
 MSLOT: 2;
@@ -29242,7 +29242,7 @@ COST: 1;
 DESC1: Cooldown: 20 seconds \par Shield Melee Attack: Performs a melee attack with your main hand weapon that deals +1[W]. On Damage: You gain a 10% Morale bonus to melee doublestrike for 10 seconds.\par \par (Requires an equipped shield and melee weapon.);
 DESC2: Cooldown: 20 seconds \par Shield Melee Attack: Performs a melee attack with your main hand weapon that deals +2[W]. On Damage: You gain a 15% Morale bonus to melee doublestrike for 10 seconds.\par \par (Requires an equipped shield and melee weapon.);
 DESC3: Cooldown: 20 seconds \par Shield Melee Attack: Performs a melee attack with your main hand weapon that deals +3[W]. On Damage: You gain a 25% Morale bonus to melee doublestrike for 10 seconds.\par \par (Requires an equipped shield and melee weapon.);
-ICON: STLD_BlockandCut;
+ICON: STLD_BlockAndCut;
 
 MULTI: Greater Stalwart Defense;
 MSLOT: 1;
@@ -32133,7 +32133,7 @@ TYPE: Passive;
 COST: 1;
 DESC1: You gain +2 to all ability scores.  You gain +5% attack speed when usng two daggers or throwing knives.  You gain 20 Melee Power and 20 Ranged Power.;
 REQ1: EH: Vistani Fortune [0-4-1];
-ICON: VKFR_KnifeMaster;
+ICON: VKFR_knifeMaster;
 
 NAME: Vistani Knife Training I;
 TREE: Vistani Knife Fighter;
@@ -32259,8 +32259,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Spell Resistance: No  Cooldown: 15 seconds  On activation: You throw a hail of throwing knives in a cone in front of you. Enemies caught in the cone take 1d8 damage per character level of damage and take one stack of Blood of Vengeance. This damage scales with 200% Ranged Power.;
-
-ICON: VKFR_FanOfKnives;
+ICON: VKFR_FanofKnives;
 
 NAME: Mist Stalker III;
 TREE: Vistani Knife Fighter;
@@ -32985,7 +32984,7 @@ COST: 1;
 DESC1: You and nearby allies gain +2% Music bonus to melee damage, range damage, and spell critical chance.;
 DESC1: You and nearby allies gain +4% Music bonus to melee damage, range damage, and spell critical chance.;
 DESC1: You and nearby allies gain +6% Music bonus to melee damage, range damage, and spell critical chance.;
-ICON: WRCH_ChantOfPower;
+ICON: WRCH_ChantofPower;
 
 NAME: Howl of the North;
 TREE: Warchanter (Brd);

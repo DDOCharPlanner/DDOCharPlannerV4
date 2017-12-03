@@ -65,7 +65,7 @@ ICON: DraconicBreathAugmentation;
 
 NAME: Draconic Spell Augmentation;
 DESC: Adds special effets to the spells related to your dragon's element.;
-ICON: DraconicspellAugmentation;
+ICON: DraconicSpellAugmentation;
 
 NAME: Draconic Spell Knowledge;
 DESC: Your dragon heritage grants you +1 to your caster level and maximum caster level with spells related to your dragon's element.;
@@ -198,7 +198,7 @@ SLOT: 0;
 TYPE: Passive;
 COST: 0;
 DESC: Gain 50 spell points. Each additional level of Draconic Incarnation after this one grants 50 Sepll points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
-ICON: DraconicBloodlineI;
+ICON: DraconicBloodLineI;
 
 NAME: Draconic Bloodline II;
 TREE: Draconic Incarnation;
@@ -225,7 +225,7 @@ SLOT: 3;
 TYPE: Passive;
 COST: 0;
 DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
-ICON: DraconicBloodlineIV;
+ICON: DraconicBloodLineIV;
 
 NAME: Draconic Bloodline V;
 TREE: Draconic Incarnation;
@@ -234,7 +234,7 @@ SLOT: 4;
 TYPE: Passive;
 COST: 0;
 DESC: You gain 50 spell points and +1 to your Wizard, Sorcerer, Bard and Artificer caster levels if you have any levels in the class.;
-ICON: DraconicBloodlineV;
+ICON: DraconicBloodLineV;
 
 NAME: Draconic Fury;
 TREE: Draconic Incarnation;
@@ -454,7 +454,7 @@ DESC2: Activation Cost: 15 Spell Points\par Cooldown: 4 minutes\par This ability
 REQ2: EHM: Energy Sheath [1-0-2];
 DESC3: Activation Cost: 15 Spell Points\par Cooldown: 4 minutes\par This ability can be used only when you are at 50% HP or lower. You feign an explosive death: nearby enemies take 1d12 + 12 per caster level electric damage from a blast of electricity centered on you. A successful Reflex save (DC 20 + half character level + Charisma or Intelligence modifier) reduces the damage by half. YOu then trigger a Diplomacy effect and become invisible for the next 10 seconds. This invisibility does not break if you attack enemies or cast spells.;
 REQ3: EHM: Energy Sheath [1-0-3];
-ICON: GooutwithaBangElectric;
+ICON: GoOutWithaBangElectric;
 
 MULTI: Go Out With A Bang;
 MSLOT: 4;
@@ -514,7 +514,7 @@ COST: 1;
 DESC1: Over time you have developed an affinity for Evocation spells, granting you a +1 bonus to your DCs with Spells of that school.;
 REQ1: FEAT: Spell Focus: Evocation;
 DESC2: Over time you have developed an affinity for Evocation spells, granting you a further +1 bonus to your DCs with Spells of that school, for a total of +2.;
-ICON: PreciseEvocaiton;
+ICON: PreciseEvocation;
 
 MULTI: Intelligence or Charisma;
 MSLOT: 1;
@@ -709,7 +709,7 @@ DESC2: Activation Cost: 20 Spell Points\par Cooldown: 30 seconds\par A pulse of 
 REQ2: EHM: Go Out With A Bang [2-0-2];
 DESC3: Activation Cost: 20 Spell Points\par Cooldown: 30 seconds\par A pulse of electricity emanates from you body, dealing 1d15 + 15 per character level electric damage to enemies in your vicinity. A successful Reflex save (DC 20 + half character level + Charisma or Intelligence modifier) reduces the damage by half.;
 REQ3: EHM: Go Out With A Bang [2-0-3];
-ICON: EnergyBurstElectric;
+ICON: EnergyburstElectric;
 
 MULTI: Energy Burst;
 MSLOT: 4;
@@ -741,7 +741,7 @@ DESC1: Besides your main elemental focus, you have also trained yourself in the 
 //REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Acid Spell Power and further +1 to your caster level and maximum caster level with acid spells, for a total of +2 to each.;
 //REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
-ICON: SecondaryAcidSpecialty;
+ICON: SecondarySpellSpecialtyAcid;
 
 MULTI: Secondary Spell Specialty;
 MSLOT: 2;
@@ -756,7 +756,7 @@ DESC1: Besides your main elemental focus, you have also trained yourself in the 
 //REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Cold Spell Power and further +1 to your caster level and maximum caster level with cold spells, for a total of +2 to each.;
 //REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
-ICON: SecondaryColdSpecialty;
+ICON: SecondarySpellSpecialtyCold;
 
 MULTI: Secondary Spell Specialty;
 MSLOT: 3;
@@ -771,7 +771,7 @@ DESC1: Besides your main elemental focus, you have also trained yourself in the 
 //REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Electric Spell Power and further +1 to your caster level and maximum caster level with electric spells, for a total of +2 to each.;
 //REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
-ICON: SecondaryElectricSpecialty;
+ICON: SecondarySpellSpecialtyElectric;
 
 MULTI: Secondary Spell Specialty;
 MSLOT: 4;
@@ -786,7 +786,7 @@ DESC1: Besides your main elemental focus, you have also trained yourself in the 
 //REQ1: \\NO IDEA HOW TO SET THIS UP - YET;
 DESC2: Besides your main elemental focus, you have also trained yourself in the use of an energy type not opposed to your dragon heritage. You gain 20 Fire Spell Power and further +1 to your caster level and maximum caster level with fire spells, for a total of +2 to each.;
 //REQ2: \\NO IDEA HOW TO SET THIS UP - YET;
-ICON: SecondaryFireSpecialty;
+ICON: SecondarySpellSpecialtyFire;
 
 MULTI: Draconic Spell Knowledge;
 MSLOT: 1;
@@ -866,7 +866,7 @@ DESC2: Due to your close association with black dragons, your acid spells have a
 REQ2: EHM: Black Dragon Heritage [3-2-2],, EH: Draconic Spell Knowledge [4-2-2];
 DESC3: Due to your close association with black dragons, your acid spells have a 15% chance to reduce the Fortitude saves of their targets by 5 for 30 seconds.;
 REQ3: EHM: Black Dragon Heritage [3-2-3],, EH: Draconic Spell Knowledge [4-2-3];
-ICON: DraconicSpellAugmentationAcid;
+ICON: DraconicspellAugmentationAcid;
 
 MULTI: Draconic Spell Augmentation;
 MSLOT: 2;
@@ -1719,7 +1719,7 @@ COST: 0;
 DESC1: For every level of Fatesinger, gain 2 songs, a +3 Sonic Resistance and 25 Spell Points.\par \par Passive: (see Character Sheet, Feats.) If you didn't have Inspire Courage, you have that Feat now.;
 MOD1: Feat;
 MODNAME1: Inspire Courage;
-ICON: FatesingersRepertoire;
+ICON: FateSingersRepertoire;
 
 NAME: Glitter of Fame;
 TREE: Fatesinger;
@@ -2403,7 +2403,7 @@ COST: 1;
 DESC1: While raged, your melee attacks deal +1d8 extra damage, you gain +1 Intimidate, +1 Will Saves, and you lose  -5AC, -10% Fortification.;
 DESC2: While raged, your melee attacks deal +1d10 extra damage, you gain +2 Intimidate, +2 Will Saves, and you lose  -5AC, -10% Fortification.;
 DESC3: While raged, your melee attacks deal +1d12 extra damage, you gain +3 Intimidate, +3 Will Saves, and you lose  -5AC, -10% Fortification.;
-ICON: Tunnelvision;
+ICON: TunnelVision;
 
 NAME: Primal Scream;
 TREE: Fury of the Wild;
@@ -2861,7 +2861,7 @@ RANKS: 1;
 TYPE: Passive;
 COST: 0;
 DESC1: If you can succeed in purging yourself of the last traces of imperfection, you will know enlightenment. You are immune to most forms of knockdown, gain +1 to your Passive Ki Generation , and also gain +1 to the DC of saving throws against your tactical combat feats.;
-ICON: BalanceinAllThings;
+ICON: BalanceinAllthings;
 
 NAME: Lily Petal;
 TREE: Grandmaster of Flowers;
@@ -3062,7 +3062,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 1;
 DESC1: You are immune to damage caused by falling. In addition, when this ability is toggled on, you are under the effect of Feather Fall.;
-ICON: LightasaFeather;
+ICON: LightAsAFeather;
 
 NAME: Perfection of Body;
 TREE: Grandmaster of Flowers;
@@ -3344,7 +3344,7 @@ MOD1: Ability;
 MODNAME1: Hit Points;
 MODTYPE1: Destiny;
 MODVALUE1: 10;
-ICON: ShrugoffPunishment;
+ICON: ShrugOffPunishment;
 
 NAME: Action Hero;
 TREE: Legendary Dreadnought;
@@ -3400,7 +3400,7 @@ MOD1: Ability;
 MODNAME1: Hit Points;
 MODTYPE1: Destiny;
 MODVALUE1: 10;
-ICON: ActionBoostThickSkinned;
+ICON: ActionBoostThickskinned;
 
 NAME: Combat Brute;
 TREE: Legendary Dreadnought;
@@ -3672,7 +3672,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 12 seconds\par Melee Attack: On Hit: 100 Electrical damage. On Critical: Gain +15% enhancement bonus to melee doublestrike for 6 seconds. On Vorpal: 10d100 Electrical damage. Requires a club, greatclub, mace, morningstar, or quarterstaff to be equipped in your main hand.;
-ICON: LIghtningMace;
+ICON: LightningMace;
 
 NAME: Anvil of Thunder;
 TREE: Legendary Dreadnought;
@@ -3915,7 +3915,7 @@ MOD1: Ability;
 MODNAME1: Spell Points;
 MODTYPE1: Destiny;
 MODVALUE1: 50;
-ICON: ArcaneSpellSurge;
+ICON: ArcaneSpellsurge;
 
 NAME: Sigil of Spell Warding;
 TREE: Magister;
@@ -4380,7 +4380,7 @@ COST: 1;
 DESC1: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 30 seconds and grants a +15 stacking Spell Power bonus to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
 DESC2: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 30 seconds and grants a +30 stacking Spell Power bonus to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
 DESC3: Activation Cost: 20 Spell Points\par cooldown: 30 seconds\par Inscribes a runic sigil on the ground where you designate. It remains there for 30 seconds and grants a +45 stacking Spell Power bonus to you and any allies standing within its radius. No more than a single Sigil per caster can exist at one time - if you cast another, your previous one is immediately erased.;
-ICON: SigilofBatteringSpellCraft;
+ICON: SigilofBatteringSpellcraft;
 
 NAME: Nullmagic Guard;
 TREE: Magister;
@@ -4879,14 +4879,14 @@ ICON: Intelligence;
 
 [Primal Avatar]
 
-NAME: Strenght of Spirit;
+NAME: Strength of Spirit;
 TREE: Primal Avatar;
 TIER: 0;
 SLOT: 0;
 TYPE: Active;
 COST: 0;
 DESC: Cooldown 5 seconds\par When you hit with a melee attack, or cast a spell on an ally, or cast an offensive spell on an enemy, you gain 1 Spirit. Each of these three categories triggers only once every three seconds. You can have up to 30 Spirit. Spirit decays at a rate of one every 9 seconds. Toggle: You gain +30 Universal Spell Power. Costs 1 Spirit to activate and 1 Spirit every six seconds. \par \par (Stays toggled on until manually turned off.);
-ICON: StrenghtofSpirit;
+ICON: StrengthofSpirit;
 
 NAME: Magic of Nature;
 TREE: Primal Avatar;
@@ -5300,7 +5300,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cost: 50 Spell Points\par Cooldown: 12 seconds\par Enemies damaged by your attacks or spells are also struck by lightning, dealing 10d20 electric damage, halved on a reflex save vs. DC 50. Lightning strikes up to one enemy each second. You also gain featherfall and Deflect Arrows. Duration: 18 seconds.;
-ICON: Stormrage;
+ICON: StormRage;
 
 NAME: Summon Dryad Elder;
 TREE: Primal Avatar;
@@ -5377,7 +5377,7 @@ SLOT: 2;
 RANKS: 1;
 TYPE: Active;
 COST: 2;
-DESC1: Activation Cost: 50 Spell Points\par Cooldown: 5 seconds\par Toggle: +2 Strenght, +2 Dexterity, +2 Constitution.\par \par Consumes 1 Spirit on activation and every 6 seconds.\par \par (Stays toggled on until manually turned off.);
+DESC1: Activation Cost: 50 Spell Points\par Cooldown: 5 seconds\par Toggle: +2 Strength, +2 Dexterity, +2 Constitution.\par \par Consumes 1 Spirit on activation and every 6 seconds.\par \par (Stays toggled on until manually turned off.);
 ICON: SpiritBoon;
 
 MULTI: Strength or Wisdom;
@@ -6314,7 +6314,7 @@ COST: 1;
 DESC1: Increases your attack speed with thrown weapons by 20%.;
 DESC2: Increases your attack speed with thrown weapons by 40%.;
 DESC3: Increases your attack speed with thrown weapons by 60%.;
-ICON: WhirlingWrists;
+ICON: WhirlingWrist;
 
 MULTI: Dexterity or Wisdom;
 MSLOT: 1;
@@ -6357,7 +6357,7 @@ TYPE: Active;
 COST: 2;
 DESC1: While in Prism Stance, your ranged and thrown attacks and offensive spells have a 7% chance to inflict a random effect on your target.;
 REQ1: EH: Rainbow [3-0-1];
-ICON: Double Rainbow;
+ICON: DoubleRainbow;
 
 NAME: Stay Good;
 TREE: Shiradi Champion;
@@ -6618,7 +6618,7 @@ MOD1: Skill;
 MODNAME1: Intimidate;
 MODTYPE1: Destiny;
 MODVALUE1: 1;
-ICON: HeednoPain;
+ICON: HeedNoPain;
 
 NAME: Steadfast;
 TREE: Unyielding Sentinel;
@@ -7015,7 +7015,7 @@ RANKS: 1;
 TYPE: Active;
 COST: 2;
 DESC1: Cooldown: 5 minutes\par Heal yourself for 1000 HP. For 20 seconds, you gain 10,000 temporary HP.;
-ICON: Undying Vanguard;
+ICON: UndyingVanguard;
 
 MULTI: Charisma or Constitution;
 MSLOT: 1;
