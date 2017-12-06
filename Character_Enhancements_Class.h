@@ -55,7 +55,8 @@ class Character_Enhancements_Class
 		void CopyCharacterEnhancementSlots(int DestTree, int TreetobeCopied);
 		int GetTotalEnhancementMod(MODCATEGORY Mod, string ModName, int SelectedLevel);
 		void AutoDistribute();
-		
+		bool GetAPTome();
+		void SetAPTome(bool state);		
 
 	private:
 		CharacterEnhancementSlot CharacterEnhancementSlots[7][6][6];
@@ -66,5 +67,6 @@ class Character_Enhancements_Class
 		int ConvertEnhancementTreeToIndex(ENHANCEMENT_TREE Tree);
 		string ConvertEnhancementDataToString(int Tree, int Level, int Slot, int Rank);
 		bool ValidateEnhancement(ENHANCEMENT_TREE Tree, int Level, int Slot, int Rank, int CharacterLevel, int CharacterAP);
+		bool APTome;
 	};
 

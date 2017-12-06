@@ -4,6 +4,7 @@
 #include "CharacterClass.h"
 #include "MultiEnhancementWindowClass.h"
 
+
 //static members
 int EnhancementWindowBaseClass::CharacterLevel;
 int EnhancementWindowBaseClass::APSpentTree[7];

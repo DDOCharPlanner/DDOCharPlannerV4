@@ -518,6 +518,16 @@ void Character_Enhancements_Class::SetRaceEnhancements(RACE NewRace)
 		//CharacterEnhancementTreeList[0] = Character GetRaceTree(NewRace);
 		}
 	}
+//---------------------------------------------------------------------------
+bool Character_Enhancements_Class::GetAPTome()
+{
+	return APTome;
+}
+//---------------------------------------------------------------------------
+void Character_Enhancements_Class::SetAPTome(bool state)
+{
+	APTome = state;
+}
 
 //---------------------------------------------------------------------------
 void Character_Enhancements_Class::Save(HANDLE FileHandle)
@@ -558,6 +568,7 @@ void Character_Enhancements_Class::Save(HANDLE FileHandle)
 				}
 			}
 		}
+
 	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 	}

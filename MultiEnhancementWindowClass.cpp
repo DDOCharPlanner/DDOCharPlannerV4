@@ -244,7 +244,13 @@ void MultiEnhancementWindowClass::HandleLeftMouseButtonClick(unsigned int x, uns
 				{
 				if (IsEnhancementLocked(Enhancement) == false)
 					{
-						if (CurrentLevel == 5 && !EnhancementWindow->GetCurrentTreeLvl5Lockout(CurrentTree))
+						bool Lvl5Locked = false;
+						if (CurrentLevel == 5  && EnhancementWindow->GetCurrentTreeLvl5Lockout(CurrentTree))
+						{
+								Lvl5Locked = true;
+						}
+
+						if (Lvl5Locked == false )
 						{
 							if (APAvailable < Enhancement->GetEnhancementCost())
 							{

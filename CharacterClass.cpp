@@ -4,6 +4,7 @@
 #include "InterfaceManagerClass.h"
 #include "MainScreenClass.h"
 #include "time.h"
+#include "Character_Enhancements_Class.h"
 
 //---------------------------------------------------------------------------
 CharacterClass Character;
@@ -62,6 +63,7 @@ void CharacterClass::Reset()
 	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
 		RacePastLifeCount[i] = 0;
 	CharacterEnhancements.Clear();
+	CharacterEnhancements.SetAPTome(false);
 	CharacterDestinies.ClearAll();
     SpellList.clear();
 	ClearCharacterItems();
@@ -4482,6 +4484,8 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 	ItemEffectClass *ptItemEffect;
 	IShellItem *MyShellItem;
 	string NewCombinedName;
+
+	
 	int len;
 	int rc;
 	string CombinedName;
@@ -4781,6 +4785,14 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
         }
 	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
     WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+
+	StringCbPrintf(WriteBuffer, 1024, ";\r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
+	if (CharacterEnhancements.GetAPTome())
+		StringCbPrintf(WriteBuffer, 1024, "APTOME: true; \r\n");
+	else
+		StringCbPrintf(WriteBuffer, 1024, "APTOME: false; \r\n");
+	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
 
 	StringCbPrintf(WriteBuffer, 1024, "SKILLRAISE: \r\n");
 	WriteFile(FileHandle, WriteBuffer, static_cast<DWORD>(strlen(WriteBuffer)), &BytesWritten, NULL);
@@ -5150,6 +5162,7 @@ void CharacterClass::Load(HWND hwnd)
 	StringCbCopy(KeywordString[24], 256, "ICONICPL:");
 	StringCbCopy(KeywordString[25], 256, "EPICPL:");
 	StringCbCopy(KeywordString[26], 256, "RACEPL:");
+	StringCbCopy(KeywordString[27], 256, "APTOME: ");
     for (unsigned int i=0; i<NUMKEYWORDS; i++)
         TempPointer[i] = strstr(FileData, KeywordString[i]);
     while (true)
@@ -5660,6 +5673,16 @@ void CharacterClass::Load(HWND hwnd)
 					StringData[strstr(DataPointer, ";") - DataPointer] = '\0';
 				}
 				break;
+			}
+			case 27:  //APTome
+			{
+				SearchString = StringData;
+				Found = SearchString.find("true");
+				if (Found != string::npos)
+					CharacterEnhancements.SetAPTome(true);
+				else
+					CharacterEnhancements.SetAPTome(false);
+
 			}
             }
         }

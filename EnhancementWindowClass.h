@@ -43,6 +43,7 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		HWND TreeAPSpentLabel1, TreeAPSpentLabel2, TreeAPSpentLabel3;
 		HWND SelectTreeList;
 		HWND ParentWindow;
+		HWND APTomeButton;
 
 		HFONT ArielFontSmall;
 
@@ -70,6 +71,8 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		GraphicStruct BlueLevelBox;
 		GraphicStruct GreenLevelBox;
 		GraphicStruct RedLevelBox;
+
+		Character_Enhancements_Class *CharacterEnhancements;
 
 		bool MultiEnhancementWindowVisible;
 

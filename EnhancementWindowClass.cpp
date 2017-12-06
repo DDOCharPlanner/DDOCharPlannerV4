@@ -5,6 +5,7 @@
 #include "ToolTipWindowClass.h"
 #include "MainScreenClass.h"
 
+
 //---------------------------------------------------------------------------
 EnhancementWindowClass::EnhancementWindowClass()
 	{
@@ -114,8 +115,9 @@ void EnhancementWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SetWindowPos(EnhancementWindowHandle, Parent, (ScreenX/2)-(WindowX/2), (ScreenY/2)-(WindowY/2), 0, 0, SWP_NOSIZE);
 	
 	//the child windows
-	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_CENTER, 440, 505, 360, 20, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
-	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD | SS_CENTER, 440, 530, 360, 20, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
+	APTomeButton = CreateWindowEx(NULL, "BUTTON", "AP Tome,", WS_CHILD | BS_AUTOCHECKBOX, 550, 480, 340, 20, EnhancementWindowHandle, (HMENU)EW_APTOME, Instance, NULL);
+	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_CENTER, 450, 505, 340, 20, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
+	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD | SS_CENTER, 450, 530, 340, 20, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
 	Respec = CreateWindowEx(NULL, "BUTTON", "Respec From This Level", WS_CHILD, 820, 480, 170, 20, EnhancementWindowHandle, (HMENU)EW_RESPEC, Instance, NULL);
 
 	ResetAllTreesButton = CreateWindowEx(NULL, "BUTTON", "Reset All Trees", WS_CHILD, 820, 505, 170, 20, EnhancementWindowHandle, (HMENU)EW_RESETALLTREESBUTTON, Instance, NULL);
@@ -164,6 +166,9 @@ void EnhancementWindowClass::Show(bool State)
 	ShowWindow(TreeFrame1, State);
 	ShowWindow(TreeFrame2, State);
 	ShowWindow(TreeFrame3, State);
+	ShowWindow(APTomeButton, State);
+
+
 	}
 
 //---------------------------------------------------------------------------
@@ -172,7 +177,6 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 	
 	string Text;
 	ostringstream ss;
-	Character_Enhancements_Class *CharacterEnhancements;
 	ToolTipWindowClass *ToolTipWindow;
 
 	//Center in current MainScreen
@@ -196,7 +200,7 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 
 
 	ResetEnhancementWindow();	//lets clear all the variables
-
+	CharacterEnhancements = Character.GetCharacterEnhancementsPointer();
 	//set our total AP  vairables based on characterlevel
 	if (CharacterLevel <21)
 		LevelAP = CharacterLevel *4;
@@ -204,6 +208,10 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 		LevelAP = 80; //this is max attainable action points
 	//Check for Race Past Life Action Points
 	RaceAP = Character.GetRaceEnhancement();
+	
+	if (CharacterEnhancements->GetAPTome())
+		RaceAP += 1;
+
 	if (RaceAP > 0)
 	{
 		RaceAPAvailable = RaceAP;
@@ -223,7 +231,7 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 		}
 
 	//Get Character Info
-	CharacterEnhancements = Character.GetCharacterEnhancementsPointer();
+
 	FirstTime = true;
 	for (int i=0; i<7; i++)
 		{
@@ -278,6 +286,10 @@ void EnhancementWindowClass::ActivateEnhancementWindow()
 	ToolTipTree = -1;
 	ToolTipLevel = -1;
 	ToolTipSlot = -1;
+	if (CharacterEnhancements->GetAPTome())
+		SendMessage(APTomeButton, BM_SETCHECK, BST_CHECKED, 1);
+	else
+		SendMessage(APTomeButton, BM_SETCHECK, BST_UNCHECKED, 1);
 	}
 
 //-------------------------------------------------------------------------------------
@@ -1628,10 +1640,10 @@ void EnhancementWindowClass::UpdateAPAvailableLabel(int NewValue, int RaceAPValu
 	if (RaceAPValue != -1)
 	{
 		ss << NewValue - RaceAPValue;
-		ss << " Action Points Remaining,";
+		ss << " AP Remaining,";
 		ss << " ";
 		ss << RaceAPValue;
-		ss << " Racial Points Remaining";
+		ss << " RP Remaining";
 	}
 	else
 	{
@@ -1655,15 +1667,15 @@ void EnhancementWindowClass::UpdateAPSpentLabel(int NewValue, int RaceAPValue)
 	if (RaceAPValue != -1)
 	{
 		ss << NewValue - RaceAPValue;
-		ss << " Spent";
+		ss << " AP Spent";
 		ss << ", ";
 		ss << RaceAPValue;
-		ss << " Racial Points Spent.";
+		ss << " RP Spent.";
 	}
 	else
 	{
 		ss << NewValue;
-		ss << " Spent";
+		ss << " Action Points Spent";
 	}
 	Text = ss.str();
 	SendMessage(APSpentLabel, WM_SETTEXT, 0, (LPARAM)Text.c_str());
@@ -2958,6 +2970,38 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 							return 0;
 						}
 					}
+				if ((int)LOWORD(wParam) == EW_APTOME)
+				{
+					if (!IsWindowVisible(SelectTreeList))
+					{
+						
+						if (SendMessage(APTomeButton, BM_GETCHECK, 0, 0) == BST_CHECKED)
+						{
+							CharacterEnhancements->SetAPTome(true);
+							LevelAPAvailable += 1;
+							RaceAPAvailable += 1;
+							RaceAP += 1;
+
+							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
+							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+
+						}
+							
+						else
+						{
+							CharacterEnhancements->SetAPTome(false);
+							RaceAPAvailable -= 1;
+							LevelAPAvailable -= 1;
+							RaceAP -= 1;
+							if (RaceAPAvailable < RaceAPSpent)
+								RaceAPSpent = RaceAPAvailable;
+							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
+							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+						}
+							
+						return 0;
+					}
+				}
 				}
 
 			return 0;
