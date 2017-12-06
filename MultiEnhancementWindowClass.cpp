@@ -147,6 +147,7 @@ void MultiEnhancementWindowClass::DrawGraphics(HDC hdc)
 	ENHTTree = EnhancementWindow->GetCurrentTreeEnhancementTree(CurrentTree);
 	EnhancementSlotData = EnhancementWindow->GetEnhancementSlotData(CurrentTree, CurrentLevel, CurrentSlot);	
 	EnhancementTree = Data.GetEnhancementTreePointer(ENHTTree);
+
 	for (unsigned int i=1; i<Num_Slots; i++)
 		{
 		EnhancementIndex = EnhancementWindow->GetCurrentTreeSlotsEnhancementIndex(CurrentTree, CurrentLevel, CurrentSlot, i);
@@ -163,6 +164,8 @@ void MultiEnhancementWindowClass::DrawGraphics(HDC hdc)
 
 		//Lets see if our enhancement is locked out
 		if (IsEnhancementLocked(Enhancement) == true)
+			RequirementsMet = false;
+		if (CurrentLevel == 5 && EnhancementWindow->GetCurrentTreeLvl5Lockout(CurrentTree))
 			RequirementsMet = false;
 
 		//Set our Icon border to Active or Passive
@@ -241,15 +244,18 @@ void MultiEnhancementWindowClass::HandleLeftMouseButtonClick(unsigned int x, uns
 				{
 				if (IsEnhancementLocked(Enhancement) == false)
 					{
-					if (APAvailable < Enhancement->GetEnhancementCost())
+						if (CurrentLevel == 5 && !EnhancementWindow->GetCurrentTreeLvl5Lockout(CurrentTree))
 						{
-						ReleaseDC(MultiEnhancementWindowHandle, hdc);
-						return;
+							if (APAvailable < Enhancement->GetEnhancementCost())
+							{
+								ReleaseDC(MultiEnhancementWindowHandle, hdc);
+								return;
+							}
+							//ok our selection is valid
+							Selection = i;
+							DrawGraphics(hdc);
+							EnableWindow(MultiEnhanceAcceptHandle, true);
 						}
-					//ok our selection is valid
-					Selection = i;
-					DrawGraphics(hdc);
-					EnableWindow(MultiEnhanceAcceptHandle, true);
 					}
 				}
 			}

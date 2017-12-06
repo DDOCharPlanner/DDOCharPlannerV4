@@ -26,7 +26,7 @@ class EnhancementWindowClass : public EnhancementWindowBaseClass
 		unsigned int GetCurrentTreeSlotsEnhancementIndex(int Tree, int Level, int Slot, unsigned int Index);
 		void MultiEnhancementSelected(int Tree, int Level, int Slot, int Selection);
 		EnhancementSlotStruct* GetEnhancementSlotData(int Tree, int Level, int Slot);
-
+		bool GetCurrentTreeLvl5Lockout(int CurrentTreeIndex);
 		//Functions for handling Window Messages.
 		long HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam, LPARAM lParam);
 		long HandleSubclassedMessage(HWND Wnd, UINT Message, WPARAM wParam, LPARAM lParam);

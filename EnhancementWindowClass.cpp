@@ -1209,6 +1209,11 @@ void EnhancementWindowClass::ResetCurrentTree(int CurrentTree)
 	}
 
 //---------------------------------------------------------------------------
+	bool EnhancementWindowClass::GetCurrentTreeLvl5Lockout(int CurrentTreeIndex)
+	{
+		return CurrentLevel5TreeLock[CurrentTreeIndex];
+	}
+//---------------------------------------------------------------------------
 void EnhancementWindowClass::LoadChosenTreeSlots(int Tree, bool New)
 	{
 	Data_Enhancement_Class *Enhancement;

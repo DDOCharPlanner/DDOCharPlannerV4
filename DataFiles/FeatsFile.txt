@@ -5560,7 +5560,7 @@ RACELIST: Human, Elf, Halfling, Dwarf, Warforged, Drow, Half-Elf, Half-Orc, Blad
 CLASSLIST: Monk;
 LEVEL: 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18;
 ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Train, Automatic;
-NEEDSALL: Feat Master of Forms;
+NEEDSALL: Feat Monk Feats: Master of Forms;
 ICON: GrandmasterOfForms;
 VERIFIED: 2013-09-24, ddo wiki;
 

@@ -1659,6 +1659,14 @@ void MultiAbilityWindowClass::LevelUpClear()
 	SendMessage(WisRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
 	SendMessage(WisRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
 	SendMessage(WisRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
+
+	SendMessage(ChaRadio4, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio8, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio12, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio16, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio20, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio24, BM_SETCHECK, BST_UNCHECKED, 1);
+	SendMessage(ChaRadio28, BM_SETCHECK, BST_UNCHECKED, 1);
 							
 						
 }

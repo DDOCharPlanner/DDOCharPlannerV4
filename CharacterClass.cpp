@@ -140,7 +140,7 @@ void CharacterClass::CharacterTR()
 
 			tempcount = EpicPastLifeCount[y][x];
 			EpicPastLifeCount[y][x] = 0;
-			for (int x = 0; x < tempcount; x++)
+			for (int i = 0; i < tempcount; i++)
 				IncreaseEpicFeat(DESTINY_SPHERE(y), x);
 		}
 
