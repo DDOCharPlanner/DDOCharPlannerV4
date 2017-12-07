@@ -251,6 +251,8 @@ void Data_Enhancement_Class::InitializeEnhancement(string Data, ENHANCEMENT_TREE
 			case 3:		//the tree
 				{
                 Tree = EnhancementLine[i];
+				if (Tree == "Warpriest (Fvs)")
+					int x = 0;
 				RaceTree = IsRaceTree();
 				RaceAATree = IsRaceAATree();
 				break;

@@ -34405,3 +34405,5 @@ TYPE: Passive;
 COST: 2;
 DESC1: You have extensively practiced with Electric magic, granting an additional +15 Electric Spell Power.;
 ICON: WTRS_PowerofLightning;
+
+[ENDOFTREE]
