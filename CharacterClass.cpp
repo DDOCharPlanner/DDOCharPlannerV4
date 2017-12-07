@@ -4952,7 +4952,7 @@ void CharacterClass::Save(HWND hwnd, bool SaveAs)
 //---------------------------------------------------------------------------
 void CharacterClass::Load(HWND hwnd)
     {
-    #define NUMKEYWORDS 27
+    #define NUMKEYWORDS 28
     HANDLE FileHandle;
     char *FileData;
     DWORD FileSize;

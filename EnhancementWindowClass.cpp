@@ -115,7 +115,7 @@ void EnhancementWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SetWindowPos(EnhancementWindowHandle, Parent, (ScreenX/2)-(WindowX/2), (ScreenY/2)-(WindowY/2), 0, 0, SWP_NOSIZE);
 	
 	//the child windows
-	APTomeButton = CreateWindowEx(NULL, "BUTTON", "AP Tome,", WS_CHILD | BS_AUTOCHECKBOX, 550, 480, 340, 20, EnhancementWindowHandle, (HMENU)EW_APTOME, Instance, NULL);
+	APTomeButton = CreateWindowEx(NULL, "BUTTON", "AP Tome", WS_CHILD | BS_AUTOCHECKBOX, 580, 480, 340, 20, EnhancementWindowHandle, (HMENU)EW_APTOME, Instance, NULL);
 	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_CENTER, 450, 505, 340, 20, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
 	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD | SS_CENTER, 450, 530, 340, 20, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
 	Respec = CreateWindowEx(NULL, "BUTTON", "Respec From This Level", WS_CHILD, 820, 480, 170, 20, EnhancementWindowHandle, (HMENU)EW_RESPEC, Instance, NULL);
@@ -2977,6 +2977,7 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 						
 						if (SendMessage(APTomeButton, BM_GETCHECK, 0, 0) == BST_CHECKED)
 						{
+
 							CharacterEnhancements->SetAPTome(true);
 							LevelAPAvailable += 1;
 							RaceAPAvailable += 1;
@@ -2984,7 +2985,7 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 
 							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
 							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
-
+							EnableWindow(AcceptButton, true);
 						}
 							
 						else
@@ -2997,6 +2998,7 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 								RaceAPSpent = RaceAPAvailable;
 							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
 							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+							EnableWindow(AcceptButton, true);
 						}
 							
 						return 0;

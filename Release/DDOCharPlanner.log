@@ -1,63 +1,8 @@
-﻿Build started 12/6/2017 5:00:12 PM.
+﻿Build started 12/7/2017 9:48:32 AM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DDOCharPlanner.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiAbilityWindowClass.cpp MultiClassWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
-         AboutWindowClass.cpp
-     1>AboutWindowClass.cpp(95): warning C4129: 'p' : unrecognized character escape sequence
-         CharacterClass.cpp
-     1>CharacterClass.cpp(4513): warning C4101: 'temphr' : unreferenced local variable
-     1>CharacterClass.cpp(5590): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5611): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5636): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5666): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(4989): warning C4101: 'hWnd' : unreferenced local variable
-         Character_Destinies_Class.cpp
-         Character_Enhancements_Class.cpp
-         ControlWindowClass.cpp
-         DDOCharPlanner.cpp
-         DataClass.cpp
-     1>DataClass.cpp(940): warning C4101: 'FileHandle' : unreferenced local variable
-     1>DataClass.cpp(941): warning C4101: 'FileData' : unreferenced local variable
-     1>DataClass.cpp(943): warning C4101: 'BytesRead' : unreferenced local variable
-     1>DataClass.cpp(942): warning C4101: 'FileSize' : unreferenced local variable
-         Data_Destiny_Class.cpp
-         Data_Destiny_MultiSelector_Class.cpp
-         Data_Destiny_Tree_Class.cpp
-         Data_Enhancement_Class.cpp
-         Data_Enhancement_MultiSelector_Class.cpp
-         Data_Enhancement_Tree_Class.cpp
-         EnhancementWindowBaseClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt EnhancementWindowClass.cpp
          EnhancementWindowClass.cpp
-         ExportTemplateDesignWindowClass.cpp
-         FeatDataClass.cpp
-         ForumExportClass.cpp
-         IconClass.cpp
-         InterfaceManagerClass.cpp
-         Generating Code...
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(1607): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
-         Compiling...
-         ItemBuilderClass.cpp
-         ItemClass.cpp
-         ItemClickyEffectClass.cpp
-         ItemEffectClass.cpp
-         LoadWindowClass.cpp
-         MainScreenClass.cpp
-         MultiAbilityWindowClass.cpp
-         MultiClassWindowClass.cpp
-         MultiEnhancementWindowClass.cpp
-         MultiFeatWindowClass.cpp
-         MultiSkillsWindowClass.cpp
-     1>MultiSkillsWindowClass.cpp(1440): warning C4551: function call missing argument list
-     1>MultiSkillsWindowClass.cpp(1468): warning C4551: function call missing argument list
-         MultiSpellsWindowClass.cpp
-         PrintClass.cpp
-         PrintWindowClass.cpp
-         RichEditBitmapClass.cpp
-         Screen_Destiny_Base_Class.cpp
-         Screen_Destiny_Class.cpp
-         ToolTipWindowClass.cpp
-         UIComponentManager.cpp
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Release\DDOCharPlanner.res
          Release\AboutWindowClass.obj
@@ -104,4 +49,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:28.69
+Time Elapsed 00:00:02.74
