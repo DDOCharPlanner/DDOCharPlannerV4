@@ -386,7 +386,7 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(SHADARKAI);
         if (FeatLine[i].find("Deep Gnome") != string::npos) // Look for Deep Gnome before just Gnome
           RaceType.push_back(DEEPGNOME);
-        if (FeatLine[i].find("Gnome") != string::npos)
+        else if (FeatLine[i].find("Gnome") != string::npos)
 					RaceType.push_back(GNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
@@ -1186,7 +1186,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
         if (CharacterRace == DEEPGNOME)
           return PREREQ_PASS;
       }
-      if (Substring.find("Gnome") != string::npos)
+      else if (Substring.find("Gnome") != string::npos)
 			{
 				if (CharacterRace == GNOME)
 					return PREREQ_PASS;
