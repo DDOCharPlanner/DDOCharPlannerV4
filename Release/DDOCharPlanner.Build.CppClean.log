@@ -1,4 +1,6 @@
 e:\planner\ddocharplannerv4\release\vc120.pdb
+e:\planner\ddocharplannerv4\release\dataclass.obj
+e:\planner\ddocharplannerv4\release\characterclass.obj
 e:\planner\ddocharplannerv4\release\interfacemanagerclass.obj
 e:\planner\ddocharplannerv4\release\iconclass.obj
 e:\planner\ddocharplannerv4\release\forumexportclass.obj
@@ -12,12 +14,10 @@ e:\planner\ddocharplannerv4\release\data_enhancement_class.obj
 e:\planner\ddocharplannerv4\release\data_destiny_tree_class.obj
 e:\planner\ddocharplannerv4\release\data_destiny_multiselector_class.obj
 e:\planner\ddocharplannerv4\release\data_destiny_class.obj
-e:\planner\ddocharplannerv4\release\dataclass.obj
 e:\planner\ddocharplannerv4\release\ddocharplanner.obj
 e:\planner\ddocharplannerv4\release\controlwindowclass.obj
 e:\planner\ddocharplannerv4\release\character_enhancements_class.obj
 e:\planner\ddocharplannerv4\release\character_destinies_class.obj
-e:\planner\ddocharplannerv4\release\characterclass.obj
 e:\planner\ddocharplannerv4\release\aboutwindowclass.obj
 e:\planner\ddocharplannerv4\release\uicomponentmanager.obj
 e:\planner\ddocharplannerv4\release\tooltipwindowclass.obj
@@ -40,10 +40,8 @@ e:\planner\ddocharplannerv4\release\itemclass.obj
 e:\planner\ddocharplannerv4\release\itembuilderclass.obj
 e:\planner\ddocharplannerv4\ddocharplanner.exe
 e:\planner\ddocharplannerv4\release\ddocharplanner.res
-e:\planner\ddocharplannerv4\release\windowsdialogclass.obj
 e:\planner\ddocharplannerv4\\ddocharplanner.pdb
 e:\planner\ddocharplannerv4\\ddocharplanner.exe
-e:\planner\ddocharplannerv4\\ddocharplanner.ilk
 e:\planner\ddocharplannerv4\release\ddocharplanner.tlog\cl.command.1.tlog
 e:\planner\ddocharplannerv4\release\ddocharplanner.tlog\cl.read.1.tlog
 e:\planner\ddocharplannerv4\release\ddocharplanner.tlog\cl.write.1.tlog

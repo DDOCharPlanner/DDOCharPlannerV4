@@ -289,7 +289,7 @@ void Data_Enhancement_Tree_Class::InitHash()
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Shadar Kai",ENHT_SHADAR_KAI));// Added a space in "Shadar-Kai"to allow for lockouts in enhancment trees
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Warforged",ENHT_WARFORGED));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Gnome", ENHT_GNOME));
-		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Deep Gnome", ENHT_DEEPGNOME));
+		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Deep-Gnome", ENHT_DEEPGNOME));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Dragonborn", ENHT_DRAGONBORN));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Aasimar", ENHT_AASIMAR));
 		EnhancementTreeList.emplace(pair<string, ENHANCEMENT_TREE>("Air Savant (Sor)", ENHT_AIR_SAVANT_SOR));
