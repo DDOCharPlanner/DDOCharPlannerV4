@@ -1736,10 +1736,10 @@ ICON: BDFG_PoweroftheForge;
 
 [ENDOFTREE]
 
-[Deep Gnome] **** (Update 02-11-2016) ********************************************************
+[Deep-Gnome] **** (Update 02-11-2016) ********************************************************
 
 NAME: Wariness;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 0;
 RANKS: 1;
@@ -1751,7 +1751,7 @@ ICON: DPGN_Wariness;
 MULTI: Intelligence or Wisdom;
 MSLOT: 1;
 NAME: Intelligence;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
@@ -1767,7 +1767,7 @@ ICON: DPGN_Intelligence;
 MULTI: Intelligence or Wisdom;
 MSLOT: 2;
 NAME: Wisdom;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 1;
 RANKS: 1;
@@ -1781,7 +1781,7 @@ MODVALUE1: 1;
 ICON: DPGN_Wisdom;
 
 NAME: Wariness;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 2;
 RANKS: 1;
@@ -1794,7 +1794,7 @@ ICON: DPGN_Wariness;
 MULTI: Intelligence or Wisdom;
 MSLOT: 1;
 NAME: Intelligence;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 3;
 RANKS: 1;
@@ -1810,7 +1810,7 @@ ICON: DPGN_Intelligence;
 MULTI: Intelligence or Wisdom;
 MSLOT: 2;
 NAME: Wisdom;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 3;
 RANKS: 1;
@@ -1824,7 +1824,7 @@ MODVALUE1: 1;
 ICON: DPGN_Wisdom;
 
 NAME: Scrolls: Retain Essence;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 0;
 SLOT: 4;
 RANKS: 1;
@@ -1835,7 +1835,7 @@ REQ1: EHM: Intelligence or Wisdom [0-3-1];
 ICON: DPGN_ScrollsRetainEssence;
 
 NAME: Illusory Escape;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 0;
 RANKS: 1;
@@ -1845,7 +1845,7 @@ DESC1: When you tumble, you will phase out from reality briefly, passing through
 ICON: DPGN_IllusoryEscape;
 
 NAME: Wand and Scroll Mastery;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 1;
 RANKS: 3;
@@ -1857,7 +1857,7 @@ DESC3: +75% damage and healing of your wands, scrolls, and other items that cast
 ICON: DPGN_WandandScrollMastery;
 
 NAME: Underdark Experience;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 2;
 RANKS: 3;
@@ -1880,7 +1880,7 @@ ICON: DPGN_UnderdarkExperience;
 MULTI: Stealthy or Awareness;
 MSLOT: 1;
 NAME: Awareness;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 3;
 RANKS: 3;
@@ -1903,7 +1903,7 @@ ICON: DPGN_Awareness;
 MULTI: Stealthy or Awareness;
 MSLOT: 2;
 NAME: Stealthy;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 3;
 RANKS: 3;
@@ -1924,7 +1924,7 @@ MODVALUE3: 3, 3;
 ICON: DPGN_Stealthy;
 
 NAME: Gnomish Weapon Training;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 1;
 SLOT: 4;
 RANKS: 1;
@@ -1934,7 +1934,7 @@ DESC1: +1 to hit and damage with light hammers, light maces, light picks, shorts
 ICON: DPGN_GnomishWeaponTrainingI;
 
 NAME: Conjure Rock;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 2;
 SLOT: 0;
 RANKS: 3;
@@ -1946,7 +1946,7 @@ DESC3: Activation Cost: 5 Spell Points\par Cooldown: 6 Seconds\par Conujure a bo
 ICON: DPGN_ConjureRock;
 
 NAME: Hardy Nature;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 2;
 SLOT: 1;
 RANKS: 3;
@@ -1958,7 +1958,7 @@ DESC3: +6 AC, +3 Physical Resistance Rating;
 ICON: DPGN_HardyNature;
 
 NAME: Color Spray;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 2;
 SLOT: 2;
 RANKS: 3;
@@ -1970,7 +1970,7 @@ DESC3: Activation Cost: 2 Spell Points\par Cooldown: 8 Seconds\par Enemies are s
 ICON: DPGN_ColorSpray;
 
 NAME: Permanent Blur;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 2;
 SLOT: 3;
 RANKS: 1;
@@ -1980,7 +1980,7 @@ DESC1: You gain a permanent Blur effect.\par \par Blur: An ally's outline become
 ICON: DPGN_PermanentBlur;
 
 NAME: Gnomish Weapon Training;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 2;
 SLOT: 4;
 RANKS: 3;
@@ -1991,7 +1991,7 @@ REQ1: EH: Gnomish Weapon Training [1-4-1];
 ICON: DPGN_GnomishWeaponTrainingII;
 
 NAME: Spellcraft;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 3;
 SLOT: 0;
 RANKS: 3;
@@ -2012,7 +2012,7 @@ MODVALUE1: 20;
 ICON: DPGN_Spellcraft;
 
 NAME: Nimble Reaction;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 3;
 SLOT: 1;
 RANKS: 3;
@@ -2024,7 +2024,7 @@ DESC3: +3 Armor Maximum Dexterity Bonus and Maximum Dodge Bonus;
 ICON: DPGN_NimbleReaction;
 
 NAME: Stoneskin;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 3;
 SLOT: 2;
 RANKS: 3;
@@ -2036,7 +2036,7 @@ DESC3: Activation Cost: 10 Spell Points\par Cooldown: 10 Seconds\par You get Sto
 ICON: DPGN_Stoneskin;
 
 NAME: Racial Spell Focus: Illusion;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 3;
 SLOT: 3;
 RANKS: 3;
@@ -2048,7 +2048,7 @@ DESC3: +3 to Illusion DCs;
 ICON: DPGN_RacialSpellFocusIllusion;
 
 NAME: Gnomish Weapon Training;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 3;
 SLOT: 4;
 RANKS: 1;
@@ -2059,7 +2059,7 @@ REQ1: EH: Gnomish Weapon Training [2-4-1];
 ICON: DPGN_GnomishWeaponTrainingIII;
 
 NAME: Phantasmal Killer;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 4;
 SLOT: 0;
 RANKS: 3;
@@ -2073,7 +2073,7 @@ ICON: DPGN_PhantasmalKiller;
 MULTI: Deep Gnomish Favored Enemy;
 MSLOT: 1;
 NAME: Favored Enemy: Reptilian;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 4;
 SLOT: 1;
 RANKS: 1;
@@ -2085,7 +2085,7 @@ ICON: DPGN_FavoredEnemyReptilian;
 MULTI: Deep Gnomish Favored Enemy;
 MSLOT: 2;
 NAME: Favored Enemy: Goblinkind;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 4;
 SLOT: 1;
 RANKS: 1;
@@ -2095,7 +2095,7 @@ DESC1: Gnomes have a history of enmity with Goblinkind. You gain the Favored Ene
 ICON: DPGN_FavoredEnemyGoblinkind;
 
 NAME: Gnomish Weapon Training;
-TREE: Deep Gnome;
+TREE: Deep-Gnome;
 LEVEL: 4;
 SLOT: 4;
 RANKS: 1;

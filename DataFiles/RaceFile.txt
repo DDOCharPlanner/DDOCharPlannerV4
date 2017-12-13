@@ -557,7 +557,7 @@ ADVANCEMENT: 20, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 24, ABILITYINCREASE, Ability Increase;
 ADVANCEMENT: 28, ABILITYINCREASE, Ability Increase;
 
-RACENAME: Deep Gnome;
+RACENAME: Deep-Gnome;
 DESCRIPTION: {\b When our enemies scheme, someone must seek them out to keep the families safe.}\par\par An arcane illusionist with affinity for the fathomless darks of the earth.\par\par Leaving home wasn't your desire. You'd prefer others never even knew Svirfneblin existed. Yet someone must investigate the unsettling rumours of Drow activity, and that someone is you.\par\par The Drow have destroyed your cities and enslaved your people before. It cannot be allowed to happen again.\par\par (Iconics begin at level one and have fifteen levels worth of XP. You may choose to keep to the path or change class as you see fit.);
 BASESTATS: 6, 8, 8, 10, 10, 6;
 ADVANCEMENT: 1, NAMEANDALIGNMENT, Select a Name and Alignment;

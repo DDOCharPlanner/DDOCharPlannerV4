@@ -687,6 +687,7 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
                     {
                     CurrentSelectedLevel = 1;
                     Character.Reset();
+					Character.ResetFiletoOpen();
                     FeatListParentHeading.clear();
                     FeatListSelectParentHeading.clear();
                     SpellListParentHeading.clear();
@@ -768,7 +769,10 @@ long MainScreenClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM wParam
 				}
                 if ((int)LOWORD(wParam) == MS_LOADBUTTON)
                     {
-                    Character.Load(ParentWindow);
+                    //Character.Load(ParentWindow);
+					if(Character.OpenDialog(ParentWindow))
+						return 0;
+					Character.Load();
                     FeatListParentHeading.clear();
                     FeatListSelectParentHeading.clear();
                     SpellListParentHeading.clear();

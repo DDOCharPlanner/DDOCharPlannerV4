@@ -115,7 +115,7 @@ void EnhancementWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	SetWindowPos(EnhancementWindowHandle, Parent, (ScreenX/2)-(WindowX/2), (ScreenY/2)-(WindowY/2), 0, 0, SWP_NOSIZE);
 	
 	//the child windows
-	APTomeButton = CreateWindowEx(NULL, "BUTTON", "AP Tome", WS_CHILD | BS_AUTOCHECKBOX, 580, 480, 340, 20, EnhancementWindowHandle, (HMENU)EW_APTOME, Instance, NULL);
+	APTomeButton = CreateWindowEx(NULL, "BUTTON", "AP Tome", WS_CHILD | BS_AUTOCHECKBOX, 580, 480, 150, 20, EnhancementWindowHandle, (HMENU)EW_APTOME, Instance, NULL);
 	APRemainingLabel = CreateWindowEx(NULL, "STATIC", "Action Points Remaining,", WS_CHILD | SS_CENTER, 450, 505, 340, 20, EnhancementWindowHandle, (HMENU)EW_APREMAININGLABEL, Instance, NULL);
 	APSpentLabel = CreateWindowEx(NULL, "STATIC", "0 Spent", WS_CHILD | SS_CENTER, 450, 530, 340, 20, EnhancementWindowHandle, (HMENU)EW_APSPENTLABEL, Instance, NULL);
 	Respec = CreateWindowEx(NULL, "BUTTON", "Respec From This Level", WS_CHILD, 820, 480, 170, 20, EnhancementWindowHandle, (HMENU)EW_RESPEC, Instance, NULL);
@@ -535,9 +535,22 @@ void EnhancementWindowClass::FillSelectTreeList(int Tree)
 		else
 			MoveWindow(SelectTreeList, 675, 466, 162, 60, false);
 		ShowWindow(SelectTreeList, true);
+		EnableWindow(Respec, false);
+		EnableWindow(ResetAllTreesButton, false);
+		EnableWindow(CancelButton, false);
+		EnableWindow(AcceptButton, false);
+		EnableWindow(APTomeButton, false);
 		}
 	else
+	{
 		ShowWindow(SelectTreeList, false);
+		EnableWindow(Respec, true);
+		EnableWindow(ResetAllTreesButton, true);
+		EnableWindow(CancelButton, true);
+		EnableWindow(AcceptButton, true);
+		EnableWindow(APTomeButton, true);
+	}
+
 	}
 
 //-------------------------------------------------------------------------------------
@@ -2939,72 +2952,73 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 			}
 		case WM_COMMAND:
 			{
-			if (HIWORD(wParam) == BN_CLICKED)
+				if (HIWORD(wParam) == BN_CLICKED)
 				{
-				if ((int)LOWORD(wParam) == EW_ACCEPTBUTTON)
-					{
-					Accept();
-					ShowWindow(SelectTreeList, false);
-					InterfaceManager.ShowChild(ENHANCEMENTWINDOW, false);
-					return 0;
-					}
-				if ((int)LOWORD(wParam) == EW_CANCELBUTTON)
-					{
-					ShowWindow(SelectTreeList, false);
-					InterfaceManager.ShowChild(ENHANCEMENTWINDOW, false);
-					return 0;
-					}
-				if ((int)LOWORD(wParam) == EW_RESETALLTREESBUTTON)
-					{
-					if (!IsWindowVisible(SelectTreeList))
+
+						if ((int)LOWORD(wParam) == EW_ACCEPTBUTTON)
 						{
-						ResetAllTrees();
-						return 0;
-						}
-					}
-				if ((int)LOWORD(wParam) == EW_RESPEC)
-					{
-						if (!IsWindowVisible(SelectTreeList))
-						{
-							ResetAllAtLvlTrees(CharacterLevel);
+							Accept();
+							ShowWindow(SelectTreeList, false);
+							InterfaceManager.ShowChild(ENHANCEMENTWINDOW, false);
 							return 0;
 						}
-					}
-				if ((int)LOWORD(wParam) == EW_APTOME)
-				{
-					if (!IsWindowVisible(SelectTreeList))
-					{
-						
-						if (SendMessage(APTomeButton, BM_GETCHECK, 0, 0) == BST_CHECKED)
+						if ((int)LOWORD(wParam) == EW_CANCELBUTTON)
 						{
-
-							CharacterEnhancements->SetAPTome(true);
-							LevelAPAvailable += 1;
-							RaceAPAvailable += 1;
-							RaceAP += 1;
-
-							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
-							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
-							EnableWindow(AcceptButton, true);
+							ShowWindow(SelectTreeList, false);
+							InterfaceManager.ShowChild(ENHANCEMENTWINDOW, false);
+							return 0;
 						}
-							
-						else
+						if ((int)LOWORD(wParam) == EW_RESETALLTREESBUTTON)
 						{
-							CharacterEnhancements->SetAPTome(false);
-							RaceAPAvailable -= 1;
-							LevelAPAvailable -= 1;
-							RaceAP -= 1;
-							if (RaceAPAvailable < RaceAPSpent)
-								RaceAPSpent = RaceAPAvailable;
-							UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
-							UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
-							EnableWindow(AcceptButton, true);
+							if (!IsWindowVisible(SelectTreeList))
+							{
+								ResetAllTrees();
+								return 0;
+							}
 						}
-							
-						return 0;
+						if ((int)LOWORD(wParam) == EW_RESPEC)
+						{
+							if (!IsWindowVisible(SelectTreeList))
+							{
+								ResetAllAtLvlTrees(CharacterLevel);
+								return 0;
+							}
+						}
+						if ((int)LOWORD(wParam) == EW_APTOME)
+						{
+							if (!IsWindowVisible(SelectTreeList))
+							{
+
+								if (SendMessage(APTomeButton, BM_GETCHECK, 0, 0) == BST_CHECKED)
+								{
+
+									CharacterEnhancements->SetAPTome(true);
+									LevelAPAvailable += 1;
+									RaceAPAvailable += 1;
+									RaceAP += 1;
+
+									UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
+									UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+									EnableWindow(AcceptButton, true);
+								}
+
+								else
+								{
+									CharacterEnhancements->SetAPTome(false);
+									RaceAPAvailable -= 1;
+									LevelAPAvailable -= 1;
+									RaceAP -= 1;
+									if (RaceAPAvailable < RaceAPSpent)
+										RaceAPSpent = RaceAPAvailable;
+									UpdateAPAvailableLabel(LevelAPAvailable, RaceAPAvailable);
+									UpdateAPSpentLabel(TotalAPSpent, RaceAPSpent);
+									EnableWindow(AcceptButton, true);
+								}
+
+								return 0;
+							}
+						}
 					}
-				}
-				}
 
 			return 0;
 			}
@@ -3017,12 +3031,22 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 					if (CurrentStartingTree < 4)
 						UpdateCurrentTrees("Right");
 					ShowWindow(SelectTreeList, false);
+					EnableWindow(Respec, true);
+					EnableWindow(ResetAllTreesButton, true);
+					EnableWindow(CancelButton, true);
+					EnableWindow(AcceptButton, true);
+					EnableWindow(APTomeButton, true);
 					}
 				else if (LOWORD(lParam) >6 && LOWORD(lParam) <28 && HIWORD(lParam) >200 && HIWORD(lParam) <290)
 					{
 					if (CurrentStartingTree > 0)
 						UpdateCurrentTrees("Left");
 					ShowWindow(SelectTreeList, false);
+					EnableWindow(Respec, true);
+					EnableWindow(ResetAllTreesButton, true);
+					EnableWindow(CancelButton, true);
+					EnableWindow(AcceptButton, true);
+					EnableWindow(APTomeButton, true);
 					}
 				else if (LOWORD(lParam) >55 && LOWORD(lParam) <217 && HIWORD(lParam) >445 && HIWORD(lParam) <466)
 					{
@@ -3055,6 +3079,11 @@ long EnhancementWindowClass::HandleWindowsMessage(HWND Wnd, UINT Message, WPARAM
 					{
 					HandleLeftMouseButtonClick(LOWORD(lParam), HIWORD(lParam));
 					ShowWindow(SelectTreeList,false);
+					EnableWindow(Respec, true);
+					EnableWindow(ResetAllTreesButton, true);
+					EnableWindow(CancelButton, true);
+					EnableWindow(AcceptButton, true);
+					EnableWindow(APTomeButton, true);
 					}
 				ShowTooTipWindow(false);
 				}
@@ -3170,6 +3199,11 @@ long EnhancementWindowClass::HandleSubclassedMessage(HWND Wnd, UINT Message, WPA
 					return 0;
 				ChangeTree(IconDrag);
 				ShowWindow(SelectTreeList, false);
+				EnableWindow(Respec, true);
+				EnableWindow(ResetAllTreesButton, true);
+				EnableWindow(CancelButton, true);
+				EnableWindow(AcceptButton, true);
+				EnableWindow(APTomeButton, true);
 				return 0;
 				}
 			break;

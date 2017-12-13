@@ -21,6 +21,7 @@ struct SpellListStruct
     };
 
 //---------------------------------------------------------------------------
+
 class CharacterClass
     {
     public:
@@ -30,14 +31,19 @@ class CharacterClass
         void Reset();
 		void CharacterTR();
         string GetInstructionString(int CurrentSelectedLevel, int Index, int *Value);
-        void Save(HWND hwnd, bool Saveas = false);
-        void Load(HWND hwnd);
+
 		string GetErrorList();
 		bool GetLevelError(unsigned int Level);
 		void EnableValidations(bool NewSetting);
 		int GetHighestBuildLevel();
 		bool File_Exists(const std::string& name);
-		
+
+		//Open Save File
+		string ReturnFiletoOpen();
+		bool OpenDialog(HWND hwnd);		
+        void Save(HWND hwnd, bool Saveas = false);
+        void Load();
+		void ResetFiletoOpen();
 		//name/sex/race/alignment
         void GetName(string *First, string *Sur);
         void SetName(string First, string Sur);
@@ -49,6 +55,7 @@ class CharacterClass
         ALIGNMENT GetAlignment();
         void SetAlignment(ALIGNMENT NewAlignment);
         bool IsAlignmentLegal(ALIGNMENT Test);
+
 		
 		//class
         CLASS GetClass(int AtLevel, bool Change = true);
@@ -59,7 +66,9 @@ class CharacterClass
         int GetClassLevel(CLASS ClassType, int CurrentSelectedLevel);
         int GetCharacterLevelAtClassLevel(CLASS ClassType, int ClassLevel);
 		string GetClassString(int AtLevel);
-		
+
+
+
         //ability stuff
         int CalculateTotalAbilityPoints();
         int GetAbility(int AbilityIndex, int AtLevel, bool IncludeTome = true, bool IncludeEnhancements = false, bool IncludeEquipment = false, bool IncludeFeats = true);

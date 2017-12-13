@@ -120,7 +120,7 @@ int APIENTRY WinMain(HINSTANCE Instance, HINSTANCE PrevInstance, LPSTR CmdLine, 
             }
         }
 
-	CoUninitialize();
+	//CoUninitialize();
     return 0;
     }
 

@@ -384,9 +384,9 @@ void FeatDataClass::InitializeFeat(string FeatData)
 					RaceType.push_back(PURPLEDRAGONKNIGHT);
 				if (FeatLine[i].find("Shadar-Kai") != string::npos)
 					RaceType.push_back(SHADARKAI);
-        if (FeatLine[i].find("Deep Gnome") != string::npos) // Look for Deep Gnome before just Gnome
-          RaceType.push_back(DEEPGNOME);
-        else if (FeatLine[i].find("Gnome") != string::npos)
+				if (FeatLine[i].find("Deep-Gnome") != string::npos) 
+				  RaceType.push_back(DEEPGNOME);
+				if (FeatLine[i].find(" Gnome") != string::npos)
 					RaceType.push_back(GNOME);
 				if (FeatLine[i].find("Dragonborn") != string::npos)
 					RaceType.push_back(DRAGONBORN);
@@ -1181,12 +1181,12 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == SHADARKAI)
 					return PREREQ_PASS;
 				}
-      if (Substring.find("Deep Gnome") != string::npos) // Look for Deep Gnome before just Gnome
+      if (Substring.find("Deep-Gnome") != string::npos) // Look for Deep Gnome before just Gnome
       {
         if (CharacterRace == DEEPGNOME)
           return PREREQ_PASS;
       }
-      else if (Substring.find("Gnome") != string::npos)
+      else if (Substring.find(" Gnome") != string::npos)
 			{
 				if (CharacterRace == GNOME)
 					return PREREQ_PASS;
@@ -1774,7 +1774,7 @@ string FeatDataClass::ConvertRaceTypeToString(RACE Race)
 		case GNOME:
 			return "Gnome";
 		case DEEPGNOME:
-			return "Deep Gnome";
+			return "Deep-Gnome";
 		case DRAGONBORN:
 			return "Dragonborn";
 		case AASIMAR:

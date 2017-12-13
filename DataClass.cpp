@@ -839,43 +839,64 @@ FILESTATE DataClass::LoadDestinyFile()
 	char *FileData;
 	DWORD FileSize;
 	DWORD BytesRead;
+	char *OriginalPointer;
 	string FullFileString;
 	string DestinyDataString;
 	string Tree;
 	size_t StartLoc;
 	size_t EndLoc;
+	string line;
 	DESTINY_TREE DTreeIndex;
 	Data_Destiny_Class DummyDestiny;
 	Data_Destiny_MultiSelector_Class DummyMulti;
+	
+	
+	//Skiploading for now
+	DataFilesLoaded[DESTINYFILE] = true;
+	return FILELOADED;
 
 	//Set up our Initial Destiny Trees.
 	InitializeDestinyTrees();
 
 	//open the Destiny.txt file
 	StringCbCopy(FileName, MAX_PATH, "\0");
+
 	GetCurrentDirectory(MAX_PATH, FileName);
 	StringCbCat(FileName, MAX_PATH, "\\DataFiles\\DestinyFile.txt");
 	if (!FileExists(FileName))
 		return FILEERROR;
 
-	FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-	if (FileHandle == INVALID_HANDLE_VALUE)
-		return FILEERROR;
+	// old code
+	//FileHandle = CreateFile(FileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	//if (FileHandle == INVALID_HANDLE_VALUE)
+	//	return FILEERROR;
 
-	//get the file size and make room for the data
-	FileSize = GetFileSize(FileHandle, NULL);
-	FileData = new char[FileSize+1];
+	////get the file size and make room for the data
+	//FileSize = GetFileSize(FileHandle, NULL);
+	//FileData = new char[FileSize+1];
 
-	//read in the data in it's entirety, set up the pointer, and close the file
-	SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
-	ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
-	FileData[BytesRead] = '\0';
-	CloseHandle(FileHandle);
+	////read in the data in it's entirety, set up the pointer, and close the file
+	//SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
+	//ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
+	//FileData[BytesRead] = '\0';
+	//OriginalPointer = FileData;
+	//CloseHandle(FileHandle);
 
 	//drop the entire character field into a string for  easier manipulation
-	FullFileString = FileData;
+	FullFileString = "";
+
+	//Open if stream for enhancement file to read in data line by line.
+	ifstream f(FileName);
+
+	if (!f.is_open())
+		return FILEERROR;
+	while (getline(f, line))
+	{
+		FullFileString += line;
+	}
+	f.close();
 	//delete the template data
-	if (FullFileString.find("[MULTIPLE DESTINY SELECTOR]", 0) != string::npos)
+		if (FullFileString.find("[MULTIPLE DESTINY SELECTOR]", 0) != string::npos)
 		FullFileString.erase(FullFileString.begin(), FullFileString.begin()+FullFileString.find("[MULTIPLE DESTINY SELECTOR]"));
 	while (FullFileString.find("NAME: ") != string::npos)
 		{
@@ -928,7 +949,8 @@ FILESTATE DataClass::LoadDestinyFile()
 			FullFileString.erase (0, DestinyDataString.size());
 			}
 		}
-	delete[] FileData;
+	//FileData = OriginalPointer;
+	//delete[] FileData;
 	DataFilesLoaded[DESTINYFILE] = true;
 	return FILELOADED;
 	}
@@ -1048,7 +1070,10 @@ FILESTATE DataClass::LoadEnhancementFile()
 		}
 	}
 	f.close();
-    //delete[] FileData;
+
+
+
+   // delete[] FileData;
 
     DataFilesLoaded[ENHANCEMENTFILE] = true;
 
@@ -1285,6 +1310,7 @@ FILESTATE DataClass::LoadItemClickyEffectFile()
 	char FileName[MAX_PATH];
     HANDLE FileHandle;
     char *FileData;
+	char *Originalpointer;
     DWORD FileSize;
     DWORD BytesRead;
 	string FullFileString;
@@ -1310,6 +1336,7 @@ FILESTATE DataClass::LoadItemClickyEffectFile()
     SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
     ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
     FileData[BytesRead] = '\0';
+	Originalpointer = FileData;
     CloseHandle(FileHandle);
 
 	//drop the entire character field into a string for easier manipulation
@@ -1328,6 +1355,7 @@ FILESTATE DataClass::LoadItemClickyEffectFile()
 		FullFileString.erase(0, ItemClickyEffectDataString.size()+11);
 		}
 
+	FileData = Originalpointer;
     delete[] FileData;
 
     DataFilesLoaded[ITEMCLICKYEFFECTFILE] = true;
@@ -1341,6 +1369,7 @@ FILESTATE DataClass::LoadItemEffectFile()
 	char FileName[MAX_PATH];
     HANDLE FileHandle;
     char *FileData;
+	char *Originalpointer;
     DWORD FileSize;
     DWORD BytesRead;
 	string FullFileString;
@@ -1366,6 +1395,7 @@ FILESTATE DataClass::LoadItemEffectFile()
     SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
     ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
     FileData[BytesRead] = '\0';
+	Originalpointer = FileData;
     CloseHandle(FileHandle);
 
 	//drop the entire character field into a string for easier manipulation
@@ -1389,6 +1419,8 @@ FILESTATE DataClass::LoadItemEffectFile()
 		FullFileString.erase(0, ItemEffectDataString.size()+11);
 		}
 
+	FileData = Originalpointer;
+
     delete[] FileData;
 
     DataFilesLoaded[ITEMEFFECTFILE] = true;
@@ -1402,6 +1434,7 @@ FILESTATE DataClass::LoadItemFile()
 	char FileName[MAX_PATH];
     HANDLE FileHandle;
     char *FileData;
+	char *Orignialpointer;
     DWORD FileSize;
     DWORD BytesRead;
 	string FullFileString;
@@ -1427,6 +1460,7 @@ FILESTATE DataClass::LoadItemFile()
     SetFilePointer(FileHandle, 0, NULL, FILE_BEGIN);
     ReadFile(FileHandle, FileData, FileSize, &BytesRead, NULL);
     FileData[BytesRead] = '\0';
+	Orignialpointer = FileData;
     CloseHandle(FileHandle);
 	FullFileString = FileData;
 
@@ -1446,6 +1480,7 @@ FILESTATE DataClass::LoadItemFile()
 
 		StartLoc = FullFileString.find("ITEMNAME: ", EndLoc+9);
 		}
+	FileData = Orignialpointer;
 
     delete[] FileData;
 

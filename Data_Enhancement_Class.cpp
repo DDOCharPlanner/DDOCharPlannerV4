@@ -2002,7 +2002,7 @@ bool Data_Enhancement_Class::IsRaceTree()
 	{
 	if (Tree == "Bladeforged")
 		return true;
-	if (Tree == "Deep Gnome")
+	if (Tree == "Deep-Gnome")
 		return true;
 	if (Tree == "Drow")
 		return true;
@@ -2499,7 +2499,7 @@ string Data_Enhancement_Class::GetRaceName()
 		case ENHT_GNOME:
 			return "Gnome";
 		case ENHT_DEEPGNOME:
-			return "Deep Gnome";
+			return "Deep-Gnome";
 		case ENHT_DRAGONBORN:
 			return "Dragonborn";
 		case ENHT_AASIMAR:
