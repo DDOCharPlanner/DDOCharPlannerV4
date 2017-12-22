@@ -170,6 +170,7 @@ private:
 	HWND	TomeLabel5;
 	HWND	TomeLabel6;
 	HWND	TomeLabel7;
+	HWND	TomeLabel8;
 	HWND	TomeTotal;
 
 	HWND	InstructionFrame;
@@ -196,7 +197,7 @@ private:
 	void DrawCurrent();
 	void DrawLevelBars();
 	void DrawTome();
-	int TomeLevel[6][7];
+	int TomeLevel[6][8];
 	void HandleLeftMouseButtonClick(int x, int y);
 	void SetTomes(int Tome, int Ability, int Dir);
 	void DeleteGraphics();

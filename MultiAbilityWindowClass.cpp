@@ -328,6 +328,8 @@ void MultiAbilityWindowClass::Create(HINSTANCE Instance, HWND Parent)
 	TomeLabel6 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("TomeLabel7", MULTIABILITYWINDOW);
 	TomeLabel7 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
+	Component = UIManager->GetComponentData("TomeLabel8", MULTIABILITYWINDOW);
+	TomeLabel8 = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("TomeTotal", MULTIABILITYWINDOW);
 	TomeTotal = CreateWindowEx(nullptr, Component->WindowType.c_str(), Component->WindowLabel.c_str(), Component->Style, static_cast<int>(Component->BaseLocationX), static_cast<int>(Component->BaseLocationY), static_cast<int>(Component->BaseWidth), static_cast<int>(Component->BaseHeight), MultiAbilityHandle, (HMENU)Component->WindowID, Instance, nullptr);
 	Component = UIManager->GetComponentData("InstructionFrame", MULTIABILITYWINDOW);
@@ -609,6 +611,7 @@ void MultiAbilityWindowClass::Show(bool State)
 	ShowWindow(TomeLabel5, State);
 	ShowWindow(TomeLabel6, State);
 	ShowWindow(TomeLabel7, State);
+	ShowWindow(TomeLabel8, State);
 	ShowWindow(TomeTotal, State);
 	ShowWindow(InstructionFrame, State);
 	ShowWindow(InstructionLabel, State);
@@ -1317,7 +1320,7 @@ void MultiAbilityWindowClass::DrawTome()
 
 	for (int i = 0; i < 6; i++)
 	{
-		for (int x = 0; x < 7; x++)
+		for (int x = 0; x < 8; x++)
 		{
 			TomeLevel[i][x] = MAXLEVEL +1;
 		}
@@ -1329,7 +1332,7 @@ void MultiAbilityWindowClass::DrawTome()
 		for (int x = 0; x < 6; ++x)
 		{
 			//Check for Each Tome
-			for (int y = 0; y < 7; ++y)
+			for (int y = 0; y < 8; ++y)
 			{
 				int test = 31;
 				test = Character.GetTomeRaise(static_cast<ABILITIES>(x), i, true, true);
@@ -1347,7 +1350,7 @@ void MultiAbilityWindowClass::DrawTome()
 	UIManager = InterfaceManager.GetUIComponents();
 	for (int i = 0; i < 6; i++)
 	{ 
-		for (int x = 0; x < 7; x++)
+		for (int x = 0; x < 8; x++)
 		{
 			ss.str("");
 			ss << "Tome_" << x << "Ability_" << i;
@@ -1788,7 +1791,7 @@ void MultiAbilityWindowClass::HandleLeftMouseButtonClick(int x, int y)
 	teststring = "";
 	if (Index != -1)
 	{
-		for (int i = 0; i < 7; i++)
+		for (int i = 0; i < 8; i++)
 		{
 			ss.str("");
 			ss << "Tome_" << i << "Ability_" << Index;
@@ -1842,7 +1845,7 @@ void MultiAbilityWindowClass::SetTomes(int Tome, int Ability, int Dir)
 	else if (Dir == 1 && TomeLevel[Ability][Tome] < 30)
 	{
 		temp = 31;
-		for (int i = Tome + 1; i < 7; i++)
+		for (int i = Tome + 1; i < 9; i++)
 		{
 			if (TomeLevel[Ability][i] < 31)
 			{
@@ -1900,7 +1903,7 @@ void MultiAbilityWindowClass::SetTomes(int Tome, int Ability, int Dir)
 			TomeRaise[i][y] = 0;
 
 		}
-		for (int x = 0; x < 7; x++)
+		for (int x = 0; x < 8; x++)
 		{	
 			Raise += 1;
 			if (TomeLevel[i][x] != 31)

@@ -975,7 +975,8 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("TomeLabel5", MULTIABILITYWINDOW, "STATIC", "+5", WS_CHILD, CurrentX + 212, CurrentY, 45, 25, MAB_T5);
 	InitializeUIComponent("TomeLabel6", MULTIABILITYWINDOW, "STATIC", "+6", WS_CHILD, CurrentX + 262, CurrentY, 45, 25, MAB_T6);
 	InitializeUIComponent("TomeLabel7", MULTIABILITYWINDOW, "STATIC", "+7", WS_CHILD, CurrentX + 312, CurrentY, 45, 25, MAB_T7);
-	InitializeUIComponent("TomeTotal", MULTIABILITYWINDOW, "STATIC", "Total", WS_CHILD, CurrentX + 370, CurrentY, 45, 25, MAB_TOMETOTAL);
+	InitializeUIComponent("TomeLabel8", MULTIABILITYWINDOW, "STATIC", "+8", WS_CHILD, CurrentX + 362, CurrentY, 45, 25, MAB_T8);
+	InitializeUIComponent("TomeTotal", MULTIABILITYWINDOW, "STATIC", "TTL", WS_CHILD, CurrentX + 402, CurrentY, 25, 25, MAB_TOMETOTAL);
 
 	int TomeBaseX, TomeBaseY;
 	TomeBaseX = CurrentX;
@@ -985,14 +986,14 @@ void UIComponentManager::InitializeUI()
 	CurrentY = TomeBaseY;
 	for (int i = 0; i < 6; i++)
 	{
-		for (int x = 0; x < 7; x++)
+		for (int x = 0; x < 8; x++)
 		{
 			GraphicName = "Tome_" + to_string(x) + "Ability_" + to_string(i);
 			InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX, CurrentY, 45, 20);
 			CurrentX += 50;
 		}
 		GraphicName = "TomeTotal" + to_string(i);
-		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX+40, CurrentY+3, 25, 15);
+		InitializeUIGraphic(GraphicName, MULTIABILITYWINDOW, CurrentX+15, CurrentY+3, 20, 15);
 		CurrentY += 40;
 		CurrentX = TomeBaseX;
 	}

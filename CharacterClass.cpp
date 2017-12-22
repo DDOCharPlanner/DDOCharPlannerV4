@@ -945,7 +945,7 @@ int CharacterClass::GetAbilityMod(ABILITIES Ability, ABILITYMODS ModType, int At
 			}
 		case ABMOD_INHERENT:
 			{
-			return GetTomeRaise(Ability, AtLevel, true);
+					return GetTomeRaise(Ability, AtLevel, true);
 			}
 		case ABMOD_FEATS:
 			{
@@ -1219,8 +1219,8 @@ bool CharacterClass::GetAbilityFavorBonus()
 int CharacterClass::GetTomeRaise(ABILITIES Ability, int AtLevel, bool IncludeThisLevel , bool IncludeAllTomes)
     {
     int Raise;
-	int Tomes[7] = { 1, 2, 3, 4, 5, 6, 7 };
-	int TomesLvl[7] = { 3, 7, 11, 15, 19, 23, 27 };
+	int Tomes[8] = { 1, 2, 3, 4, 5, 6, 7, 8};
+	int TomesLvl[8] = { 1, 1, 3, 7, 11, 15, 19, 22};
 	int returnvalue;
 	int test = 0;
 	returnvalue = 0;
@@ -1262,7 +1262,7 @@ void CharacterClass::ChangeTomeRaise(ABILITIES Ability, int AtLevel, int Change)
 	int CurrentTomeLevel;
 
 	CurrentTomeLevel = GetTomeRaise(Ability, AtLevel, true,true);
-	if (CurrentTomeLevel + Change > 7)
+	if (CurrentTomeLevel + Change > 8)
 		return;
 	if (CurrentTomeLevel + Change < 0)
 		return;
@@ -2821,7 +2821,7 @@ int CharacterClass::CalculateAvailableSkillPoints(unsigned int AtLevel)
         return 0;
 
     Result = Data.GetClassSkillPoints(ClassRecord[AtLevel-1]);
-	AbilityTotal = GetAbility(INTELLIGENCE, AtLevel, false,false,false,false) + GetTomeRaise(INTELLIGENCE, AtLevel, false);
+		AbilityTotal = GetAbility(INTELLIGENCE, AtLevel, false,false,false,false) + GetTomeRaise(INTELLIGENCE, AtLevel, false, false);
 
 	//we need to subtract 2 points of they have completionist loaded up
 	//if (HasFeat("Completionist", AtLevel) == true)
