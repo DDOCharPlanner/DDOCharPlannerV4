@@ -1,4 +1,4 @@
-﻿Build started 12/22/2017 2:40:01 PM.
+﻿Build started 12/28/2017 11:38:01 AM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DDOCharPlanner.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiAbilityWindowClass.cpp MultiClassWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
@@ -110,4 +110,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:09.94
+Time Elapsed 00:03:00.50

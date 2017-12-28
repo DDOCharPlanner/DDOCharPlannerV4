@@ -1181,12 +1181,12 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == SHADARKAI)
 					return PREREQ_PASS;
 				}
-      if (Substring.find("Deep-Gnome") != string::npos) // Look for Deep Gnome before just Gnome
-      {
-        if (CharacterRace == DEEPGNOME)
-          return PREREQ_PASS;
-      }
-      else if (Substring.find(" Gnome") != string::npos)
+			if (Substring.find("Deep-Gnome") != string::npos)
+			{
+			if (CharacterRace == DEEPGNOME)
+				return PREREQ_PASS;
+			}
+			if (Substring.find("Gnome") != string::npos)
 			{
 				if (CharacterRace == GNOME)
 					return PREREQ_PASS;
@@ -1196,7 +1196,7 @@ PREREQRESULT FeatDataClass::HaveAllFeatPrereqs(unsigned int AtLevel)
 				if (CharacterRace == DRAGONBORN)
 					return PREREQ_PASS;
 			}
-			if (Substring.find(" Aasimar") != string::npos)
+			if (Substring.find("Aasimar") != string::npos)
 			{
 				if (CharacterRace == AASIMAR)
 					return PREREQ_PASS;
