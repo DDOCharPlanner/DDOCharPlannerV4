@@ -1,17 +1,17 @@
-﻿Build started 12/28/2017 11:38:01 AM.
+﻿Build started 1/5/2018 3:51:19 PM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Ox /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AboutWindowClass.cpp CharacterClass.cpp Character_Destinies_Class.cpp Character_Enhancements_Class.cpp ControlWindowClass.cpp DDOCharPlanner.cpp DataClass.cpp Data_Destiny_Class.cpp Data_Destiny_MultiSelector_Class.cpp Data_Destiny_Tree_Class.cpp Data_Enhancement_Class.cpp Data_Enhancement_MultiSelector_Class.cpp Data_Enhancement_Tree_Class.cpp EnhancementWindowBaseClass.cpp EnhancementWindowClass.cpp ExportTemplateDesignWindowClass.cpp FeatDataClass.cpp ForumExportClass.cpp IconClass.cpp InterfaceManagerClass.cpp ItemBuilderClass.cpp ItemClass.cpp ItemClickyEffectClass.cpp ItemEffectClass.cpp LoadWindowClass.cpp MainScreenClass.cpp MultiAbilityWindowClass.cpp MultiClassWindowClass.cpp MultiEnhancementWindowClass.cpp MultiFeatWindowClass.cpp MultiSkillsWindowClass.cpp MultiSpellsWindowClass.cpp PrintClass.cpp PrintWindowClass.cpp RichEditBitmapClass.cpp Screen_Destiny_Base_Class.cpp Screen_Destiny_Class.cpp ToolTipWindowClass.cpp UIComponentManager.cpp
          AboutWindowClass.cpp
      1>AboutWindowClass.cpp(95): warning C4129: 'p' : unrecognized character escape sequence
          CharacterClass.cpp
-     1>CharacterClass.cpp(4516): warning C4101: 'temphr' : unreferenced local variable
-     1>CharacterClass.cpp(5059): warning C4002: too many actual parameters for macro 'RtlZeroMemory'
-     1>CharacterClass.cpp(5049): warning C4101: 'FileOpen' : unreferenced local variable
-     1>CharacterClass.cpp(5622): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5643): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5668): warning C4018: '<' : signed/unsigned mismatch
-     1>CharacterClass.cpp(5698): warning C4018: '<' : signed/unsigned mismatch
+     1>CharacterClass.cpp(4515): warning C4101: 'temphr' : unreferenced local variable
+     1>CharacterClass.cpp(5058): warning C4002: too many actual parameters for macro 'RtlZeroMemory'
+     1>CharacterClass.cpp(5048): warning C4101: 'FileOpen' : unreferenced local variable
+     1>CharacterClass.cpp(5621): warning C4018: '<' : signed/unsigned mismatch
+     1>CharacterClass.cpp(5642): warning C4018: '<' : signed/unsigned mismatch
+     1>CharacterClass.cpp(5667): warning C4018: '<' : signed/unsigned mismatch
+     1>CharacterClass.cpp(5697): warning C4018: '<' : signed/unsigned mismatch
          Character_Destinies_Class.cpp
          Character_Enhancements_Class.cpp
          ControlWindowClass.cpp
@@ -40,7 +40,7 @@
          IconClass.cpp
          InterfaceManagerClass.cpp
          Generating Code...
-     1>e:\planner\ddocharplannerv4\characterclass.cpp(1610): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(1609): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
          Compiling...
          ItemBuilderClass.cpp
          ItemClass.cpp
@@ -110,4 +110,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:03:00.50
+Time Elapsed 00:01:12.69

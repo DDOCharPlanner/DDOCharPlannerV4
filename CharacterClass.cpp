@@ -158,7 +158,7 @@ void CharacterClass::CharacterTR()
 		for (int x = 0; x < tempcount; x++)
 			IncreaseIconicPastLife(ICONICRACES(i));
 	}
-
+	RaceEnhancement = 0;
 	for (unsigned int i = 0; i < RACEPASTLIFE; i++)
 	{
 
@@ -169,7 +169,6 @@ void CharacterClass::CharacterTR()
 	}
 	AddRaceAutoFeats(1);
 	AddClassAutoFeats(FIGHTER, 1, 1);
-	RaceEnhancement = 0;
 	for (unsigned int i = 0; i<NUMCHAREQUPMENTSLOTS; i++)
 		CharacterItemsEquipped[i] = -1;
 	EnableValidations(true);

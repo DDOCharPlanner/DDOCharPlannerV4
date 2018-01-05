@@ -1,8 +1,16 @@
-﻿Build started 12/28/2017 10:42:02 AM.
+﻿Build started 1/5/2018 3:44:29 PM.
      1>Project "E:\Planner\DDOCharPlannerV4\DDOCharPlanner.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Data_Enhancement_Class.cpp
-         Data_Enhancement_Class.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CharacterClass.cpp
+         CharacterClass.cpp
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(4515): warning C4101: 'temphr' : unreferenced local variable
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5058): warning C4002: too many actual parameters for macro 'RtlZeroMemory'
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5048): warning C4101: 'FileOpen' : unreferenced local variable
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5621): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5642): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5667): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(5697): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\planner\ddocharplannerv4\characterclass.cpp(1609): warning C4715: 'CharacterClass::GetFeatAtLevel' : not all control paths return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.pdb" /SUBSYSTEM:WINDOWS,"5.01" /HEAP:"4096","2048" /STACK:"4096","2048" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Planner\DDOCharPlannerV4\\DDOCharPlanner.lib" /MACHINE:X86 /SAFESEH Debug\DDOCharPlanner.res
          Debug\AboutWindowClass.obj
@@ -49,4 +57,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:01:53.81
+Time Elapsed 00:00:04.74
