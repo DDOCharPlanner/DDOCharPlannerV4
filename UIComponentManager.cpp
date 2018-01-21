@@ -703,7 +703,7 @@ void UIComponentManager::InitializeUI()
 	//**************************** Skills Window Graphic *************************
 	//Standard components
 	InitializeUIComponent("MultiAbilityText", MULTIABILITYWINDOW, "STATIC", "Add Abilities", WS_CHILD, 10, 5, 200, 25, MAB_LABEL);
-	InitializeUIComponent("CloseButton", MULTIABILITYWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MAB_CLOSE);
+	InitializeUIComponent("CloseButton", MULTIABILITYWINDOW, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MAB_CLOSE);
 	int Width;
 	int Height;
 	int AbilityFrameBaseX;
@@ -1078,7 +1078,7 @@ void UIComponentManager::InitializeUI()
 
 	//Standard components
 	InitializeUIComponent("MultiClassText", MULTICLASSWINDOW, "STATIC", "Add Classes", WS_CHILD, 10, 5, 200, 25, MCL_LABEL);
-	InitializeUIComponent("Close", MULTICLASSWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MCL_CLOSE);
+	InitializeUIComponent("Close", MULTICLASSWINDOW, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MCL_CLOSE);
 	InitializeUIComponent("ClassString", MULTICLASSWINDOW, "STATIC", "Class", WS_CHILD, 10, 25, 500, 25, MCL_CLASSSTRING);
 
 	int ClassX, ClassY;
@@ -1204,7 +1204,7 @@ void UIComponentManager::InitializeUI()
 	InitializeUIComponent("Reset", MULTISKILLSWINDOW, "BUTTON", "Reset", WS_CHILD | BS_PUSHBUTTON, 1000 - 3 * ButtonSize - 20, 5, ButtonSize, 18, MSK_RESET);
 
 	InitializeUIComponent("Accept", MULTISKILLSWINDOW, "BUTTON", "Accept", WS_CHILD | BS_PUSHBUTTON, 1000 - 2 * ButtonSize - 20, 5, ButtonSize, 18, MSK_ACCEPT);
-	InitializeUIComponent("Close", MULTISKILLSWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MSK_CANCEL);
+	InitializeUIComponent("Close", MULTISKILLSWINDOW, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MSK_CANCEL);
 
 	CurrentY += 25;
 	CurrentX += 5;
@@ -1302,7 +1302,7 @@ void UIComponentManager::InitializeUI()
 	CurrentY = 5;
 
 	InitializeUIComponent("MultiSpellText", MULTISPELLSWINDOW, "STATIC", "Select Spells", WS_CHILD, CurrentX, CurrentY, 200, 20, MSP_LABEL);
-	InitializeUIComponent("Close", MULTISPELLSWINDOW, "BUTTON", "CLose", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MSP_CANCEL);
+	InitializeUIComponent("Close", MULTISPELLSWINDOW, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 1000 - ButtonSize - 10, 5, ButtonSize, 18, MSP_CANCEL);
 
 	InitializeUIGraphic("Test", MULTISPELLSWINDOW, CurrentX + 130, CurrentY+100, 25, 20);
 	InitializeUIGraphic("Test2", MULTISPELLSWINDOW, CurrentX + 230, CurrentY + 100, 25, 20);
