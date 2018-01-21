@@ -56,7 +56,7 @@ void ForumExportClass::Create(HINSTANCE Instance, HWND Parent)
 
     //the child windows
 	LevelSelectLabel = CreateWindowEx(NULL, "STATIC", "Export from Level 1 to: ", WS_CHILD, 10, 8, 150, 20, ForumExportWindowHandle, (HMENU)FE_LEVELSELECTLABEL, Instance, NULL);
-    LevelSelect = CreateWindowEx(NULL, "COMBOBOX", "Close", WS_CHILD | CBS_DROPDOWNLIST, 170, 5, 50, 500, ForumExportWindowHandle, (HMENU)FE_LEVELSELECT, Instance, NULL);
+    LevelSelect = CreateWindowEx(NULL, "COMBOBOX", "Close", WS_CHILD | CBS_DROPDOWNLIST, 170, 5, 50, 520, ForumExportWindowHandle, (HMENU)FE_LEVELSELECT, Instance, NULL);
     CloseButton = CreateWindowEx(NULL, "BUTTON", "Close", WS_CHILD | BS_PUSHBUTTON, 230, 495, 50, 20, ForumExportWindowHandle, (HMENU)FE_CLOSEBUTTON, Instance, NULL);
     CopyButton = CreateWindowEx(NULL, "BUTTON", "Copy Data to Clipboard", WS_CHILD | BS_PUSHBUTTON, 290, 495, 170, 20, ForumExportWindowHandle, (HMENU)FE_COPYBUTTON, Instance, NULL);
     PresetsLabel = CreateWindowEx(NULL, "STATIC", "Presets", WS_CHILD, 10, 455, 60, 20, ForumExportWindowHandle, (HMENU)FE_PRESETSLABEL, Instance, NULL);
