@@ -483,9 +483,9 @@ VERIFIED: 2012-06-26, in-game;
 
 FEATNAME: Combat Casting;
 FEATDESCRIPTION: You gain a +4 bonus on Concentration checks when you are being damaged in combat. You are less likely to have your spells interrupted by enemies.;
-CLASSLIST: Paladin, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Druid, Warlock;
-LEVEL: 4, 4, 1, 1, 1, 1, 1, 1, 1;
-ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train;
+CLASSLIST: Paladin, Ranger, Cleric, Wizard, Sorcerer, Bard, Favored Soul, Druid, Warlock, Artificer;
+LEVEL: 4, 4, 1, 1, 1, 1, 1, 1, 1, 1;
+ACQUIRE: Train, Train, Train, Train, Train, Train, Train, Train, Train, Train;
 ICON: CombatCastingIcon;
 VERIFIED: 2012-06-26, in-game;
 
